@@ -4,3 +4,13 @@
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg)](https://coveralls.io/github/we-mak/w-design)
 
 A React UI library build with styled-components
+
+## Version 1.0.0 Roadmap
+
+Cover basic components
+
+| Layout              | Elements         | Components | Utilities |
+| ------------------- | ---------------- | ---------- | --------- |
+| [ x ] Container     | [ x ] Typography |
+| [ x ] Grid          | [ x] Button      |
+| [ x ] ThemeProvider | [ x ] Forms      |

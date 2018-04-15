@@ -33,12 +33,13 @@
     "coveralls": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "istanbul": "^0.4.5",
     "jest-cli": "^22.4.3",
     "react-docgen-typescript": "^1.2.6",
     "react-scripts-ts": "2.15.1",
     "react-styleguidist": "^7.0.5",
     "typescript": "^2.8.1"
   },
-  "files": ["build/lib"]
+  "files": [
+    "build/lib"
+  ]
 }

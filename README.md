@@ -12,6 +12,6 @@ Cover basic components
 
 | Layout            | Elements       | Components | Utilities |
 | ----------------- | -------------- | ---------- | --------- |
-| [x] Container     | [x] Typography |
-| [x] Grid          | [x] Button     |
-| [x] ThemeProvider | [x] Forms      |
+| [x] Container     | [ ] Typography |
+| [ ] Grid          | [ ] Button     |
+| [ ] ThemeProvider | [ ] Forms      |

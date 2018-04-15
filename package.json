@@ -11,8 +11,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "build-lib": "tsc",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
@@ -33,5 +32,6 @@
     "jest-cli": "^22.4.3",
     "react-scripts-ts": "2.15.1",
     "typescript": "^2.8.1"
-  }
+  },
+  "files": ["build/lib"]
 }

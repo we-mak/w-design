@@ -10,8 +10,24 @@ A React UI library build with styled-components
 
 Cover basic components
 
-| Layout                                | Elements                           | Components | Utilities |
-| ------------------------------------- | ---------------------------------- | ---------- | --------- |
-| <ul><li>- [ ] Container </li></ul>    | <ul><li>- [ ] Typography</li></ul> |
-| <ul><li>- [ ] Grid</li></ul>          | <ul><li>- [ ] Button</li></ul>     |
-| <ul><li>- [ ] ThemeProvider</li></ul> | <ul><li>- [ ] Forms</li></ul>      |
+| Layout          | Elements     | Components    |
+| --------------- | ------------ | ------------- |
+| ✖ Container     | ✖ Typography | ✖ Nav         |
+| ✖ ThemeProvider | ✖ Input      | ✖ Avatar      |
+| ✖ Grid          | ✖ Button     | ✖ Navbar      |
+| ✖ Masonry       | ✖ Form       | ✖ Badges      |
+|                 | ✖ Label      | ✖ Arcordion   |
+|                 | ✖ Media      | ✖ Breadcrumbs |
+|                 | ✖ Loader     | ✖ Card        |
+|                 | ✖ Segment    | ✖ Chip        |
+|                 | ✖ Table      | ✖ Menu        |
+|                 | ✖ List       | ✖ Modal       |
+|                 | ✖ Icon       | ✖ Pagination  |
+|                 | ✖ Divider    | ✖ Dropdown    |
+|                 |              | ✖ Sidebar     |
+|                 |              | ✖ Steps       |
+|                 |              | ✖ Tab         |
+|                 |              | ✖ Toast       |
+|                 |              | ✖ Tooltip     |
+|                 |              | ✖ Popover     |
+|                 |              | ✖ Comment     |

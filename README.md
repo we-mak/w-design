@@ -10,8 +10,8 @@ A React UI library build with styled-components
 
 Cover basic components
 
-| Layout              | Elements         | Components | Utilities |
-| ------------------- | ---------------- | ---------- | --------- |
-| - [ ] Container     | - [ ] Typography |
-| - [ ] Grid          | - [ ] Button     |
-| - [ ] ThemeProvider | - [ ] Forms      |
+| Layout                                | Elements                           | Components | Utilities |
+| ------------------------------------- | ---------------------------------- | ---------- | --------- |
+| <ul><li>- [ ] Container </li></ul>    | <ul><li>- [ ] Typography</li></ul> |
+| <ul><li>- [ ] Grid</li></ul>          | <ul><li>- [ ] Button</li></ul>     |
+| <ul><li>- [ ] ThemeProvider</li></ul> | <ul><li>- [ ] Forms</li></ul>      |

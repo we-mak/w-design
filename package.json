@@ -14,6 +14,7 @@
     "build-lib": "tsc",
     "styleguide": "npx styleguidist server",
     "styleguide-build": "npx styleguidist build",
+    "coverage": "react-scripts-ts test --env=jsdom --coverage",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
@@ -39,7 +40,5 @@
     "react-styleguidist": "^7.0.5",
     "typescript": "^2.8.1"
   },
-  "files": [
-    "build/lib"
-  ]
+  "files": ["build/lib"]
 }

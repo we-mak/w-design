@@ -6,7 +6,13 @@
 
 A React UI library build with styled-components
 
-## Version 1.0.0 Roadmap
+## Install
+
+## Usage
+
+## Support
+
+## Version 1.0.0 Feature Roadmap
 
 Cover basic components
 
@@ -31,3 +37,11 @@ Cover basic components
 |                 |              | ✖ Tooltip     |
 |                 |              | ✖ Popover     |
 |                 |              | ✖ Comment     |
+
+## License
+
+## Development
+
+## Contributing
+
+## Sponsor

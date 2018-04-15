@@ -1,7 +1,15 @@
 {
-  "name": "demo-lib",
+  "name": "w-design",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": {
+    "name": "SeanDang"
+  },
+  "main": "build/lib/components/index.js",
+  "types": "build/lib/components/index.d.ts",
+  "engines": {
+    "node": ">=8.9.0"
+  },
   "devDependencies": {
     "@types/enzyme": "^3.1.9",
     "@types/enzyme-adapter-react-16": "^1.0.2",

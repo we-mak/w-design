@@ -1,18 +1,15 @@
 import * as React from "react";
-import styled, { StyledFunction } from "styled-components";
+import styled from "../../../utils/styled";
 
 export interface Props {
   children?: any;
 }
 
-const div: StyledFunction</*Props here*/ React.HTMLProps<HTMLInputElement>> =
-  styled.div;
-
-const Wrapper = div`
+const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-left: .4rem;
-  padding-right: .4rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
   width: 100%;
 `;
 

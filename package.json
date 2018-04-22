@@ -1,6 +1,7 @@
 {
   "name": "w-design",
   "version": "0.1.0",
+  "license": "MIT",
   "private": false,
   "author": {
     "name": "SeanDang"
@@ -36,11 +37,9 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "jest-cli": "^22.4.3",
     "react-docgen-typescript": "^1.2.6",
-    "react-scripts-ts": "2.15.1",
-    "react-styleguidist": "^7.0.5",
+    "react-scripts-ts": "^2.15.1",
+    "react-styleguidist": "^7.0.8",
     "typescript": "^2.8.1"
   },
-  "files": [
-    "build/lib"
-  ]
+  "files": ["build/lib"]
 }

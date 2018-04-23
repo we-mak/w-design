@@ -3,7 +3,7 @@
     "outDir": "build/lib",
     "module": "esnext",
     "target": "es5",
-    "lib": ["es5", "es6", "dom", "esnext.asynciterable"],
+    "lib": ["es6", "dom", "esnext.asynciterable"],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
@@ -17,19 +17,18 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "declaration": true
+    "plugins": [{ "name": "tslint-language-service" }]
   },
   "exclude": [
     "node_modules",
     "build",
     "scripts",
     "acceptance-tests",
-    "webpack",
+    "webpack.config.js",
     "jest",
     "src/setupTests.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts",
     "config",
-    "dist"
-  ]
+    "typedoc.js"
+  ],
+  "types": ["./src/typings"]
 }

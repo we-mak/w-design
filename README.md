@@ -12,7 +12,7 @@ A React UI library build with styled-components
 
 ## Support
 
-## Version 1.0.0 Feature Roadmap
+## Version 1.0.0 Feature
 
 Cover basic components
 

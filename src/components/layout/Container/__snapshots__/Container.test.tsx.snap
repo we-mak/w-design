@@ -4,9 +4,9 @@ exports[`<Container/> renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Container>
+  Symbol(enzyme.__unrendered__): <Styled(ContainerEl)>
     Children
-  </Container>,
+  </Styled(ContainerEl)>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,10 +17,10 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
       "children": "Children",
-      "className": undefined,
+      "className": "sc-bdVaJa iiNbcj",
     },
     "ref": null,
     "rendered": "Children",
@@ -30,10 +30,10 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
         "children": "Children",
-        "className": undefined,
+        "className": "sc-bdVaJa iiNbcj",
       },
       "ref": null,
       "rendered": "Children",

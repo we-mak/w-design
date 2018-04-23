@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "build/lib",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es5",
-    "lib": ["es5", "es6", "dom"],
+    "lib": ["es6", "dom", "esnext.asynciterable"],
     "sourceMap": true,
-    "allowJs": false,
+    "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
@@ -16,19 +16,19 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "declaration": true
+    "noUnusedParameters": true,
+    "plugins": [{ "name": "tslint-language-service" }]
   },
   "exclude": [
     "node_modules",
     "build",
     "scripts",
     "acceptance-tests",
-    "webpack",
+    "webpack.config.js",
     "jest",
     "src/setupTests.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts",
     "config",
-    "dist"
-  ]
+    "typedoc.js"
+  ],
+  "types": ["./src/typings"]
 }

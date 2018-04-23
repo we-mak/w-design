@@ -5,7 +5,11 @@ import Container from "./Container";
 describe("<Container/>", () => {
   // Render test
   it("it should renders correctly", () => {
-    const wrapper = shallow(<Container>Children</Container>);
+    const wrapper = shallow(
+      <Container>
+        <div>Children</div>
+      </Container>
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -5,20 +5,22 @@
  * @prop {string} className - tag class property
  */
 import * as React from "react";
-import styled from "../../../styledConfig/index";
+import styled from "../../../styledConfig/styled";
 
-export interface Props {
+interface Props {
   children?: React.ReactChild;
   className?: string;
-  fixedXLarge?: boolean;
-  fixedLarge?: boolean;
-  fixedMedium?: boolean;
-  fixedSmall?: boolean;
-  fixedXSmall?: boolean;
+  // fixedXLg: boolean;
+  // fixedLg: boolean;
+  // fixedMd: boolean;
+  // fixedSm: boolean;
+  // fixedXSm: boolean;
 }
 
-const ContainerEl: React.StatelessComponent<Props> = props => (
-  <div className={props.className}>{props.children}</div>
+const ContainerEl: React.SFC<Props> = props => (
+  <div className={props.className} {...props}>
+    {props.children}
+  </div>
 );
 
 const Container = styled(ContainerEl)`
@@ -31,8 +33,8 @@ const Container = styled(ContainerEl)`
 
 export default Container;
 
-/* ${(props: Props) => props.fixedXLarge && `max-width: 1296px`};
-  ${(props: Props) => props.fixedLarge && `max-width: 976px`};
-  ${(props: Props) => props.fixedMedium && `max-width: 856px`};
-  ${(props: Props) => props.fixedSmall && `max-width: 616px`};
-  ${(props: Props) => props.fixedXSmall && `max-width: 496px`}; */
+// ${(props: Props) => props.fixedXLg && `max-width: 1296px`};
+// ${(props: Props) => props.fixedLg && `max-width: 976px`};
+// ${(props: Props) => props.fixedMd && `max-width: 856px`};
+// ${(props: Props) => props.fixedSm && `max-width: 616px`};
+// ${(props: Props) => props.fixedXSm && `max-width: 496px`};

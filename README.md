@@ -18,7 +18,7 @@ Cover basic components
 
 | Layout          | Elements     | Components    |
 | --------------- | ------------ | ------------- |
-| ✖ Container     | ✖ Typography | ✖ Nav         |
+| ✓ Container     | ✖ Typography | ✖ Nav         |
 | ✖ ThemeProvider | ✖ Input      | ✖ Avatar      |
 | ✖ Grid          | ✖ Button     | ✖ Navbar      |
 | ✖ Masonry       | ✖ Form       | ✖ Badges      |

@@ -1,37 +1,37 @@
 Wrapper layout component contains columns layout
 
 ```js
-<Container>
-  <div style={{ background: "#f3f3f3", padding: "2em" }}>Full width </div>
+<Container style={{ background: "#f3f3f3"}}>
+  <div style={{padding: "1em"}}>Full width </div>
 </Container>
 
 <br/>
 
-<Container fixedXLg>
-  <div style={{ background: "#f3f3f3", padding: "2em" }}>fixedXLg </div>
+<Container fixSize="xlarge" style={{ background: "#f3f3f3"}}>
+  <div style={{padding: "1em"}}>xlarge </div>
 </Container>
 
 <br/>
 
-<Container fixedLg>
-  <div style={{ background: "#f3f3f3", padding: "2em" }}>fixedLg </div>
+<Container fixSize="large" style={{ background: "#f3f3f3"}}>
+  <div style={{padding: "1em"}}>large </div>
 </Container>
 
 <br/>
 
-<Container fixedMd>
-  <div style={{ background: "#f3f3f3", padding: "2em" }}>fixedMd </div>
+<Container fixSize="medium" style={{ background: "#f3f3f3"}}>
+  <div style={{padding: "1em"}}>medium </div>
 </Container>
 
 <br/>
 
-<Container fixedSm>
-  <div style={{ background: "#f3f3f3", padding: "2em" }}>fixedSm </div>
+<Container fixSize="small" style={{ background: "#f3f3f3"}}>
+  <div style={{padding: "1em"}}>small </div>
 </Container>
 
 <br/>
 
-<Container fixedXSm>
-  <div style={{ background: "#f3f3f3", padding: "2em" }}>fixedXSm </div>
+<Container fixSize="xsmall" style={{ background: "#f3f3f3"}}>
+  <div style={{padding: "1em"}}>xsmall </div>
 </Container>
 ```

@@ -6,7 +6,7 @@ import Container from "./Container";
 describe("<Container/>", () => {
   // Render test
   it("should renders correctly", () => {
-    const wrapper = shallow(<Container>Children</Container>);
+    const wrapper = shallow(<Container />);
     expect(wrapper).toMatchSnapshot();
   });
 

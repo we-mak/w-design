@@ -3,17 +3,35 @@
  * Wrapper layout component contains columns layout
  * @prop {any} children children components
  * @prop {string} className tag class property
+ * @prop {string} fixSize xlarge(1280), large(960), medium(840), small(600), xsmall(480)
  * @public
  */
 import * as React from "react";
 import styled from "../../../styledConfig/index";
 
+const fixed = (size: string) => {
+  const sizes = {
+    xlarge() {
+      return "1296px";
+    },
+    large() {
+      return "976px";
+    },
+    medium() {
+      return "856px";
+    },
+    small() {
+      return "616px";
+    },
+    xsmall() {
+      return "496px";
+    }
+  };
+  return sizes[size];
+};
+
 export interface StyleProps {
-  fixedXLg?: boolean;
-  fixedLg?: boolean;
-  fixedMd?: boolean;
-  fixedSm?: boolean;
-  fixedXSm?: boolean;
+  fixSize?: string;
 }
 
 const Wrapper = styled.div`
@@ -22,11 +40,8 @@ const Wrapper = styled.div`
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   width: 100%;
-  ${(props: StyleProps) => props.fixedXLg && `max-width: 1296px`};
-  ${(props: StyleProps) => props.fixedLg && `max-width: 976px`};
-  ${(props: StyleProps) => props.fixedMd && `max-width: 856px`};
-  ${(props: StyleProps) => props.fixedSm && `max-width: 616px`};
-  ${(props: StyleProps) => props.fixedXSm && `max-width: 496px`};
+  max-width: ${(props: StyleProps) =>
+    props.fixSize ? fixed(props.fixSize) : null};
 `;
 
 export interface Props {

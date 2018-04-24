@@ -1,8 +1,8 @@
 {
   "name": "w-design",
   "version": "1.0.0",
-  "main": "build/lib/components/index.js",
-  "types": "build/lib/components/index.d.ts",
+  "main": "packages/components/index.js",
+  "types": "packages/components/index.d.ts",
   "license": "MIT",
   "private": false,
   "author": {
@@ -12,7 +12,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "clean": "rm -f -r -d build",
+    "clean": "rm -f -r -d packages",
     "build-lib": "tsc",
     "test": "jest --env=jsdom --no-cache",
     "styleguide": "npx styleguidist server"

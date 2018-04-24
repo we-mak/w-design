@@ -4,9 +4,9 @@ module.exports = {
   cache: true,
   entry: "./src/components/index.tsx",
   output: {
-    path: path.resolve(__dirname, "./lib/"),
+    path: path.resolve(__dirname, "./packages/"),
     filename: "[name].js",
-    publicPath: "/lib/"
+    publicPath: "/packages/"
   },
   devtool: "source-map",
   module: {

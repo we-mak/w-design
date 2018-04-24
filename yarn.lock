@@ -529,42 +529,45 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
-"@storybook/addon-actions@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.2.tgz#ab45c37f57027257530577a9c1af6896ffb40156"
+"@storybook/addon-actions@4.0.0-alpha.3":
+  version "4.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.0.0-alpha.3.tgz#dd9439d24197abfe2d89042d087391c0cb7c0150"
   dependencies:
-    "@storybook/components" "3.4.2"
+    "@storybook/addons" "4.0.0-alpha.3"
+    "@storybook/components" "4.0.0-alpha.3"
     babel-runtime "^6.26.0"
     deep-equal "^1.0.1"
     glamor "^2.20.40"
-    glamorous "^4.12.1"
+    glamorous "^4.12.3"
     global "^4.3.2"
     make-error "^1.3.4"
     prop-types "^15.6.1"
-    react-inspector "^2.2.2"
+    react-inspector "^2.3.0"
     uuid "^3.2.1"
 
-"@storybook/addon-info@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.4.2.tgz#0a101b86de80e76fe3b756e2dcdd296c94cc1914"
+"@storybook/addon-info@4.0.0-alpha.3":
+  version "4.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.0.0-alpha.3.tgz#9816a3971bac3ba9115641486553872114d9645b"
   dependencies:
-    "@storybook/client-logger" "3.4.2"
-    "@storybook/components" "3.4.2"
+    "@storybook/client-logger" "4.0.0-alpha.3"
+    "@storybook/components" "4.0.0-alpha.3"
     babel-runtime "^6.26.0"
     glamor "^2.20.40"
-    glamorous "^4.12.1"
+    glamorous "^4.12.3"
     global "^4.3.2"
     marksy "^6.0.3"
     nested-object-assign "^1.0.1"
     prop-types "^15.6.1"
     react-addons-create-fragment "^15.5.3"
+    react-lifecycles-compat "^3.0.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.4.2.tgz#09531263bd332669807b2e94cc70bd15e173f421"
+"@storybook/addon-links@4.0.0-alpha.3":
+  version "4.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.0.0-alpha.3.tgz#1dd628122ee2c8587c1491484578d2e2c2ab69f4"
   dependencies:
-    "@storybook/components" "3.4.2"
+    "@storybook/addons" "4.0.0-alpha.3"
+    "@storybook/components" "4.0.0-alpha.3"
     babel-runtime "^6.26.0"
     global "^4.3.2"
     prop-types "^15.6.1"
@@ -575,10 +578,6 @@
   dependencies:
     "@storybook/channels" "4.0.0-alpha.3"
     global "^4.3.2"
-
-"@storybook/addons@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.4.2.tgz#77f0d5cb3b9443da6765600d83cd5acda6115af6"
 
 "@storybook/channel-postmessage@4.0.0-alpha.3":
   version "4.0.0-alpha.3"
@@ -592,21 +591,9 @@
   version "4.0.0-alpha.3"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.0-alpha.3.tgz#e9ca852b8f2438f66329c24e66cfcdb2955ddcbc"
 
-"@storybook/client-logger@3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.2.tgz#33a7b5c924e2960f9c129a934fc905ed1b271017"
-
 "@storybook/client-logger@4.0.0-alpha.3":
   version "4.0.0-alpha.3"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.0.0-alpha.3.tgz#764f231a14880f77354dac84f3780703dc5efb54"
-
-"@storybook/components@3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.2.tgz#1124cf22a54e36aa07c291608c652746919cf375"
-  dependencies:
-    glamor "^2.20.40"
-    glamorous "^4.12.1"
-    prop-types "^15.6.1"
 
 "@storybook/components@4.0.0-alpha.3":
   version "4.0.0-alpha.3"
@@ -4258,7 +4245,7 @@ glamor@^2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-glamorous@^4.12.1, glamorous@^4.12.3:
+glamorous@^4.12.3:
   version "4.12.4"
   resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.12.4.tgz#95a6ef0b9ceae7d64082fbbae5b0b5109dbe901b"
   dependencies:
@@ -7636,7 +7623,7 @@ react-icons@^2.2.7:
   dependencies:
     react-icon-base "2.1.0"
 
-react-inspector@^2.2.2:
+react-inspector@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-inspector/-/react-inspector-2.3.0.tgz#fc9c1d38ab687fc0d190dcaf133ae40158968fc8"
   dependencies:

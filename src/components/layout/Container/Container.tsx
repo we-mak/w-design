@@ -1,15 +1,19 @@
 /**
  * Container
  * Wrapper layout component contains columns layout
- * @prop {ReactChild} children - children components
- * @prop {string} className - tag class property
+ * @prop {any} children children components
+ * @prop {string} className tag class property
+ * @public
  */
 import * as React from "react";
 import styled from "../../../styledConfig/index";
 
-export interface Props {
-  children?: React.ReactChild;
-  className?: string;
+export interface StyleProps {
+  fixedXLg?: boolean;
+  fixedLg?: boolean;
+  fixedMd?: boolean;
+  fixedSm?: boolean;
+  fixedXSm?: boolean;
 }
 
 const Wrapper = styled.div`
@@ -18,16 +22,22 @@ const Wrapper = styled.div`
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   width: 100%;
+  ${(props: StyleProps) => props.fixedXLg && `max-width: 1296px`};
+  ${(props: StyleProps) => props.fixedLg && `max-width: 976px`};
+  ${(props: StyleProps) => props.fixedMd && `max-width: 856px`};
+  ${(props: StyleProps) => props.fixedSm && `max-width: 616px`};
+  ${(props: StyleProps) => props.fixedXSm && `max-width: 496px`};
 `;
 
+export interface Props {
+  children?: React.ReactChild;
+  className?: string;
+}
+
 const Container: React.StatelessComponent<Props> = props => (
-  <Wrapper className={props.className}>{props.children}</Wrapper>
+  <Wrapper className={props.className} {...props}>
+    {props.children}
+  </Wrapper>
 );
 
 export default Container;
-
-/* ${(props: Props) => props.fixedXLarge && `max-width: 1296px`};
-  ${(props: Props) => props.fixedLarge && `max-width: 976px`};
-  ${(props: Props) => props.fixedMedium && `max-width: 856px`};
-  ${(props: Props) => props.fixedSmall && `max-width: 616px`};
-  ${(props: Props) => props.fixedXSmall && `max-width: 496px`}; */

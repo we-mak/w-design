@@ -30,7 +30,8 @@
     "jest",
     "src/setupTests.ts",
     "config",
-    "typedoc.js"
+    "typedoc.js",
+    "coverage"
   ],
   "types": ["./src/typings"]
 }

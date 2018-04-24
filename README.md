@@ -38,7 +38,9 @@ Cover basic components
 |                 |              | ✖ Popover     |
 |                 |              | ✖ Comment     |
 
-## License
+## [Change log](./CHANGELOG.md)
+
+## [License](./LICENSE)
 
 ## Development
 

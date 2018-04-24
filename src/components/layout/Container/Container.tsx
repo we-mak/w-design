@@ -10,24 +10,19 @@ import styled from "../../../styledConfig/index";
 export interface Props {
   children?: React.ReactChild;
   className?: string;
-  fixedXLarge?: boolean;
-  fixedLarge?: boolean;
-  fixedMedium?: boolean;
-  fixedSmall?: boolean;
-  fixedXSmall?: boolean;
 }
 
-const ContainerEl: React.StatelessComponent<Props> = props => (
-  <div className={props.className}>{props.children}</div>
-);
-
-const Container = styled(ContainerEl)`
+const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   width: 100%;
 `;
+
+const Container: React.StatelessComponent<Props> = props => (
+  <Wrapper className={props.className}>{props.children}</Wrapper>
+);
 
 export default Container;
 

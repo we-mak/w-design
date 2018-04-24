@@ -7,7 +7,7 @@ cache:
   directories:
   - node_modules
 script:
-    - npm run build-lib
+    # - npm run build-lib
     - npm test
     - npm run coverage
 # Send coverage data to Coveralls

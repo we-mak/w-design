@@ -7,42 +7,7 @@
  * @public
  */
 import * as React from "react";
-import styled from "../../../styledConfig/index";
-
-const fixed = (size: string) => {
-  const sizes = {
-    xlarge() {
-      return "1296px";
-    },
-    large() {
-      return "976px";
-    },
-    medium() {
-      return "856px";
-    },
-    small() {
-      return "616px";
-    },
-    xsmall() {
-      return "496px";
-    }
-  };
-  return sizes[size];
-};
-
-export interface StyleProps {
-  fixSize?: string;
-}
-
-const Wrapper = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-  width: 100%;
-  max-width: ${(props: StyleProps) =>
-    props.fixSize ? fixed(props.fixSize) : null};
-`;
+import { ContainerWrap } from "./ContainerWrap";
 
 export interface Props {
   children?: React.ReactChild;
@@ -50,9 +15,9 @@ export interface Props {
 }
 
 const Container: React.StatelessComponent<Props> = props => (
-  <Wrapper className={props.className} {...props}>
+  <ContainerWrap className={props.className} {...props}>
     {props.children}
-  </Wrapper>
+  </ContainerWrap>
 );
 
 export default Container;

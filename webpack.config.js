@@ -2,7 +2,7 @@ var path = require("path");
 
 module.exports = {
   cache: true,
-  entry: "./src/main.tsx",
+  entry: "./src/components/index.tsx",
   output: {
     path: path.resolve(__dirname, "./lib/"),
     filename: "[name].js",

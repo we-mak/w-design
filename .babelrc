@@ -1,3 +1,21 @@
 {
-  "presets": [["es2015", { "modules": false }], "env", "react"]
+  "presets": ["env", ["es2015", { "modules": false }], "react"],
+  "env": {
+    "test": {
+      "modules": "esnext",
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs",
+            "useBuiltIns": "usage",
+            "debug": false
+          }
+        ],
+        "stage-0",
+        "react",
+        "jest"
+      ]
+    }
+  }
 }

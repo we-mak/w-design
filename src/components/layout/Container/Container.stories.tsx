@@ -5,4 +5,11 @@ import Container from ".";
 
 const stories = storiesOf("Container", module);
 
-stories.add("Container", withInfo({ inline: true })(() => <Container />));
+stories.add(
+  "Container",
+  withInfo(`The responsive layout.`, { inline: true })(() => (
+    <Container>
+      <div style={{ background: "#f4f4f4" }}>Child Component</div>
+    </Container>
+  ))
+);

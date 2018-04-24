@@ -16,7 +16,8 @@
     "build-lib": "tsc",
     "test": "jest --env=jsdom",
     "coverage": "jest --coverage",
-    "styleguide": "npx styleguidist server"
+    "styleguide": "npx styleguidist server",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "dependencies": {
     "react": "^16.2.0",
@@ -36,6 +37,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.3",

@@ -4,10 +4,12 @@ module.exports = {
   ignore: [
     "src/setupTests.ts",
     "**/*/index.tsx",
+    "**/*\\Wrap.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.d.ts"
-  ]
+  ],
+  showUsage: true
 };

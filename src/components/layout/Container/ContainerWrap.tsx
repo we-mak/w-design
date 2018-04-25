@@ -2,6 +2,7 @@ import styled from "../../../utils/styled";
 import fixSize from "../../../utils/fixSize";
 
 export interface StyleProps {
+  /** xlarge(1280), large(960), medium(840), small(600), xsmall(480) */
   fixSize?: string;
 }
 

@@ -5,11 +5,11 @@ module.exports = {
     "src/setupTests.ts",
     "**/*/index.tsx",
     "**/*\\Wrap.tsx",
+    "**/*/Root.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.d.ts"
-  ],
-  showUsage: true
+  ]
 };

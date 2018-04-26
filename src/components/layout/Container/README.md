@@ -7,37 +7,39 @@ xlarge(1280), large(960), medium(840), small(600), xsmall(480)
 e.g: `fixSize = "xlarge";`
 
 ```js
-<Container style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>Full width </div>
-</Container>
+<Provider>
+  <Container bg="N2">
+    <div style={{ padding: "1em" }}>Full width </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="xlarge" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>xlarge </div>
-</Container>
+  <Container fixSize="xlarge" bg="N2">
+    <div style={{ padding: "1em" }}>xlarge </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="large" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>large </div>
-</Container>
+  <Container fixSize="large" bg="N2">
+    <div style={{ padding: "1em" }}>large </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="medium" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>medium </div>
-</Container>
+  <Container fixSize="medium" bg="N2">
+    <div style={{ padding: "1em" }}>medium </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="small" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>small </div>
-</Container>
+  <Container fixSize="small" bg="N2">
+    <div style={{ padding: "1em" }}>small </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="xsmall" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>xsmall </div>
-</Container>
+  <Container fixSize="xsmall" bg="N2">
+    <div style={{ padding: "1em" }}>xsmall </div>
+  </Container>
+</Provider>
 ```

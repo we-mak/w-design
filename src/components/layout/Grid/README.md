@@ -1,5 +1,7 @@
 example
 
 ```js
-<Grid />
+<Grid>
+  <Container>Container inside</Container>
+</Grid>
 ```

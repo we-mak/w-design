@@ -1,24 +1,26 @@
 import * as React from "react";
+import styled from "../../../utils/styled";
+import GridWrap from "./GridWrap";
 
-export interface Props {
-  /**
-   * Message to append to component
-   */
-  message?: string;
-}
+const Column = styled.div`
+  flex: 1;
+  max-width: 100%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+`;
 
-export interface State {}
+export interface Props {}
 
-export default class Grid extends React.Component<Props, State> {
-  public static defaultProps: Props = {
-    message: "World"
-  };
-
-  constructor(props: Props) {
-    super(props);
-  }
+class Grid extends React.PureComponent<Props, {}> {
+  static Column = Column;
 
   render() {
-    return <div>Hello {this.props.message}</div>;
+    const children = React.Children.map(this.props.children, child =>
+      React.cloneElement(child as any)
+    );
+
+    return <GridWrap {...this.props}>{children}</GridWrap>;
   }
 }
+
+export default Grid;

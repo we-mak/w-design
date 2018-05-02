@@ -1,18 +1,18 @@
 const fixSize = (size: string) => {
   const sizes = {
-    xlarge() {
+    xl() {
       return "1296px";
     },
-    large() {
+    lg() {
       return "976px";
     },
-    medium() {
+    md() {
       return "856px";
     },
-    small() {
+    sm() {
       return "616px";
     },
-    xsmall() {
+    xs() {
       return "496px";
     }
   };

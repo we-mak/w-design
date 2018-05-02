@@ -14,31 +14,31 @@ e.g: `fixSize = "xlarge";`
 
   <br />
 
-  <Container fixSize="xlarge" bg="N2">
+  <Container fixSize="xl" bg="N2">
     <div style={{ padding: "1em" }}>xlarge </div>
   </Container>
 
   <br />
 
-  <Container fixSize="large" bg="N2">
+  <Container fixSize="lg" bg="N2">
     <div style={{ padding: "1em" }}>large </div>
   </Container>
 
   <br />
 
-  <Container fixSize="medium" bg="N2">
+  <Container fixSize="md" bg="N2">
     <div style={{ padding: "1em" }}>medium </div>
   </Container>
 
   <br />
 
-  <Container fixSize="small" bg="N2">
+  <Container fixSize="sm" bg="N2">
     <div style={{ padding: "1em" }}>small </div>
   </Container>
 
   <br />
 
-  <Container fixSize="xsmall" bg="N2">
+  <Container fixSize="xs" bg="N2">
     <div style={{ padding: "1em" }}>xsmall </div>
   </Container>
 </Provider>

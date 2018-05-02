@@ -11,10 +11,9 @@ describe("<ContainerWrap/>", () => {
   });
 
   // Props test
-  // it("should has fixSize", () => {
-  //   const wrapper = shallow(
-  //     <ContainerWrap fixSize="xlarge">Children</ContainerWrap>
-  //   );
-  //   expect(wrapper.prop("fixSize")).toEqual("xlarge");
-  // });
+  it("should has fixSize", () => {
+    const wrapper = shallow(<ContainerWrap />);
+    wrapper.setProps({ fixSize: "xl" });
+    expect(wrapper).toMatchSnapshot();
+  });
 });

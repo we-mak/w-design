@@ -25,6 +25,7 @@ const Column = styled(tag)`
   ${fontSize}
   ${order}
   ${alignSelf}
+  /*Hidden props*/
 `;
 
 class Grid extends React.Component<any> {

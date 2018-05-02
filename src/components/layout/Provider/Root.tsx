@@ -1,4 +1,5 @@
 import styled, { injectGlobal } from "../../../utils/styled";
+import { colors } from "../../../common/colors";
 
 injectGlobal`
   /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -343,9 +344,11 @@ injectGlobal`
     display: none;
   }
 
-`;
-
-export const Root = styled.div`
+    /**
+  * Main root
+    ==========================================================================
+  *
+  */
   *,
   *::before,
   *::after {
@@ -354,22 +357,38 @@ export const Root = styled.div`
 
   html {
     box-sizing: border-box;
-    /* font-size: $html-font-size;
-    line-height: $html-line-height; */
+    font-size: 20px;
+    line-height: 1.5;
     -webkit-tap-highlight-color: transparent;
   }
 
   body {
-    /* background: $body-bg;
-    color: $body-font-color;
-    font-family: $body-font-family;
-    font-size: $font-size; */
+    background: ${colors.BLACK};
+    color: ${colors.N60};
+    font-family: '-apple-system, sans-serif, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue"';
+    font-size: 0.8rem;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
   }
 
+`;
+
+export const Root = styled.div`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: ${colors.N90};
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+  }
+
   a {
-    /* color: $link-color; */
+    color: ${colors.B50};
     outline: none;
     text-decoration: none;
 

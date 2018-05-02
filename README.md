@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
 
-A React UI library build with styled-components
+A _Mobile First_ React UI library build with styled-components
 
 ## Install
 
@@ -16,27 +16,27 @@ A React UI library build with styled-components
 
 Cover basic components
 
-| Layout          | Elements     | Components    |
-| --------------- | ------------ | ------------- |
-| ✖ ThemeProvider | ✖ Typography | ✖ Nav         |
-| ✓ Container     | ✖ Input      | ✖ Avatar      |
-| ✖ Grid          | ✖ Button     | ✖ Navbar      |
-| ✖ Masonry       | ✖ Form       | ✖ Badges      |
-|                 | ✖ Label      | ✖ Arcordion   |
-|                 | ✖ Media      | ✖ Breadcrumbs |
-|                 | ✖ Loader     | ✖ Card        |
-|                 | ✖ Segment    | ✖ Chip        |
-|                 | ✖ Table      | ✖ Menu        |
-|                 | ✖ List       | ✖ Modal       |
-|                 | ✖ Icon       | ✖ Pagination  |
-|                 | ✖ Divider    | ✖ Dropdown    |
-|                 |              | ✖ Sidebar     |
-|                 |              | ✖ Steps       |
-|                 |              | ✖ Tab         |
-|                 |              | ✖ Toast       |
-|                 |              | ✖ Tooltip     |
-|                 |              | ✖ Popover     |
-|                 |              | ✖ Comment     |
+| Layout              | Elements     | Components    |
+| ------------------- | ------------ | ------------- |
+| wip - ThemeProvider | ✖ Typography | ✖ Nav         |
+| ✓ Container         | ✖ Input      | ✖ Avatar      |
+| ✓ Grid              | ✖ Button     | ✖ Navbar      |
+| ✖ ResponsiveHide    | ✖ Form       | ✖ Badges      |
+| ✖ Masonry           | ✖ Label      | ✖ Arcordion   |
+|                     | ✖ Media      | ✖ Breadcrumbs |
+|                     | ✖ Loader     | ✖ Card        |
+|                     | ✖ Segment    | ✖ Chip        |
+|                     | ✖ Table      | ✖ Menu        |
+|                     | ✖ List       | ✖ Modal       |
+|                     | ✖ Icon       | ✖ Pagination  |
+|                     | ✖ Divider    | ✖ Dropdown    |
+|                     |              | ✖ Sidebar     |
+|                     |              | ✖ Steps       |
+|                     |              | ✖ Tab         |
+|                     |              | ✖ Toast       |
+|                     |              | ✖ Tooltip     |
+|                     |              | ✖ Popover     |
+|                     |              | ✖ Comment     |
 
 ## [Change log](./CHANGELOG.md)
 

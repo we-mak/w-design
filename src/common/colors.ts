@@ -23,6 +23,7 @@ export const colors = {
   N3: "#E2EAF2",
   N2: "#EFF3F6",
   N1: "#FBFBFB",
+  // Neutral Hex
 
   // Primary
   B70: "#004660",

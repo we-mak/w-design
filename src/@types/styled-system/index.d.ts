@@ -49,6 +49,19 @@ declare namespace StyledSystem {
 
   export function width(...args: any[]): any;
 
+  /**
+   * order
+   * moded by Sean
+   */
+  export type OrderValue = number | string;
+  export type ResponsiveOrderValue = ResponsiveValue<OrderValue>;
+
+  export interface OrderProps {
+    order?: ResponsiveOrderValue;
+  }
+
+  export function order(...args: any[]): any;
+
   export type FontSizeValue = number | string;
   export type ResponsiveFontSizeValue = ResponsiveValue<FontSizeValue>;
 

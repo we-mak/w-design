@@ -7,7 +7,7 @@ export interface Props extends React.HTMLProps<HTMLDivElement> {
   theme?: any;
 }
 
-class Provider extends React.PureComponent<Props, {}> {
+class Provider extends React.PureComponent<Props, void> {
   static displayName = "W.Provider";
 
   public static defaultProps: Props = {

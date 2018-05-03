@@ -26,6 +26,14 @@ const lg = hidden("lg");
 const xl = hidden("xl");
 const xxl = hidden("xxl");
 
+export interface Props {
+  xs?: boolean;
+  sm?: boolean;
+  md?: boolean;
+  lg?: boolean;
+  xl?: boolean;
+  xxl?: boolean;
+}
 const Base = styled.div`
   ${xs}
   ${sm}
@@ -35,6 +43,8 @@ const Base = styled.div`
   ${xxl}
 `;
 
-const Hide: React.StatelessComponent<any> = props => <Base {...props} />;
+const Hide: React.StatelessComponent<Props | any> = props => (
+  <Base {...props} />
+);
 
 export default Hide;

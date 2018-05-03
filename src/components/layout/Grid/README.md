@@ -140,20 +140,3 @@ width={[
   </Container>
 </Provider>
 ```
-
-### Responsive Hidden
-
-```js
-<Provider>
-  <Container>
-    <Grid>
-      <Grid.Column width={1 / 2} bg="N2" hideLg>
-        Column 1
-      </Grid.Column>
-      <Grid.Column width={1 / 2} bg="N3" hideXs>
-        Column 1
-      </Grid.Column>
-    </Grid>
-  </Container>
-</Provider>
-```

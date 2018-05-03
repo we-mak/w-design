@@ -1,7 +1,8 @@
 # w-design
 
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
-[![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)]
+
+[![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 
 A _Mobile First_ React UI library build with styled-components
 

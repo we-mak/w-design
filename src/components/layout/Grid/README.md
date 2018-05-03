@@ -1,4 +1,6 @@
-Wrapper Component around Columns
+Responsive grid styles base on flexbox
+
+`<Grid/>`
 
 | Props          | type   | default | description                |
 | -------------- | ------ | ------- | -------------------------- |
@@ -14,22 +16,22 @@ Wrapper Component around Columns
 ```js
 <Provider>
   <Container>
-    <Row>
-      <Column width={1} bg="N2">
+    <Grid>
+      <Grid.Column width={1} bg="N2">
         width 1
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 2} bg="N3">
+      <Grid.Column width={1 / 2} bg="N3">
         width 1/2
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 4} bg="N4">
+      <Grid.Column width={1 / 4} bg="N4">
         width 1/4
-      </Column>
-      <Column width={1 / 3} bg="N2">
+      </Grid.Column>
+      <Grid.Column width={1 / 3} bg="N2">
         width 1/3
-      </Column>
-    </Row>
+      </Grid.Column>
+    </Grid>
   </Container>
 </Provider>
 ```
@@ -39,22 +41,22 @@ Wrapper Component around Columns
 ```js
 <Provider>
   <Container>
-    <Row gapless>
-      <Column width={1} bg="N2">
+    <Grid gapless>
+      <Grid.Column width={1} bg="N2">
         width 1
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 2} bg="N3">
+      <Grid.Column width={1 / 2} bg="N3">
         width 1/2
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 4} bg="N4">
+      <Grid.Column width={1 / 4} bg="N4">
         width 1/4
-      </Column>
-      <Column width={1 / 3} bg="N2">
+      </Grid.Column>
+      <Grid.Column width={1 / 3} bg="N2">
         width 1/3
-      </Column>
-    </Row>
+      </Grid.Column>
+    </Grid>
   </Container>
 </Provider>
 ```
@@ -66,22 +68,22 @@ Grid `oneline` prop make all child columns positioned in the same single row.
 ```js
 <Provider>
   <Container>
-    <Row oneline>
-      <Column width={1} bg="N2">
+    <Grid oneline>
+      <Grid.Column width={1} bg="N2">
         width 1
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 2} bg="N3">
+      <Grid.Column width={1 / 2} bg="N3">
         width 1/2
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 4} bg="N4">
+      <Grid.Column width={1 / 4} bg="N4">
         width 1/4
-      </Column>
-      <Column width={1 / 3} bg="N2">
+      </Grid.Column>
+      <Grid.Column width={1 / 3} bg="N2">
         width 1/3
-      </Column>
-    </Row>
+      </Grid.Column>
+    </Grid>
   </Container>
 </Provider>
 ```
@@ -91,22 +93,22 @@ Grid `oneline` prop make all child columns positioned in the same single row.
 ```js
 <Provider>
   <Container>
-    <Row justifyContent="space-between">
-      <Column width={1} bg="N2">
+    <Grid justifyContent="space-between">
+      <Grid.Column width={1} bg="N2">
         width 1
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 2} bg="N3" m="auto">
+      <Grid.Column width={1 / 2} bg="N3" m="auto">
         width 1/2, m="auto"
-      </Column>
+      </Grid.Column>
 
-      <Column width={1 / 4} bg="N4">
+      <Grid.Column width={1 / 4} bg="N4">
         width 1/4
-      </Column>
-      <Column width={1 / 3} bg="N2">
+      </Grid.Column>
+      <Grid.Column width={1 / 3} bg="N2">
         width 1/3
-      </Column>
-    </Row>
+      </Grid.Column>
+    </Grid>
   </Container>
 </Provider>
 ```
@@ -126,15 +128,15 @@ width={[
 ```js
 <Provider>
   <Container>
-    <Row>
-      <Column width={[1, 1 / 2, 1 / 3, 1 / 4]} bg="N2">
+    <Grid>
+      <Grid.Column width={[1, 1 / 2, 1 / 3, 1 / 4]} bg="N2">
         Column 1
-      </Column>
+      </Grid.Column>
 
-      <Column width={[1, 1 / 2, 1 / 3, 1 / 4, 1]} bg="N3">
+      <Grid.Column width={[1, 1 / 2, 1 / 3, 1 / 4, 1]} bg="N3">
         Column 2
-      </Column>
-    </Row>
+      </Grid.Column>
+    </Grid>
   </Container>
 </Provider>
 ```
@@ -144,14 +146,14 @@ width={[
 ```js
 <Provider>
   <Container>
-    <Row>
-      <Column width={1 / 2} bg="N2">
+    <Grid>
+      <Grid.Column width={1 / 2} bg="N2" hideLg>
         Column 1
-      </Column>
-      <Column width={1 / 2} bg="N3">
+      </Grid.Column>
+      <Grid.Column width={1 / 2} bg="N3" hideXs>
         Column 1
-      </Column>
-    </Row>
+      </Grid.Column>
+    </Grid>
   </Container>
 </Provider>
 ```

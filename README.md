@@ -1,8 +1,7 @@
 # w-design
 
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
-[![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
-[![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
+[![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)]
 
 A _Mobile First_ React UI library build with styled-components
 
@@ -16,27 +15,27 @@ A _Mobile First_ React UI library build with styled-components
 
 Cover basic components
 
-| Layout              | Elements     | Components    |
-| ------------------- | ------------ | ------------- |
-| wip - ThemeProvider | ✖ Typography | ✖ Nav         |
-| ✓ Container         | ✖ Input      | ✖ Avatar      |
-| ✓ Row               | ✖ Button     | ✖ Navbar      |
-| ✓ Column            | ✖ Form       | ✖ Badges      |
-| ✖ Masonry           | ✖ Label      | ✖ Arcordion   |
-|                     | ✖ Media      | ✖ Breadcrumbs |
-|                     | ✖ Loader     | ✖ Card        |
-|                     | ✖ Segment    | ✖ Chip        |
-|                     | ✖ Table      | ✖ Menu        |
-|                     | ✖ List       | ✖ Modal       |
-|                     | ✖ Icon       | ✖ Pagination  |
-|                     | ✖ Divider    | ✖ Dropdown    |
-|                     |              | ✖ Sidebar     |
-|                     |              | ✖ Steps       |
-|                     |              | ✖ Tab         |
-|                     |              | ✖ Toast       |
-|                     |              | ✖ Tooltip     |
-|                     |              | ✖ Popover     |
-|                     |              | ✖ Comment     |
+| Layout                | Elements     | Components    |
+| --------------------- | ------------ | ------------- |
+| W.I.P - ThemeProvider | ✖ Typography | ✖ Nav         |
+| ✓ Container           | ✖ Input      | ✖ Avatar      |
+| ✓ Grid                | ✖ Button     | ✖ Navbar      |
+| ✖ Masonry             | ✖ Form       | ✖ Badges      |
+|                       | ✖ Label      | ✖ Arcordion   |
+|                       | ✖ Media      | ✖ Breadcrumbs |
+|                       | ✖ Loader     | ✖ Card        |
+|                       | ✖ Segment    | ✖ Chip        |
+|                       | ✖ Table      | ✖ Menu        |
+|                       | ✖ List       | ✖ Modal       |
+|                       | ✖ Icon       | ✖ Pagination  |
+|                       | ✖ Divider    | ✖ Dropdown    |
+|                       |              | ✖ Sidebar     |
+|                       |              | ✖ Steps       |
+|                       |              | ✖ Tab         |
+|                       |              | ✖ Toast       |
+|                       |              | ✖ Tooltip     |
+|                       |              | ✖ Popover     |
+|                       |              | ✖ Comment     |
 
 ## [Change log](./CHANGELOG.md)
 

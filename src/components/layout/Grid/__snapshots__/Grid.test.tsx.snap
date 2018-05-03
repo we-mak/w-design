@@ -1,11 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GridWrap/> should has gapless props 1`] = `
+exports[`<Grid/> should has props 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Row
-    gapless={true}
+  Symbol(enzyme.__unrendered__): <Grid
+    m="auto"
+    width={
+      Array [
+        1,
+        0.5,
+      ]
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,7 +25,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "gapless": true,
+      "children": undefined,
+      "m": "auto",
+      "width": Array [
+        1,
+        0.5,
+      ],
     },
     "ref": null,
     "rendered": null,
@@ -31,7 +42,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "gapless": true,
+        "children": undefined,
+        "m": "auto",
+        "width": Array [
+          1,
+          0.5,
+        ],
       },
       "ref": null,
       "rendered": null,
@@ -48,13 +64,11 @@ ShallowWrapper {
 }
 `;
 
-exports[`<GridWrap/> should has oneline props 1`] = `
+exports[`<Grid/> should renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Row
-    oneline={true}
-  />,
+  Symbol(enzyme.__unrendered__): <Grid />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -67,7 +81,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "oneline": true,
+      "children": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -79,50 +93,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "oneline": true,
+        "children": undefined,
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
-exports[`<GridWrap/> should renders correctly 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Row />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {},
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {},
       "ref": null,
       "rendered": null,
       "type": [Function],

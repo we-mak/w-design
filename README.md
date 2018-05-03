@@ -20,7 +20,7 @@ Cover basic components
 | W.I.P - ThemeProvider | ✖ Typography | ✖ Nav         |
 | ✓ Container           | ✖ Input      | ✖ Avatar      |
 | ✓ Grid                | ✖ Button     | ✖ Navbar      |
-| ✖ Hide                | ✖ Form       | ✖ Badges      |
+| ✓ Hide                | ✖ Form       | ✖ Badges      |
 | ✖ Masonry             | ✖ Label      | ✖ Arcordion   |
 |                       | ✖ Media      | ✖ Breadcrumbs |
 |                       | ✖ Loader     | ✖ Card        |

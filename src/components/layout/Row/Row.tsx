@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
   flexWrap,
   flexDirection,
@@ -11,7 +12,12 @@ export interface Props {
   oneline?: boolean;
 }
 
-export const GridWrap = styled.div`
+export interface Props {
+  /** children components*/
+  children?: React.ReactChild;
+}
+
+const Base = styled.div`
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
@@ -42,4 +48,6 @@ export const GridWrap = styled.div`
   `};
 `;
 
-GridWrap.displayName = "GridWrap";
+const Row: React.StatelessComponent<Props> = props => <Base {...props} />;
+
+export default Row;

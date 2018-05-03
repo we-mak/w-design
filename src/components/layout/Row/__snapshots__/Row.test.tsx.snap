@@ -4,7 +4,7 @@ exports[`<GridWrap/> should has gapless props 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GridWrap
+  Symbol(enzyme.__unrendered__): <Row
     gapless={true}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -17,25 +17,25 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "className": "sc-bdVaJa eqZKmQ",
+      "gapless": true,
     },
     "ref": null,
     "rendered": null,
-    "type": "div",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
-        "className": "sc-bdVaJa eqZKmQ",
+        "gapless": true,
       },
       "ref": null,
       "rendered": null,
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -52,7 +52,7 @@ exports[`<GridWrap/> should has oneline props 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GridWrap
+  Symbol(enzyme.__unrendered__): <Row
     oneline={true}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -65,25 +65,25 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "className": "sc-bdVaJa gUnBCg",
+      "oneline": true,
     },
     "ref": null,
     "rendered": null,
-    "type": "div",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
-        "className": "sc-bdVaJa gUnBCg",
+        "oneline": true,
       },
       "ref": null,
       "rendered": null,
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -100,7 +100,7 @@ exports[`<GridWrap/> should renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GridWrap />,
+  Symbol(enzyme.__unrendered__): <Row />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -111,25 +111,21 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "className": "sc-bdVaJa bnofbO",
-    },
+    "nodeType": "class",
+    "props": Object {},
     "ref": null,
     "rendered": null,
-    "type": "div",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "className": "sc-bdVaJa bnofbO",
-      },
+      "nodeType": "class",
+      "props": Object {},
       "ref": null,
       "rendered": null,
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

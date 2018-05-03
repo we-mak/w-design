@@ -20,8 +20,8 @@ Cover basic components
 | ------------------- | ------------ | ------------- |
 | wip - ThemeProvider | ✖ Typography | ✖ Nav         |
 | ✓ Container         | ✖ Input      | ✖ Avatar      |
-| ✓ Grid              | ✖ Button     | ✖ Navbar      |
-| ✖ withHide(HOC)     | ✖ Form       | ✖ Badges      |
+| ✓ Row               | ✖ Button     | ✖ Navbar      |
+| ✓ Column            | ✖ Form       | ✖ Badges      |
 | ✖ Masonry           | ✖ Label      | ✖ Arcordion   |
 |                     | ✖ Media      | ✖ Breadcrumbs |
 |                     | ✖ Loader     | ✖ Card        |

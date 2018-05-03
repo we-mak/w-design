@@ -1,37 +1,45 @@
-Wrapper layout component contains columns layout
+Container contains Grid component
+
+The responsive layout also provides fixed-width containers. Calls props API from Container wrapper component
+
+xl(1280), lg(960), md(840), sm(600), xs(480)
+
+e.g: `fixSize = "xlarge";`
 
 ```js
-<Container style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>Full width </div>
-</Container>
+<Provider>
+  <Container bg="N2">
+    <div style={{ padding: "1em" }}>Full width </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="xlarge" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>xlarge </div>
-</Container>
+  <Container fixSize="xl" bg="N2">
+    <div style={{ padding: "1em" }}>xlarge </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="large" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>large </div>
-</Container>
+  <Container fixSize="lg" bg="N2">
+    <div style={{ padding: "1em" }}>large </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="medium" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>medium </div>
-</Container>
+  <Container fixSize="md" bg="N2">
+    <div style={{ padding: "1em" }}>medium </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="small" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>small </div>
-</Container>
+  <Container fixSize="sm" bg="N2">
+    <div style={{ padding: "1em" }}>small </div>
+  </Container>
 
-<br/>
+  <br />
 
-<Container fixSize="xsmall" style={{ background: "#f3f3f3"}}>
-  <div style={{padding: "1em"}}>xsmall </div>
-</Container>
+  <Container fixSize="xs" bg="N2">
+    <div style={{ padding: "1em" }}>xsmall </div>
+  </Container>
+</Provider>
 ```

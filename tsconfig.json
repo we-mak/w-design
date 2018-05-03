@@ -28,7 +28,7 @@
     "jest.config.js",
     "styleguide.config.js",
     "jest",
-    "src/setupTests.ts",
+    "setupTests.ts",
     "config",
     "typedoc.js",
     "coverage"

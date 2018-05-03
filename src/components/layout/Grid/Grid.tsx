@@ -1,24 +1,47 @@
 import * as React from "react";
+import {
+  space,
+  width,
+  flex,
+  color,
+  fontSize,
+  order,
+  alignSelf
+} from "styled-system";
+import tag from "clean-tag";
+import styled from "../../../utils/styled";
+import { GridWrap } from "./GridWrap";
 
-export interface Props {
-  /**
-   * Message to append to component
-   */
-  message?: string;
-}
+const Column = styled(tag)`
+  flex: none;
+  max-width: 100%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 
-export interface State {}
+  /* Custom props with styled-system*/
+  ${space}
+  ${width}
+  ${flex}
+  ${color}
+  ${fontSize}
+  ${order}
+  ${alignSelf}
 
-export default class Grid extends React.Component<Props, State> {
-  public static defaultProps: Props = {
-    message: "World"
-  };
+`;
 
-  constructor(props: Props) {
-    super(props);
-  }
+class Grid extends React.Component<any> {
+  static Column = Column;
 
   render() {
-    return <div>Hello {this.props.message}</div>;
+    const children = React.Children.map(
+      this.props.children,
+      (child: React.ReactElement<any>) => React.cloneElement(child)
+    );
+
+    return <GridWrap {...this.props}>{children}</GridWrap>;
   }
 }
+
+Grid.Column.displayName = "Grid.Column";
+
+export default Grid;

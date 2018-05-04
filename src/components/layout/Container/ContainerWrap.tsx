@@ -13,9 +13,8 @@ export const ContainerWrap = styled.div`
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   width: 100%;
-  max-width: ${(props: Props) => props.fixSize && fixSize(props.fixSize)};
-
   ${color};
+  max-width: ${(props: Props) => props.fixSize && fixSize(props.fixSize)};
 `;
 
 ContainerWrap.displayName = "ContainerWrap";

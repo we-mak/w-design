@@ -3,15 +3,24 @@
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 
-A _Mobile First_ React UI library build with styled-components
+A **Mobile First** React UI library build with styled-components
 
 ## Install
 
+`yarn add w-design` or `npm install w-design`
+
 ## Usage
+
+```js
+import { Text } from "w-design";
+ReactDOM.render(<Text> Lorem ipsum </Text>, mountNode);
+```
 
 ## Support
 
-## Version 1.0.0 Feature
+* Modern browser and Internet Explorer 10+
+
+## Version 1.0.0 Features
 
 Cover basic components
 
@@ -24,7 +33,7 @@ Cover basic components
 | ✖ Masonry             | ✖ Label      | ✖ Arcordion   |
 |                       | ✖ Media      | ✖ Breadcrumbs |
 |                       | ✖ Loader     | ✖ Card        |
-|                       | ✖ Segment    | ✖ Chip        |
+|                       | ✖ Panel      | ✖ Chip        |
 |                       | ✖ Table      | ✖ Menu        |
 |                       | ✖ List       | ✖ Modal       |
 |                       | ✖ Icon       | ✖ Pagination  |
@@ -62,6 +71,16 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## 🐞 Report
+
+### For Issues
+
+Please open Issue to report bugs.
+
+### Questions
+
+For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
 
 ## Development
 

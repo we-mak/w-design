@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* ThemeProvider
+* ThemeProvider - May 9, 2018
 * Typography
 * Input
 * Colors

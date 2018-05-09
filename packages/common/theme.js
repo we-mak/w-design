@@ -4,11 +4,7 @@ var hex2Rgba_1 = require("../utils/hex2Rgba");
 var colors_1 = require("./colors");
 // breakpoint values
 exports.breakpoints = [24, 32, 48, 64, 80].map(function (n) { return n + "em"; });
-exports.fonts = {
-    0: "system-ui, sans-serif",
-    sans: "-apple-system, BlinkMacSystemFont, system-ui, sans-serif",
-    base: 'Roboto, "Helvetica Neue"'
-};
+exports.fonts = '-apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", system-ui, sans-serif';
 exports.fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
 exports.fontWeights = {
     normal: 400,

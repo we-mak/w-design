@@ -1,5 +1,6 @@
 # w-design
 
+[![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 
@@ -24,29 +25,49 @@ ReactDOM.render(<Text> Lorem ipsum </Text>, mountNode);
 
 Cover basic components
 
-| Layout                | Elements     | Components    |
-| --------------------- | ------------ | ------------- |
-| W.I.P - ThemeProvider | ✖ Typography | ✖ Nav         |
-| ✓ Container           | ✖ Input      | ✖ Avatar      |
-| ✓ Grid                | ✖ Button     | ✖ Navbar      |
-| ✓ Hide                | ✖ Form       | ✖ Badges      |
-| ✖ Masonry             | ✖ Label      | ✖ Arcordion   |
-|                       | ✖ Media      | ✖ Breadcrumbs |
-|                       | ✖ Loader     | ✖ Card        |
-|                       | ✖ Panel      | ✖ Chip        |
-|                       | ✖ Table      | ✖ Menu        |
-|                       | ✖ List       | ✖ Modal       |
-|                       | ✖ Icon       | ✖ Pagination  |
-|                       | ✖ Divider    | ✖ Dropdown    |
-|                       |              | ✖ Sidebar     |
-|                       |              | ✖ Steps       |
-|                       |              | ✖ Tab         |
-|                       |              | ✖ Toast       |
-|                       |              | ✖ Tooltip     |
-|                       |              | ✖ Popover     |
-|                       |              | ✖ Comment     |
+| Layout          | Elements     | Components    |
+| --------------- | ------------ | ------------- |
+| ✓ ThemeProvider | ✖ Typography | ✖ Nav         |
+| ✓ Container     | ✖ Input      | ✖ Avatar      |
+| ✓ Grid          | ✖ Button     | ✖ Navbar      |
+| ✓ Hide          | ✖ Form       | ✖ Badges      |
+| ✖ Masonry       | ✖ Label      | ✖ Arcordion   |
+|                 | ✖ Media      | ✖ Breadcrumbs |
+|                 | ✖ Loader     | ✖ Card        |
+|                 | ✖ Panel      | ✖ Chip        |
+|                 | ✖ Table      | ✖ Menu        |
+|                 | ✖ List       | ✖ Modal       |
+|                 | ✖ Divider    | ✖ Pagination  |
+|                 | ✖ Icon       | ✖ Dropdown    |
+|                 |              | ✖ Sidebar     |
+|                 |              | ✖ Steps       |
+|                 |              | ✖ Tab         |
+|                 |              | ✖ Toast       |
+|                 |              | ✖ Tooltip     |
+|                 |              | ✖ Popover     |
+|                 |              | ✖ Comment     |
 
 ## [Change log](./CHANGELOG.md)
+
+## 🐞 Report
+
+### For Issues
+
+Please open Issue to report bugs.
+
+### Questions
+
+For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
+
+## Development
+
+## Contributors
+
+<ol>
+  <li>
+   <a href="https://github.com/viiiprock" target="_blank">SeanDang</a>
+  </li>
+</ol>
 
 ## [License](./LICENSE)
 
@@ -71,23 +92,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## 🐞 Report
-
-### For Issues
-
-Please open Issue to report bugs.
-
-### Questions
-
-For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
-
-## Development
-
-## Contributors
-
-<ol>
-  <li>
-   <a href="https://github.com/viiiprock" target="_blank">SeanDang</a>
-  </li>
-</ol>

@@ -119,11 +119,15 @@ The `width` prop will scale depend on breakpoints which have [24, 32, 48, 64, 80
 
 example
 
-width={[
-1, // 100% below the smallest breakpoint
-1 / 2, // 50% from the next breakpoint and up
-1 / 4 // 25% from the next breakpoint and up
-]}
+```js
+    width={[
+      1, // 100% below the smallest breakpoint
+      1 / 2, // 50% from the next breakpoint and up
+      1 / 4 // 25% from the next breakpoint and up
+    ]}
+  </code>
+</pre>
+```
 
 ```js
 <Provider>

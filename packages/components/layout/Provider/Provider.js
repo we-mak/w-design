@@ -31,11 +31,26 @@ var React = require("react");
 var styled_1 = require("../../../utils/styled");
 var theme_1 = require("../../../common/theme");
 var Root_1 = require("./Root");
+var resetCss_1 = require("./resetCss");
 var Provider = /** @class */ (function (_super) {
     __extends(Provider, _super);
     function Provider() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Provider.prototype.componentDidMount = function () {
+        this.stylesheet = document.createElement("style");
+        this.stylesheet.type = "text/css";
+        this.stylesheet.innerHTML = resetCss_1.default;
+        if (document && document.head) {
+            document.head.appendChild(this.stylesheet);
+        }
+    };
+    Provider.prototype.componentWillUnmount = function () {
+        if (this.stylesheet && document && document.head) {
+            document.head.removeChild(this.stylesheet);
+            delete this.stylesheet;
+        }
+    };
     Provider.prototype.render = function () {
         var _a = this.props, theme = _a.theme, props = __rest(_a, ["theme"]);
         return (React.createElement(styled_1.ThemeProvider, { theme: __assign({}, theme_1.default, theme) },

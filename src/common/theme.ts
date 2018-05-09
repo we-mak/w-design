@@ -5,7 +5,7 @@ import { colors } from "./colors";
 export const breakpoints = [24, 32, 48, 64, 80].map(n => n + "em");
 
 export const fonts =
-  'Helvetica, "Helvetica Neue", -apple-system, system-ui, sans-serif';
+  '-apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", system-ui, sans-serif';
 
 export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
 

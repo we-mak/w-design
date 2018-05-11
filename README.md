@@ -38,7 +38,7 @@ Cover basic components
 |                 | ✖ Table      | ✖ Menu        |
 |                 | ✖ List       | ✖ Modal       |
 |                 | ✖ Divider    | ✖ Pagination  |
-|                 | ✖ Icon       | ✖ Dropdown    |
+|                 |              | ✖ Dropdown    |
 |                 |              | ✖ Sidebar     |
 |                 |              | ✖ Steps       |
 |                 |              | ✖ Tab         |

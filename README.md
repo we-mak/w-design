@@ -1,3 +1,7 @@
+<p align="center">
+ <img height="64" width="64" src="resources/img/logo.png">
+</p>
+
 # w-design
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
@@ -12,10 +16,19 @@ A **Mobile First** React UI library build with styled-components
 
 ## Usage
 
+Simple example
+
 ```js
 import { Text } from "w-design";
-ReactDOM.render(<Text> Lorem ipsum </Text>, mountNode);
+ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 ```
+
+### Layout
+
+* [Provider]("/src/components/layout/Provider/README.md")
+* [Container]("/src/components/layout/Container/README.md")
+* [Grid]("/src/components/layout/Grid/README.md")
+* [Hide]("/src/components/layout/Hide/README.md")
 
 ## Support
 
@@ -25,27 +38,27 @@ ReactDOM.render(<Text> Lorem ipsum </Text>, mountNode);
 
 Cover basic components
 
-| Layout          | Elements     | Components    |
-| --------------- | ------------ | ------------- |
-| ✓ ThemeProvider | ✖ Typography | ✖ Nav         |
-| ✓ Container     | ✖ Input      | ✖ Avatar      |
-| ✓ Grid          | ✖ Button     | ✖ Navbar      |
-| ✓ Hide          | ✖ Form       | ✖ Badges      |
-| ✖ Masonry       | ✖ Label      | ✖ Arcordion   |
-|                 | ✖ Media      | ✖ Breadcrumbs |
-|                 | ✖ Loader     | ✖ Card        |
-|                 | ✖ Panel      | ✖ Chip        |
-|                 | ✖ Table      | ✖ Menu        |
-|                 | ✖ List       | ✖ Modal       |
-|                 | ✖ Divider    | ✖ Pagination  |
-|                 |              | ✖ Dropdown    |
-|                 |              | ✖ Sidebar     |
-|                 |              | ✖ Steps       |
-|                 |              | ✖ Tab         |
-|                 |              | ✖ Toast       |
-|                 |              | ✖ Tooltip     |
-|                 |              | ✖ Popover     |
-|                 |              | ✖ Comment     |
+| Layout          | Elements  | Components    |
+| --------------- | --------- | ------------- |
+| ✓ ThemeProvider | ✖ Button  | ✖ Nav         |
+| ✓ Container     | ✖ Input   | ✖ Avatar      |
+| ✓ Grid          | ✖ Form    | ✖ Navbar      |
+| ✓ Hide          | ✖ Label   | ✖ Badges      |
+| ✖ Masonry       | ✖ Media   | ✖ Arcordion   |
+|                 | ✖ Loader  | ✖ Breadcrumbs |
+|                 | ✖ Panel   | ✖ Card        |
+|                 | ✖ Table   | ✖ Chip        |
+|                 | ✖ List    | ✖ Menu        |
+|                 | ✖ Divider | ✖ Modal       |
+|                 | ✓ Heading | ✖ Pagination  |
+|                 |           | ✖ Dropdown    |
+|                 |           | ✖ Sidebar     |
+|                 |           | ✖ Steps       |
+|                 |           | ✖ Tab         |
+|                 |           | ✖ Toast       |
+|                 |           | ✖ Tooltip     |
+|                 |           | ✖ Popover     |
+|                 |           | ✖ Comment     |
 
 ## [Change log](./CHANGELOG.md)
 
@@ -60,6 +73,25 @@ Please open Issue to report bugs.
 For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
 
 ## Development
+
+Folder structure
+
+```bash
+├── src
+│   ├── @types/**/*.d.ts
+│   ├── common ## static default variables
+│   ├── components
+│   │   ├── HOC ## Higher order components
+│   │   └── **/* ## Core library component folder
+│   └── utils ## utility functions to helps components
+│
+├── resources
+│   ├── GUI ## UI design system files
+│   ├── img ## Image for docs
+│
+└── packages
+    └── **/* ## built library folders
+```
 
 ## Contributors
 

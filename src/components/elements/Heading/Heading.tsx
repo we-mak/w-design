@@ -1,5 +1,6 @@
 import * as React from "react";
 import tag from "clean-tag";
+import { color } from "styled-system";
 import { colors } from "../../../common/colors";
 import styled from "../../../utils/styled";
 import BaseStyle from "./BaseStyle";
@@ -17,6 +18,7 @@ const H1 = styled(TagElement)`
   font-size: 2rem;
   color: ${colors.N90};
   ${BaseStyle};
+  ${color};
 `;
 
 // H2
@@ -24,6 +26,7 @@ const H2 = styled(TagElement)`
   font-size: 1.6rem;
   color: ${colors.N90};
   ${BaseStyle};
+  ${color};
 `;
 
 // H3
@@ -31,6 +34,7 @@ const H3 = styled(TagElement)`
   font-size: 1.4rem;
   color: ${colors.N90};
   ${BaseStyle};
+  ${color};
 `;
 
 // H4
@@ -38,6 +42,7 @@ const H4 = styled(TagElement)`
   font-size: 1.2rem;
   color: ${colors.N90};
   ${BaseStyle};
+  ${color};
 `;
 
 // H5
@@ -45,6 +50,7 @@ const H5 = styled(TagElement)`
   font-size: 1rem;
   color: ${colors.N70};
   ${BaseStyle};
+  ${color};
 `;
 
 // H6
@@ -52,6 +58,7 @@ const H6 = styled(TagElement)`
   font-size: 0.8rem;
   color: ${colors.N70};
   ${BaseStyle};
+  ${color};
 `;
 
 class Heading extends React.Component<any> {

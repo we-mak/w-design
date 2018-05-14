@@ -3,7 +3,7 @@ import * as React from "react";
 import * as renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 import "jest-styled-components";
-import Provider from "./Provider";
+import Provider from "./index";
 
 describe("<Provider/>", () => {
   it("should renders correctly", () => {

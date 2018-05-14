@@ -23,12 +23,16 @@ import { Text } from "w-design";
 ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 ```
 
-### Layout
+### Layouts
 
-* [Provider]("/src/components/layout/Provider/README.md")
-* [Container]("/src/components/layout/Container/README.md")
-* [Grid]("/src/components/layout/Grid/README.md")
-* [Hide]("/src/components/layout/Hide/README.md")
+* [Provider]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md")
+* [Container]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md")
+* [Grid]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md")
+* [Hide]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md")
+
+### Elements
+
+* [Heading]("https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md")
 
 ## Support
 
@@ -51,7 +55,7 @@ Cover basic components
 |                 | ✖ List    | ✖ Menu        |
 |                 | ✖ Divider | ✖ Modal       |
 |                 | ✓ Heading | ✖ Pagination  |
-|                 |           | ✖ Dropdown    |
+|                 | ✖ Icon    | ✖ Dropdown    |
 |                 |           | ✖ Sidebar     |
 |                 |           | ✖ Steps       |
 |                 |           | ✖ Tab         |

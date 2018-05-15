@@ -24,13 +24,13 @@ export const letterSpacings = {
   caps: "0.25em"
 };
 
+export const radii = [0, 2, 4];
+
 // space is used for margin and padding scales
 // it's recommended to use powers of two to ensure alignment
 // when used in nested elements
 // numbers are converted to px
 export const space = [0, 4, 8, 16, 32, 64, 128];
-
-export const radii = [0, 2, 4];
 
 export const shadows = [
   "none",
@@ -46,5 +46,6 @@ export default {
   colors,
   space,
   breakpoints,
+  radii,
   letterSpacings
 };

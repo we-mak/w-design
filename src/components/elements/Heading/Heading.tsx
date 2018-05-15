@@ -11,7 +11,7 @@ type StyleProps = {
 };
 
 const TagElement = ({ as, ...props }: StyleProps) =>
-  React.createElement(tag[as ? as : "div"], { ...props });
+  React.createElement(tag[as || "div"], { ...props });
 
 // H1
 const H1 = styled(TagElement)`

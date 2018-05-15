@@ -7,7 +7,7 @@ module.exports = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
-    "!src/**/*/index.tsx",
+    "!src/**/*/index.{ts,tsx}",
     "!src/**/*/Root.tsx"
   ],
   coveragePathIgnorePatterns: [

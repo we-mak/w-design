@@ -1,48 +1,8 @@
 import * as React from "react";
 import { getButtonStyle } from "./getButtonStyle";
+import { getButtonProps } from "./getButtonProps";
 import styled from "../../../utils/styled";
-
-type BtnType =
-  | "default"
-  | "primary"
-  | "danger"
-  | "warning"
-  | "success"
-  | "help"
-  | "link";
-
-type BtnSize = "small" | "medium" | "large";
-
-export type BtnProps = {
-  /** button apperance type */
-  btnType?: BtnType;
-  /** button apperance size */
-  size?: BtnSize;
-  /** html button aria-controls*/
-  ariaControls?: string;
-  /** html button aria-expanded*/
-  ariaExpanded?: boolean;
-  /** html button aria-label*/
-  ariaLabel?: string;
-  /** html button aria-haspopup*/
-  ariaHaspopup?: boolean;
-  /** custom className*/
-  className?: string;
-  /** id of the button*/
-  id?: string;
-  /** children */
-  children?: React.ReactChild;
-  /** button link url */
-  href?: string;
-  /** left icon*/
-  iconLeft?: boolean;
-  /** right icon*/
-  iconRight?: boolean;
-  /** loading state*/
-  isLoading?: boolean;
-  /** selected button */
-  isSelected?: boolean;
-};
+import { BtnProps } from "./buttonType";
 
 const StyledButton = styled.button`
   ${getButtonStyle};
@@ -52,26 +12,36 @@ StyledButton.displayName = "StyledButton";
 const A = styled.a`
   ${getButtonStyle};
 `;
-A.displayName = "A";
+A.displayName = "StyledA";
+
+const Span = styled.span`
+  ${getButtonStyle};
+`;
+Span.displayName = "StyledSpan";
 
 class Button extends React.Component<BtnProps> {
   static defaultProps = {
-    btnType: "default"
+    appearance: "default",
+    type: "button",
+    btnSize: "md",
+    isDisabled: false,
+    isSelected: false
   };
 
   getComponent() {
-    if (this.props.href) return A;
+    if (this.props.href) return this.props.isDisabled ? Span : A;
 
     return StyledButton;
   }
 
   render() {
-    const { btnType, href, children } = this.props;
+    const { buttonRef, children } = this.props;
+    const buttonProps = getButtonProps(this as any);
 
     const StyledComponent = this.getComponent();
 
     return (
-      <StyledComponent btnType={btnType} href={href}>
+      <StyledComponent ref={buttonRef} {...buttonProps as any}>
         {children}
       </StyledComponent>
     );

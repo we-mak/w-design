@@ -1,14 +1,12 @@
-<p align="center">
- <img height="64" width="64" src="resources/img/logo.png">
-</p>
-
-# w-design
+<div align="center">
+ <img height="60" width="60" src="resources/img/logo.png">
+ <h1>w-design</h1>
+ <p>A **Mobile First** React UI library build with styled-components</p>
+</div>
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
-
-A **Mobile First** React UI library build with styled-components
 
 ## Install
 
@@ -25,18 +23,24 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 ### Layouts
 
-* [Provider]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md")
-* [Container]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md")
-* [Grid]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md")
-* [Hide]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md")
+[Provider]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md")
+
+[Container]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md")
+
+[Grid]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md")
+
+[Hide]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md")
 
 ### Elements
 
-* [Heading]("https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md")
+[Heading]("https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md")
+
+[Button]("https://github.com/we-mak/w-design/blob/master/src/components/elements/Button/README.md")
 
 ## Support
 
-* Modern browser and Internet Explorer 10+
+* Modern browser
+* IE 10+ (un-tested)
 
 ## Version 1.0.0 Features
 
@@ -44,7 +48,7 @@ Cover basic components
 
 | Layout          | Elements  | Components    |
 | --------------- | --------- | ------------- |
-| ✓ ThemeProvider | ✖ Button  | ✖ Nav         |
+| ✓ ThemeProvider | ✓ Button  | ✖ Nav         |
 | ✓ Container     | ✖ Input   | ✖ Avatar      |
 | ✓ Grid          | ✖ Form    | ✖ Navbar      |
 | ✓ Hide          | ✖ Label   | ✖ Badges      |

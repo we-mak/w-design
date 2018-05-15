@@ -1,10 +1,12 @@
 import { css } from "../../../utils/styled";
 import { colors } from "../../../common/colors";
 import hex2Rgba from "../../../utils/hex2Rgba";
-import { BtnProps } from "./Button";
+import { BtnProps } from "./buttonType";
 
-const getButtonType = (btnType?: string) => {
-  const btnTypes = {
+const getAppearanceProps = (
+  appearance?: "default" | "primary" | "danger" | "warning" | "success" | "link"
+) => {
+  const appearances = {
     default() {
       return `
         border: 0.05rem solid ${colors.N3};
@@ -147,19 +149,54 @@ const getButtonType = (btnType?: string) => {
     }
   };
 
-  return btnTypes[btnType ? btnType : "default"];
+  return appearances[appearance || "default"];
+};
+
+const getSizeProps = (btnSize?: "sm" | "md" | "lg") => {
+  const sizes = {
+    sm() {
+      return `
+        font-size: .7rem;
+        height: 1.4rem;
+        padding: .15rem .3rem;
+      `;
+    },
+    md() {
+      return `
+        height: 1.8rem;
+        font-size: 0.8rem;
+        padding: 0.35rem 0.4rem;
+      `;
+    },
+    lg() {
+      return `
+        font-size: .9rem;
+        height: 2rem;
+        padding: .45rem .6rem;
+      `;
+    }
+  };
+
+  return sizes[btnSize || "md"];
 };
 
 export const getButtonStyle = (props: BtnProps) => {
+  const { appearance, btnSize, fluid } = props;
   /** Button type style*/
-  const { btnType } = props;
+  const buttonAppearance = getAppearanceProps(appearance);
 
-  const buttonStyle = getButtonType(btnType);
+  const buttonSize = getSizeProps(btnSize);
+
+  /** Variable styled*/
+  let width;
+  if (fluid) {
+    width = "100%";
+  }
 
   return css`
     cursor: pointer;
     outline: 0;
-    border-radius: 0.1em;
+    border-radius: 0.1rem;
     display: inline-block;
     text-decoration: none;
     text-align: center;
@@ -167,11 +204,8 @@ export const getButtonStyle = (props: BtnProps) => {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-
-    height: 1.8rem;
-    font-size: 0.8rem;
-    padding: 0.35rem 0.4rem;
-
-    ${buttonStyle};
+    width: ${width};
+    ${buttonSize};
+    ${buttonAppearance};
   `;
 };

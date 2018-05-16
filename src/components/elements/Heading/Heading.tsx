@@ -1,64 +1,60 @@
 import * as React from "react";
 import tag from "clean-tag";
-import { color } from "styled-system";
-import { colors } from "../../../common/colors";
+import theme from "../../../common/theme";
 import styled from "../../../utils/styled";
 import BaseStyle from "./BaseStyle";
 
-type StyleProps = {
+type Props = {
   /** html tag */
   as?: string;
 };
 
-const TagElement = ({ as, ...props }: StyleProps) =>
+const getThemeColor = (props: any) => props.theme.colors[props.color];
+
+const TagElement = ({ as, ...props }: Props) =>
   React.createElement(tag[as || "div"], { ...props });
 
+const { colors } = theme;
 // H1
 const H1 = styled(TagElement)`
   font-size: 2rem;
-  color: ${colors.N90};
+  color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
-  ${color};
 `;
 
 // H2
 const H2 = styled(TagElement)`
   font-size: 1.6rem;
-  color: ${colors.N90};
+  color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
-  ${color};
 `;
 
 // H3
 const H3 = styled(TagElement)`
   font-size: 1.4rem;
-  color: ${colors.N90};
+  color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
-  ${color};
 `;
 
 // H4
 const H4 = styled(TagElement)`
   font-size: 1.2rem;
-  color: ${colors.N90};
+  color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
-  ${color};
 `;
 
 // H5
 const H5 = styled(TagElement)`
   font-size: 1rem;
-  color: ${colors.N70};
+  color: ${(props: any) => getThemeColor(props) || colors.N70};
   ${BaseStyle};
-  ${color};
 `;
 
 // H6
 const H6 = styled(TagElement)`
   font-size: 0.8rem;
-  color: ${colors.N70};
+  color: ${(props: any) => getThemeColor(props) || colors.N70};
   ${BaseStyle};
-  ${color};
 `;
 
 class Heading extends React.Component<any> {
@@ -82,5 +78,10 @@ class Heading extends React.Component<any> {
 }
 
 Heading.H1.displayName = "Heading.H1";
+Heading.H2.displayName = "Heading.H2";
+Heading.H3.displayName = "Heading.H3";
+Heading.H4.displayName = "Heading.H4";
+Heading.H5.displayName = "Heading.H5";
+Heading.H6.displayName = "Heading.H6";
 
 export default Heading;

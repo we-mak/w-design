@@ -10,7 +10,9 @@ const StyledButton = styled.button`
 StyledButton.displayName = "StyledButton";
 
 const A = styled.a`
-  ${getButtonStyle};
+  a&&& {
+    ${getButtonStyle};
+  }
 `;
 A.displayName = "StyledA";
 
@@ -19,17 +21,23 @@ const Span = styled.span`
 `;
 Span.displayName = "StyledSpan";
 
-class Button extends React.Component<BtnProps> {
+class Button extends React.Component<
+  BtnProps,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+> {
   static defaultProps = {
     appearance: "default",
     type: "button",
     btnSize: "md",
+    isLoading: false,
     isDisabled: false,
     isSelected: false
   };
 
   getComponent() {
-    if (this.props.href) return this.props.isDisabled ? Span : A;
+    if (this.props.href) {
+      return this.props.isDisabled ? Span : A;
+    }
 
     return StyledButton;
   }

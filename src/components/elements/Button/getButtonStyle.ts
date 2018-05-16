@@ -1,8 +1,15 @@
 import { css } from "../../../utils/styled";
-import { colors } from "../../../common/colors";
+import theme from "../../../common/theme";
 import hex2Rgba from "../../../utils/hex2Rgba";
-import { BtnProps } from "./buttonType";
+import { SpinnerStyle } from "../Spinner/Spinner";
 
+const { colors } = theme;
+
+/**
+ * getAppearanceProps
+ * @param appearance take the apperance props
+ * @returns style applies to each button appearance
+ */
 const getAppearanceProps = (
   appearance?: "default" | "primary" | "danger" | "warning" | "success" | "link"
 ) => {
@@ -43,8 +50,8 @@ const getAppearanceProps = (
         }
 
         &:focus {
-          background: ${colors.B60};
-          border-color: ${colors.B70};
+          background: ${colors.B40};
+          border-color: ${colors.B60};
           box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.B5)};
           color: ${colors.WHITE};
         }
@@ -91,8 +98,8 @@ const getAppearanceProps = (
         }
 
         &:focus {
-          background: ${colors.O40};
-          border-color: ${colors.O50};
+          background: ${colors.O30};
+          border-color: ${colors.O40};
           box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.O10)};
           color: ${colors.WHITE};
         }
@@ -115,8 +122,8 @@ const getAppearanceProps = (
         }
 
         &:focus {
-          background: ${colors.G40};
-          border-color: ${colors.G50};
+          background: ${colors.G30};
+          border-color: ${colors.G40};
           box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.G7)};
           color: ${colors.WHITE};
         }
@@ -130,18 +137,16 @@ const getAppearanceProps = (
     },
     link() {
       return `
-        outline: 0;
-        text-decoration: none !important;
+        color: ${colors.B50};
+        border: none;
         &:hover {
           background: ${colors.N3};
-          color: ${colors.N5};
+          color: ${colors.B60};
         }
         &:focus {
           background: ${colors.B5};
-
         }
         &:active {
-
           background: ${colors.B5};
           box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.B50)};
         }
@@ -152,7 +157,11 @@ const getAppearanceProps = (
   return appearances[appearance || "default"];
 };
 
-const getSizeProps = (btnSize?: "sm" | "md" | "lg") => {
+/**
+ * getSizeProps
+ * Take each size props as params to return style
+ */
+const getSizeProps = (props?: "sm" | "md" | "lg") => {
   const sizes = {
     sm() {
       return `
@@ -177,21 +186,43 @@ const getSizeProps = (btnSize?: "sm" | "md" | "lg") => {
     }
   };
 
-  return sizes[btnSize || "md"];
+  return sizes[props || "md"];
 };
 
-export const getButtonStyle = (props: BtnProps) => {
-  const { appearance, btnSize, fluid } = props;
-  /** Button type style*/
-  const buttonAppearance = getAppearanceProps(appearance);
+/**
+ * getLoadingState
+ * Apply style to each appearance when loading props is true
+ */
+const getLoadingState = (props: any) => {
+  if (props.isLoading) {
+    if (props.appearance === "default" || props.appearance === "link") {
+      return SpinnerStyle;
+    }
 
-  const buttonSize = getSizeProps(btnSize);
+    return css`
+      ${SpinnerStyle};
+      &::after {
+        border-color: ${colors.WHITE};
+        border-right-color: transparent;
+        border-top-color: transparent;
+      }
+    `;
+  }
+
+  return;
+};
+
+export const getButtonStyle = (props: any) => {
+  /** Button type style*/
+  const buttonAppearance = getAppearanceProps(props.appearance);
 
   /** Variable styled*/
+  const buttonSize = getSizeProps(props.elementSize);
+
   let width;
-  if (fluid) {
-    width = "100%";
-  }
+  if (props.fluid) width = "100%";
+
+  const loadingStyle = getLoadingState(props);
 
   return css`
     cursor: pointer;
@@ -205,7 +236,16 @@ export const getButtonStyle = (props: BtnProps) => {
     vertical-align: middle;
     white-space: nowrap;
     width: ${width};
+    &:disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      color: ${colors.N7} !important;
+      background: ${colors.N4} !important;
+      border: none;
+    }
+
     ${buttonSize};
     ${buttonAppearance};
+    ${loadingStyle};
   `;
 };

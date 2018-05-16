@@ -1,8 +1,9 @@
 <div align="center">
  <img height="60" width="60" src="resources/img/logo.png">
  <h1>w-design</h1>
- <p>A **Mobile First** React UI library build with styled-components</p>
 </div>
+
+A **Mobile First** React UI library build with styled-components
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
@@ -23,19 +24,15 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 ### Layouts
 
-[Provider]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md")
-
-[Container]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md")
-
-[Grid]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md")
-
-[Hide]("https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md")
+* [Provider](https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md)
+* [Container](https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md)
+* [Grid](https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md)
+* [Hide](https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md)
 
 ### Elements
 
-[Heading]("https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md")
-
-[Button]("https://github.com/we-mak/w-design/blob/master/src/components/elements/Button/README.md")
+* [Heading](https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md)
+* [Button](https://github.com/we-mak/w-design/blob/master/src/components/elements/Button/README.md)
 
 ## Support
 
@@ -46,27 +43,27 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 Cover basic components
 
-| Layout          | Elements  | Components    |
-| --------------- | --------- | ------------- |
-| ✓ ThemeProvider | ✓ Button  | ✖ Nav         |
-| ✓ Container     | ✖ Input   | ✖ Avatar      |
-| ✓ Grid          | ✖ Form    | ✖ Navbar      |
-| ✓ Hide          | ✖ Label   | ✖ Badges      |
-| ✖ Masonry       | ✖ Media   | ✖ Arcordion   |
-|                 | ✖ Loader  | ✖ Breadcrumbs |
-|                 | ✖ Panel   | ✖ Card        |
-|                 | ✖ Table   | ✖ Chip        |
-|                 | ✖ List    | ✖ Menu        |
-|                 | ✖ Divider | ✖ Modal       |
-|                 | ✓ Heading | ✖ Pagination  |
-|                 | ✖ Icon    | ✖ Dropdown    |
-|                 |           | ✖ Sidebar     |
-|                 |           | ✖ Steps       |
-|                 |           | ✖ Tab         |
-|                 |           | ✖ Toast       |
-|                 |           | ✖ Tooltip     |
-|                 |           | ✖ Popover     |
-|                 |           | ✖ Comment     |
+| Layout          | Elements   | Components    |
+| --------------- | ---------- | ------------- |
+| ✓ ThemeProvider | ✓ Button   | ✖ Nav         |
+| ✓ Container     | ✖ Input    | ✖ Avatar      |
+| ✓ Grid          | ✖ Form     | ✖ Navbar      |
+| ✓ Hide          | ✖ Label    | ✖ Badges      |
+| ✖ Masonry       | ✖ Image    | ✖ Arcordion   |
+|                 | ✓ Spinner  | ✖ Breadcrumbs |
+|                 | ✖ Panel    | ✖ Card        |
+|                 | ✖ Table    | ✖ Chip        |
+|                 | ✖ List     | ✖ Menu        |
+|                 | ✖ Divider  | ✖ Modal       |
+|                 | ✓ Heading  | ✖ Pagination  |
+|                 | ✖ Icon     | ✖ Dropdown    |
+|                 | ✖ Progress | ✖ Sidebar     |
+|                 |            | ✖ Steps       |
+|                 |            | ✖ Tab         |
+|                 |            | ✖ Toast       |
+|                 |            | ✖ Tooltip     |
+|                 |            | ✖ Popover     |
+|                 |            | ✖ Comment     |
 
 ## [Change log](./CHANGELOG.md)
 
@@ -82,7 +79,7 @@ For how-to questions and other non-issues, please use StackOverflow instead of G
 
 ## Development
 
-Folder structure
+Folders structure
 
 ```bash
 ├── src

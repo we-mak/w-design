@@ -1,14 +1,22 @@
 import { BtnProps } from "./buttonType";
 
 const getAppearanceProps = (props: BtnProps) => {
-  const { appearance, btnSize, fluid, className, isDisabled } = props;
+  const {
+    appearance,
+    elementSize,
+    fluid,
+    className,
+    isDisabled,
+    isLoading
+  } = props;
 
   return {
     appearance,
-    btnSize,
+    elementSize,
     fluid,
     className,
-    disabled: isDisabled
+    disabled: isDisabled,
+    isLoading
   };
 };
 
@@ -34,6 +42,7 @@ export const getButtonProps = (component: any) => {
 
   const defaultProps = {
     ...getAppearanceProps(props),
+    id: props.id,
     "aria-label": props.ariaLabel
   };
 

@@ -1,8 +1,8 @@
-| Props      | type            | default     | description                |
-| ---------- | --------------- | ----------- | -------------------------- |
-| as         | string          | div         | change html tag definition |
-| fontWeight | string / number | 500         | change font-weight style   |
-| color      | string          | theme color | change color style         |
+| Props      | type            | default                                 | description                   |
+| ---------- | --------------- | --------------------------------------- | ----------------------------- |
+| as         | string          | div                                     | change html tag definition    |
+| fontWeight | string / number | 500 (default theme: font-weight strong) | change font-weight style      |
+| color      | string          | theme color                             | change color style from theme |
 
 Example `as="span"` to change tag to `span`
 
@@ -27,8 +27,31 @@ Default font-weight is `500`, it's could be changed by using `fontWeight` prop
 </Provider>
 ```
 
+## Change color
+
+Color could be change easily using theme colors
+
+**Example base on default theme color**
+
+```js static
+const theme = {
+  colors: {
+    // Primary
+    B70: "#004660",
+    B60: "#007099",
+    B50: "#008CC0", // Primary Color
+    B40: "#009AD3",
+    B30: "#00A7E4",
+    B20: "#00B7FA",
+    B10: "#3ECBFF",
+    B7: "#7CDCFF",
+    B5: "#B1EAFF"
+  }
+};
+```
+
 ```js
 <Provider>
-  <Heading.H1 color="teal"> H1 Teal color </Heading.H1>
+  <Heading.H1 color="B50"> H1 Heading</Heading.H1>
 </Provider>
 ```

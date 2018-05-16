@@ -1,5 +1,7 @@
 import styled from "../../../utils/styled";
-import { colors } from "../../../common/colors";
+import theme from "../../../common/theme";
+
+const colors = theme.colors;
 
 export const Root = styled.div`
   font-family: ${(props: any) => props.theme.fonts};

@@ -8,6 +8,7 @@ ShallowWrapper {
     appearance="default"
     btnSize="md"
     isDisabled={false}
+    isLoading={false}
     isSelected={false}
     type="button"
   >
@@ -30,12 +31,14 @@ ShallowWrapper {
       "aria-expanded": undefined,
       "aria-haspopup": undefined,
       "aria-label": undefined,
-      "btnSize": "md",
       "children": "Test",
       "className": undefined,
       "disabled": false,
+      "elementSize": undefined,
       "fluid": undefined,
       "form": undefined,
+      "id": undefined,
+      "isLoading": false,
       "type": "button",
     },
     "ref": null,
@@ -53,12 +56,14 @@ ShallowWrapper {
         "aria-expanded": undefined,
         "aria-haspopup": undefined,
         "aria-label": undefined,
-        "btnSize": "md",
         "children": "Test",
         "className": undefined,
         "disabled": false,
+        "elementSize": undefined,
         "fluid": undefined,
         "form": undefined,
+        "id": undefined,
+        "isLoading": false,
         "type": "button",
       },
       "ref": null,

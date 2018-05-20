@@ -1,7 +1,7 @@
 import { css } from "../../../utils/styled";
 import theme from "../../../common/theme";
-import hex2Rgba from "../../../utils/hex2Rgba";
 import { SpinnerStyle } from "../Spinner/Spinner";
+import { BtnProps } from "./buttonType";
 
 const { colors } = theme;
 
@@ -25,18 +25,18 @@ const getAppearanceProps = (
           border-color: ${colors.N4};
         }
 
-        &:focus, &:active {
+        &:focus {
+          box-shadow: 0 0 0 0.1rem ${colors.B5};
           background: ${colors.B5};
           border-color: ${colors.B5};
         }
 
-        &:focus {
-          color: ${colors.B60};
-        }
-
         &:active {
+          background: ${colors.B5};
+          border-color: ${colors.B5};
           color: ${colors.N90};
         }
+
       `;
     },
     primary() {
@@ -49,17 +49,11 @@ const getAppearanceProps = (
           background: ${colors.B40};
         }
 
-        &:focus {
-          background: ${colors.B40};
-          border-color: ${colors.B60};
-          box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.B5)};
-          color: ${colors.WHITE};
-        }
-
-        &:active {
+        &:focus, &:active {
           background: ${colors.B60};
           border-color: ${colors.B70};
           color: ${colors.N1};
+          box-shadow: 0 0 0 0.1rem ${colors.B5};
         }
       `;
     },
@@ -73,17 +67,11 @@ const getAppearanceProps = (
           background: ${colors.R20};
         }
 
-        &:focus {
-          background: ${colors.R30};
-          border-color: ${colors.R40};
-          box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.R5)};
-          color: ${colors.WHITE};
-        }
-
-        &:active {
+        &:focus, &:active {
           background: ${colors.R40};
           border-color: ${colors.R50};
           color: ${colors.N1};
+          box-shadow: 0 0 0 0.1rem ${colors.R5};
         }
       `;
     },
@@ -97,17 +85,11 @@ const getAppearanceProps = (
           background: ${colors.O30};
         }
 
-        &:focus {
-          background: ${colors.O30};
-          border-color: ${colors.O40};
-          box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.O10)};
-          color: ${colors.WHITE};
-        }
-
-        &:active {
+        &:focus, &:active {
           background: ${colors.O40};
           border-color: ${colors.O50};
           color: ${colors.N1};
+          box-shadow: 0 0 0 0.1rem ${colors.O10};
         }
       `;
     },
@@ -121,17 +103,11 @@ const getAppearanceProps = (
           background: ${colors.G20};
         }
 
-        &:focus {
-          background: ${colors.G30};
-          border-color: ${colors.G40};
-          box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.G7)};
-          color: ${colors.WHITE};
-        }
-
-        &:active {
+        &:focus, &:active {
           background: ${colors.G40};
           border-color: ${colors.G50};
           color: ${colors.N1};
+          box-shadow: 0 0 0 0.1rem ${colors.G7};
         }
       `;
     },
@@ -139,16 +115,22 @@ const getAppearanceProps = (
       return `
         color: ${colors.B50};
         border: none;
+
         &:hover {
           background: ${colors.N3};
           color: ${colors.B60};
         }
-        &:focus {
+
+        &:focus, &:active {
           background: ${colors.B5};
         }
+
+        &:focus {
+          box-shadow: 0 0 0 0.1rem ${colors.B50};
+        }
+
         &:active {
-          background: ${colors.B5};
-          box-shadow: 0 0 0 0.1rem ${hex2Rgba(colors.B50)};
+          box-shadow: none;
         }
       `;
     }
@@ -189,10 +171,7 @@ const getSizeProps = (props?: "sm" | "md" | "lg") => {
   return sizes[props || "md"];
 };
 
-/**
- * getLoadingState
- * Apply style to each appearance when loading props is true
- */
+/** Apply style to each appearance when loading props is true */
 const getLoadingState = (props: any) => {
   if (props.isLoading) {
     if (props.appearance === "default" || props.appearance === "link") {
@@ -209,10 +188,63 @@ const getLoadingState = (props: any) => {
     `;
   }
 
-  return;
+  return null;
 };
 
-export const getButtonStyle = (props: any) => {
+const getSelected = (props: any) => {
+  if (props.isSelected) {
+    if (
+      props.appearance === "default" ||
+      props.appearance === "link" ||
+      props.appearance === "primary"
+    ) {
+      return `
+        background: ${colors.B70};
+        border: 0.05rem solid ${colors.B50};
+        color: ${colors.N1};
+        &:hover,
+        &:focus,
+        &:active {
+          background: ${colors.B70};
+          border: 0.05rem solid ${colors.B50};
+          color: ${colors.N1};
+          outline: none;
+          box-shadow: none;
+        }
+      `;
+    }
+
+    if (props.appearance === "danger") {
+      return `
+        border: 0.05rem solid ${colors.R40} !important;
+        background: ${colors.R30} !important;
+        color: ${colors.N1} !important;
+        &:focus, &:active {
+          box-shadow: none;
+        }
+      `;
+    }
+
+    if (props.appearance === "warning") {
+      return `
+        border: 0.05rem solid ${colors.O50} !important;
+        background: ${colors.O40} !important;
+        color: ${colors.N1} !important;
+        &:focus, &:active {
+          box-shadow: none;
+        }
+      `;
+    }
+  }
+  return null;
+};
+
+/**
+ * getButtonStyle
+ * Resolves styles based on props
+ * @param props button properties
+ */
+export const getButtonStyle = (props: BtnProps) => {
   /** Button type style*/
   const buttonAppearance = getAppearanceProps(props.appearance);
 
@@ -223,6 +255,8 @@ export const getButtonStyle = (props: any) => {
   if (props.fluid) width = "100%";
 
   const loadingStyle = getLoadingState(props);
+
+  const selectedStyle = getSelected(props);
 
   return css`
     cursor: pointer;
@@ -247,5 +281,6 @@ export const getButtonStyle = (props: any) => {
     ${buttonSize};
     ${buttonAppearance};
     ${loadingStyle};
+    ${selectedStyle};
   `;
 };

@@ -29,7 +29,7 @@ export interface BtnProps
   /** html button aria-haspopup*/
   ariaHaspopup?: boolean;
   /** button ref*/
-  buttonRef?: React.Ref<any>;
+  buttonRef?: (ref: HTMLElement) => {};
   /** children */
   children?: React.ReactChild | string;
   /** button type attribute*/

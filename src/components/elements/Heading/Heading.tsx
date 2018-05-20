@@ -5,14 +5,14 @@ import styled from "../../../utils/styled";
 import BaseStyle from "./BaseStyle";
 
 type Props = {
-  /** html tag */
-  as?: string;
+  /** custom html tag */
+  customComponent?: string;
 };
 
 const getThemeColor = (props: any) => props.theme.colors[props.color];
 
-const TagElement = ({ as, ...props }: Props) =>
-  React.createElement(tag[as || "div"], { ...props });
+const TagElement = ({ customComponent, ...props }: Props) =>
+  React.createElement(tag[customComponent || "div"], { ...props });
 
 const { colors } = theme;
 // H1
@@ -21,6 +21,7 @@ const H1 = styled(TagElement)`
   color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
 `;
+H1.displayName = "Heading.H1";
 
 // H2
 const H2 = styled(TagElement)`
@@ -28,6 +29,7 @@ const H2 = styled(TagElement)`
   color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
 `;
+H2.displayName = "Heading.H2";
 
 // H3
 const H3 = styled(TagElement)`
@@ -35,6 +37,7 @@ const H3 = styled(TagElement)`
   color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
 `;
+H3.displayName = "Heading.H3";
 
 // H4
 const H4 = styled(TagElement)`
@@ -42,6 +45,7 @@ const H4 = styled(TagElement)`
   color: ${(props: any) => getThemeColor(props) || colors.N90};
   ${BaseStyle};
 `;
+H4.displayName = "Heading.H4";
 
 // H5
 const H5 = styled(TagElement)`
@@ -49,6 +53,7 @@ const H5 = styled(TagElement)`
   color: ${(props: any) => getThemeColor(props) || colors.N70};
   ${BaseStyle};
 `;
+H5.displayName = "Heading.H5";
 
 // H6
 const H6 = styled(TagElement)`
@@ -56,6 +61,7 @@ const H6 = styled(TagElement)`
   color: ${(props: any) => getThemeColor(props) || colors.N70};
   ${BaseStyle};
 `;
+H6.displayName = "Heading.H6";
 
 class Heading extends React.Component<any> {
   static H1 = H1;
@@ -76,12 +82,5 @@ class Heading extends React.Component<any> {
     return <React.Fragment {...this.props}>{children}</React.Fragment>;
   }
 }
-
-Heading.H1.displayName = "Heading.H1";
-Heading.H2.displayName = "Heading.H2";
-Heading.H3.displayName = "Heading.H3";
-Heading.H4.displayName = "Heading.H4";
-Heading.H5.displayName = "Heading.H5";
-Heading.H6.displayName = "Heading.H6";
 
 export default Heading;

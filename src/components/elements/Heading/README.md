@@ -1,15 +1,15 @@
-| Props      | type            | default                                 | description                   |
-| ---------- | --------------- | --------------------------------------- | ----------------------------- |
-| as         | string          | div                                     | change html tag definition    |
-| fontWeight | string / number | 500 (default theme: font-weight strong) | change font-weight style      |
-| color      | string          | theme color                             | change color style from theme |
+| Props           | type            | default                                 | description                   |
+| --------------- | --------------- | --------------------------------------- | ----------------------------- |
+| customComponent | string          | div                                     | change html tag definition    |
+| fontWeight      | string / number | 500 (default theme: font-weight strong) | change font-weight style      |
+| color           | string          | theme color                             | change color style from theme |
 
-Example `as="span"` to change tag to `span`
+Example `customComponent="span"` to change tag to `span`
 
 ```js
 <Provider>
   <Heading.H1> H1 Heading</Heading.H1>
-  <Heading.H1 as="span">H1 Heading as span tag</Heading.H1>
+  <Heading.H1 customComponent="span">H1 Heading as span tag</Heading.H1>
 
   <Heading.H2> H2 Heading</Heading.H2>
   <Heading.H3> H3 Heading</Heading.H3>

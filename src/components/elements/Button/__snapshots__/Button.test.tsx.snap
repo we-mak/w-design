@@ -4,16 +4,16 @@ exports[`<Button/> should renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Button
+  Symbol(enzyme.__unrendered__): <ButtonComponent
     appearance="default"
-    btnSize="md"
+    elementSize="md"
     isDisabled={false}
     isLoading={false}
     isSelected={false}
     type="button"
   >
     Test
-  </Button>,
+  </ButtonComponent>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -34,11 +34,17 @@ ShallowWrapper {
       "children": "Test",
       "className": undefined,
       "disabled": false,
-      "elementSize": undefined,
+      "elementSize": "md",
       "fluid": undefined,
       "form": undefined,
       "id": undefined,
+      "innerRef": [Function],
       "isLoading": false,
+      "isSelected": false,
+      "onBlur": [Function],
+      "onClick": undefined,
+      "onFocus": [Function],
+      "tabIndex": undefined,
       "type": "button",
     },
     "ref": null,
@@ -59,11 +65,17 @@ ShallowWrapper {
         "children": "Test",
         "className": undefined,
         "disabled": false,
-        "elementSize": undefined,
+        "elementSize": "md",
         "fluid": undefined,
         "form": undefined,
         "id": undefined,
+        "innerRef": [Function],
         "isLoading": false,
+        "isSelected": false,
+        "onBlur": [Function],
+        "onClick": undefined,
+        "onFocus": [Function],
+        "tabIndex": undefined,
         "type": "button",
       },
       "ref": null,

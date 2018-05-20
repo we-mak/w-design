@@ -12,8 +12,12 @@ describe("<Spinner/>", () => {
   });
 
   // Style test
-  it("should large style spinner", () => {
-    const wrapper = renderer.create(<Spinner largeSpinner />).toJSON();
-    expect(wrapper).toHaveStyleRule("min-height", "2rem");
+
+  it("should right style spinner", () => {
+    const wrapper = renderer.create(<Spinner />).toJSON();
+    expect(wrapper).toHaveStyleRule("min-height", ".8rem");
+
+    const wrapperLg = renderer.create(<Spinner largeSpinner />).toJSON();
+    expect(wrapperLg).toHaveStyleRule("min-height", "2rem");
   });
 });

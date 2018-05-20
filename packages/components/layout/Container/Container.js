@@ -16,8 +16,5 @@ var ContainerWrap_1 = require("./ContainerWrap");
  * Wrapper layout component contains columns layout
  */
 var Container = function (props) { return (React.createElement(ContainerWrap_1.ContainerWrap, __assign({ className: props.className }, props), props.children)); };
-Container.defaultProps = {
-    className: undefined
-};
 exports.default = Container;
 //# sourceMappingURL=Container.js.map

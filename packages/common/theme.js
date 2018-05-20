@@ -8,6 +8,7 @@ exports.fonts = '-apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue",
 exports.fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96];
 exports.fontWeights = {
     normal: 400,
+    strong: 500,
     bold: 700,
     xbold: 900
 };
@@ -17,12 +18,12 @@ exports.letterSpacings = {
     normal: "normal",
     caps: "0.25em"
 };
+exports.radii = [0, 2, 4];
 // space is used for margin and padding scales
 // it's recommended to use powers of two to ensure alignment
 // when used in nested elements
 // numbers are converted to px
 exports.space = [0, 4, 8, 16, 32, 64, 128];
-exports.radii = [0, 2, 4];
 exports.shadows = [
     "none",
     "0 .2rem .5rem " + hex2Rgba_1.default(colors_1.colors.N50, 0.5),
@@ -36,6 +37,7 @@ exports.default = {
     colors: colors_1.colors,
     space: exports.space,
     breakpoints: exports.breakpoints,
+    radii: exports.radii,
     letterSpacings: exports.letterSpacings
 };
 //# sourceMappingURL=theme.js.map

@@ -21,17 +21,45 @@ const Span = styled.span`
 `;
 Span.displayName = "StyledSpan";
 
-class Button extends React.Component<
-  BtnProps,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
-> {
+class Button extends React.Component<BtnProps> {
+  button: HTMLElement | null;
+
   static defaultProps = {
     appearance: "default",
     type: "button",
-    btnSize: "md",
+    elementSize: "md",
     isLoading: false,
     isDisabled: false,
     isSelected: false
+  };
+
+  static displayName = "ButtonComponent";
+
+  componentDidMount() {
+    if (this.props.autoFocus && this.button) {
+      this.button.focus();
+    }
+  }
+
+  componentWillUnmount() {
+    this.button = null;
+  }
+
+  // undefined when disabled to stop delegation event
+  onClick = () => {
+    this.props.isDisabled ? undefined : this.props.onClick;
+  };
+
+  onBlur = (e: React.SyntheticEvent<HTMLElement>) => {
+    if (this.props.onBlur) {
+      this.props.onBlur(e);
+    }
+  };
+
+  onFocus = (e: React.SyntheticEvent<HTMLElement>) => {
+    if (this.props.onFocus) {
+      this.props.onFocus(e);
+    }
   };
 
   getComponent() {
@@ -42,16 +70,25 @@ class Button extends React.Component<
     return StyledButton;
   }
 
-  render() {
-    const { buttonRef, children } = this.props;
-    const buttonProps = getButtonProps(this as any);
+  getButtonRef = (ref: HTMLElement) => {
+    this.button = ref;
+    if (this.props.buttonRef) this.props.buttonRef(ref);
+  };
 
-    const StyledComponent = this.getComponent();
+  render() {
+    const { children, isSelected } = this.props;
+    const buttonProps = getButtonProps(this as any);
+    const ButtonComponent = this.getComponent();
 
     return (
-      <StyledComponent ref={buttonRef} {...buttonProps as any}>
+      <ButtonComponent
+        innerRef={this.getButtonRef}
+        onClick={this.onClick}
+        isSelected={isSelected}
+        {...buttonProps as any}
+      >
         {children}
-      </StyledComponent>
+      </ButtonComponent>
     );
   }
 }

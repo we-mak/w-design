@@ -32,8 +32,22 @@ const getButtonElementProps = (props: BtnProps) => {
     "aria-haspopup": ariaHaspopup,
     "aria-expanded": ariaExpanded,
     "aria-controls": ariaControls,
+    "aria-label": props.ariaLabel,
     form,
-    type
+    type,
+    id: props.id
+  };
+};
+
+const getEventProps = (component: any) => {
+  const { onBlur, onFocus } = component;
+  const { onClick, tabIndex } = component.props;
+
+  return {
+    onBlur,
+    onClick,
+    onFocus,
+    tabIndex
   };
 };
 
@@ -42,8 +56,7 @@ export const getButtonProps = (component: any) => {
 
   const defaultProps = {
     ...getAppearanceProps(props),
-    id: props.id,
-    "aria-label": props.ariaLabel
+    ...getEventProps(component)
   };
 
   if (props.href) {

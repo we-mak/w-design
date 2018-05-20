@@ -22,6 +22,8 @@ import { Text } from "w-design";
 ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 ```
 
+**Note** Guide below is temporary under styleguidist markdown
+
 ### Layouts
 
 * [Provider](https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md)
@@ -33,6 +35,7 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 * [Heading](https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md)
 * [Button](https://github.com/we-mak/w-design/blob/master/src/components/elements/Button/README.md)
+* [Spinner](https://github.com/we-mak/w-design/blob/master/src/components/elements/Spinner/README.md)
 
 ## Support
 
@@ -79,9 +82,17 @@ For how-to questions and other non-issues, please use StackOverflow instead of G
 
 ## Development
 
-Folders structure
+This package is built with dependencies: `react`, `react-dom`, `styled-component`, `styled-system`
+Props checking is under `TypeScript`
+
+Please check these packages before getting start to contribute.
+
+### Folders structure
 
 ```bash
+├── packages # Build packages
+│   └── **/*
+│
 ├── src
 │   ├── @types/**/*.d.ts
 │   ├── common ## static default variables
@@ -94,9 +105,40 @@ Folders structure
 │   ├── GUI ## UI design system files
 │   ├── img ## Image for docs
 │
-└── packages
-    └── **/* ## built library folders
+├── CHANGELOG.md ## Change history of every changes of each release.
+├── README.md ## Guide content
+├── tslint.json
+├── tsconfig.json
+├── jest.config.json
+├── setupTests.js ## test setup config
+├── webpack.config.js ## webpack config
+└── package.json ## npm packages config
 ```
+
+#### packages
+
+Built packages directory is where our NPM package contains.
+
+#### src
+
+Develop directory. It contains all sources of our elements, components, utils, helper...
+
+### Component design
+
+#### Props
+
+##### Naming conventions
+
+Prop naming depends on the type of property, it should be clear and easy to understand. Important, standard naming is in English.
+In most case, our props name definition is in Noun to decribe **what** it is, example, for custom html tag definition, could be `customComponent` or `customHTMLTag`.
+Boolean props should be named with verb, example: `isDisabled`, `isSelected`.
+
+**Disclaim** Acronym name would be rejected.
+
+##### **type** props
+
+The prop types are defined via TypeScript. We should have reusable _"standard"_ global prop types, such as events handler, form controls, link props...
+Standard prop types are located at `src/common/propsTypes.ts`
 
 ## Contributors
 

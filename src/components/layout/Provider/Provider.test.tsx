@@ -3,7 +3,7 @@ import * as React from "react";
 import * as renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 import "jest-styled-components";
-import Provider from "./index";
+import Provider from "./Provider";
 
 describe("<Provider/>", () => {
   it("should renders correctly", () => {
@@ -36,6 +36,11 @@ describe("<Provider/>", () => {
     if (document && document.head) {
       expect(document.head.appendChild(stylesheet)).toMatchSnapshot();
     }
+
+    instance.componentWillUnmount();
+
+    if (stylesheet && document && document.head) {
+      expect(stylesheet).not.toBe(true);
+    }
   });
-  // TODO: test delete stylesheet after unmount
 });

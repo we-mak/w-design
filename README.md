@@ -13,7 +13,7 @@ A **Mobile First** React UI library build with styled-components
 
 `yarn add w-design` or `npm install w-design`
 
-## Usage
+## Usage guide
 
 Simple example
 
@@ -21,6 +21,10 @@ Simple example
 import { Text } from "w-design";
 ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 ```
+
+### Get start
+
+Your layout should inject [normalize.css](https://necolas.github.io/normalize.css/) to global style.
 
 **Note** Guide below is temporary under styleguidist markdown
 

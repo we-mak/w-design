@@ -1,5 +1,6 @@
 import * as React from "react";
 import tag from "clean-tag";
+import { color, fontSize } from "styled-system";
 import theme from "../../../common/theme";
 import styled from "../../../utils/styled";
 import BaseStyle from "./BaseStyle";
@@ -9,57 +10,67 @@ type Props = {
   customComponent?: string;
 };
 
-const getThemeColor = (props: any) => props.theme.colors[props.color];
-
 const TagElement = ({ customComponent, ...props }: Props) =>
   React.createElement(tag[customComponent || "div"], { ...props });
 
-const { colors } = theme;
+const { colors, fontSizes } = theme;
 // H1
 const H1 = styled(TagElement)`
-  font-size: ${(props: any) => props.theme.fontSizes[8]};
-  color: ${(props: any) => getThemeColor(props) || colors.N90};
+  font-size: ${fontSizes[8]};
+  color: ${colors.N90};
   ${BaseStyle};
+  ${color};
+  ${fontSize};
 `;
 H1.displayName = "Heading.H1";
 
 // H2
 const H2 = styled(TagElement)`
-  font-size: ${(props: any) => props.theme.fontSizes[6]};
-  color: ${(props: any) => getThemeColor(props) || colors.N90};
+  font-size: ${fontSizes[6]};
+  color: ${colors.N90};
   ${BaseStyle};
+  ${color};
+  ${fontSize};
 `;
 H2.displayName = "Heading.H2";
 
 // H3
 const H3 = styled(TagElement)`
-  font-size: ${(props: any) => props.theme.fontSizes[5]};
-  color: ${(props: any) => getThemeColor(props) || colors.N90};
+  font-size: ${fontSizes[5]};
+  color: ${colors.N90};
   ${BaseStyle};
+  ${color};
+  ${fontSize};
 `;
 H3.displayName = "Heading.H3";
 
 // H4
 const H4 = styled(TagElement)`
-  font-size: ${(props: any) => props.theme.fontSizes[4]};
-  color: ${(props: any) => getThemeColor(props) || colors.N90};
+  font-size: ${fontSizes[4]};
+  color: ${colors.N90};
   ${BaseStyle};
+  ${color};
+  ${fontSize};
 `;
 H4.displayName = "Heading.H4";
 
 // H5
 const H5 = styled(TagElement)`
-  font-size: ${(props: any) => props.theme.fontSizes[3]};
-  color: ${(props: any) => getThemeColor(props) || colors.N70};
+  font-size: ${fontSizes[3]};
+  color: ${colors.N70};
   ${BaseStyle};
+  ${color};
+  ${fontSize};
 `;
 H5.displayName = "Heading.H5";
 
 // H6
 const H6 = styled(TagElement)`
-  font-size: ${(props: any) => props.theme.fontSizes[1]};
-  color: ${(props: any) => getThemeColor(props) || colors.N70};
+  font-size: ${fontSizes[1]};
+  color: ${colors.N70};
   ${BaseStyle};
+  ${color};
+  ${fontSize};
 `;
 H6.displayName = "Heading.H6";
 

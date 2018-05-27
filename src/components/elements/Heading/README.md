@@ -1,8 +1,8 @@
-| Props           | type            | default                                 | description                   |
-| --------------- | --------------- | --------------------------------------- | ----------------------------- |
-| customComponent | string          | div                                     | change html tag definition    |
-| fontWeight      | string / number | 500 (default theme: font-weight strong) | change font-weight style      |
-| color           | string          | theme color                             | change color style from theme |
+| Props           | type              | default     | description                   |
+| --------------- | ----------------- | ----------- | ----------------------------- |
+| customComponent | string            | div         | change html tag definition    |
+| fontWeight      | string[]/number[] | strong      | change font-weight style      |
+| color           | string            | theme color | change color style from theme |
 
 Example `customComponent="span"` to change tag to `span`
 
@@ -53,5 +53,13 @@ const theme = {
 ```js
 <Provider>
   <Heading.H1 color="B50"> H1 Heading</Heading.H1>
+</Provider>
+```
+
+## Responsive heading
+
+```js
+<Provider>
+  <Heading.H1 fontSize={[2, 3, 4, 5]}> H1 Heading</Heading.H1>
 </Provider>
 ```

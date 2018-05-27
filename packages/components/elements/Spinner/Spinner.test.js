@@ -12,9 +12,11 @@ describe("<Spinner/>", function () {
         expect(wrapper).toMatchSnapshot();
     });
     // Style test
-    it("should large style spinner", function () {
-        var wrapper = renderer.create(React.createElement(Spinner_1.default, { largeSpinner: true })).toJSON();
-        expect(wrapper).toHaveStyleRule("min-height", "2rem");
+    it("should right style spinner", function () {
+        var wrapper = renderer.create(React.createElement(Spinner_1.default, null)).toJSON();
+        expect(wrapper).toHaveStyleRule("min-height", ".8rem");
+        var wrapperLg = renderer.create(React.createElement(Spinner_1.default, { largeSpinner: true })).toJSON();
+        expect(wrapperLg).toHaveStyleRule("min-height", "2rem");
     });
 });
 //# sourceMappingURL=Spinner.test.js.map

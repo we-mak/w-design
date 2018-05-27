@@ -7,7 +7,6 @@
 Example `customComponent="span"` to change tag to `span`
 
 ```js
-<Provider>
   <Heading.H1> H1 Heading</Heading.H1>
   <Heading.H1 customComponent="span">H1 Heading as span tag</Heading.H1>
 
@@ -16,7 +15,6 @@ Example `customComponent="span"` to change tag to `span`
   <Heading.H4> H4 Heading</Heading.H4>
   <Heading.H5> H5 Heading</Heading.H5>
   <Heading.H6>H6 Heading</Heading.H6>
-</Provider>
 ```
 
 Default font-weight is `500`, it's could be changed by using `fontWeight` prop
@@ -27,9 +25,9 @@ Default font-weight is `500`, it's could be changed by using `fontWeight` prop
 </Provider>
 ```
 
-## Change color
+## Custom color
 
-Color could be change easily using theme colors
+Color could be change easily using default or custom theme colors
 
 **Example base on default theme color**
 

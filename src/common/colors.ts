@@ -49,10 +49,10 @@ export const colors = {
   O50: "#E15B00",
   O40: "#EF8100",
   O30: "#FA9B00",
-  O20: "#FFC60A",
-  O10: "#FFE380",
-  O7: "#FFF19F",
-  O5: "#FFF7D7",
+  O20: "#FFBC0A",
+  O10: "#FFD745",
+  O7: "#FFEB6A",
+  O5: "#FFF19F",
 
   // Green
   G50: "#1D7324",
@@ -73,8 +73,8 @@ export const colors = {
   P5: "#EAE6FF",
 
   // Teal
-  T40: "#008DA6",
-  T50: "#00A3BF",
+  T50: "#008DA6",
+  T40: "#00A3BF",
   T30: "#00B8D9",
   T20: "#00C7E6",
   T10: "#79E2F2",

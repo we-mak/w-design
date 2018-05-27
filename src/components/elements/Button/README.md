@@ -42,11 +42,11 @@
 
 ```js
 <Provider>
-  <Button btnSize="sm" appearance="primary">
+  <Button elementSize="sm" appearance="primary">
     Small button
   </Button>{" "}
   <Button appearance="primary">Medium button</Button>{" "}
-  <Button btnSize="lg" appearance="primary">
+  <Button elementSize="lg" appearance="primary">
     Large button
   </Button>{" "}
 </Provider>
@@ -122,6 +122,12 @@ Handle blur function.
 
 `onFocus`
 Handle focus function.
+
+```js
+<Provider>
+  <Button onClick={() => alert("you clicked me")}>Default button</Button>
+</Provider>
+```
 
 ### Ref
 

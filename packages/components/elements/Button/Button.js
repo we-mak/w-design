@@ -36,7 +36,7 @@ var Button = /** @class */ (function (_super) {
     __extends(Button, _super);
     function Button() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        // Prevent bubbling event when disabled
+        // undefined when disabled to stop delegation event
         _this.onClick = function () {
             _this.props.isDisabled ? undefined : _this.props.onClick;
         };
@@ -75,7 +75,7 @@ var Button = /** @class */ (function (_super) {
         var _a = this.props, children = _a.children, isSelected = _a.isSelected;
         var buttonProps = getButtonProps_1.getButtonProps(this);
         var ButtonComponent = this.getComponent();
-        return (React.createElement(ButtonComponent, __assign({ ref: this.getButtonRef, onClick: this.onClick, isSelected: isSelected }, buttonProps), children));
+        return (React.createElement(ButtonComponent, __assign({ innerRef: this.getButtonRef, onClick: this.onClick, isSelected: isSelected }, buttonProps), children));
     };
     Button.defaultProps = {
         appearance: "default",

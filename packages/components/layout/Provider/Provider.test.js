@@ -29,7 +29,10 @@ describe("<Provider/>", function () {
         if (document && document.head) {
             expect(document.head.appendChild(stylesheet)).toMatchSnapshot();
         }
+        instance.componentWillUnmount();
+        if (stylesheet && document && document.head) {
+            expect(stylesheet).not.toBe(true);
+        }
     });
-    // TODO: test delete stylesheet after unmount
 });
 //# sourceMappingURL=Provider.test.js.map

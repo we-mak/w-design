@@ -125,7 +125,7 @@ Built packages directory is where our NPM package contains.
 
 #### src
 
-Develop directory. It contains all sources of our elements, components, utils, helper...
+Develop directory. It contains all sources of our elements, components, HOC...
 
 ### Component design
 

@@ -3,6 +3,11 @@
  */
 
 const hex2Rgba = (hex: string, alpha?: number): string => {
+  // TODO: Fix with regex
+  // throw Error with bad hex
+  // if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+  // }
+
   hex = hex.replace("#", "");
   const bigint = parseInt(hex, 16);
   const r = (bigint >> 16) & 255;

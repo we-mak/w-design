@@ -30,21 +30,20 @@ Your layout should inject [normalize.css](https://necolas.github.io/normalize.cs
 
 ### Layouts
 
-* [Provider](https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md)
-* [Container](https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md)
-* [Grid](https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md)
-* [Hide](https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md)
+- [Provider](https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md)
+- [Container](https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md)
+- [Grid](https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md)
+- [Hide](https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md)
 
 ### Elements
 
-* [Heading](https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md)
-* [Button](https://github.com/we-mak/w-design/blob/master/src/components/elements/Button/README.md)
-* [Spinner](https://github.com/we-mak/w-design/blob/master/src/components/elements/Spinner/README.md)
+- [Heading](https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md)
+- [Button](https://github.com/we-mak/w-design/blob/master/src/components/elements/Button/README.md)
+- [Spinner](https://github.com/we-mak/w-design/blob/master/src/components/elements/Spinner/README.md)
 
 ## Support
 
-* Modern browser
-* IE 10+ (un-tested)
+Modern browser: Chrome, Firefox, Safari, Edge
 
 ## Version 1.0.0 Features
 

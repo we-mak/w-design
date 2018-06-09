@@ -1,4 +1,5 @@
 import { css } from "../../../utils/styled";
+import { setColors } from "../../../utils/themeUtils";
 import {
   background,
   backgroundHover,
@@ -18,26 +19,17 @@ import { SpinnerStyle } from "../Spinner/Spinner";
 
 /**
  * getAppearanceProps
- * @param styleProperty style property
- * @param appearance apperance button style props
  * @returns style applies to each button appearance
  */
-
 const getAppearanceProps = (
-  styleProperty: Function,
-  appearance?:
-    | "default"
-    | "primary"
-    | "danger"
-    | "warning"
-    | "success"
-    | "link",
-  colors?: object
+  appearance: "default" | "primary" | "danger" | "warning" | "success" | "link",
+  colors: Array<string>,
+  themeColors: Array<string>
 ) => {
-  if (!appearance) return null;
-  const appearanceStyle = styleProperty(colors);
+  const initStyle = setColors(colors);
+  const providedStyle = setColors(themeColors);
 
-  return appearanceStyle[appearance];
+  return (themeColors && providedStyle[appearance]) || initStyle[appearance];
 };
 
 const getFontSizeProps = (
@@ -130,22 +122,83 @@ export const getButtonStyle = (props: any) => {
   const { theme, appearance, elementSize, fluid } = props;
   /** Button appearance style using themed*/
   // background
-  const bgDefault = getAppearanceProps(background, appearance, theme.colors);
-  const bgHover = getAppearanceProps(backgroundHover, appearance, theme.colors);
-  const bgActive = getAppearanceProps(
-    backgroundActive,
-    appearance,
-    theme.colors
-  );
-  const bgFocus = getAppearanceProps(backgroundFocus, appearance, theme.colors);
+  const bgDefault = getAppearanceProps(appearance, background, [
+    theme.colors["N3"],
+    theme.colors["B50"],
+    theme.colors["O30"],
+    theme.colors["R30"],
+    theme.colors["G30"]
+  ]);
+  const bgHover = getAppearanceProps(appearance, backgroundHover, [
+    theme.colors["N4"],
+    theme.colors["B40"],
+    theme.colors["O20"],
+    theme.colors["R20"],
+    theme.colors["G20"],
+    theme.colors["G20"]
+  ]);
+  const bgActive = getAppearanceProps(appearance, backgroundActive, [
+    theme.colors["B5"],
+    theme.colors["B60"],
+    theme.colors["O40"],
+    theme.colors["R40"],
+    theme.colors["G40"],
+    theme.colors["B5"]
+  ]);
+  const bgFocus = getAppearanceProps(appearance, backgroundFocus, [
+    theme.colors["B5"],
+    theme.colors["B60"],
+    theme.colors["O40"],
+    theme.colors["R40"],
+    theme.colors["G40"],
+    theme.colors["B5"]
+  ]);
   // border
-  const borderDefault = getAppearanceProps(border, appearance, theme.colors);
-  const bdHover = getAppearanceProps(borderHover, appearance, theme.colors);
-  const bdActive = getAppearanceProps(borderActive, appearance, theme.colors);
-  const bdFocus = getAppearanceProps(borderFocus, appearance, theme.colors);
+  const borderDefault = getAppearanceProps(appearance, border, [
+    theme.colors["N3"],
+    theme.colors["B60"],
+    theme.colors["O40"],
+    theme.colors["R40"],
+    theme.colors["G40"]
+  ]);
+  const bdHover = getAppearanceProps(appearance, borderHover, [
+    theme.colors["N4"],
+    theme.colors["B50"],
+    theme.colors["O30"],
+    theme.colors["R30"],
+    theme.colors["G30"]
+  ]);
+  const bdActive = getAppearanceProps(appearance, borderActive, [
+    theme.colors["B5"],
+    theme.colors["B70"],
+    theme.colors["O50"],
+    theme.colors["R50"],
+    theme.colors["G50"]
+  ]);
+  const bdFocus = getAppearanceProps(appearance, borderFocus, [
+    theme.colors["B5"],
+    theme.colors["B70"],
+    theme.colors["O50"],
+    theme.colors["R50"],
+    theme.colors["G50"]
+  ]);
 
-  const color = getAppearanceProps(text, appearance, theme.colors);
-  const shadow = getAppearanceProps(boxShadow, appearance, theme.colors);
+  const color = getAppearanceProps(appearance, text, [
+    theme.colors["N90"],
+    theme.colors["N1"],
+    theme.colors["N1"],
+    theme.colors["N1"],
+    theme.colors["B50"]
+  ]);
+
+  const boxShadowColor = getAppearanceProps(appearance, boxShadow, [
+    "rgba(0, 0, 0, 0)",
+    theme.colors["B5"],
+    theme.colors["O10"],
+    theme.colors["R5"],
+    theme.colors["G5"],
+    theme.colors["B50"]
+  ]);
 
   /** Variable styles*/
   const fontSizeStyle = getFontSizeProps(
@@ -181,6 +234,7 @@ export const getButtonStyle = (props: any) => {
     background: ${bgDefault};
     border-color: ${borderDefault};
     color: ${color};
+    box-shadow: 0 0 0 0.1rem var(--box-shadow-color);
 
     &:hover {
       background: ${bgHover};
@@ -189,7 +243,7 @@ export const getButtonStyle = (props: any) => {
 
     &:active,
     &:focus {
-      box-shadow: ${shadow};
+      --box-shadow-color: ${boxShadowColor};
     }
 
     &:active {

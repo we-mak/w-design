@@ -1,192 +1,46 @@
-import defaultTheme from "./theme";
+import { colors } from "./colors";
 
-const { colors } = defaultTheme;
+// init theme colors
+const {
+  N1,
+  N3,
+  N4,
+  N90,
+  B5,
+  B40,
+  B50,
+  B60,
+  B70,
+  O10,
+  O20,
+  O30,
+  O40,
+  O50,
+  R5,
+  R20,
+  R30,
+  R40,
+  R50,
+  G5,
+  G20,
+  G30,
+  G40,
+  G50
+} = colors;
 
-const getColors = (
-  themeColors: Array<string>,
-  defaultColors: Array<string>
-) => {
-  let result = {};
+export const background = [N3, B50, O30, R30, G30];
+export const backgroundHover = [N4, B40, O20, R20, G20, N3];
+export const backgroundActive = [B5, B60, O40, R40, G40, B5];
+export const backgroundFocus = [B5, B60, O40, R40, G40, B5];
 
-  const appearanceKeys = [
-    "default",
-    "primary",
-    "warning",
-    "danger",
-    "success",
-    "link"
-  ];
+export const border = [N3, B60, O40, R40, G40];
+export const borderHover = [N4, B50, O30, R30, G30];
+export const borderActive = [B5, B70, O50, R50, G50];
+export const borderFocus = [B5, B70, O50, R50, G50];
 
-  for (let i in appearanceKeys) {
-    if (!themeColors) {
-      result[appearanceKeys[i]] = defaultColors[i];
-    }
-    result[appearanceKeys[i]] = themeColors[i];
-  }
+export const text = [N90, N1, N1, N1, N1, B50];
 
-  return result;
-};
-
-export const background = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["N3"],
-      themeColors["B50"],
-      themeColors["O30"],
-      themeColors["R30"],
-      themeColors["G30"]
-    ],
-    [colors["N3"], colors["B50"], colors["O30"], colors["R30"], colors["G30"]]
-  );
-
-export const backgroundHover = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["N4"],
-      themeColors["B40"],
-      themeColors["O20"],
-      themeColors["R20"],
-      themeColors["G20"],
-      themeColors["N3"]
-    ],
-    [
-      colors["N4"],
-      colors["B40"],
-      colors["O20"],
-      colors["R20"],
-      colors["G20"],
-      colors["N3"]
-    ]
-  );
-
-export const backgroundActive = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["B5"],
-      themeColors["B60"],
-      themeColors["O40"],
-      themeColors["R40"],
-      themeColors["G40"],
-      themeColors["B5"]
-    ],
-    [
-      colors["B5"],
-      colors["B60"],
-      colors["O40"],
-      colors["R40"],
-      colors["G40"],
-      colors["B5"]
-    ]
-  );
-
-export const backgroundFocus = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["B5"],
-      themeColors["B60"],
-      themeColors["O40"],
-      themeColors["R40"],
-      themeColors["G40"],
-      themeColors["B5"]
-    ],
-    [
-      colors["B5"],
-      colors["B60"],
-      colors["O40"],
-      colors["R40"],
-      colors["G40"],
-      colors["B5"]
-    ]
-  );
-
-export const border = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["N3"],
-      themeColors["B60"],
-      themeColors["O40"],
-      themeColors["R40"],
-      themeColors["G40"]
-    ],
-    [colors["N3"], colors["B60"], colors["O40"], colors["R40"], colors["G40"]]
-  );
-
-export const borderHover = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["N4"],
-      themeColors["B50"],
-      themeColors["O30"],
-      themeColors["R30"],
-      themeColors["G30"]
-    ],
-    [colors["N4"], colors["B50"], colors["O30"], colors["R30"], colors["G30"]]
-  );
-
-export const borderActive = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["B5"],
-      themeColors["B70"],
-      themeColors["O50"],
-      themeColors["R50"],
-      themeColors["G50"]
-    ],
-    [colors["B5"], colors["B70"], colors["O50"], colors["R50"], colors["G50"]]
-  );
-
-export const borderFocus = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["B5"],
-      themeColors["B70"],
-      themeColors["O50"],
-      themeColors["R50"],
-      themeColors["G50"]
-    ],
-    [colors["B5"], colors["B70"], colors["O50"], colors["R50"], colors["G50"]]
-  );
-export const text = (themeColors: string) =>
-  getColors(
-    [
-      themeColors["N90"],
-      themeColors["N1"],
-      themeColors["N1"],
-      themeColors["N1"],
-      themeColors["N1"],
-      themeColors["B50"]
-    ],
-    [
-      colors["N90"],
-      colors["N1"],
-      colors["N1"],
-      colors["N1"],
-      colors["N1"],
-      colors["B50"]
-    ]
-  );
-
-const shadowSize = `0 0 0 0.1rem`;
-
-export const boxShadow = (themeColors: string) =>
-  getColors(
-    [
-      "none",
-      `${shadowSize} ${themeColors["B5"]}`,
-      `${shadowSize} ${themeColors["O10"]}`,
-      `${shadowSize} ${themeColors["R5"]}`,
-      `${shadowSize} ${themeColors["G5"]}`,
-      `${shadowSize} ${themeColors["B50"]}`
-    ],
-    [
-      "none",
-      `${shadowSize} ${colors["B5"]}`,
-      `${shadowSize} ${colors["O10"]}`,
-      `${shadowSize} ${colors["R5"]}`,
-      `${shadowSize} ${colors["G5"]}`,
-      `${shadowSize} ${colors["B50"]}`
-    ]
-  );
+export const boxShadow = ["rgba(0, 0, 0, 0)", B5, O10, R5, G5, B50];
 
 export const fontSizes = (fontSizes: string) => ({
   sm: fontSizes[0],

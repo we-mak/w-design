@@ -15,11 +15,7 @@ describe("<Button/>", () => {
   });
 
   it("render as a button element", () => {
-    const wrapper = mount(
-      <Provider>
-        <Button />
-      </Provider>
-    );
+    const wrapper = mount(<Button />);
     expect(wrapper.find("button").length).toBe(1);
   });
 

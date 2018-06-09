@@ -207,7 +207,7 @@ html {
 }
 
 body {
-  background: ${colors.BLACK};
+  background: ${colors.WHITE};
   color: ${colors.N60};
   font-family: '-apple-system, sans-serif, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue"';
   font-size: 0.8rem;

@@ -79,5 +79,5 @@ export const colors = {
   T20: "#00C7E6",
   T10: "#79E2F2",
   T7: "#B3F5FF",
-  T5: "#E6FCFF"
+  T5: "#E6FCFF",
 };

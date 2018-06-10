@@ -25,3 +25,12 @@ export const setColors = (colors: Array<string>) => {
 
   return result;
 };
+
+/**
+ * getColorFromTheme
+ * @param colors colors object from init or theme
+ * @param color color key
+ * @param theme color from values
+ */
+export const getColorFromTheme = (colors: object, color: string, theme?: any) =>
+  theme.colors ? theme.colors[color] : colors[color];

@@ -1,6 +1,7 @@
 import { css } from "../../../utils/styled";
-import { setColors } from "../../../utils/themeUtils";
-import {
+import { getColorFromTheme } from "../../../utils/themeUtils";
+import { padding, height } from "../../../common/themed";
+import colors, {
   background,
   backgroundHover,
   backgroundActive,
@@ -12,35 +13,28 @@ import {
   text,
   boxShadow,
   fontSizes,
-  padding,
-  height
-} from "../../../common/themed";
+  radii
+} from "../../../common/theme";
 import { SpinnerStyle } from "../Spinner/Spinner";
 
 /**
  * getAppearanceProps
+ * @param appearance appearance style
+ * @param colors init colors
+ * @param themeColors get colors from provided theme props
  * @returns style applies to each button appearance
  */
 const getAppearanceProps = (
-  appearance: "default" | "primary" | "danger" | "warning" | "success" | "link",
-  colors: Array<string>,
-  themeColors: Array<string>
-) => {
-  const initStyle = setColors(colors);
-  const providedStyle = setColors(themeColors);
-
-  return (themeColors && providedStyle[appearance]) || initStyle[appearance];
-};
+  appearance: string,
+  colors: object,
+  themeColors?: object
+) => (themeColors ? themeColors[appearance] : colors[appearance]);
 
 const getFontSizeProps = (
-  styleProperty: Function,
   buttonSize: "sm" | "md" | "lg",
-  sizes?: Array<string>
-) => {
-  const fontSizeStyle = styleProperty(sizes);
-
-  return fontSizeStyle[buttonSize];
-};
+  fontSizes: Array<string>,
+  themeFontSizes?: Array<string>
+) => (themeFontSizes ? themeFontSizes[buttonSize] : fontSizes[buttonSize]);
 
 const getSize = (padding: object, buttonSize: "sm" | "md" | "lg") =>
   padding[buttonSize];
@@ -66,44 +60,53 @@ const getLoadingState = (props: any) => {
 };
 
 const getSelected = (props: any) => {
-  if (props.isSelected) {
+  const { appearance, isSelected, theme } = props;
+  if (isSelected) {
     if (
-      props.appearance === "default" ||
-      props.appearance === "link" ||
-      props.appearance === "primary"
+      appearance === "default" ||
+      appearance === "link" ||
+      appearance === "primary"
     ) {
       return `
-        background: ${props.theme.colors.B70};
-        border: 0.05rem solid ${props.theme.colors.B50};
-        color: ${props.theme.colors.N1};
+        background: ${getColorFromTheme(colors, "B70", theme)};
+        border: 0.05rem solid ${getColorFromTheme(colors, "B50", theme)};
+        color: ${getColorFromTheme(colors, "N1", theme)};
         &:hover,
         &:focus,
         &:active {
-          background: ${props.theme.colors.B70};
-          border: 0.05rem solid ${props.theme.colors.B50};
-          color: ${props.theme.colors.N1};
+          background: ${getColorFromTheme(colors, "B70", theme)};
+          border: 0.05rem solid ${getColorFromTheme(colors, "B50", theme)};
+          color: ${getColorFromTheme(colors, "N1", theme)};
           outline: none;
           box-shadow: none;
         }
       `;
     }
 
-    if (props.appearance === "danger") {
+    if (appearance === "danger") {
       return `
-        border: 0.05rem solid ${props.theme.colors.R40} !important;
-        background: ${props.theme.colors.R30} !important;
-        color: ${props.theme.colors.N1} !important;
+        border: 0.05rem solid ${getColorFromTheme(
+          colors,
+          "R40",
+          theme
+        )} !important;
+        background: ${getColorFromTheme(colors, "R30", theme)} !important;
+        color: ${getColorFromTheme(colors, "N1", theme)} !important;
         &:focus, &:active {
           box-shadow: none;
         }
       `;
     }
 
-    if (props.appearance === "warning") {
+    if (appearance === "warning") {
       return `
-        border: 0.05rem solid ${props.theme.colors.O50} !important;
-        background: ${props.theme.colors.O40} !important;
-        color: ${props.theme.colors.N1} !important;
+        border: 0.05rem solid ${getColorFromTheme(
+          colors,
+          "O50",
+          theme
+        )} !important;
+        background: ${getColorFromTheme(colors, "040", theme)} !important;
+        color: ${getColorFromTheme(colors, "N1", theme)} !important;
         &:focus, &:active {
           box-shadow: none;
         }
@@ -122,90 +125,59 @@ export const getButtonStyle = (props: any) => {
   const { theme, appearance, elementSize, fluid } = props;
   /** Button appearance style using themed*/
   // background
-  const bgDefault = getAppearanceProps(appearance, background, [
-    theme.colors["N3"],
-    theme.colors["B50"],
-    theme.colors["O30"],
-    theme.colors["R30"],
-    theme.colors["G30"]
-  ]);
-  const bgHover = getAppearanceProps(appearance, backgroundHover, [
-    theme.colors["N4"],
-    theme.colors["B40"],
-    theme.colors["O20"],
-    theme.colors["R20"],
-    theme.colors["G20"],
-    theme.colors["G20"]
-  ]);
-  const bgActive = getAppearanceProps(appearance, backgroundActive, [
-    theme.colors["B5"],
-    theme.colors["B60"],
-    theme.colors["O40"],
-    theme.colors["R40"],
-    theme.colors["G40"],
-    theme.colors["B5"]
-  ]);
-  const bgFocus = getAppearanceProps(appearance, backgroundFocus, [
-    theme.colors["B5"],
-    theme.colors["B60"],
-    theme.colors["O40"],
-    theme.colors["R40"],
-    theme.colors["G40"],
-    theme.colors["B5"]
-  ]);
+  const bgDefault = getAppearanceProps(
+    appearance,
+    background,
+    theme.background
+  );
+  const bgHover = getAppearanceProps(
+    appearance,
+    backgroundHover,
+    theme.backgroundHover
+  );
+  const bgActive = getAppearanceProps(
+    appearance,
+    backgroundActive,
+    theme.backgroundActive
+  );
+  const bgFocus = getAppearanceProps(
+    appearance,
+    backgroundFocus,
+    theme.backgroundFocus
+  );
   // border
-  const borderDefault = getAppearanceProps(appearance, border, [
-    theme.colors["N3"],
-    theme.colors["B60"],
-    theme.colors["O40"],
-    theme.colors["R40"],
-    theme.colors["G40"]
-  ]);
-  const bdHover = getAppearanceProps(appearance, borderHover, [
-    theme.colors["N4"],
-    theme.colors["B50"],
-    theme.colors["O30"],
-    theme.colors["R30"],
-    theme.colors["G30"]
-  ]);
-  const bdActive = getAppearanceProps(appearance, borderActive, [
-    theme.colors["B5"],
-    theme.colors["B70"],
-    theme.colors["O50"],
-    theme.colors["R50"],
-    theme.colors["G50"]
-  ]);
-  const bdFocus = getAppearanceProps(appearance, borderFocus, [
-    theme.colors["B5"],
-    theme.colors["B70"],
-    theme.colors["O50"],
-    theme.colors["R50"],
-    theme.colors["G50"]
-  ]);
+  const borderDefault = getAppearanceProps(appearance, border, theme.border);
+  const bdHover = getAppearanceProps(
+    appearance,
+    borderHover,
+    theme.borderHover
+  );
+  const bdActive = getAppearanceProps(
+    appearance,
+    borderActive,
+    theme.borderActive
+  );
+  const bdFocus = getAppearanceProps(
+    appearance,
+    borderFocus,
+    theme.borderFocus
+  );
 
-  const color = getAppearanceProps(appearance, text, [
-    theme.colors["N90"],
-    theme.colors["N1"],
-    theme.colors["N1"],
-    theme.colors["N1"],
-    theme.colors["B50"]
-  ]);
+  const color = getAppearanceProps(appearance, text, theme.text);
 
-  const boxShadowColor = getAppearanceProps(appearance, boxShadow, [
-    "rgba(0, 0, 0, 0)",
-    theme.colors["B5"],
-    theme.colors["O10"],
-    theme.colors["R5"],
-    theme.colors["G5"],
-    theme.colors["B50"]
-  ]);
+  const boxShadowColor = getAppearanceProps(
+    appearance,
+    boxShadow,
+    theme.boxShadow
+  );
 
   /** Variable styles*/
   const fontSizeStyle = getFontSizeProps(
-    fontSizes,
     elementSize,
+    fontSizes,
     theme.fontSizes
   );
+
   const paddingStyle = getSize(padding, elementSize);
   const heightStyle = getSize(height, elementSize);
 
@@ -219,7 +191,7 @@ export const getButtonStyle = (props: any) => {
   return css`
     cursor: pointer;
     outline: 0;
-    border-radius: ${props.theme.radii[1]};
+    border-radius: ${theme.radii ? theme.radii[1] : radii[1]};
     display: inline-block;
     text-decoration: none;
     text-align: center;
@@ -229,7 +201,7 @@ export const getButtonStyle = (props: any) => {
     white-space: nowrap;
     width: ${width};
     border: 0.05rem solid;
-    ${props.appearance === "link" && { border: "none" }}
+    ${appearance === "link" && { border: "none" }}
 
     background: ${bgDefault};
     border-color: ${borderDefault};
@@ -259,8 +231,8 @@ export const getButtonStyle = (props: any) => {
     &:disabled,
     &[disabled] {
       cursor: not-allowed;
-      color: ${props.theme.colors.N7} !important;
-      background: ${props.theme.colors.N4} !important;
+      color: ${getColorFromTheme(colors, "N7", theme)} !important;
+      background: ${getColorFromTheme(colors, "N4", theme)} !important;
       border: none;
     }
 

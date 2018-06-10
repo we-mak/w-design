@@ -149,6 +149,78 @@ ShallowWrapper {
     "props": Object {
       "children": <Root />,
       "theme": Object {
+        "background": Object {
+          "danger": "#DC1F1F",
+          "default": "#E2EAF2",
+          "link": undefined,
+          "primary": "#008CC0",
+          "success": "#29A634",
+          "warning": "#FA9B00",
+        },
+        "backgroundActive": Object {
+          "danger": "#C61515",
+          "default": "#B1EAFF",
+          "link": "#B1EAFF",
+          "primary": "#007099",
+          "success": "#238C2C",
+          "warning": "#EF8100",
+        },
+        "backgroundFocus": Object {
+          "danger": "#C61515",
+          "default": "#B1EAFF",
+          "link": "#B1EAFF",
+          "primary": "#007099",
+          "success": "#238C2C",
+          "warning": "#EF8100",
+        },
+        "backgroundHover": Object {
+          "danger": "#F22828",
+          "default": "#CED9E3",
+          "link": "#E2EAF2",
+          "primary": "#009AD3",
+          "success": "#43BF4D",
+          "warning": "#FFBC0A",
+        },
+        "border": Object {
+          "danger": "#C61515",
+          "default": "#E2EAF2",
+          "link": undefined,
+          "primary": "#007099",
+          "success": "#238C2C",
+          "warning": "#EF8100",
+        },
+        "borderActive": Object {
+          "danger": "#B40404",
+          "default": "#B1EAFF",
+          "link": undefined,
+          "primary": "#004660",
+          "success": "#1D7324",
+          "warning": "#E15B00",
+        },
+        "borderFocus": Object {
+          "danger": "#B40404",
+          "default": "#B1EAFF",
+          "link": undefined,
+          "primary": "#004660",
+          "success": "#1D7324",
+          "warning": "#E15B00",
+        },
+        "borderHover": Object {
+          "danger": "#DC1F1F",
+          "default": "#CED9E3",
+          "link": undefined,
+          "primary": "#008CC0",
+          "success": "#29A634",
+          "warning": "#FA9B00",
+        },
+        "boxShadow": Object {
+          "danger": "#FFADAD",
+          "default": "transparent",
+          "link": "#008CC0",
+          "primary": "#B1EAFF",
+          "success": "#AAFFB1",
+          "warning": "#FFD745",
+        },
         "breakpoints": Array [
           "24em",
           "32em",
@@ -266,6 +338,14 @@ ShallowWrapper {
           64,
           128,
         ],
+        "text": Object {
+          "danger": "#FBFBFB",
+          "default": "#10161A",
+          "link": "#008CC0",
+          "primary": "#FBFBFB",
+          "success": "#FBFBFB",
+          "warning": "#FBFBFB",
+        },
       },
     },
     "ref": null,
@@ -288,6 +368,78 @@ ShallowWrapper {
       "props": Object {
         "children": <Root />,
         "theme": Object {
+          "background": Object {
+            "danger": "#DC1F1F",
+            "default": "#E2EAF2",
+            "link": undefined,
+            "primary": "#008CC0",
+            "success": "#29A634",
+            "warning": "#FA9B00",
+          },
+          "backgroundActive": Object {
+            "danger": "#C61515",
+            "default": "#B1EAFF",
+            "link": "#B1EAFF",
+            "primary": "#007099",
+            "success": "#238C2C",
+            "warning": "#EF8100",
+          },
+          "backgroundFocus": Object {
+            "danger": "#C61515",
+            "default": "#B1EAFF",
+            "link": "#B1EAFF",
+            "primary": "#007099",
+            "success": "#238C2C",
+            "warning": "#EF8100",
+          },
+          "backgroundHover": Object {
+            "danger": "#F22828",
+            "default": "#CED9E3",
+            "link": "#E2EAF2",
+            "primary": "#009AD3",
+            "success": "#43BF4D",
+            "warning": "#FFBC0A",
+          },
+          "border": Object {
+            "danger": "#C61515",
+            "default": "#E2EAF2",
+            "link": undefined,
+            "primary": "#007099",
+            "success": "#238C2C",
+            "warning": "#EF8100",
+          },
+          "borderActive": Object {
+            "danger": "#B40404",
+            "default": "#B1EAFF",
+            "link": undefined,
+            "primary": "#004660",
+            "success": "#1D7324",
+            "warning": "#E15B00",
+          },
+          "borderFocus": Object {
+            "danger": "#B40404",
+            "default": "#B1EAFF",
+            "link": undefined,
+            "primary": "#004660",
+            "success": "#1D7324",
+            "warning": "#E15B00",
+          },
+          "borderHover": Object {
+            "danger": "#DC1F1F",
+            "default": "#CED9E3",
+            "link": undefined,
+            "primary": "#008CC0",
+            "success": "#29A634",
+            "warning": "#FA9B00",
+          },
+          "boxShadow": Object {
+            "danger": "#FFADAD",
+            "default": "transparent",
+            "link": "#008CC0",
+            "primary": "#B1EAFF",
+            "success": "#AAFFB1",
+            "warning": "#FFD745",
+          },
           "breakpoints": Array [
             "24em",
             "32em",
@@ -405,6 +557,14 @@ ShallowWrapper {
             64,
             128,
           ],
+          "text": Object {
+            "danger": "#FBFBFB",
+            "default": "#10161A",
+            "link": "#008CC0",
+            "primary": "#FBFBFB",
+            "success": "#FBFBFB",
+            "warning": "#FBFBFB",
+          },
         },
       },
       "ref": null,
@@ -641,7 +801,7 @@ html {
 }
 
 body {
-  background: #000;
+  background: #FFF;
   color: #293742;
   font-family: '-apple-system, sans-serif, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue"';
   font-size: 0.8rem;

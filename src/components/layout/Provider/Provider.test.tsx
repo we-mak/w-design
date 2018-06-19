@@ -23,6 +23,7 @@ describe("<Provider/>", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  // TODO: test mount & unmount stylesheet render condition
   it("should set stylesheet", () => {
     const wrapper = shallow(<Provider />);
     const instance = wrapper.instance() as Provider;

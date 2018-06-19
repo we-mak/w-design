@@ -24,8 +24,6 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 ### Get start
 
-Your layout should inject [normalize.css](https://necolas.github.io/normalize.css/) to global style.
-
 **Note** Guide below is temporary under styleguidist markdown
 
 ### Layouts

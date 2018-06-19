@@ -1,6 +1,6 @@
 Theme provider is based on [styled-components](https://www.styled-components.com/) and making theme with [styled-system](http://jxnblk.com/styled-system/)
 
-Provider reset styles is used normalize.css at v8.0.0
+[Normalize css is added](https://necolas.github.io/normalize.css/), `Provider` reset styles is used normalize.css at v8.0.0.
 
 ```js
 <Provider>

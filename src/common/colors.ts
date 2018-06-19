@@ -49,7 +49,7 @@ export const colors = {
   O50: "#E15B00",
   O40: "#EF8100",
   O30: "#FA9B00",
-  O20: "#FFBC0A",
+  O20: "#FFA209",
   O10: "#FFD745",
   O7: "#FFEB6A",
   O5: "#FFF19F",
@@ -79,5 +79,5 @@ export const colors = {
   T20: "#00C7E6",
   T10: "#79E2F2",
   T7: "#B3F5FF",
-  T5: "#E6FCFF",
+  T5: "#E6FCFF"
 };

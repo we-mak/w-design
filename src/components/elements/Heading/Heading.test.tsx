@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as renderer from "react-test-renderer";
 import { shallow, mount } from "enzyme";
 import "jest-styled-components";
 import Heading from "./Heading";
@@ -30,12 +29,12 @@ describe("<Heading/>", () => {
   });
 
   it("should render right style", () => {
-    const h1 = renderer.create(<Heading.H1 />).toJSON();
-    const h2 = renderer.create(<Heading.H2 />).toJSON();
-    const h3 = renderer.create(<Heading.H3 />).toJSON();
-    const h4 = renderer.create(<Heading.H4 />).toJSON();
-    const h5 = renderer.create(<Heading.H5 />).toJSON();
-    const h6 = renderer.create(<Heading.H6 />).toJSON();
+    const h1 = mount(<Heading.H1 />);
+    const h2 = mount(<Heading.H2 />);
+    const h3 = mount(<Heading.H3 />);
+    const h4 = mount(<Heading.H4 />);
+    const h5 = mount(<Heading.H5 />);
+    const h6 = mount(<Heading.H6 />);
     expect(h1).toHaveStyleRule("color", colors.N90);
     expect(h2).toHaveStyleRule("color", colors.N90);
     expect(h3).toHaveStyleRule("color", colors.N90);

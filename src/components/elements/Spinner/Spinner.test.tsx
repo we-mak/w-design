@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 import "jest-styled-components";
 import Spinner from "./Spinner";
@@ -14,10 +13,10 @@ describe("<Spinner/>", () => {
   // Style test
 
   it("should right style spinner", () => {
-    const wrapper = renderer.create(<Spinner />).toJSON();
+    const wrapper = shallow(<Spinner />);
     expect(wrapper).toHaveStyleRule("min-height", ".8rem");
 
-    const wrapperLg = renderer.create(<Spinner largeSpinner />).toJSON();
+    const wrapperLg = shallow(<Spinner largeSpinner />);
     expect(wrapperLg).toHaveStyleRule("min-height", "2rem");
   });
 });

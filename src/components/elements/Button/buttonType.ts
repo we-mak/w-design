@@ -12,6 +12,8 @@ export interface BtnProps
     LinkProps,
     FormActionProps,
     SizeProps {
+  /** custom component*/
+  customComponent?: string;
   /** button apperance type */
   appearance?:
     | "default"

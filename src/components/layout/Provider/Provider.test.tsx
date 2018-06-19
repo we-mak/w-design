@@ -1,6 +1,5 @@
 // This component is based on styled-components, unnecessary to do overtest
 import * as React from "react";
-import * as renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 import "jest-styled-components";
 import Provider from "./Provider";
@@ -12,17 +11,15 @@ describe("<Provider/>", () => {
   });
 
   it("renders with custom theme", () => {
-    const wrapper = renderer
-      .create(
-        <Provider
-          theme={{
-            fonts: "Avenir Next",
-            fontSizes: [12, 16, 18, 24, 36, 48, 72],
-            space: [0, 6, 12, 18, 24, 30, 36]
-          }}
-        />
-      )
-      .toJSON();
+    const wrapper = shallow(
+      <Provider
+        theme={{
+          fonts: "Avenir Next",
+          fontSizes: [12, 16, 18, 24, 36, 48, 72],
+          space: [0, 6, 12, 18, 24, 30, 36]
+        }}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 

@@ -6,7 +6,7 @@ const BaseStyle = css`
   line-height: 1.25;
   margin-bottom: 0.5em;
   margin-top: 0;
-  font-weight: strong;
+  font-weight: 500;
   ${fontWeight};
 `;
 

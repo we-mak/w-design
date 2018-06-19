@@ -1,8 +1,13 @@
 import * as React from "react";
+// import tag from "clean-tag";
 import { getButtonStyle } from "./getButtonStyle";
 import { getButtonProps } from "./getButtonProps";
 import styled from "../../../utils/styled";
 import { BtnProps } from "./buttonType";
+
+// TODO:
+// - Create custom component
+// - Icon button
 
 const StyledButton = styled.button`
   ${getButtonStyle};
@@ -21,8 +26,18 @@ const Span = styled.span`
 `;
 Span.displayName = "StyledSpan";
 
+// const createCustomComponent = () => {
+//   const component = styled(
+//     ({ customComponent }: BtnProps) => tag[customComponent || "button"]
+//   )`
+//     ${getButtonStyle};
+//   `;
+//   return component;
+// };
+
 class Button extends React.Component<BtnProps> {
   button: HTMLElement | null;
+  customComponent: any;
 
   static defaultProps = {
     appearance: "default",
@@ -46,9 +61,7 @@ class Button extends React.Component<BtnProps> {
   }
 
   // undefined when disabled to stop delegation event
-  onClick = () => {
-    this.props.isDisabled ? undefined : this.props.onClick;
-  };
+  onClick = () => (this.props.isDisabled ? undefined : this.props.onClick);
 
   onBlur = (e: React.SyntheticEvent<HTMLElement>) => {
     if (this.props.onBlur) {
@@ -63,6 +76,13 @@ class Button extends React.Component<BtnProps> {
   };
 
   getComponent() {
+    // if (this.props.customComponent) {
+    //   if (!this.customComponent) {
+    //     return (this.customComponent = createCustomComponent());
+    //   }
+    //   return this.customComponent;
+    // }
+
     if (this.props.href) {
       return this.props.isDisabled ? Span : A;
     }

@@ -1,7 +1,8 @@
 import { css } from "../../../utils/styled";
 import { getColorFromTheme } from "../../../utils/themeUtils";
-import { padding, height } from "../../../common/themed";
-import colors, {
+import {
+  padding,
+  height,
   background,
   backgroundHover,
   backgroundActive,
@@ -11,12 +12,10 @@ import colors, {
   borderActive,
   borderFocus,
   text,
-  boxShadow,
-  fontSizes,
-  radii
-} from "../../../common/theme";
+  boxShadow
+} from "../../../common/themed";
+import { fontSizes, radii, colors } from "../../../common/theme";
 import { SpinnerStyle } from "../Spinner/Spinner";
-
 /**
  * getAppearanceProps
  * @param appearance appearance style
@@ -31,32 +30,47 @@ const getAppearanceProps = (
 ) => (themeColors ? themeColors[appearance] : colors[appearance]);
 
 const getFontSizeProps = (
-  buttonSize: "sm" | "md" | "lg",
+  buttonSizes: "sm" | "md" | "lg",
   fontSizes: Array<string>,
   themeFontSizes?: Array<string>
-) => (themeFontSizes ? themeFontSizes[buttonSize] : fontSizes[buttonSize]);
+) => {
+  const getTheme = (theme: Array<string>) => {
+    switch (buttonSizes) {
+      case "sm":
+        return theme[0];
+      case "md":
+        return theme[1];
+      case "lg":
+        return theme[2];
+    }
+  };
+  if (themeFontSizes) return getTheme(themeFontSizes);
 
-const getSize = (padding: object, buttonSize: "sm" | "md" | "lg") =>
-  padding[buttonSize];
+  return getTheme(fontSizes);
+};
+
+const getSize = (styleProperty: object, buttonSize: "sm" | "md" | "lg") =>
+  styleProperty[buttonSize];
 
 /** Apply style to each appearance when loading props is true */
 const getLoadingState = (props: any) => {
-  if (props.isLoading) {
-    if (props.appearance === "default" || props.appearance === "link") {
+  const { isLoading, appearance, theme } = props;
+  if (isLoading) {
+    if (appearance === "default" || appearance === "link") {
       return SpinnerStyle;
     }
 
     return css`
       ${SpinnerStyle};
       &::after {
-        border-color: ${props.theme.colors.WHITE};
+        border-color: ${getColorFromTheme(colors, "WHITE", theme)};
         border-right-color: transparent;
         border-top-color: transparent;
       }
     `;
   }
 
-  return null;
+  return;
 };
 
 const getSelected = (props: any) => {
@@ -67,15 +81,15 @@ const getSelected = (props: any) => {
       appearance === "link" ||
       appearance === "primary"
     ) {
-      return `
+      return css`
         background: ${getColorFromTheme(colors, "B70", theme)};
-        border: 0.05rem solid ${getColorFromTheme(colors, "B50", theme)};
+        border-color: ${getColorFromTheme(colors, "B50", theme)};
         color: ${getColorFromTheme(colors, "N1", theme)};
         &:hover,
         &:focus,
         &:active {
           background: ${getColorFromTheme(colors, "B70", theme)};
-          border: 0.05rem solid ${getColorFromTheme(colors, "B50", theme)};
+          border-color: ${getColorFromTheme(colors, "B50", theme)};
           color: ${getColorFromTheme(colors, "N1", theme)};
           outline: none;
           box-shadow: none;
@@ -84,36 +98,34 @@ const getSelected = (props: any) => {
     }
 
     if (appearance === "danger") {
-      return `
-        border: 0.05rem solid ${getColorFromTheme(
-          colors,
-          "R40",
-          theme
-        )} !important;
-        background: ${getColorFromTheme(colors, "R30", theme)} !important;
-        color: ${getColorFromTheme(colors, "N1", theme)} !important;
-        &:focus, &:active {
+      return css`
+        border-color: ${getColorFromTheme(colors, "R40", theme)};
+        background: ${getColorFromTheme(colors, "R30", theme)};
+        &:hover,
+        &:focus,
+        &:active {
           box-shadow: none;
+          border-color: ${getColorFromTheme(colors, "R40", theme)};
+          background: ${getColorFromTheme(colors, "R30", theme)};
         }
       `;
     }
 
     if (appearance === "warning") {
-      return `
-        border: 0.05rem solid ${getColorFromTheme(
-          colors,
-          "O50",
-          theme
-        )} !important;
-        background: ${getColorFromTheme(colors, "040", theme)} !important;
-        color: ${getColorFromTheme(colors, "N1", theme)} !important;
-        &:focus, &:active {
+      return css`
+        border-color: ${getColorFromTheme(colors, "O50", theme)};
+        background: ${getColorFromTheme(colors, "O40", theme)};
+        &:hover,
+        &:focus,
+        &:active {
           box-shadow: none;
+          border-color: ${getColorFromTheme(colors, "O50", theme)};
+          background: ${getColorFromTheme(colors, "O40", theme)};
         }
       `;
     }
   }
-  return null;
+  return;
 };
 
 /**
@@ -201,7 +213,7 @@ export const getButtonStyle = (props: any) => {
     white-space: nowrap;
     width: ${width};
     border: 0.05rem solid;
-    ${appearance === "link" && { border: "none" }}
+    ${appearance === "link" && { border: "none" }};
 
     background: ${bgDefault};
     border-color: ${borderDefault};

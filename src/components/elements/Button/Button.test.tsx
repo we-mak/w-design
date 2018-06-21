@@ -2,6 +2,7 @@ import * as React from "react";
 import { shallow, mount } from "enzyme";
 import "jest-styled-components";
 import Button from "./Button";
+import Provider from "../../layout/Provider";
 
 describe("<Button/>", () => {
   // Render test
@@ -82,6 +83,11 @@ describe("<Button/>", () => {
     );
   });
 
+  // it("should set button to disable when set isDisabled prop", () => {
+  //   const wrapper = mount(<Button isDisabled />);
+
+  // });
+
   it("should pass onClick from onClick props", () => {
     const onClick = () => {};
     const wrapper = mount(<Button onClick={onClick} />);
@@ -97,11 +103,12 @@ describe("<Button/>", () => {
   });
 
   // Event test
+
   it("should trigger onClick when called", () => {
     const spy = jest.fn();
     const wrapper = shallow(<Button onClick={spy} />);
     wrapper.find("StyledButton").simulate("click");
-    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).toHaveBeenCalled();
   });
 
   it("shouldn't call onClick when button is disabled", () => {
@@ -115,14 +122,14 @@ describe("<Button/>", () => {
     const spy = jest.fn();
     const wrapper = shallow(<Button onFocus={spy} />);
     wrapper.find("StyledButton").simulate("focus");
-    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).toHaveBeenCalled();
   });
 
-  it("should trigger onBlur handler on focus", () => {
+  it("should trigger onBlur handler on blur", () => {
     const spy = jest.fn();
     const wrapper = shallow(<Button onBlur={spy} />);
     wrapper.find("StyledButton").simulate("blur");
-    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).toHaveBeenCalled();
   });
 
   it("should unmount button component", () => {
@@ -132,6 +139,21 @@ describe("<Button/>", () => {
   });
 
   // getButtonStyle test
+  it("should renders correctly with theme provider", () => {
+    const defaultBtn = mount(
+      <Provider>
+        <Button>Test</Button>
+      </Provider>
+    );
+    expect(defaultBtn.find("button")).toHaveStyleRule("background", "#E2EAF2");
+    const primaryBtn = mount(
+      <Provider>
+        <Button appearance="primary">Test</Button>
+      </Provider>
+    );
+    expect(primaryBtn.find("button")).toHaveStyleRule("background", "#008CC0");
+  });
+
   // appearance
   it("should has right appearance style", () => {
     const defaultBtn = mount(<Button />);
@@ -176,8 +198,16 @@ describe("<Button/>", () => {
 
     const warnBtn = mount(<Button isSelected appearance="warning" />);
     expect(warnBtn).toHaveStyleRule("background", "#EF8100");
+    expect(warnBtn).toHaveStyleRule("background", "#EF8100", {
+      modifier: ":hover"
+    });
 
     const dangerBtn = mount(<Button isSelected appearance="danger" />);
     expect(dangerBtn).toHaveStyleRule("background", "#DC1F1F");
+  });
+  // fluid button
+  it("should render selected style", () => {
+    const btn = mount(<Button fluid />);
+    expect(btn).toHaveStyleRule("width", "100%");
   });
 });

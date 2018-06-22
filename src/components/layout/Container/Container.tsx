@@ -19,8 +19,4 @@ const Container: React.StatelessComponent<Props> = props => (
   </ContainerWrap>
 );
 
-Container.defaultProps = {
-  className: undefined
-};
-
 export default Container;

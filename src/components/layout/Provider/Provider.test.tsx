@@ -1,6 +1,5 @@
 // This component is based on styled-components, unnecessary to do overtest
 import * as React from "react";
-import * as renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 import "jest-styled-components";
 import Provider from "./Provider";
@@ -12,20 +11,19 @@ describe("<Provider/>", () => {
   });
 
   it("renders with custom theme", () => {
-    const wrapper = renderer
-      .create(
-        <Provider
-          theme={{
-            fonts: "Avenir Next",
-            fontSizes: [12, 16, 18, 24, 36, 48, 72],
-            space: [0, 6, 12, 18, 24, 30, 36]
-          }}
-        />
-      )
-      .toJSON();
+    const wrapper = shallow(
+      <Provider
+        theme={{
+          fonts: "Avenir Next",
+          fontSizes: [12, 16, 18, 24, 36, 48, 72],
+          space: [0, 6, 12, 18, 24, 30, 36]
+        }}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
+  // TODO: test mount & unmount stylesheet render condition
   it("should set stylesheet", () => {
     const wrapper = shallow(<Provider />);
     const instance = wrapper.instance() as Provider;
@@ -36,6 +34,11 @@ describe("<Provider/>", () => {
     if (document && document.head) {
       expect(document.head.appendChild(stylesheet)).toMatchSnapshot();
     }
+
+    instance.componentWillUnmount();
+
+    if (stylesheet && document && document.head) {
+      expect(stylesheet).not.toBe(true);
+    }
   });
-  // TODO: test delete stylesheet after unmount
 });

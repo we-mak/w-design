@@ -1,8 +1,12 @@
 Container contains Grid component
 
-The responsive layout also provides fixed-width containers. Calls props API from Container wrapper component
+The responsive layout also provides fixed-width containers.
 
-xl(1280), lg(960), md(840), sm(600), xs(480)
+| Props   | type   | default     | description                                                |
+| ------- | ------ | ----------- | ---------------------------------------------------------- |
+| fixSize | string | 100%        | fixed size at xl(1280), lg(960), md(840), sm(600), xs(480) |
+| bg      | string |             | change background style                                    |
+| color   | string | theme color | change color style                                         |
 
 e.g: `fixSize = "xlarge";`
 

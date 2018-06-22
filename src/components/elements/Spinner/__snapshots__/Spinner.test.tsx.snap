@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Hide/> should renders correctly 1`] = `
+exports[`<Spinner/> should renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Hide />,
+  Symbol(enzyme.__unrendered__): <Spinner>
+    Test
+  </Spinner>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -16,9 +18,11 @@ ShallowWrapper {
     "instance": null,
     "key": undefined,
     "nodeType": "class",
-    "props": Object {},
+    "props": Object {
+      "children": "Test",
+    },
     "ref": null,
-    "rendered": null,
+    "rendered": "Test",
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -26,9 +30,11 @@ ShallowWrapper {
       "instance": null,
       "key": undefined,
       "nodeType": "class",
-      "props": Object {},
+      "props": Object {
+        "children": "Test",
+      },
       "ref": null,
-      "rendered": null,
+      "rendered": "Test",
       "type": [Function],
     },
   ],

@@ -23,23 +23,33 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
+// import tag from "clean-tag";
 var getButtonStyle_1 = require("./getButtonStyle");
 var getButtonProps_1 = require("./getButtonProps");
 var styled_1 = require("../../../utils/styled");
+// TODO:
+// - Create custom component
+// - Icon button
 var StyledButton = styled_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", ";\n"], ["\n  ", ";\n"])), getButtonStyle_1.getButtonStyle);
 StyledButton.displayName = "StyledButton";
 var A = styled_1.default.a(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  a&&& {\n    ", ";\n  }\n"], ["\n  a&&& {\n    ", ";\n  }\n"])), getButtonStyle_1.getButtonStyle);
 A.displayName = "StyledA";
 var Span = styled_1.default.span(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  ", ";\n"], ["\n  ", ";\n"])), getButtonStyle_1.getButtonStyle);
 Span.displayName = "StyledSpan";
+// const createCustomComponent = () => {
+//   const component = styled(
+//     ({ customComponent }: BtnProps) => tag[customComponent || "button"]
+//   )`
+//     ${getButtonStyle};
+//   `;
+//   return component;
+// };
 var Button = /** @class */ (function (_super) {
     __extends(Button, _super);
     function Button() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         // undefined when disabled to stop delegation event
-        _this.onClick = function () {
-            _this.props.isDisabled ? undefined : _this.props.onClick;
-        };
+        _this.onClick = function () { return (_this.props.isDisabled ? undefined : _this.props.onClick); };
         _this.onBlur = function (e) {
             if (_this.props.onBlur) {
                 _this.props.onBlur(e);
@@ -66,6 +76,12 @@ var Button = /** @class */ (function (_super) {
         this.button = null;
     };
     Button.prototype.getComponent = function () {
+        // if (this.props.customComponent) {
+        //   if (!this.customComponent) {
+        //     return (this.customComponent = createCustomComponent());
+        //   }
+        //   return this.customComponent;
+        // }
         if (this.props.href) {
             return this.props.isDisabled ? Span : A;
         }

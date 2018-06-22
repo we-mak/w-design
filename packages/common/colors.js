@@ -47,7 +47,7 @@ exports.colors = {
     O50: "#E15B00",
     O40: "#EF8100",
     O30: "#FA9B00",
-    O20: "#FFBC0A",
+    O20: "#FFA209",
     O10: "#FFD745",
     O7: "#FFEB6A",
     O5: "#FFF19F",

@@ -4,6 +4,10 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var hex2Rgba = function (hex, alpha) {
+    // TODO: Fix with regex
+    // throw Error with bad hex
+    // if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+    // }
     hex = hex.replace("#", "");
     var bigint = parseInt(hex, 16);
     var r = (bigint >> 16) & 255;

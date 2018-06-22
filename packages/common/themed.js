@@ -1,161 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var theme_1 = require("./theme");
-var colors = theme_1.default.colors;
-var getColors = function (themeColors, defaultColors) {
-    var result = {};
-    var appearanceKeys = [
-        "default",
-        "primary",
-        "warning",
-        "danger",
-        "success",
-        "link"
-    ];
-    for (var i in appearanceKeys) {
-        if (!themeColors) {
-            result[appearanceKeys[i]] = defaultColors[i];
-        }
-        result[appearanceKeys[i]] = themeColors[i];
-    }
-    return result;
-};
-exports.background = function (themeColors) {
-    return getColors([
-        themeColors["N3"],
-        themeColors["B50"],
-        themeColors["O30"],
-        themeColors["R30"],
-        themeColors["G30"]
-    ], [colors["N3"], colors["B50"], colors["O30"], colors["R30"], colors["G30"]]);
-};
-exports.backgroundHover = function (themeColors) {
-    return getColors([
-        themeColors["N4"],
-        themeColors["B40"],
-        themeColors["O20"],
-        themeColors["R20"],
-        themeColors["G20"],
-        themeColors["N3"]
-    ], [
-        colors["N4"],
-        colors["B40"],
-        colors["O20"],
-        colors["R20"],
-        colors["G20"],
-        colors["N3"]
-    ]);
-};
-exports.backgroundActive = function (themeColors) {
-    return getColors([
-        themeColors["B5"],
-        themeColors["B60"],
-        themeColors["O40"],
-        themeColors["R40"],
-        themeColors["G40"],
-        themeColors["B5"]
-    ], [
-        colors["B5"],
-        colors["B60"],
-        colors["O40"],
-        colors["R40"],
-        colors["G40"],
-        colors["B5"]
-    ]);
-};
-exports.backgroundFocus = function (themeColors) {
-    return getColors([
-        themeColors["B5"],
-        themeColors["B60"],
-        themeColors["O40"],
-        themeColors["R40"],
-        themeColors["G40"],
-        themeColors["B5"]
-    ], [
-        colors["B5"],
-        colors["B60"],
-        colors["O40"],
-        colors["R40"],
-        colors["G40"],
-        colors["B5"]
-    ]);
-};
-exports.border = function (themeColors) {
-    return getColors([
-        themeColors["N3"],
-        themeColors["B60"],
-        themeColors["O40"],
-        themeColors["R40"],
-        themeColors["G40"]
-    ], [colors["N3"], colors["B60"], colors["O40"], colors["R40"], colors["G40"]]);
-};
-exports.borderHover = function (themeColors) {
-    return getColors([
-        themeColors["N4"],
-        themeColors["B50"],
-        themeColors["O30"],
-        themeColors["R30"],
-        themeColors["G30"]
-    ], [colors["N4"], colors["B50"], colors["O30"], colors["R30"], colors["G30"]]);
-};
-exports.borderActive = function (themeColors) {
-    return getColors([
-        themeColors["B5"],
-        themeColors["B70"],
-        themeColors["O50"],
-        themeColors["R50"],
-        themeColors["G50"]
-    ], [colors["B5"], colors["B70"], colors["O50"], colors["R50"], colors["G50"]]);
-};
-exports.borderFocus = function (themeColors) {
-    return getColors([
-        themeColors["B5"],
-        themeColors["B70"],
-        themeColors["O50"],
-        themeColors["R50"],
-        themeColors["G50"]
-    ], [colors["B5"], colors["B70"], colors["O50"], colors["R50"], colors["G50"]]);
-};
-exports.text = function (themeColors) {
-    return getColors([
-        themeColors["N90"],
-        themeColors["N1"],
-        themeColors["N1"],
-        themeColors["N1"],
-        themeColors["N1"],
-        themeColors["B50"]
-    ], [
-        colors["N90"],
-        colors["N1"],
-        colors["N1"],
-        colors["N1"],
-        colors["N1"],
-        colors["B50"]
-    ]);
-};
-var shadowSize = "0 0 0 0.1rem";
-exports.boxShadow = function (themeColors) {
-    return getColors([
-        "none",
-        shadowSize + " " + themeColors["B5"],
-        shadowSize + " " + themeColors["O10"],
-        shadowSize + " " + themeColors["R5"],
-        shadowSize + " " + themeColors["G5"],
-        shadowSize + " " + themeColors["B50"]
-    ], [
-        "none",
-        shadowSize + " " + colors["B5"],
-        shadowSize + " " + colors["O10"],
-        shadowSize + " " + colors["R5"],
-        shadowSize + " " + colors["G5"],
-        shadowSize + " " + colors["B50"]
-    ]);
-};
-exports.fontSizes = function (fontSizes) { return ({
-    sm: fontSizes[0],
-    md: fontSizes[1],
-    lg: fontSizes[2]
-}); };
+var themeUtils_1 = require("../utils/themeUtils");
+// themed colors
+var N1 = theme_1.colors.N1, N3 = theme_1.colors.N3, N4 = theme_1.colors.N4, N90 = theme_1.colors.N90, B5 = theme_1.colors.B5, B40 = theme_1.colors.B40, B50 = theme_1.colors.B50, B60 = theme_1.colors.B60, B70 = theme_1.colors.B70, O10 = theme_1.colors.O10, O20 = theme_1.colors.O20, O30 = theme_1.colors.O30, O40 = theme_1.colors.O40, O50 = theme_1.colors.O50, R5 = theme_1.colors.R5, R20 = theme_1.colors.R20, R30 = theme_1.colors.R30, R40 = theme_1.colors.R40, R50 = theme_1.colors.R50, G5 = theme_1.colors.G5, G20 = theme_1.colors.G20, G30 = theme_1.colors.G30, G40 = theme_1.colors.G40, G50 = theme_1.colors.G50;
+exports.background = themeUtils_1.setColors([N3, B50, O30, R30, G30]);
+exports.backgroundHover = themeUtils_1.setColors([N4, B40, O20, R20, G20, N3]);
+exports.backgroundActive = themeUtils_1.setColors([B5, B60, O40, R40, G40, B5]);
+exports.backgroundFocus = themeUtils_1.setColors([B5, B60, O40, R40, G40, B5]);
+exports.border = themeUtils_1.setColors([N3, B60, O40, R40, G40]);
+exports.borderHover = themeUtils_1.setColors([N4, B50, O30, R30, G30]);
+exports.borderActive = themeUtils_1.setColors([B5, B70, O50, R50, G50]);
+exports.borderFocus = themeUtils_1.setColors([B5, B70, O50, R50, G50]);
+exports.text = themeUtils_1.setColors([N90, N1, N1, N1, N1, B50]);
+exports.boxShadow = themeUtils_1.setColors(["transparent", B5, O10, R5, G5, B50]);
 exports.padding = {
     sm: "0.15rem 0.3rem",
     md: "0.35rem 0.4rem",

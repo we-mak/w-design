@@ -25,7 +25,7 @@
 ### Button appearances
 
 ```js
-<Provider>
+<div>
   <Button>Default button</Button>{" "}
   <Button appearance="primary">Primary button</Button>{" "}
   <Button appearance="danger">Danger button</Button>{" "}
@@ -35,13 +35,13 @@
     Link button
   </Button>{" "}
   <Button appearance="link">Fake link button</Button>{" "}
-</Provider>
+</div>
 ```
 
 ### Button sizes
 
 ```js
-<Provider>
+<div>
   <Button elementSize="sm" appearance="primary">
     Small button
   </Button>{" "}
@@ -49,23 +49,23 @@
   <Button elementSize="lg" appearance="primary">
     Large button
   </Button>{" "}
-</Provider>
+</div>
 ```
 
 ### Fluid button
 
 ```js
-<Provider>
+<div>
   <Button appearance="primary" fluid>
     Fluid button
   </Button>
-</Provider>
+</div>
 ```
 
 ### Button disabled
 
 ```js
-<Provider>
+<div>
   <Button isDisabled>Default button</Button>{" "}
   <Button isDisabled appearance="primary">
     Primary button
@@ -73,13 +73,13 @@
   <Button isDisabled appearance="link">
     Link button
   </Button>
-</Provider>
+</div>
 ```
 
 ### Button loading
 
 ```js
-<Provider>
+<div>
   <Button isLoading appearance="primary">
     Default button
   </Button>{" "}
@@ -87,13 +87,13 @@
     Link button
   </Button>{" "}
   <Button isLoading>Default button</Button>
-</Provider>
+</div>
 ```
 
 ### Button selected
 
 ```js
-<Provider>
+<div>
   <Button isSelected>Default button</Button>{" "}
   <Button isSelected appearance="link">
     Link button
@@ -106,8 +106,8 @@
   </Button>{" "}
   <Button isSelected appearance="warning">
     Warn button
-  </Button>{" "}
-</Provider>
+  </Button>
+</div>
 ```
 
 ### Button icons
@@ -124,9 +124,7 @@ Handle blur function.
 Handle focus function.
 
 ```js
-<Provider>
-  <Button onClick={() => alert("you clicked me")}>Default button</Button>
-</Provider>
+<Button onClick={() => alert("you clicked me")}>Default button</Button>
 ```
 
 ### Ref
@@ -134,19 +132,15 @@ Handle focus function.
 ```js
 let ref;
 
-<Provider>
-  <Button buttonRef={r => (ref = r)} onClick={() => console.log(ref)}>
-    Ref button
-  </Button>{" "}
-</Provider>;
+<Button buttonRef={r => (ref = r)} onClick={() => console.log(ref)}>
+  Ref button
+</Button>;
 ```
 
 ### Button auto focus
 
 ```js
-<Provider>
-  <Button autoFocus appearance="primary">
-    Default button
-  </Button>
-</Provider>
+<Button autoFocus appearance="primary">
+  Default button
+</Button>
 ```

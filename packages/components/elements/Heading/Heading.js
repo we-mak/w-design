@@ -33,32 +33,32 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var clean_tag_1 = require("clean-tag");
+var styled_system_1 = require("styled-system");
 var theme_1 = require("../../../common/theme");
 var styled_1 = require("../../../utils/styled");
 var BaseStyle_1 = require("./BaseStyle");
-var getThemeColor = function (props) { return props.theme.colors[props.color]; };
 var TagElement = function (_a) {
     var customComponent = _a.customComponent, props = __rest(_a, ["customComponent"]);
     return React.createElement(clean_tag_1.default[customComponent || "div"], __assign({}, props));
 };
-var colors = theme_1.default.colors;
+var colors = theme_1.default.colors, fontSizes = theme_1.default.fontSizes;
 // H1
-var H1 = styled_1.default(TagElement)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"])), function (props) { return props.theme.fontSizes[8]; }, function (props) { return getThemeColor(props) || colors.N90; }, BaseStyle_1.default);
+var H1 = styled_1.default(TagElement)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"])), fontSizes[8], colors.N90, BaseStyle_1.default, styled_system_1.color, styled_system_1.fontSize);
 H1.displayName = "Heading.H1";
 // H2
-var H2 = styled_1.default(TagElement)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"])), function (props) { return props.theme.fontSizes[6]; }, function (props) { return getThemeColor(props) || colors.N90; }, BaseStyle_1.default);
+var H2 = styled_1.default(TagElement)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"])), fontSizes[6], colors.N90, BaseStyle_1.default, styled_system_1.color, styled_system_1.fontSize);
 H2.displayName = "Heading.H2";
 // H3
-var H3 = styled_1.default(TagElement)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"])), function (props) { return props.theme.fontSizes[5]; }, function (props) { return getThemeColor(props) || colors.N90; }, BaseStyle_1.default);
+var H3 = styled_1.default(TagElement)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"])), fontSizes[5], colors.N90, BaseStyle_1.default, styled_system_1.color, styled_system_1.fontSize);
 H3.displayName = "Heading.H3";
 // H4
-var H4 = styled_1.default(TagElement)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"])), function (props) { return props.theme.fontSizes[4]; }, function (props) { return getThemeColor(props) || colors.N90; }, BaseStyle_1.default);
+var H4 = styled_1.default(TagElement)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"])), fontSizes[4], colors.N90, BaseStyle_1.default, styled_system_1.color, styled_system_1.fontSize);
 H4.displayName = "Heading.H4";
 // H5
-var H5 = styled_1.default(TagElement)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"])), function (props) { return props.theme.fontSizes[3]; }, function (props) { return getThemeColor(props) || colors.N70; }, BaseStyle_1.default);
+var H5 = styled_1.default(TagElement)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"])), fontSizes[3], colors.N70, BaseStyle_1.default, styled_system_1.color, styled_system_1.fontSize);
 H5.displayName = "Heading.H5";
 // H6
-var H6 = styled_1.default(TagElement)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n"])), function (props) { return props.theme.fontSizes[1]; }, function (props) { return getThemeColor(props) || colors.N70; }, BaseStyle_1.default);
+var H6 = styled_1.default(TagElement)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"], ["\n  font-size: ", ";\n  color: ", ";\n  ", ";\n  ", ";\n  ", ";\n"])), fontSizes[1], colors.N70, BaseStyle_1.default, styled_system_1.color, styled_system_1.fontSize);
 H6.displayName = "Heading.H6";
 var Heading = /** @class */ (function (_super) {
     __extends(Heading, _super);

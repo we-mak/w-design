@@ -23,13 +23,13 @@ var breakpoints = {
     xxl: "@media screen and (min-width: 80em)"
 };
 var hidden = function (key) { return function (props) {
+    var _a;
     return props[key]
         ? (_a = {},
             _a[breakpoints[key]] = {
                 display: "none"
             },
             _a) : null;
-    var _a;
 }; };
 var xs = hidden("xs");
 var sm = hidden("sm");

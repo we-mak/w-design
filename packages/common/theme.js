@@ -28,15 +28,17 @@ exports.shadows = [
     "0 .2rem .5rem " + hex2Rgba_1.default(colors_1.colors.N50, 0.5),
     "inset 0 0 0 1px rgba(87, 85, 217, .2), 0 0 4px rgba(87, 85, 217, .2)"
 ];
+var colors_2 = require("./colors");
+exports.colors = colors_2.colors;
 exports.default = {
     fonts: exports.fonts,
     fontSizes: exports.fontSizes,
     fontWeights: exports.fontWeights,
     lineHeights: exports.lineHeights,
-    colors: colors_1.colors,
     space: exports.space,
     breakpoints: exports.breakpoints,
     radii: exports.radii,
-    letterSpacings: exports.letterSpacings
+    letterSpacings: exports.letterSpacings,
+    colors: colors_1.colors
 };
 //# sourceMappingURL=theme.js.map

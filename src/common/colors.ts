@@ -49,19 +49,19 @@ export const colors = {
   O50: "#E15B00",
   O40: "#EF8100",
   O30: "#FA9B00",
-  O20: "#FFA209",
-  O10: "#FFD745",
-  O7: "#FFEB6A",
-  O5: "#FFF19F",
+  O20: "#FFAC23",
+  O10: "#FFC40D",
+  O7: "#FFDA49",
+  O5: "#FFEA81",
 
   // Green
   G50: "#1D7324",
   G40: "#238C2C",
   G30: "#29A634",
-  G20: "#43BF4D",
-  G10: "#62D96B",
-  G7: "#72F27C",
-  G5: "#AAFFB1",
+  G20: "#FFEA81",
+  G10: "#4DD257",
+  G7: "#55E560",
+  G5: "#74FD7F",
 
   // Purple
   P50: "#403294",

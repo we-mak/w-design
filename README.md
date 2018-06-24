@@ -53,7 +53,7 @@ Cover basic components
 | ✓ Container     | ✖ Input    | ✖ Avatar      |
 | ✓ Grid          | ✖ Form     | ✖ Navbar      |
 | ✓ Hide          | ✖ Label    | ✖ Badges      |
-| ✖ Masonry       | ✖ Image    | ✖ Arcordion   |
+|                 | ✖ Image    | ✖ Arcordion   |
 |                 | ✓ Spinner  | ✖ Breadcrumbs |
 |                 | ✖ Panel    | ✖ Card        |
 |                 | ✖ Table    | ✖ Chip        |

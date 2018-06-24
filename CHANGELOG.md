@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-<a name="0.8.0"></a>#[v.0.7.0]()
+<a name="0.10.0"></a>#[@next v.0.10.0]()
+
+### Features
+
+- Input
+- Form
+- Label
+
+<a name="0.7.0"></a>#[v.0.7.0]()
 
 ### Features
 

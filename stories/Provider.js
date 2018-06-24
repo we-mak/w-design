@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Provider from "./Provider";
+import { Provider } from "../src/components";
 
-storiesOf("components/Provider", module)
+storiesOf("Provider", module)
   .addWithJSX("Default Provider", () => (
     <Provider>
       <h1>Default Provider</h1>

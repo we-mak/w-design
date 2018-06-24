@@ -8,7 +8,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
+    "rootDirs": ["src", "stories"],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -31,7 +31,8 @@
     "setupTests.ts",
     "config",
     "typedoc.js",
-    "coverage"
+    "coverage",
+    "stories"
   ],
   "types": ["./src/typings"]
 }

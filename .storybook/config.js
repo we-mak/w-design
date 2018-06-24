@@ -5,7 +5,7 @@ addDecorator(withKnobs);
 setAddon(JSXAddon);
 
 // automatically import all files ending in *.stories.js
-const req = require.context("../src", true, /.stories.js$/);
+const req = require.context("../stories", true, /.js$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }

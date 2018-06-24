@@ -3,7 +3,7 @@ import * as renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import "jest-styled-components";
 import Button from "./Button";
-import Provider from "../../layout/Provider";
+import Provider from "../../layout/Provider/Provider";
 
 describe("test Button style", () => {
   // render test

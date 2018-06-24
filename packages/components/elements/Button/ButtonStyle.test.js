@@ -5,7 +5,7 @@ var renderer = require("react-test-renderer");
 var enzyme_1 = require("enzyme");
 require("jest-styled-components");
 var Button_1 = require("./Button");
-var Provider_1 = require("../../layout/Provider");
+var Provider_1 = require("../../layout/Provider/Provider");
 describe("test Button style", function () {
     // render test
     it("should render right style", function () {

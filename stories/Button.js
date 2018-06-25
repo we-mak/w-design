@@ -5,7 +5,7 @@ import { Button } from "../src/components";
 storiesOf("Buttons", module)
   .addWithJSX("Button Appearances", () => (
     <React.Fragment>
-      <Button>Default</Button>{" "}
+      <Button>Default button</Button>{" "}
       <Button appearance="primary">Primary button</Button>{" "}
       <Button appearance="danger">Danger button</Button>{" "}
       <Button appearance="warning">Warning button</Button>{" "}

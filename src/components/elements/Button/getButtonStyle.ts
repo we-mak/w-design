@@ -207,7 +207,7 @@ export const getButtonStyle = (props: any) => {
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;

@@ -14,51 +14,47 @@ Responsive grid styles base on flexbox
 ### Default Grid
 
 ```js
-<Provider>
-  <Container>
-    <Grid>
-      <Grid.Column width={1} bg="N2">
-        width 1
-      </Grid.Column>
+<Container>
+  <Grid>
+    <Grid.Column width={1} bg="N2">
+      width 1
+    </Grid.Column>
 
-      <Grid.Column width={1 / 2} bg="N3">
-        width 1/2
-      </Grid.Column>
+    <Grid.Column width={1 / 2} bg="N3">
+      width 1/2
+    </Grid.Column>
 
-      <Grid.Column width={1 / 4} bg="N4">
-        width 1/4
-      </Grid.Column>
-      <Grid.Column width={1 / 3} bg="N2">
-        width 1/3
-      </Grid.Column>
-    </Grid>
-  </Container>
-</Provider>
+    <Grid.Column width={1 / 4} bg="N4">
+      width 1/4
+    </Grid.Column>
+    <Grid.Column width={1 / 3} bg="N2">
+      width 1/3
+    </Grid.Column>
+  </Grid>
+</Container>
 ```
 
 ### Gapless Grid
 
 ```js
-<Provider>
-  <Container>
-    <Grid gapless>
-      <Grid.Column width={1} bg="N2">
-        width 1
-      </Grid.Column>
+<Container>
+  <Grid gapless>
+    <Grid.Column width={1} bg="N2">
+      width 1
+    </Grid.Column>
 
-      <Grid.Column width={1 / 2} bg="N3">
-        width 1/2
-      </Grid.Column>
+    <Grid.Column width={1 / 2} bg="N3">
+      width 1/2
+    </Grid.Column>
 
-      <Grid.Column width={1 / 4} bg="N4">
-        width 1/4
-      </Grid.Column>
-      <Grid.Column width={1 / 3} bg="N2">
-        width 1/3
-      </Grid.Column>
-    </Grid>
-  </Container>
-</Provider>
+    <Grid.Column width={1 / 4} bg="N4">
+      width 1/4
+    </Grid.Column>
+    <Grid.Column width={1 / 3} bg="N2">
+      width 1/3
+    </Grid.Column>
+  </Grid>
+</Container>
 ```
 
 ### Oneline Grid
@@ -66,51 +62,47 @@ Responsive grid styles base on flexbox
 Grid `oneline` prop make all child columns positioned in the same single row.
 
 ```js
-<Provider>
-  <Container>
-    <Grid oneline>
-      <Grid.Column width={1} bg="N2">
-        width 1
-      </Grid.Column>
+<Container>
+  <Grid oneline>
+    <Grid.Column width={1} bg="N2">
+      width 1
+    </Grid.Column>
 
-      <Grid.Column width={1 / 2} bg="N3">
-        width 1/2
-      </Grid.Column>
+    <Grid.Column width={1 / 2} bg="N3">
+      width 1/2
+    </Grid.Column>
 
-      <Grid.Column width={1 / 4} bg="N4">
-        width 1/4
-      </Grid.Column>
-      <Grid.Column width={1 / 3} bg="N2">
-        width 1/3
-      </Grid.Column>
-    </Grid>
-  </Container>
-</Provider>
+    <Grid.Column width={1 / 4} bg="N4">
+      width 1/4
+    </Grid.Column>
+    <Grid.Column width={1 / 3} bg="N2">
+      width 1/3
+    </Grid.Column>
+  </Grid>
+</Container>
 ```
 
 ### Custom Grid
 
 ```js
-<Provider>
-  <Container>
-    <Grid justifyContent="space-between">
-      <Grid.Column width={1} bg="N2">
-        width 1
-      </Grid.Column>
+<Container>
+  <Grid justifyContent="space-between">
+    <Grid.Column width={1} bg="N2">
+      width 1
+    </Grid.Column>
 
-      <Grid.Column width={1 / 2} bg="N3" m="auto">
-        width 1/2, m="auto"
-      </Grid.Column>
+    <Grid.Column width={1 / 2} bg="N3" m="auto">
+      width 1/2, m="auto"
+    </Grid.Column>
 
-      <Grid.Column width={1 / 4} bg="N4">
-        width 1/4
-      </Grid.Column>
-      <Grid.Column width={1 / 3} bg="N2">
-        width 1/3
-      </Grid.Column>
-    </Grid>
-  </Container>
-</Provider>
+    <Grid.Column width={1 / 4} bg="N4">
+      width 1/4
+    </Grid.Column>
+    <Grid.Column width={1 / 3} bg="N2">
+      width 1/3
+    </Grid.Column>
+  </Grid>
+</Container>
 ```
 
 ### Responsive Column
@@ -128,17 +120,10 @@ width={[
 ```
 
 ```js
-<Provider>
-  <Container>
-    <Grid>
-      <Grid.Column width={[1, 1 / 2, 1 / 3, 1 / 4]} bg="N2">
-        Column 1
-      </Grid.Column>
-
-      <Grid.Column width={[1, 1 / 2, 1 / 3, 1 / 4, 1]} bg="N3">
-        Column 2
-      </Grid.Column>
-    </Grid>
-  </Container>
-</Provider>
+<Container>
+  <Grid>
+    <Grid.Column width={[1, 1 / 2, 1 / 3, 1 / 4]}>Column 1</Grid.Column>
+    <Grid.Column width={[1, 1 / 2, 1 / 3, 1 / 4, 1]}>Column 2</Grid.Column>
+  </Grid>
+</Container>
 ```

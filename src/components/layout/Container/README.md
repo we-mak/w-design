@@ -11,39 +11,27 @@ The responsive layout also provides fixed-width containers.
 e.g: `fixSize = "xlarge";`
 
 ```js
-<Provider>
-  <Container bg="N2">
-    <div style={{ padding: "1em" }}>Full width </div>
-  </Container>
+<Container>
+  <div style={{ padding: "1em" }}>Full width </div>
+</Container>
 
-  <br />
+<Container fixSize="xl">
+  <div style={{ padding: "1em" }}>xlarge </div>
+</Container>
 
-  <Container fixSize="xl" bg="N2">
-    <div style={{ padding: "1em" }}>xlarge </div>
-  </Container>
+<Container fixSize="lg">
+  <div style={{ padding: "1em" }}>large </div>
+</Container>
 
-  <br />
+<Container fixSize="md">
+  <div style={{ padding: "1em" }}>medium </div>
+</Container>
 
-  <Container fixSize="lg" bg="N2">
-    <div style={{ padding: "1em" }}>large </div>
-  </Container>
+<Container fixSize="sm">
+  <div style={{ padding: "1em" }}>small </div>
+</Container>
 
-  <br />
-
-  <Container fixSize="md" bg="N2">
-    <div style={{ padding: "1em" }}>medium </div>
-  </Container>
-
-  <br />
-
-  <Container fixSize="sm" bg="N2">
-    <div style={{ padding: "1em" }}>small </div>
-  </Container>
-
-  <br />
-
-  <Container fixSize="xs" bg="N2">
-    <div style={{ padding: "1em" }}>xsmall </div>
-  </Container>
-</Provider>
+<Container fixSize="xs">
+  <div style={{ padding: "1em" }}>xsmall </div>
+</Container>
 ```

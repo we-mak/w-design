@@ -10,14 +10,12 @@ Responsive Hidden based on default theme breakpoints
 | xxl   | boolean | false   | hide at @media screen and (min-width: 80em)                       |
 
 ```js
-<Provider>
-  <Container>
-    <Grid>
-      <Grid.Column width={1} bg="N2">
-        <Hide xs>Hide xs element</Hide>
-        <Hide lg>Hide lg element</Hide>
-      </Grid.Column>
-    </Grid>
-  </Container>
-</Provider>
+<Container>
+  <Grid>
+    <Grid.Column width={1} bg="#eaeaea">
+      <Hide xs>Hide xs element</Hide>
+      <Hide lg>Hide lg element</Hide>
+    </Grid.Column>
+  </Grid>
+</Container>
 ```

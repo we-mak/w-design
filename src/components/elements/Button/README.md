@@ -132,11 +132,9 @@ Handle focus function.
 ### Ref
 
 ```js
-let ref;
-
-<Button buttonRef={r => (ref = r)} onClick={() => console.log(ref)}>
+<Button buttonRef={r => (this.ref = ref)} onClick={() => console.log(ref)}>
   Ref button
-</Button>;
+</Button>
 ```
 
 ### Button auto focus

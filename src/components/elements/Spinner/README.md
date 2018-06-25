@@ -3,19 +3,19 @@
 | borderColor  | string  |         | change spinner color |
 | largeSpinner | boolean | false   | spinner large size   |
 
-Default
+#Default
 
 ```js
 <Spinner />
 ```
 
-Change color
+#Change color
 
 ```js
 <Spinner borderColor="blue" />
 ```
 
-large spinner
+#Large spinner
 
 ```js
 <Spinner largeSpinner />

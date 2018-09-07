@@ -75,7 +75,10 @@ storiesOf("Buttons", module)
     <Button onClick={() => alert("you clicked me")}>Default button</Button>
   ))
   .addWithJSX("Button ref", () => (
-    <Button buttonRef={r => (this.ref = ref)} onClick={() => console.log(ref)}>
+    <Button
+      buttonRef={ref => (this.ref = ref)}
+      onClick={() => alert("you clicked on", this.ref)}
+    >
       Ref button
     </Button>
   ))

@@ -19,12 +19,12 @@ const hidden = (key: string) => (props: string) =>
       }
     : null;
 
-const xs = hidden("xs");
-const sm = hidden("sm");
-const md = hidden("md");
-const lg = hidden("lg");
-const xl = hidden("xl");
-const xxl = hidden("xxl");
+const xs = hidden("xs"),
+  sm = hidden("sm"),
+  md = hidden("md"),
+  lg = hidden("lg"),
+  xl = hidden("xl"),
+  xxl = hidden("xxl");
 
 export interface Props {
   xs?: boolean;

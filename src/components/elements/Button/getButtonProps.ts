@@ -40,8 +40,7 @@ const getButtonElementProps = (props: BtnProps) => {
 };
 
 const getEventProps = (component: any) => {
-  const { onBlur, onFocus } = component;
-  const { onClick, tabIndex } = component.props;
+  const { onBlur, onFocus } = component, { onClick, tabIndex } = component.props;
 
   return {
     onBlur,

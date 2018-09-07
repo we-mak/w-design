@@ -138,67 +138,50 @@ export const getButtonStyle = (props: any) => {
   /** Button appearance style using themed*/
   // background
   const bgDefault = getAppearanceProps(
-    appearance,
-    background,
-    theme.background
-  );
-  const bgHover = getAppearanceProps(
-    appearance,
-    backgroundHover,
-    theme.backgroundHover
-  );
-  const bgActive = getAppearanceProps(
-    appearance,
-    backgroundActive,
-    theme.backgroundActive
-  );
-  const bgFocus = getAppearanceProps(
-    appearance,
-    backgroundFocus,
-    theme.backgroundFocus
-  );
+      appearance,
+      background,
+      theme.background
+    ),
+    bgHover = getAppearanceProps(
+      appearance,
+      backgroundHover,
+      theme.backgroundHover
+    ),
+    bgActive = getAppearanceProps(
+      appearance,
+      backgroundActive,
+      theme.backgroundActive
+    ),
+    bgFocus = getAppearanceProps(
+      appearance,
+      backgroundFocus,
+      theme.backgroundFocus
+    );
+
   // border
-  const borderDefault = getAppearanceProps(appearance, border, theme.border);
-  const bdHover = getAppearanceProps(
-    appearance,
-    borderHover,
-    theme.borderHover
-  );
-  const bdActive = getAppearanceProps(
-    appearance,
-    borderActive,
-    theme.borderActive
-  );
-  const bdFocus = getAppearanceProps(
-    appearance,
-    borderFocus,
-    theme.borderFocus
-  );
+  const borderDefault = getAppearanceProps(appearance, border, theme.border),
+    bdHover = getAppearanceProps(appearance, borderHover, theme.borderHover),
+    bdActive = getAppearanceProps(appearance, borderActive, theme.borderActive),
+    bdFocus = getAppearanceProps(appearance, borderFocus, theme.borderFocus);
 
-  const color = getAppearanceProps(appearance, text, theme.text);
-
-  const boxShadowColor = getAppearanceProps(
-    appearance,
-    boxShadow,
-    theme.boxShadow
-  );
+  // colorize
+  const color = getAppearanceProps(appearance, text, theme.text),
+    boxShadowColor = getAppearanceProps(appearance, boxShadow, theme.boxShadow);
 
   /** Variable styles*/
   const fontSizeStyle = getFontSizeProps(
-    elementSize,
-    fontSizes,
-    theme.fontSizes
-  );
-
-  const paddingStyle = getSize(padding, elementSize);
-  const heightStyle = getSize(height, elementSize);
+      elementSize,
+      fontSizes,
+      theme.fontSizes
+    ),
+    paddingStyle = getSize(padding, elementSize),
+    heightStyle = getSize(height, elementSize);
 
   let width;
   if (fluid) width = "100%";
 
-  const loadingStyle = getLoadingState(props);
-
-  const selectedStyle = getSelected(props);
+  const loadingStyle = getLoadingState(props),
+    selectedStyle = getSelected(props);
 
   return css`
     cursor: pointer;

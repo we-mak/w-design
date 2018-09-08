@@ -9,8 +9,8 @@ exports[`test Button style should render right style 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -81,8 +81,8 @@ exports[`test Button style should render right style 2`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

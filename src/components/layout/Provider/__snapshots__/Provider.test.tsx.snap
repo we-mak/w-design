@@ -2,7 +2,6 @@
 
 exports[`<Provider/> renders with custom theme 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <W.Provider
     theme={
@@ -33,6 +32,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -62,7 +62,7 @@ ShallowWrapper {
           "B70": "#004660",
           "BLACK": "#000",
           "G10": "#4DD257",
-          "G20": "#FFEA81",
+          "G20": "#3BBC45",
           "G30": "#29A634",
           "G40": "#238C2C",
           "G5": "#74FD7F",
@@ -199,7 +199,7 @@ ShallowWrapper {
             "B70": "#004660",
             "BLACK": "#000",
             "G10": "#4DD257",
-            "G20": "#FFEA81",
+            "G20": "#3BBC45",
             "G30": "#29A634",
             "G40": "#238C2C",
             "G5": "#74FD7F",
@@ -314,15 +314,26 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`<Provider/> should renders correctly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <W.Provider
     theme={Object {}}
@@ -331,6 +342,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -360,7 +372,7 @@ ShallowWrapper {
           "B70": "#004660",
           "BLACK": "#000",
           "G10": "#4DD257",
-          "G20": "#FFEA81",
+          "G20": "#3BBC45",
           "G30": "#29A634",
           "G40": "#238C2C",
           "G5": "#74FD7F",
@@ -499,7 +511,7 @@ ShallowWrapper {
             "B70": "#004660",
             "BLACK": "#000",
             "G10": "#4DD257",
-            "G20": "#FFEA81",
+            "G20": "#3BBC45",
             "G30": "#29A634",
             "G40": "#238C2C",
             "G5": "#74FD7F",
@@ -616,8 +628,20 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;

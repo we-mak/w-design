@@ -1,17 +1,18 @@
 import * as styledComponents from "styled-components";
 import { ThemedStyledComponentsModule } from "styled-components";
 
-// export interface ThemeInterface {
-//   primaryColor: string;
-// }
+interface ThemeInterface {
+  primaryColor: string;
+  primaryColorInverted: string;
+}
 
 const {
   default: styled,
   css,
-  injectGlobal,
+  createGlobalStyle,
   keyframes,
   ThemeProvider
-} = styledComponents as ThemedStyledComponentsModule<{}>;
+} = styledComponents as ThemedStyledComponentsModule<ThemeInterface>;
 
+export { css, createGlobalStyle, keyframes, ThemeProvider };
 export default styled;
-export { css, injectGlobal, keyframes, ThemeProvider };

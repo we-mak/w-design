@@ -1,4 +1,15 @@
 language: node_js
 node_js:
-  - 9
-  - 8
+  - "stable"
+install:
+  - npm install
+cache:
+  directories:
+    - node_modules
+script:
+  # - npm run build-lib
+  - npm test
+  - npm run coverage
+# Send coverage data to Coveralls
+after_script: # Upload coverage reports
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls

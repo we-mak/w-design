@@ -1,6 +1,6 @@
 {
   "name": "w-design",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "description": "A minimal React UI library build with styled-components",
   "author": "Sean",
   "license": "MIT",
@@ -17,6 +17,8 @@
     "test:watch": "react-scripts-ts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
+    "coverage": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"

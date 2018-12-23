@@ -28,6 +28,32 @@ import { Text } from "w-design";
 ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 ```
 
+## Version 1.0.0 Features
+
+Cover basic components
+
+| Layout          | Elements   | Components    |
+| --------------- | ---------- | ------------- |
+| ✓ ThemeProvider | ✓ Button   | ✖ Nav         |
+| ✓ Container     | ✖ Input    | ✖ Avatar      |
+| ✓ Grid          | ✖ Form     | ✖ Navbar      |
+| ✓ Hide          | ✖ Label    | ✖ Badges      |
+| ✖ Masonry       | ✖ Image    | ✖ Arcordion   |
+|                 | ✓ Spinner  | ✖ Breadcrumbs |
+|                 | ✖ Panel    | ✖ Card        |
+|                 | ✖ Table    | ✖ Chip        |
+|                 | ✖ List     | ✖ Menu        |
+|                 | ✖ Divider  | ✖ Modal       |
+|                 | ✓ Heading  | ✖ Pagination  |
+|                 | ✖ Icon     | ✖ Dropdown    |
+|                 | ✖ Progress | ✖ Sidebar     |
+|                 |            | ✖ Steps       |
+|                 |            | ✖ Tab         |
+|                 |            | ✖ Toast       |
+|                 |            | ✖ Tooltip     |
+|                 |            | ✖ Popover     |
+|                 |            | ✖ Comment     |
+
 ## Contribute
 
 This project uses, for details, read here https://github.com/transitive-bullshit/create-react-library

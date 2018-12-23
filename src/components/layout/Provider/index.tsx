@@ -1,10 +1,14 @@
 import * as React from "react";
+import { ThemeProvider } from "../../../common/styled";
+import defaultTheme from "../../../common/theme";
+import { ResetCss } from "./ResetCss";
+import Root from "./Root";
 
 export interface Props extends React.HTMLProps<HTMLDivElement> {
   theme?: any;
 }
 
-class Provider extends React.PureComponent<Props> {
+class Provider extends React.Component<Props> {
   stylesheet: any;
 
   static displayName = "W.Provider";
@@ -31,7 +35,12 @@ class Provider extends React.PureComponent<Props> {
   }
 
   render() {
-    return <div />;
+    const { theme, ...props } = this.props;
+    return (
+      <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
+        <Root {...props as any} />
+      </ThemeProvider>
+    );
   }
 }
 

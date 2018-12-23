@@ -210,6 +210,7 @@ html {
 }
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", system-ui, sans-serif;
   background: ${colors.WHITE};
   color: ${colors.N60};
   overflow-x: hidden;

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ThemeProvider } from "../../../common/styled";
+import { ThemeProvider } from "styled-components";
 import defaultTheme from "../../../common/theme";
 import { ResetCss } from "./ResetCss";
 import Root from "./Root";
@@ -11,7 +11,7 @@ export interface Props extends React.HTMLProps<HTMLDivElement> {
 class Provider extends React.Component<Props> {
   stylesheet: any;
 
-  static displayName = "W.Provider";
+  static displayName = "WProvider";
 
   public static defaultProps: Props = {
     theme: {}

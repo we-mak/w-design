@@ -11,7 +11,7 @@ import svgr from "@svgr/rollup";
 import pkg from "./package.json";
 
 export default {
-  input: "src/index.ts",
+  input: "src/index.tsx",
   output: [
     {
       file: pkg.main,
@@ -41,6 +41,15 @@ export default {
     babel({
       exclude: "node_modules/**"
     }),
-    commonjs()
+    commonjs({
+      include: "node_modules/**",
+      namedExports: {
+        "node_modules/react-is/index.js": [
+          "isElement",
+          "isValidElementType",
+          "ForwardRef"
+        ]
+      }
+    })
   ]
 };

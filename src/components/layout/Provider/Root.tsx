@@ -1,4 +1,4 @@
-import styled from "../../../common/styled";
+import styled from "styled-components";
 import theme from "../../../common/theme";
 
 const colors = theme.colors;

@@ -760,6 +760,13 @@
     "@types/react" "*"
     csstype "^2.2.0"
 
+"@types/styled-system@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-3.0.9.tgz#a17d78b3500ed5c76570fd4f692546616eed015c"
+  integrity sha512-QUtiOVULbaLCrdQYzZpqDdjx2QUwdfk+F9op2kZy1Xqjh5S6D0vMousLUByBRDf7tqL/ZdtX0E5/gFav1A6DCA==
+  dependencies:
+    csstype "^2.2.0"
+
 abab@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"

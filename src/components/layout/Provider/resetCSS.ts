@@ -2,36 +2,15 @@ import { colors } from "../../../common/colors";
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 export const ResetCss = `
-
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-
-
-body {
-  margin: 0;
-}
-
-
-main {
-  display: block;
-}
-
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-
-
+html{line-height: 1.15;-webkit-text-size-adjust: 100%;}
+body {margin: 0;}
+main {display: block;}
+h1{font-size: 2em; margin: 0.67em 0;}
 hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
-
 
 pre {
   font-family: monospace, monospace;

@@ -20,6 +20,8 @@ class Provider extends React.Component<Props> {
   componentDidMount() {
     this.stylesheet = document.createElement("style");
     this.stylesheet.type = "text/css";
+    // this.stylesheet.setAttribute("rel", "preload");
+    // this.stylesheet.setAttribute("as", "style");
     this.stylesheet.innerHTML = ResetCss;
 
     if (document && document.head) {

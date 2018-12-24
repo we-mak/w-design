@@ -2,9 +2,7 @@ import * as React from "react";
 import { ContainerWrap } from "./ContainerWrap";
 
 export interface Props {
-  /** children components*/
   children?: React.ReactChild;
-  /** tag class property */
   className?: string;
 }
 

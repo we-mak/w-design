@@ -1,10 +1,11 @@
-import { color } from "styled-system";
 import styled from "styled-components";
+import { color } from "styled-system";
 import { fixSize } from "../../../common/fixSize";
 
 export interface Props {
   /** xlarge(1280), large(960), medium(840), small(600), xsmall(480) */
   fixSize?: string;
+  color?: string;
 }
 
 export const ContainerWrap = styled.div`

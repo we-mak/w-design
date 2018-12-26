@@ -11,6 +11,7 @@ import pkg from "./package.json";
 export default {
   input: "src/index.tsx",
   external: [
+    "stream",
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {})
   ],

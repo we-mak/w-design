@@ -1,7 +1,7 @@
 import { colors } from "../../../common/colors";
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-export const ResetCss = `
+export const resetCSS = `
 html{line-height: 1.15;-webkit-text-size-adjust: 100%;}
 body {margin: 0;}
 main {display: block;}

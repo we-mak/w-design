@@ -1,5 +1,5 @@
 export const fixSize = (size: string) => {
-  const sizes = {
+  const sizes: any = {
     xl() {
       return "1296px";
     },

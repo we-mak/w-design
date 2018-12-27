@@ -12,7 +12,7 @@ function Provider(p: Props) {
   const { theme = {}, ...props } = p;
 
   React.useEffect(() => {
-    let stylesheet: any = document.createElement("style");
+    let stylesheet: HTMLStyleElement | null = document.createElement("style");
     stylesheet.type = "text/css";
     stylesheet.innerHTML = resetCSS;
 

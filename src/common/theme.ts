@@ -39,7 +39,14 @@ export const shadows = [
   `inset 0 0 0 1px rgba(87, 85, 217, .2), 0 0 4px rgba(87, 85, 217, .2)`
 ];
 
-export const screens = [1296, 976, 856, 616, 496].map(n => `${n}px`);
+export const screens = {
+  xl: 1296,
+  lg: 976,
+  md: 856,
+  sm: 616,
+  xs: 496,
+  xxs: 320
+};
 
 export { colors } from "./colors";
 

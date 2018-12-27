@@ -4,11 +4,6 @@ exports[`<Provider/> renders with custom theme 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="sc-bdVaJa fnfMJt"
-      />
-    </div>
     .c0 {
   font-family: Roboto;
 }

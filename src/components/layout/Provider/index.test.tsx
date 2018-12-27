@@ -1,8 +1,10 @@
 // This component is based on styled-components, unnecessary to do overtest
 import * as React from "react";
 import "jest-styled-components";
-import { render } from "react-testing-library";
+import { render, cleanup } from "react-testing-library";
 import Provider from "./index";
+
+afterEach(cleanup);
 
 describe("<Provider/>", () => {
   // Default theme

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1545902982878" clover="3.2.0">
+  <project timestamp="1545902982878" name="All files">
+    <metrics statements="39" coveredstatements="25" conditionals="17" coveredconditionals="7" methods="6" coveredmethods="3" elements="62" coveredelements="35" complexity="0" loc="39" ncloc="39" packages="2" files="5" classes="5">
+      <package name="Container">
+        <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="ContainerWrap.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Container/ContainerWrap.tsx">
+          <metrics statements="7" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="21" count="0" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Container/index.tsx">
+          <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="Provider">
+        <metrics statements="27" coveredstatements="25" conditionals="13" coveredconditionals="7" methods="4" coveredmethods="3"/>
+        <file name="Root.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/Root.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="7" count="4" type="stmt"/>
+          <line num="121" count="1" type="stmt"/>
+          <line num="123" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/index.tsx">
+          <metrics statements="18" coveredstatements="16" conditionals="11" coveredconditionals="5" methods="3" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="1" type="cond" truecount="3" falsecount="1"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="24" count="0" type="cond" truecount="0" falsecount="5"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+        </file>
+        <file name="resetCSS.ts" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/resetCSS.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

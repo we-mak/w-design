@@ -12,7 +12,7 @@ function Provider(p: Props) {
   const { theme = {}, ...props } = p;
 
   React.useEffect(() => {
-    const stylesheet: any = document.createElement("style");
+    let stylesheet: any = document.createElement("style");
     stylesheet.type = "text/css";
     stylesheet.innerHTML = resetCSS;
 
@@ -23,6 +23,7 @@ function Provider(p: Props) {
     return function() {
       if (stylesheet && document && document.head) {
         document.head.removeChild(stylesheet);
+        stylesheet = null;
       }
     };
   });

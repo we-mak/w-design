@@ -8,49 +8,11 @@ export interface Props extends React.HTMLProps<HTMLDivElement> {
   theme?: {};
 }
 
-// class Provider extends React.Component<Props> {
-//   stylesheet: any;
-
-//   static displayName = "WProvider";
-
-//   public static defaultProps: Props = {
-//     theme: {}
-//   };
-
-//   componentDidMount() {
-//     this.stylesheet = document.createElement("style");
-//     this.stylesheet.type = "text/css";
-//     this.stylesheet.innerHTML = resetCSS;
-
-//     if (document && document.head) {
-//       document.head.appendChild(this.stylesheet);
-//     }
-//   }
-
-//   componentWillUnmount() {
-//     if (this.stylesheet && document && document.head) {
-//       document.head.removeChild(this.stylesheet);
-//       delete this.stylesheet;
-//     }
-//   }
-
-//   render() {
-//     const { theme, ...props } = this.props;
-//     return (
-//       <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
-//         <Root {...props as any} />
-//       </ThemeProvider>
-//     );
-//   }
-// }
-
 function Provider(p: Props) {
   const { theme = {}, ...props } = p;
 
-  let stylesheet: any;
-
   React.useEffect(() => {
-    stylesheet = document.createElement("style");
+    const stylesheet: any = document.createElement("style");
     stylesheet.type = "text/css";
     stylesheet.innerHTML = resetCSS;
 
@@ -59,10 +21,9 @@ function Provider(p: Props) {
     }
 
     return function() {
-      stylesheet &&
-        document &&
-        document.head &&
+      if (stylesheet && document && document.head) {
         document.head.removeChild(stylesheet);
+      }
     };
   });
 

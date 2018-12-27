@@ -1,4 +1,4 @@
-import { colors } from "../../../common/colors";
+import { colors } from "../../../common/theme";
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 export const resetCSS = `

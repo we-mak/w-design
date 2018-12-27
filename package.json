@@ -24,6 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
+    "clean-tag": "^2.0.2",
     "styled-system": "^3.1.11"
   },
   "devDependencies": {

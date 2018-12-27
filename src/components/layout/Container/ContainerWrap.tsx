@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Tag from "clean-tag";
 import { color } from "styled-system";
 import { fixSize } from "../../../common/fixSize";
 
@@ -8,7 +9,7 @@ export interface Props {
   color?: string;
 }
 
-export const ContainerWrap = styled.div`
+export const ContainerWrap = styled(Tag)`
   margin-left: auto;
   margin-right: auto;
   padding: 0 0.4rem;

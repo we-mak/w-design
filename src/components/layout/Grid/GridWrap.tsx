@@ -8,9 +8,9 @@ export interface Props {
 export const GridWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
   margin-left: -0.4rem;
   margin-right: -0.4rem;
+  padding: .4rem;
 
   ${(props: Props) =>
     /* set margin left and right, and child padding to 0*/
@@ -28,6 +28,7 @@ export const GridWrap = styled.div`
     `
       flex-wrap: nowrap !important;
       overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
   `};
 `;
 

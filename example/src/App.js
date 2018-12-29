@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Provider, Container, Grid } from "w-design";
+import { Provider, Container, Grid, Spinner } from "w-design";
 
 class App extends Component {
   render() {
     return (
       <Provider>
-        <Container maxWidth={1200} p={2}>
+        <Container maxWidth={1200} minWidth={320} p={2}>
           <Grid>
             <Grid.Column width={1} bg="N2">
               width 1
@@ -26,7 +26,7 @@ class App extends Component {
               bg="N3"
               display={["block", "none", "block"]}
             >
-              width 1/3
+              <Spinner large borderColor="green" />
             </Grid.Column>
           </Grid>
         </Container>

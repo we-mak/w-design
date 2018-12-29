@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
-import defaultTheme from "../../../common/theme";
+import defaultTheme from "../../../common/styleUtils/theme";
 import { resetCSS } from "./resetCSS";
 import Root from "./Root";
 

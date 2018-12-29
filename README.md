@@ -11,11 +11,13 @@ A **Mobile First** React UI library build with styled-components
 
 ## Install
 
-```bash
+If use `npm`
+
+```sh
 npm install --save w-design
 ```
 
-## Install
+for yarn
 
 `yarn add w-design` or `npm install w-design`
 
@@ -32,33 +34,71 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 Cover basic components
 
-| Layout          | Elements   | Components    |
-| --------------- | ---------- | ------------- |
-| ✓ ThemeProvider | ✓ Button   | ✖ Nav         |
-| ✓ Container     | ✖ Input    | ✖ Avatar      |
-| ✓ Grid          | ✖ Form     | ✖ Navbar      |
-| ✓ Hide          | ✖ Label    | ✖ Badges      |
-| ✖ Masonry       | ✖ Image    | ✖ Arcordion   |
-|                 | ✓ Spinner  | ✖ Breadcrumbs |
-|                 | ✖ Panel    | ✖ Card        |
-|                 | ✖ Table    | ✖ Chip        |
-|                 | ✖ List     | ✖ Menu        |
-|                 | ✖ Divider  | ✖ Modal       |
-|                 | ✓ Heading  | ✖ Pagination  |
-|                 | ✖ Icon     | ✖ Dropdown    |
-|                 | ✖ Progress | ✖ Sidebar     |
-|                 |            | ✖ Steps       |
-|                 |            | ✖ Tab         |
-|                 |            | ✖ Toast       |
-|                 |            | ✖ Tooltip     |
-|                 |            | ✖ Popover     |
-|                 |            | ✖ Comment     |
+| Layout          | Elements   | Components     |
+| --------------- | ---------- | -------------- |
+| ✓ ThemeProvider | ✓ Button   | ✖ Progress     |
+| ✓ Container     | ✖ Input    | ✖ Avatar Group |
+| ✓ Grid          | ✖ Checkbox | ✖ Navbar       |
+| ✖ Masonry       | ✖ Label    | ✖ Badges       |
+|                 | ✖ Image    | ✖ Arcordion    |
+|                 | ✓ Spinner  | ✖ Breadcrumbs  |
+|                 | ✖ Panel    | ✖ Card         |
+|                 | ✖ Table    | ✖ Chip         |
+|                 | ✖ List     | ✖ Menu         |
+|                 | ✖ Divider  | ✖ Modal        |
+|                 | ✓ Heading  | ✖ Pagination   |
+|                 | ✖ Progress | ✖ Dropdown     |
+|                 | ✖ Portal   | ✖ Sidebar      |
+|                 | ✖ Avatar   | ✖ Steps        |
+|                 | ✖ Toggle   | ✖ Tabs         |
+|                 |            | ✖ Push Message |
+|                 |            | ✖ Tooltip      |
+|                 |            | ✖ Popover      |
+|                 |            | ✖ Comment      |
+|                 |            | ✖ Select       |
+|                 |            | ✖ Form         |
 
-## Contribute
+## 🐞 Report
 
-This project uses, for details, read here https://github.com/transitive-bullshit/create-react-library
+### For Issues
+
+Please open Issue to report bugs.
+
+### Questions
+
+For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
+
+### Folders structure
+
+```sh
+├── packages # Build packages
+│   └── **/*
+│
+├── src
+│   ├── @types/**/*.d.ts ## definite for dependencies package
+│   ├── common ## static default variables, utilitites
+│   └── components ## Core library component folder
+│
+│
+├── resources
+│   ├── GUI ## UI design system files
+│   └── img ## Image for docs
+│
+├── CHANGELOG.md ## Change history of every changes of each release.
+├── README.md ## Guide content
+├── tslint.json
+├── tsconfig.json
+├── jest.config.json
+├── rollup.config.js ## rollup config
+└── package.json ## npm packages config
+```
 
 ### Development
+
+This package is built with dependencies: `styled-system`, `clean-tag`
+Props checking is under `TypeScript`
+
+Please check these packages before getting start to contribute.
 
 Local development is broken into two parts (ideally using two tabs).
 
@@ -94,4 +134,4 @@ This creates a production build of the example create-react-app that showcases y
 
 ## License
 
-MIT © [Sean](https://github.com/Sean)
+MIT © [Sean](https://github.com/we-mak)

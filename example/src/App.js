@@ -26,7 +26,7 @@ class App extends Component {
               bg="N3"
               display={["block", "none", "block"]}
             >
-              <Spinner large borderColor="green" />
+              <Spinner large />
             </Grid.Column>
           </Grid>
         </Container>

@@ -21,8 +21,8 @@ const StyledSpinner = styled.div`
     content: "";
     display: block;
     left: 50%;
-    position: absolute;
     top: 50%;
+    position: absolute;
     z-index: 1;
   }
 

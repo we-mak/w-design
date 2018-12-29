@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Tag from "clean-tag";
 import {
+  color,
   space,
   width,
   flex,
-  color,
-  fontSize,
   order,
-  alignSelf
+  alignSelf,
+  display
 } from "styled-system";
 
 export const Column = styled(Tag)`
@@ -15,14 +15,13 @@ export const Column = styled(Tag)`
   max-width: 100%;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
-  /* Custom props with styled-system*/
+  ${color}
   ${space}
   ${width}
   ${flex}
-  ${color}
-  ${fontSize}
   ${order}
   ${alignSelf}
+  ${display}
 `;
 
 Column.displayName = "Column";

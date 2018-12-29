@@ -24,7 +24,7 @@ export const lineHeights = [1, 1.125, 1.25, 1.5];
 export const space = [0, 4, 8, 16, 32, 64, 128];
 
 // breakpoint values
-export const breakpoints = [20, 30, 37.5, 52.5, 60, 80, 90].map(n => `${n}rem`);
+export const breakpoints = [30, 37.5, 52.5, 60, 80, 90].map(n => `${n}rem`);
 
 export const radii = [0, 0.1, 0.2, 0.3, 0.4].map(n => `${n}rem`);
 
@@ -39,26 +39,6 @@ export const shadows = [
   `inset 0 0 0 1px rgba(87, 85, 217, .2), 0 0 4px rgba(87, 85, 217, .2)`
 ];
 
-export const screens = {
-  xxs: 320,
-  xs: 480,
-  sm: 600,
-  md: 840,
-  lg: 960,
-  xl: 1280,
-  xxl: 1440
-};
-
-export const mediaQueries = [
-  `(max-width: 20rem)`,
-  `(min-width: 20rem) and (max-width: 30rem)`,
-  `(min-width: 30rem) and (max-width: 37.5rem)`,
-  `(min-width: 37.5rem) and (max-width: 52.5rem)`,
-  `(min-width: 52.5rem) and (max-width: 60rem)`,
-  `(min-width: 60rem) and (max-width: 80rem)`,
-  `(min-width: 80rem)`
-].map(n => `@media screen and ${n}`);
-
 export { colors } from "./colors";
 
 export default {
@@ -71,7 +51,5 @@ export default {
   radii,
   letterSpacings,
   shadows,
-  screens,
-  mediaQueries,
   colors
 };

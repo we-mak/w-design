@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <Provider>
-        <Container maxscreen="lg" p={2}>
+        <Container maxWidth={1200} p={2}>
           <Grid>
             <Grid.Column width={1} bg="N2">
               width 1
@@ -19,6 +19,13 @@ class App extends Component {
               width 1/4
             </Grid.Column>
             <Grid.Column width={1 / 3} bg="N2">
+              width 1/3
+            </Grid.Column>
+            <Grid.Column
+              width={[1 / 3, 1 / 2, 1]}
+              bg="N3"
+              display={["block", "none", "block"]}
+            >
               width 1/3
             </Grid.Column>
           </Grid>

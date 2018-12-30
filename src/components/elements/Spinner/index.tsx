@@ -8,6 +8,7 @@ const StyledSpinner = styled.div`
   color: transparent !important;
   pointer-events: none;
   position: relative;
+  min-height: 0.8rem;
 
   &::after {
     animation: ${spin} 500ms infinite linear;
@@ -23,32 +24,26 @@ const StyledSpinner = styled.div`
     top: 50%;
     position: absolute;
     z-index: 1;
+    height: 0.8rem;
+    margin-left: -0.4rem;
+    margin-top: -0.4rem;
+    width: 0.8rem;
   }
 
   ${(props: any) =>
-    props.large
-      ? `
-        min-height: 2rem;
-        &::after {
-          height: 1.6rem;
-          margin-left: -.8rem;
-          margin-top: -.8rem;
-          width: 1.6rem;
-        }`
-      : `
-      min-height: .8rem;
-      &::after {
-        height: 0.8rem;
-        margin-left: -0.4rem;
-        margin-top: -0.4rem;
-        width: 0.8rem;
-      }
-
-  `}
+    props.large &&
+    `
+    min-height: 2rem;
+    &::after {
+      height: 1.6rem;
+      margin-left: -.8rem;
+      margin-top: -.8rem;
+      width: 1.6rem;
+    }`}
 `;
 
-const Spinner: React.StatelessComponent<React.ReactNode> = ({
-  ...props
-}: any) => <StyledSpinner {...props} />;
+const Spinner: React.StatelessComponent<any> = ({ ...props }: any) => (
+  <StyledSpinner {...props} />
+);
 
 export default Spinner;

@@ -34,8 +34,9 @@ export interface SyntheticEventProps {
  */
 export interface MouseEventProps {
   onMouseDown?: (e: React.MouseEvent<HTMLElement>) => void;
-  onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void;
   onMouseUp?: (e: React.MouseEvent<HTMLElement>) => void;
+  onMouseEnter?: (e: React.MouseEvent<HTMLElement>) => void;
+  onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 /**
@@ -61,10 +62,11 @@ export interface TouchEventProps {
 export interface InputControlProps {
   /** Default value of the input, uncontrolled usage. */
   defaultValue?: string;
-  /** Change event handler. Use `event.target.value` for new value. */
-  onChange?: React.FormEventHandler<HTMLElement>;
   /** Value of the input, controlled usage. */
   value?: string;
+  /** Change event handler. Use `event.target.value` for new value. */
+  onChange?: (e: React.FormEventHandler<HTMLInputElement>) => void;
+  onInput?: (e: React.FormEventHandler<HTMLInputElement>) => void;
 }
 
 /**

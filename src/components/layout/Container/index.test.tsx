@@ -6,8 +6,8 @@ import Container from "./index";
 describe("<Container/>", () => {
   // Render test
   it("should renders correctly", () => {
-    const wrapper = render(<Container />);
-    expect(wrapper).toMatchSnapshot();
+    const { container } = render(<Container />);
+    expect(container).toMatchSnapshot();
   });
 
   // Props test

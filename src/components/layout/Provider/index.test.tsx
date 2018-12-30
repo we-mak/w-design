@@ -9,13 +9,13 @@ afterEach(cleanup);
 describe("<Provider/>", () => {
   // Default theme
   it("should renders correctly", () => {
-    const wrapper = render(<Provider />);
-    expect(wrapper).toMatchSnapshot();
+    const { container } = render(<Provider />);
+    expect(container).toMatchSnapshot();
   });
 
   // Custom theme
   it("renders with custom theme", () => {
-    const wrapper = render(
+    const { container } = render(
       <Provider
         theme={{
           fonts: "Roboto",
@@ -24,7 +24,7 @@ describe("<Provider/>", () => {
         }}
       />
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   // Test hook

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Provider, Container, Grid, Heading } from "w-design";
+import { Provider, Container, Grid, Heading, Spinner } from "w-design";
 
 class App extends Component {
   render() {
@@ -14,6 +14,7 @@ class App extends Component {
               <Heading.H4>Hello</Heading.H4>
               <Heading.H5>Hello</Heading.H5>
               <Heading.H6>Hello</Heading.H6>
+              <Spinner large />
             </Grid.Column>
           </Grid>
         </Container>

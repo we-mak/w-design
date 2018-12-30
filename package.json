@@ -2,7 +2,7 @@
   "name": "w-design",
   "version": "0.8.0",
   "description": "A minimal React UI library build with styled-components",
-  "author": "Sean",
+  "author": "viiiprock",
   "license": "MIT",
   "repository": "we-mak/w-design",
   "main": "dist/index.js",
@@ -23,6 +23,11 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
+  "keywords": [
+    "styled-system",
+    "styled-component",
+    "react ui library"
+  ],
   "dependencies": {
     "clean-tag": "^2.0.2",
     "styled-system": "^3.1.11"
@@ -42,10 +47,11 @@
     "gh-pages": "^2.0.1",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
-    "jest-styled-components": "^6.3.1",
+    "jest-styled-components": "^7.0.0-2",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "react-scripts": "^2.1.2",
+    "react-test-renderer": "^16.7.0",
     "react-testing-library": "^5.4.2",
     "rollup": "^0.68.2",
     "rollup-plugin-commonjs": "^9.1.3",

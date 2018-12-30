@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1546153838283" clover="3.2.0">
-  <project timestamp="1546153838283" name="All files">
-    <metrics statements="99" coveredstatements="47" conditionals="41" coveredconditionals="17" methods="15" coveredmethods="7" elements="155" coveredelements="71" complexity="0" loc="99" ncloc="99" packages="5" files="10" classes="10">
+<coverage generated="1546156702072" clover="3.2.0">
+  <project timestamp="1546156702072" name="All files">
+    <metrics statements="99" coveredstatements="68" conditionals="41" coveredconditionals="25" methods="15" coveredmethods="12" elements="155" coveredelements="105" complexity="0" loc="99" ncloc="99" packages="5" files="10" classes="10">
       <package name="elements.Heading">
         <metrics statements="31" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Heading/index.tsx">
@@ -74,36 +74,36 @@
         </file>
       </package>
       <package name="layout.Grid">
-        <metrics statements="21" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
         <file name="Column.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Grid/Column.tsx">
-          <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="0" type="stmt"/>
-          <line num="2" count="0" type="stmt"/>
-          <line num="3" count="0" type="stmt"/>
-          <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="27" count="0" type="stmt"/>
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="13" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="1" type="stmt"/>
         </file>
         <file name="GridWrap.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Grid/GridWrap.tsx">
-          <metrics statements="5" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="1" count="0" type="stmt"/>
-          <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="35" count="0" type="stmt"/>
+          <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="17" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="2" type="stmt"/>
         </file>
         <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Grid/index.tsx">
-          <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="1" count="0" type="stmt"/>
-          <line num="2" count="0" type="stmt"/>
-          <line num="3" count="0" type="stmt"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="18" count="0" type="stmt"/>
-          <line num="28" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
+          <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
         </file>
       </package>
       <package name="layout.Provider">

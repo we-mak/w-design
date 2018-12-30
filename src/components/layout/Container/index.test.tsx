@@ -9,10 +9,4 @@ describe("<Container/>", () => {
     const { container } = render(<Container />);
     expect(container).toMatchSnapshot();
   });
-
-  // Props test
-  // it("should has class", () => {
-  //   const wrapper = render(<Container className="test">Children</Container>);
-  //   expect(wrapper.prop("className")).toEqual("test");
-  // });
 });

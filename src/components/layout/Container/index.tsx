@@ -1,9 +1,9 @@
 import * as React from "react";
 import { ContainerWrap } from "./ContainerWrap";
+import { GlobProps } from "../../../typings";
 
-export interface Props {
+export interface Props extends GlobProps {
   children?: React.ReactChild;
-  className?: string;
 }
 
 /**
@@ -12,7 +12,7 @@ export interface Props {
  * Wrapper layout component contains columns layout
  */
 const Container: React.StatelessComponent<Props> = props => (
-  <ContainerWrap className={props.className} {...props}>
+  <ContainerWrap className={props.className} id={props.id} {...props}>
     {props.children}
   </ContainerWrap>
 );

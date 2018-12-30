@@ -11,8 +11,7 @@ const StyledSpinner = styled.div`
 
   &::after {
     animation: ${spin} 500ms infinite linear;
-    border: 0.1rem solid
-      ${(props: any) => props.theme.colors["B70"] || theme.colors["B70"]};
+    border: 0.1rem solid ${theme.colors["B70"]};
     /* custom spinner color */
     ${borderColor}
     border-radius: 50%;
@@ -48,8 +47,8 @@ const StyledSpinner = styled.div`
   `}
 `;
 
-const Spinner: React.StatelessComponent<any> = ({ ...props }) => (
-  <StyledSpinner {...props} />
-);
+const Spinner: React.StatelessComponent<React.ReactNode> = ({
+  ...props
+}: any) => <StyledSpinner {...props} />;
 
 export default Spinner;

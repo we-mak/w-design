@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Provider, Container, Grid, Spinner } from "w-design";
+import { Provider, Container, Grid, Heading } from "w-design";
 
 class App extends Component {
   render() {
@@ -8,25 +8,12 @@ class App extends Component {
         <Container maxWidth={1200} minWidth={320} p={2}>
           <Grid>
             <Grid.Column width={1} bg="N2">
-              width 1
-            </Grid.Column>
-
-            <Grid.Column width={1 / 2} bg="N3">
-              width 1/2
-            </Grid.Column>
-
-            <Grid.Column width={1 / 4} bg="N4">
-              width 1/4
-            </Grid.Column>
-            <Grid.Column width={1 / 3} bg="N2">
-              width 1/3
-            </Grid.Column>
-            <Grid.Column
-              width={[1 / 3, 1 / 2, 1]}
-              bg="N3"
-              display={["block", "none", "block"]}
-            >
-              <Spinner large />
+              <Heading.H1 customHTMLtag="span">Hello</Heading.H1>
+              <Heading.H2>Hello</Heading.H2>
+              <Heading.H3>Hello</Heading.H3>
+              <Heading.H4>Hello</Heading.H4>
+              <Heading.H5>Hello</Heading.H5>
+              <Heading.H6>Hello</Heading.H6>
             </Grid.Column>
           </Grid>
         </Container>

@@ -34,29 +34,31 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 Cover basic components
 
-| Layout          | Elements   | Components     |
-| --------------- | ---------- | -------------- |
-| ✓ ThemeProvider | ✓ Button   | ✖ Progress     |
-| ✓ Container     | ✖ Input    | ✖ Avatar Group |
-| ✓ Grid          | ✖ Checkbox | ✖ Navbar       |
-| ✖ Masonry       | ✖ Label    | ✖ Badges       |
-|                 | ✖ Image    | ✖ Arcordion    |
-|                 | ✓ Spinner  | ✖ Breadcrumbs  |
-|                 | ✖ Panel    | ✖ Card         |
-|                 | ✖ Table    | ✖ Chip         |
-|                 | ✖ List     | ✖ Menu         |
-|                 | ✖ Divider  | ✖ Modal        |
-|                 | ✓ Heading  | ✖ Pagination   |
-|                 | ✖ Progress | ✖ Dropdown     |
-|                 | ✖ Portal   | ✖ Sidebar      |
-|                 | ✖ Avatar   | ✖ Steps        |
-|                 | ✖ Toggle   | ✖ Tabs         |
-|                 |            | ✖ Push Message |
-|                 |            | ✖ Tooltip      |
-|                 |            | ✖ Popover      |
-|                 |            | ✖ Comment      |
-|                 |            | ✖ Select       |
-|                 |            | ✖ Form         |
+| Layout          | Elements         | Components     |
+| --------------- | ---------------- | -------------- |
+| ✓ ThemeProvider | ✓ Button         | ✖ Progress     |
+| ✓ Container     | ✖ Text Input     | ✖ Avatar Group |
+| ✓ Grid          | ✖ Checkbox       | ✖ Navbar       |
+| ✖ Masonry       | ✖ Label          | ✖ Badges       |
+|                 | ✖ Image          | ✖ Arcordion    |
+|                 | ✓ Spinner        | ✖ Breadcrumbs  |
+|                 | ✖ Panel          | ✖ Card         |
+|                 | ✖ Table          | ✖ Chip         |
+|                 | ✖ List           | ✖ Menu         |
+|                 | ✖ Divider        | ✖ Modal        |
+|                 | ✓ Heading        | ✖ Pagination   |
+|                 | ✖ Progress       | ✖ Dropdown     |
+|                 | ✖ Portal         | ✖ Sidebar      |
+|                 | ✖ Avatar         | ✖ Steps        |
+|                 | ✖ Toggle         | ✖ Tabs         |
+|                 | ✖ Text Area      | ✖ Push Message |
+|                 | ✖ Inline message | ✖ Tooltip      |
+|                 |                  | ✖ Popover      |
+|                 |                  | ✖ Comment      |
+|                 |                  | ✖ Select       |
+|                 |                  | ✖ ButtonGroup  |
+|                 |                  | ✖ Input Group  |
+|                 |                  | ✖ Form         |
 
 ## 🐞 Report
 

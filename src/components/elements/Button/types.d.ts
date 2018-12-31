@@ -1,4 +1,11 @@
-import { GlobProps, SizeProps, LinkProps, ActionProps } from "../../../typings";
+import {
+  GlobProps,
+  SizeProps,
+  LinkProps,
+  ActionProps,
+  SyntheticEventProps,
+  MouseEventProps
+} from "../../../typings";
 
 export interface ButtonProps
   extends GlobProps,
@@ -7,6 +14,8 @@ export interface ButtonProps
     ActionProps,
     SyntheticEventProps,
     MouseEventProps {
+  /** custom component*/
+  customComponent?: string;
   /** html button aria-controls*/
   ariaControls?: string;
   /** html button aria-expanded*/

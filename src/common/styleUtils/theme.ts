@@ -1,4 +1,4 @@
-import hex2Rgba from "./hex2Rgba";
+import { hex2Rgba } from "./utils";
 import { colors } from "./colors";
 
 export const fonts =

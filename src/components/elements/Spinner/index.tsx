@@ -4,7 +4,7 @@ import { borderColor } from "styled-system";
 import { spin } from "../../../common/styleUtils/keyframes";
 import theme from "../../../common/styleUtils/theme";
 
-const StyledSpinner = styled.div`
+export const StyledSpinner = styled.div`
   color: transparent !important;
   pointer-events: none;
   position: relative;

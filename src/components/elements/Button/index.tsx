@@ -25,7 +25,6 @@ const StyledSpan = styled.span`
 
 class Button extends React.Component<ButtonProps> {
   button!: HTMLElement | null;
-  customComponent: any;
 
   static defaultProps = {
     appearance: "default",
@@ -45,6 +44,8 @@ class Button extends React.Component<ButtonProps> {
   }
 
   getComponent() {
+    // custom component
+    // href button
     if (this.props.href) return this.props.isDisabled ? StyledSpan : StyledA;
 
     return StyledButton;
@@ -65,7 +66,7 @@ class Button extends React.Component<ButtonProps> {
         ref={this.getButtonRef}
         onClick={isDisabled ? undefined : onClick}
         isSelected={isSelected}
-        {...buttonProps as any}
+        {...buttonProps}
       >
         {children}
       </ButtonComponent>

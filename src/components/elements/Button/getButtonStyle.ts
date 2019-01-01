@@ -1,7 +1,12 @@
 import { css } from "styled-components";
-import { radii } from "../../../common/styleUtils/theme";
+import { ButtonProps } from "./types";
 
-export const getButtonStyle = () => {
+export const getButtonStyle = (props: ButtonProps) => {
+  const { appearance, fluid } = props;
+  // fluid button
+  let width;
+  if (fluid) width = "100%";
+
   return css`
     cursor: pointer;
     outline: 0;
@@ -12,9 +17,9 @@ export const getButtonStyle = () => {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    border: 0.05rem solid;
-    border-radius: ${radii[1]};
-
-    /* custom style */
+    width: ${width};
+    border: ${appearance === "link" || appearance === "subtle"
+      ? "none"
+      : "0.05rem solid"};
   `;
 };

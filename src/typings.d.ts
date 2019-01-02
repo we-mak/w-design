@@ -18,6 +18,8 @@ export interface GlobProps {
   className?: string;
   /** custom id*/
   id?: string;
+  /** Theme props*/
+  theme?: any;
 }
 
 /**

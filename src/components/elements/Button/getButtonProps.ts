@@ -1,16 +1,14 @@
 import { ButtonProps } from "./types";
 
-const getAppearanceProps = (props: ButtonProps) => {
-  const {
-    appearance,
-    size,
-    fluid,
-    className,
-    id,
-    isDisabled,
-    isLoading
-  } = props;
-
+function getAppearanceProps({
+  appearance,
+  size,
+  fluid,
+  className,
+  id,
+  isDisabled,
+  isLoading
+}: ButtonProps) {
   return {
     appearance,
     size,
@@ -20,7 +18,7 @@ const getAppearanceProps = (props: ButtonProps) => {
     disabled: isDisabled,
     isLoading
   };
-};
+}
 
 const getLinkElementProps = (props: ButtonProps) => {
   const { href, target } = props;

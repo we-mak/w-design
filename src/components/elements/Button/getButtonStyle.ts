@@ -1,6 +1,7 @@
 import { css } from "styled-components";
+import { borderRadius } from "styled-system";
 import { ButtonProps } from "./types";
-import { colors } from "../../../common/styleUtils/theme";
+import { colors, radii } from "../../../common/styleUtils/theme";
 import { padding, height } from "../../../common/styleUtils/themed";
 import { getColorFromTheme } from "../../../common/styleUtils/utils";
 import { StyledSpinner } from "../Spinner";
@@ -54,9 +55,12 @@ export function getButtonStyle(props: ButtonProps) {
     border: ${appearance === "link" || appearance === "subtle"
       ? "none"
       : "0.05rem solid"};
+    border-radius: ${radii[2]};
     padding: ${paddingStyle};
     height: ${heightStyle};
 
     ${loadingStyle};
+
+    ${borderRadius};
   `;
 }

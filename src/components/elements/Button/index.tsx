@@ -57,7 +57,7 @@ class Button extends React.Component<ButtonProps> {
   };
 
   render() {
-    const { children, isSelected, isDisabled, onClick } = this.props;
+    const { children, isSelected, isDisabled, onClick, ...others } = this.props;
     const buttonProps = getButtonProps(this as ButtonProps);
     const ButtonComponent: any = this.getComponent();
 
@@ -67,6 +67,7 @@ class Button extends React.Component<ButtonProps> {
         onClick={isDisabled ? undefined : onClick}
         isSelected={isSelected}
         {...buttonProps}
+        {...others} // for custom props
       >
         {children}
       </ButtonComponent>

@@ -56,6 +56,7 @@ export function getButtonStyle(props: ButtonProps) {
       : "0.05rem solid"};
     padding: ${paddingStyle};
     height: ${heightStyle};
-    ${loadingStyle}
+
+    ${loadingStyle};
   `;
 }

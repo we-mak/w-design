@@ -1,18 +1,22 @@
-import * as React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { borderColor } from "styled-system";
 import { spin } from "../../../common/styleUtils/keyframes";
 import theme from "../../../common/styleUtils/theme";
 
-export const StyledSpinner = styled.div`
+interface SpinrProps {
+  large?: boolean;
+  borderColor?: string;
+}
+
+export const StyledSpinner = css`
   color: transparent !important;
   pointer-events: none;
   position: relative;
-  min-height: 0.8rem;
 
   &::after {
     animation: ${spin} 500ms infinite linear;
-    border: 0.1rem solid ${theme.colors["B70"]};
+    border: ${(props: SpinrProps) => (props.large ? `0.14rem` : `0.1rem`)} solid;
+    border-color: ${theme.colors["B70"]};
     /* custom spinner color */
     ${borderColor}
     border-radius: 50%;
@@ -24,26 +28,31 @@ export const StyledSpinner = styled.div`
     top: 50%;
     position: absolute;
     z-index: 1;
-    height: 0.8rem;
-    margin-left: -0.4rem;
-    margin-top: -0.4rem;
-    width: 0.8rem;
   }
+`;
 
-  ${(props: any) =>
-    props.large &&
-    `
+const Spinner = styled.div<SpinrProps>`
+  ${StyledSpinner}
+
+  ${props =>
+    props.large
+      ? `
     min-height: 2rem;
     &::after {
       height: 1.6rem;
       margin-left: -.8rem;
       margin-top: -.8rem;
       width: 1.6rem;
-    }`}
+    }`
+      : `
+      min-height: 0.8rem;
+      &::after {
+        height: 0.8rem;
+        margin-left: -0.4rem;
+        margin-top: -0.4rem;
+        width: 0.8rem;
+      }
+    `}
 `;
-
-const Spinner: React.StatelessComponent<any> = ({ ...props }: any) => (
-  <StyledSpinner {...props} />
-);
 
 export default Spinner;

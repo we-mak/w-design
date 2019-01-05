@@ -11,6 +11,14 @@ A **Mobile First** React UI library build with styled-components
 
 ## Install
 
+If use `npm`
+
+```sh
+npm install --save w-design styled-components
+```
+
+for yarn
+
 `yarn add w-design` or `npm install w-design`
 
 ## Usage guide
@@ -22,54 +30,35 @@ import { Text } from "w-design";
 ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 ```
 
-### Get start
-
-**Note** Guide below is temporary under styleguidist markdown
-
-### Layouts
-
-- [Provider](https://github.com/we-mak/w-design/blob/master/src/components/layout/Provider/README.md)
-- [Container](https://github.com/we-mak/w-design/blob/master/src/components/layout/Container/README.md)
-- [Grid](https://github.com/we-mak/w-design/blob/master/src/components/layout/Grid/README.md)
-- [Hide](https://github.com/we-mak/w-design/blob/master/src/components/layout/Hide/README.md)
-
-### Elements
-
-- [Heading](https://github.com/we-mak/w-design/blob/master/src/components/elements/Heading/README.md)
-- [Button](https://github.com/we-mak/w-design/blob/master/src/components/elements/Button/README.md)
-- [Spinner](https://github.com/we-mak/w-design/blob/master/src/components/elements/Spinner/README.md)
-
-## Support
-
-Modern browser: Chrome, Firefox, Safari, Edge
-
 ## Version 1.0.0 Features
 
 Cover basic components
 
-| Layout          | Elements   | Components    |
-| --------------- | ---------- | ------------- |
-| ✓ ThemeProvider | ✓ Button   | ✖ Nav         |
-| ✓ Container     | ✖ Input    | ✖ Avatar      |
-| ✓ Grid          | ✖ Form     | ✖ Navbar      |
-| ✓ Hide          | ✖ Label    | ✖ Badges      |
-|                 | ✖ Image    | ✖ Arcordion   |
-|                 | ✓ Spinner  | ✖ Breadcrumbs |
-|                 | ✖ Panel    | ✖ Card        |
-|                 | ✖ Table    | ✖ Chip        |
-|                 | ✖ List     | ✖ Menu        |
-|                 | ✖ Divider  | ✖ Modal       |
-|                 | ✓ Heading  | ✖ Pagination  |
-|                 | ✖ Icon     | ✖ Dropdown    |
-|                 | ✖ Progress | ✖ Sidebar     |
-|                 |            | ✖ Steps       |
-|                 |            | ✖ Tab         |
-|                 |            | ✖ Toast       |
-|                 |            | ✖ Tooltip     |
-|                 |            | ✖ Popover     |
-|                 |            | ✖ Comment     |
-
-## [Change log](./CHANGELOG.md)
+| Layout          | Elements         | Components     |
+| --------------- | ---------------- | -------------- |
+| ✓ ThemeProvider | ✓ Button         | ✖ Progress     |
+| ✓ Container     | ✖ Text Input     | ✖ Avatar Group |
+| ✓ Grid          | ✖ Checkbox       | ✖ Navbar       |
+| ✖ Masonry       | ✖ Label          | ✖ Badges       |
+|                 | ✖ Image          | ✖ Arcordion    |
+|                 | ✓ Spinner        | ✖ Breadcrumbs  |
+|                 | ✖ Panel          | ✖ Card         |
+|                 | ✖ Table          | ✖ Chip         |
+|                 | ✖ List           | ✖ Menu         |
+|                 | ✖ Divider        | ✖ Modal        |
+|                 | ✓ Heading        | ✖ Pagination   |
+|                 | ✖ Progress       | ✖ Dropdown     |
+|                 | ✖ Portal         | ✖ Sidebar      |
+|                 | ✖ Avatar         | ✖ Steps        |
+|                 | ✖ Toggle         | ✖ Tabs         |
+|                 | ✖ Text Area      | ✖ Push Message |
+|                 | ✖ Inline message | ✖ Tooltip      |
+|                 |                  | ✖ Popover      |
+|                 |                  | ✖ Comment      |
+|                 |                  | ✖ Select       |
+|                 |                  | ✖ ButtonGroup  |
+|                 |                  | ✖ Input Group  |
+|                 |                  | ✖ Form         |
 
 ## 🐞 Report
 
@@ -81,94 +70,70 @@ Please open Issue to report bugs.
 
 For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
 
-## Development
-
-This package is built with dependencies: `react`, `react-dom`, `styled-component`, `styled-system`
-Props checking is under `TypeScript`
-
-Please check these packages before getting start to contribute.
-
 ### Folders structure
 
-```bash
+```sh
 ├── packages # Build packages
 │   └── **/*
 │
 ├── src
-│   ├── @types/**/*.d.ts
-│   ├── common ## static default variables
-│   ├── components
-│   │   ├── HOC ## Higher order components
-│   │   └── **/* ## Core library component folder
-│   └── utils ## utility functions to helps components
+│   ├── @types/**/*.d.ts ## definite for dependencies package
+│   ├── common ## static default variables, utilitites
+│   └── components ## Core library component folder
+│
 │
 ├── resources
 │   ├── GUI ## UI design system files
-│   ├── img ## Image for docs
+│   └── img ## Image for docs
 │
 ├── CHANGELOG.md ## Change history of every changes of each release.
 ├── README.md ## Guide content
 ├── tslint.json
 ├── tsconfig.json
 ├── jest.config.json
-├── setupTests.js ## test setup config
-├── webpack.config.js ## webpack config
+├── rollup.config.js ## rollup config
 └── package.json ## npm packages config
 ```
 
-#### packages
+### Development
 
-Built packages directory is where our NPM package contains.
+This package is built with dependencies: `styled-system`, `clean-tag`
+Props checking is under `TypeScript`
 
-#### src
+Please check these packages before getting start to contribute.
 
-Develop directory. It contains all sources of our elements, components, HOC...
+Local development is broken into two parts (ideally using two tabs).
 
-### Component design
+```sh
+npm start # runs rollup with watch flag
+```
 
-#### Props
+First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
 
-##### Naming conventions
+npm start # runs rollup with watch flag
+The second part will be running the example/ create-react-app that's linked to the local version of your module.
 
-Prop naming depends on the type of property, it should be clear and easy to understand. Important, standard naming is in English.
-In most case, our props name definition is in Noun to decribe **what** it is, example, for custom html tag definition, could be `customComponent` or `customHTMLTag`.
-Boolean props should be named with verb, example: `isDisabled`, `isSelected`.
+```sh
+# (in another tab)
+cd example
+npm start # runs create-react-app dev server
+```
 
-**Disclaim** Acronym name would be rejected.
+Now, anytime you make a change to your library in src/ or to the example app's example/src, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
 
-##### **type** props
+###Publishing to NPM
 
-The prop types are defined via TypeScript. We should have reusable _"standard"_ global prop types, such as events handler, form controls, link props...
-Standard prop types are located at `src/common/propsTypes.ts`
+`npm publish`
 
-## Contributors
+This builds cjs and es versions of your module to dist/ and then publishes your module to npm.
 
-<ol>
-  <li>
-   <a href="https://github.com/viiiprock" target="_blank">SeanDang</a>
-  </li>
-</ol>
+Make sure that any npm modules you want as peer dependencies are properly marked as peerDependencies in package.json. The rollup config will automatically recognize them as peers and not try to bundle them in your module.
 
-## [License](./LICENSE)
+Deploying to Github Pages
+`npm run deploy`
 
-The MIT License (MIT)
+This creates a production build of the example create-react-app that showcases your library and then runs gh-pages to deploy the resulting bundle.
 
-Copyright (c) 2018 We-mak
+## License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+MIT © [Sean](https://github.com/we-mak)

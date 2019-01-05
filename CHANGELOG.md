@@ -2,13 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-<a name="0.10.0"></a>#[@next v.0.10.0]()
+<a name="0.8.0"></a>#[v.0.8.0]()
 
-### Features
+Migrate all with React Hook
 
-- Input
-- Form
-- Label
+- Add `display` props Container
+- Remove Hide component
 
 <a name="0.7.0"></a>#[v.0.7.0]()
 

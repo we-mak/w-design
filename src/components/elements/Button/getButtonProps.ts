@@ -1,31 +1,31 @@
-import { BtnProps } from "./buttonType";
+import { ButtonProps } from "./types";
 
-const getAppearanceProps = (props: BtnProps) => {
-  const {
-    appearance,
-    elementSize,
-    fluid,
-    className,
-    isDisabled,
-    isLoading
-  } = props;
-
+function getAppearanceProps({
+  appearance,
+  size,
+  fluid,
+  className,
+  id,
+  isDisabled,
+  isLoading
+}: ButtonProps) {
   return {
     appearance,
-    elementSize,
+    size,
     fluid,
     className,
+    id,
     disabled: isDisabled,
     isLoading
   };
-};
+}
 
-const getLinkElementProps = (props: BtnProps) => {
+const getLinkElementProps = (props: ButtonProps) => {
   const { href, target } = props;
   return { href, target };
 };
 
-const getButtonElementProps = (props: BtnProps) => {
+const getButtonElementProps = (props: ButtonProps) => {
   const { ariaHaspopup, ariaExpanded, ariaControls, form, type } = props;
 
   return {
@@ -34,18 +34,31 @@ const getButtonElementProps = (props: BtnProps) => {
     "aria-controls": ariaControls,
     "aria-label": props.ariaLabel,
     form,
-    type,
-    id: props.id
+    type
   };
 };
 
 const getEventProps = (component: any) => {
-  const { onBlur, onFocus } = component, { onClick, tabIndex } = component.props;
+  const {
+    onBlur,
+    onFocus,
+    onClick,
+    onMouseDown,
+    onMouseUp,
+    onMouseEnter,
+    onMouseLeave
+  } = component;
+
+  const { tabIndex } = component.props;
 
   return {
     onBlur,
     onClick,
     onFocus,
+    onMouseDown,
+    onMouseUp,
+    onMouseEnter,
+    onMouseLeave,
     tabIndex
   };
 };

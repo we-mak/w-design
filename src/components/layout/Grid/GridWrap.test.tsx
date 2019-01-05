@@ -1,25 +1,19 @@
 import * as React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 import "jest-styled-components";
 import { GridWrap } from "./GridWrap";
 
 describe("<GridWrap/>", () => {
-  // Render test
-  it("should renders correctly", () => {
-    const wrapper = shallow(<GridWrap />);
-    expect(wrapper).toMatchSnapshot();
+  // Style test
+  it("should have gapless", () => {
+    const container = renderer.create(<GridWrap gapless />).toJSON();
+    expect(container).toHaveStyleRule("margin-left", "0 !important");
+    expect(container).toHaveStyleRule("margin-right", "0 !important");
   });
 
-  // Props test
-  it("should has gapless props", () => {
-    const wrapper = shallow(<GridWrap />);
-    wrapper.setProps({ gapless: true });
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it("should has oneline props", () => {
-    const wrapper = shallow(<GridWrap />);
-    wrapper.setProps({ oneline: true });
-    expect(wrapper).toMatchSnapshot();
+  it("should have online", () => {
+    const container = renderer.create(<GridWrap oneline />).toJSON();
+    expect(container).toHaveStyleRule("flex-wrap", "nowrap !important");
+    expect(container).toHaveStyleRule("overflow-x", "auto !important");
   });
 });

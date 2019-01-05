@@ -1,10 +1,4 @@
-import {
-  flexWrap,
-  flexDirection,
-  alignItems,
-  justifyContent
-} from "styled-system";
-import styled from "../../../utils/styled";
+import styled from "styled-components";
 
 export interface Props {
   gapless?: boolean;
@@ -14,14 +8,9 @@ export interface Props {
 export const GridWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
   margin-left: -0.4rem;
   margin-right: -0.4rem;
-
-  ${flexWrap}
-  ${flexDirection}
-  ${alignItems}
-  ${justifyContent}
+  padding: .4rem;
 
   ${(props: Props) =>
     /* set margin left and right, and child padding to 0*/
@@ -39,6 +28,7 @@ export const GridWrap = styled.div`
     `
       flex-wrap: nowrap !important;
       overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
   `};
 `;
 

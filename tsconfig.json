@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
-    "outDir": "packages",
-    "module": "es2015",
-    "target": "es6",
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es5",
     "lib": ["es5", "es6", "es7", "dom", "esnext.asynciterable"],
     "sourceMap": true,
-    "declaration": true,
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["src", "stories"],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -18,21 +16,15 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "plugins": [{ "name": "tslint-language-service" }]
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "experimentalDecorators": true
   },
-  "exclude": [
-    "node_modules",
-    "packages",
-    "scripts",
-    "acceptance-tests",
-    "webpack.config.js",
-    "jest.config.js",
-    "styleguide.config.js",
-    "jest",
-    "setupTests.ts",
-    "config",
-    "typedoc.js",
-    "coverage",
-    "stories"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
 }

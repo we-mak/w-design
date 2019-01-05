@@ -1,9 +1,9 @@
-import styled from "../../../utils/styled";
-import theme from "../../../common/theme";
+import styled from "styled-components";
+import theme from "../../../common/styleUtils/theme";
 
 const colors = theme.colors;
 
-export const Root = styled.div`
+const Root = styled.div`
   font-family: ${(props: any) => props.theme.fonts};
 
   h1 {
@@ -35,7 +35,7 @@ export const Root = styled.div`
   h4,
   h5,
   h6 {
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.25;
     margin-bottom: 0.5em;
     margin-top: 0;
@@ -45,12 +45,12 @@ export const Root = styled.div`
   h2,
   h3,
   h4 {
-    color: ${colors.N90};
+    color: ${colors.N50};
   }
 
   h5,
   h6 {
-    color: ${colors.N80};
+    color: ${colors.N60};
   }
 
   p {

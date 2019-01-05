@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner/> should renders correctly 1`] = `
+.c0 {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+  min-height: 0.8rem;
+}
+
+.c0::after {
+  -webkit-animation: iECmZH 500ms infinite linear;
+  animation: iECmZH 500ms infinite linear;
+  border: 0.1rem solid #004660;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 0.8rem;
+  margin-left: -0.4rem;
+  margin-top: -0.4rem;
+  width: 0.8rem;
+}
+
+<div
+  className="c0"
+/>
+`;

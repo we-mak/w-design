@@ -143,6 +143,7 @@ export function getButtonStyle(props: any) {
     }
 
     ${loadingStyle};
+
     ${borderRadius};
   `;
 }

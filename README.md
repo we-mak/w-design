@@ -14,7 +14,7 @@ A **Mobile First** React UI library build with styled-components
 If use `npm`
 
 ```sh
-npm install --save w-design
+npm install --save w-design styled-components
 ```
 
 for yarn

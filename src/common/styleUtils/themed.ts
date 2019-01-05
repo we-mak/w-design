@@ -42,10 +42,9 @@ export const bgActive = setColors([B5, B60, O40, R40, G40, B5, B5, T40]);
 export const bordr = setColors([N3, B60, O40, R40, G40, "", "", T40]);
 export const bordrHover = setColors([N4, B50, O30, R30, G30, "", "", T30]);
 export const bordrActive = setColors([B5, B70, O50, R50, G50, "", "", T50]);
-
 // Text
 export const text = setColors([N90, N1, N1, N1, N1, B50, N90, N1]);
-// outline
+// Fake outline
 export const boxShadow = setColors([
   "transparent",
   B5,

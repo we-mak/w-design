@@ -40,60 +40,12 @@ const getLoadingState = (props: ButtonProps) => {
   return;
 };
 
-const getSelected = (props: any) => {
-  const { appearance, isSelected, theme } = props;
-
-  if (isSelected) {
-    if (appearance === "danger")
-      return css`
-        border-color: ${getColor(colors, "R40", theme)};
-        background: ${getColor(colors, "R30", theme)};
-        &:hover,
-        &:focus,
-        &:active {
-          box-shadow: none;
-          border-color: ${getColor(colors, "R40", theme)};
-          background: ${getColor(colors, "R30", theme)};
-        }
-      `;
-
-    if (appearance === "warning")
-      return css`
-        border-color: ${getColor(colors, "O50", theme)};
-        background: ${getColor(colors, "O40", theme)};
-        &:hover,
-        &:focus,
-        &:active {
-          box-shadow: none;
-          border-color: ${getColor(colors, "O50", theme)};
-          background: ${getColor(colors, "O40", theme)};
-        }
-      `;
-
-    return css`
-      background: ${getColor(colors, "B70", theme)};
-      border-color: ${getColor(colors, "B50", theme)};
-      color: ${getColor(colors, "N1", theme)};
-      &:hover,
-      &:focus,
-      &:active {
-        background: ${getColor(colors, "B70", theme)};
-        border-color: ${getColor(colors, "B50", theme)};
-        color: ${getColor(colors, "N1", theme)};
-        outline: none;
-        box-shadow: none;
-      }
-    `;
-  }
-  return;
-};
-
 /**
  * @function getButtonStyle
  * @param props Props from component
  */
 export function getButtonStyle(props: any) {
-  const { appearance, size, fluid, theme } = props;
+  const { appearance, size, fluid, isSelected, theme } = props;
 
   /** Buttonn size style */
   const paddingStyle = getElementSize(padding, size);
@@ -104,14 +56,46 @@ export function getButtonStyle(props: any) {
   if (fluid) width = "100%";
 
   /** Button appearance style*/
-  const bgStyle = getAppearanceProps(appearance, bg);
-  const bgHoverStyle = getAppearanceProps(appearance, bgHover);
-  const bgActiveStyle = getAppearanceProps(appearance, bgActive);
-  const borderStyle = getAppearanceProps(appearance, bordr);
-  const borderHoverStyle = getAppearanceProps(appearance, bordrHover);
-  const borderActiveStyle = getAppearanceProps(appearance, bordrActive);
-  const colorStyle = getAppearanceProps(appearance, text);
-  const boxShadowStyle = getAppearanceProps(appearance, boxShadow);
+  // Default values
+  let bgStyle = getAppearanceProps(appearance, bg);
+  let bgHoverStyle = getAppearanceProps(appearance, bgHover);
+  let bgActiveStyle = getAppearanceProps(appearance, bgActive);
+  let borderStyle = getAppearanceProps(appearance, bordr);
+  let borderHoverStyle = getAppearanceProps(appearance, bordrHover);
+  let borderActiveStyle = getAppearanceProps(appearance, bordrActive);
+  let colorStyle = getAppearanceProps(appearance, text);
+  // Selected values
+  if (isSelected) {
+    bgStyle = getColor(colors, "B70", theme);
+    bgHoverStyle = getColor(colors, "B70", theme);
+    bgActiveStyle = getColor(colors, "B70", theme);
+    borderStyle = getColor(colors, "B50", theme);
+    borderHoverStyle = getColor(colors, "B50", theme);
+    borderActiveStyle = getColor(colors, "B50", theme);
+    colorStyle = getColor(colors, "N1", theme);
+
+    if (appearance === "danger") {
+      bgStyle = getColor(colors, "R30", theme);
+      bgHoverStyle = getColor(colors, "R30", theme);
+      bgActiveStyle = getColor(colors, "R30", theme);
+      borderStyle = getColor(colors, "R40", theme);
+      borderHoverStyle = getColor(colors, "R40", theme);
+      borderActiveStyle = getColor(colors, "R40", theme);
+    }
+
+    if (appearance === "warning") {
+      bgStyle = getColor(colors, "O40", theme);
+      bgHoverStyle = getColor(colors, "O40", theme);
+      bgActiveStyle = getColor(colors, "O40", theme);
+      borderStyle = getColor(colors, "O50", theme);
+      borderHoverStyle = getColor(colors, "O50", theme);
+      borderActiveStyle = getColor(colors, "O50", theme);
+    }
+  }
+
+  const boxShadowStyle = isSelected
+    ? "transparent"
+    : getAppearanceProps(appearance, boxShadow);
 
   // Apply loading style
   const loadingStyle = getLoadingState(props);
@@ -126,7 +110,6 @@ export function getButtonStyle(props: any) {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    box-shadow: 0 0 0 0.1rem var(--box-shadow-color);
     width: ${width};
     border: ${appearance === "link" || appearance === "subtle"
       ? "none"
@@ -158,7 +141,6 @@ export function getButtonStyle(props: any) {
       background: ${getColor(colors, "N4", theme)} !important;
       border: none;
     }
-    ${getSelected(props)};
 
     ${loadingStyle};
     ${borderRadius};

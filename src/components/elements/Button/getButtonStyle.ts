@@ -2,13 +2,35 @@ import { css } from "styled-components";
 import { borderRadius } from "styled-system";
 import { ButtonProps } from "./types";
 import { colors, radii } from "../../../common/styleUtils/theme";
-import { padding, height } from "../../../common/styleUtils/themed";
 import { getColorFromTheme } from "../../../common/styleUtils/utils";
 import { StyledSpinner } from "../Spinner";
+import {
+  padding,
+  height,
+  bg,
+  bgActiveFocus,
+  bgHover,
+  bordr,
+  bordrActiveFocus,
+  bordrHover
+} from "../../../common/styleUtils/themed";
 
-function getSize(styleProperty: object, size?: "sm" | "md" | "lg") {
-  return styleProperty[size || "md"];
-}
+/**
+ * getAppearanceProps
+ * @param appearance appearance style
+ * @param colors default initial colors
+ * @param themeColors get colors from provided theme props
+ * @returns style applies to each button appearance
+ */
+const getAppearanceProps = (
+  appearance: string,
+  colors: object,
+  themeColors?: object
+) => (themeColors ? themeColors[appearance] : colors[appearance]);
+
+//
+const getSize = (styleProperty: object, size?: "sm" | "md" | "lg") =>
+  styleProperty[size || "md"];
 
 /** Apply style to each appearance when loading props is true */
 const getLoadingState = (props: ButtonProps) => {
@@ -30,13 +52,18 @@ const getLoadingState = (props: ButtonProps) => {
 };
 
 export function getButtonStyle(props: ButtonProps) {
-  const { appearance, size, fluid } = props;
+  const { appearance, size, fluid, theme } = props;
+
   // Set button size
   const paddingStyle = getSize(padding, size);
   const heightStyle = getSize(height, size);
   // fluid button
   let width;
   if (fluid) width = "100%";
+
+  /** Button appearance style*/
+  // const background = getAppearanceProps(appearance, bg, )
+  console.log(bg);
 
   // Apply loading style
   const loadingStyle = getLoadingState(props);
@@ -55,7 +82,7 @@ export function getButtonStyle(props: ButtonProps) {
     border: ${appearance === "link" || appearance === "subtle"
       ? "none"
       : "0.05rem solid"};
-    border-radius: ${radii[2]};
+    border-radius: ${theme.radii ? theme.radii[2] : radii[2]};
     padding: ${paddingStyle};
     height: ${heightStyle};
 

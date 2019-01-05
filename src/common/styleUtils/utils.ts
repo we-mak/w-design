@@ -29,22 +29,3 @@ export const hex2Rgba = (hex: string, alpha?: number): string => {
  */
 export const getColorFromTheme = (colors: object, key: string, theme?: any) =>
   theme.colors ? theme.colors[key] : colors[key];
-
-/**
- * Set colors to appearance types
- * @param colors colors array
- * @return appearance key - color value pairs object
- {
-   'default': '#4a4a4a',
-   'primary': '#fff'
- }
- */
-export const setColors = (colors: Array<string>, appearanceKeys: string[]) => {
-  let result = {};
-
-  for (let i in appearanceKeys) {
-    result[appearanceKeys[i]] = colors[i];
-  }
-
-  return result;
-};

@@ -7,9 +7,10 @@ class App extends Component {
       <>
         <Provider>
           <Container p={2}>
-            <Button borderRadius={4}>Button</Button>
+            <Button>Button</Button>
           </Container>
         </Provider>
+        <Button>Button</Button>
       </>
     );
   }

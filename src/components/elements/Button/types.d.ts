@@ -14,6 +14,16 @@ export interface ButtonProps
     ActionProps,
     SyntheticEventProps,
     MouseEventProps {
+  /** button apperance type */
+  appearance:
+    | "default"
+    | "primary"
+    | "danger"
+    | "warning"
+    | "success"
+    | "subtle"
+    | "link"
+    | "help";
   /** custom component*/
   customComponent?: string;
   /** html button aria-controls*/
@@ -24,16 +34,6 @@ export interface ButtonProps
   ariaLabel?: string;
   /** html button aria-haspopup*/
   ariaHaspopup?: boolean;
-  /** button apperance type */
-  appearance?:
-    | "default"
-    | "primary"
-    | "danger"
-    | "warning"
-    | "success"
-    | "subtle"
-    | "link"
-    | "help";
   /** button ref*/
   buttonRef?: (ref: HTMLElement) => {};
   /** button type attribute*/

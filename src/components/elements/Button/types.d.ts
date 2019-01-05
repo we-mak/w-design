@@ -15,7 +15,7 @@ export interface ButtonProps
     SyntheticEventProps,
     MouseEventProps {
   /** button apperance type */
-  appearance:
+  appearance?:
     | "default"
     | "primary"
     | "danger"

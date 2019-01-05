@@ -1,6 +1,6 @@
 import { colors } from "./theme";
-
-// theme colors
+import { setColors } from "./utils";
+// default theme colors
 const {
   N1,
   N3,
@@ -32,34 +32,6 @@ const {
   T50,
   WHITE
 } = colors;
-
-/**
- * Set colors to appearance types
- * @param colors colors array
- * @return appearance key - color value pairs object
- {
-   'default': '#4a4a4a',
-   'primary': '#fff'
- }
- */
-export const setColors = (colors: Array<string>) => {
-  let result = {};
-
-  const appearanceKeys = [
-    "default",
-    "primary",
-    "warning",
-    "danger",
-    "success",
-    "link",
-    "subtle",
-    "help"
-  ];
-
-  for (let i in appearanceKeys) result[appearanceKeys[i]] = colors[i];
-
-  return result;
-};
 
 // Background colors
 export const bg = setColors([N3, B50, O30, R30, G30, WHITE, WHITE, T30]);

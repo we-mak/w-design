@@ -8,9 +8,17 @@ class App extends Component {
         <Provider>
           <Container p={2}>
             <Button>Button</Button>
+            <Button appearance="primary">Button</Button>
+            <Button appearance="warning">Button</Button>
+            <Button appearance="danger">Button</Button>
+            <Button appearance="success">Button</Button>
+            <Button appearance="link">Button</Button>
+            <Button appearance="subtle">Button</Button>
+            <Button appearance="help">Button</Button>
+            <Button size="sm">Button</Button>
+            <Button size="lg">Button</Button>
           </Container>
         </Provider>
-        <Button>Button</Button>
       </>
     );
   }

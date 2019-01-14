@@ -32,7 +32,7 @@ export const hex2Rgba = (hex: string, alpha?: number): string => {
  * @param theme color from values
  * @return color value
  */
-export const getColor = (colors: object, key: string, theme?: any) =>
+export const getColor = (key: string, colors: object, theme?: any) =>
   theme.colors ? theme.colors[key] : colors[key];
 
 /**
@@ -42,7 +42,7 @@ export const getColor = (colors: object, key: string, theme?: any) =>
  * @return appearance key - color value pairs object
  * @example { 'default': '#4a4a4a', 'primary': '#fff' }
  */
-export const setColors = (colors: Array<string>) => {
+export const setColor = (colors: Array<string>, theme?: any) => {
   let result = {};
 
   const appearanceKeys = [
@@ -56,31 +56,25 @@ export const setColors = (colors: Array<string>) => {
     "help"
   ];
 
-  for (let i in appearanceKeys) result[appearanceKeys[i]] = colors[i];
+  for (let i in appearanceKeys) {
+    result[appearanceKeys[i]] = theme ? theme.colors[i] : colors[i];
+  }
 
   return result;
 };
 
 /**
- * @function getAppearanceProps
+ * @function getAppearanceColor
  * @param appearance appearance style
  * @param colors default initial colors
- * @param themeColors get colors from provided theme props
- * @returns style applies to each button appearance
+ * @param theme provided theme props
+ * @returns color applies to each button appearance
  */
-export const getAppearanceProps = (
-  appearance: string,
-  colors: object,
-  themeColors?: object
-) => {
-  return themeColors ? themeColors[appearance] : colors[appearance];
-};
+export const getAppearanceColor = (appearance: string, colors: object) => colors[appearance];
 
 //
-export const getElementSize = (
-  styleProperty: object,
-  size?: "sm" | "md" | "lg"
-) => styleProperty[size || "md"];
+export const getElementSize = (styleProperty: object, size?: "sm" | "md" | "lg") =>
+  styleProperty[size || "md"];
 
 /**
  * @function getFontSize

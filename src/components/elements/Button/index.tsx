@@ -6,17 +6,21 @@ import { getButtonStyle } from "./getButtonStyle";
 // import { CustomTag } from "../../../common/utils/customTag";
 
 const StyledButton = styled.button`
-  ${getButtonStyle}
+  ${getButtonStyle};
 `;
 
 const StyledA = styled.a`
   a& {
-    ${getButtonStyle}
+    ${getButtonStyle};
+    line-height: initial;
+    &:hover {
+      text-decoration: none;
+    }
   }
 `;
 
 const StyledSpan = styled.span`
-  ${getButtonStyle}
+  ${getButtonStyle};
 `;
 
 // const StyledCustomComponent = styled(CustomTag)`

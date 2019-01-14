@@ -7,28 +7,14 @@ class App extends Component {
       <>
         <Provider>
           <Container p={2}>
-            <Button isSelected>Button</Button>{" "}
-            <Button isSelected appearance="primary">
-              Button
-            </Button>{" "}
-            <Button isSelected appearance="warning">
-              Button
-            </Button>{" "}
-            <Button isSelected appearance="danger">
-              Button
-            </Button>{" "}
-            <Button isSelected appearance="success">
-              Button
-            </Button>{" "}
-            <Button isSelected appearance="link">
-              Button
-            </Button>{" "}
-            <Button isSelected appearance="subtle">
-              Button
-            </Button>{" "}
-            <Button isSelected appearance="help">
-              Button
-            </Button>
+            <Button >Button</Button>{" "}
+            {/* <Button appearance="primary">Button</Button>{" "}
+            <Button appearance="warning">Button</Button>{" "}
+            <Button appearance="danger">Button</Button>{" "}
+            <Button appearance="success">Button</Button>{" "}
+            <Button appearance="link">Button</Button>{" "}
+            <Button appearance="subtle">Button</Button>{" "}
+            <Button appearance="help">Button</Button> */}
           </Container>
         </Provider>
       </>

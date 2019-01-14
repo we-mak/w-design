@@ -37,7 +37,7 @@ export interface ButtonProps
   /** button ref*/
   buttonRef?: (ref: HTMLElement) => {};
   /** button type attribute*/
-  type?: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "reset" | undefined;
   /** Name property of a linked form that the button submits when clicked. */
   form?: string;
   /** selected button */

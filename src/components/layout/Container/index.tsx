@@ -1,21 +1,22 @@
-import * as React from "react";
-import { ContainerWrap } from "./ContainerWrap";
-import { GlobProps } from "../../../typings";
-
-export interface Props extends GlobProps {
-  children?: React.ReactChild;
-}
-
 /**
  * Container
  *
  * Wrapper layout component contains columns layout
  */
-const Container: React.StatelessComponent<Props> = props => (
-  <ContainerWrap className={props.className} id={props.id} {...props}>
-    {props.children}
-  </ContainerWrap>
-);
+import styled from "styled-components";
+import Tag from "clean-tag";
+import { color, space, display, maxWidth, minWidth } from "styled-system";
+
+const Container = styled(Tag)`
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  ${color};
+  ${space};
+  ${display};
+  ${maxWidth};
+  ${minWidth};
+`;
 
 Container.displayName = "Container";
 

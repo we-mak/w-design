@@ -26,11 +26,12 @@
   "keywords": [
     "styled-system",
     "styled-component",
-    "react ui library"
+    "react UI library",
+    "react UI typescript"
   ],
   "dependencies": {
     "clean-tag": "^2.0.2",
-    "styled-system": "^3.1.11"
+    "styled-system": "^3.2.1"
   },
   "devDependencies": {
     "@svgr/rollup": "^4.1.0",
@@ -38,8 +39,8 @@
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "@types/react-test-renderer": "^16.0.3",
-    "@types/styled-components": "^4.1.4",
-    "@types/styled-system": "^3.0.9",
+    "@types/styled-components": "^4.1.6",
+    "@types/styled-system": "^3.1.2",
     "babel-core": "^6.26.3",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-runtime": "^6.26.0",

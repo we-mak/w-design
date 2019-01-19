@@ -4,11 +4,11 @@ import defaultTheme from "../../../common/styleUtils/theme";
 import { resetCSS } from "./resetCSS";
 import Root from "./Root";
 
-export interface Props extends React.HTMLProps<HTMLDivElement> {
+interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
   theme?: {};
 }
 
-function Provider(p: Props) {
+function Provider(p: ThemeProps) {
   const { theme = {}, ...props } = p;
 
   React.useEffect(() => {

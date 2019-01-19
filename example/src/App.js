@@ -7,7 +7,7 @@ class App extends Component {
       <>
         <Provider>
           <Container p={2}>
-            <Button >Button</Button>{" "}
+            <Button>Button</Button>{" "}
             {/* <Button appearance="primary">Button</Button>{" "}
             <Button appearance="warning">Button</Button>{" "}
             <Button appearance="danger">Button</Button>{" "}

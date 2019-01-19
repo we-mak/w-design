@@ -1,5 +1,4 @@
 import { css } from "styled-components";
-import { borderRadius } from "styled-system";
 import { ButtonProps } from "./types";
 import { colors, radii, fontSizes } from "../../../common/styleUtils/theme";
 import {
@@ -152,7 +151,5 @@ export function getButtonStyle(props: any) {
     }
 
     ${loadingStyle};
-
-    ${borderRadius};
   `;
 }

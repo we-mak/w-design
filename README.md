@@ -28,7 +28,7 @@ for yarn
 Simple example
 
 ```js
-import { Text } from "w-design";
+import { Container } from "w-design";
 ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 ```
 

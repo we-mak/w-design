@@ -3,11 +3,13 @@
  <h1>w-design</h1>
 </div>
 
-A **Mobile First** React UI library build with styled-components
+A React UI library build with styled-components
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
+
+**WORK IS IN DEVELOPMENT**
 
 ## Install
 
@@ -34,31 +36,31 @@ ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
 
 Cover basic components
 
-| Layout          | Elements         | Components     |
-| --------------- | ---------------- | -------------- |
-| ✓ ThemeProvider | ✓ Button         | ✖ Progress     |
-| ✓ Container     | ✖ Text Input     | ✖ Avatar Group |
-| ✓ Grid          | ✖ Checkbox       | ✖ Navbar       |
-| ✖ Masonry       | ✖ Label          | ✖ Badges       |
-|                 | ✖ Image          | ✖ Arcordion    |
-|                 | ✓ Spinner        | ✖ Breadcrumbs  |
-|                 | ✖ Panel          | ✖ Card         |
-|                 | ✖ Table          | ✖ Chip         |
-|                 | ✖ List           | ✖ Menu         |
-|                 | ✖ Divider        | ✖ Modal        |
-|                 | ✓ Heading        | ✖ Pagination   |
-|                 | ✖ Progress       | ✖ Dropdown     |
-|                 | ✖ Portal         | ✖ Sidebar      |
-|                 | ✖ Avatar         | ✖ Steps        |
-|                 | ✖ Toggle         | ✖ Tabs         |
-|                 | ✖ Text Area      | ✖ Push Message |
-|                 | ✖ Inline message | ✖ Tooltip      |
-|                 |                  | ✖ Popover      |
-|                 |                  | ✖ Comment      |
-|                 |                  | ✖ Select       |
-|                 |                  | ✖ ButtonGroup  |
-|                 |                  | ✖ Input Group  |
-|                 |                  | ✖ Form         |
+| Layout          | Elements               | Components       |
+| --------------- | ---------------------- | ---------------- |
+| ✓ ThemeProvider | ✖ Button (in progress) | ✖ Progress Steps |
+| ✓ Container     | ✖ Text Input           | ✖ Avatar Group   |
+| ✓ Grid          | ✖ Checkbox             | ✖ Navbar         |
+| ✖ Masonry       | ✖ Label                | ✖ Badges         |
+|                 | ✖ Image                | ✖ Arcordion      |
+|                 | ✓ Spinner              | ✖ Breadcrumbs    |
+|                 | ✖ Panel                | ✖ Card           |
+|                 | ✖ Table                | ✖ Chip           |
+|                 | ✖ List                 | ✖ Menu           |
+|                 | ✖ Divider              | ✖ Modal          |
+|                 | ✓ Heading              | ✖ Pagination     |
+|                 | ✖ Progress Loader      | ✖ Dropdown       |
+|                 | ✖ Portal               | ✖ Sidebar        |
+|                 | ✖ Avatar               | ✖ Steps          |
+|                 | ✖ Toggle               | ✖ Tabs           |
+|                 | ✖ Text Area            | ✖ Push Message   |
+|                 | ✖ Inline message       | ✖ Tooltip        |
+|                 |                        | ✖ Popover        |
+|                 |                        | ✖ Comment        |
+|                 |                        | ✖ Select         |
+|                 |                        | ✖ ButtonGroup    |
+|                 |                        | ✖ Input Group    |
+|                 |                        | ✖ Form           |
 
 ## 🐞 Report
 

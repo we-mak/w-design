@@ -1,7 +1,7 @@
 {
   "name": "w-design",
-  "version": "0.8.0",
-  "description": "A minimal React UI library build with styled-components",
+  "version": "0.8.0-alpha",
+  "description": "A React UI library build with styled-components",
   "author": "viiiprock",
   "license": "MIT",
   "repository": "we-mak/w-design",

@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "link:../node_modules/react",
-    "react-dom": "^16.7.0-alpha.2",
+    "react-dom": "^16.8.0-alpha.1",
     "react-scripts": "2.1.2",
     "w-design": "link:.."
   },

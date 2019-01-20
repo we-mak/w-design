@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export interface Props {
+export interface GridWrapProps {
   gapless?: boolean;
   oneline?: boolean;
 }
@@ -10,9 +10,9 @@ export const GridWrap = styled.div`
   flex-wrap: wrap;
   margin-left: -0.4rem;
   margin-right: -0.4rem;
-  padding: .4rem;
+  padding: 0.4rem;
 
-  ${(props: Props) =>
+  ${(props: GridWrapProps) =>
     /* set margin left and right, and child padding to 0*/
     props.gapless &&
     ` margin-left: 0 !important;
@@ -23,7 +23,7 @@ export const GridWrap = styled.div`
       }
   `};
 
-  ${(props: Props) =>
+  ${(props: GridWrapProps) =>
     props.oneline &&
     `
       flex-wrap: nowrap !important;

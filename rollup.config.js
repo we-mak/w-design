@@ -1,4 +1,4 @@
-import typescript from "rollup-plugin-typescript3";
+import typescript from "rollup-plugin-typescript2";
 import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
 import url from "rollup-plugin-url";
@@ -33,16 +33,13 @@ export default {
     resolve(),
     typescript({
       rollupCommonJSResolveHack: true,
-      clean: true
+      clean: true,
+      declaration: true
     }),
     commonjs({
       include: "node_modules/**",
       namedExports: {
-        "node_modules/react-is/index.js": [
-          "isElement",
-          "isValidElementType",
-          "ForwardRef"
-        ],
+        "node_modules/react-is/index.js": ["isElement", "isValidElementType", "ForwardRef"],
         "node_modules/react/index.js": [
           "cloneElement",
           "createContext",

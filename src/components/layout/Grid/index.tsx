@@ -3,11 +3,11 @@ import { Column } from "./Column";
 import { GridWrap } from "./GridWrap";
 import { GlobProps } from "../../../typings";
 
-interface Props extends GlobProps {
+interface GridProps extends GlobProps {
   children?: React.ReactChild;
 }
 
-class Grid extends React.PureComponent<Props> {
+class Grid extends React.PureComponent<GridProps> {
   static Column = Column;
 
   render() {
@@ -16,11 +16,7 @@ class Grid extends React.PureComponent<Props> {
     );
 
     return (
-      <GridWrap
-        className={this.props.className}
-        id={this.props.id}
-        {...this.props}
-      >
+      <GridWrap className={this.props.className} id={this.props.id} {...this.props}>
         {children}
       </GridWrap>
     );

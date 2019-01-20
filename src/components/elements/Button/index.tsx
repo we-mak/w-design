@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { ButtonProps } from "./types";
 import { getButtonProps } from "./getButtonProps";
 import { getButtonStyle } from "./getButtonStyle";
-// import { CustomTag } from "../../../common/utils/customTag";
 
 const StyledButton = styled.button`
   ${getButtonStyle};
@@ -22,10 +21,6 @@ const StyledA = styled.a`
 const StyledSpan = styled.span`
   ${getButtonStyle};
 `;
-
-// const StyledCustomComponent = styled(CustomTag)`
-//   ${getButtonStyle}
-// `;
 
 class Button extends React.Component<ButtonProps> {
   button!: HTMLElement | null;

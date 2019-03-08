@@ -2,6 +2,7 @@
 export { default as Provider } from "./components/layout/Provider";
 export { default as Container } from "./components/layout/Container";
 export { default as Flexbox } from "./components/layout/Flexbox";
+export { default as DisplayElement } from "./components/layout/DisplayElement";
 // Elements
 export { default as Spinner } from "./components/elements/Spinner";
 export { default as Heading } from "./components/elements/Heading";

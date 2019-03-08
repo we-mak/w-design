@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import { Provider, Container } from "w-design";
+import { Provider, Container, Flexbox } from "w-design";
 
 class App extends Component {
   render() {
     return (
       <>
         <Provider>
-          <Container p={2}>Content</Container>
+          <Container>
+            <Flexbox>
+              <Flexbox.Column width={1 / 4}>Sidebar</Flexbox.Column>
+              <Flexbox.Column width={3 / 4}>Main</Flexbox.Column>
+            </Flexbox>
+          </Container>
         </Provider>
       </>
     );

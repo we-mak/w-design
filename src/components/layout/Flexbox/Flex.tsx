@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-export interface GridWrapProps {
+export interface FlexProps {
   gapless?: boolean;
   oneline?: boolean;
 }
 
-export const GridWrap = styled.div`
+export const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-left: -0.4rem;
   margin-right: -0.4rem;
   padding: 0.4rem;
 
-  ${(props: GridWrapProps) =>
+  ${(props: FlexProps) =>
     /* set margin left and right, and child padding to 0*/
     props.gapless &&
     ` margin-left: 0 !important;
@@ -23,7 +23,7 @@ export const GridWrap = styled.div`
       }
   `};
 
-  ${(props: GridWrapProps) =>
+  ${(props: FlexProps) =>
     props.oneline &&
     `
       flex-wrap: nowrap !important;
@@ -32,4 +32,4 @@ export const GridWrap = styled.div`
   `};
 `;
 
-GridWrap.displayName = "GridWrap";
+Flex.displayName = "Flex";

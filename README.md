@@ -40,7 +40,7 @@ Cover basic components
 | --------------- | ---------------------- | ---------------- |
 | ✓ ThemeProvider | ✖ Button (in progress) | ✖ Progress Steps |
 | ✓ Container     | ✖ Text Input           | ✖ Avatar Group   |
-| ✓ Grid          | ✖ Checkbox             | ✖ Navbar         |
+| ✓ Flexbox          | ✖ Checkbox             | ✖ Navbar         |
 | ✖ Masonry       | ✖ Label                | ✖ Badges         |
 |                 | ✖ Image                | ✖ Arcordion      |
 |                 | ✓ Spinner              | ✖ Breadcrumbs    |

@@ -14,20 +14,20 @@ declare module "*.svg" {
  * Shared to most of components
  */
 export interface GlobProps {
+  /** Theme props*/
+  theme?: any;
   /** custom className*/
   className?: string;
   /** custom id*/
   id?: string;
-  /** Theme props*/
-  theme?: any;
 }
 
 /**
  * Common event for button or item
  */
 export interface SyntheticEventProps {
-  onBlur?: (e: React.SyntheticEvent<HTMLElement>) => void;
   onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
+  onBlur?: (e: React.SyntheticEvent<HTMLElement>) => void;
   onFocus?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }
 
@@ -66,9 +66,10 @@ export interface InputControlProps {
   defaultValue?: string;
   /** Value of the input, controlled usage. */
   value?: string;
+  placeholder?: string;
   /** Change event handler. Use `event.target.value` for new value. */
-  onChange?: (e: React.FormEventHandler<HTMLInputElement>) => void;
-  onInput?: (e: React.FormEventHandler<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onInput?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
 /**
@@ -76,9 +77,9 @@ export interface InputControlProps {
  */
 export interface ActionProps {
   /** left icon*/
-  iconBefore?: string | JSX.Element;
+  iconBefore?: string;
   /** right icon*/
-  iconAfter?: string | JSX.Element;
+  iconAfter?: string;
   /** icon is the only child*/
   iconOnly?: boolean;
   /** loading state*/

@@ -1,14 +1,14 @@
 import * as React from "react";
 import { render } from "react-testing-library";
-import Grid from "./index";
+import Flexbox from "./index";
 
-describe("<Grid/>", () => {
+describe("<Flex/>", () => {
   // Render test
   it("should renders correctly", () => {
     const { container } = render(
-      <Grid>
-        <Grid.Column />
-      </Grid>
+      <Flexbox>
+        <Flexbox.Column />
+      </Flexbox>
     );
     expect(container).toMatchSnapshot();
   });

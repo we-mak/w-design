@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "react": "link:../node_modules/react",
-    "react-dom": "^16.8.0-alpha.1",
-    "react-scripts": "2.1.2",
+    "react-dom": "^16.8.4",
+    "react-scripts": "^2.1.8",
     "w-design": "link:.."
   },
   "scripts": {

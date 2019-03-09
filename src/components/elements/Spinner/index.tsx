@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 import { borderColor } from "styled-system";
 import { spin } from "../../../common/styleUtils/keyframes";
-import theme from "../../../common/styleUtils/theme";
 
 interface SpinnerProps {
   large?: boolean;
@@ -16,7 +15,7 @@ export const StyledSpinner = css`
   &::after {
     animation: ${spin} 500ms infinite linear;
     border: ${(props: SpinnerProps) => (props.large ? `0.14rem` : `0.1rem`)} solid;
-    border-color: ${theme.colors["B70"]};
+    border-color: ${(props: any) => props.theme.colors["B70"]};
     /* custom spinner color */
     ${borderColor}
     border-radius: 50%;

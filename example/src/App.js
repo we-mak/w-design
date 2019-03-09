@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Provider, Container, Flexbox } from "w-design";
+import { Provider, Container, Flexbox, Spinner, Typo } from "w-design";
 
 class App extends Component {
   render() {
@@ -8,8 +8,15 @@ class App extends Component {
         <Provider>
           <Container>
             <Flexbox>
-              <Flexbox.Column width={1 / 4}>Sidebar</Flexbox.Column>
-              <Flexbox.Column width={3 / 4}>Main</Flexbox.Column>
+              <Flexbox.Column width={1 / 4}>
+                Sidebar
+                <Spinner />
+              </Flexbox.Column>
+              <Flexbox.Column width={3 / 4}>
+                <Typo appearance="h1" tag="div">
+                  Hello
+                </Typo>
+              </Flexbox.Column>
             </Flexbox>
           </Container>
         </Provider>

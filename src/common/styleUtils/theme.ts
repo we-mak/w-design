@@ -1,12 +1,13 @@
 import { hex2Rgba } from "./utils";
 import { colors } from "./colors";
 
-export const fonts =
-  '-apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", system-ui, sans-serif';
+export const fonts = {
+  normal: "Helvetica, Arial, sans-serif",
+  medium: "Helvetica, Arial, sans-serif",
+  demiBold: "Helvetica, Arial, sans-serif"
+};
 
-export const fontSizes = [0.7, 0.8, 0.9, 1, 1.2, 1.4, 1.6, 1.8, 2].map(
-  n => `${n}rem`
-);
+export const fontSizes = [0.7, 0.8, 0.9, 1, 1.2, 1.4, 1.6, 1.8, 2].map(n => `${n}rem`);
 
 export const fontWeights = {
   normal: 400,

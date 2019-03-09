@@ -4,7 +4,7 @@ import theme from "../../../common/styleUtils/theme";
 const colors = theme.colors;
 
 const Root = styled.div`
-  font-family: ${(props: any) => props.theme.fonts};
+  font-family: ${(props: any) => props.theme.fonts.normal};
 
   h1 {
     font-size: 2rem;

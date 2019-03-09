@@ -62,9 +62,7 @@ exports[`<Heading/> should renders correctly 1`] = `
 }
 
 .c0 {
-  font-family: normal:Helvetica,Arial,sans-serif;
-  medium: Helvetica,Arial,sans-serif;
-  demi-bold: Helvetica,Arial,sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 .c0 h1 {

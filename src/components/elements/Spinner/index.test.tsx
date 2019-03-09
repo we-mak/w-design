@@ -17,8 +17,7 @@ describe("<Spinner/>", () => {
     expect(container).toMatchSnapshot();
   });
 
-  // Style test
-  it("should have large style spinner", () => {
+  it("should renders large sizecorrectly", () => {
     const container = renderer
       .create(
         <Provider>
@@ -26,6 +25,18 @@ describe("<Spinner/>", () => {
         </Provider>
       )
       .toJSON();
-    expect(container).toHaveStyleRule("min-height", "2rem");
+    expect(container).toMatchSnapshot();
   });
+
+  // Style test
+  // it("should have large style spinner", () => {
+  //   const container = renderer
+  //     .create(
+  //       <Provider>
+  //         <Spinner large />
+  //       </Provider>
+  //     )
+  //     .toJSON();
+  //   expect(container).toHaveStyleRule("min-height", "2rem");
+  // });
 });

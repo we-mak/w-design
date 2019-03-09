@@ -132,7 +132,9 @@ exports[`<Provider/> renders with custom theme 1`] = `
 
 exports[`<Provider/> should renders correctly 1`] = `
 .c0 {
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica,"Helvetica Neue",system-ui,sans-serif;
+  font-family: normal:Helvetica,Arial,sans-serif;
+  medium: Helvetica,Arial,sans-serif;
+  demi-bold: Helvetica,Arial,sans-serif;
 }
 
 .c0 h1 {

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { color } from "styled-system";
 import { TypoProps } from "./types";
-import { CustomTag } from "../../../index";
+import CustomTag from "../CustomTag";
 
 const WTypo = ({ tag, appearance, children, ...rest }: TypoProps) => (
   <CustomTag customHTMLtag={tag ? tag : appearance} {...rest}>

@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 
 - Force to wrap everything under `Provider`
 - Changed `Grid` to `Flexbox` to avoid confusing naming.
+- Changed `Button` to Hook component
 
 ---
 

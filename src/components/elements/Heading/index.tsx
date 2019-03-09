@@ -3,61 +3,56 @@ import styled, { css } from "styled-components";
 import { fontWeight, fontSize, color } from "styled-system";
 import { CustomTag } from "../../../common/utils/customTag";
 import { GlobProps } from "../../../typings";
-import {
-  colors,
-  fontWeights,
-  fontSizes
-} from "../../../common/styleUtils/theme";
 
 const BaseStyle = css`
   display: block;
   line-height: 1.25;
   margin-bottom: 0.5em;
   margin-top: 0;
-  font-weight: ${fontWeights["bold"]};
-  color: ${colors["N50"]};
+  font-weight: ${(props: any) => props.theme.fontWeights["bold"]};
+  color: ${props => props.theme.colors["N50"]};
   /* Custom style*/
   ${color}
   ${fontWeight}
 `;
 
 const H1 = styled(CustomTag)`
-  font-size: ${fontSizes[8]};
+  font-size: ${props => props.theme.fontSizes[8]};
   ${BaseStyle}
   ${fontSize}
 `;
 H1.displayName = "H1";
 
 const H2 = styled(CustomTag)`
-  font-size: ${fontSizes[6]};
+  font-size: ${props => props.theme.fontSizes[6]};
   ${BaseStyle}
   ${fontSize}
 `;
 H2.displayName = "H2";
 
 const H3 = styled(CustomTag)`
-  font-size: ${fontSizes[5]};
+  font-size: ${props => props.theme.fontSizes[5]};
   ${BaseStyle}
   ${fontSize}
 `;
 H3.displayName = "H3";
 
 const H4 = styled(CustomTag)`
-  font-size: ${fontSizes[4]};
+  font-size: ${props => props.theme.fontSizes[4]};
   ${BaseStyle}
   ${fontSize}
 `;
 H4.displayName = "H4";
 
 const H5 = styled(CustomTag)`
-  font-size: ${fontSizes[3]};
+  font-size: ${props => props.theme.fontSizes[3]};
   ${BaseStyle}
   ${fontSize}
 `;
 H5.displayName = "H5";
 
 const H6 = styled(CustomTag)`
-  font-size: ${fontSizes[2]};
+  font-size: ${props => props.theme.fontSizes[2]};
   ${BaseStyle}
   ${fontSize}
 `;

@@ -6,16 +6,17 @@ All notable changes to this project will be documented in this file.
 
 ### Feature
 
-- Add **Typo**: simple heading component
-- Add **DisplayElement**: repsonsive hide and show component
-- Add **Navbar**: Navigation bar
-- Add **Icon**: Icon build on top of Fontawesome fonts
+- **Typo**: simple heading component
+- **DisplayElement**: repsonsive hide and show component
+- **Navbar**: Navigation bar
+- **Icon**: Icon build on top of Fontawesome fonts
 
-### Update Change
+### Breaking Change
 
-- Force to wrap everything under `Provider`
-- Changed `Grid` to `Flexbox` to avoid confusing naming.
-- Changed `Button` to Hook component
+- Force to wrap everything under **Provider**
+- Changed **Grid** to **Flexbox** to avoid confusing naming.
+- Changed **Button** to Hook component
+- Remove **Heading**
 
 ---
 

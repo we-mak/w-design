@@ -118,7 +118,7 @@ Cover basic components
 |                  | ✖ Table                | ✖ Chip           |
 |                  | ✖ List                 | ✖ Menu           |
 |                  | ✖ Divider              | ✖ Modal          |
-|                  | ✓ Heading              | ✖ Pagination     |
+|                  |                        | ✖ Pagination     |
 |                  | ✖ Progress Loader      | ✖ Dropdown       |
 |                  | ✖ Portal               | ✖ Sidebar        |
 |                  | ✖ Avatar               | ✖ Steps          |

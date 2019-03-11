@@ -110,7 +110,7 @@ Cover basic components
 | ---------------- | ---------------------- | ---------------- |
 | ✓ ThemeProvider  | ✖ Button (in progress) | ✖ Progress Steps |
 | ✓ Container      | ✖ Text Input           | ✖ Avatar Group   |
-| ✓ Flexbox        | ✖ Checkbox             | ✖ Navbar         |
+| ✓ Flexbox        | ✖ Checkbox             | ✓ Navbar         |
 | ✖ Masonry        | ✖ Label                | ✖ Badges         |
 | ✓ DisplayElement | ✖ Image                | ✖ Arcordion      |
 |                  | ✓ Spinner              | ✖ Breadcrumbs    |

@@ -1,9 +1,17 @@
 import React, { Suspense } from "react";
-import { Provider, Container, Flexbox, Spinner, Typo } from "w-design";
+import { Provider, Container, Navbar, Flexbox, Spinner, Typo } from "w-design";
+
+const { Section } = Navbar;
 
 function App() {
   return (
     <Provider>
+      <Container p={4} bg={"B50"}>
+        <Navbar>
+          <Section>Logo</Section>
+          <Section>Menu</Section>
+        </Navbar>
+      </Container>
       <Container>
         <Flexbox>
           <Flexbox.Column width={1 / 4}>

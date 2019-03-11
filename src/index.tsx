@@ -7,5 +7,6 @@ export { default as DisplayElement } from "./components/layout/DisplayElement";
 export { default as Button } from "./components/elements/Button";
 export { default as CustomTag } from "./components/elements/CustomTag";
 export { default as Heading } from "./components/elements/Heading";
+export { default as Navbar } from "./components/elements/Navbar";
 export { default as Spinner } from "./components/elements/Spinner";
 export { default as Typo } from "./components/elements/Typo";

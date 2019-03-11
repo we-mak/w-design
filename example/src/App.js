@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Provider, Container, Navbar, Flexbox, Spinner, Typo } from "w-design";
+import { Provider, Container, Navbar, Flexbox, Typo } from "w-design";
 
 const { Section } = Navbar;
 
@@ -10,14 +10,12 @@ function App() {
         <Navbar>
           <Section>Logo</Section>
           <Section>Menu</Section>
+          <Section />
         </Navbar>
       </Container>
       <Container>
         <Flexbox>
-          <Flexbox.Column width={1 / 4}>
-            Sidebar
-            <Spinner />
-          </Flexbox.Column>
+          <Flexbox.Column width={1 / 4}>Sidebar</Flexbox.Column>
           <Flexbox.Column width={3 / 4}>
             <Suspense fallback={<div>Loading...</div>}>
               <Typo appearance="h1" tag="div">

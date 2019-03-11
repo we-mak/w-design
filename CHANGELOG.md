@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 
 - Add **Typo**: simple heading component
 - Add **DisplayElement**: repsonsive hide and show component
+- Add **Navbar**: Navigation bar
+- Add **Icon**: Icon build on top of Fontawesome fonts
 
 ### Update Change
 

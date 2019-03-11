@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1552296954721" clover="3.2.0">
-  <project timestamp="1552296954721" name="All files">
-    <metrics statements="238" coveredstatements="119" conditionals="104" coveredconditionals="49" methods="39" coveredmethods="24" elements="381" coveredelements="192" complexity="0" loc="238" ncloc="238" packages="9" files="15" classes="15">
+<coverage generated="1552309979175" clover="3.2.0">
+  <project timestamp="1552309979175" name="All files">
+    <metrics statements="259" coveredstatements="119" conditionals="110" coveredconditionals="49" methods="42" coveredmethods="24" elements="411" coveredelements="192" complexity="0" loc="259" ncloc="259" packages="10" files="18" classes="18">
       <package name="elements.Button">
         <metrics statements="115" coveredstatements="0" conditionals="51" coveredconditionals="0" methods="13" coveredmethods="0"/>
         <file name="getButtonProps.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Button/getButtonProps.ts">
@@ -182,6 +182,39 @@
           <line num="78" count="0" type="stmt"/>
           <line num="80" count="1" type="stmt"/>
           <line num="82" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="elements.Navbar">
+        <metrics statements="21" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <file name="NavCenter.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Navbar/NavCenter.ts">
+          <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="12" count="0" type="stmt"/>
+        </file>
+        <file name="NavSection.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Navbar/NavSection.ts">
+          <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="13" count="0" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Navbar/index.tsx">
+          <metrics statements="15" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
         </file>
       </package>
       <package name="elements.Spinner">

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Provider, Container, Navbar, Flexbox, Typo } from "w-design";
+import { Provider, Container, Navbar, Flexbox, Typo, Button } from "w-design";
 
 const { Section } = Navbar;
 
@@ -26,7 +26,7 @@ function App() {
               <Typo appearance="h5">H5</Typo>
               <Typo appearance="h6">H6</Typo>
 
-              {/* <Button>Default button</Button> */}
+              <Button size="sm">Default button</Button>
             </Suspense>
           </Flexbox.Column>
         </Flexbox>

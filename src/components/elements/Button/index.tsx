@@ -9,25 +9,25 @@ import { getButtonStyle } from "./getButtonStyle";
 import Icon from "../Icon";
 
 const StyledButton = styled.button`
-  ${props => getButtonStyle(props)};
+  ${getButtonStyle}
 `;
 
 StyledButton.displayName = "StyledButton";
 
 const StyledA = styled.a`
+  ${getButtonStyle}
   a& {
     line-height: initial;
     &:hover {
       text-decoration: none;
     }
-    ${props => getButtonStyle(props)};
   }
 `;
 
 StyledA.displayName = "StyledAButton";
 
 const StyledSpan = styled.span`
-  ${props => getButtonStyle(props)};
+  ${getButtonStyle}
 `;
 StyledSpan.displayName = "StyledSpanButton";
 

@@ -111,17 +111,18 @@ const getLoadingState = (props: ButtonProps) => {
 };
 
 export function getButtonStyle(props: ButtonProps) {
-  const { appearance = "default", size = "md", fluid, isSelected, iconOnly } = props;
-
-  const { colors, fontSizes, lineHeights, radius, space } = props.theme;
+  const { fontSizes, lineHeights, colors, radii } = props.theme;
+  const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
 
   // fluid button
   let width;
   if (fluid) width = "100%";
+
   /** Buttonn size style */
   const paddingStyle = iconOnly ? 0 : getElementSize(padding, size);
   const heightStyle = getElementSize(height, size);
   const fontSizeStyle = getFontSize(size, fontSizes);
+
   /** Button appearance style*/
   let bgStyle = getAppearanceColor(appearance, bg);
   let bgHoverStyle = getAppearanceColor(appearance, bgHover);
@@ -186,17 +187,15 @@ export function getButtonStyle(props: ButtonProps) {
     white-space: nowrap;
     transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
     line-height: ${lineHeights[1]};
-
     width: ${width};
-    border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
-    border-radius: ${radius[2]};
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};
+    border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
     background: ${colors[bgStyle]};
     border-color: ${colors[borderStyle]};
     color: ${colors[colorStyle]};
-    box-shadow: 0 0 0 0.05rem var(--box-shadow-color);
+    border-radius: ${radii[2]};
 
     &:hover {
       background: ${colors[bgHoverStyle]};
@@ -218,22 +217,5 @@ export function getButtonStyle(props: ButtonProps) {
     }
 
     ${loadingStyle};
-
-    i {
-      &.icon-before {
-        margin-right: ${space[2]};
-      }
-      &.icon-after {
-        margin-left: ${space[2]};
-      }
-
-      ${iconOnly && `margin: auto ${space[2]} !important`};
-    }
-
-    &.fb-btn {
-      color: ${colors["N1"]};
-      background-color: #3b5998;
-      border-color: #2e5090;
-    }
   `;
 }

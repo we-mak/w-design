@@ -7,6 +7,7 @@ interface SpinnerProps {
   borderColor?: string;
 }
 
+// Export for other components such as Button
 export const StyledSpinner = css`
   color: transparent !important;
   pointer-events: none;
@@ -28,10 +29,6 @@ export const StyledSpinner = css`
     position: absolute;
     z-index: 1;
   }
-`;
-
-const Spinner = styled.div<SpinnerProps>`
-  ${StyledSpinner}
 
   ${props =>
     props.large
@@ -52,6 +49,10 @@ const Spinner = styled.div<SpinnerProps>`
         width: 0.8rem;
       }
     `}
+`;
+
+const Spinner = styled.div<SpinnerProps>`
+  ${StyledSpinner}
 `;
 
 export default Spinner;

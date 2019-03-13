@@ -1,17 +1,12 @@
 import React, { Suspense } from "react";
-import { Provider, Container, Navbar, Flexbox, Typo, Button } from "w-design";
-
-const { Section } = Navbar;
+import { Provider, Container, Flexbox, Typo, Button } from "w-design";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <Provider>
-      <Container p={4} bg={"B50"}>
-        <Navbar>
-          <Section>Logo</Section>
-          <Section>Menu</Section>
-          <Section />
-        </Navbar>
+      <Container p={4} bg={"N2"}>
+        <Header />
       </Container>
       <Container>
         <Flexbox>

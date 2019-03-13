@@ -21,7 +21,7 @@ function App() {
               <Typo appearance="h5">H5</Typo>
               <Typo appearance="h6">H6</Typo>
 
-              <Button size="sm">Default button</Button>
+              <Button autoFocus>Default button</Button>
             </Suspense>
           </Flexbox.Column>
         </Flexbox>

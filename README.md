@@ -109,7 +109,7 @@ Cover basic components
 | Layout           | Elements               | Components       |
 | ---------------- | ---------------------- | ---------------- |
 | ✓ ThemeProvider  | ✖ Button (in progress) | ✖ Progress Steps |
-| ✓ Container      | ✖ InputField           | ✖ Avatar Group   |
+| ✓ Container      | ✓ InputField           | ✖ Avatar Group   |
 | ✓ Flexbox        | ✖ Checkbox             | ✓ Navbar         |
 | ✖ Masonry        | ✖ Label                | ✖ Badges         |
 | ✓ DisplayElement | ✖ Image                | ✖ Arcordion      |
@@ -118,9 +118,8 @@ Cover basic components
 |                  | ✖ Table                | ✖ Chip           |
 |                  | ✖ List                 | ✖ Menu           |
 |                  | ✖ Divider              | ✖ Modal          |
-|                  |                        | ✖ Pagination     |
 |                  | ✖ Progress Loader      | ✖ Dropdown       |
-|                  | ✖ Portal               | ✖ Sidebar        |
+|                  | ✓ Portal               | ✖ Sidebar        |
 |                  | ✖ Avatar               | ✖ Steps          |
 |                  | ✖ Toggle               | ✖ Tabs           |
 |                  | ✖ Text Area            | ✖ Push Message   |
@@ -128,9 +127,9 @@ Cover basic components
 |                  | ✓ Typo                 | ✖ Popover        |
 |                  | ✓ Icon (Font awesome)  | ✖ Comment        |
 |                  |                        | ✖ Select         |
-|                  |                        | ✖ FormGroup      |
-|                  |                        | ✖ InputForm      |
-|                  |                        |                  |
+|                  |                        | ✓ FormGroup      |
+|                  |                        | ✓ InputForm      |
+|                  |                        | ✖ Pagination     |
 |                  |                        |                  |
 
 ## 🐞 Report

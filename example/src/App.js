@@ -1,8 +1,10 @@
 import React, { Suspense } from "react";
-import { Provider, Container, Flexbox, Typo, Button } from "w-design";
+import { Provider, Container, Flexbox, Typo, Button, Modal } from "w-design";
 import { Header } from "./components/Header";
 
 function App() {
+  const [isModalOpen, setModalOpen] = React.useState(false);
+
   return (
     <Provider>
       <Container p={4} bg={"N2"}>
@@ -21,7 +23,17 @@ function App() {
               <Typo appearance="h5">H5</Typo>
               <Typo appearance="h6">H6</Typo>
 
-              <Button autoFocus>Default button</Button>
+              <Button autoFocus onClick={() => setModalOpen(true)}>
+                Default button
+              </Button>
+              {isModalOpen && (
+                <Modal
+                  rootID="w"
+                  modalTitle="Some title"
+                  modalBody={<div>Hello world</div>}
+                  onClose={() => setModalOpen(false)}
+                />
+              )}
             </Suspense>
           </Flexbox.Column>
         </Flexbox>

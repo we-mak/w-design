@@ -1,22 +1,22 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-interface PortalProp {
-  children?: React.ReactChild;
+interface PortalProps extends React.ReactElement<any> {
+  children?: React.ReactNode;
 }
 
-const Portal: React.ReactNode = ({ children }: PortalProp) => {
+const Portal: any = ({ children }: PortalProps) => {
   const Root = document.body;
-  let el = document.createElement("div");
+  let target: Element = document.createElement("div");
 
   React.useEffect(() => {
-    Root.appendChild(el);
+    Root.appendChild(target);
     return () => {
-      Root.removeChild(el);
+      Root.removeChild(target);
     };
   }, []);
 
-  return ReactDOM.createPortal(children, el);
+  return ReactDOM.createPortal(children, target);
 };
 
 export default Portal;

@@ -1,9 +1,9 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Provider, Container, Flexbox, Typo, Button, Modal } from "w-design";
 import { Header } from "./components/Header";
 
 function App() {
-  const [isModalOpen, setModalOpen] = React.useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   return (
     <Provider>
@@ -22,10 +22,8 @@ function App() {
               <Typo appearance="h4">H4</Typo>
               <Typo appearance="h5">H5</Typo>
               <Typo appearance="h6">H6</Typo>
-
-              <Button autoFocus onClick={() => setModalOpen(true)}>
-                Default button
-              </Button>
+              <Button autoFocus>Button ref</Button>{" "}
+              <Button onClick={() => setModalOpen(true)}>Default button</Button>
               {isModalOpen && (
                 <Modal
                   rootID="w"

@@ -208,6 +208,13 @@ export function getButtonStyle(props: ButtonProps) {
       --box-shadow-color: ${colors[boxShadowStyle]};
     }
 
+    &:focus {
+      box-shadow: 0 0 0 0.1rem ${getColor("B7", colors)};
+      background: ${colors[bgActiveStyle]};
+      border-color: ${colors[borderActiveStyle]};
+      --box-shadow-color: ${colors[boxShadowStyle]};
+    }
+
     &:disabled,
     &[disabled] {
       cursor: not-allowed;

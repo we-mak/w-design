@@ -31,7 +31,7 @@ export interface ButtonProps
   ariaLabel?: string;
   ariaHaspopup?: boolean;
   /** button ref*/
-  buttonRef?: (ref: HTMLElement) => {};
+  buttonRef?: React.MutableRefObject;
   /** button type attribute*/
   type?: "button" | "submit" | "reset";
   /** Name property of a linked form that the button submits when clicked. */

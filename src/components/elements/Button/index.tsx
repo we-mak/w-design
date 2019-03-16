@@ -31,9 +31,7 @@ const StyledSpan = styled.span`
 `;
 StyledSpan.displayName = "StyledSpanButton";
 
-// TODO: add auto focus style
-
-const Button = (props: ButtonProps) => {
+function Button(props: ButtonProps) {
   const {
     buttonRef,
     appearance = "default",
@@ -70,20 +68,20 @@ const Button = (props: ButtonProps) => {
     ButtonComponent = StyledButton;
   }
 
-  let button!: HTMLElement | undefined;
-  const getButtonRef = (ref: HTMLElement) => {
-    button = ref;
-    if (buttonRef) buttonRef(ref);
-  };
+  let button: any = React.createRef();
 
   React.useEffect(() => {
-    if (autoFocus && button) button.focus();
+    if (autoFocus) {
+      button && button.current.focus();
+    }
     return () => (button = undefined);
-  });
+  }, [autoFocus]);
 
   return (
     <ButtonComponent
-      ref={getButtonRef}
+      // if buttonRef is call
+      // there is no autoFocus
+      ref={buttonRef ? buttonRef : button}
       //Appearance Props
       appearance={appearance}
       size={size}
@@ -101,10 +99,12 @@ const Button = (props: ButtonProps) => {
       // Button Props
       type={type}
       form={form}
+      // WAI ARIA
       aria-haspopup={ariaHaspopup}
       aria-expanded={ariaExpanded}
       aria-controls={ariaControls}
       aria-label={ariaLabel}
+      //
       tabIndex={tabIndex}
       onClick={isDisabled ? undefined : onClick}
       {...rest}
@@ -114,6 +114,6 @@ const Button = (props: ButtonProps) => {
       {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
     </ButtonComponent>
   );
-};
+}
 
 export default Button;

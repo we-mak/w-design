@@ -22,8 +22,8 @@ function App() {
               <Typo appearance="h4">H4</Typo>
               <Typo appearance="h5">H5</Typo>
               <Typo appearance="h6">H6</Typo>
-
-              <Button onClick={() => setModalOpen(true)}>Default button</Button>
+              <Button autoFocus>Auto focus</Button> <Button>Default button</Button>{" "}
+              <Button onClick={() => setModalOpen(true)}>Modal button</Button>
               {isModalOpen && (
                 <Modal
                   rootID="root"

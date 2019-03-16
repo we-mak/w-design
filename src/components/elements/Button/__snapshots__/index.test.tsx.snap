@@ -35,10 +35,11 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-color: #CED9E3;
 }
 
-.c1:active {
+.c1:active,
+.c1:focus {
   background: #B1EAFF;
   border-color: #B1EAFF;
-  --box-shadow-color: #008CC0;
+  box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
 .c1:disabled,
@@ -83,10 +84,11 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-color: #008CC0;
 }
 
-.c2:active {
+.c2:active,
+.c2:focus {
   background: #007099;
   border-color: #004660;
-  --box-shadow-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #B1EAFF;
 }
 
 .c2:disabled,
@@ -129,9 +131,10 @@ exports[`<Button/> should render with different appearance style 1`] = `
   background: #E2EAF2;
 }
 
-.c3:active {
+.c3:active,
+.c3:focus {
   background: #B1EAFF;
-  --box-shadow-color: #008CC0;
+  box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
 .c3:disabled,
@@ -176,10 +179,11 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-color: #FA9B00;
 }
 
-.c4:active {
+.c4:active,
+.c4:focus {
   background: #EF8100;
   border-color: #E15B00;
-  --box-shadow-color: #FFC40D;
+  box-shadow: 0 0 0 0.1rem #FFC40D;
 }
 
 .c4:disabled,
@@ -224,10 +228,11 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-color: #29A634;
 }
 
-.c5:active {
+.c5:active,
+.c5:focus {
   background: #238C2C;
   border-color: #1D7324;
-  --box-shadow-color: #74FD7F;
+  box-shadow: 0 0 0 0.1rem #74FD7F;
 }
 
 .c5:disabled,
@@ -272,10 +277,11 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-color: #DC1F1F;
 }
 
-.c6:active {
+.c6:active,
+.c6:focus {
   background: #C61515;
   border-color: #B40404;
-  --box-shadow-color: #FFADAD;
+  box-shadow: 0 0 0 0.1rem #FFADAD;
 }
 
 .c6:disabled,
@@ -318,9 +324,10 @@ exports[`<Button/> should render with different appearance style 1`] = `
   background: #EFF3F6;
 }
 
-.c7:active {
+.c7:active,
+.c7:focus {
   background: #B1EAFF;
-  --box-shadow-color: #008CC0;
+  box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
 .c7:disabled,
@@ -365,10 +372,11 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-color: transparent;
 }
 
-.c8:active {
+.c8:active,
+.c8:focus {
   background: transparent;
   border-color: transparent;
-  --box-shadow-color: #FBFBFB;
+  box-shadow: 0 0 0 0.1rem #FBFBFB;
 }
 
 .c8:disabled,
@@ -413,10 +421,11 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-color: #00B8D9;
 }
 
-.c9:active {
+.c9:active,
+.c9:focus {
   background: #00A3BF;
   border-color: #008DA6;
-  --box-shadow-color: #008DA6;
+  box-shadow: 0 0 0 0.1rem #008DA6;
 }
 
 .c9:disabled,

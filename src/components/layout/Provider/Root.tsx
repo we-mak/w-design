@@ -88,20 +88,6 @@ const Root = styled.div`
     font-weight: bolder;
   }
 
-  code,
-  kbd,
-  pre,
-  samp {
-    font-family: "Menlo, Courier, monospace";
-  }
-
-  code {
-    color: ${colors.R20};
-    background: ${colors.N1};
-    padding: 0.1rem 0.15rem;
-    line-height: 1.2;
-  }
-
   small {
     font-size: 80%;
     font-weight: 400;

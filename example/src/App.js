@@ -22,11 +22,11 @@ function App() {
               <Typo appearance="h4">H4</Typo>
               <Typo appearance="h5">H5</Typo>
               <Typo appearance="h6">H6</Typo>
-              <Button autoFocus>Button ref</Button>{" "}
+
               <Button onClick={() => setModalOpen(true)}>Default button</Button>
               {isModalOpen && (
                 <Modal
-                  rootID="w"
+                  rootID="root"
                   modalTitle="Some title"
                   modalBody={<div>Hello world</div>}
                   onClose={() => setModalOpen(false)}

@@ -6,14 +6,25 @@ import { WModal, ModalContainer, ModalOverlay, ModalBody, ModalHeader } from "./
 import { ModalProps } from "./types";
 
 const Modal = (props: ModalProps) => {
-  // Main layout selecting
-  const mainLayout: any = document.getElementById(props.rootID);
+  const {
+    rootID,
+    onClose,
+    clickOverlayToClose,
+    modalTitle,
+    modalBody,
+    size = "medium",
+    ...rest
+  } = props;
+
+  // Main root layout selecting
+  const mainLayout: any = document.getElementById(rootID);
+
   // Get body scroll position
   const getBodyPosition = () => document.body.getBoundingClientRect().top;
-
-  const { onClose, clickOverlayToClose, modalTitle, modalBody, size = "medium", ...rest } = props;
   // Get scroll position
   const scrollPosition = getBodyPosition();
+
+  const yPosition = mainLayout.getBoundingClientRect().y;
 
   React.useEffect(() => {
     if (!mainLayout.position) {
@@ -21,9 +32,14 @@ const Modal = (props: ModalProps) => {
       mainLayout.style = `
         top: ${scrollPosition}px;
         position: fixed;
+        width: 100%;
       `;
-      // padding-right: 15px;
+
+      if (yPosition < 0) {
+        mainLayout.style.paddingRight = "15px";
+      }
     }
+
     return () => {
       // Remove style attribute
       mainLayout.removeAttribute("style");

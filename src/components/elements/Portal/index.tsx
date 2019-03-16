@@ -7,14 +7,14 @@ interface PortalProps extends React.ReactElement<any> {
 
 const Portal: any = ({ children }: PortalProps) => {
   const Root = document.body;
-  let target: Element = document.createElement("div");
+  let target: HTMLElement = document.createElement("div");
 
   React.useEffect(() => {
     Root.appendChild(target);
     return () => {
       Root.removeChild(target);
     };
-  }, []);
+  }, [target]);
 
   return ReactDOM.createPortal(children, target);
 };

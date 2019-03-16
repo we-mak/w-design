@@ -196,23 +196,17 @@ export function getButtonStyle(props: ButtonProps) {
     border-color: ${colors[borderStyle]};
     color: ${colors[colorStyle]};
     border-radius: ${radii[2]};
-    box-shadow: 0 0 0 0.1rem var(--box-shadow-color);
 
     &:hover {
       background: ${colors[bgHoverStyle]};
       border-color: ${colors[borderHoverStyle]};
     }
 
-    &:active {
-      background: ${colors[bgActiveStyle]};
-      border-color: ${colors[borderActiveStyle]};
-      --box-shadow-color: ${colors[boxShadowStyle]};
-    }
-
+    &:active,
     &:focus {
       background: ${colors[bgActiveStyle]};
       border-color: ${colors[borderActiveStyle]};
-      --box-shadow-color: ${colors[boxShadowStyle]};
+      box-shadow: 0 0 0 0.1rem ${colors[boxShadowStyle]};
     }
 
     &:disabled,

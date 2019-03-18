@@ -6,7 +6,7 @@ import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
 import ProviderPage from "./pages/ProviderPage";
 import ButtonPage from "./pages/ButtonPage";
-import InputFieldPage from "./pages/InputFieldPage";
+import FormPage from "./pages/FormPage";
 import ContainerPage from "./pages/ContainerPage";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
                 <ProviderPage path="/provider" />
                 <ContainerPage path="/container" />
                 <ButtonPage path="/button" />
-                <InputFieldPage path="/input-field" />
+                <FormPage path="/form" />
               </Router>
             </Suspense>
           </Flexbox.Column>

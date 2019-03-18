@@ -17,7 +17,7 @@ export const Sidebar = () => {
         <Link to="/button">Buttons</Link>
       </li>
       <li>
-        <Link to="/input-field">InputField</Link>
+        <Link to="/form">Form</Link>
       </li>
     </ul>
   );

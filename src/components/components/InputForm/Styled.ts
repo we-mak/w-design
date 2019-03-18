@@ -3,7 +3,7 @@ import { InputFormProps } from "./types";
 
 export const FieldGroup = styled.div`
   &:not(:last-child) {
-    margin-bottom: ${props => props.theme.space[2]};
+    margin-bottom: ${props => props.theme.space[2]}px;
   }
 `;
 FieldGroup.displayName = "FieldGroup";
@@ -11,7 +11,7 @@ FieldGroup.displayName = "FieldGroup";
 export const Label = styled.label`
   display: block;
   line-height: ${props => props.theme.lineHeights[0]};
-  padding: ${props => props.theme.space[2]} 0;
+  padding: ${props => props.theme.space[2]}px;
   font-weight: ${props => props.theme.fontWeights.strong};
 `;
 Label.displayName = "Label";
@@ -32,4 +32,5 @@ TextHint.displayName = "TextHint";
 export const RequiredMark = styled.sup`
   color: ${props => props.theme.colors["R30"]};
   font-size: ${props => props.theme.fontSizes[0]};
+  top: -0.2rem;
 `;

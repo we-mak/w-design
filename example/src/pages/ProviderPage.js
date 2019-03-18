@@ -137,7 +137,7 @@ const ProviderPage = () => {
 
       <p>Wrap your app with Provider</p>
 
-      <Highlight language="javascript">{`
+      <Highlight language="jsx">{`
       <Provider>
         <h1>Default </h1>
         <p>
@@ -152,7 +152,7 @@ const ProviderPage = () => {
 
       <p>You can add custom them based on default theme</p>
 
-      <Highlight language="javascript">
+      <Highlight language="jsx">
         {`
       <Provider
         theme={{

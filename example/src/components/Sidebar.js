@@ -13,6 +13,12 @@ export const Sidebar = () => {
       <li>
         <Link to="/container">Container</Link>
       </li>
+      <li>
+        <Link to="/button">Buttons</Link>
+      </li>
+      <li>
+        <Link to="/input-field">InputField</Link>
+      </li>
     </ul>
   );
 };

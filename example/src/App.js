@@ -5,6 +5,8 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
 import ProviderPage from "./pages/ProviderPage";
+import ButtonPage from "./pages/ButtonPage";
+import InputFieldPage from "./pages/InputFieldPage";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
               <Router>
                 <Intro path="/" />
                 <ProviderPage path="/provider" />
+                <ButtonPage path="/button" />
+                <InputFieldPage path="/input-field" />
               </Router>
             </Suspense>
           </Flexbox.Column>

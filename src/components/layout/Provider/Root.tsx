@@ -102,6 +102,22 @@ const Root = styled.div`
       margin-bottom: 0;
     }
   }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    width: 100%;
+  }
+  th {
+    border-bottom: 0.05rem solid ${props => props.theme.colors["N5"]};
+    padding: 0.6rem 0.4rem;
+    border-bottom-width: 0.1rem;
+  }
+  td {
+    border-bottom: 0.05rem solid ${props => props.theme.colors["N2"]};
+    padding: 0.6rem 0.4rem;
+  }
 `;
 
 Root.displayName = "Root";

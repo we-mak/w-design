@@ -11,7 +11,7 @@ export const Sidebar = () => {
         <Link to="/provider">Provider</Link>
       </li>
       <li>
-        <Link to="/container">container</Link>
+        <Link to="/container">Container</Link>
       </li>
     </ul>
   );

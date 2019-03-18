@@ -8,8 +8,10 @@ export function Header() {
   return (
     <Navbar>
       <Section>Logo</Section>
-      <Section>Menu</Section>
-      <Section />
+      <Section>Search</Section>
+      <Section>
+        <a href="https://github.com/we-mak/w-design">Github</a>
+      </Section>
     </Navbar>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Typo } from "w-design";
 import ReactMarkdown from "react-markdown";
-import Highlight from "react-highlight";
+import { CodeBlock } from "../components/CodeBlock";
 
 const input = `
 
@@ -19,7 +19,7 @@ const ProviderPage = () => {
       <Typo appearance="h1">Provider</Typo>
       <ReactMarkdown source={input} />
 
-      <Highlight language="javascript">
+      <CodeBlock language="lang-javascript">
         {`
           defaultTheme = {
             breakpoint: ["24em", "32em", "48em", "64em", "80em"],
@@ -133,11 +133,11 @@ const ProviderPage = () => {
             }
           };
         `}
-      </Highlight>
+      </CodeBlock>
 
       <p>Wrap your app with Provider</p>
 
-      <Highlight language="jsx">{`
+      <CodeBlock language="language-javascript">{`
       <Provider>
         <h1>Default </h1>
         <p>
@@ -148,11 +148,11 @@ const ProviderPage = () => {
           sip amet
         </p>
       </Provider>
-      `}</Highlight>
+      `}</CodeBlock>
 
       <p>You can add custom them based on default theme</p>
 
-      <Highlight language="jsx">
+      <CodeBlock language="language-javascript">
         {`
       <Provider
         theme={{
@@ -169,7 +169,7 @@ const ProviderPage = () => {
         </p>
       </Provider>
       `}
-      </Highlight>
+      </CodeBlock>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Typo } from "w-design";
 import ReactMarkdown from "react-markdown";
-import Highlight from "react-highlight";
+import { CodeBlock } from "../components/CodeBlock";
 
 const p1 = `
 #### React UI library build with styled-components
@@ -141,33 +141,34 @@ const Intro = () => {
     <>
       <Typo appearance="h1">Introduction</Typo>
       <ReactMarkdown source={p1} />
-      <Highlight className="sh">npm install --save w-design styled-components</Highlight>
+      <CodeBlock language="lang-bash">npm install --save w-design styled-components</CodeBlock>
       or for yarn
-      <Highlight className="sh">yarn add w-design</Highlight>
+      <CodeBlock language="lang-bash">yarn add w-design</CodeBlock>
       <ReactMarkdown source={p2} />
-      <Highlight language="jsx">
+      <CodeBlock language="lang-javascript">
         {`
-          import { Provider, Container } from "w-design";
+      import { Provider, Container } from "w-design";
 
-          ReactDOM.render(
-            <Provider>
-              <Container> Lorem ipsum </Container>
-            </Provider>,
-            mountNode
-          );`}
-      </Highlight>
+      ReactDOM.render(
+        <Provider>
+          <Container> Lorem ipsum </Container>
+        </Provider>,mountNode);
+        `}
+      </CodeBlock>
       <ReactMarkdown source={p3} />
-      <Highlight className="sh">npm start # runs rollup with watch flag</Highlight>
+      <CodeBlock language="lang-bash">npm start # runs rollup with watch flag</CodeBlock>
       First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever
       you make changes.
       <br />
       The second part will be running the example/ create-react-app that's linked to the local
       version of your module.
-      <Highlight className="sh">{`
-      # (in another tab)
-      cd example
-      npm start # runs create-react-app dev server
-      `}</Highlight>
+      <CodeBlock language="language-bash">
+        {`
+        # (in another tab)
+        cd example
+        # runs create-react-app dev server
+        npm start`}
+      </CodeBlock>
       Now, anytime you make a change to your library in src/ or to the example app's example/src,
       create-react-app will live-reload your local dev server so you can iterate on your component
       in real-time.

@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 
 const p1 = `
 
-#### InputField Props
+#### Api
 
 | Props        | type                                               | default   | description
 

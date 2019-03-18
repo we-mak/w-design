@@ -12,9 +12,9 @@ All notable changes to this project will be documented in this file.
 - **Icon** Icon build on top of Fontawesome fonts
 - **Portal** Read about the portal https://reactjs.org/docs/portals.html
 - **Modal** Modal component
-- **InputField**
-- **InputForm**
-- **FormGroup**
+- **InputField** Single input field component
+- **InputForm** Input Form in side a form included label, hint text
+- **FormGroup** Component to wrap around Input and Button in a form
 - Update **Button** auto focus style
 
 ### Breaking Change

@@ -88,7 +88,7 @@ const boxShadow = setColor(appearanceKeys, [
   "G5",
   "B50",
   "B50",
-  "T50",
+  "T10",
   "N1"
 ]);
 

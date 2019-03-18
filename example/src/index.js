@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "highlight.js/styles/monokai-sublime.css";
+import "highlight.js/styles/foundation.css";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";

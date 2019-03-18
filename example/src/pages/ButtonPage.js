@@ -19,6 +19,14 @@ const ButtonPage = () => {
       <ReactMarkdown source={p1} />
 
       <Button>Default button</Button>
+      <Button autoFocus>Default button</Button>
+
+      <Button appearance="danger">Default button</Button>
+      <Button appearance="warning">Default button</Button>
+      <Button appearance="success">Default button</Button>
+      <Button appearance="help">Default button</Button>
+      <Button appearance="subtle">Default button</Button>
+      <Button appearance="clean">Default button</Button>
     </>
   );
 };

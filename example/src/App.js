@@ -7,6 +7,7 @@ import Intro from "./pages/Intro";
 import ProviderPage from "./pages/ProviderPage";
 import ButtonPage from "./pages/ButtonPage";
 import InputFieldPage from "./pages/InputFieldPage";
+import ContainerPage from "./pages/ContainerPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Router>
                 <Intro path="/" />
                 <ProviderPage path="/provider" />
+                <ContainerPage path="/container" />
                 <ButtonPage path="/button" />
                 <InputFieldPage path="/input-field" />
               </Router>

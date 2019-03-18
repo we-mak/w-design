@@ -68,20 +68,23 @@ function Button(props: ButtonProps) {
     ButtonComponent = StyledButton;
   }
 
-  let button: any = React.createRef();
+  let button!: HTMLElement | undefined;
+
+  const getButtonRef = (ref: HTMLElement) => {
+    button = ref;
+    if (buttonRef) buttonRef(ref);
+  };
 
   React.useEffect(() => {
-    if (autoFocus) {
-      button && button.current.focus();
-    }
+    if (autoFocus && button) button.focus();
     return () => (button = undefined);
-  }, [autoFocus]);
+  });
 
   return (
     <ButtonComponent
       // if buttonRef is call
       // there is no autoFocus
-      ref={buttonRef ? buttonRef : button}
+      ref={getButtonRef}
       //Appearance Props
       appearance={appearance}
       size={size}

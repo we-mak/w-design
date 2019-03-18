@@ -20,8 +20,14 @@ If use \`npm\`
 `;
 
 const p2 = `
+## Getting start
 
-## Version 1.0.0 Features
+To keep thing simple with theme, the library depends on **Provider**, you must use \`Provider\` on the top of the App.
+`;
+
+const p3 = `
+
+## Features
 
 Cover basic components
 
@@ -63,13 +69,16 @@ Cover basic components
 
 ### For Issues
 
-Please open Issue to report bugs.
+Please open [Issue](https://github.com/we-mak/w-design/issues) to report bugs.
 
 ### Questions
 
 For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
 
-### Folders structure
+### Development
+
+**Folders structure**
+
 \`\`\`sh
 ├── packages # Build packages
 │   └── **/*
@@ -93,10 +102,10 @@ For how-to questions and other non-issues, please use StackOverflow instead of G
 └── package.json ## npm packages config
 \`\`\`
 
-### Development
 
-This package is built with dependencies: \`styled-system\`, \`clean-tag\`
-Props checking is under \`TypeScript\`
+This package is built with \`TypeScript\`
+
+It has 2 dependencies: \`styled-system\`, \`clean-tag\`, those dependencies are small but really good to use for styling with **Styled-components** under the hood.
 
 Please check these packages before getting start to contribute.
 
@@ -104,7 +113,7 @@ Local development is broken into two parts (ideally using two tabs).
 
 `;
 
-const p3 = `
+const p4 = `
 
 ### Publishing to NPM
 
@@ -136,6 +145,18 @@ const Intro = () => {
       or for yarn
       <Highlight className="sh">yarn add w-design</Highlight>
       <ReactMarkdown source={p2} />
+      <Highlight language="jsx">
+        {`
+          import { Provider, Container } from "w-design";
+
+          ReactDOM.render(
+            <Provider>
+              <Container> Lorem ipsum </Container>
+            </Provider>,
+            mountNode
+          );`}
+      </Highlight>
+      <ReactMarkdown source={p3} />
       <Highlight className="sh">npm start # runs rollup with watch flag</Highlight>
       First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever
       you make changes.
@@ -150,7 +171,7 @@ const Intro = () => {
       Now, anytime you make a change to your library in src/ or to the example app's example/src,
       create-react-app will live-reload your local dev server so you can iterate on your component
       in real-time.
-      <ReactMarkdown source={p3} />
+      <ReactMarkdown source={p4} />
     </>
   );
 };

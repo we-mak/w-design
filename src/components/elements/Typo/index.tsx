@@ -19,19 +19,19 @@ const Typo = styled(WTypo)`
 
     switch (props.appearance) {
       case "h1":
-        return fontSizes[6];
+        return `${fontSizes[6]} !important`;
       case "h2":
-        return fontSizes[5];
+        return `${fontSizes[5]} !important`;
       case "h3":
-        return fontSizes[4];
+        return `${fontSizes[4]} !important`;
       case "h4":
-        return fontSizes[3];
+        return `${fontSizes[3]} !important`;
       case "h5":
-        return fontSizes[2];
+        return `${fontSizes[2]} !important`;
       case "h6":
-        return fontSizes[1];
+        return `${fontSizes[1]} !important`;
       default:
-        return fontSizes[1];
+        return `${fontSizes[1]} !important`;
     }
   }};
 `;

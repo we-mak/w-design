@@ -12,7 +12,7 @@ import ContainerPage from "./pages/ContainerPage";
 function App() {
   return (
     <Provider>
-      <Container p={4} bg={"N2"}>
+      <Container py={4} px={3} bg={"N2"}>
         <Header />
       </Container>
       <Container p={5}>

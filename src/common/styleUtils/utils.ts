@@ -1,6 +1,48 @@
+import { css } from "styled-components";
+
+// Button, input padding style
+export const padding = {
+  sm: "0.15rem 0.3rem",
+  md: "0.35rem 0.4rem",
+  lg: "0.45rem 0.6rem"
+};
+// Button, input height
+export const height = {
+  sm: "1.4rem",
+  md: "1.8rem",
+  lg: "2rem"
+};
+
 /**
- * @function hex2Rgba
- * Transforms hex color to rgba color
+ * Media query
+ * Usage: Add mediaQ in styled component.
+  e.g:
+  const FakeInput = styled.div`
+  position: absolute;
+  left: 8em;
+  top: 4.5em;
+  ${mediaQ.xl`width: 50%`};
+  `
+*/
+const screens = {
+  xl: 1280,
+  lg: 960,
+  md: 840,
+  sm: 600,
+  xs: 480
+};
+
+export const mediaQ = Object.keys(screens).reduce((acc, key) => {
+  // TODO: params String literal type
+  acc[key] = (params: any) => css`
+    @media (max-width: ${screens[key] / 16}em) {
+      ${css(params)}
+    }
+  `;
+  return acc;
+}, {});
+
+/**
  * credit https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb/#answer-11508164
  */
 
@@ -27,13 +69,8 @@ export const hex2Rgba = (hex: string, alpha?: number): string => {
  * @function getColor
  * Get color value from theme by using key name of color
  * result fallback to default initial value
- * @param colors colors object data
- * @param key color key
- * @param theme color from values
- * @return color value
  */
-export const getColor = (key: string, colors: object, theme?: any) =>
-  theme.colors ? theme.colors[key] : colors[key];
+export const getColor = (key: string, colors: object) => colors[key];
 
 /**
  * @function setColors
@@ -42,22 +79,11 @@ export const getColor = (key: string, colors: object, theme?: any) =>
  * @return appearance key - color value pairs object
  * @example { 'default': '#4a4a4a', 'primary': '#fff' }
  */
-export const setColor = (colors: Array<string>, theme?: any) => {
+export const setColor = (appearanceKeys: Array<string>, colors: Array<string>) => {
   let result = {};
 
-  const appearanceKeys = [
-    "default",
-    "primary",
-    "warning",
-    "danger",
-    "success",
-    "link",
-    "subtle",
-    "help"
-  ];
-
   for (let i in appearanceKeys) {
-    result[appearanceKeys[i]] = theme ? theme.colors[i] : colors[i];
+    result[appearanceKeys[i]] = colors[i];
   }
 
   return result;
@@ -65,10 +91,6 @@ export const setColor = (colors: Array<string>, theme?: any) => {
 
 /**
  * @function getAppearanceColor
- * @param appearance appearance style
- * @param colors default initial colors
- * @param theme provided theme props
- * @returns color applies to each button appearance
  */
 export const getAppearanceColor = (appearance: string, colors: object) => colors[appearance];
 
@@ -78,15 +100,8 @@ export const getElementSize = (styleProperty: object, size?: "sm" | "md" | "lg")
 
 /**
  * @function getFontSize
- * @param elementSizeProps size props of element
- * @param fontSizes default initial font size values
- * @param themeFontSizes font size values from theme props
- * */
-export const getFontSize = (
-  elementSizeProps: "sm" | "md" | "lg",
-  fontSizes: Array<string>,
-  themeFontSizes?: Array<string>
-) => {
+ */
+export const getFontSize = (elementSizeProps: "sm" | "md" | "lg", fontSizes: Array<string>) => {
   // Call function to generate the font size
   // from default values or theme values
   const getFontSize = (fontSizesFromTheme: Array<string>) => {
@@ -99,8 +114,6 @@ export const getFontSize = (
         return fontSizesFromTheme[2];
     }
   };
-
-  if (themeFontSizes) return getFontSize(themeFontSizes);
 
   return getFontSize(fontSizes);
 };

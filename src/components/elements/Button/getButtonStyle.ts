@@ -1,38 +1,107 @@
 import { css } from "styled-components";
 import { ButtonProps } from "./types";
-import { colors, radii, fontSizes } from "../../../common/styleUtils/theme";
 import {
   getColor,
   setColor,
   getFontSize,
   getAppearanceColor,
-  getElementSize
+  getElementSize,
+  padding,
+  height
 } from "../../../common/styleUtils/utils";
 import { StyledSpinner } from "../Spinner";
 
-// Button, input padding style
-const padding = {
-  sm: "0.15rem 0.3rem",
-  md: "0.35rem 0.4rem",
-  lg: "0.45rem 0.6rem"
-};
-// Button, input height
-const height = {
-  sm: "1.4rem",
-  md: "1.8rem",
-  lg: "2rem"
-};
+const appearanceKeys = [
+  "default",
+  "primary",
+  "warning",
+  "danger",
+  "success",
+  "link",
+  "subtle",
+  "help",
+  "clean"
+];
+// Set button colors
+const bg = setColor(appearanceKeys, [
+  "N3",
+  "B50",
+  "O30",
+  "R30",
+  "G30",
+  "NONE",
+  "NONE",
+  "T30",
+  "NONE"
+]);
+const bgHover = setColor(appearanceKeys, [
+  "N4",
+  "B40",
+  "O20",
+  "R20",
+  "G20",
+  "N3",
+  "N2",
+  "T20",
+  "NONE"
+]);
+const bgActive = setColor(appearanceKeys, [
+  "B5",
+  "B60",
+  "O40",
+  "R40",
+  "G40",
+  "B5",
+  "B5",
+  "T40",
+  "NONE"
+]);
+const bordr = setColor(appearanceKeys, ["N3", "B60", "O40", "R40", "G40", "", "", "T40", "NONE"]);
+const bordrHover = setColor(appearanceKeys, [
+  "N4",
+  "B50",
+  "O30",
+  "R30",
+  "G30",
+  "",
+  "",
+  "T30",
+  "NONE"
+]);
+const bordrActive = setColor(appearanceKeys, [
+  "B5",
+  "B70",
+  "O50",
+  "R50",
+  "G50",
+  "",
+  "",
+  "T50",
+  "NONE"
+]);
+const text = setColor(appearanceKeys, ["N70", "N1", "N1", "N1", "N1", "B50", "N70", "N1", "N70"]);
+const boxShadow = setColor(appearanceKeys, [
+  "B50",
+  "B5",
+  "O10",
+  "R5",
+  "G5",
+  "B50",
+  "B50",
+  "T10",
+  "N1"
+]);
 
 /** Apply style to each appearance when isLoading = true */
 const getLoadingState = (props: ButtonProps) => {
-  const { isLoading, appearance, theme } = props;
+  const { isLoading, appearance } = props;
   if (isLoading) {
     if (appearance === "default" || appearance === "link") return StyledSpinner;
 
     return css`
       ${StyledSpinner};
       &::after {
-        border-color: ${getColor("WHITE", colors, theme)};
+        border-color: ${getColor("WHITE", props.theme.colors)};
         border-right-color: transparent;
         border-top-color: transparent;
       }
@@ -41,31 +110,20 @@ const getLoadingState = (props: ButtonProps) => {
   return;
 };
 
-/**
- * @function getButtonStyle
- * @param props Props from component
- */
-export function getButtonStyle(props: any) {
-  const { appearance, size, fluid, isSelected, theme } = props;
+export function getButtonStyle(props: ButtonProps) {
+  const { fontSizes, lineHeights, colors, radii } = props.theme;
+  const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
 
-  /** Buttonn size style */
-  const paddingStyle = getElementSize(padding, size);
-  const heightStyle = getElementSize(height, size);
-  const fontSizeStyle = getFontSize(size, fontSizes);
   // fluid button
   let width;
   if (fluid) width = "100%";
 
+  /** Buttonn size style */
+  const paddingStyle = iconOnly ? 0 : getElementSize(padding, size);
+  const heightStyle = getElementSize(height, size);
+  const fontSizeStyle = getFontSize(size, fontSizes);
+
   /** Button appearance style*/
-  // Set colors
-  const bg = setColor(["N3", "B50", "O30", "R30", "G30", "WHITE", "WHITE", "T30"], theme);
-  const bgHover = setColor(["N4", "B40", "O20", "R20", "G20", "N3", "N2", "T20"], theme);
-  const bgActive = setColor(["B5", "B60", "O40", "R40", "G40", "B5", "B5", "T40"], theme);
-  const bordr = setColor(["N3", "B60", "O40", "R40", "G40", "", "", "T40"]);
-  const bordrHover = setColor(["N4", "B50", "O30", "R30", "G30", "", "", "T30"]);
-  const bordrActive = setColor(["B5", "B70", "O50", "R50", "G50", "", "", "T50"]);
-  const text = setColor(["N90", "N1", "N1", "N1", "N1", "B50", "N90", "N1"], theme);
-  // Default values
   let bgStyle = getAppearanceColor(appearance, bg);
   let bgHoverStyle = getAppearanceColor(appearance, bgHover);
   let bgActiveStyle = getAppearanceColor(appearance, bgActive);
@@ -75,34 +133,42 @@ export function getButtonStyle(props: any) {
   let colorStyle = getAppearanceColor(appearance, text);
   // Selected values
   if (isSelected) {
-    bgStyle = getColor("B70", colors, theme);
-    bgHoverStyle = getColor("B70", colors, theme);
-    bgActiveStyle = getColor("B70", colors, theme);
-    borderStyle = getColor("B50", colors, theme);
-    borderHoverStyle = getColor("B50", colors, theme);
-    borderActiveStyle = getColor("B50", colors, theme);
-    colorStyle = getColor("N1", colors, theme);
+    bgStyle = "B70";
+    bgHoverStyle = "B70";
+    bgActiveStyle = "B70";
+    borderStyle = "B50";
+    borderHoverStyle = "B50";
+    borderActiveStyle = "B50";
+    colorStyle = "N1";
 
     if (appearance === "danger") {
-      bgStyle = getColor("R30", colors, theme);
-      bgHoverStyle = getColor("R30", colors, theme);
-      bgActiveStyle = getColor("R30", colors, theme);
-      borderStyle = getColor("R40", colors, theme);
-      borderHoverStyle = getColor("R40", colors, theme);
-      borderActiveStyle = getColor("R40", colors, theme);
+      bgStyle = "R30";
+      bgHoverStyle = "R30";
+      bgActiveStyle = "R30";
+      borderStyle = "R40";
+      borderHoverStyle = "R40";
+      borderActiveStyle = "R40";
     }
 
     if (appearance === "warning") {
-      bgStyle = getColor("O40", colors, theme);
-      bgHoverStyle = getColor("O40", theme);
-      bgActiveStyle = getColor("O40", colors, theme);
-      borderStyle = getColor("O50", colors, theme);
-      borderHoverStyle = getColor("O50", colors, theme);
-      borderActiveStyle = getColor("O50", colors, theme);
+      bgStyle = "O40";
+      bgHoverStyle = "O40";
+      bgActiveStyle = "O40";
+      borderStyle = "O50";
+      borderHoverStyle = "O50";
+      borderActiveStyle = "O50";
+    }
+
+    if (appearance === "clean") {
+      bgStyle = "NONE";
+      bgHoverStyle = "NONE";
+      bgActiveStyle = "NONE";
+      borderStyle = "NONE";
+      borderHoverStyle = "NONE";
+      borderActiveStyle = "NONE";
+      colorStyle = "B50";
     }
   }
-
-  const boxShadow = setColor(["transparent", "B5", "O10", "R5", "G5", "B50", "B50", "T50"], theme);
 
   const boxShadowStyle = isSelected ? "transparent" : getAppearanceColor(appearance, boxShadow);
 
@@ -116,37 +182,38 @@ export function getButtonStyle(props: any) {
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
+    transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
+    line-height: ${lineHeights[1]};
     width: ${width};
-    border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
-    border-radius: ${theme.radii ? theme.radii[2] : radii[2]};
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};
-    background: ${bgStyle};
-    border-color: ${borderStyle};
-    color: ${colorStyle};
-    box-shadow: 0 0 0 0.1rem var(--box-shadow-color);
+    border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
+    background: ${colors[bgStyle]};
+    border-color: ${colors[borderStyle]};
+    color: ${colors[colorStyle]};
+    border-radius: ${radii[2]};
 
     &:hover {
-      background: ${bgHoverStyle};
-      border-color: ${borderHoverStyle};
+      background: ${colors[bgHoverStyle]};
+      border-color: ${colors[borderHoverStyle]};
     }
 
-    &:active {
-      background: ${bgActiveStyle};
-      border-color: ${borderActiveStyle};
-      --box-shadow-color: ${boxShadowStyle};
+    &:active,
+    &:focus {
+      background: ${colors[bgActiveStyle]};
+      border-color: ${colors[borderActiveStyle]};
+      box-shadow: 0 0 0 0.1rem ${colors[boxShadowStyle]};
     }
 
     &:disabled,
     &[disabled] {
       cursor: not-allowed;
-      color: ${getColor("N7", colors, theme)} !important;
-      background: ${getColor("N4", colors, theme)} !important;
+      color: ${getColor("N7", colors)} !important;
+      background: ${getColor("N4", colors)} !important;
       border: none;
     }
 

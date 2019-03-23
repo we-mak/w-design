@@ -4,7 +4,7 @@ import theme from "../../../common/styleUtils/theme";
 const colors = theme.colors;
 
 const Root = styled.div`
-  font-family: ${(props: any) => props.theme.fonts};
+  font-family: ${(props: any) => props.theme.fonts.normal};
 
   h1 {
     font-size: 2rem;
@@ -88,20 +88,6 @@ const Root = styled.div`
     font-weight: bolder;
   }
 
-  code,
-  kbd,
-  pre,
-  samp {
-    font-family: "Menlo, Courier, monospace";
-  }
-
-  code {
-    color: ${colors.R20};
-    background: ${colors.N1};
-    padding: 0.1rem 0.15rem;
-    line-height: 1.2;
-  }
-
   small {
     font-size: 80%;
     font-weight: 400;
@@ -115,6 +101,22 @@ const Root = styled.div`
     p:last-child {
       margin-bottom: 0;
     }
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+    width: 100%;
+  }
+  th {
+    border-bottom: 0.05rem solid ${props => props.theme.colors["N5"]};
+    padding: 0.6rem 0.4rem;
+    border-bottom-width: 0.1rem;
+  }
+  td {
+    border-bottom: 0.05rem solid ${props => props.theme.colors["N2"]};
+    padding: 0.6rem 0.4rem;
   }
 `;
 

@@ -25,42 +25,111 @@ for yarn
 
 ## Usage guide
 
-Simple example
+To keep thing simple with theme, you must use `Provider` on the top..
 
 ```js
-import { Container } from "w-design";
-ReactDOM.render(<Container> Lorem ipsum </Container>, mountNode);
+import { Provider, Container } from "w-design";
+ReactDOM.render(
+  <Provider>
+    <Container> Lorem ipsum </Container>
+  </Provider>,
+  mountNode
+);
+```
+
+Theme provider is based on [styled-components](https://www.styled-components.com/) and making theme with [styled-system](http://jxnblk.com/styled-system/)
+
+Provider provides theme for your layout, you can supply your theme by insert your theme object by `theme` props
+Default theme
+
+```js static
+defaultTheme = {
+  breakpoint: ["24em", "32em", "48em", "64em", "80em"],
+  fonts:
+    '-apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", system-ui, sans-serif',
+  fontSizes: [
+    "0.7rem",
+    "0.8rem",
+    "0.9rem",
+    "1rem",
+    "1.2rem",
+    "1.4rem",
+    "1.6rem",
+    "1.8rem",
+    "2rem"
+  ],
+  fontWeights = { normal: 400, strong: 500, bold: 700, xbold: 900 },
+  lineHeights = [1, 1.125, 1.25, 1.5],
+  letterSpacings = { normal: "normal", caps: "0.25em" },
+  radii = ["0rem", "0.1rem", "0.2rem", "0.3rem", "0.4rem"],
+  space = [0, 4, 8, 16, 32, 64, 128], // space is used for margin and padding scales
+  shadows = [
+    "none",
+    `0 .2rem .5rem ${hex2Rgba(colors.N50, 0.5)}`,
+    `inset 0 0 0 1px rgba(87, 85, 217, .2), 0 0 4px rgba(87, 85, 217, .2)`
+  ],
+  colors: {...} // see colors
+};
+```
+
+```js
+<Provider>
+  <h1>Default </h1>
+  <p>
+    Lorem ipsum
+    <span>
+      <a href="#">dolor </a>
+    </span>
+    sip amet
+  </p>
+</Provider>
+```
+
+```js
+<Provider
+  theme={{
+    fonts: "Roboto, Helvetica, sans-serif"
+  }}
+>
+  <h1>Roboto</h1>
+  <p>
+    Lorem ipsum
+    <span>
+      <a href="#">dolor </a>
+    </span>
+    sip amet
+  </p>
+</Provider>
 ```
 
 ## Version 1.0.0 Features
 
 Cover basic components
 
-| Layout          | Elements               | Components       |
-| --------------- | ---------------------- | ---------------- |
-| ✓ ThemeProvider | ✖ Button (in progress) | ✖ Progress Steps |
-| ✓ Container     | ✖ Text Input           | ✖ Avatar Group   |
-| ✓ Grid          | ✖ Checkbox             | ✖ Navbar         |
-| ✖ Masonry       | ✖ Label                | ✖ Badges         |
-|                 | ✖ Image                | ✖ Arcordion      |
-|                 | ✓ Spinner              | ✖ Breadcrumbs    |
-|                 | ✖ Panel                | ✖ Card           |
-|                 | ✖ Table                | ✖ Chip           |
-|                 | ✖ List                 | ✖ Menu           |
-|                 | ✖ Divider              | ✖ Modal          |
-|                 | ✓ Heading              | ✖ Pagination     |
-|                 | ✖ Progress Loader      | ✖ Dropdown       |
-|                 | ✖ Portal               | ✖ Sidebar        |
-|                 | ✖ Avatar               | ✖ Steps          |
-|                 | ✖ Toggle               | ✖ Tabs           |
-|                 | ✖ Text Area            | ✖ Push Message   |
-|                 | ✖ Inline message       | ✖ Tooltip        |
-|                 |                        | ✖ Popover        |
-|                 |                        | ✖ Comment        |
-|                 |                        | ✖ Select         |
-|                 |                        | ✖ ButtonGroup    |
-|                 |                        | ✖ Input Group    |
-|                 |                        | ✖ Form           |
+| Layout            | Elements               | Components        |
+| ----------------- | ---------------------- | ----------------- |
+| ✅ ThemeProvider  | ✅ Button              | ❌ Progress Steps |
+| ✅ Container      | ✅ InputField          | ❌ Avatar Group   |
+| ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar         |
+| ✅ DisplayElement | ❌ Label               | ❌Badges          |
+| ❌ Masonry        | ❌ Image               | ❌Arcordion       |
+|                   | ✅ Spinner             | ❌ Breadcrumbs    |
+|                   | ❌ Panel               | ❌ Card           |
+|                   | ❌ Table               | ❌ Chip           |
+|                   | ❌ List                | ❌ Menu           |
+|                   | ❌ Divider             | ✅ Modal          |
+|                   | ❌ Progress Loader     | ❌ Dropdown       |
+|                   | ✅ Portal              | ❌ Sidebar        |
+|                   | ❌ Avatar              | ❌ Steps          |
+|                   | ❌ Toggle              | ❌ Tabs           |
+|                   | ❌ Text Area           | ❌ Push Message   |
+|                   | ❌ Inline message      | ❌ Tooltip        |
+|                   | ✅ Typo                | ❌ Popover        |
+|                   | ✅ Icon (Font awesome) | ❌ Comment        |
+|                   |                        | ❌ Select         |
+|                   |                        | ✅ FormGroup      |
+|                   |                        | ✅ InputForm      |
+|                   |                        | ❌ Pagination     |
 
 ## 🐞 Report
 
@@ -112,7 +181,6 @@ npm start # runs rollup with watch flag
 
 First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
 
-npm start # runs rollup with watch flag
 The second part will be running the example/ create-react-app that's linked to the local version of your module.
 
 ```sh
@@ -138,4 +206,4 @@ This creates a production build of the example create-react-app that showcases y
 
 ## License
 
-MIT © [Sean](https://github.com/we-mak)
+MIT © [We-mak](https://github.com/we-mak)

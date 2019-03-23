@@ -27,5 +27,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-hooks-testing-library": "^0.3.8"
+  }
 }

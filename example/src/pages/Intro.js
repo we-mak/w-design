@@ -26,7 +26,7 @@ Cover basic components
 | ✅ Container      | ✅ InputField          | ❌ Avatar Group   |
 | ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar         |
 | ✅ DisplayElement | ❌ Label               | ❌Badges          |
-| ✅ Masonry        | ❌ Image               | ❌Arcordion       |
+| ❌ Masonry        | ❌ Image               | ❌Arcordion       |
 |                   | ✅ Spinner             | ❌ Breadcrumbs    |
 |                   | ❌ Panel               | ❌ Card           |
 |                   | ❌ Table               | ❌ Chip           |

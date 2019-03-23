@@ -26,14 +26,17 @@ const Start = () => {
       <Typo appearance="h1"> Getting start</Typo>
       <ReactMarkdown
         source={`### Install
-      If use \`npm\`
+
       `}
       />
-      <CodeBlock language="lang-bash">npm install --save w-design styled-components</CodeBlock>
-      or for yarn
-      <CodeBlock language="lang-bash">yarn add w-design</CodeBlock>
+      <CodeBlock language="lang-sh">
+        npm install --save w-design styled-components
+        {"\n"}# or{"\n"}
+        yarn add w-design
+      </CodeBlock>
+
       <ReactMarkdown source={input1} />
-      <CodeBlock language="lang-javascript">
+      <CodeBlock language="lang-js">
         {`
       import { Provider, Container } from "w-design";
 
@@ -181,13 +184,7 @@ const Start = () => {
       <Typo appearance="h4">Extends with theme properties</Typo>
       <p>You even can use you own theme with other component which is passed styled-system Api.</p>
       <p>For example:</p>
-      <CodeBlock language="language-js">
-        {`
-        <Container bg="N2">
-          ....
-        </Container>
-        `}
-      </CodeBlock>
+      <CodeBlock language="language-js">{`<Container bg="N2">...</Container>`}</CodeBlock>
     </div>
   );
 };

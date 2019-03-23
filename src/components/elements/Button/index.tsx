@@ -22,12 +22,9 @@ const ButtonGroupItem = styled.div`
   }
 `;
 
-export const ButtonGroup = ({ children }: { children: React.ReactChild }) => (
+export const ButtonGroup = ({ children }: { children: React.ReactChild | React.ReactChild[] }) => (
   <ButtonGroupWrapper>
     {React.Children.map(children, (child, idx) => {
-      if (!child) {
-        return null;
-      }
       return (
         <ButtonGroupItem key={idx}>{React.cloneElement(child as JSX.Element)}</ButtonGroupItem>
       );

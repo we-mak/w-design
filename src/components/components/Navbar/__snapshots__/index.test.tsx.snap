@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Icon/> should render correct icon styled 1`] = `
+exports[`<Nav/> should render correct icon styled 1`] = `
 .c2 {
   -webkit-align-items: center;
   -webkit-box-align: center;

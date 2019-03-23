@@ -2,6 +2,29 @@
 
 exports[`<Button/> should render with different appearance style 1`] = `
 .c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c3 {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 + .c2::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+}
+
+.c4 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -30,160 +53,16 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-radius: 0.2rem;
 }
 
-.c1:hover {
+.c4:hover {
   background: #CED9E3;
   border-color: #CED9E3;
 }
 
-.c1:active,
-.c1:focus {
+.c4:active,
+.c4:focus {
   background: #B1EAFF;
   border-color: #B1EAFF;
   box-shadow: 0 0 0 0.1rem #008CC0;
-}
-
-.c1:disabled,
-.c1[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #CED9E3 !important;
-  border: none;
-}
-
-.c2 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  outline: 0;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  line-height: 1.125;
-  padding: 0.35rem 0.4rem;
-  height: 1.8rem;
-  font-size: 0.8rem;
-  border: 0.05rem solid;
-  background: #008CC0;
-  border-color: #007099;
-  color: #FBFBFB;
-  border-radius: 0.2rem;
-}
-
-.c2:hover {
-  background: #009AD3;
-  border-color: #008CC0;
-}
-
-.c2:active,
-.c2:focus {
-  background: #007099;
-  border-color: #004660;
-  box-shadow: 0 0 0 0.1rem #B1EAFF;
-}
-
-.c2:disabled,
-.c2[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #CED9E3 !important;
-  border: none;
-}
-
-.c3 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  outline: 0;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  line-height: 1.125;
-  padding: 0.35rem 0.4rem;
-  height: 1.8rem;
-  font-size: 0.8rem;
-  border: none;
-  background: transparent;
-  color: #008CC0;
-  border-radius: 0.2rem;
-}
-
-.c3:hover {
-  background: #E2EAF2;
-}
-
-.c3:active,
-.c3:focus {
-  background: #B1EAFF;
-  box-shadow: 0 0 0 0.1rem #008CC0;
-}
-
-.c3:disabled,
-.c3[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #CED9E3 !important;
-  border: none;
-}
-
-.c4 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  outline: 0;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  line-height: 1.125;
-  padding: 0.35rem 0.4rem;
-  height: 1.8rem;
-  font-size: 0.8rem;
-  border: 0.05rem solid;
-  background: #FA9B00;
-  border-color: #EF8100;
-  color: #FBFBFB;
-  border-radius: 0.2rem;
-}
-
-.c4:hover {
-  background: #FFAC23;
-  border-color: #FA9B00;
-}
-
-.c4:active,
-.c4:focus {
-  background: #EF8100;
-  border-color: #E15B00;
-  box-shadow: 0 0 0 0.1rem #FFC40D;
 }
 
 .c4:disabled,
@@ -217,22 +96,22 @@ exports[`<Button/> should render with different appearance style 1`] = `
   height: 1.8rem;
   font-size: 0.8rem;
   border: 0.05rem solid;
-  background: #29A634;
-  border-color: #238C2C;
+  background: #008CC0;
+  border-color: #007099;
   color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c5:hover {
-  background: #3BBC45;
-  border-color: #29A634;
+  background: #009AD3;
+  border-color: #008CC0;
 }
 
 .c5:active,
 .c5:focus {
-  background: #238C2C;
-  border-color: #1D7324;
-  box-shadow: 0 0 0 0.1rem #74FD7F;
+  background: #007099;
+  border-color: #004660;
+  box-shadow: 0 0 0 0.1rem #B1EAFF;
 }
 
 .c5:disabled,
@@ -265,23 +144,20 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
-  border: 0.05rem solid;
-  background: #DC1F1F;
-  border-color: #C61515;
-  color: #FBFBFB;
+  border: none;
+  background: transparent;
+  color: #008CC0;
   border-radius: 0.2rem;
 }
 
 .c6:hover {
-  background: #F22828;
-  border-color: #DC1F1F;
+  background: #E2EAF2;
 }
 
 .c6:active,
 .c6:focus {
-  background: #C61515;
-  border-color: #B40404;
-  box-shadow: 0 0 0 0.1rem #FFADAD;
+  background: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
 .c6:disabled,
@@ -314,20 +190,23 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
-  border: none;
-  background: transparent;
-  color: #202B33;
+  border: 0.05rem solid;
+  background: #FA9B00;
+  border-color: #EF8100;
+  color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c7:hover {
-  background: #EFF3F6;
+  background: #FFAC23;
+  border-color: #FA9B00;
 }
 
 .c7:active,
 .c7:focus {
-  background: #B1EAFF;
-  box-shadow: 0 0 0 0.1rem #008CC0;
+  background: #EF8100;
+  border-color: #E15B00;
+  box-shadow: 0 0 0 0.1rem #FFC40D;
 }
 
 .c7:disabled,
@@ -361,22 +240,22 @@ exports[`<Button/> should render with different appearance style 1`] = `
   height: 1.8rem;
   font-size: 0.8rem;
   border: 0.05rem solid;
-  background: transparent;
-  border-color: transparent;
-  color: #202B33;
+  background: #29A634;
+  border-color: #238C2C;
+  color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c8:hover {
-  background: transparent;
-  border-color: transparent;
+  background: #3BBC45;
+  border-color: #29A634;
 }
 
 .c8:active,
 .c8:focus {
-  background: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 0 0.1rem #FBFBFB;
+  background: #238C2C;
+  border-color: #1D7324;
+  box-shadow: 0 0 0 0.1rem #74FD7F;
 }
 
 .c8:disabled,
@@ -410,26 +289,277 @@ exports[`<Button/> should render with different appearance style 1`] = `
   height: 1.8rem;
   font-size: 0.8rem;
   border: 0.05rem solid;
+  background: #DC1F1F;
+  border-color: #C61515;
+  color: #FBFBFB;
+  border-radius: 0.2rem;
+}
+
+.c9:hover {
+  background: #F22828;
+  border-color: #DC1F1F;
+}
+
+.c9:active,
+.c9:focus {
+  background: #C61515;
+  border-color: #B40404;
+  box-shadow: 0 0 0 0.1rem #FFADAD;
+}
+
+.c9:disabled,
+.c9[disabled] {
+  cursor: not-allowed;
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+}
+
+.c10 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  color: #202B33;
+  border-radius: 0.2rem;
+}
+
+.c10:hover {
+  background: #EFF3F6;
+}
+
+.c10:active,
+.c10:focus {
+  background: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c10:disabled,
+.c10[disabled] {
+  cursor: not-allowed;
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+}
+
+.c11 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: transparent;
+  border-color: transparent;
+  color: #202B33;
+  border-radius: 0.2rem;
+}
+
+.c11:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.c11:active,
+.c11:focus {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 0 0.1rem #FBFBFB;
+}
+
+.c11:disabled,
+.c11[disabled] {
+  cursor: not-allowed;
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+}
+
+.c12 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
   background: #00B8D9;
   border-color: #00A3BF;
   color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
-.c9:hover {
+.c12:hover {
   background: #00C7E6;
   border-color: #00B8D9;
 }
 
-.c9:active,
-.c9:focus {
+.c12:active,
+.c12:focus {
   background: #00A3BF;
   border-color: #008DA6;
   box-shadow: 0 0 0 0.1rem #79E2F2;
 }
 
-.c9:disabled,
-.c9[disabled] {
+.c12:disabled,
+.c12[disabled] {
+  cursor: not-allowed;
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+}
+
+.c13 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #E2EAF2;
+  border-color: #E2EAF2;
+  color: #202B33;
+  border-radius: 0.2rem;
+}
+
+.c13:hover {
+  background: #CED9E3;
+  border-color: #CED9E3;
+}
+
+.c13:active,
+.c13:focus {
+  background: #B1EAFF;
+  border-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c13:disabled,
+.c13[disabled] {
+  cursor: not-allowed;
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+}
+
+a.c13 {
+  line-height: initial;
+}
+
+a.c13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #E2EAF2;
+  border-color: #E2EAF2;
+  color: #202B33;
+  border-radius: 0.2rem;
+}
+
+.c14:hover {
+  background: #CED9E3;
+  border-color: #CED9E3;
+}
+
+.c14:active,
+.c14:focus {
+  background: #B1EAFF;
+  border-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c14:disabled,
+.c14[disabled] {
   cursor: not-allowed;
   color: #90A9BF !important;
   background: #CED9E3 !important;
@@ -566,60 +696,111 @@ exports[`<Button/> should render with different appearance style 1`] = `
   <div
     class="c0"
   >
-    <button
+    <div
       class="c1"
-      type="button"
     >
-      Hello
-    </button>
-    <button
-      class="c2"
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c4"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c5"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c6"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c7"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c8"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c9"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c10"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c11"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+      <div
+        class="c2 c3"
+      >
+        <button
+          class="c12"
+          type="button"
+        >
+          Hello
+        </button>
+      </div>
+    </div>
+    <a
+      class="c13"
+      href="/"
       type="button"
-    >
-      Hello
-    </button>
-    <button
-      class="c3"
+    />
+    <span
+      class="c14"
+      disabled=""
+      href="/"
       type="button"
-    >
-      Hello
-    </button>
-    <button
-      class="c4"
-      type="button"
-    >
-      Hello
-    </button>
-    <button
-      class="c5"
-      type="button"
-    >
-      Hello
-    </button>
-    <button
-      class="c6"
-      type="button"
-    >
-      Hello
-    </button>
-    <button
-      class="c7"
-      type="button"
-    >
-      Hello
-    </button>
-    <button
-      class="c8"
-      type="button"
-    >
-      Hello
-    </button>
-    <button
-      class="c9"
-      type="button"
-    >
-      Hello
-    </button>
+    />
   </div>
 </div>
 `;

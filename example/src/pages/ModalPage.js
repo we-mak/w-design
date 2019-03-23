@@ -23,9 +23,11 @@ const ModalPage = () => {
       <br />
       <Button onClick={() => setOpen(true)}>Open modal</Button>
       {isOpen && (
-        <Modal rootID="w" onClose={() => setOpen(false)} clickOverlayToClose>
-          Here
-        </Modal>
+        <Modal
+          onClose={() => setOpen(false)}
+          modalTitle="Modal title"
+          modalBody={<div>Here is the modal content</div>}
+        />
       )}
     </>
   );

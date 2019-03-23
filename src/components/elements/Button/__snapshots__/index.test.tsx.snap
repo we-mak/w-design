@@ -425,7 +425,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
 .c9:focus {
   background: #00A3BF;
   border-color: #008DA6;
-  box-shadow: 0 0 0 0.1rem #008DA6;
+  box-shadow: 0 0 0 0.1rem #79E2F2;
 }
 
 .c9:disabled,
@@ -528,20 +528,6 @@ exports[`<Button/> should render with different appearance style 1`] = `
   font-weight: bolder;
 }
 
-.c0 code,
-.c0 kbd,
-.c0 pre,
-.c0 samp {
-  font-family: "Menlo, Courier, monospace";
-}
-
-.c0 code {
-  color: #F22828;
-  background: #FBFBFB;
-  padding: 0.1rem 0.15rem;
-  line-height: 1.2;
-}
-
 .c0 small {
   font-size: 80%;
   font-weight: 400;
@@ -556,6 +542,24 @@ exports[`<Button/> should render with different appearance style 1`] = `
 
 .c0 blockquote p:last-child {
   margin-bottom: 0;
+}
+
+.c0 table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.c0 th {
+  border-bottom: 0.05rem solid #BECEDC;
+  padding: 0.6rem 0.4rem;
+  border-bottom-width: 0.1rem;
+}
+
+.c0 td {
+  border-bottom: 0.05rem solid #EFF3F6;
+  padding: 0.6rem 0.4rem;
 }
 
 <div>

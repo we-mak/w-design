@@ -2,47 +2,46 @@ import React from "react";
 import Portal from "../../elements/Portal";
 import Typo from "../../elements/Typo";
 import Button from "../../elements/Button";
-import { WModal, ModalContainer, ModalOverlay, ModalBody, ModalHeader } from "./Styled";
+import {
+  WModal,
+  ModalContainer,
+  ModalOverlay,
+  ModalBody,
+  ModalHeader
+  // ModalFooter
+} from "./Styled";
 import { ModalProps } from "./types";
 
 const Modal = (props: ModalProps) => {
-  const {
-    rootID,
-    onClose,
-    clickOverlayToClose,
-    modalTitle,
-    modalBody,
-    size = "medium",
-    ...rest
-  } = props;
+  const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
 
   // Main root layout selecting
-  const mainLayout: any = document.getElementById(rootID);
+  const documentBody: any = document.body;
 
   // Get body scroll position
-  const getBodyPosition = () => document.body.getBoundingClientRect().top;
+  const getBodyPosition = () => documentBody.getBoundingClientRect().top;
   // Get scroll position
   const scrollPosition = getBodyPosition();
 
-  const yPosition = mainLayout.getBoundingClientRect().y;
+  const yPosition = documentBody.getBoundingClientRect().y;
 
   React.useEffect(() => {
-    if (!mainLayout.position) {
+    if (!documentBody.position) {
       // Prevent main layout scroll to top on open modal
-      mainLayout.style = `
+      documentBody.style = `
         top: ${scrollPosition}px;
         position: fixed;
         width: 100%;
       `;
 
       if (yPosition < 0) {
-        mainLayout.style.paddingRight = "15px";
+        documentBody.style.paddingRight = "15px";
       }
     }
 
     return () => {
       // Remove style attribute
-      mainLayout.removeAttribute("style");
+      documentBody.removeAttribute("style");
       // Set scroll position
       window.scrollBy(0, -scrollPosition);
     };
@@ -68,7 +67,6 @@ const Modal = (props: ModalProps) => {
             </Typo>
           </ModalHeader>
           <ModalBody>{modalBody}</ModalBody>
-          {/* Todo: modal footer */}
         </ModalContainer>
       </WModal>
     </Portal>

@@ -20,6 +20,9 @@ export const Sidebar = () => {
         <Link to="/button">Buttons</Link>
       </li>
       <li>
+        <Link to="/button">Portal</Link>
+      </li>
+      <li>
         <Link to="/modal">Modal</Link>
       </li>
       <li>

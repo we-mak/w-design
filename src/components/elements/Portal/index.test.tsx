@@ -5,7 +5,7 @@ import Portal from "./index";
 afterEach(cleanup);
 
 describe("<Portal/>", () => {
-  it("should render correctly", () => {
+  it("should render a div element", () => {
     const { container } = render(<Portal />);
 
     expect(container).toMatchSnapshot();

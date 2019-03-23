@@ -11,9 +11,7 @@ export interface ModalProps
     SyntheticEventProps,
     MouseEventProps {
   onClose: (e: React.SyntheticEvent<HTMLElement>) => void;
-  rootID: string; // HTML root id
   modalTitle?: string;
   modalBody?: ReactChild;
   modalFooter?: ReactChild;
-  clickOverlayToClose?: boolean;
 }

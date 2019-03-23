@@ -4,12 +4,17 @@ import ReactMarkdown from "react-markdown";
 // import { CodeBlock } from "../components/CodeBlock";
 
 const api = `
+Useful for pop-up, message confirmation dialog
+
 ### API
 
-| Props | type | default | description |
-| ----- | ---- | ------- | ----------- |
-|       |      |         |             |
-|       |      |         |             |
+| Props       | type                                           | default | description                                |
+| ----------- | ---------------------------------------------- | ------- | ------------------------------------------ |
+| onClose     | (e: React.SyntheticEvent<HTMLElement>) => void |         | on close modal event                       |
+| modalTitle  | string                                         |         |                                            |
+| modalBody   | ReactChild                                     |         | Main content of the modal                  |
+| modalFooter | ReactChild                                     |         | Where we can put the actions or modal info |
+| size        | string                                         | "md"    | Size of modal                              |
 `;
 
 const ModalPage = () => {
@@ -21,7 +26,6 @@ const ModalPage = () => {
   return (
     <>
       <h1>Modal</h1>
-      Useful for pop-up, message confirmation dialog
       <ReactMarkdown source={api} />
       <br />
       <Button onClick={openModal}>Open modal</Button>

@@ -14,5 +14,6 @@ export { default as Spinner } from "./components/elements/Spinner";
 export { default as Typo } from "./components/elements/Typo";
 // Components
 export { default as InputForm } from "./components/components/InputForm";
+export { default as FormGroup } from "./components/components/FormGroup";
 export { default as Modal } from "./components/components/Modal";
 export { default as Navbar } from "./components/components/Navbar";

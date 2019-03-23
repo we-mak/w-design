@@ -2,27 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-<a name="0.10.0"></a>#[v.0.10.0]()
-
-### Feature
-
-- **Typo** simple heading component
-- **DisplayElement** repsonsive hide and show component
-- **Navbar** Navigation bar
-- **Icon** Icon build on top of Fontawesome fonts
-- **Portal** Read about the portal https://reactjs.org/docs/portals.html
-- **Modal** Modal component
-- **InputField** Single input field component
-- **InputForm** Input Form in side a form included label, hint text
-- **FormGroup** Component to wrap around Input and Button in a form
-- Update **Button** auto focus style
-
-### Breaking Change
-
-- Force to wrap everything under **Provider**
-- Changed **Grid** to **Flexbox** to avoid confusing naming.
-- Changed **Button** to Hook component
-- Remove **Heading**
+Change log now is at [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 

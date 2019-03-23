@@ -37,7 +37,7 @@
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.3",
     "@types/react-test-renderer": "^16.8.1",
-    "@types/styled-components": "^4.1.6",
+    "@types/styled-components": "^4.1.12",
     "@types/styled-system": "^3.1.2",
     "babel-core": "^6.26.3",
     "babel-plugin-styled-components": "^1.10.0",
@@ -69,7 +69,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   }
 }

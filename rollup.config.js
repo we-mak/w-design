@@ -40,6 +40,11 @@ export default {
       include: "node_modules/**",
       namedExports: {
         "node_modules/react-is/index.js": ["isElement", "isValidElementType", "ForwardRef"],
+        "node_modules/styled-components/node_modules/react-is/index.js": [
+          "isElement",
+          "isValidElementType",
+          "ForwardRef"
+        ],
         "node_modules/react/index.js": [
           "cloneElement",
           "createContext",

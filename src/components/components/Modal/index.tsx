@@ -7,8 +7,8 @@ import {
   ModalContainer,
   ModalOverlay,
   ModalBody,
-  ModalHeader
-  // ModalFooter
+  ModalHeader,
+  ModalFooter
 } from "./Styled";
 import { ModalProps } from "./types";
 
@@ -67,6 +67,7 @@ const Modal = (props: ModalProps) => {
             </Typo>
           </ModalHeader>
           <ModalBody>{modalBody}</ModalBody>
+          {modalFooter && <ModalFooter>{modalFooter}</ModalFooter>}
         </ModalContainer>
       </WModal>
     </Portal>

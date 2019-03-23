@@ -1,12 +1,44 @@
-/**
- * Button
- *
- */
 import * as React from "react";
 import styled, { AnyStyledComponent } from "styled-components";
 import { ButtonProps } from "./types";
 import { getButtonStyle } from "./getButtonStyle";
 import Icon from "../Icon";
+
+/**
+ * Button Group
+ *
+ */
+
+const ButtonGroupWrapper = styled.div`
+  display: inline-flex;
+`;
+const ButtonGroupItem = styled.div`
+  flex: 1 0 auto;
+  display: flex;
+  & + &::before {
+    content: "";
+    display: inline-block;
+    width: 0.4rem;
+  }
+`;
+
+export const ButtonGroup = ({ children }: { children: React.ReactChild }) => (
+  <ButtonGroupWrapper>
+    {React.Children.map(children, (child, idx) => {
+      if (!child) {
+        return null;
+      }
+      return (
+        <ButtonGroupItem key={idx}>{React.cloneElement(child as JSX.Element)}</ButtonGroupItem>
+      );
+    })}
+  </ButtonGroupWrapper>
+);
+
+/**
+ * Button
+ *
+ */
 
 const StyledButton = styled.button`
   ${getButtonStyle}

@@ -8,13 +8,19 @@ export const Sidebar = () => {
         <Link to="/">Introduction</Link>
       </li>
       <li>
-        <Link to="/provider">Provider</Link>
+        <Link to="/start">Getting start</Link>
       </li>
       <li>
-        <Link to="/container">Container</Link>
+        <Link to="/layout">Layout</Link>
+      </li>
+      <li>
+        <Link to="/nav">Navbar</Link>
       </li>
       <li>
         <Link to="/button">Buttons</Link>
+      </li>
+      <li>
+        <Link to="/modal">Modal</Link>
       </li>
       <li>
         <Link to="/form">Form</Link>

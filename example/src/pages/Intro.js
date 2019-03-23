@@ -6,62 +6,51 @@ import { CodeBlock } from "../components/CodeBlock";
 const p1 = `
 #### React UI library build with styled-components
 
-I want to make a small library for my personal project. Feel free to use it, or help me to improve.
-
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 
 
-## Install
+Main focus of this libary is styling with \`styled-system\` and \`styled-components\`, keep it as small as posible.
 
-If use \`npm\`
-`;
+Feel free to use this library, or help us to improve.
 
-const p2 = `
-## Getting start
-
-To keep thing simple with theme, the library depends on **Provider**, you must use \`Provider\` on the top of the App.
-`;
-
-const p3 = `
-
-## Features
+## Covered features
 
 Cover basic components
 
-| Layout           | Elements              | Components       |
-| ---------------- | --------------------- | ---------------- |
-| ✓ ThemeProvider  | ✓ Button              | ✖ Progress Steps |
-| ✓ Container      | ✓ InputField          | ✖ Avatar Group   |
-| ✓ Flexbox        | ✖ Checkbox            | ✓ Navbar         |
-| ✓ DisplayElement | ✖ Label               | ✖ Badges         |
-| ✖ Masonry        | ✖ Image               | ✖ Arcordion      |
-|                  | ✓ Spinner             | ✖ Breadcrumbs    |
-|                  | ✖ Panel               | ✖ Card           |
-|                  | ✖ Table               | ✖ Chip           |
-|                  | ✖ List                | ✖ Menu           |
-|                  | ✖ Divider             | ✓ Modal          |
-|                  | ✖ Progress Loader     | ✖ Dropdown       |
-|                  | ✓ Portal              | ✖ Sidebar        |
-|                  | ✖ Avatar              | ✖ Steps          |
-|                  | ✖ Toggle              | ✖ Tabs           |
-|                  | ✖ Text Area           | ✖ Push Message   |
-|                  | ✖ Inline message      | ✖ Tooltip        |
-|                  | ✓ Typo                | ✖ Popover        |
-|                  | ✓ Icon (Font awesome) | ✖ Comment        |
-|                  |                       | ✖ Select         |
-|                  |                       | ✓ FormGroup      |
-|                  |                       | ✓ InputForm      |
-|                  |                       | ✖ Pagination     |
+| Layout            | Elements               | Components        |
+| ----------------- | ---------------------- | ----------------- |
+| ✅ ThemeProvider  | ✅ Button              | ❌ Progress Steps |
+| ✅ Container      | ✅ InputField          | ❌ Avatar Group   |
+| ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar         |
+| ✅ DisplayElement | ❌ Label               | ❌Badges          |
+| ✅ Masonry        | ❌ Image               | ❌Arcordion       |
+|                   | ✅ Spinner             | ❌ Breadcrumbs    |
+|                   | ❌ Panel               | ❌ Card           |
+|                   | ❌ Table               | ❌ Chip           |
+|                   | ❌ List                | ❌ Menu           |
+|                   | ❌ Divider             | ✅ Modal          |
+|                   | ❌ Progress Loader     | ❌ Dropdown       |
+|                   | ✅ Portal              | ❌ Sidebar        |
+|                   | ❌ Avatar              | ❌ Steps          |
+|                   | ❌ Toggle              | ❌ Tabs           |
+|                   | ❌ Text Area           | ❌ Push Message   |
+|                   | ❌ Inline message      | ❌ Tooltip        |
+|                   | ✅ Typo                | ❌ Popover        |
+|                   | ✅ Icon (Font awesome) | ❌ Comment        |
+|                   |                        | ❌ Select         |
+|                   |                        | ✅ FormGroup      |
+|                   |                        | ✅ InputForm      |
+|                   |                        | ❌ Pagination     |
 
 
-**Legend**
+**Legends**
 
-- ✓ Implemented
+- ✅ Implemented
 
-- ✖ Not Implemented
+- ❌ Not Implemented
 
 
 
@@ -110,7 +99,6 @@ It has 2 dependencies: \`styled-system\`, \`clean-tag\`, those dependencies are 
 Please check these packages before getting start to contribute.
 
 Local development is broken into two parts (ideally using two tabs).
-
 `;
 
 const p4 = `
@@ -141,21 +129,6 @@ const Intro = () => {
     <>
       <Typo appearance="h1">Introduction</Typo>
       <ReactMarkdown source={p1} />
-      <CodeBlock language="lang-bash">npm install --save w-design styled-components</CodeBlock>
-      or for yarn
-      <CodeBlock language="lang-bash">yarn add w-design</CodeBlock>
-      <ReactMarkdown source={p2} />
-      <CodeBlock language="lang-javascript">
-        {`
-      import { Provider, Container } from "w-design";
-
-      ReactDOM.render(
-        <Provider>
-          <Container> Lorem ipsum </Container>
-        </Provider>,mountNode);
-        `}
-      </CodeBlock>
-      <ReactMarkdown source={p3} />
       <CodeBlock language="lang-bash">npm start # runs rollup with watch flag</CodeBlock>
       First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever
       you make changes.

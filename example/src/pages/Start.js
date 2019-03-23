@@ -3,7 +3,14 @@ import { Typo } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
-const input = `
+const input1 = `
+### Prerequisite: Provider component
+
+To keep thing simple with theme, the library depends on **Provider**, you must use \`Provider\` on the top of the App.
+
+`;
+
+const input2 = `
 
 Theme provider is based on [styled-components](https://www.styled-components.com/) and making theme with [styled-system](http://jxnblk.com/styled-system/)
 
@@ -13,12 +20,30 @@ Provider provides theme for your layout, you can supply your theme by insert you
 
 `;
 
-const ProviderPage = () => {
+const Start = () => {
   return (
     <div>
-      <Typo appearance="h1">Provider</Typo>
-      <ReactMarkdown source={input} />
+      <Typo appearance="h1"> Getting start</Typo>
+      <ReactMarkdown
+        source={`### Install
+      If use \`npm\`
+      `}
+      />
+      <CodeBlock language="lang-bash">npm install --save w-design styled-components</CodeBlock>
+      or for yarn
+      <CodeBlock language="lang-bash">yarn add w-design</CodeBlock>
+      <ReactMarkdown source={input1} />
+      <CodeBlock language="lang-javascript">
+        {`
+      import { Provider, Container } from "w-design";
 
+      ReactDOM.render(
+        <Provider>
+          <Container> Lorem ipsum </Container>
+        </Provider>,mountNode);
+        `}
+      </CodeBlock>
+      <ReactMarkdown source={input2} />
       <CodeBlock language="lang-javascript">
         {`
           defaultTheme = {
@@ -134,44 +159,37 @@ const ProviderPage = () => {
           };
         `}
       </CodeBlock>
-
       <p>Wrap your app with Provider</p>
-
-      <CodeBlock language="language-javascript">{`
+      <CodeBlock language="language-js">{`
       <Provider>
-        <h1>Default </h1>
-        <p>
-          Lorem ipsum
-          <span>
-            <a href="#">dolor </a>
-          </span>
-          sip amet
-        </p>
+        <App/>
       </Provider>
       `}</CodeBlock>
-
+      <Typo appearance="h4">Custom theme</Typo>
       <p>You can add custom them based on default theme</p>
-
-      <CodeBlock language="language-javascript">
+      <CodeBlock language="language-js">
         {`
       <Provider
         theme={{
           fonts: "Roboto, Helvetica, sans-serif"
         }}
       >
-        <h1>Roboto</h1>
-        <p>
-          Lorem ipsum
-          <span>
-            <a href="#">dolor </a>
-          </span>
-          sip amet
-        </p>
+        <App/>
       </Provider>
       `}
+      </CodeBlock>
+      <Typo appearance="h4">Extends with theme properties</Typo>
+      <p>You even can use you own theme with other component which is passed styled-system Api.</p>
+      <p>For example:</p>
+      <CodeBlock language="language-js">
+        {`
+        <Container bg="N2">
+          ....
+        </Container>
+        `}
       </CodeBlock>
     </div>
   );
 };
 
-export default ProviderPage;
+export default Start;

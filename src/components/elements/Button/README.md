@@ -1,5 +1,27 @@
-| Props      | Type   | default   | description                |
-| ---------- | ------ | --------- | -------------------------- |
-| appearance | string | "default" | appearance style of button |
+| Props        | Type   | default   | description             |
+| ------------ | ------ | --------- | ----------------------- |
+| appearance   | string | "default" | applied style of button |
+| buttonRef    |        |           |                         |
+| type         |        |           |                         |
+| size         |        |           |                         |
+| fluid        |        |           |                         |
+| iconBefore   |        |           |                         |
+| iconAfter    |        |           |                         |
+| iconOnly     |        |           |                         |
+| fluid        |        |           |                         |
+| form         |        |           |                         |
+| isLoading    |        |           |                         |
+| isDisabled   |        |           |                         |
+| isSelected   |        |           |                         |
+| href         |        |           |                         |
+| target       |        |           |                         |
+| autoFocus    |        |           |                         |
+| onClick      |        |           |                         |
+| tabIndex     |        |           |                         |
+| children     |        |           |                         |
+| ariaHaspopup |        |           |                         |
+| ariaExpanded |        |           |                         |
+| ariaControls |        |           |                         |
+| ariaLabel    |        |           |                         |
 
-"default", "primary", "danger", "warning", "success", "subtle", "link", "help", "clean"
+- `appearance` in cluded "default", "primary", "danger", "warning", "success", "subtle", "link", "help", "clean"

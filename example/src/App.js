@@ -4,10 +4,11 @@ import { Provider, Container, Flexbox } from "w-design";
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
-import ProviderPage from "./pages/ProviderPage";
+import Start from "./pages/Start";
 import ButtonPage from "./pages/ButtonPage";
 import FormPage from "./pages/FormPage";
-import ContainerPage from "./pages/ContainerPage";
+import LayoutPage from "./pages/LayoutPage";
+import ModalPage from "./pages/ModalPage";
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
               <Router>
                 <Intro path="/" />
-                <ProviderPage path="/provider" />
-                <ContainerPage path="/container" />
+                <Start path="/start" />
+                <LayoutPage path="/layout" />
+                <ModalPage path="/modal" />
                 <ButtonPage path="/button" />
                 <FormPage path="/form" />
               </Router>

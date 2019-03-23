@@ -4,9 +4,9 @@ import "jest-styled-components";
 import Nav from "./index";
 import Provider from "../../layout/Provider";
 
-describe("<Nav/>", () => {
-  afterEach(cleanup);
+afterEach(cleanup);
 
+describe("<Nav/>", () => {
   it("should render correct icon styled", () => {
     const { container } = render(
       <Provider>

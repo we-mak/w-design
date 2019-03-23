@@ -26,6 +26,9 @@ export const Sidebar = () => {
         <Link to="/modal">Modal</Link>
       </li>
       <li>
+        <Link to="/spinner">Spinner</Link>
+      </li>
+      <li>
         <Link to="/form">Form</Link>
       </li>
     </ul>

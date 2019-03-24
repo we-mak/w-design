@@ -9,6 +9,8 @@ A React UI library build with styled-components
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
+
 **WORK IS IN DEVELOPMENT**
 
 ## Install

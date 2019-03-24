@@ -1,6 +1,12 @@
 import React from "react";
+import styled from "../../../styled-components";
 import { Navbar } from "w-design";
 import logo from "../logom.png";
+
+const LogoType = styled.h3`
+  margin: 0;
+  padding: 0 0.5rem;
+`;
 
 const { Section } = Navbar;
 
@@ -10,7 +16,7 @@ export function Header() {
       <Section>
         <a href="/" style={{ display: "flex", alignItems: "center" }}>
           <img src={logo} style={{ width: "45px", height: "45px" }} alt="We-design logo" />
-          <h3 style={{ margin: 0, padding: "0 .5rem" }}>W-design</h3>
+          <LogoType>W-design</LogoType>
         </a>
       </Section>
       <Section>Search will be here</Section>

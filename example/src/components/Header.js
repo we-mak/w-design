@@ -1,12 +1,12 @@
 import React from "react";
-import styled from 'styled-components'
+import styled from "../../../styled-components";
 import { Navbar } from "w-design";
 import logo from "../logom.png";
 
 const LogoType = styled.h3`
-margin: 0;
-padding: 0 .5rem;
-`
+  margin: 0;
+  padding: 0 0.5rem;
+`;
 
 const { Section } = Navbar;
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1553332094989" clover="3.2.0">
-  <project timestamp="1553332094989" name="All files">
-    <metrics statements="376" coveredstatements="294" conditionals="201" coveredconditionals="134" methods="60" coveredmethods="44" elements="637" coveredelements="472" complexity="0" loc="376" ncloc="376" packages="15" files="25" classes="25">
+<coverage generated="1553407266946" clover="3.2.0">
+  <project timestamp="1553407266946" name="All files">
+    <metrics statements="376" coveredstatements="294" conditionals="201" coveredconditionals="134" methods="60" coveredmethods="45" elements="637" coveredelements="473" complexity="0" loc="376" ncloc="376" packages="15" files="25" classes="25">
       <package name="components.FormGroup">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
         <file name="index.ts" path="/Users/son/Desktop/w/w-design/src/components/components/FormGroup/index.ts">
@@ -17,19 +17,19 @@
           <metrics statements="19" coveredstatements="17" conditionals="14" coveredconditionals="11" methods="7" coveredmethods="5"/>
           <line num="1" count="1" type="stmt"/>
           <line num="4" count="1" type="cond" truecount="2" falsecount="0"/>
-          <line num="6" count="18" type="stmt"/>
+          <line num="6" count="9" type="stmt"/>
           <line num="9" count="1" type="stmt"/>
           <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
-          <line num="13" count="4" type="stmt"/>
-          <line num="14" count="4" type="stmt"/>
-          <line num="15" count="4" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
           <line num="17" count="1" type="stmt"/>
           <line num="19" count="1" type="cond" truecount="2" falsecount="0"/>
-          <line num="23" count="4" type="stmt"/>
-          <line num="24" count="4" type="cond" truecount="1" falsecount="1"/>
-          <line num="25" count="4" type="cond" truecount="1" falsecount="1"/>
-          <line num="26" count="4" type="cond" truecount="1" falsecount="1"/>
-          <line num="27" count="4" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="24" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="25" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="26" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="27" count="2" type="stmt"/>
           <line num="30" count="1" type="stmt"/>
           <line num="32" count="1" type="cond" truecount="2" falsecount="0"/>
           <line num="33" count="0" type="stmt"/>
@@ -145,7 +145,7 @@
         </file>
       </package>
       <package name="elements.Button">
-        <metrics statements="115" coveredstatements="84" conditionals="70" coveredconditionals="42" methods="8" coveredmethods="7"/>
+        <metrics statements="115" coveredstatements="84" conditionals="70" coveredconditionals="42" methods="8" coveredmethods="8"/>
         <file name="getButtonStyle.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Button/getButtonStyle.ts">
           <metrics statements="65" coveredstatements="34" conditionals="32" coveredconditionals="13" methods="2" coveredmethods="2"/>
           <line num="1" count="1" type="stmt"/>
@@ -161,26 +161,26 @@
           <line num="82" count="1" type="stmt"/>
           <line num="83" count="1" type="stmt"/>
           <line num="96" count="1" type="stmt"/>
-          <line num="97" count="22" type="stmt"/>
-          <line num="98" count="22" type="cond" truecount="1" falsecount="1"/>
+          <line num="97" count="11" type="stmt"/>
+          <line num="98" count="11" type="cond" truecount="1" falsecount="1"/>
           <line num="99" count="0" type="cond" truecount="0" falsecount="4"/>
           <line num="101" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="110" count="22" type="stmt"/>
+          <line num="110" count="11" type="stmt"/>
           <line num="113" count="1" type="stmt"/>
-          <line num="114" count="22" type="stmt"/>
-          <line num="115" count="44" type="cond" truecount="2" falsecount="2"/>
-          <line num="119" count="22" type="cond" truecount="1" falsecount="1"/>
-          <line num="122" count="22" type="cond" truecount="1" falsecount="1"/>
-          <line num="123" count="22" type="stmt"/>
-          <line num="124" count="22" type="stmt"/>
-          <line num="127" count="22" type="stmt"/>
-          <line num="128" count="22" type="stmt"/>
-          <line num="129" count="22" type="stmt"/>
-          <line num="130" count="22" type="stmt"/>
-          <line num="131" count="22" type="stmt"/>
-          <line num="132" count="22" type="stmt"/>
-          <line num="133" count="22" type="stmt"/>
-          <line num="135" count="22" type="cond" truecount="1" falsecount="1"/>
+          <line num="114" count="11" type="stmt"/>
+          <line num="115" count="22" type="cond" truecount="2" falsecount="2"/>
+          <line num="119" count="11" type="cond" truecount="1" falsecount="1"/>
+          <line num="122" count="11" type="cond" truecount="1" falsecount="1"/>
+          <line num="123" count="11" type="stmt"/>
+          <line num="124" count="11" type="stmt"/>
+          <line num="127" count="11" type="stmt"/>
+          <line num="128" count="11" type="stmt"/>
+          <line num="129" count="11" type="stmt"/>
+          <line num="130" count="11" type="stmt"/>
+          <line num="131" count="11" type="stmt"/>
+          <line num="132" count="11" type="stmt"/>
+          <line num="133" count="11" type="stmt"/>
+          <line num="135" count="11" type="cond" truecount="1" falsecount="1"/>
           <line num="136" count="0" type="stmt"/>
           <line num="137" count="0" type="stmt"/>
           <line num="138" count="0" type="stmt"/>
@@ -210,12 +210,12 @@
           <line num="167" count="0" type="stmt"/>
           <line num="168" count="0" type="stmt"/>
           <line num="169" count="0" type="stmt"/>
-          <line num="173" count="22" type="cond" truecount="1" falsecount="1"/>
-          <line num="176" count="22" type="stmt"/>
-          <line num="178" count="22" type="cond" truecount="2" falsecount="0"/>
+          <line num="173" count="11" type="cond" truecount="1" falsecount="1"/>
+          <line num="176" count="11" type="stmt"/>
+          <line num="178" count="11" type="cond" truecount="2" falsecount="0"/>
         </file>
         <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Button/index.tsx">
-          <metrics statements="50" coveredstatements="50" conditionals="38" coveredconditionals="29" methods="6" coveredmethods="5"/>
+          <metrics statements="50" coveredstatements="50" conditionals="38" coveredconditionals="29" methods="6" coveredmethods="6"/>
           <line num="1" count="1" type="stmt"/>
           <line num="2" count="1" type="stmt"/>
           <line num="4" count="1" type="stmt"/>
@@ -259,8 +259,8 @@
           <line num="95" count="2" type="cond" truecount="2" falsecount="0"/>
           <line num="97" count="9" type="stmt"/>
           <line num="102" count="11" type="stmt"/>
-          <line num="103" count="11" type="stmt"/>
-          <line num="104" count="11" type="cond" truecount="1" falsecount="1"/>
+          <line num="103" count="22" type="stmt"/>
+          <line num="104" count="22" type="cond" truecount="1" falsecount="1"/>
           <line num="107" count="11" type="stmt"/>
           <line num="108" count="11" type="cond" truecount="2" falsecount="2"/>
           <line num="109" count="11" type="stmt"/>
@@ -295,23 +295,23 @@
           <line num="1" count="1" type="stmt"/>
           <line num="3" count="1" type="stmt"/>
           <line num="12" count="1" type="stmt"/>
-          <line num="13" count="36" type="cond" truecount="1" falsecount="1"/>
-          <line num="14" count="18" type="stmt"/>
-          <line num="16" count="18" type="stmt"/>
-          <line num="17" count="18" type="cond" truecount="2" falsecount="0"/>
-          <line num="18" count="16" type="cond" truecount="2" falsecount="0"/>
-          <line num="19" count="14" type="cond" truecount="2" falsecount="0"/>
-          <line num="20" count="12" type="stmt"/>
-          <line num="23" count="18" type="stmt"/>
-          <line num="24" count="36" type="cond" truecount="2" falsecount="0"/>
-          <line num="25" count="32" type="cond" truecount="2" falsecount="0"/>
-          <line num="26" count="28" type="cond" truecount="2" falsecount="0"/>
-          <line num="27" count="24" type="stmt"/>
-          <line num="31" count="18" type="cond" truecount="1" falsecount="1"/>
-          <line num="32" count="18" type="stmt"/>
-          <line num="33" count="18" type="stmt"/>
-          <line num="34" count="18" type="stmt"/>
-          <line num="36" count="18" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="18" type="cond" truecount="1" falsecount="1"/>
+          <line num="14" count="9" type="stmt"/>
+          <line num="16" count="9" type="stmt"/>
+          <line num="17" count="9" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="8" type="cond" truecount="2" falsecount="0"/>
+          <line num="19" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="6" type="stmt"/>
+          <line num="23" count="9" type="stmt"/>
+          <line num="24" count="18" type="cond" truecount="2" falsecount="0"/>
+          <line num="25" count="16" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="12" type="stmt"/>
+          <line num="31" count="9" type="cond" truecount="1" falsecount="1"/>
+          <line num="32" count="9" type="stmt"/>
+          <line num="33" count="9" type="stmt"/>
+          <line num="34" count="9" type="stmt"/>
+          <line num="36" count="9" type="cond" truecount="2" falsecount="0"/>
         </file>
         <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/InputField/index.tsx">
           <metrics statements="34" coveredstatements="34" conditionals="22" coveredconditionals="17" methods="4" coveredmethods="4"/>
@@ -376,9 +376,9 @@
           <line num="2" count="2" type="stmt"/>
           <line num="3" count="2" type="stmt"/>
           <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="18" count="4" type="cond" truecount="2" falsecount="0"/>
-          <line num="19" count="4" type="stmt"/>
-          <line num="34" count="4" type="stmt"/>
+          <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
           <line num="54" count="2" type="cond" truecount="2" falsecount="0"/>
           <line num="58" count="2" type="stmt"/>
         </file>
@@ -393,15 +393,15 @@
           <line num="5" count="1" type="stmt"/>
           <line num="7" count="7" type="stmt"/>
           <line num="13" count="1" type="cond" truecount="2" falsecount="0"/>
-          <line num="15" count="14" type="stmt"/>
-          <line num="18" count="14" type="stmt"/>
-          <line num="20" count="14" type="stmt"/>
-          <line num="22" count="4" type="stmt"/>
-          <line num="24" count="2" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="30" count="2" type="stmt"/>
-          <line num="32" count="2" type="stmt"/>
+          <line num="15" count="7" type="stmt"/>
+          <line num="18" count="7" type="stmt"/>
+          <line num="20" count="7" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
           <line num="34" count="0" type="stmt"/>
           <line num="39" count="1" type="stmt"/>
           <line num="41" count="1" type="stmt"/>
@@ -446,8 +446,8 @@
           <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
           <line num="1" count="1" type="stmt"/>
           <line num="8" count="1" type="cond" truecount="2" falsecount="0"/>
-          <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="27" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
           <line num="35" count="1" type="stmt"/>
         </file>
         <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Flexbox/index.tsx">
@@ -473,9 +473,9 @@
           <line num="2" count="8" type="stmt"/>
           <line num="4" count="8" type="stmt"/>
           <line num="6" count="8" type="cond" truecount="2" falsecount="0"/>
-          <line num="7" count="26" type="stmt"/>
-          <line num="113" count="26" type="stmt"/>
-          <line num="118" count="26" type="stmt"/>
+          <line num="7" count="13" type="stmt"/>
+          <line num="113" count="13" type="stmt"/>
+          <line num="118" count="13" type="stmt"/>
           <line num="123" count="8" type="stmt"/>
           <line num="125" count="8" type="stmt"/>
         </file>

@@ -11,16 +11,14 @@
     "react-dom": "^16.8.5",
     "react-markdown": "^4.0.6",
     "react-scripts": "^2.1.8",
-    "styled-components": "../../../styled-components",
+    "styled-components": "link:../node_modules/styled-components",
     "w-design": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn install && yarn run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,8 +29,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "react-hooks-testing-library": "^0.3.8"
-  }
+  "devDependencies": {}
 }

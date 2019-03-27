@@ -11,6 +11,7 @@
     "react-dom": "^16.8.5",
     "react-markdown": "^4.0.6",
     "react-scripts": "^2.1.8",
+    "styled-components": "../../../styled-components",
     "w-design": "link:.."
   },
   "scripts": {

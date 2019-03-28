@@ -1,7 +1,7 @@
-| Props        | type    | default | description          |
-| ------------ | ------- | ------- | -------------------- |
-| borderColor  | string  |         | change spinner color |
-| largeSpinner | boolean | false   | spinner large size   |
+| Props       | type    | default | description          |
+| ----------- | ------- | ------- | -------------------- |
+| borderColor | string  |         | change spinner color |
+| large       | boolean | false   | spinner large size   |
 
 #Default
 
@@ -18,5 +18,5 @@
 #Large spinner
 
 ```js
-<Spinner largeSpinner />
+<Spinner large />
 ```

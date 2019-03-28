@@ -20,30 +20,30 @@ Feel free to use this library, or help us to improve.
 
 Cover basic components
 
-| Layout            | Elements               | Components        |
-| ----------------- | ---------------------- | ----------------- |
-| ✅ ThemeProvider  | ✅ Button              | ❌ Progress Steps |
-| ✅ Container      | ✅ InputField          | ❌ Avatar Group   |
-| ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar         |
-| ✅ DisplayElement | ❌ Label               | ❌Badges          |
-| ❌ Masonry        | ❌ Image               | ❌Arcordion       |
-|                   | ✅ Spinner             | ❌ Breadcrumbs    |
-|                   | ❌ Panel               | ❌ Card           |
-|                   | ❌ Table               | ❌ Chip           |
-|                   | ❌ List                | ❌ Menu           |
-|                   | ❌ Divider             | ✅ Modal          |
-|                   | ❌ Progress Loader     | ❌ Dropdown       |
-|                   | ✅ Portal              | ❌ Sidebar        |
-|                   | ❌ Avatar              | ❌ Steps          |
-|                   | ❌ Toggle              | ❌ Tabs           |
-|                   | ❌ Text Area           | ❌ Push Message   |
-|                   | ❌ Inline message      | ❌ Tooltip        |
-|                   | ✅ Typo                | ❌ Popover        |
-|                   | ✅ Icon (Font awesome) | ❌ Comment        |
-|                   |                        | ❌ Select         |
-|                   |                        | ✅ FormGroup      |
-|                   |                        | ✅ InputForm      |
-|                   |                        | ❌ Pagination     |
+| Layout            | Elements               | Components       |
+| ----------------- | ---------------------- | ---------------- |
+| ✅ ThemeProvider  | ✅ Button              | ❌ ProgressSteps |
+| ✅ Container      | ✅ InputField          | ❌ AvatarGroup   |
+| ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar        |
+| ✅ DisplayElement | ❌ Label               | ❌Badges         |
+| ❌ Masonry        | ❌ Image               | ❌Arcordion      |
+|                   | ✅ Spinner             | ❌ Breadcrumbs   |
+|                   | ❌ Panel               | ❌ Card          |
+|                   | ❌ Table               | ❌ Chip          |
+|                   | ❌ List                | ❌ Menu          |
+|                   | ❌ Divider             | ✅ Modal         |
+|                   | ❌ ProgressLoader      | ❌ Dropdown      |
+|                   | ✅ Portal              | ❌ Sidebar       |
+|                   | ❌ Avatar              | ❌ Steps         |
+|                   | ❌ Toggle              | ❌ Tabs          |
+|                   | ❌ TextArea            | ❌ PushMessage   |
+|                   | ❌ InlineMessage       | ❌ Tooltip       |
+|                   | ✅ Typo                | ❌ Popover       |
+|                   | ✅ Icon (Font awesome) | ❌ Comment       |
+|                   | ❌ Zdepth              | ❌ Select        |
+|                   |                        | ✅ FormGroup     |
+|                   |                        | ✅ InputForm     |
+|                   |                        | ❌ Pagination    |
 
 
 **Legends**

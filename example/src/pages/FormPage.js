@@ -96,6 +96,19 @@ const FormPage = () => {
       <Typo appearance="h3">InputForm</Typo>
 
       <InputForm label="Label" hintMessage="Text hint" placeholder="Text..." isRequired />
+      <InputForm label="Icon before" iconBefore="fas fa-user" placeholder="Text..." />
+      <InputForm label="Icon after" iconAfter="fas fa-user" placeholder="Text..." />
+      <InputForm label="Is loading" isLoading placeholder="Text..." />
+
+      <CodeBlock language="lang-js">
+        {`
+<InputForm label="Label" hintMessage="Text hint" placeholder="Text..." isRequired />
+<InputForm label="Icon before" iconBefore="fas fa-user" placeholder="Text..." />
+<InputForm label="Icon after" iconAfter="fas fa-user" placeholder="Text..." />
+<InputForm label="Is loading" isLoading placeholder="Text..." />
+      `}
+      </CodeBlock>
+      <br />
 
       <ReactMarkdown source={inputFormApi} />
       <br />

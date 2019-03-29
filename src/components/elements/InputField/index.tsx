@@ -49,28 +49,30 @@ const InputField = (props: InputFieldProps) => {
   });
 
   return (
-    <StyledInput
-      ref={getInputRef}
-      type={type}
-      size={size}
-      name={name}
-      appearance={appearance}
-      autoComplete={autoComplete}
-      className={className}
-      id={id}
-      required={isRequired}
-      value={value}
-      defaultValue={defaultValue}
-      isFocus={isFocus}
-      isValid={isValid}
-      isError={isError}
-      isWarning={isWarning}
-      disabled={isDisabled}
-      onChange={isDisabled ? undefined : onChange}
-      onBlur={onBlur}
-      tabIndex={tabIndex}
-      {...rest}
-    />
+    <>
+      <StyledInput
+        ref={getInputRef}
+        type={type}
+        size={size}
+        name={name}
+        appearance={appearance}
+        autoComplete={autoComplete}
+        className={className}
+        id={id}
+        required={isRequired}
+        value={value}
+        defaultValue={defaultValue}
+        isFocus={isFocus}
+        isValid={isValid}
+        isError={isError}
+        isWarning={isWarning}
+        disabled={isDisabled}
+        onChange={isDisabled ? undefined : onChange}
+        onBlur={onBlur}
+        tabIndex={tabIndex}
+        {...rest}
+      />
+    </>
   );
 };
 

@@ -137,10 +137,11 @@ const Intro = () => {
       version of your module.
       <CodeBlock language="language-bash">
         {`
-        # (in another tab)
-        cd example
-        # runs create-react-app dev server
-        npm start`}
+  # (in another tab)
+  cd example
+  # runs create-react-app dev server
+  npm start
+        `}
       </CodeBlock>
       Now, anytime you make a change to your library in src/ or to the example app's example/src,
       create-react-app will live-reload your local dev server so you can iterate on your component

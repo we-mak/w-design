@@ -684,13 +684,6 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2":
-  version "7.4.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.2.tgz#f5ab6897320f16decd855eed70b705908a313fe8"
-  integrity sha512-7Bl2rALb7HpvXFL7TETNzKSAeBVCPHELzc0C//9FCxN8nsiueWSJBqaF+2oIJScyILStASR/Cx5WMkXGYTiJFA==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
 "@babel/runtime@^7.1.5":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.2.0.tgz#b03e42eeddf5898e00646e4c840fa07ba8dcad7f"
@@ -704,6 +697,13 @@
   integrity sha512-IvfvnMdSaLBateu0jfsYIpZTxAc2cKEXEMiezGGN75QcBcecDUKd3PgLAncT0oOgxKy8dd8hrJKj9MfzgfZd6g==
   dependencies:
     regenerator-runtime "^0.12.0"
+
+"@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.2.tgz#f5ab6897320f16decd855eed70b705908a313fe8"
+  integrity sha512-7Bl2rALb7HpvXFL7TETNzKSAeBVCPHELzc0C//9FCxN8nsiueWSJBqaF+2oIJScyILStASR/Cx5WMkXGYTiJFA==
+  dependencies:
+    regenerator-runtime "^0.13.2"
 
 "@babel/template@^7.0.0", "@babel/template@^7.4.0":
   version "7.4.0"
@@ -1828,14 +1828,12 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-tag@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/clean-tag/-/clean-tag-3.1.0.tgz#51d9c8cdd2b8bdd779da0e64ab6124304259ac1d"
-  integrity sha512-UvkRzFThxcNbvMywy4llq1LOUEKlONpNbeGSQr6kO5n2l4ehOOq7izYkxEnXDGBKm0u+768GQKZ/3sgH7YX38w==
+clean-tag@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/clean-tag/-/clean-tag-3.1.1.tgz#68981b22905d7e53722d8b74fd0ef4eca3c33fa2"
+  integrity sha512-b5TQ+gaZVCtKkHnot2HDZeQX8AACuZaGOeL3/ZaglAbFOXO8tjF4i3NSX7sM3Sevw3kKk4lkZsLGvLV3vTWqdQ==
   dependencies:
     html-tags "^2.0.0"
-    react "^16.8.5"
-    styled-system "^3.2.1"
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -5186,14 +5184,6 @@ styled-components@^4.2.0:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
-
-styled-system@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.2.1.tgz#491e1e6f88d7ee021f6f49376f12852cde8007cb"
-  integrity sha512-ag0Yp7UeVHHc3t+1uM3jvlljaZYzwqpbJ8hMrFvpaKfUd8xsB9JeQXLwMpEsz8iLx8Lz/+9j0coWFZjmw8MogQ==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    prop-types "^15.6.2"
 
 styled-system@^4.0.8:
   version "4.0.8"

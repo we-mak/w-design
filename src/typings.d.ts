@@ -1,7 +1,6 @@
 import * as React from "react";
 
-interface SvgrComponent
-  extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
 
 declare module "*.svg" {
   const svgUrl: string;
@@ -65,7 +64,7 @@ export interface InputControlProps {
   /** Default value of the input, uncontrolled usage. */
   defaultValue?: string;
   /** Value of the input, controlled usage. */
-  value?: string;
+  value?: string | number;
   placeholder?: string;
   /** Change event handler. Use `event.target.value` for new value. */
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;

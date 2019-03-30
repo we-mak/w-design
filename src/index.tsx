@@ -4,8 +4,8 @@ export { default as Container } from "./components/layout/Container";
 export { default as Flexbox } from "./components/layout/Flexbox";
 export { default as DisplayElement } from "./components/layout/DisplayElement";
 // Elements
-export { default as Button } from "./components/elements/Button";
-export { ButtonGroup } from "./components/elements/Button";
+export { default as Button, ButtonGroup } from "./components/elements/Button";
+export { default as Checkbox } from "./components/elements/Checkbox";
 export { default as CustomTag } from "./components/elements/CustomTag";
 export { default as Icon } from "./components/elements/Icon";
 export { default as InputField } from "./components/elements/InputField";

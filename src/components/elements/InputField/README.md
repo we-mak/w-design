@@ -1,6 +1,6 @@
 | Props        | type                                             | default    | description                   |
 | ------------ | ------------------------------------------------ | ---------- | ----------------------------- |
-| inputRef     | React.MutableRefObject                           |            | input refs                    |
+| inputRef     | (ref: HTMLInputElement) => {}                    |            | input refs                    |
 | appearance   | string                                           | "standard" |                               |
 | type         | string                                           | "text"     | type of input                 |
 | name         | string                                           |            | field name                    |

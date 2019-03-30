@@ -40,7 +40,7 @@ Cover basic components
 |                   | ❌ InlineMessage       | ❌ Tooltip       |
 |                   | ✅ Typo                | ❌ Popover       |
 |                   | ✅ Icon (Font awesome) | ❌ Comment       |
-|                   | ❌ Zdepth              | ❌ Select        |
+|                   |                        | ❌ Select        |
 |                   |                        | ✅ FormGroup     |
 |                   |                        | ✅ InputForm     |
 |                   |                        | ❌ Pagination    |

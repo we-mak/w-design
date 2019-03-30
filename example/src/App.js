@@ -10,6 +10,7 @@ import ButtonPage from "./pages/ButtonPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
 import ModalPage from "./pages/ModalPage";
+import SpinnerPage from "./pages/SpinnerPage";
 
 const NavWrapper = styled.div`
   display: block;
@@ -18,7 +19,7 @@ const NavWrapper = styled.div`
   left: 0;
   width: 100%;
   z-index: 100;
-  box-shadow: ${props => props.theme.shadows[2]};
+  box-shadow: ${props => props.theme.shadows[1]};
 `;
 
 const BodyWrapper = styled.div`
@@ -30,6 +31,7 @@ function App() {
     <Provider
       theme={{
         fonts: {
+          normal: "'Montserrat', sans-serif",
           medium: "'Montserrat', sans-serif",
           demi: "'Montserrat', sans-serif",
           bold: "'Montserrat', sans-serif"
@@ -56,6 +58,7 @@ function App() {
                   <ModalPage path="/modal" />
                   <ButtonPage path="/button" />
                   <FormPage path="/form" />
+                  <SpinnerPage path="/spinner" />
                 </Router>
               </Suspense>
             </Flexbox.Column>

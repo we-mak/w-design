@@ -8,6 +8,8 @@ export const FieldGroup = styled.div<InputFormProps>`
   }
 
   i {
+    color: ${props => props.theme.colors["N10"]};
+
     &.icon-before {
       height: 0.8rem;
       margin: 0 0.25rem;

@@ -16,6 +16,7 @@ const Container = styled(Tag)`
   ${display};
   ${maxWidth};
   ${minWidth};
+  font-family: ${(props: any) => props.theme.fonts.normal};
 `;
 
 Container.displayName = "Container";

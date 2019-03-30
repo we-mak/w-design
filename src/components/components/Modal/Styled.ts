@@ -24,7 +24,7 @@ WModal.displayName = "WModal";
 export const ModalContainer = styled.div<ModalContainerStyleProps>`
   background: #fff;
   border-radius: ${props => props.theme.radii[2]};
-  box-shadow: ${props => props.theme.shadows[1]};
+  box-shadow: ${props => props.theme.shadows[4]};
   display: flex;
   flex-direction: column;
   padding: 0 ${props => `${props.theme.space[2]}px`};

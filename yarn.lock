@@ -1836,13 +1836,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-tag@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/clean-tag/-/clean-tag-3.1.1.tgz#68981b22905d7e53722d8b74fd0ef4eca3c33fa2"
-  integrity sha512-b5TQ+gaZVCtKkHnot2HDZeQX8AACuZaGOeL3/ZaglAbFOXO8tjF4i3NSX7sM3Sevw3kKk4lkZsLGvLV3vTWqdQ==
-  dependencies:
-    html-tags "^2.0.0"
-
 cliui@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-4.1.0.tgz#348422dbe82d800b3022eef4f6ac10bf2e4d1b49"
@@ -2798,11 +2791,6 @@ html-encoding-sniffer@^1.0.2:
   integrity sha512-71lZziiDnsuabfdYiUeWdCVyKuqwWi23L8YeIgV9jSSZHCtb6wB1BKWooH7L3tn4/FuZJMVWyNaIDr4RGmaSYw==
   dependencies:
     whatwg-encoding "^1.0.1"
-
-html-tags@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
-  integrity sha1-ELMKOGCF9Dzt41PMj6fLDe7qZos=
 
 http-signature@~1.2.0:
   version "1.2.0"

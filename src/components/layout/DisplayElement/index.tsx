@@ -1,9 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import { display } from "styled-system";
-import Tag from "clean-tag";
 
-const Base = styled(Tag)`
+const Base = styled.div`
   ${display}
 `;
 

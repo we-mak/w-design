@@ -30,7 +30,6 @@
     "react UI typescript"
   ],
   "dependencies": {
-    "clean-tag": "^3.1.1",
     "styled-system": "^4.0.8"
   },
   "devDependencies": {

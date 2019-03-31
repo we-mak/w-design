@@ -12,6 +12,7 @@ export { default as Icon } from "./components/elements/Icon";
 export { default as InputField } from "./components/elements/InputField";
 export { default as Portal } from "./components/elements/Portal";
 export { default as Spinner } from "./components/elements/Spinner";
+export { default as TextArea } from "./components/elements/TextArea";
 export { default as Typo } from "./components/elements/Typo";
 // Components
 export { default as InputForm } from "./components/components/InputForm";

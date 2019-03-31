@@ -1,5 +1,5 @@
 import React from "react";
-import { Typo, Button, InputField, InputForm, FormGroup, Checkbox } from "w-design";
+import { Typo, Button, InputField, InputForm, FormGroup, Checkbox, TextArea } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -58,14 +58,16 @@ const FormPage = () => {
       <p>A single input field component</p>
 
       <Typo appearance="h4">State</Typo>
-      <InputField placeholder="Normal status" />
-      <br />
-      <InputField isError placeholder="Error status" />
-      <br />
-      <InputField isValid placeholder="Valid status" />
-      <br />
-      <InputField isWarning placeholder="Warning status" />
-      <CodeBlock language="lang-js">
+      <div style={{ display: "flex" }}>
+        <InputField placeholder="Normal status" />
+        &nbsp;&nbsp;
+        <InputField isError placeholder="Error status" />
+        &nbsp;&nbsp;
+        <InputField isValid placeholder="Valid status" />
+        &nbsp;&nbsp;
+        <InputField isWarning placeholder="Warning status" />
+      </div>
+      <CodeBlock language="language-js">
         {`
 <InputField placeholder="Normal status" />
 <InputField isError placeholder="Error status" />
@@ -76,11 +78,14 @@ const FormPage = () => {
       <br />
 
       <Typo appearance="h4">InputField Size</Typo>
-      <InputField size="sm" placeholder="Small input" />
-      <br />
-      <InputField placeholder="Default input" />
-      <br />
-      <InputField size="lg" placeholder="Large input" />
+      <div style={{ display: "flex" }}>
+        <InputField size="lg" placeholder="Large input" />
+        &nbsp;&nbsp;
+        <InputField placeholder="Default input" />
+        &nbsp;&nbsp;
+        <InputField size="sm" placeholder="Small input" />
+        &nbsp;&nbsp;
+      </div>
       <CodeBlock language="lang-js">
         {`
 <InputField size="sm" placeholder="Small input" />
@@ -121,6 +126,9 @@ const FormPage = () => {
       </FormGroup>
 
       <br />
+
+      <Typo appearance="h3">TextArea</Typo>
+      <TextArea label="Textarea label" />
     </>
   );
 };

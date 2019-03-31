@@ -34,8 +34,6 @@ const Checkbox = (props: CheckboxProps) => {
     return true;
   };
 
-  console.log(isChecked);
-
   return (
     <FormGroup>
       <Label>

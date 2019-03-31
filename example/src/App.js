@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
 import Start from "./pages/Start";
+import AvatarPage from "./pages/AvatarPage";
 import ButtonPage from "./pages/ButtonPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
@@ -54,9 +55,10 @@ function App() {
                 <Router>
                   <Intro path="/" />
                   <Start path="/start" />
+                  <AvatarPage path="/avatar" />
+                  <ButtonPage path="/button" />
                   <LayoutPage path="/layout" />
                   <ModalPage path="/modal" />
-                  <ButtonPage path="/button" />
                   <FormPage path="/form" />
                   <SpinnerPage path="/spinner" />
                 </Router>

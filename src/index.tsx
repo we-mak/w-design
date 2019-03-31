@@ -4,6 +4,7 @@ export { default as Container } from "./components/layout/Container";
 export { default as Flexbox } from "./components/layout/Flexbox";
 export { default as DisplayElement } from "./components/layout/DisplayElement";
 // Elements
+export { default as Avatar } from "./components/elements/Avatar";
 export { default as Button, ButtonGroup } from "./components/elements/Button";
 export { default as Checkbox } from "./components/elements/Checkbox";
 export { default as CustomTag } from "./components/elements/CustomTag";

@@ -11,25 +11,28 @@ export const Sidebar = () => {
         <Link to="/start">Getting start</Link>
       </li>
       <li>
-        <Link to="/layout">Layout</Link>
-      </li>
-      <li>
-        <Link to="/nav">Navbar</Link>
+        <Link to="/avatar">Avatar</Link>
       </li>
       <li>
         <Link to="/button">Buttons</Link>
       </li>
       <li>
-        <Link to="/button">Portal</Link>
+        <Link to="/form">Form</Link>
+      </li>
+      <li>
+        <Link to="/layout">Layout</Link>
       </li>
       <li>
         <Link to="/modal">Modal</Link>
       </li>
       <li>
-        <Link to="/spinner">Spinner</Link>
+        <Link to="/nav">Navbar</Link>
       </li>
       <li>
-        <Link to="/form">Form</Link>
+        <Link to="/button">Portal</Link>
+      </li>
+      <li>
+        <Link to="/spinner">Spinner</Link>
       </li>
     </ul>
   );

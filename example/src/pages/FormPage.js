@@ -118,7 +118,7 @@ const FormPage = () => {
       <ReactMarkdown source={inputFormApi} />
       <br />
       <Typo appearance="h3">Checkbox</Typo>
-      <Checkbox label="Check me" value="" onChange={e => console.log(e.target)} />
+      <Checkbox label="Check me" />
       <Typo appearance="h3">FormGroup</Typo>
       <FormGroup>
         <InputField placeholder="Text something" />

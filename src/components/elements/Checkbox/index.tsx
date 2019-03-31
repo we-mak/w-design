@@ -47,7 +47,7 @@ const Checkbox = (props: CheckboxProps) => {
           onChange={onChange}
           {...props}
         />
-        <CheckboxIcon>
+        <CheckboxIcon isChecked={isChecked}>
           <Icon />
         </CheckboxIcon>
         <LabelText>{props.label}</LabelText>

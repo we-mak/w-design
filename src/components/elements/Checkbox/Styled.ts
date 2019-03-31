@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { CheckboxProps } from "./types";
 
-export const Label = styled.label<CheckboxProps>`
+export const Label = styled.label`
   display: flex;
   align-items: flex-start;
   position: relative;

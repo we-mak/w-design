@@ -3,10 +3,17 @@ import { AvatarWrapper, AvatarDataInit, AvatarImage, PresenceMark } from "./Styl
 import { firstLetter } from "../../../common/helpers";
 import { AvatarProps } from "./types";
 
-const Avatar = ({ size = "md", avatarUrl, dataInitial, alt, presence, ...rest }: AvatarProps) => {
+const Avatar = ({
+  size = "md",
+  avatarUrl,
+  dataInitial = "W Mak",
+  alt,
+  presence,
+  ...rest
+}: AvatarProps) => {
   return (
     <AvatarWrapper size={size} {...rest}>
-      {dataInitial && <AvatarDataInit>{firstLetter(dataInitial)}</AvatarDataInit>}
+      {dataInitial && <AvatarDataInit size={size}>{firstLetter(dataInitial)}</AvatarDataInit>}
       {avatarUrl && <AvatarImage src={avatarUrl} alt={alt} />}
       {presence && <PresenceMark />}
     </AvatarWrapper>

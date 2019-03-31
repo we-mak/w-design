@@ -6,7 +6,7 @@ import { AvatarProps } from "./types";
 const Avatar = ({
   size = "md",
   avatarUrl,
-  dataInitial = "W Mak",
+  dataInitial = "We mak",
   alt,
   presence,
   ...rest
@@ -15,7 +15,7 @@ const Avatar = ({
     <AvatarWrapper size={size} {...rest}>
       {dataInitial && <AvatarDataInit size={size}>{firstLetter(dataInitial)}</AvatarDataInit>}
       {avatarUrl && <AvatarImage src={avatarUrl} alt={alt} />}
-      {presence && <PresenceMark />}
+      {presence && <PresenceMark presence={presence} size={size} />}
     </AvatarWrapper>
   );
 };

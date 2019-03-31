@@ -119,7 +119,7 @@ Cover basic components
 |                   | ❌ Divider             | ✅ Modal         |
 |                   | ❌ ProgressLoader      | ❌ Dropdown      |
 |                   | ✅ Portal              | ❌ Sidebar       |
-|                   | ❌ Avatar              | ❌ Steps         |
+|                   | ✅ Avatar              | ❌ Steps         |
 |                   | ❌ Toggle              | ❌ Tabs          |
 |                   | ❌ TextArea            | ❌ PushMessage   |
 |                   | ❌ InlineMessage       | ❌ Tooltip       |

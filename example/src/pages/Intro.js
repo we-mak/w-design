@@ -16,9 +16,8 @@ Main focus of this libary is styling with \`styled-system\` and \`styled-compone
 
 Feel free to use this library, or help us to improve.
 
-## Covered features
+## Features list
 
-Cover basic components
 
 | Layout            | Elements               | Components       |
 | ----------------- | ---------------------- | ---------------- |
@@ -34,7 +33,7 @@ Cover basic components
 |                   | ❌ Divider             | ✅ Modal         |
 |                   | ❌ ProgressLoader      | ❌ Dropdown      |
 |                   | ✅ Portal              | ❌ Sidebar       |
-|                   | ❌ Avatar              | ❌ Steps         |
+|                   | ✅ Avatar              | ❌ Steps         |
 |                   | ❌ Toggle              | ❌ Tabs          |
 |                   | ❌ TextArea            | ❌ PushMessage   |
 |                   | ❌ InlineMessage       | ❌ Tooltip       |

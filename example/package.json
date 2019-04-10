@@ -1,7 +1,7 @@
 {
   "name": "example",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://we-mak.github.io/w-design/",
   "dependencies": {
     "@reach/router": "^1.2.1",

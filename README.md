@@ -108,12 +108,12 @@ Cover basic components
 | Layout            | Elements               | Components       |
 | ----------------- | ---------------------- | ---------------- |
 | ✅ ThemeProvider  | ✅ Button              | ❌ ProgressSteps |
-| ✅ Container      | ✅ InputField          | ❌ AvatarGroup   |
-| ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar        |
+| ✅ Container      | ✅ InputField          | 🖌 AvatarGroup    |
+| ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar        |
 | ✅ DisplayElement | ❌ Label               | ❌Badges         |
 | ❌ Masonry        | ❌ Image               | ❌Arcordion      |
 |                   | ✅ Spinner             | ❌ Breadcrumbs   |
-|                   | ❌ Panel               | ❌ Card          |
+|                   | ❌ Panel               | 🖌 Card           |
 |                   | ❌ Table               | ❌ Chip          |
 |                   | ❌ List                | ❌ Menu          |
 |                   | ❌ Divider             | ✅ Modal         |

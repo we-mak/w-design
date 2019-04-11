@@ -41,6 +41,7 @@
     "@types/styled-components": "^4.1.12",
     "@types/styled-system": "^4.0.0",
     "babel-core": "^6.26.3",
+    "babel-plugin-macros": "^2.5.1",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-runtime": "^6.26.0",
     "coveralls": "^3.0.2",

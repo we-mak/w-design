@@ -12,10 +12,12 @@ export const Label = styled.label`
     cursor: pointer;
   }
 `;
+Label.displayName = 'Label'
 
 export const LabelText = styled.span`
   padding: 5px 0;
 `;
+LabelText.displayName = 'LabelText'
 
 export const CheckboxInput = styled.input`
   clip: rect(0, 0, 0, 0);
@@ -25,11 +27,18 @@ export const CheckboxInput = styled.input`
   position: absolute;
   width: 1px;
 `;
+CheckboxInput.displayName = 'CheckboxInput'
 
 export const CheckboxIcon = styled.span<CheckboxProps>`
   line-height: 0;
   flex-shrink: 0;
-  color: ${props => (props.isChecked ? props.theme.colors["B50"] : props.theme.colors["N10"])};
-  fill: ${props => (props.isChecked ? `rgb(250, 251, 252)` : `transparent`)};
+  color: rgb(250, 251, 252);
+  fill: transparent;
   cursor: pointer;
 `;
+CheckboxIcon.displayName = 'CheckboxIcon'
+
+/* &:checked {
+    color: ${props => props.theme.colors["B50"]};
+    fill: rgb(250, 251, 252);
+  } */

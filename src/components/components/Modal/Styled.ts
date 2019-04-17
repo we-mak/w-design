@@ -43,7 +43,7 @@ export const ModalContainer = styled.div<ModalContainerStyleProps>`
 
   width: 100%;
   z-index: 1;
-  animation: ${slideDown} 0.15s ease 1;
+  animation: ${slideDown} 0.3s ease 1;
   will-change: transform;
 `;
 ModalContainer.displayName = "ModalContainer";

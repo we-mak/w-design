@@ -2,6 +2,7 @@
   "name": "example",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "homepage": "https://we-mak.github.io/w-design/",
   "dependencies": {
     "@reach/router": "^1.2.1",
@@ -28,5 +29,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }

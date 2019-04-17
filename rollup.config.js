@@ -19,17 +19,14 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: "cjs",
-      exports: "named",
-      sourcemap: true
+      format: "cjs"
     },
     {
       file: pkg.module,
-      format: "es",
-      exports: "named",
-      sourcemap: true
+      format: "es"
     }
   ],
+  cache: true,
   plugins: [
     external({
       includeDependencies: false
@@ -46,12 +43,14 @@ export default {
       "styled-components": path.resolve(__dirname, "node_modules", "styled-components")
     }),
     babel({
-      plugins: ["babel-plugin-styled-components"],
+      plugins: ["babel-plugin-styled-components", "external-helpers"],
       exclude: "node_modules/**"
     }),
-    commonjs()
+    commonjs({
+      include: "node_modules/**",
+      sourcemap: false
+    })
     //   {
-    //   include: "node_modules/**",
     //   namedExports: {
     //     "node_modules/react-is/index.js": ["isElement", "isValidElementType", "ForwardRef"],
     //     // "node_modules/styled-components/node_modules/react-is/index.js": [

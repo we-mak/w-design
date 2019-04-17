@@ -15,7 +15,7 @@ import SpinnerPage from "./pages/SpinnerPage";
 
 const NavWrapper = styled.div`
   display: block;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,9 +23,6 @@ const NavWrapper = styled.div`
   box-shadow: ${props => props.theme.shadows[1]};
 `;
 
-const BodyWrapper = styled.div`
-  margin-top: 32px;
-`;
 
 function App() {
   return (
@@ -44,7 +41,7 @@ function App() {
           <Header />
         </Container>
       </NavWrapper>
-      <BodyWrapper>
+
         <Container p={5} bg={"N1"}>
           <Flexbox>
             <Flexbox.Column width={1 / 4}>
@@ -66,7 +63,7 @@ function App() {
             </Flexbox.Column>
           </Flexbox>
         </Container>
-      </BodyWrapper>
+
     </Provider>
   );
 }

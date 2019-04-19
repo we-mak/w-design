@@ -3,6 +3,7 @@ import { InputFormProps } from "./types";
 
 export const FieldGroup = styled.div<InputFormProps>`
   position: relative;
+  font-family: ${props => `${props.theme.fonts["normal"]}px`};
   &:not(:last-child) {
     margin-bottom: ${props => props.theme.space[2]}px;
   }

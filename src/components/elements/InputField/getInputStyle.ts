@@ -51,6 +51,7 @@ export const getInputStyle = (props: InputFieldProps) => {
     color: ${colors["N70"]};
     padding: ${paddingStyle};
     font-size: ${fontSizeStyle};
+    font-family: inherit;
     height: ${heightStyle};
     width: ${width};
     line-height: ${lineHeights[1]};

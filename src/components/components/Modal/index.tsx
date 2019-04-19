@@ -16,14 +16,34 @@ import { ModalProps } from "./types";
 
 const Modal = (props: ModalProps) => {
   const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
+  // Main root layout selecting
+  const documentBody: any = document.body;
+  // Get body scroll position
+  const getBodyPosition = () => documentBody.getBoundingClientRect().top;
+  // Get scroll position
+  const scrollPosition = getBodyPosition();
+  // const yPosition = documentBody.getBoundingClientRect().y;
 
   React.useLayoutEffect(() => {
-    // Get original body overflow
-    document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = "15px";
+    if (!documentBody.position) {
+      // Prevent main layout scroll to top on open modal
+      documentBody.style = `
+        top: ${scrollPosition}px;
+        position: fixed;
+        width: 100%;
+        padding-right: 15px;
+      `;
+
+      // if (yPosition < 0) {
+      //   documentBody.style.paddingRight = "15px";
+      // }
+    }
 
     return () => {
-      document.body.removeAttribute("style");
+      // Remove style attribute
+      documentBody.removeAttribute("style");
+      // Set scroll position
+      window.scrollBy(0, -scrollPosition);
     };
   }, []);
 

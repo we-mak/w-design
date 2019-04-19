@@ -31,7 +31,6 @@ export const ModalContainer = styled.div<ModalContainerStyleProps>`
   position: absolute;
   top: 0;
   margin: 1rem auto;
-
   max-width: ${props => {
     if (props.size === "large") {
       return `960px;`;
@@ -40,7 +39,7 @@ export const ModalContainer = styled.div<ModalContainerStyleProps>`
     }
     return `680px`;
   }};
-
+  font-family: ${props => `${props.theme.fonts["normal"]}px`};
   width: 100%;
   z-index: 1;
   animation: ${slideDown} 0.3s ease 1;

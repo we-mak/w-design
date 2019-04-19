@@ -111,7 +111,7 @@ const getLoadingState = (props: ButtonProps) => {
 };
 
 export function getButtonStyle(props: ButtonProps) {
-  const { fontSizes, lineHeights, colors, radii, space } = props.theme;
+  const { fontSizes, fonts, lineHeights, colors, radii, space } = props.theme;
   const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
 
   // fluid button
@@ -191,6 +191,7 @@ export function getButtonStyle(props: ButtonProps) {
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};
+    font-family: ${fonts["normal"]};
     border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
     background: ${colors[bgStyle]};
     border-color: ${colors[borderStyle]};

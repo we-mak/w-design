@@ -51,6 +51,7 @@ const ButtonPage = () => {
         <h4>Appearance</h4>
         <ButtonGroup>
           <Button>Default button</Button>
+          <Button appearance="primary">Primary button</Button>
           <Button appearance="danger">Danger button</Button>
           <Button appearance="warning">Warning button</Button>
           <Button appearance="success">Success button</Button>

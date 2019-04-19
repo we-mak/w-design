@@ -1,5 +1,5 @@
 import React from "react";
-import { Typo, Container } from "w-design";
+import { Typo, Container, Flexbox } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -33,6 +33,94 @@ const ContainerPage = () => {
       </CodeBlock>
 
       <Typo appearance="h1">Flexbox</Typo>
+
+      <Container>
+        <Flexbox>
+          <Flexbox.Column width={1} bg="N2">
+            width 1
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 2} bg="N3">
+            width 1/2
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 4} bg="N4">
+            width 1/4
+          </Flexbox.Column>
+          <Flexbox.Column width={1 / 3} bg="N2">
+            width 1/3
+          </Flexbox.Column>
+        </Flexbox>
+      </Container>
+
+      <Typo appearance="h3">Gapless</Typo>
+      <Container>
+        <Flexbox gapless>
+          <Flexbox.Column width={1} bg="N2">
+            width 1
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 2} bg="N3">
+            width 1/2
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 4} bg="N4">
+            width 1/4
+          </Flexbox.Column>
+          <Flexbox.Column width={1 / 3} bg="N2">
+            width 1/3
+          </Flexbox.Column>
+        </Flexbox>
+      </Container>
+
+      <Typo appearance="h3">One line</Typo>
+      <Container>
+        <Flexbox oneline>
+          <Flexbox.Column width={1} bg="N2">
+            width 1
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 2} bg="N3">
+            width 1/2
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 4} bg="N4">
+            width 1/4
+          </Flexbox.Column>
+          <Flexbox.Column width={1 / 3} bg="N2">
+            width 1/3
+          </Flexbox.Column>
+        </Flexbox>
+      </Container>
+
+      <Typo appearance="h3">Custom</Typo>
+      <Container>
+        <Flexbox justifyContent="space-between">
+          <Flexbox.Column width={1} bg="N2">
+            width 1
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 2} bg="N3" m="auto">
+            width 1/2, m="auto"
+          </Flexbox.Column>
+
+          <Flexbox.Column width={1 / 4} bg="N4">
+            width 1/4
+          </Flexbox.Column>
+          <Flexbox.Column width={1 / 3} bg="N2">
+            width 1/3
+          </Flexbox.Column>
+        </Flexbox>
+      </Container>
+
+      <Typo appearance="h3">Responsive Column</Typo>
+      <Container>
+        <Flexbox>
+          <Flexbox.Column width={[1, 1 / 2, 1 / 3, 1 / 4]}>Column 1</Flexbox.Column>
+          <Flexbox.Column width={[1, 1 / 2, 1 / 3, 1 / 4, 1]}>Column 2</Flexbox.Column>
+        </Flexbox>
+      </Container>
+      <br />
       <Typo appearance="h1">DisplayElement</Typo>
     </>
   );

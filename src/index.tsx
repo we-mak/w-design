@@ -18,5 +18,6 @@ export { default as Typo } from "./components/elements/Typo";
 export { default as Card } from "./components/components/Card";
 export { default as InputForm } from "./components/components/InputForm";
 export { default as FormGroup } from "./components/components/FormGroup";
+export { default as Menu } from "./components/components/Menu/Menu";
 export { default as Modal } from "./components/components/Modal";
 export { default as Navbar } from "./components/components/Navbar";

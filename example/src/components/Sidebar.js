@@ -1,9 +1,10 @@
 import React from "react";
+import { Menu } from "w-design";
 import { Link } from "@reach/router";
 
 export const Sidebar = () => {
   return (
-    <ul>
+    <Menu>
       <li>
         <Link to="/">Introduction</Link>
       </li>
@@ -34,6 +35,6 @@ export const Sidebar = () => {
       <li>
         <Link to="/spinner">Spinner</Link>
       </li>
-    </ul>
+    </Menu>
   );
 };

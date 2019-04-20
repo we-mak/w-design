@@ -15,14 +15,13 @@ import SpinnerPage from "./pages/SpinnerPage";
 
 const NavWrapper = styled.div`
   display: block;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   box-shadow: ${props => props.theme.shadows[1]};
 `;
-
 
 function App() {
   return (
@@ -42,28 +41,27 @@ function App() {
         </Container>
       </NavWrapper>
 
-        <Container p={5} bg={"N1"}>
-          <Flexbox>
-            <Flexbox.Column width={1 / 4}>
-              <Sidebar />
-            </Flexbox.Column>
-            <Flexbox.Column width={3 / 4}>
-              <Suspense fallback={<div>Loading...</div>}>
-                <Router>
-                  <Intro path="/" />
-                  <Start path="/start" />
-                  <AvatarPage path="/avatar" />
-                  <ButtonPage path="/button" />
-                  <LayoutPage path="/layout" />
-                  <ModalPage path="/modal" />
-                  <FormPage path="/form" />
-                  <SpinnerPage path="/spinner" />
-                </Router>
-              </Suspense>
-            </Flexbox.Column>
-          </Flexbox>
-        </Container>
-
+      <Container p={3} bg={"N1"}>
+        <Flexbox mt="80px">
+          <Flexbox.Column width={1 / 4}>
+            <Sidebar />
+          </Flexbox.Column>
+          <Flexbox.Column width={3 / 4}>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Router>
+                <Intro path="/" />
+                <Start path="/start" />
+                <AvatarPage path="/avatar" />
+                <ButtonPage path="/button" />
+                <LayoutPage path="/layout" />
+                <ModalPage path="/modal" />
+                <FormPage path="/form" />
+                <SpinnerPage path="/spinner" />
+              </Router>
+            </Suspense>
+          </Flexbox.Column>
+        </Flexbox>
+      </Container>
     </Provider>
   );
 }

@@ -1,16 +1,26 @@
 import * as React from "react";
 import styled from "styled-components";
 import { MenuProps, MenuItemProps } from "./types";
-import { MenuStyle, MenuItemStyle } from "./Styled";
+import { MenuStyle, MenuItemStyle, MenuItemAfter, IconBefore } from "./Styled";
 
-const Menu = styled(({ children, ...rest }: MenuProps) => {
-  return <ul {...rest}>{children}</ul>;
+const Menu = styled(({ children, className, id, ...rest }: MenuProps) => {
+  return (
+    <ul className={className} id={id} {...rest}>
+      {children}
+    </ul>
+  );
 })`
   ${MenuStyle}
 `;
 
-const MenuItem = styled(({ children }: MenuItemProps) => {
-  return <li>{children}</li>;
+const MenuItem = styled(({ children, className, id, iconBefore, after }: MenuItemProps) => {
+  return (
+    <li className={className} id={id}>
+      {iconBefore && <IconBefore>{iconBefore}</IconBefore>}
+      {children}
+      {after && <MenuItemAfter>{after}</MenuItemAfter>}
+    </li>
+  );
 })`
   ${MenuItemStyle}
 `;

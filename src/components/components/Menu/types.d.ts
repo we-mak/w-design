@@ -5,4 +5,6 @@ export interface MenuProps extends GlobProps {
 }
 export interface MenuItemProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];
+  after?: React.ReactChild | React.ReactChild[];
+  iconBefore?: React.ReactChild;
 }

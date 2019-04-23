@@ -9,18 +9,23 @@ import babel from "rollup-plugin-babel";
 import path from "path";
 import pkg from "./package.json";
 
+const globals = {
+  react: "React",
+  "styled-components": "styled"
+};
+
 export default {
   input: "src/index.tsx",
   output: [
     {
       file: pkg.main,
       format: "cjs",
-      sourcemap: true
+      globals
     },
     {
       file: pkg.module,
       format: "es",
-      sourcemap: true
+      globals
     }
   ],
   plugins: [
@@ -41,6 +46,5 @@ export default {
       exclude: "node_modules/**"
     }),
     commonjs()
-  ],
-  globals: { "styled-components": "styled" }
+  ]
 };

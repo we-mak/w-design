@@ -1,14 +1,11 @@
 import React from "react";
-import { Menu, MenuItem, Icon } from "w-design";
+import { Menu, MenuItem } from "w-design";
 import { Link } from "@reach/router";
 
 export const Sidebar = () => {
   return (
     <Menu>
-      <MenuItem
-        iconBefore={<Icon className="fas fa-clock" />}
-        after={<Icon className="fas fa-clock" />}
-      >
+      <MenuItem>
         <Link to="/">Introduction</Link>
       </MenuItem>
       <MenuItem>

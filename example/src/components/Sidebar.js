@@ -30,6 +30,9 @@ export const Sidebar = () => {
         <Link to="/nav">Navbar</Link>
       </li>
       <li>
+        <Link to="/menu">Menu</Link>
+      </li>
+      <li>
         <Link to="/button">Portal</Link>
       </li>
       <li>

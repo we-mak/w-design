@@ -67,14 +67,14 @@ const FormPage = () => {
         &nbsp;&nbsp;
         <InputField isWarning placeholder="Warning status" />
       </div>
-      <CodeBlock language="language-js">
-        {`
+      <CodeBlock
+        exampleCode={`
 <InputField placeholder="Normal status" />
 <InputField isError placeholder="Error status" />
 <InputField isValid placeholder="Valid status" />
 <InputField isWarning placeholder="Warning status" />
       `}
-      </CodeBlock>
+      />
       <br />
 
       <Typo appearance="h4">InputField Size</Typo>
@@ -86,13 +86,13 @@ const FormPage = () => {
         <InputField size="sm" placeholder="Small input" />
         &nbsp;&nbsp;
       </div>
-      <CodeBlock language="lang-js">
-        {`
+      <CodeBlock
+        exampleCode={`
 <InputField size="sm" placeholder="Small input" />
 <InputField placeholder="Default input" />
 <InputField size="lg" placeholder="Large input" />
       `}
-      </CodeBlock>
+      />
 
       <br />
       <ReactMarkdown source={inputFieldApi} />
@@ -105,14 +105,14 @@ const FormPage = () => {
       <InputForm label="Icon after" iconAfter="fas fa-user" placeholder="Text..." />
       <InputForm label="Is loading" isLoading placeholder="Text..." />
 
-      <CodeBlock language="lang-js">
-        {`
+      <CodeBlock
+        exampleCode={`
 <InputForm label="Label" hintMessage="Text hint" placeholder="Text..." isRequired />
 <InputForm label="Icon before" iconBefore="fas fa-user" placeholder="Text..." />
 <InputForm label="Icon after" iconAfter="fas fa-user" placeholder="Text..." />
 <InputForm label="Is loading" isLoading placeholder="Text..." />
       `}
-      </CodeBlock>
+      />
       <br />
 
       <ReactMarkdown source={inputFormApi} />

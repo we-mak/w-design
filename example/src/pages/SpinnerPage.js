@@ -16,13 +16,13 @@ const SpinnerPage = () => (
     <Spinner borderColor="green" />
     <Spinner large />
 
-    <CodeBlock language="lang-js">
-      {`
+    <CodeBlock
+      exampleCode={`
 <Spinner />
 <Spinner borderColor="green" />
 <Spinner large />
     `}
-    </CodeBlock>
+    />
 
     <h4>Api</h4>
     <ReactMarkdown source={api} />

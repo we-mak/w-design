@@ -25,12 +25,11 @@ const ContainerPage = () => {
         <div style={{ padding: "1em" }}>Full width container </div>
       </Container>
 
-      <CodeBlock language="lang-js">
-        {`
-        <Container bg="N2">
-          <div style={{ padding: "1em" }}>Full width container </div>
-        </Container>`}
-      </CodeBlock>
+      <CodeBlock
+        exampleCode={`<Container bg="N2">
+  <div style={{ padding: "1em" }}>Full width container </div>
+</Container>`}
+      />
 
       <Typo appearance="h1">Flexbox</Typo>
 

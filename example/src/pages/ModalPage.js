@@ -45,8 +45,8 @@ const ModalPage = () => {
         />
       )}
 
-      <CodeBlock language="language-javascript">
-        {`const BasicModal = () => {
+      <CodeBlock
+        exampleCode={`const BasicModal = () => {
   const [isOpen, setOpen] = useState(false);
 
   const openModal = () => setOpen(true);
@@ -73,7 +73,7 @@ const ModalPage = () => {
       )}
     </>
 };`}
-      </CodeBlock>
+      />
       <p />
       <ReactMarkdown source={api} />
     </>

@@ -44,9 +44,7 @@ const ButtonPage = () => {
       <div>
         <h4>Auto focus</h4>
         <Button autoFocus>Default button</Button>
-        <CodeBlock language="language-javascript">
-          {`<Button autoFocus>Default button</Button>`}
-        </CodeBlock>
+        <CodeBlock exampleCode={`<Button autoFocus>Default button</Button>`} />
         <p />
         <h4>Appearance</h4>
         <ButtonGroup>
@@ -63,8 +61,8 @@ const ButtonPage = () => {
           <Button appearance="link">Link button</Button>
           <Button appearance="clean">Clean button</Button>
         </ButtonGroup>
-        <CodeBlock language="language-javascript">
-          {`
+        <CodeBlock
+          exampleCode={`
 <Button>Default button</Button>
 <Button appearance="danger">Danger button</Button>
 <Button appearance="warning">Warning button</Button>
@@ -74,7 +72,7 @@ const ButtonPage = () => {
 <Button appearance="link">Link button</Button>
 <Button appearance="clean">Clean button</Button>
           `}
-        </CodeBlock>
+        />
       </div>
       <section>
         <p />
@@ -91,15 +89,15 @@ const ButtonPage = () => {
           </Button>
         </ButtonGroup>
 
-        <CodeBlock language="language-javascript">
-          {`
+        <CodeBlock
+          exampleCode={`
 <Button iconBefore="fas fa-atom">Icon Before</Button>
 <Button iconAfter="fas fa-clock">Icon After</Button>
 <Button iconOnly>
   <Icon className="fas fa-thumbs-up" />
 </Button>
         `}
-        </CodeBlock>
+        />
       </section>
       <ReactMarkdown source={api} />
     </>

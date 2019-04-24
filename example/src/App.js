@@ -10,6 +10,7 @@ import AvatarPage from "./pages/AvatarPage";
 import ButtonPage from "./pages/ButtonPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
+import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
 import SpinnerPage from "./pages/SpinnerPage";
 
@@ -55,6 +56,7 @@ function App() {
                 <ButtonPage path="/button" />
                 <LayoutPage path="/layout" />
                 <ModalPage path="/modal" />
+                <MenuPage path="/menu" />
                 <FormPage path="/form" />
                 <SpinnerPage path="/spinner" />
               </Router>

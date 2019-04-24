@@ -6,14 +6,15 @@
   "homepage": "https://we-mak.github.io/w-design/",
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "highlight.js": "^9.15.6",
-    "prismjs": "^1.15.0",
+    "add": "^2.0.6",
+    "prism-react-renderer": "^0.1.6",
     "react": "link:../node_modules/react",
     "react-dom": "^16.8.5",
     "react-markdown": "^4.0.6",
     "react-scripts": "^2.1.8",
     "styled-components": "link:../node_modules/styled-components",
-    "w-design": "link:.."
+    "w-design": "link:..",
+    "yarn": "^1.15.2"
   },
   "scripts": {
     "start": "react-scripts start",

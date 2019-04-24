@@ -22,7 +22,7 @@ const AvatarPage = () => {
       Avatar component represents user profile picture. The presence mark shows user status, it
       could optionally used.
       <Typo appearance="h3">Usage</Typo>
-      <CodeBlock language="lang-js">{`import { Avatar } from "w-design";`}</CodeBlock>
+      <CodeBlock exampleCode={`import { Avatar } from "w-design";`} />
       <Avatar m={1} />
       <Avatar
         m={1}
@@ -55,8 +55,8 @@ const AvatarPage = () => {
         avatarUrl="https://api.adorable.io/avatars/80/vn"
       />
       <Avatar m={1} size="xs" avatarUrl="https://api.adorable.io/avatars/60/kr" />
-      <CodeBlock language="language-js">
-        {`
+      <CodeBlock
+        exampleCode={`
 <Avatar m={1} />
 <Avatar
   m={1}
@@ -90,7 +90,7 @@ const AvatarPage = () => {
 />
 <Avatar m={1} size="xs" avatarUrl="https://api.adorable.io/avatars/60/kr" />
 `}
-      </CodeBlock>
+      />
       <p />
       <Typo appearance="h4">Data init</Typo>
       <p>
@@ -103,8 +103,8 @@ const AvatarPage = () => {
       <Avatar m={1} size="md" dataInitial="Thành Nam" />
       <Avatar m={1} size="sm" dataInitial="Thomas Edison" />
       <Avatar m={1} size="xs" dataInitial="Thomas Edison" />
-      <CodeBlock language="language-js">
-        {`
+      <CodeBlock
+        exampleCode={`
 <Avatar m={1} size="xxl" dataInitial="Thomas Edison" />
 <Avatar m={1} size="xl" dataInitial="Jason mars" />
 <Avatar m={1} size="lg" dataInitial="jimmy hendrix" />
@@ -112,7 +112,7 @@ const AvatarPage = () => {
 <Avatar m={1} size="sm" dataInitial="Thomas Edison" />
 <Avatar m={1} size="xs" dataInitial="Thomas Edison" />
   `}
-      </CodeBlock>
+      />
       <p />
       <Typo appearance="h3">Api</Typo>
       <ReactMarkdown source={avtApi} />

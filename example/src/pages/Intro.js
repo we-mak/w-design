@@ -128,20 +128,19 @@ const Intro = () => {
     <>
       <Typo appearance="h1">Introduction</Typo>
       <ReactMarkdown source={p1} />
-      <CodeBlock language="lang-bash">npm start # runs rollup with watch flag</CodeBlock>
+      <CodeBlock language="bash" exampleCode="npm start # runs rollup with watch flag" />
       First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever
       you make changes.
       <br />
       The second part will be running the example/ create-react-app that's linked to the local
       version of your module.
-      <CodeBlock language="language-bash">
-        {`
-  # (in another tab)
-  cd example
-  # runs create-react-app dev server
-  npm start
-        `}
-      </CodeBlock>
+      <CodeBlock
+        language="bash"
+        exampleCode={`# (in another tab)
+cd example
+# runs create-react-app dev server
+npm start`}
+      />
       Now, anytime you make a change to your library in src/ or to the example app's example/src,
       create-react-app will live-reload your local dev server so you can iterate on your component
       in real-time.

@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, MenuItem, Icon, Typo } from "w-design";
+import { Menu, MenuItem, MenuHeading, Icon, Typo, Divider } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -23,6 +23,9 @@ const MenuPage = () => {
         </MenuItem>
         <MenuItem iconBefore={<Icon className="fas fa-user-astronaut" />}>Item 2</MenuItem>
         <MenuItem iconBefore={<Icon className="fas fa-edit" />}>Item 3</MenuItem>
+        <MenuItem iconBefore={<Icon className="fas fa-paper-plane" />}>Item 4</MenuItem>
+        <Divider customHTMLtag="li" />
+        <MenuHeading>Menu heading</MenuHeading>
         <MenuItem iconBefore={<Icon className="fas fa-paper-plane" />}>Item 4</MenuItem>
       </Menu>
 

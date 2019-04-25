@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import { css } from "styled-components";
 import { hex2Rgba } from "../../../common/styleUtils/utils";
 import { MenuProps, MenuItemProps } from "./types";
 
@@ -18,7 +18,8 @@ export const getMenuStyle = (props: MenuProps) => {
   return css`
     list-style: none;
     margin: 0;
-    padding: 0 0.4rem;
+    padding: 0.4rem;
+    background: ${theme.colors["WHITE"]};
     font-family: ${theme.fonts["normal"]};
     color: ${theme.colors["N70"]};
     min-width: 180px;
@@ -45,7 +46,8 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
       color: ${theme.colors["B60"]};
     }
 
-    &:focus {
+    &:focus,
+    &:active {
       box-shadow: 0 0 0 0.1rem ${hex2Rgba(theme.colors["B20"], 0.3)};
       outline: none;
       > a {
@@ -73,21 +75,3 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
     `}
   `;
 };
-
-export const MenuItemAfter = styled.div`
-  align-items: center;
-  display: flex;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 0 0.4rem;
-`;
-MenuItemAfter.displayName = "AfterItem";
-
-export const IconBefore = styled.span`
-  display: inline;
-  color: ${props => props.theme.colors["N30"]};
-  margin: 0 0.4rem;
-`;
-IconBefore.displayName = "IconBefore";

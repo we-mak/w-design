@@ -44,7 +44,7 @@
     "babel-runtime": "^6.26.0",
     "coveralls": "^3.0.2",
     "cross-env": "^5.1.4",
-    "dom-testing-library": "^3.18.2",
+    "dom-testing-library": "^4.0.0",
     "gh-pages": "^2.0.1",
     "jest": "^24.5.0",
     "jest-cli": "^24.5.0",

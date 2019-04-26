@@ -1,19 +1,20 @@
 import * as React from "react";
 import styled from "styled-components";
-import { MenuProps, MenuItemProps } from "./types";
-import { getMenuStyle, getMenuItemStyle } from "./Styled";
+import { MenuProps, MenuItemProps, SubMenuProps } from "./types";
+import { getMenuStyle, getMenuItemStyle, getSubMenuStyle } from "./Styled";
 
-const Menu: React.FunctionComponent<MenuProps> = styled(
-  ({ children, className, id, fullWidth = false, width, ...rest }) => {
-    return (
-      <ul role="menu" className={className} id={id} {...rest}>
-        {children}
-      </ul>
-    );
-  }
-)`
+const MenuStyled = styled.ul`
   ${getMenuStyle}
 `;
+MenuStyled.displayName = "MenuComponent";
+
+const Menu = ({ children, className, id, fullWidth = false, width, ...rest }: MenuProps) => {
+  return (
+    <MenuStyled role="menu" className={className} id={id} width={width} {...rest}>
+      {children}
+    </MenuStyled>
+  );
+};
 
 const MenuItemAfter = styled.div`
   align-items: center;
@@ -46,6 +47,7 @@ const MenuItem = styled(
 )`
   ${getMenuItemStyle}
 `;
+MenuItem.displayName = "MenuItem";
 
 const MenuHeading = styled.li`
   flex-grow: 1;
@@ -63,9 +65,68 @@ const MenuHeading = styled.li`
 `;
 MenuHeading.displayName = "MenuHeading";
 
-const SubMenu = () => {
-  return <li>submenu</li>;
-};
+const SubMenuTitle = styled.div`
+  padding: 0.4rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &:hover {
+    color: ${props => props.theme.colors["B50"]};
+    * {
+      color: ${props => props.theme.colors["B50"]};
+    }
+  }
+`;
+SubMenuTitle.displayName = "SubMenuTitle";
+
+const Arrow = styled(props => (
+  <span {...props}>
+    <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+      <path
+        d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+        fill="currentColor"
+      />
+    </svg>
+  </span>
+))`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 0.4rem;
+  ${props => props.isOpen && `transform: rotate(180deg)`}
+`;
+
+const SubList = styled.ul`
+  padding: 0;
+  display: ${(props: SubMenuProps) => (props.isOpen ? "block" : "none")};
+  li {
+    padding-left: 2rem;
+  }
+`;
+SubList.displayName = "SubList";
+
+const SubMenu: React.FunctionComponent<SubMenuProps> = styled(
+  ({ title, icon, isOpen, children, ...rest }) => {
+    const [open, setOpen] = React.useState(false);
+
+    return (
+      <li {...rest} onClick={() => setOpen(!open)}>
+        <SubMenuTitle>
+          {icon && <IconBefore>{icon}</IconBefore>}
+          {title} <Arrow />
+        </SubMenuTitle>
+        <SubList role="menu">{children}</SubList>
+      </li>
+    );
+  }
+)`
+  ${getSubMenuStyle}
+`;
+SubMenu.displayName = "SubMenu";
 
 export default Menu;
 export { MenuItem, SubMenu, MenuHeading };

@@ -75,3 +75,12 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
     `}
   `;
 };
+
+export const getSubMenuStyle = () => {
+  return css`
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+  `;
+};

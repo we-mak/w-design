@@ -11,3 +11,10 @@ export interface MenuItemProps extends GlobProps {
   iconBefore?: React.ReactChild;
   isSelected?: boolean;
 }
+
+export interface SubMenuProps extends GlobProps {
+  title?: string;
+  isOpen?: boolean;
+  icon?: React.ReactChild;
+  children?: React.ReactChild | React.ReactChild[];
+}

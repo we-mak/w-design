@@ -80,16 +80,7 @@ const SubMenuTitle = styled.div`
 `;
 SubMenuTitle.displayName = "SubMenuTitle";
 
-const Arrow = styled(props => (
-  <span {...props}>
-    <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
-      <path
-        d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
-        fill="currentColor"
-      />
-    </svg>
-  </span>
-))`
+const ArrowStyled = styled.span`
   align-items: center;
   display: flex;
   height: 100%;
@@ -97,8 +88,22 @@ const Arrow = styled(props => (
   right: 0;
   top: 0;
   margin: 0 0.4rem;
-  ${props => props.isOpen && `transform: rotate(180deg)`}
+  transition: transform 0.3s ${(props: SubMenuProps) => props.theme.transition[0]};
+  will-change: transform;
+  ${(props: SubMenuProps) => props.isOpen && `transform: rotate(-180deg);`}
 `;
+ArrowStyled.displayName = "ArrowComponent";
+
+const Arrow = (props: SubMenuProps) => (
+  <ArrowStyled {...props}>
+    <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+      <path
+        d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+        fill="currentColor"
+      />
+    </svg>
+  </ArrowStyled>
+);
 
 const SubList = styled.ul`
   padding: 0;
@@ -109,23 +114,33 @@ const SubList = styled.ul`
 `;
 SubList.displayName = "SubList";
 
-const SubMenu: React.FunctionComponent<SubMenuProps> = styled(
-  ({ title, icon, isOpen, children, ...rest }) => {
-    const [open, setOpen] = React.useState(false);
-
-    return (
-      <li {...rest} onClick={() => setOpen(!open)}>
-        <SubMenuTitle>
-          {icon && <IconBefore>{icon}</IconBefore>}
-          {title} <Arrow />
-        </SubMenuTitle>
-        <SubList role="menu">{children}</SubList>
-      </li>
-    );
-  }
-)`
+const SubMenuStyled = styled.li`
   ${getSubMenuStyle}
 `;
+
+SubMenuStyled.displayName = "SubMenuComponent";
+
+const SubMenu: React.FunctionComponent<SubMenuProps> = ({
+  title,
+  icon,
+  isOpen,
+  children,
+  ...rest
+}) => {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <SubMenuStyled {...rest}>
+      <SubMenuTitle onClick={() => setOpen(!open)}>
+        {icon && <IconBefore>{icon}</IconBefore>}
+        {title} <Arrow isOpen={open} />
+      </SubMenuTitle>
+      <SubList role="menu" isOpen={open}>
+        {children}
+      </SubList>
+    </SubMenuStyled>
+  );
+};
 SubMenu.displayName = "SubMenu";
 
 export default Menu;

@@ -40,6 +40,9 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
     align-items: center;
     text-decoration: none;
     border-radius: ${theme.radii[1]};
+    &:hover {
+      cursor: pointer;
+    }
     &:hover,
     &:focus {
       background-color: ${hex2Rgba(theme.colors["B5"], 0.3)};
@@ -79,6 +82,9 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
 export const getSubMenuStyle = () => {
   return css`
     width: 100%;
+    display: block;
+    position: relative;
+    will-change: transform;
     &:hover {
       cursor: pointer;
     }

@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { MenuProps, MenuItemProps, SubMenuProps } from "./types";
 import { getMenuStyle, getMenuItemStyle, getSubMenuStyle } from "./Styled";
+import { Arrow } from "./Arrow";
 
 const MenuStyled = styled.ul`
   ${getMenuStyle}
@@ -34,20 +35,20 @@ const IconBefore = styled.span`
 `;
 IconBefore.displayName = "IconBefore";
 
-const MenuItem = styled(
-  ({ children, className, id, iconBefore, after, isSelected, ...rest }: MenuItemProps) => {
-    return (
-      <li role="menuitem" className={className} id={id} {...rest}>
-        {iconBefore && <IconBefore>{iconBefore}</IconBefore>}
-        {children}
-        {after && <MenuItemAfter>{after}</MenuItemAfter>}
-      </li>
-    );
-  }
-)`
+const MenuItemStyled = styled.li`
   ${getMenuItemStyle}
 `;
-MenuItem.displayName = "MenuItem";
+MenuItemStyled.displayName = "MenuItemComponent";
+
+const MenuItem = ({ children, iconBefore, after, isSelected, ...rest }: MenuItemProps) => {
+  return (
+    <MenuItemStyled role="menuitem" {...rest}>
+      {iconBefore && <IconBefore>{iconBefore}</IconBefore>}
+      {children}
+      {after && <MenuItemAfter>{after}</MenuItemAfter>}
+    </MenuItemStyled>
+  );
+};
 
 const MenuHeading = styled.li`
   flex-grow: 1;
@@ -80,34 +81,15 @@ const SubMenuTitle = styled.div`
 `;
 SubMenuTitle.displayName = "SubMenuTitle";
 
-const ArrowStyled = styled.span`
-  align-items: center;
-  display: flex;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 0 0.4rem;
-  transition: transform 0.3s ${(props: SubMenuProps) => props.theme.transition[0]};
-  will-change: transform;
-  ${(props: SubMenuProps) => props.isOpen && `transform: rotate(-180deg);`}
-`;
-ArrowStyled.displayName = "ArrowComponent";
-
-const Arrow = (props: SubMenuProps) => (
-  <ArrowStyled {...props}>
-    <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
-      <path
-        d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
-        fill="currentColor"
-      />
-    </svg>
-  </ArrowStyled>
-);
-
 const SubList = styled.ul`
   padding: 0;
-  display: ${(props: SubMenuProps) => (props.isOpen ? "block" : "none")};
+  position: relative;
+  display: block;
+  opacity: ${(props: SubMenuProps) => (props.isOpen ? 1 : 0)};
+  transition: height 0.3s cubic-bezier(0.5, 0.045, 0.4, 1),
+    opacity 0.3s cubic-bezier(0.5, 0.045, 0.4, 1);
+  will-change: height;
+  will-change: opacity;
   li {
     padding-left: 2rem;
   }
@@ -128,14 +110,47 @@ const SubMenu: React.FunctionComponent<SubMenuProps> = ({
   ...rest
 }) => {
   const [open, setOpen] = React.useState(false);
+  const [listStyle, setListStyle] = React.useState({});
+
+  // Use sub menu title as a marker
+  // to apply the result height of sub menu list
+  const menuRef = React.useRef(null);
+  const titleRef = React.useRef(null);
+
+  const getMenuHeight = () => {
+    const menuNode: HTMLElement = menuRef!.current!;
+    const titleNode: HTMLElement = titleRef!.current!;
+
+    return menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height;
+  };
+
+  React.useEffect(() => {
+    requestAnimationFrame(() =>
+      setListStyle({
+        height: open ? getMenuHeight() : 0
+      })
+    );
+
+    return () => setListStyle({});
+  }, [open]);
+
+  const onToggleMenu = () => {
+    requestAnimationFrame(() =>
+      setListStyle({
+        height: open ? getMenuHeight() : 0
+      })
+    );
+
+    setOpen(!open);
+  };
 
   return (
-    <SubMenuStyled {...rest}>
-      <SubMenuTitle onClick={() => setOpen(!open)}>
+    <SubMenuStyled ref={menuRef} {...rest}>
+      <SubMenuTitle onClick={onToggleMenu} ref={titleRef}>
         {icon && <IconBefore>{icon}</IconBefore>}
         {title} <Arrow isOpen={open} />
       </SubMenuTitle>
-      <SubList role="menu" isOpen={open}>
+      <SubList role="menu" isOpen={open} style={listStyle}>
         {children}
       </SubList>
     </SubMenuStyled>

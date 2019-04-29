@@ -6,7 +6,7 @@ export interface MenuProps extends GlobProps {
   width: string | number;
 }
 export interface MenuItemProps extends GlobProps {
-  children?: React.ReactChild | React.ReactChild[];
+  children?: any;
   after?: React.ReactChild | React.ReactChild[];
   iconBefore?: React.ReactChild;
   isSelected?: boolean;

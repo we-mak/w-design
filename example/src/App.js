@@ -43,7 +43,7 @@ function App() {
       </NavWrapper>
 
       <Container p={3} bg={"N1"}>
-        <Flexbox mt="80px">
+        <Flexbox mt="80px" mb="200px">
           <Flexbox.Column width={1 / 4}>
             <Sidebar />
           </Flexbox.Column>

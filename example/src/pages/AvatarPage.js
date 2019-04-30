@@ -4,15 +4,26 @@ import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
 const avtApi = `
-| Props       | Type   | default  | description |
-| ----------- | ------ | -------- | ----------- |
-| size        | string | "md"     |             |
-| presence    | string | N/A      |             |
-| avatarUrl   | string |          |             |
-| dataInitial | string | "We mak" |             |
-| alt         | string |          |             |
+| Props       | Type                                        | default | description                     |
+| ----------- | ------------------------------------------- | ------- | ------------------------------- |
+| size        | string: "xs", "sm", "md", "lg", "xl", "xxl" | "md"    | size of avatar                  |
+| presence    | string: "online", "offline", "busy"         | N/A     | mark of user status             |
+| avatarUrl   | string                                      |         |                                 |
+| dataInitial | string                                      | "WM"    | initial data name inside avatar |
+| alt         | string                                      |         | alt attribute                   |
+
 
 Avatar is extended with props [space](https://styled-system.com/api#space) from **styled-system**.
+`;
+
+const avtGroupApi = `
+Inherit all props from \`Avatar\`
+
+| Props       | Type                     | default | description              |
+| ----------- | ------------------------ | ------- | ------------------------ |
+| name        | string                   |         | name of avatar           |
+| description | string, ReactChild       |         | avatar group description |
+| actions     | ReactChild, ReactChild[] |         | avatar group actions     |
 `;
 
 const AvatarPage = () => {
@@ -139,6 +150,28 @@ const AvatarPage = () => {
           }
         />
       </div>
+      <CodeBlock
+        exampleCode={`
+  <AvatarGroup
+    avatarUrl="https://api.adorable.io/avatars/80/vn"
+    name="Hello world"
+    description={
+      <div>
+        This is the description of the avatar, can be apply with string or react child
+      </div>
+    }
+    actions={
+      <ButtonGroup>
+        <Button appearance="primary">Message</Button>
+        <Button>More</Button>
+      </ButtonGroup>
+    }
+  />
+      `}
+      />
+      <p />
+      <Typo appearance="h3">Api</Typo>
+      <ReactMarkdown source={avtGroupApi} />
     </>
   );
 };

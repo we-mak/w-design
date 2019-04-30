@@ -4,10 +4,11 @@ import { SubMenuProps } from "./types";
 import { getSubMenuStyle } from "./Styled";
 import { Arrow } from "./Arrow";
 import { IconBefore } from "./MenuItem";
+import Spinner from "../../elements/Spinner";
 /**
  * Sub Menu
  * */
-// title
+// titleSpinner
 const SubMenuTitle = styled.div`
   padding: 0.4rem;
   position: relative;
@@ -29,7 +30,7 @@ const SubList = styled.ul`
   display: block;
   opacity: ${(props: SubMenuProps) => (props.isOpen ? 1 : 0)};
   transition: height 0.3s cubic-bezier(0.5, 0.045, 0.4, 1),
-    opacity 0.3s cubic-bezier(0.5, 0.045, 0.4, 1);
+    opacity 0.2s cubic-bezier(0.5, 0.045, 0.4, 1);
   will-change: height;
   will-change: opacity;
   li {
@@ -37,6 +38,19 @@ const SubList = styled.ul`
   }
 `;
 SubList.displayName = "SubList";
+
+// Loading
+const Loader = styled(Spinner)`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 0.4rem;
+  padding: 0 0.6rem;
+`;
+Loader.displayName = "Loader";
 
 /**
  * Submenu Container
@@ -50,6 +64,8 @@ export const SubMenu: React.FunctionComponent<SubMenuProps> = ({
   title,
   icon,
   isOpen,
+  isLoading,
+  onLoadingList,
   children,
   ...rest
 }) => {
@@ -85,14 +101,15 @@ export const SubMenu: React.FunctionComponent<SubMenuProps> = ({
       })
     );
 
-    setOpen(!open);
+    return setOpen(!open);
   };
 
   return (
     <SubMenuStyled ref={menuRef} {...rest}>
-      <SubMenuTitle onClick={onToggleMenu} ref={titleRef}>
+      <SubMenuTitle onClick={onToggleMenu} onFocus={onLoadingList} ref={titleRef}>
         {icon && <IconBefore>{icon}</IconBefore>}
-        {title} <Arrow isOpen={open} />
+        {title}
+        {isLoading ? <Loader /> : <Arrow isOpen={open} />}
       </SubMenuTitle>
       <SubList role="menu" isOpen={open} style={listStyle}>
         {children}

@@ -29,7 +29,7 @@ export const getMenuStyle = (props: MenuProps) => {
 };
 
 export const getMenuItemStyle = (props: MenuItemProps) => {
-  const { theme, isSelected } = props;
+  const { theme, isSelected, disabled } = props;
 
   return css`
     margin-top: 0;
@@ -40,6 +40,15 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
     align-items: center;
     text-decoration: none;
     border-radius: ${theme.radii[1]};
+    ${disabled
+      ? `
+    background-color: ${hex2Rgba(theme.colors["N10"], 0.3)};
+    &:hover {
+      cursor: not-allowed;
+    }
+    opacity: .5;
+    `
+      : `
     &:hover {
       cursor: pointer;
     }
@@ -48,6 +57,7 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
       background-color: ${hex2Rgba(theme.colors["B5"], 0.3)};
       color: ${theme.colors["B60"]};
     }
+    `}
 
     &:focus,
     &:active {

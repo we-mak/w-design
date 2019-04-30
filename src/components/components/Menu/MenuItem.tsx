@@ -1,10 +1,11 @@
 /**
  * Menu Item & elements
  * */
- import * as React from "react";
+import * as React from "react";
 import styled from "styled-components";
- import {  MenuItemProps,  } from "./types";
- import {  getMenuItemStyle} from "./Styled";
+import { MenuItemProps } from "./types";
+import { MenuContext } from "./MenuContext";
+import { getMenuItemStyle } from "./Styled";
 
 const MenuItemAfter = styled.div`
   align-items: center;
@@ -29,9 +30,13 @@ const MenuItemStyled = styled.li`
 `;
 MenuItemStyled.displayName = "MenuItemComponent";
 
-export const MenuItem = ({ children, iconBefore, after, isSelected, ...rest }: MenuItemProps) => {
+export const MenuItem = ({ children, iconBefore, after, ...rest }: MenuItemProps) => {
+  const context = React.useContext(MenuContext);
+
+  console.log(context);
+
   return (
-    <MenuItemStyled role="menuitem" {...rest}>
+    <MenuItemStyled role="menuitem" onClick={e => context.onSelectItem(e)} {...rest}>
       {iconBefore && <IconBefore>{iconBefore}</IconBefore>}
       {children}
       {after && <MenuItemAfter>{after}</MenuItemAfter>}

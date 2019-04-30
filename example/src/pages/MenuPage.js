@@ -8,6 +8,68 @@ const api = `
 
 `;
 
+const Example1 = () => {
+  const subList1 = [
+    {
+      key: "5",
+      title: "Item 5"
+    },
+    {
+      key: "6",
+      title: "Item 6"
+    },
+    {
+      key: "7",
+      title: "Item 7"
+    }
+  ];
+
+  const subList2 = [
+    {
+      key: "8",
+      title: "Item 8"
+    },
+    {
+      key: "9",
+      title: "Item 9"
+    },
+    {
+      key: "10",
+      title: "Item 10"
+    }
+  ];
+
+  return (
+    <Menu defaultSelectedKey="1">
+      <MenuItem key="1" iconBefore={<Icon className="fas fa-user" />} after={<div>info</div>}>
+        Item 1
+      </MenuItem>
+      <MenuItem key="2" iconBefore={<Icon className="fas fa-user-astronaut" />}>
+        Item 2
+      </MenuItem>
+      <MenuItem key="3" iconBefore={<Icon className="fas fa-edit" />} disabled>
+        Item 3
+      </MenuItem>
+      <MenuItem key="4" iconBefore={<Icon className="fas fa-paper-plane" />}>
+        Item 4
+      </MenuItem>
+      <Divider customHTMLtag="li" />
+      <MenuHeading>Menu heading</MenuHeading>
+      <SubMenu icon={<Icon className="fas fa-cog" />} title="Submenu title 1">
+        {subList1.map(item => (
+          <MenuItem key={item.key}>{item.title}</MenuItem>
+        ))}
+      </SubMenu>
+
+      <SubMenu icon={<Icon className="fas fa-mail" />} title="Submenu title 2">
+        {subList2.map(item => (
+          <MenuItem key={item.key}>{item.title}</MenuItem>
+        ))}
+      </SubMenu>
+    </Menu>
+  );
+};
+
 const MenuPage = () => {
   return (
     <>
@@ -17,21 +79,8 @@ const MenuPage = () => {
       <Typo appearance="h3">Usage</Typo>
       <CodeBlock exampleCode={`import { Menu, MenuItem } from "w-design";`} />
       <Typo appearance="h4">Example</Typo>
-      <Menu>
-        <MenuItem iconBefore={<Icon className="fas fa-user" />} after={<div>info</div>} isSelected>
-          Item 1
-        </MenuItem>
-        <MenuItem iconBefore={<Icon className="fas fa-user-astronaut" />}>Item 2</MenuItem>
-        <MenuItem iconBefore={<Icon className="fas fa-edit" />}>Item 3</MenuItem>
-        <MenuItem iconBefore={<Icon className="fas fa-paper-plane" />}>Item 4</MenuItem>
-        <Divider customHTMLtag="li" />
-        <MenuHeading>Menu heading</MenuHeading>
-        <SubMenu icon={<Icon className="fas fa-cog" />} title="Submenu title">
-          <MenuItem>Item 5</MenuItem>
-          <MenuItem>Item 6</MenuItem>
-          <MenuItem>Item 7</MenuItem>
-        </SubMenu>
-      </Menu>
+
+      <Example1 />
 
       <CodeBlock
         exampleCode={`<Menu>

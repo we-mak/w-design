@@ -33,8 +33,6 @@ MenuItemStyled.displayName = "MenuItemComponent";
 export const MenuItem = ({ children, iconBefore, after, ...rest }: MenuItemProps) => {
   const context = React.useContext(MenuContext);
 
-  console.log(context);
-
   return (
     <MenuItemStyled role="menuitem" onClick={e => context.onSelectItem(e)} {...rest}>
       {iconBefore && <IconBefore>{iconBefore}</IconBefore>}

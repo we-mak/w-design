@@ -1,5 +1,5 @@
 import React from "react";
-import { Typo, Avatar } from "w-design";
+import { Typo, Avatar, AvatarGroup, Button, ButtonGroup } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -23,6 +23,7 @@ const AvatarPage = () => {
       could optionally used.
       <Typo appearance="h3">Usage</Typo>
       <CodeBlock exampleCode={`import { Avatar } from "w-design";`} />
+      <Typo appearance="h3">Example</Typo>
       <Avatar m={1} />
       <Avatar
         m={1}
@@ -116,6 +117,28 @@ const AvatarPage = () => {
       <p />
       <Typo appearance="h3">Api</Typo>
       <ReactMarkdown source={avtApi} />
+      <p />
+      <Typo appearance="h1">Avatar Group</Typo>
+      <Typo appearance="h3">Usage</Typo>
+      <CodeBlock exampleCode={`import { AvatarGroup } from "w-design";`} />
+      <Typo appearance="h3">Example</Typo>
+      <div style={{ maxWidth: "600px" }}>
+        <AvatarGroup
+          avatarUrl="https://api.adorable.io/avatars/80/vn"
+          name="Hello world"
+          description={
+            <div>
+              This is the description of the avatar, can be apply with string or react child
+            </div>
+          }
+          actions={
+            <ButtonGroup>
+              <Button appearance="primary">Message</Button>
+              <Button>More</Button>
+            </ButtonGroup>
+          }
+        />
+      </div>
     </>
   );
 };

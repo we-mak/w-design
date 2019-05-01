@@ -8,6 +8,7 @@ export interface CardProps extends GlobProps {
 export interface CardMediaProps extends GlobProps {
   // image cover url
   imageUrl?: string;
+  children?: React.ReactChild;
 }
 
 export interface CardHeaderProps extends GlobProps {

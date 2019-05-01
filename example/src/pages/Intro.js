@@ -18,24 +18,23 @@ Feel free to use this library, or help us to improve.
 
 ## Features list
 
-
 | Layout            | Elements               | Components       |
 | ----------------- | ---------------------- | ---------------- |
 | ✅ ThemeProvider  | ✅ Button              | ❌ ProgressSteps |
-| ✅ Container      | ✅ InputField          | ❌ AvatarGroup   |
-| ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar        |
+| ✅ Container      | ✅ InputField          | ✅ AvatarGroup   |
+| ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar        |
 | ✅ DisplayElement | ❌ Label               | ❌Badges         |
-| ❌ Masonry        | ❌ Image               | ❌Arcordion      |
+| ❌ Masonry        | ❌ Image               | ❌Collapsible    |
 |                   | ✅ Spinner             | ❌ Breadcrumbs   |
-|                   | ❌ Panel               | ❌ Card          |
+|                   | ❌ Panel               | ✅ Card          |
 |                   | ❌ Table               | ❌ Chip          |
-|                   | ❌ List                | ❌ Menu          |
-|                   | ❌ Divider             | ✅ Modal         |
+|                   | ❌ List                | 🖌 Menu           |
+|                   | ✅ Divider             | ✅ Modal         |
 |                   | ❌ ProgressLoader      | ❌ Dropdown      |
-|                   | ✅ Portal              | ❌ Sidebar       |
+|                   | ✅ Portal              | ❌ Drawer        |
 |                   | ✅ Avatar              | ❌ Steps         |
 |                   | ❌ Toggle              | ❌ Tabs          |
-|                   | ❌ TextArea            | ❌ PushMessage   |
+|                   | ✅ TextArea            | ❌ PushMessage   |
 |                   | ❌ InlineMessage       | ❌ Tooltip       |
 |                   | ✅ Typo                | ❌ Popover       |
 |                   | ✅ Icon (Font awesome) | ❌ Comment       |

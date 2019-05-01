@@ -5,10 +5,12 @@ import {
   Flexbox,
   AvatarGroup,
   Button,
+  ButtonGroup,
   Card,
   CardMedia,
   CardHeader,
-  CardContent
+  CardContent,
+  CardFooter
 } from "w-design";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -57,6 +59,13 @@ const CardPage = () => (
             A safari is an overland journey, usually a trip by tourists in Africa. In the past, the
             trip was often a big-game hunt, but today, safaris are often to observe
           </CardContent>
+
+          <CardFooter>
+            <ButtonGroup>
+              <Button appearance="primary">Primary action</Button>
+              <Button>Secodary action</Button>
+            </ButtonGroup>
+          </CardFooter>
         </Card>
       </Flexbox.Column>
     </Flexbox>

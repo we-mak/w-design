@@ -23,10 +23,11 @@ const CoverImage = styled.img`
 `;
 CoverImage.displayName = "CoverImage";
 
-export const CardMedia = ({ imageUrl, ...rest }: CardMediaProps) => {
+export const CardMedia = ({ imageUrl, children, ...rest }: CardMediaProps) => {
   return (
     <CardMediaWrapper {...rest}>
-      <CoverImage src={imageUrl} />
+      {imageUrl && <CoverImage src={imageUrl} />}
+      {children}
     </CardMediaWrapper>
   );
 };

@@ -36,5 +36,10 @@ const Card = ({ children, ...rest }: CardProps) => {
   return <CardWrapper {...rest}>{children}</CardWrapper>;
 };
 
+const CardFooter = styled.div`
+  padding: 0.8rem;
+`;
+CardFooter.displayName = "CardFooter";
+
 export default Card;
-export { CardMedia, CardHeader, CardContent };
+export { CardMedia, CardHeader, CardContent, CardFooter };

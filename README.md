@@ -111,17 +111,17 @@ Cover basic components
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup   |
 | ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar        |
 | ✅ DisplayElement | ❌ Label               | ❌Badges         |
-| ❌ Masonry        | ❌ Image               | ❌Arcordion      |
+| ❌ Masonry        | ❌ Image               | ❌Collapsible    |
 |                   | ✅ Spinner             | ❌ Breadcrumbs   |
-|                   | ❌ Panel               | 🖌 Card           |
+|                   | ❌ Panel               | ✅ Card          |
 |                   | ❌ Table               | ❌ Chip          |
-|                   | ❌ List                | ❌ Menu          |
-|                   | ❌ Divider             | ✅ Modal         |
+|                   | ❌ List                | 🖌 Menu           |
+|                   | ✅ Divider             | ✅ Modal         |
 |                   | ❌ ProgressLoader      | ❌ Dropdown      |
-|                   | ✅ Portal              | ❌ Sidebar       |
+|                   | ✅ Portal              | ❌ Drawer        |
 |                   | ✅ Avatar              | ❌ Steps         |
 |                   | ❌ Toggle              | ❌ Tabs          |
-|                   | ❌ TextArea            | ❌ PushMessage   |
+|                   | ✅ TextArea            | ❌ PushMessage   |
 |                   | ❌ InlineMessage       | ❌ Tooltip       |
 |                   | ✅ Typo                | ❌ Popover       |
 |                   | ✅ Icon (Font awesome) | ❌ Comment       |

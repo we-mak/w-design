@@ -28,12 +28,13 @@ AvatarContent.displayName = "AvatarContent";
 
 const AvatarTitle = styled.div`
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2em;
 `;
 AvatarTitle.displayName = "AvatarTitle";
 
 const AvatarDescription = styled.div`
   color: ${props => props.theme.colors["N40"]};
+  font-size: ${props => props.theme.fontSizes[0]};
 `;
 
 const AvatarActions = styled.div`

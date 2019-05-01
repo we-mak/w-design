@@ -7,6 +7,7 @@ import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
 import Start from "./pages/Start";
 import AvatarPage from "./pages/AvatarPage";
+import CardPage from "./pages/CardPage";
 import ButtonPage from "./pages/ButtonPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
@@ -52,9 +53,11 @@ function App() {
               <Router>
                 <Intro path="/" />
                 <Start path="/start" />
+                <LayoutPage path="/layout" />
+
                 <AvatarPage path="/avatar" />
                 <ButtonPage path="/button" />
-                <LayoutPage path="/layout" />
+                <CardPage path="/card" />
                 <ModalPage path="/modal" />
                 <MenuPage path="/menu" />
                 <FormPage path="/form" />

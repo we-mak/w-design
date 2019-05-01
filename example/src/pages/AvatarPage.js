@@ -32,8 +32,6 @@ const AvatarPage = () => {
       <Typo appearance="h1">Avatar</Typo>
       Avatar component represents user profile picture. The presence mark shows user status, it
       could optionally used.
-      <Typo appearance="h3">Usage</Typo>
-      <CodeBlock exampleCode={`import { Avatar } from "w-design";`} />
       <Typo appearance="h3">Example</Typo>
       <Avatar m={1} />
       <Avatar
@@ -69,38 +67,40 @@ const AvatarPage = () => {
       <Avatar m={1} size="xs" avatarUrl="https://api.adorable.io/avatars/60/kr" />
       <CodeBlock
         exampleCode={`
-<Avatar m={1} />
-<Avatar
-  m={1}
-  presence="online"
-  size="xxl"
-  avatarUrl="https://api.adorable.io/avatars/240/thunder"
-/>
-<Avatar
-  m={1}
-  presence="offline"
-  size="xl"
-  avatarUrl="https://api.adorable.io/avatars/180/hammer"
-/>
-<Avatar
-  m={1}
-  presence="busy"
-  size="lg"
-  avatarUrl="https://api.adorable.io/avatars/120/ginger"
-/>
-<Avatar
-  m={1}
-  presence="online"
-  size="md"
-  avatarUrl="https://api.adorable.io/avatars/120/sharp"
-/>
-<Avatar
-  m={1}
-  presence="offline"
-  size="sm"
-  avatarUrl="https://api.adorable.io/avatars/80/vn"
-/>
-<Avatar m={1} size="xs" avatarUrl="https://api.adorable.io/avatars/60/kr" />
+  import { Avatar } from "w-design";
+
+  <Avatar m={1} />
+  <Avatar
+    m={1}
+    presence="online"
+    size="xxl"
+    avatarUrl="https://api.adorable.io/avatars/240/thunder"
+  />
+  <Avatar
+    m={1}
+    presence="offline"
+    size="xl"
+    avatarUrl="https://api.adorable.io/avatars/180/hammer"
+  />
+  <Avatar
+    m={1}
+    presence="busy"
+    size="lg"
+    avatarUrl="https://api.adorable.io/avatars/120/ginger"
+  />
+  <Avatar
+    m={1}
+    presence="online"
+    size="md"
+    avatarUrl="https://api.adorable.io/avatars/120/sharp"
+  />
+  <Avatar
+    m={1}
+    presence="offline"
+    size="sm"
+    avatarUrl="https://api.adorable.io/avatars/80/vn"
+  />
+  <Avatar m={1} size="xs" avatarUrl="https://api.adorable.io/avatars/60/kr" />
 `}
       />
       <p />
@@ -130,8 +130,6 @@ const AvatarPage = () => {
       <ReactMarkdown source={avtApi} />
       <p />
       <Typo appearance="h1">Avatar Group</Typo>
-      <Typo appearance="h3">Usage</Typo>
-      <CodeBlock exampleCode={`import { AvatarGroup } from "w-design";`} />
       <Typo appearance="h3">Example</Typo>
       <div style={{ maxWidth: "600px" }}>
         <AvatarGroup
@@ -152,6 +150,8 @@ const AvatarPage = () => {
       </div>
       <CodeBlock
         exampleCode={`
+  import { AvatarGroup } from "w-design";
+
   <AvatarGroup
     avatarUrl="https://api.adorable.io/avatars/80/vn"
     name="Hello world"

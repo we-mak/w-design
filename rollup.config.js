@@ -16,6 +16,7 @@ const globals = {
 
 export default {
   input: "src/index.tsx",
+  external: [...Object.keys(pkg.peerDependencies || {}), ...Object.keys(pkg.dependencies || {})],
   output: [
     {
       file: pkg.main,

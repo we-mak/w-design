@@ -19,6 +19,10 @@ const elements = [
 
 const components = [
   {
+    title: "Card",
+    link: "card"
+  },
+  {
     title: "Navbar",
     link: "nav"
   },

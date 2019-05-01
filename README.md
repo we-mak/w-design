@@ -108,7 +108,7 @@ Cover basic components
 | Layout            | Elements               | Components       |
 | ----------------- | ---------------------- | ---------------- |
 | ✅ ThemeProvider  | ✅ Button              | ❌ ProgressSteps |
-| ✅ Container      | ✅ InputField          | 🖌 AvatarGroup    |
+| ✅ Container      | ✅ InputField          | ✅ AvatarGroup   |
 | ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar        |
 | ✅ DisplayElement | ❌ Label               | ❌Badges         |
 | ❌ Masonry        | ❌ Image               | ❌Arcordion      |

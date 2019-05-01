@@ -17,7 +17,7 @@ export { default as TextArea } from "./components/elements/TextArea";
 export { default as Typo } from "./components/elements/Typo";
 // Components
 export { default as AvatarGroup } from "./components/components/AvatarGroup";
-export { default as Card, CardMedia, CardHeader } from "./components/components/Card";
+export { default as Card, CardMedia, CardHeader, CardContent } from "./components/components/Card";
 export { default as InputForm } from "./components/components/InputForm";
 export { default as FormGroup } from "./components/components/FormGroup";
 export { default as Menu, MenuItem, MenuHeading, SubMenu } from "./components/components/Menu";

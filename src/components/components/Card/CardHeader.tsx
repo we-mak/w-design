@@ -6,6 +6,9 @@ import { CardHeaderProps } from "./types";
 const CardHeaderWrapper = styled.div`
   padding: 0.8rem;
   position: relative;
+  &:not(:first-child) {
+    padding-bottom: 0;
+  }
   h3 {
     font-weight: 500;
     margin-bottom: 0.2em;

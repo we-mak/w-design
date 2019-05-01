@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { space, border, borderRadius } from "styled-system";
 import { CardHeader } from "./CardHeader";
 import { CardMedia } from "./CardMedia";
+import { CardContent } from "./CardContent";
 import { CardProps } from "./types";
 
 const getCardStyle = (props: CardProps) => {
@@ -36,4 +37,4 @@ const Card = ({ children, ...rest }: CardProps) => {
 };
 
 export default Card;
-export { CardMedia, CardHeader };
+export { CardMedia, CardHeader, CardContent };

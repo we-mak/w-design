@@ -1,6 +1,15 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import { Typo, Flexbox, AvatarGroup, Button, Card, CardMedia, CardHeader } from "w-design";
+import {
+  Typo,
+  Flexbox,
+  AvatarGroup,
+  Button,
+  Card,
+  CardMedia,
+  CardHeader,
+  CardContent
+} from "w-design";
 import { CodeBlock } from "../components/CodeBlock";
 
 const api = `
@@ -22,6 +31,10 @@ const CardPage = () => (
             alt=""
           />
           <CardHeader title="Beautiful salad" description="24/12/2019" />
+          <CardContent>
+            This strawberry spinach salad is a blend of baby spinach leaves, fresh strawberries, red
+            onion, almonds, feta cheese and avocado!
+          </CardContent>
         </Card>
       </Flexbox.Column>
 
@@ -40,6 +53,10 @@ const CardPage = () => (
             imageUrl="https://dak95nwic4sny.cloudfront.net/73/cheetah-safari-41193237-1554105425-ImageGalleryLightboxLarge.jpg"
             alt=""
           />
+          <CardContent>
+            A safari is an overland journey, usually a trip by tourists in Africa. In the past, the
+            trip was often a big-game hunt, but today, safaris are often to observe
+          </CardContent>
         </Card>
       </Flexbox.Column>
     </Flexbox>

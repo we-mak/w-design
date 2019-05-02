@@ -23,6 +23,10 @@ const components = [
     link: "card"
   },
   {
+    title: "Dropdown",
+    link: "dropdown"
+  },
+  {
     title: "Navbar",
     link: "nav"
   },

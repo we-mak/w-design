@@ -14,7 +14,7 @@ const ArrowStyled = styled.span`
   will-change: transform;
   ${(props: SubMenuProps) => props.isOpen && `transform: rotate(-180deg);`}
 `;
-ArrowStyled.displayName = "ArrowComponent";
+ArrowStyled.displayName = "SubMenuArrow";
 
 export const Arrow = (props: SubMenuProps) => (
   <ArrowStyled {...props}>

@@ -7,8 +7,9 @@ import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
 import Start from "./pages/Start";
 import AvatarPage from "./pages/AvatarPage";
-import CardPage from "./pages/CardPage";
 import ButtonPage from "./pages/ButtonPage";
+import CardPage from "./pages/CardPage";
+import DropdownPage from "./pages/DropdownPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
 import MenuPage from "./pages/MenuPage";
@@ -55,13 +56,15 @@ function App() {
                 <Start path="/start" />
                 <LayoutPage path="/layout" />
 
-                <AvatarPage path="/avatar" />
+                <SpinnerPage path="/spinner" />
                 <ButtonPage path="/button" />
+                <AvatarPage path="/avatar" />
+
                 <CardPage path="/card" />
+                <DropdownPage path="/dropdown" />
                 <ModalPage path="/modal" />
                 <MenuPage path="/menu" />
                 <FormPage path="/form" />
-                <SpinnerPage path="/spinner" />
               </Router>
             </Suspense>
           </Flexbox.Column>

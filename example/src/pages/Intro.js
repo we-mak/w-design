@@ -26,11 +26,10 @@ Feel free to use this library, or help us to improve.
 | ✅ DisplayElement | ❌ Label               | ❌Badges         |
 | ❌ Masonry        | ❌ Image               | ❌Collapsible    |
 |                   | ✅ Spinner             | ❌ Breadcrumbs   |
-|                   | ❌ Panel               | ✅ Card          |
 |                   | ❌ Table               | ❌ Chip          |
 |                   | ❌ List                | 🖌 Menu           |
 |                   | ✅ Divider             | ✅ Modal         |
-|                   | ❌ ProgressLoader      | ❌ Dropdown      |
+|                   | ❌ ProgressLoader      | 🖌 Dropdown       |
 |                   | ✅ Portal              | ❌ Drawer        |
 |                   | ✅ Avatar              | ❌ Steps         |
 |                   | ❌ Toggle              | ❌ Tabs          |
@@ -38,10 +37,11 @@ Feel free to use this library, or help us to improve.
 |                   | ❌ InlineMessage       | ❌ Tooltip       |
 |                   | ✅ Typo                | ❌ Popover       |
 |                   | ✅ Icon (Font awesome) | ❌ Comment       |
-|                   |                        | ❌ Select        |
+|                   | 🖌 Radio                | ❌ Select        |
 |                   |                        | ✅ FormGroup     |
 |                   |                        | ✅ InputForm     |
 |                   |                        | ❌ Pagination    |
+|                   |                        | ✅ Card          |
 
 
 **Legends**

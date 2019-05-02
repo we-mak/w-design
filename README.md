@@ -113,11 +113,10 @@ Cover basic components
 | ✅ DisplayElement | ❌ Label               | ❌Badges         |
 | ❌ Masonry        | ❌ Image               | ❌Collapsible    |
 |                   | ✅ Spinner             | ❌ Breadcrumbs   |
-|                   | ❌ Panel               | ✅ Card          |
 |                   | ❌ Table               | ❌ Chip          |
 |                   | ❌ List                | 🖌 Menu           |
 |                   | ✅ Divider             | ✅ Modal         |
-|                   | ❌ ProgressLoader      | ❌ Dropdown      |
+|                   | ❌ ProgressLoader      | 🖌 Dropdown       |
 |                   | ✅ Portal              | ❌ Drawer        |
 |                   | ✅ Avatar              | ❌ Steps         |
 |                   | ❌ Toggle              | ❌ Tabs          |
@@ -125,10 +124,11 @@ Cover basic components
 |                   | ❌ InlineMessage       | ❌ Tooltip       |
 |                   | ✅ Typo                | ❌ Popover       |
 |                   | ✅ Icon (Font awesome) | ❌ Comment       |
-|                   |                        | ❌ Select        |
+|                   | 🖌 Radio                | ❌ Select        |
 |                   |                        | ✅ FormGroup     |
 |                   |                        | ✅ InputForm     |
 |                   |                        | ❌ Pagination    |
+|                   |                        | ✅ Card          |
 
 ## 🐞 Report
 

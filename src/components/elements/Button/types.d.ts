@@ -40,6 +40,4 @@ export interface ButtonProps
   isSelected?: boolean;
   /** children */
   children?: any;
-  /** icon button without children*/
-  iconOnly?: boolean;
 }

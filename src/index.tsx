@@ -24,6 +24,7 @@ export {
   CardContent,
   CardFooter
 } from "./components/components/Card";
+export { default as Dropdown } from "./components/components/Dropdown";
 export { default as InputForm } from "./components/components/InputForm";
 export { default as FormGroup } from "./components/components/FormGroup";
 export { default as Menu, MenuItem, MenuHeading, SubMenu } from "./components/components/Menu";

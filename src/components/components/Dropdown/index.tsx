@@ -16,6 +16,7 @@ Title.displayName = "Title";
 const DropdownWrapper = styled.div`
   display: block;
   position: relative;
+  width: fit-content;
 `;
 DropdownWrapper.displayName = "DropdownWrapper";
 
@@ -40,15 +41,27 @@ const DropdownPanel = styled.div`
 DropdownPanel.displayName = "DropdownPanel";
 
 const Dropdown = ({ title, size = "md", iconAfter, content }: DropdownProps) => {
+  const [isOpen, setOpen] = React.useState(false);
+
+  document.addEventListener("click", (e: any) => {
+    if (!e.target.closest(".dropdown") && isOpen) {
+      setOpen(false);
+    }
+  });
+
+  const openDropdownPanel = () => {
+    setOpen(!isOpen);
+  };
+
   return (
-    <DropdownWrapper>
-      <Button aria-haspopup="true" size={size} iconAfter={iconAfter}>
+    <DropdownWrapper className="dropdown">
+      <Button aria-haspopup="true" size={size} iconAfter={iconAfter} onClick={openDropdownPanel}>
         <Title>
           {title}
           {!iconAfter && <Arrow />}
         </Title>
       </Button>
-      <DropdownPanel>{content}</DropdownPanel>
+      {isOpen && <DropdownPanel>{content}</DropdownPanel>}
     </DropdownWrapper>
   );
 };

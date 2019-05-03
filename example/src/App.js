@@ -25,6 +25,7 @@ const NavWrapper = styled.div`
   width: 100%;
   z-index: 100;
   box-shadow: ${props => props.theme.shadows[1]};
+  z-index: 999;
 `;
 
 function App() {

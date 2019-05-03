@@ -16,32 +16,31 @@ Main focus of this libary is styling with \`styled-system\` and \`styled-compone
 
 Feel free to use this library, or help us to improve.
 
-## Features list
+## Feature list
 
-| Layout            | Elements               | Components       |
-| ----------------- | ---------------------- | ---------------- |
-| ✅ ThemeProvider  | ✅ Button              | ❌ ProgressSteps |
-| ✅ Container      | ✅ InputField          | ✅ AvatarGroup   |
-| ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar        |
-| ✅ DisplayElement | ❌ Label               | ❌Badges         |
-| ❌ Masonry        | ❌ Image               | ❌Collapsible    |
-|                   | ✅ Spinner             | ❌ Breadcrumbs   |
-|                   | ❌ Table               | ❌ Chip          |
-|                   | ❌ List                | 🖌 Menu           |
-|                   | ✅ Divider             | ✅ Modal         |
-|                   | ❌ ProgressLoader      | 🖌 Dropdown       |
-|                   | ✅ Portal              | ❌ Drawer        |
-|                   | ✅ Avatar              | ❌ Steps         |
-|                   | ❌ Toggle              | ❌ Tabs          |
-|                   | ✅ TextArea            | ❌ PushMessage   |
-|                   | ❌ InlineMessage       | ❌ Tooltip       |
-|                   | ✅ Typo                | ❌ Popover       |
-|                   | ✅ Icon (Font awesome) | ❌ Comment       |
-|                   | 🖌 Radio                | ❌ Select        |
-|                   |                        | ✅ FormGroup     |
-|                   |                        | ✅ InputForm     |
-|                   |                        | ❌ Pagination    |
-|                   |                        | ✅ Card          |
+| Layout            | Elements               | Components     |
+| ----------------- | ---------------------- | -------------- |
+| ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
+| ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar      |
+| ✅ DisplayElement | ❌ Label               | ❌Badges       |
+| ❌ Masonry        | ❌ Image               | ❌Collapsible  |
+| ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |
+|                   | ❌ Table               | ❌ Chip        |
+|                   | 🖌 List                 | 🖌 Menu         |
+|                   | ✅ Divider             | ✅ Modal       |
+|                   | ❌ ProgressLoader      | ✅ Dropdown    |
+|                   | ✅ Portal              | ❌ Drawer      |
+|                   | ✅ Avatar              | ❌ Steps       |
+|                   | ❌ Toggle              | ❌ Tabs        |
+|                   | ✅ TextArea            | ❌ PushMessage |
+|                   | ❌ InlineMessage       | ❌ Tooltip     |
+|                   | ✅ Typo                | ❌ Popover     |
+|                   | ✅ Icon (Font awesome) | ❌ Comment     |
+|                   | 🖌 Radio                | ❌ Select      |
+|                   | ✅ Button              | ✅ FormGroup   |
+|                   |                        | ✅ InputForm   |
+|                   |                        | ❌ Pagination  |
+|                   |                        | ✅ Card        |
 
 
 **Legends**

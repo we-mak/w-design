@@ -25,12 +25,23 @@ const DropdownPage = () => (
           <MenuItem>Item 4</MenuItem>
         </Menu>
       }
-      position="topRight"
     />
 
     <CodeBlock
       exampleCode={`
   import { Dropdown } from "w-design";
+
+  <Dropdown
+    title="Dropdown"
+    content={
+      <Menu>
+        <MenuItem>Item 1</MenuItem>
+        <MenuItem>Item 2</MenuItem>
+        <MenuItem>Item 3</MenuItem>
+        <MenuItem>Item 4</MenuItem>
+      </Menu>
+    }
+  />
     `}
     />
     <h4>Api</h4>

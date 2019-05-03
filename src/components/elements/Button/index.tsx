@@ -60,9 +60,8 @@ const StyledSpan = styled.span`
 `;
 StyledSpan.displayName = "StyledSpanButton";
 
-function Button(props: ButtonProps) {
+const Button = React.forwardRef((props: ButtonProps, ref) => {
   const {
-    buttonRef,
     appearance = "default",
     type = "button",
     size = "md",
@@ -99,11 +98,6 @@ function Button(props: ButtonProps) {
 
   let button!: HTMLElement | undefined;
 
-  const getButtonRef = (ref: HTMLElement) => {
-    button = ref;
-    if (buttonRef) buttonRef(ref);
-  };
-
   React.useEffect(() => {
     if (autoFocus && button) button.focus();
     return () => (button = undefined);
@@ -111,9 +105,7 @@ function Button(props: ButtonProps) {
 
   return (
     <ButtonComponent
-      // if buttonRef is call
-      // there is no autoFocus
-      ref={getButtonRef}
+      ref={ref}
       //Appearance Props
       appearance={appearance}
       size={size}
@@ -146,6 +138,6 @@ function Button(props: ButtonProps) {
       {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
     </ButtonComponent>
   );
-}
+});
 
 export default Button;

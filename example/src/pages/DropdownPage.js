@@ -23,12 +23,9 @@ const DropdownPage = () => (
           <MenuItem>Item 2</MenuItem>
           <MenuItem>Item 3</MenuItem>
           <MenuItem>Item 4</MenuItem>
-          <MenuItem>Item 5</MenuItem>
-          <MenuItem>Item 6</MenuItem>
-          <MenuItem>Item 7</MenuItem>
-          <MenuItem>Item 8</MenuItem>
         </Menu>
       }
+      position="topRight"
     />
 
     <CodeBlock

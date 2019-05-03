@@ -18,9 +18,10 @@ import SpinnerPage from "./pages/SpinnerPage";
 
 const NavWrapper = styled.div`
   display: block;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   z-index: 100;
   box-shadow: ${props => props.theme.shadows[1]};
@@ -45,7 +46,7 @@ function App() {
       </NavWrapper>
 
       <Container p={3} bg={"N1"}>
-        <Flexbox mt="80px" mb="200px">
+        <Flexbox mb="120px">
           <Flexbox.Column width={1 / 4}>
             <Sidebar />
           </Flexbox.Column>

@@ -114,9 +114,9 @@ Cover basic components
 | ❌ Masonry        | ❌ Image               | ❌Collapsible    |
 |                   | ✅ Spinner             | ❌ Breadcrumbs   |
 |                   | ❌ Table               | ❌ Chip          |
-|                   | ❌ List                | 🖌 Menu           |
+|                   | 🖌 List                 | 🖌 Menu           |
 |                   | ✅ Divider             | ✅ Modal         |
-|                   | ❌ ProgressLoader      | 🖌 Dropdown       |
+|                   | ❌ ProgressLoader      | ✅ Dropdown      |
 |                   | ✅ Portal              | ❌ Drawer        |
 |                   | ✅ Avatar              | ❌ Steps         |
 |                   | ❌ Toggle              | ❌ Tabs          |

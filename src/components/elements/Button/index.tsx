@@ -60,7 +60,7 @@ const StyledSpan = styled.span`
 `;
 StyledSpan.displayName = "StyledSpanButton";
 
-const Button = React.forwardRef((props: ButtonProps, ref) => {
+const Button = (props: ButtonProps) => {
   const {
     appearance = "default",
     type = "button",
@@ -85,6 +85,7 @@ const Button = React.forwardRef((props: ButtonProps, ref) => {
     onClick,
     tabIndex,
     children,
+    buttonRef,
     ...rest
   } = props;
 
@@ -105,7 +106,7 @@ const Button = React.forwardRef((props: ButtonProps, ref) => {
 
   return (
     <ButtonComponent
-      ref={ref}
+      ref={buttonRef}
       //Appearance Props
       appearance={appearance}
       size={size}
@@ -138,6 +139,6 @@ const Button = React.forwardRef((props: ButtonProps, ref) => {
       {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
     </ButtonComponent>
   );
-});
+};
 
 export default Button;

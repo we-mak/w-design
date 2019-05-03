@@ -90,7 +90,7 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
   return (
     <DropdownWrapper className="dropdown" {...rest}>
       <Button
-        ref={buttonRef}
+        buttonRef={buttonRef}
         ariaHaspopup={true}
         ariaExpanded={isOpen}
         size={size}

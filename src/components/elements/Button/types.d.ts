@@ -38,4 +38,5 @@ export interface ButtonProps
   isSelected?: boolean;
   /** children */
   children?: any;
+  buttonRef?: React.RefAttributes;
 }

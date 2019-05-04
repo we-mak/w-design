@@ -19,3 +19,17 @@ export const slideDown = keyframes`
     transform: translateY(0);
   }
 `;
+
+export const fadeInOut = keyframes`
+  0% {
+    opacity: .1;
+  }
+
+  50% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: .1;
+  }
+`;

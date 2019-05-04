@@ -5,6 +5,7 @@ import { CardHeader } from "./CardHeader";
 import { CardMedia } from "./CardMedia";
 import { CardContent } from "./CardContent";
 import { CardProps } from "./types";
+import { fadeInOut } from "../../../common/styleUtils/keyframes";
 
 const getCardStyle = (props: CardProps) => {
   return css`
@@ -32,8 +33,68 @@ const CardWrapper = styled.div`
 `;
 CardWrapper.displayName = "CardWrapper";
 
-const Card = ({ children, ...rest }: CardProps) => {
-  return <CardWrapper {...rest}>{children}</CardWrapper>;
+const CardLoading = styled.div`
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+`;
+CardLoading.displayName = "CardLoading";
+
+const ImagePlaceHolder = styled.div`
+  background: ${props => props.theme.colors["N5"]};
+  width: 100%;
+  min-height: 180px;
+  animation: ${fadeInOut} 1.5s infinite;
+`;
+ImagePlaceHolder.displayName = "ImagePlaceHolder";
+
+const ContentPlaceHolder = styled.div`
+  padding: 0.8rem;
+  display: block;
+  width: 100%;
+  opacity: 0.1;
+  animation: ${fadeInOut} 1.5s infinite;
+  h3 {
+    background: ${props => props.theme.colors["N5"]};
+    background-size: 400% 100%;
+    width: 50%;
+    height: 1rem;
+    border-radius: 0.5rem;
+  }
+  ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    background: ${props => props.theme.colors["N5"]};
+    background-size: 400% 100%;
+    height: 1rem;
+    margin: 0.4rem 0;
+    border-radius: 0.5rem;
+  }
+`;
+ContentPlaceHolder.displayName = "ContentPlaceHolder";
+
+const Card = ({ children, isLoading, ...rest }: CardProps) => {
+  return (
+    <CardWrapper {...rest}>
+      {isLoading ? (
+        <CardLoading>
+          <ImagePlaceHolder />
+          <ContentPlaceHolder>
+            <h3 />
+            <ul>
+              <li />
+              <li />
+            </ul>
+          </ContentPlaceHolder>
+        </CardLoading>
+      ) : (
+        children
+      )}
+    </CardWrapper>
+  );
 };
 
 const CardFooter = styled.div`

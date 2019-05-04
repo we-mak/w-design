@@ -68,6 +68,35 @@ const CardPage = () => (
           </CardFooter>
         </Card>
       </Flexbox.Column>
+
+      <Flexbox.Column width={[1, 1 / 2, 1 / 3]}>
+        <Card isLoading>
+          <CardHeader>
+            <AvatarGroup
+              size="sm"
+              avatarUrl="https://api.adorable.io/avatars/80/tr"
+              name="Hello world"
+              description="24/12/2019"
+              actions={<Button appearance="clean" iconBefore="fas fa-ellipsis-h" iconOnly />}
+            />
+          </CardHeader>
+          <CardMedia
+            imageUrl="https://dak95nwic4sny.cloudfront.net/73/cheetah-safari-41193237-1554105425-ImageGalleryLightboxLarge.jpg"
+            alt=""
+          />
+          <CardContent>
+            A safari is an overland journey, usually a trip by tourists in Africa. In the past, the
+            trip was often a big-game hunt, but today, safaris are often to observe
+          </CardContent>
+
+          <CardFooter>
+            <ButtonGroup>
+              <Button appearance="primary">Primary action</Button>
+              <Button>Secodary action</Button>
+            </ButtonGroup>
+          </CardFooter>
+        </Card>
+      </Flexbox.Column>
     </Flexbox>
     <CodeBlock
       exampleCode={`

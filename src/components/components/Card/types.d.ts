@@ -3,6 +3,7 @@ import { GlobProps } from "../../../typings";
 export interface CardProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];
   raised?: boolean;
+  isLoading?: boolean;
 }
 
 export interface CardMediaProps extends GlobProps {

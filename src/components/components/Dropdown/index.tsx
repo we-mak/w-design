@@ -50,8 +50,6 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
     const buttonNode: HTMLElement = buttonRef!.current!;
     const dimension = buttonNode!.getBoundingClientRect();
 
-    console.log(dimension);
-
     switch (position) {
       case "bottomCenter":
         setStyle({

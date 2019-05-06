@@ -14,20 +14,21 @@ const MenuStyled = styled.ul`
 MenuStyled.displayName = "MenuContainer";
 
 const Menu = ({ children, fullWidth = false, width, defaultSelectedKey, ...rest }: MenuProps) => {
-  const [selectedKey, setSelectedKey] = React.useState("");
+  const [selectedKey, setSelectedKey] = React.useState(defaultSelectedKey);
 
-  const handleSelectItem = (newKey: string) => setSelectedKey(newKey);
+  const value = React.useMemo(() => {
+    return {
+      selectedKey,
+      setSelectedKey
+    };
+  }, [selectedKey]);
 
   return (
-    <MenuContext.Provider
-      value={{
-        defaultSelectedKey: defaultSelectedKey,
-        selectedKey: selectedKey,
-        onSelectItem: handleSelectItem
-      }}
-    >
-      <MenuStyled role="menu" width={width} {...rest}>
-        {children}
+    <MenuContext.Provider value={value} {...rest}>
+      <MenuStyled role="menu" width={width}>
+        {React.Children.map(children!, (child: any) => {
+          return React.cloneElement(child, { eventKey: child.key || "menu-key" });
+        })}
       </MenuStyled>
     </MenuContext.Provider>
   );

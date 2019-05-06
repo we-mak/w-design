@@ -55,7 +55,7 @@ const ContentPlaceHolder = styled.div`
   opacity: 0.1;
   animation: ${fadeInOut} 1.5s infinite;
   h3 {
-    background: ${props => props.theme.colors["N5"]};
+    background: ${props => props.theme.colors["N10"]};
     background-size: 400% 100%;
     width: 50%;
     height: 1rem;

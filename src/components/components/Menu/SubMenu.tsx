@@ -29,8 +29,8 @@ const SubList = styled.ul`
   position: relative;
   display: block;
   opacity: ${(props: SubMenuProps) => (props.isOpen ? 1 : 0)};
-  transition: height 0.3s cubic-bezier(0.5, 0.045, 0.4, 1),
-    opacity 0.2s cubic-bezier(0.5, 0.045, 0.4, 1);
+  transition: height 0.2s cubic-bezier(0.5, 0.045, 0.4, 1),
+    opacity 0.3s cubic-bezier(0.5, 0.045, 0.4, 1);
   will-change: height;
   will-change: opacity;
   li {
@@ -112,7 +112,9 @@ export const SubMenu: React.FunctionComponent<SubMenuProps> = ({
         {isLoading ? <Loader /> : <Arrow isOpen={open} />}
       </SubMenuTitle>
       <SubList role="menu" isOpen={open} style={listStyle}>
-        {children}
+        {React.Children.map(children!, (child: any) => {
+          return React.cloneElement(child, { eventKey: child.key || "submenu-key" });
+        })}
       </SubList>
     </SubMenuStyled>
   );

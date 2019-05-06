@@ -1,13 +1,14 @@
 import * as React from "react";
+import { GlobProps } from "../../../typings";
 
-type Props = {
+export interface TagProps extends GlobProps {
   /** custom html tag */
   customHTMLtag?: string;
   children?: any;
-};
+}
 
-// Create custom html tag with clean tag
-const CustomTag = ({ customHTMLtag, children, ...props }: Props) =>
-  React.createElement(customHTMLtag || "div", { children, ...props });
+// Create custom html tag
+const CustomTag = ({ customHTMLtag, children, className }: TagProps) =>
+  React.createElement(customHTMLtag || "div", { children, className });
 
 export default CustomTag;

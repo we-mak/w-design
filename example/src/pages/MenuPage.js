@@ -47,7 +47,7 @@ const Example1 = () => {
       <MenuItem key="2" iconBefore={<Icon className="fas fa-user-astronaut" />}>
         Item 2
       </MenuItem>
-      <MenuItem key="3" iconBefore={<Icon className="fas fa-edit" />} disabled>
+      <MenuItem key="3" iconBefore={<Icon className="fas fa-edit" />} isDisabled>
         Item 3
       </MenuItem>
       <MenuItem key="4" iconBefore={<Icon className="fas fa-paper-plane" />}>
@@ -55,13 +55,13 @@ const Example1 = () => {
       </MenuItem>
       <Divider customHTMLtag="li" />
       <MenuHeading>Menu heading</MenuHeading>
-      <SubMenu icon={<Icon className="fas fa-cog" />} title="Submenu title 1">
+      <SubMenu key="sub-1" icon={<Icon className="fas fa-cog" />} title="Submenu title 1">
         {subList1.map(item => (
           <MenuItem key={item.key}>{item.title}</MenuItem>
         ))}
       </SubMenu>
 
-      <SubMenu icon={<Icon className="fas fa-mail" />} title="Submenu title 2">
+      <SubMenu key="sub-2" icon={<Icon className="fas fa-mail" />} title="Submenu title 2">
         {subList2.map(item => (
           <MenuItem key={item.key}>{item.title}</MenuItem>
         ))}
@@ -76,17 +76,19 @@ const MenuPage = () => {
       <h1>Menu</h1>
       <p>List of navigation items</p>
       <p />
-      <Typo appearance="h3">Usage</Typo>
-      <CodeBlock exampleCode={`import { Menu, MenuItem } from "w-design";`} />
       <Typo appearance="h4">Example</Typo>
 
       <Example1 />
 
       <CodeBlock
-        exampleCode={`<Menu>
-  <MenuItem iconBefore={<Icon className="fas fa-user" />}>Item 1</MenuItem>
-  <MenuItem>Item 2</MenuItem>
-</Menu>`}
+        exampleCode={`
+  import { Menu, MenuItem } from "w-design";
+
+  <Menu>
+    <MenuItem iconBefore={<Icon className="fas fa-user" />}>Item 1</MenuItem>
+    <MenuItem>Item 2</MenuItem>
+  </Menu>
+`}
       />
       <p />
       <ReactMarkdown source={api} />

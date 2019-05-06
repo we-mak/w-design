@@ -4,8 +4,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import { MenuItemProps } from "./types";
-import { MenuContext } from "./MenuContext";
 import { getMenuItemStyle } from "./Styled";
+import { useMenu } from "./MenuContext";
 
 const MenuItemAfter = styled.div`
   align-items: center;
@@ -30,11 +30,30 @@ const MenuItemStyled = styled.li`
 `;
 MenuItemStyled.displayName = "MenuItemComponent";
 
-export const MenuItem = ({ children, iconBefore, after, ...rest }: MenuItemProps) => {
-  const context = React.useContext(MenuContext);
-
+export const MenuItem = ({
+  children,
+  iconBefore,
+  after,
+  eventKey,
+  isDisabled,
+  ...rest
+}: MenuItemProps) => {
+  const { selectedKey, onSelectItem } = useMenu();
+  console.log(eventKey);
   return (
-    <MenuItemStyled role="menuitem" onClick={e => context.onSelectItem(e)} {...rest}>
+    <MenuItemStyled
+      role="menuitem"
+      onClick={() => {
+        if (isDisabled) return;
+        if (eventKey) {
+          return onSelectItem(eventKey);
+        }
+        return;
+      }}
+      isSelected={selectedKey === eventKey && true}
+      isDisabled={isDisabled}
+      {...rest}
+    >
       {iconBefore && <IconBefore>{iconBefore}</IconBefore>}
       {children}
       {after && <MenuItemAfter>{after}</MenuItemAfter>}

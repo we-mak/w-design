@@ -11,5 +11,6 @@ export interface CheckboxProps extends GlobProps, InputControlProps {
   isIndeterminate?: boolean;
   label?: string;
   value?: number | string;
+  ariaRequired?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

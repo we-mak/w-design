@@ -10,12 +10,13 @@ export interface MenuProps extends GlobProps {
   selectedKey?: string;
 }
 export interface MenuItemProps extends GlobProps {
+  eventKey?: string;
   children?: any;
   after?: React.ReactChild | React.ReactChild[];
   iconBefore?: React.ReactChild;
   isSelected?: boolean;
   tabIndex?: number;
-  disabled?: boolean;
+  isDisabled?: boolean;
 }
 
 export interface SubMenuProps extends GlobProps {
@@ -32,7 +33,8 @@ export interface ContextProps {
   defaultSelectedKey?: string;
   defaultOpenSubMenuKeys?: string[];
   selectedKey?: string;
-  openSubMenuKeys?: string[];
-  onSelectItem: (key: any) => void;
+  setSelectedKey: (key: string) => void;
+  // openSubMenuKeys?: string[];
+  // onSelectItem: (key: any) => void;
   // onOpenSubMenuChange
 }

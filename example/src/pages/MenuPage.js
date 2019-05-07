@@ -40,7 +40,7 @@ const Example1 = () => {
   ];
 
   return (
-    <Menu defaultSelectedKey="1">
+    <Menu defaultSelectedKey="1" defaultOpenKeys={["sub-1"]}>
       <MenuItem key="1" iconBefore={<Icon className="fas fa-user" />} after={<div>info</div>}>
         Item 1
       </MenuItem>

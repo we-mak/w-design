@@ -39,7 +39,7 @@ export const MenuItem = ({
   ...rest
 }: MenuItemProps) => {
   const { selectedKey, onSelectItem } = useMenu();
-  console.log(eventKey);
+
   return (
     <MenuItemStyled
       role="menuitem"

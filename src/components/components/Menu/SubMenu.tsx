@@ -1,10 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
+import Spinner from "../../elements/Spinner";
 import { SubMenuProps } from "./types";
 import { getSubMenuStyle } from "./Styled";
 import { Arrow } from "./Arrow";
 import { IconBefore } from "./MenuItem";
-import Spinner from "../../elements/Spinner";
+import { useMenu } from "./MenuContext";
 /**
  * Sub Menu
  * */
@@ -67,9 +68,11 @@ export const SubMenu: React.FunctionComponent<SubMenuProps> = ({
   isLoading,
   onLoadingList,
   children,
+  eventKey,
   ...rest
 }) => {
-  const [open, setOpen] = React.useState(false);
+  const { setDefaultOpenKey } = useMenu();
+  const [open, setOpen] = React.useState(setDefaultOpenKey(eventKey));
   const [listStyle, setListStyle] = React.useState({});
 
   // Use sub menu title as a marker

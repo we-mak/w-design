@@ -8,6 +8,8 @@ export interface MenuProps extends GlobProps {
   defaultSelectedKey?: string;
   // get key is selecting
   selectedKey?: string;
+  // set default open sub menu key
+  defaultOpenKeys?: string[];
 }
 export interface MenuItemProps extends GlobProps {
   eventKey?: string;
@@ -20,6 +22,7 @@ export interface MenuItemProps extends GlobProps {
 }
 
 export interface SubMenuProps extends GlobProps {
+  eventKey?: string;
   children?: React.ReactChild | React.ReactChild[];
   title?: string;
   isOpen?: boolean;
@@ -31,10 +34,9 @@ export interface SubMenuProps extends GlobProps {
 
 export interface ContextProps {
   defaultSelectedKey?: string;
-  defaultOpenSubMenuKeys?: string[];
+  defaultOpenKeys?: string[];
   selectedKey?: string;
   setSelectedKey: (key: string) => void;
-  // openSubMenuKeys?: string[];
-  // onSelectItem: (key: any) => void;
+  // setOpenSubKeys?: string[];
   // onOpenSubMenuChange
 }

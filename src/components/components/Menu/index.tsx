@@ -13,14 +13,18 @@ const MenuStyled = styled.ul`
 `;
 MenuStyled.displayName = "MenuContainer";
 
-const Menu = ({ children, fullWidth = false, width, defaultSelectedKey, ...rest }: MenuProps) => {
+const Menu = ({
+  children,
+  fullWidth = false,
+  width,
+  defaultSelectedKey,
+  defaultOpenKeys,
+  ...rest
+}: MenuProps) => {
   const [selectedKey, setSelectedKey] = React.useState(defaultSelectedKey);
 
   const value = React.useMemo(() => {
-    return {
-      selectedKey,
-      setSelectedKey
-    };
+    return { selectedKey, setSelectedKey, defaultOpenKeys };
   }, [selectedKey]);
 
   return (

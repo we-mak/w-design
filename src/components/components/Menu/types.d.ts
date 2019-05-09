@@ -8,8 +8,12 @@ export interface MenuProps extends GlobProps {
   defaultSelectedKey?: string;
   // get key is selecting
   selectedKey?: string;
-  // set default open sub menu key
+  // set default open sub menu keys
   defaultOpenKeys?: string[];
+  // open keys list
+  openKeys?: string[];
+  // open submenu
+  onOpenKeyChange?: (keys?: string[]) => void;
 }
 export interface MenuItemProps extends GlobProps {
   eventKey?: string;
@@ -33,10 +37,12 @@ export interface SubMenuProps extends GlobProps {
 }
 
 export interface ContextProps {
+  // Menu Item
   defaultSelectedKey?: string;
-  defaultOpenKeys?: string[];
   selectedKey?: string;
   setSelectedKey: (key: string) => void;
-  // setOpenSubKeys?: string[];
-  // onOpenSubMenuChange
+  // Submenu
+  defaultOpenKeys?: string[];
+  openKeys?: string[];
+  setOpenKeys?: Array;
 }

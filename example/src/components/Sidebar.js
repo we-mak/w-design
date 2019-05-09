@@ -46,15 +46,15 @@ const components = [
 
 export const Sidebar = () => {
   return (
-    <Menu>
-      <MenuItem>
+    <Menu defaultSelectedKey="/">
+      <MenuItem key="/">
         <Link to="/">Introduction</Link>
       </MenuItem>
-      <MenuItem>
+      <MenuItem key="/start">
         <Link to="/start">Getting start</Link>
       </MenuItem>
 
-      <MenuItem>
+      <MenuItem key="/layout">
         <Link to="/layout">Layout</Link>
       </MenuItem>
 

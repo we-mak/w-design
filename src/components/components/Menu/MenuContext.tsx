@@ -8,11 +8,10 @@ export const useMenu = () => {
   if (!context) {
     throw new Error("useMenu must be used within a Menu as Menu Provider");
   }
-  const { selectedKey, setSelectedKey, defaultOpenKeys } = context;
+  const { selectedKey, setSelectedKey, openKeys, setOpenKeys, defaultOpenKeys } = context;
 
-  const onSelectItem = (key: string) => {
-    setSelectedKey(key);
-  };
+  const onSelectItem = (key: string) => setSelectedKey(key);
+  const onSelectKeys = (key: string) => setOpenKeys(openKeys!.push(key));
 
   const setDefaultOpenKey = (key?: string) => {
     for (let i in defaultOpenKeys) {
@@ -28,6 +27,8 @@ export const useMenu = () => {
   return {
     selectedKey,
     onSelectItem,
-    setDefaultOpenKey
+    setDefaultOpenKey,
+    openKeys,
+    onSelectKeys
   };
 };

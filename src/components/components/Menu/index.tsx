@@ -8,28 +8,36 @@ import { MenuItem } from "./MenuItem";
 import { MenuHeading } from "./MenuHeading";
 import { SubMenu } from "./SubMenu";
 
+// TODO:
+// use ref on child
+// add onOpenChange to call when open and close submenu
+// add onSelect to have the callback when menu Item is selected
+
 const MenuStyled = styled.ul`
   ${getMenuStyle}
 `;
 MenuStyled.displayName = "MenuContainer";
 
-const Menu = ({
-  children,
-  fullWidth = false,
-  width,
-  defaultSelectedKey,
-  defaultOpenKeys,
-  ...rest
-}: MenuProps) => {
+const Menu = (props: MenuProps) => {
+  const {
+    children,
+    fullWidth = false,
+    width,
+    defaultSelectedKey,
+    defaultOpenKeys = [],
+    ...rest
+  } = props;
+
   const [selectedKey, setSelectedKey] = React.useState(defaultSelectedKey);
+  const [openKeys, setOpenKeys] = React.useState(defaultOpenKeys);
 
   const value = React.useMemo(() => {
-    return { selectedKey, setSelectedKey, defaultOpenKeys };
-  }, [selectedKey]);
+    return { selectedKey, setSelectedKey, openKeys, setOpenKeys, defaultOpenKeys };
+  }, [selectedKey, openKeys]);
 
   return (
-    <MenuContext.Provider value={value} {...rest}>
-      <MenuStyled role="menu" width={width}>
+    <MenuContext.Provider value={value}>
+      <MenuStyled role="menu" width={width} {...rest}>
         {React.Children.map(children!, (child: any) => {
           return React.cloneElement(child, { eventKey: child.key || "menu-key" });
         })}

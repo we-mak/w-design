@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Navbar } from "w-design";
+import { Search } from "./Search";
 import logo from "../logom.png";
 
 const LogoType = styled.h3`
@@ -19,7 +20,9 @@ export function Header() {
           <LogoType>W-design</LogoType>
         </a>
       </Section>
-      <Section>Search will be here</Section>
+      <Section>
+        <Search />
+      </Section>
       <Section>
         <a href="https://github.com/we-mak/w-design" target="_blank" rel="noopener noreferrer">
           Github

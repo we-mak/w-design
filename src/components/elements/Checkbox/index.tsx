@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import FormGroup from "../../components/FormGroup";
 import { CheckboxProps } from "./types";
 
-const Label = styled.label`
+const Label = styled.label<CheckboxProps>`
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -11,8 +11,10 @@ const Label = styled.label`
   margin: ${props => props.theme.space[1]}px 0;
   user-select: none;
   &:hover {
-    cursor: pointer;
+    cursor: ${props => (props.isDisabled ? `not-allowed` : `pointer`)};
   }
+
+  ${props => props.isDisabled && `opacity: 0.7`};
 `;
 Label.displayName = "Label";
 
@@ -32,26 +34,29 @@ const CheckboxInput = styled.input`
 CheckboxInput.displayName = "CheckboxInput";
 
 // Get checked style for the icon
-const getCheckedStyle = (props: CheckboxProps) =>
-  props.isChecked
-    ? css`
-        color: ${props.theme.colors["B50"]};
-        fill: rgb(250, 251, 252);
-        rect {
-          &:first-child {
-            stroke: ${props.theme.colors["B50"]};
-          }
+const getCheckedStyle = (props: CheckboxProps) => {
+  if (props.isChecked) {
+    return css`
+      color: ${props.theme.colors["B50"]};
+      fill: ${props.theme.colors["N1"]};
+      rect {
+        &:first-child {
+          stroke: ${props.theme.colors["B50"]};
         }
-      `
-    : css`
-        color: rgb(250, 251, 252);
-        fill: transparent;
-        rect {
-          &:first-child {
-            stroke: ${props.theme.colors["N5"]};
-          }
-        }
-      `;
+      }
+    `;
+  }
+
+  return css`
+    color: ${props.theme.colors["N1"]};
+    fill: transparent;
+    rect {
+      &:first-child {
+        stroke: ${props.theme.colors["N5"]};
+      }
+    }
+  `;
+};
 
 const CheckboxIcon = styled.span`
   line-height: 0;
@@ -96,7 +101,7 @@ const Checkbox = ({
 
   return (
     <FormGroup>
-      <Label>
+      <Label isDisabled={isDisabled}>
         <CheckboxInput
           ref={checkboxRef}
           type="checkbox"

@@ -31,38 +31,61 @@ const CheckboxInput = styled.input`
 `;
 CheckboxInput.displayName = "CheckboxInput";
 
-const getCheckedStyle = (props: CheckboxProps) => {
-  if (props.isChecked) {
-    return css`
-      color: ${props.theme.colors["B50"]};
-      fill: rgb(250, 251, 252);
-    `;
-  }
-
-  return css`
-    color: rgb(250, 251, 252);
-    fill: transparent;
-  `;
-};
+// Get checked style for the icon
+const getCheckedStyle = (props: CheckboxProps) =>
+  props.isChecked
+    ? css`
+        color: ${props.theme.colors["B50"]};
+        fill: rgb(250, 251, 252);
+        rect {
+          &:first-child {
+            stroke: ${props.theme.colors["B50"]};
+          }
+        }
+      `
+    : css`
+        color: rgb(250, 251, 252);
+        fill: transparent;
+        rect {
+          &:first-child {
+            stroke: ${props.theme.colors["N5"]};
+          }
+        }
+      `;
 
 const CheckboxIcon = styled.span`
   line-height: 0;
   flex-shrink: 0;
   cursor: pointer;
+  rect {
+    &:first-child {
+      stroke-width: 0.08rem;
+      transition: stroke 0.2s ease-in-out 0s;
+    }
+  }
   ${getCheckedStyle}
 `;
 CheckboxIcon.displayName = "CheckboxIcon";
 
 // TODO: nested checkboxes
-const Checkbox = (props: CheckboxProps) => {
-  const [isChecked, setChecked] = React.useState(
-    props.isChecked !== undefined ? props.isChecked : props.defaultChecked
-  );
+const Checkbox = ({
+  checkboxRef,
+  name,
+  label,
+  defaultChecked = false,
+  isDisabled = false,
+  isRequired,
+  value,
+  onChange,
+  ...rest
+}: CheckboxProps) => {
+  const [isChecked, setChecked] = React.useState(defaultChecked);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (isDisabled) return null;
     e.persist();
-    if (props.isDisabled) return null;
-    if (props.onChange) props.onChange(e);
+    // set onChange props
+    if (onChange) onChange(e);
 
     if (e.target.checked !== undefined) {
       setChecked(e.target.checked);
@@ -75,16 +98,17 @@ const Checkbox = (props: CheckboxProps) => {
     <FormGroup>
       <Label>
         <CheckboxInput
-          ref={props.checkboxRef}
+          ref={checkboxRef}
           type="checkbox"
-          name={props.name}
+          name={name}
           checked={isChecked}
-          disabled={props.isDisabled}
-          value={props.value}
-          onChange={onChange}
-          {...props}
+          disabled={isDisabled}
+          value={value}
+          onChange={onCheckboxChange}
+          required={isRequired}
+          {...rest}
         />
-        <CheckboxIcon>
+        <CheckboxIcon isChecked={isChecked}>
           <svg width="28" height="28" viewBox="0 0 24 24" focusable="false" role="presentation">
             <g fillRule="evenodd">
               <rect fill="currentColor" x="6" y="6" width="12" height="12" rx="2" />
@@ -95,7 +119,7 @@ const Checkbox = (props: CheckboxProps) => {
             </g>
           </svg>
         </CheckboxIcon>
-        <LabelText>{props.label}</LabelText>
+        <LabelText>{label}</LabelText>
       </Label>
     </FormGroup>
   );

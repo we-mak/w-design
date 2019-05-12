@@ -20,7 +20,7 @@ export function Header() {
           <LogoType>W-design</LogoType>
         </a>
       </Section>
-      <Section>
+      <Section style={{ display: "inline-block" }}>
         <Search />
       </Section>
       <Section>

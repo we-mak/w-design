@@ -39,4 +39,5 @@ export interface ButtonProps
   /** children */
   children?: any;
   buttonRef?: React.RefAttributes;
+  isRequired?: boolean;
 }

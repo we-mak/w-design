@@ -2,7 +2,7 @@ import { GlobProps } from "../../../typings";
 
 export interface CheckboxProps extends GlobProps, InputControlProps {
   //
-  checkboxRef?: (ref: HTMLInputElement) => {};
+  checkboxRef?: React.RefAttributes;
   name?: string;
   defaultChecked?: boolean;
   isChecked?: boolean;

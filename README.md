@@ -110,7 +110,7 @@ Cover basic components
 | Layout            | Elements               | Components     |
 | ----------------- | ---------------------- | -------------- |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
-| ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar      |
+| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
 | ✅ DisplayElement | ❌ Label               | ❌Badges       |
 | ❌ Masonry        | ❌ Image               | ❌Collapsible  |
 | ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |

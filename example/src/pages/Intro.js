@@ -22,7 +22,7 @@ Feel free to use this library, or help us to improve.
 | Layout            | Elements               | Components     |
 | ----------------- | ---------------------- | -------------- |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
-| ✅ Flexbox        | 🖌 Checkbox             | ✅ Navbar      |
+| ✅ Flexbox        | ✅ Checkbox             | ✅ Navbar      |
 | ✅ DisplayElement | ❌ Label               | ❌Badges       |
 | ❌ Masonry        | ❌ Image               | ❌Collapsible  |
 | ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |

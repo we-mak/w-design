@@ -1,5 +1,14 @@
 import React from "react";
-import { Typo, Button, InputField, InputForm, FormGroup, Checkbox, TextArea } from "w-design";
+import {
+  Typo,
+  Button,
+  InputField,
+  InputForm,
+  FormGroup,
+  Checkbox,
+  RadioGroup,
+  TextArea
+} from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -119,12 +128,15 @@ const FormPage = () => {
       <br />
       <Typo appearance="h3">Checkbox</Typo>
       <Checkbox label="Check me" />
+      <br />
+      <Typo appearance="h3">Radio</Typo>
+      <RadioGroup />
+      <br />
       <Typo appearance="h3">FormGroup</Typo>
       <FormGroup>
         <InputField placeholder="Text something" />
         <Button appearance="primary">Call to action</Button>
       </FormGroup>
-
       <br />
 
       <Typo appearance="h3">TextArea</Typo>

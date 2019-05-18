@@ -18,6 +18,11 @@ const Label = styled.label<RadioProps>`
 `;
 Label.displayName = "Label";
 
+const LabelText = styled.div`
+  padding: 5px 0;
+`;
+LabelText.displayName = "LabelText";
+
 const RadioInput = styled.input`
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -28,18 +33,39 @@ const RadioInput = styled.input`
 `;
 RadioInput.displayName = "RadioInput";
 
-export const Radio = ({ isChecked, ...rest }: RadioProps) => {
+export const Radio = ({
+  label,
+  radioRef,
+  defaultChecked = false,
+  isDisabled,
+  isRequired,
+  value,
+  isChecked = false,
+  onChange = () => {},
+  ...rest
+}: RadioProps) => {
   return (
     <Label>
-      <RadioInput type="radio" checked={isChecked} {...rest} />
+      <RadioInput
+        ref={radioRef}
+        type="radio"
+        checked={isChecked}
+        disabled={isDisabled}
+        value={value}
+        required={isRequired}
+        ariaRequired={isRequired}
+        onChange={onChange}
+        {...rest}
+      />
       <RadioIcon isChecked={isChecked}>
-        <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation">
+        <svg width="28" height="28" viewBox="0 0 24 24" focusable="false" role="presentation">
           <g fillRule="evenodd">
-            <circle fill="currentColor" cx="12" cy="12" r="8" />
-            <circle fill="inherit" cx="12" cy="12" r="4" />
+            <circle fill="currentColor" cx="12" cy="12" r="7" />
+            <circle fill="inherit" cx="12" cy="12" r="3" />
           </g>
         </svg>
       </RadioIcon>
+      <LabelText>{label}</LabelText>
     </Label>
   );
 };

@@ -111,6 +111,7 @@ const Checkbox = ({
           value={value}
           onChange={onCheckboxChange}
           required={isRequired}
+          ariaRequired={isRequired}
           {...rest}
         />
         <CheckboxIcon isChecked={isChecked}>

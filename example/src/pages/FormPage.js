@@ -130,7 +130,20 @@ const FormPage = () => {
       <Checkbox label="Check me" />
       <br />
       <Typo appearance="h3">Radio</Typo>
-      <RadioGroup />
+      <RadioGroup
+        groupLabel="Label"
+        groupName="radio"
+        options={[
+          {
+            label: "Option 1",
+            value: "foo"
+          },
+          {
+            label: "Option 2",
+            value: "bar"
+          }
+        ]}
+      />
       <br />
       <Typo appearance="h3">FormGroup</Typo>
       <FormGroup>

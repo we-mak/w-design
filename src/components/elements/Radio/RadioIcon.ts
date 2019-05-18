@@ -29,7 +29,7 @@ const getCheckedStyle = (props: IconProps) => {
   `;
 };
 
-export const RadioIcon = styled.span`
+export const RadioIcon = styled.div`
   line-height: 0;
   flex-shrink: 0;
   cursor: pointer;

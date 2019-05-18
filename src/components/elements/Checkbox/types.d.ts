@@ -1,6 +1,15 @@
-import { GlobProps } from "../../../typings";
+import {
+  GlobProps,
+  InputControlProps,
+  SyntheticEventProps,
+  MouseEventProps
+} from "../../../typings";
 
-export interface CheckboxProps extends GlobProps, InputControlProps {
+export interface CheckboxProps
+  extends GlobProps,
+    InputControlProps,
+    SyntheticEventProps,
+    MouseEventProps {
   //
   checkboxRef?: React.RefAttributes;
   name?: string;
@@ -12,5 +21,4 @@ export interface CheckboxProps extends GlobProps, InputControlProps {
   label?: string;
   value?: number | string;
   ariaRequired?: boolean;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

@@ -48,6 +48,7 @@ export const Radio = ({
     <Label>
       <RadioInput
         ref={radioRef}
+        aria-label={label}
         type="radio"
         checked={isChecked}
         disabled={isDisabled}

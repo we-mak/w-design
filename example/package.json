@@ -10,7 +10,7 @@
     "react": "link:../node_modules/react",
     "react-dom": "^16.8.5",
     "react-markdown": "^4.0.6",
-    "react-scripts": "^2.1.8",
+    "react-scripts": "^3.0.0",
     "w-design": "link:.."
   },
   "scripts": {

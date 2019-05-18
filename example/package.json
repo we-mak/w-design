@@ -13,8 +13,12 @@
     "react-dom": "^16.8.5",
     "react-instantsearch-dom": "^5.5.0",
     "react-markdown": "^4.0.6",
+<<<<<<< HEAD
     "react-scripts": "^2.1.8",
     "styled-components": "link:../node_modules/styled-components",
+=======
+    "react-scripts": "^3.0.0",
+>>>>>>> 62337fb406ca76a6109b4ee6515d479b36ccb664
     "w-design": "link:.."
   },
   "scripts": {
@@ -33,8 +37,13 @@
     "not op_mini all"
   ],
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/core": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-styled-components": "^1.10.0"
+=======
+    "gh-pages": "^2.0.1",
+    "react-hooks-testing-library": "^0.5.0"
+>>>>>>> 62337fb406ca76a6109b4ee6515d479b36ccb664
   }
 }

@@ -32,6 +32,6 @@
   ],
   "devDependencies": {
     "gh-pages": "^2.0.1",
-    "react-hooks-testing-library": "^0.5.0"
+    "react-hooks-testing-library": "^0.6.0"
   }
 }

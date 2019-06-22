@@ -46,6 +46,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #E2EAF2;
   border-color: #E2EAF2;
@@ -73,6 +74,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c4 i.icon-before {
+  margin-right: 8px;
+}
+
+.c4 i.icon-after {
+  margin-left: 8px;
+}
+
 .c5 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -95,6 +104,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #008CC0;
   border-color: #007099;
@@ -122,6 +132,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c5 i.icon-before {
+  margin-right: 8px;
+}
+
+.c5 i.icon-after {
+  margin-left: 8px;
+}
+
 .c6 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -144,6 +162,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: none;
   background: transparent;
   color: #008CC0;
@@ -168,6 +187,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c6 i.icon-before {
+  margin-right: 8px;
+}
+
+.c6 i.icon-after {
+  margin-left: 8px;
+}
+
 .c7 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -190,6 +217,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #FA9B00;
   border-color: #EF8100;
@@ -217,6 +245,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c7 i.icon-before {
+  margin-right: 8px;
+}
+
+.c7 i.icon-after {
+  margin-left: 8px;
+}
+
 .c8 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -239,6 +275,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #29A634;
   border-color: #238C2C;
@@ -266,6 +303,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c8 i.icon-before {
+  margin-right: 8px;
+}
+
+.c8 i.icon-after {
+  margin-left: 8px;
+}
+
 .c9 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -288,6 +333,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #DC1F1F;
   border-color: #C61515;
@@ -315,6 +361,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c9 i.icon-before {
+  margin-right: 8px;
+}
+
+.c9 i.icon-after {
+  margin-left: 8px;
+}
+
 .c10 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -337,6 +391,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: none;
   background: transparent;
   color: #202B33;
@@ -361,6 +416,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c10 i.icon-before {
+  margin-right: 8px;
+}
+
+.c10 i.icon-after {
+  margin-left: 8px;
+}
+
 .c11 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -383,6 +446,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: transparent;
   border-color: transparent;
@@ -410,6 +474,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c11 i.icon-before {
+  margin-right: 8px;
+}
+
+.c11 i.icon-after {
+  margin-left: 8px;
+}
+
 .c12 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -432,6 +504,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #00B8D9;
   border-color: #00A3BF;
@@ -459,6 +532,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c12 i.icon-before {
+  margin-right: 8px;
+}
+
+.c12 i.icon-after {
+  margin-left: 8px;
+}
+
 .c13 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -481,6 +562,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #E2EAF2;
   border-color: #E2EAF2;
@@ -506,6 +588,14 @@ exports[`<Button/> should render with different appearance style 1`] = `
   color: #90A9BF !important;
   background: #CED9E3 !important;
   border: none;
+}
+
+.c13 i.icon-before {
+  margin-right: 8px;
+}
+
+.c13 i.icon-after {
+  margin-left: 8px;
 }
 
 a.c13 {
@@ -539,6 +629,7 @@ a.c13:hover {
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #E2EAF2;
   border-color: #E2EAF2;
@@ -566,28 +657,32 @@ a.c13:hover {
   border: none;
 }
 
-.c0 {
-  font-family: Helvetica,Arial,sans-serif;
+.c14 i.icon-before {
+  margin-right: 8px;
+}
+
+.c14 i.icon-after {
+  margin-left: 8px;
 }
 
 .c0 h1 {
-  font-size: 2rem;
-}
-
-.c0 h2 {
   font-size: 1.6rem;
 }
 
-.c0 h3 {
+.c0 h2 {
   font-size: 1.4rem;
 }
 
-.c0 h4 {
+.c0 h3 {
   font-size: 1.2rem;
 }
 
-.c0 h5 {
+.c0 h4 {
   font-size: 1rem;
+}
+
+.c0 h5 {
+  font-size: 0.9rem;
 }
 
 .c0 h6 {
@@ -604,6 +699,7 @@ a.c13:hover {
   line-height: 1.25;
   margin-bottom: 0.5em;
   margin-top: 0;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 .c0 h1,
@@ -623,9 +719,11 @@ a.c13:hover {
   line-height: 1.5;
   margin-bottom: 0.5em;
   margin-top: 0;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 .c0 a {
+  font-family: Helvetica,Arial,sans-serif;
   color: #008CC0;
   outline: none;
   -webkit-text-decoration: none;

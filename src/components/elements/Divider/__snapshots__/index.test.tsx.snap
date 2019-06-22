@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Icon/> should render correct icon styled 1`] = `
+exports[`<Divider/> should render correct with divider style 1`] = `
+.c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 0.05rem;
+  background-color: rgba(86,110,130,0.08);
+  border-radius: 1px;
+  margin: 19px 0px;
+}
+
 .c0 h1 {
   font-size: 1.6rem;
 }
@@ -130,9 +140,8 @@ exports[`<Icon/> should render correct icon styled 1`] = `
   <div
     class="c0"
   >
-    <i
-      aria-hidden="true"
-      class="fas fa-clock"
+    <div
+      class="c1"
     />
   </div>
 </div>

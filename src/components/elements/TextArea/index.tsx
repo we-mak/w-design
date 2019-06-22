@@ -9,9 +9,14 @@ const TextField = styled.textarea<any>`
   ${getTextAreaStyle};
 `;
 
-const TextArea = (props: TextAreaProps) => {
-  const { label, id, name, placeholder, autoComplete = "off", ...rest } = props;
-
+const TextArea = ({
+  label,
+  id,
+  name,
+  placeholder,
+  autoComplete = "off",
+  ...rest
+}: TextAreaProps) => {
   return (
     <TextAreaWrapper>
       <Label htmlFor={id}>{label}</Label>

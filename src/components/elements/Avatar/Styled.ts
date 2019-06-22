@@ -62,11 +62,9 @@ const getTextSize = (props: AvatarProps) => {
   }
 };
 
-const setBackground = (props: AvatarProps) => {
-  const {
-    theme: { colors }
-  } = props;
-
+const setBackground = ({
+  theme: { colors }
+}: AvatarProps) => {
   return randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"]));
 };
 

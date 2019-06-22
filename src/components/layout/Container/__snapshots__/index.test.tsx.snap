@@ -3,7 +3,11 @@
 exports[`<Container/> should renders correctly 1`] = `
 <div>
   <div
-    class="sc-bdVaJa dgPux"
-  />
+    class="sc-bwzfXH bmnpPw"
+  >
+    <div
+      class="sc-bdVaJa Ehzyo"
+    />
+  </div>
 </div>
 `;

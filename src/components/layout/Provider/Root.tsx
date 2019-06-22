@@ -5,22 +5,22 @@ const colors = theme.colors;
 
 const Root = styled.div`
   h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
     font-size: 1.6rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.4rem;
   }
 
-  h4 {
+  h3 {
     font-size: 1.2rem;
   }
-  h5 {
+
+  h4 {
     font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.9rem;
   }
 
   h6 {

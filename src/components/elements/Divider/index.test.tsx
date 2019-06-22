@@ -1,15 +1,14 @@
-// This component is based on styled-components, unnecessary to do overtest
 import * as React from "react";
 import { render } from "react-testing-library";
-import Container from "./index";
+import "jest-styled-components";
+import Divider from "./index";
 import Provider from "../../layout/Provider";
 
-describe("<Container/>", () => {
-  // Render test
-  it("should renders correctly", () => {
+describe("<Divider/>", () => {
+  it("should render correct with divider style", () => {
     const { container } = render(
       <Provider>
-        <Container />
+        <Divider />
       </Provider>
     );
     expect(container).toMatchSnapshot();

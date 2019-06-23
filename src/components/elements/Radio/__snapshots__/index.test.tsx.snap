@@ -1,6 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Radio/> should renders correctly 1`] = `
+.c4 {
+  line-height: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  color: #FBFBFB;
+  fill: transparent;
+}
+
+.c4 circle:first-of-type {
+  stroke-width: 0.08rem;
+  -webkit-transition: stroke 0.2s ease-in-out 0s;
+  transition: stroke 0.2s ease-in-out 0s;
+}
+
+.c4 circle:first-of-type {
+  stroke: #BECEDC;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  position: relative;
+  line-height: 1.2;
+  margin: 4px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c5 {
+  padding: 5px 0;
+}
+
+.c3 {
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
 .c1 {
   display: block;
   line-height: 1;
@@ -142,6 +200,94 @@ exports[`<Radio/> should renders correctly 1`] = `
         class="c1"
       >
         Test checkbox
+      </label>
+      <label
+        class="c2"
+      >
+        <input
+          aria-label="Option 1"
+          class="c3"
+          name="Checkbox"
+          type="radio"
+          value="foo"
+        />
+        <div
+          class="c4"
+        >
+          <svg
+            focusable="false"
+            height="28"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="28"
+          >
+            <g
+              fill-rule="evenodd"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                fill="currentColor"
+                r="7"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                fill="inherit"
+                r="3"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          class="c5"
+        >
+          Option 1
+        </div>
+      </label>
+      <label
+        class="c2"
+      >
+        <input
+          aria-label="Option 2"
+          class="c3"
+          name="Checkbox"
+          type="radio"
+          value="bar"
+        />
+        <div
+          class="c4"
+        >
+          <svg
+            focusable="false"
+            height="28"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="28"
+          >
+            <g
+              fill-rule="evenodd"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                fill="currentColor"
+                r="7"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                fill="inherit"
+                r="3"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          class="c5"
+        >
+          Option 2
+        </div>
       </label>
     </div>
   </div>

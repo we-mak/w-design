@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
 import "jest-styled-components";
-import Radio from "./index";
+import RadioGroup from "./index";
 import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
@@ -11,7 +11,20 @@ describe("<Radio/>", () => {
   it("should renders correctly", () => {
     const { container } = render(
       <Provider>
-        <Radio groupName="Checkbox" groupLabel="Test checkbox" />
+        <RadioGroup
+          groupName="Checkbox"
+          groupLabel="Test checkbox"
+          options={[
+            {
+              label: "Option 1",
+              value: "foo"
+            },
+            {
+              label: "Option 2",
+              value: "bar"
+            }
+          ]}
+        />
       </Provider>
     );
 

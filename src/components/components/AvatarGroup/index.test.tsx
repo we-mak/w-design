@@ -11,7 +11,11 @@ describe("<AvatarGroup/>", () => {
   it("should renders correctly", () => {
     const container = render(
       <Provider>
-        <AvatarGroup name="we-design" description="this is the description" />
+        <AvatarGroup
+          name="we-design"
+          description="this is the description"
+          actions={<div>do action</div>}
+        />
       </Provider>
     );
     expect(container).toMatchSnapshot();

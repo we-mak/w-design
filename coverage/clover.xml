@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561292969756" clover="3.2.0">
-  <project timestamp="1561292969757" name="All files">
-    <metrics statements="827" coveredstatements="475" conditionals="489" coveredconditionals="243" methods="146" coveredmethods="76" elements="1462" coveredelements="794" complexity="0" loc="827" ncloc="827" packages="24" files="49" classes="49"/>
+<coverage generated="1561295478842" clover="3.2.0">
+  <project timestamp="1561295478842" name="All files">
+    <metrics statements="827" coveredstatements="494" conditionals="489" coveredconditionals="257" methods="146" coveredmethods="82" elements="1462" coveredelements="833" complexity="0" loc="827" ncloc="827" packages="24" files="49" classes="49"/>
     <package name="components.AvatarGroup">
-      <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="17" methods="3" coveredmethods="3"/>
+      <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/AvatarGroup/index.tsx">
-        <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="17" methods="3" coveredmethods="3"/>
+        <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -798,45 +798,45 @@
       </file>
     </package>
     <package name="elements.Radio">
-      <metrics statements="60" coveredstatements="35" conditionals="42" coveredconditionals="13" methods="12" coveredmethods="4"/>
+      <metrics statements="60" coveredstatements="54" conditionals="42" coveredconditionals="26" methods="12" coveredmethods="10"/>
       <file name="Radio.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Radio/Radio.tsx">
-        <metrics statements="23" coveredstatements="10" conditionals="16" coveredconditionals="6" methods="5" coveredmethods="0"/>
+        <metrics statements="23" coveredstatements="23" conditionals="16" coveredconditionals="11" methods="5" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="19" count="1" type="stmt"/>
         <line num="21" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="24" count="1" type="stmt"/>
         <line num="26" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="34" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="44" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
       </file>
       <file name="RadioIcon.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Radio/RadioIcon.ts">
-        <metrics statements="7" coveredstatements="4" conditionals="8" coveredconditionals="2" methods="1" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="6" conditionals="8" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="32" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="45" count="1" type="stmt"/>
       </file>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Radio/index.tsx">
-        <metrics statements="30" coveredstatements="21" conditionals="18" coveredconditionals="5" methods="6" coveredmethods="4"/>
+        <metrics statements="30" coveredstatements="25" conditionals="18" coveredconditionals="10" methods="6" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -860,12 +860,12 @@
         <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="30" count="0" type="stmt"/>
         <line num="34" count="1" type="stmt"/>
-        <line num="39" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="39" count="2" type="cond" truecount="3" falsecount="1"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="46" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="47" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
         <line num="66" count="1" type="stmt"/>
       </file>
     </package>

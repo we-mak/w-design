@@ -9,8 +9,8 @@ exports[`<Spinner/> should renders correctly 1`] = `
 }
 
 .c1::after {
-  -webkit-animation: iECmZH 500ms infinite linear;
-  animation: iECmZH 500ms infinite linear;
+  -webkit-animation: btrQYj 500ms infinite linear;
+  animation: btrQYj 500ms infinite linear;
   border: 0.1rem solid;
   border-color: #004660;
   border-radius: 50%;
@@ -176,8 +176,8 @@ exports[`<Spinner/> should renders large sizecorrectly 1`] = `
 }
 
 .c1::after {
-  -webkit-animation: iECmZH 500ms infinite linear;
-  animation: iECmZH 500ms infinite linear;
+  -webkit-animation: btrQYj 500ms infinite linear;
+  animation: btrQYj 500ms infinite linear;
   border: 0.14rem solid;
   border-color: #004660;
   border-radius: 50%;

@@ -2,7 +2,7 @@
 
 exports[`<AvatarGroup/> should renders correctly 1`] = `
 .c1 {
-  background: #C0B6F2;
+  background: #998DD9;
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;

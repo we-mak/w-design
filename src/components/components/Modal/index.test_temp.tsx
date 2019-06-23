@@ -1,5 +1,5 @@
 // import * as React from "react";
-// import { cleanup, renderIntoComponent } from "react-testing-library";
+// import { cleanup, renderIntoComponent } from "@testing-library/react";
 // import "jest-dom/extend-expect";
 
 // import Modal from "./index";

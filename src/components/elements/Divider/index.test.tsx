@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import "jest-styled-components";
 import Divider from "./index";
 import Provider from "../../layout/Provider";

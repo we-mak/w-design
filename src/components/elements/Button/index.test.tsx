@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cleanup, render } from "react-testing-library";
+import { cleanup, render } from "@testing-library/react";
 import "jest-styled-components";
 import Button, { ButtonGroup } from "./index";
 import Provider from "../../layout/Provider";

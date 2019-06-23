@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1558655935820" clover="3.2.0">
-  <project timestamp="1558655935821" name="All files">
+<coverage generated="1561247958815" clover="3.2.0">
+  <project timestamp="1561247958815" name="All files">
     <metrics statements="829" coveredstatements="396" conditionals="489" coveredconditionals="194" methods="146" coveredmethods="62" elements="1464" coveredelements="652" complexity="0" loc="829" ncloc="829" packages="24" files="49" classes="49"/>
     <package name="components.AvatarGroup">
       <metrics statements="18" coveredstatements="16" conditionals="18" coveredconditionals="15" methods="3" coveredmethods="1"/>
@@ -477,29 +477,29 @@
         <line num="59" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
         <line num="65" count="2" type="stmt"/>
-        <line num="67" count="2" type="stmt"/>
-        <line num="70" count="2" type="stmt"/>
-        <line num="73" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="86" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="98" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="106" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="71" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="84" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="96" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="104" count="2" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
         <line num="107" count="0" type="stmt"/>
-        <line num="109" count="0" type="stmt"/>
-        <line num="116" count="0" type="stmt"/>
-        <line num="123" count="0" type="stmt"/>
-        <line num="130" count="0" type="stmt"/>
-        <line num="138" count="0" type="stmt"/>
-        <line num="145" count="0" type="stmt"/>
-        <line num="152" count="0" type="stmt"/>
-        <line num="161" count="2" type="stmt"/>
-        <line num="163" count="0" type="stmt"/>
-        <line num="164" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="128" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="159" count="2" type="stmt"/>
+        <line num="161" count="0" type="stmt"/>
+        <line num="162" count="0" type="stmt"/>
+        <line num="165" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="166" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="167" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="168" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="169" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="171" count="0" type="stmt"/>
-        <line num="172" count="0" type="stmt"/>
-        <line num="175" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="169" count="0" type="stmt"/>
+        <line num="170" count="0" type="stmt"/>
+        <line num="173" count="2" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Avatar/index.tsx">
         <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="6" methods="1" coveredmethods="1"/>

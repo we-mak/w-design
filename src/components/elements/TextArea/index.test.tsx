@@ -1,5 +1,5 @@
 import * as React from "react";
-import { render, cleanup } from "react-testing-library";
+import { render, cleanup } from "@testing-library/react";
 import "jest-styled-components";
 import TextArea from "./index";
 import Provider from "../../layout/Provider";

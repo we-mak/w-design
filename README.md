@@ -125,7 +125,7 @@ Cover basic components
 |                   | ❌ InlineMessage       | ❌ Tooltip     |
 |                   | ✅ Typo                | ❌ Popover     |
 |                   | ✅ Icon (Font awesome) | ❌ Comment     |
-|                   | 🖌 Radio                | ❌ Select      |
+|                   | ✅ Radio               | ❌ Select      |
 |                   | ✅ Button              | ✅ FormGroup   |
 |                   |                        | ✅ InputForm   |
 |                   |                        | ❌ Pagination  |

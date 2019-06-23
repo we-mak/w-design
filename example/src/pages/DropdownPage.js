@@ -19,10 +19,10 @@ const DropdownPage = () => (
       title="Dropdown"
       content={
         <Menu>
-          <MenuItem>Item 1</MenuItem>
-          <MenuItem>Item 2</MenuItem>
-          <MenuItem>Item 3</MenuItem>
-          <MenuItem>Item 4</MenuItem>
+          <MenuItem key="1">Item 1</MenuItem>
+          <MenuItem key="2">Item 2</MenuItem>
+          <MenuItem key="3">Item 3</MenuItem>
+          <MenuItem key="4">Item 4</MenuItem>
         </Menu>
       }
     />
@@ -35,10 +35,10 @@ const DropdownPage = () => (
     title="Dropdown"
     content={
       <Menu>
-        <MenuItem>Item 1</MenuItem>
-        <MenuItem>Item 2</MenuItem>
-        <MenuItem>Item 3</MenuItem>
-        <MenuItem>Item 4</MenuItem>
+        <MenuItem key="1">Item 1</MenuItem>
+        <MenuItem key="2">Item 2</MenuItem>
+        <MenuItem key="3">Item 3</MenuItem>
+        <MenuItem key="4">Item 4</MenuItem>
       </Menu>
     }
   />

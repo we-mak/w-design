@@ -13,7 +13,7 @@ export const WModal = styled.div`
   right: 0;
   left: 0;
   justify-content: center;
-  z-index: 400;
+  z-index: 1000;
   .close-btn {
     float: right;
   }

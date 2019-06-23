@@ -11,7 +11,12 @@ describe("<AvatarGroup/>", () => {
   it("should renders correctly", () => {
     const { container } = render(
       <Provider>
-        <Avatar alt="test" />
+        <Avatar
+          size="md"
+          alt="test"
+          presence="online"
+          avatarUrl="https://api.adorable.io/avatars/240/thunder"
+        />
       </Provider>
     );
 

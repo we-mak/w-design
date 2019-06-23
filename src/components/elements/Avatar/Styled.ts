@@ -62,9 +62,7 @@ const getTextSize = (props: AvatarProps) => {
   }
 };
 
-const setBackground = ({
-  theme: { colors }
-}: AvatarProps) => {
+const setBackground = ({ theme: { colors } }: AvatarProps) => {
   return randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"]));
 };
 
@@ -166,7 +164,6 @@ const setPresenceColor = (props: AvatarProps) => {
   if (presence === "offline") return colors["N20"];
   if (presence === "busy") return colors["R30"];
 
-  console.log(presence);
   return colors["G30"];
 };
 

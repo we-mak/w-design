@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cleanup, render } from "@testing-library/react";
+import { cleanup, render, fireEvent } from "@testing-library/react";
 import "jest-styled-components";
 import Button, { ButtonGroup } from "./index";
 import Provider from "../../layout/Provider";
@@ -29,13 +29,15 @@ describe("<Button/>", () => {
   });
 
   // event
-
-  // it('calls "onClick" prop on button click', () => {
-  //   // Render new instance in every test to prevent leaking state
-  //   const onClick = jest.fn();
-  //   const { getByText } = render(<Button onClick={onClick} />);
-
-  //   fireEvent.click(getByText(/click me nao/i));
-  //   expect(onClick).toHaveBeenCalled();
-  // });
+  it('calls "onClick" prop on button click', () => {
+    // Render new instance in every test to prevent leaking state
+    const onClick = jest.fn();
+    const { getByTestId } = render(
+      <Provider>
+        <Button onClick={onClick} />
+      </Provider>
+    );
+    fireEvent.click(getByTestId("button"));
+    expect(onClick).toHaveBeenCalled();
+  });
 });

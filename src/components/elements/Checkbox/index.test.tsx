@@ -56,4 +56,15 @@ describe("<Checkbox/>", () => {
     fireEvent.click(disabledCheckbox);
     expect((disabledCheckbox as HTMLInputElement).checked).toEqual(false);
   });
+
+  it('calls "onChange" prop on change', () => {
+    const onChange = jest.fn();
+    const { getByTestId } = render(
+      <Provider>
+        <Checkbox onChange={onChange} />
+      </Provider>
+    );
+    fireEvent.click(getByTestId("checkbox"));
+    expect(onChange).toHaveBeenCalled();
+  });
 });

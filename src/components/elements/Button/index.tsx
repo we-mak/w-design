@@ -132,6 +132,8 @@ const Button = (props: ButtonProps) => {
       //
       tabIndex={tabIndex}
       onClick={isDisabled ? undefined : onClick}
+      //test id
+      data-testid="button"
       {...rest}
     >
       {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}

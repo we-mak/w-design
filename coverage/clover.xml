@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561300466990" clover="3.2.0">
-  <project timestamp="1561300466990" name="All files">
-    <metrics statements="827" coveredstatements="494" conditionals="489" coveredconditionals="258" methods="146" coveredmethods="82" elements="1462" coveredelements="834" complexity="0" loc="827" ncloc="827" packages="24" files="49" classes="49"/>
+<coverage generated="1561343862516" clover="3.2.0">
+  <project timestamp="1561343862516" name="All files">
+    <metrics statements="827" coveredstatements="540" conditionals="489" coveredconditionals="289" methods="146" coveredmethods="90" elements="1462" coveredelements="919" complexity="0" loc="827" ncloc="827" packages="24" files="49" classes="49"/>
     <package name="components.AvatarGroup">
       <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/AvatarGroup/index.tsx">
@@ -27,67 +27,67 @@
       </file>
     </package>
     <package name="components.Card">
-      <metrics statements="49" coveredstatements="0" conditionals="32" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <metrics statements="49" coveredstatements="46" conditionals="32" coveredconditionals="31" methods="11" coveredmethods="8"/>
       <file name="CardContent.ts" path="/Users/son/Desktop/w/w-design/src/components/components/Card/CardContent.ts">
-        <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="CardHeader.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/Card/CardHeader.tsx">
-        <metrics statements="10" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
+        <metrics statements="10" coveredstatements="10" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
       </file>
       <file name="CardMedia.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/Card/CardMedia.tsx">
-        <metrics statements="11" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
+        <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/Card/index.tsx">
-        <metrics statements="26" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="26" coveredstatements="23" conditionals="16" coveredconditionals="15" methods="5" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="51" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="58" count="0" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="100" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="103" count="0" type="stmt"/>
-        <line num="105" count="0" type="stmt"/>
-        <line num="106" count="0" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="100" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="105" count="1" type="stmt"/>
+        <line num="106" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.Dropdown">
@@ -685,10 +685,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/CustomTag/index.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="11" count="9" type="stmt"/>
-        <line num="12" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="2" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
     </package>
     <package name="elements.Divider">
@@ -936,24 +936,24 @@
       <metrics statements="18" coveredstatements="18" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Typo/index.tsx">
         <metrics statements="18" coveredstatements="18" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="13" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="8" type="stmt"/>
-        <line num="18" count="8" type="stmt"/>
-        <line num="20" count="8" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="34" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
       </file>
     </package>
     <package name="layout.Container">
@@ -1017,35 +1017,35 @@
       <metrics statements="23" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
       <file name="Root.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/Root.tsx">
         <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
-        <line num="1" count="15" type="stmt"/>
-        <line num="2" count="15" type="stmt"/>
-        <line num="4" count="15" type="stmt"/>
-        <line num="6" count="15" type="cond" truecount="2" falsecount="0"/>
-        <line num="40" count="25" type="stmt"/>
-        <line num="60" count="25" type="stmt"/>
-        <line num="64" count="25" type="stmt"/>
-        <line num="114" count="25" type="stmt"/>
-        <line num="119" count="25" type="stmt"/>
-        <line num="124" count="15" type="stmt"/>
-        <line num="126" count="15" type="stmt"/>
+        <line num="1" count="16" type="stmt"/>
+        <line num="2" count="16" type="stmt"/>
+        <line num="4" count="16" type="stmt"/>
+        <line num="6" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="26" type="stmt"/>
+        <line num="60" count="26" type="stmt"/>
+        <line num="64" count="26" type="stmt"/>
+        <line num="114" count="26" type="stmt"/>
+        <line num="119" count="26" type="stmt"/>
+        <line num="124" count="16" type="stmt"/>
+        <line num="126" count="16" type="stmt"/>
       </file>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/index.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="15" type="stmt"/>
-        <line num="2" count="15" type="stmt"/>
-        <line num="3" count="15" type="stmt"/>
-        <line num="4" count="15" type="stmt"/>
-        <line num="5" count="15" type="stmt"/>
-        <line num="12" count="50" type="cond" truecount="2" falsecount="0"/>
-        <line num="31" count="25" type="stmt"/>
-        <line num="41" count="15" type="stmt"/>
-        <line num="43" count="15" type="stmt"/>
+        <line num="1" count="16" type="stmt"/>
+        <line num="2" count="16" type="stmt"/>
+        <line num="3" count="16" type="stmt"/>
+        <line num="4" count="16" type="stmt"/>
+        <line num="5" count="16" type="stmt"/>
+        <line num="12" count="52" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="26" type="stmt"/>
+        <line num="41" count="16" type="stmt"/>
+        <line num="43" count="16" type="stmt"/>
       </file>
       <file name="resetCSS.ts" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/resetCSS.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
-        <line num="1" count="15" type="stmt"/>
-        <line num="2" count="15" type="stmt"/>
-        <line num="5" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="1" count="16" type="stmt"/>
+        <line num="2" count="16" type="stmt"/>
+        <line num="5" count="16" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
   </project>

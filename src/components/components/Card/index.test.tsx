@@ -27,6 +27,8 @@ describe("<Button/>", () => {
 
           <CardFooter>Footer</CardFooter>
         </Card>
+
+        <Card isLoading />
       </Provider>
     );
     expect(container).toMatchSnapshot();

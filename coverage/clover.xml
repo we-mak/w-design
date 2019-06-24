@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561343862516" clover="3.2.0">
-  <project timestamp="1561343862516" name="All files">
-    <metrics statements="827" coveredstatements="540" conditionals="489" coveredconditionals="289" methods="146" coveredmethods="90" elements="1462" coveredelements="919" complexity="0" loc="827" ncloc="827" packages="24" files="49" classes="49"/>
+<coverage generated="1561345194421" clover="3.2.0">
+  <project timestamp="1561345194421" name="All files">
+    <metrics statements="827" coveredstatements="543" conditionals="489" coveredconditionals="290" methods="146" coveredmethods="93" elements="1462" coveredelements="926" complexity="0" loc="827" ncloc="827" packages="24" files="49" classes="49"/>
     <package name="components.AvatarGroup">
       <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/AvatarGroup/index.tsx">
@@ -27,7 +27,7 @@
       </file>
     </package>
     <package name="components.Card">
-      <metrics statements="49" coveredstatements="46" conditionals="32" coveredconditionals="31" methods="11" coveredmethods="8"/>
+      <metrics statements="49" coveredstatements="49" conditionals="32" coveredconditionals="32" methods="11" coveredmethods="11"/>
       <file name="CardContent.ts" path="/Users/son/Desktop/w/w-design/src/components/components/Card/CardContent.ts">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -61,7 +61,7 @@
         <line num="27" count="1" type="stmt"/>
       </file>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/Card/index.tsx">
-        <metrics statements="26" coveredstatements="23" conditionals="16" coveredconditionals="15" methods="5" coveredmethods="2"/>
+        <metrics statements="26" coveredstatements="26" conditionals="16" coveredconditionals="16" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -70,20 +70,20 @@
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="28" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="34" count="1" type="stmt"/>
         <line num="36" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="41" count="1" type="stmt"/>
         <line num="43" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="44" count="0" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
         <line num="51" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
         <line num="77" count="1" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
         <line num="100" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="103" count="1" type="stmt"/>
         <line num="105" count="1" type="stmt"/>

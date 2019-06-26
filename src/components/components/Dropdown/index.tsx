@@ -38,18 +38,18 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
   const [isOpen, setOpen] = React.useState(false);
   const [panelstyle, setStyle] = React.useState({});
 
+  const buttonRef = React.useRef() as React.MutableRefObject<any>;
+
+  // Close when click outside
   document.addEventListener("click", (e: any) => {
     if (!e.target.closest(".dropdown") && isOpen) {
       setOpen(false);
     }
   });
 
-  const buttonRef = React.useRef() as React.MutableRefObject<any>;
-
   const openDropdownPanel = () => {
     const buttonNode: HTMLElement = buttonRef!.current!;
     const dimension = buttonNode!.getBoundingClientRect();
-
     switch (position) {
       case "bottomCenter":
         setStyle({

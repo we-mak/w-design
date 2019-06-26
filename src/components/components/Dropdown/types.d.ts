@@ -5,4 +5,5 @@ export interface DropdownProps extends GlobProps, SizeProps {
   iconAfter?: string;
   content?: React.ReactChild | React.ReactChild[];
   position?: "bottomCenter" | "bottomRight" | "topLeft" | "topRight" | "topCenter";
+  openDropdownPanel?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }

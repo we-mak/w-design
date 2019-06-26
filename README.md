@@ -130,6 +130,7 @@ Cover basic components
 |                   |                        | ✅ InputForm   |
 |                   |                        | ❌ Pagination  |
 |                   |                        | ✅ Card        |
+|                   |                        | ❌ Form        |
 
 ## 🐞 Report
 

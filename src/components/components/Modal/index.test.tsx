@@ -23,6 +23,20 @@ describe("<Modal/>", () => {
           modalBody={<div>Modal body</div>}
           modalFooter={<div>Modal footer</div>}
         />
+        <Modal
+          size="large"
+          onClose={() => null}
+          modalTitle="Modal title"
+          modalBody={<div>Modal body</div>}
+          modalFooter={<div>Modal footer</div>}
+        />
+        <Modal
+          size="small"
+          onClose={() => null}
+          modalTitle="Modal title"
+          modalBody={<div>Modal body</div>}
+          modalFooter={<div>Modal footer</div>}
+        />
       </Provider>
     );
 

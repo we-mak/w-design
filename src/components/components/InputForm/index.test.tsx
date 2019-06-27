@@ -10,27 +10,21 @@ describe("<InputForm/>", () => {
   it("should render correctly", () => {
     const { container } = render(
       <Provider>
-        <InputForm label="label" hintMessage="hint" />
+        <InputForm label="label" hintMessage="hint" iconBefore="fas fa-phone" />
+        <InputForm iconAfter="fas fa-phone" />
         <InputForm isError />
         <InputForm isFocus />
         <InputForm isDisabled />
         <InputForm isRequired />
         <InputForm isWarning />
         <InputForm isSuccess />
+        <InputForm isLoading />
       </Provider>
     );
     expect(container).toMatchSnapshot();
   });
 
   // Props test
-  it("should have required attribute", () => {
-    // const { container } = render(
-    //   <Provider>
-    //     <InputForm isRequired />
-    //   </Provider>
-    // );
-  });
-
   it("should have label props", () => {
     const { getByText } = render(
       <Provider>

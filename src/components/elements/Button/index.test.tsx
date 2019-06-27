@@ -12,21 +12,31 @@ describe("<Button/>", () => {
       <Provider>
         <ButtonGroup>
           <Button>Hello</Button>
-          <Button appearance="primary">Hello</Button>
-          <Button appearance="link">Hello</Button>
-          <Button appearance="warning">Hello</Button>
+          <Button iconBefore="fas fa-phone" appearance="primary">
+            Hello
+          </Button>
+          <Button iconAfter="fas fa-phone" appearance="link">
+            Hello
+          </Button>
+          <Button iconBefore="fas fa-phone" iconOnly appearance="warning" />
           <Button appearance="success">Hello</Button>
           <Button appearance="danger">Hello</Button>
           <Button appearance="subtle">Hello</Button>
           <Button appearance="clean">Hello</Button>
-          <Button appearance="help">Hello</Button>
+          <Button autoFocus appearance="help">
+            Hello
+          </Button>
         </ButtonGroup>
         <Button href="/" />
         <Button href="/" isDisabled />
+        <Button isSelected />
+        <Button isLoading />
       </Provider>
     );
     expect(container).toMatchSnapshot();
   });
+
+  // props test
 
   // event
   it('calls "onClick" prop on button click', () => {

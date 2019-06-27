@@ -12,8 +12,6 @@ import {
 } from "./Styled";
 import { ModalProps } from "./types";
 
-/** ts-lint disabled */
-
 const Modal = (props: ModalProps) => {
   const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
   // Main root layout selecting
@@ -43,7 +41,7 @@ const Modal = (props: ModalProps) => {
       // Remove style attribute
       documentBody.removeAttribute("style");
       // Set scroll position
-      window.scrollBy(0, -scrollPosition);
+      scrollPosition !== 0 && window.scrollBy(0, -scrollPosition);
     };
   }, []);
 
@@ -61,6 +59,7 @@ const Modal = (props: ModalProps) => {
               appearance="clean"
               size="sm"
               onClick={onClose}
+              data-testid="close"
             />
             <Typo tag="div" appearance="h5">
               {modalTitle}

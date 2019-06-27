@@ -2609,13 +2609,6 @@ clean-css@4.2.x:
   dependencies:
     source-map "~0.6.0"
 
-clean-tag@^3.1.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/clean-tag/-/clean-tag-3.1.1.tgz#68981b22905d7e53722d8b74fd0ef4eca3c33fa2"
-  integrity sha512-b5TQ+gaZVCtKkHnot2HDZeQX8AACuZaGOeL3/ZaglAbFOXO8tjF4i3NSX7sM3Sevw3kKk4lkZsLGvLV3vTWqdQ==
-  dependencies:
-    html-tags "^2.0.0"
-
 cli-cursor@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
@@ -4820,11 +4813,6 @@ html-minifier@^3.5.20:
     param-case "2.1.x"
     relateurl "0.2.x"
     uglify-js "3.4.x"
-
-html-tags@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
-  integrity sha1-ELMKOGCF9Dzt41PMj6fLDe7qZos=
 
 html-to-react@^1.3.4:
   version "1.3.4"

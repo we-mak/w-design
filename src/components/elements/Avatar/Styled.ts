@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { space } from "styled-system";
-import { randomProperty, filterObject } from "../../../common/helpers";
 import { AvatarProps } from "./types";
 
 const getSize = (props: AvatarProps) => {
@@ -62,12 +61,7 @@ const getTextSize = (props: AvatarProps) => {
   }
 };
 
-const setBackground = ({ theme: { colors } }: AvatarProps) => {
-  return randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"]));
-};
-
 export const AvatarWrapper = styled.figure<AvatarProps>`
-  background: ${setBackground};
   border-radius: 50%;
   color: rgba(255, 255, 255, 0.85);
   display: inline-block;

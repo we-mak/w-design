@@ -1,6 +1,7 @@
 import * as React from "react";
 import { AvatarWrapper, AvatarDataInit, AvatarImage, PresenceMark } from "./Styled";
-import { firstLetter } from "../../../common/helpers";
+import { firstLetter, randomProperty, filterObject } from "../../../common/helpers";
+import { colors } from "../../../common/styleUtils/colors";
 import { AvatarProps } from "./types";
 
 const Avatar = ({
@@ -11,8 +12,16 @@ const Avatar = ({
   presence,
   ...rest
 }: AvatarProps) => {
+  const [backgroundColor, setBackgroundColor] = React.useState("");
+
+  React.useLayoutEffect(() => {
+    if (!avatarUrl) {
+      setBackgroundColor(randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"])));
+    }
+  }, []);
+
   return (
-    <AvatarWrapper size={size} {...rest}>
+    <AvatarWrapper style={{ backgroundColor }} size={size} {...rest}>
       {dataInitial && <AvatarDataInit size={size}>{firstLetter(dataInitial)}</AvatarDataInit>}
       {avatarUrl && <AvatarImage src={avatarUrl} alt={alt} />}
       {presence && <PresenceMark presence={presence} size={size} />}

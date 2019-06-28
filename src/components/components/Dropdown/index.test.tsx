@@ -1,9 +1,5 @@
 import * as React from "react";
-import {
-  render,
-  cleanup
-  // fireEvent
-} from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import "jest-styled-components";
 import Dropdown from "./index";
 import Provider from "../../layout/Provider";
@@ -35,18 +31,4 @@ describe("<Dropdown/>", () => {
 
     expect(container).toMatchSnapshot();
   });
-
-  //Event test
-  // it("should calls openDropdownPanel event", () => {
-  //   const onClick = jest.fn();
-
-  //   const { container } = render(
-  //     <Provider>
-  //       <Dropdown title="Dropdown" openDropdownPanel={onClick} />
-  //     </Provider>
-  //   );
-
-  //   fireEvent.click(container);
-  //   expect(onClick).toHaveBeenCalled();
-  // });
 });

@@ -1078,11 +1078,6 @@ a.c13:hover {
       data-testid="button"
       type="button"
     />
-    <button
-      class="c4"
-      data-testid="button"
-      type="submit"
-    />
   </div>
 </div>
 `;

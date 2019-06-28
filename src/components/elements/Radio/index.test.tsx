@@ -12,12 +12,30 @@ describe("<Radio/>", () => {
     const { container } = render(
       <Provider>
         <RadioGroup
-          groupName="Checkbox"
-          groupLabel="Test checkbox"
+          groupName="Radio"
+          groupLabel="Radio"
           options={[
             {
               label: "Option 1",
-              value: "foo"
+              value: "foo",
+              isChecked: true
+            },
+            {
+              label: "Option 2",
+              value: "bar"
+            }
+          ]}
+        />
+        <RadioGroup
+          isDisabled
+          defaultValue="foo"
+          groupName="Radio"
+          groupLabel="Radio"
+          options={[
+            {
+              label: "Option 1",
+              value: "foo",
+              isChecked: true
             },
             {
               label: "Option 2",
@@ -32,31 +50,56 @@ describe("<Radio/>", () => {
   });
 
   // Event
-  // it("should fire onchange event", () => {
+  it("should fire onchange event", () => {
+    const { getByLabelText } = render(
+      <Provider>
+        <RadioGroup
+          groupName="Radio"
+          groupLabel="Radio"
+          options={[
+            {
+              label: "Foo",
+              value: "foo"
+            },
+            {
+              label: "Bar",
+              value: "bar"
+            }
+          ]}
+        />
+      </Provider>
+    );
+
+    const radio: any = getByLabelText(/Foo/i);
+    fireEvent.change(radio, { target: { value: "bar" } });
+
+    expect(radio.value).toBe("bar");
+  });
+
+  // it("should fire onRadioChange event", () => {
   //   const onChange = jest.fn();
-  //   const { getByTestId } = render(
+  //   const { getByLabelText } = render(
   //     <Provider>
   //       <RadioGroup
-  //         groupName="Checkbox"
-  //         groupLabel="Test checkbox"
+  //         groupName="Radio"
+  //         groupLabel="Group"
   //         options={[
   //           {
-  //             label: "Option 1",
+  //             label: "Foo",
   //             value: "foo"
   //           },
   //           {
-  //             label: "Option 2",
+  //             label: "Bar",
   //             value: "bar"
   //           }
   //         ]}
-  //         onChange={onChange}
+  //         onRadioChange={onChange}
   //       />
   //     </Provider>
   //   );
 
-  //   const radio: any = getByTestId(/radio/i);
-  //   radio.value = "foo";
-  //   fireEvent.change(radio, { target: { value: "foo" } });
+  //   const radio: any = getByLabelText(/Radio/i);
+  //   fireEvent.click(radio);
   //   expect(onChange).toHaveBeenCalled();
   // });
 });

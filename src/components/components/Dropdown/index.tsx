@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import useClickOutside from "../../../hooks/useClickOutside";
 import Button from "../../elements/Button";
 import { Arrow } from "./Arrow";
 import { DropdownProps } from "./types";
@@ -38,14 +39,7 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
   const [isOpen, setOpen] = React.useState(false);
   const [panelstyle, setStyle] = React.useState({});
 
-  const buttonRef = React.useRef() as React.MutableRefObject<any>;
-
-  // Close when click outside
-  document.addEventListener("click", function(e: any) {
-    if (!e.target.closest(".dropdown") && isOpen) {
-      setOpen(false);
-    }
-  });
+  const buttonRef = useClickOutside(() => setOpen(false));
 
   const openDropdownPanel = () => {
     const buttonNode: HTMLElement = buttonRef!.current!;

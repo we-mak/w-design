@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561677999221" clover="3.2.0">
-  <project timestamp="1561677999222" name="All files">
-    <metrics statements="828" coveredstatements="751" conditionals="491" coveredconditionals="410" methods="146" coveredmethods="133" elements="1465" coveredelements="1294" complexity="0" loc="828" ncloc="828" packages="24" files="49" classes="49"/>
-    <package name="components.AvatarGroup">
+<coverage generated="1561692523199" clover="3.2.0">
+  <project timestamp="1561692523199" name="All files">
+    <metrics statements="838" coveredstatements="761" conditionals="491" coveredconditionals="410" methods="150" coveredmethods="136" elements="1479" coveredelements="1307" complexity="0" loc="838" ncloc="838" packages="25" files="50" classes="50"/>
+    <package name="components.components.AvatarGroup">
       <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/AvatarGroup/index.tsx">
         <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
@@ -26,7 +26,7 @@
         <line num="59" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="components.Card">
+    <package name="components.components.Card">
       <metrics statements="49" coveredstatements="49" conditionals="32" coveredconditionals="32" methods="11" coveredmethods="11"/>
       <file name="CardContent.ts" path="/Users/son/Desktop/w/w-design/src/components/components/Card/CardContent.ts">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
@@ -90,8 +90,8 @@
         <line num="106" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="components.Dropdown">
-      <metrics statements="41" coveredstatements="23" conditionals="23" coveredconditionals="12" methods="6" coveredmethods="2"/>
+    <package name="components.components.Dropdown">
+      <metrics statements="39" coveredstatements="23" conditionals="19" coveredconditionals="12" methods="6" coveredmethods="2"/>
       <file name="Arrow.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/Dropdown/Arrow.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
@@ -101,46 +101,44 @@
         <line num="17" count="5" type="stmt"/>
       </file>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/Dropdown/index.tsx">
-        <metrics statements="36" coveredstatements="18" conditionals="21" coveredconditionals="10" methods="5" coveredmethods="1"/>
+        <metrics statements="34" coveredstatements="18" conditionals="17" coveredconditionals="10" methods="5" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="0" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="37" count="10" type="cond" truecount="1" falsecount="1"/>
-        <line num="38" count="5" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="38" count="10" type="cond" truecount="1" falsecount="1"/>
         <line num="39" count="5" type="stmt"/>
-        <line num="41" count="5" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
         <line num="44" count="5" type="stmt"/>
-        <line num="45" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
-        <line num="50" count="5" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
         <line num="83" count="0" type="stmt"/>
-        <line num="88" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
-        <line num="92" count="5" type="stmt"/>
-        <line num="112" count="2" type="stmt"/>
+        <line num="86" count="5" type="stmt"/>
+        <line num="106" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="components.FormGroup">
+    <package name="components.components.FormGroup">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/son/Desktop/w/w-design/src/components/components/FormGroup/index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
@@ -149,7 +147,7 @@
         <line num="41" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="components.InputForm">
+    <package name="components.components.InputForm">
       <metrics statements="42" coveredstatements="42" conditionals="28" coveredconditionals="28" methods="10" coveredmethods="10"/>
       <file name="Styled.ts" path="/Users/son/Desktop/w/w-design/src/components/components/InputForm/Styled.ts">
         <metrics statements="22" coveredstatements="22" conditionals="16" coveredconditionals="16" methods="9" coveredmethods="9"/>
@@ -200,7 +198,7 @@
         <line num="56" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="components.Menu">
+    <package name="components.components.Menu">
       <metrics statements="140" coveredstatements="125" conditionals="72" coveredconditionals="57" methods="31" coveredmethods="24"/>
       <file name="Arrow.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/Menu/Arrow.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
@@ -364,7 +362,7 @@
         <line num="50" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components.Modal">
+    <package name="components.components.Modal">
       <metrics statements="46" coveredstatements="46" conditionals="24" coveredconditionals="22" methods="14" coveredmethods="14"/>
       <file name="Styled.ts" path="/Users/son/Desktop/w/w-design/src/components/components/Modal/Styled.ts">
         <metrics statements="28" coveredstatements="28" conditionals="16" coveredconditionals="16" methods="10" coveredmethods="10"/>
@@ -419,7 +417,7 @@
         <line num="76" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="components.Navbar">
+    <package name="components.components.Navbar">
       <metrics statements="21" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
       <file name="NavCenter.ts" path="/Users/son/Desktop/w/w-design/src/components/components/Navbar/NavCenter.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
@@ -452,7 +450,7 @@
         <line num="36" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Avatar">
+    <package name="components.elements.Avatar">
       <metrics statements="55" coveredstatements="34" conditionals="45" coveredconditionals="22" methods="6" coveredmethods="6"/>
       <file name="Styled.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Avatar/Styled.ts">
         <metrics statements="43" coveredstatements="22" conditionals="35" coveredconditionals="12" methods="5" coveredmethods="5"/>
@@ -516,7 +514,7 @@
         <line num="23" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Button">
+    <package name="components.elements.Button">
       <metrics statements="113" coveredstatements="93" conditionals="70" coveredconditionals="58" methods="7" coveredmethods="7"/>
       <file name="getButtonStyle.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Button/getButtonStyle.ts">
         <metrics statements="65" coveredstatements="45" conditionals="34" coveredconditionals="24" methods="2" coveredmethods="2"/>
@@ -638,7 +636,7 @@
         <line num="146" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Checkbox">
+    <package name="components.elements.Checkbox">
       <metrics statements="38" coveredstatements="38" conditionals="28" coveredconditionals="27" methods="6" coveredmethods="6"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Checkbox/index.tsx">
         <metrics statements="38" coveredstatements="38" conditionals="28" coveredconditionals="27" methods="6" coveredmethods="6"/>
@@ -682,7 +680,7 @@
         <line num="136" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="elements.CustomTag">
+    <package name="components.elements.CustomTag">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/CustomTag/index.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -692,7 +690,7 @@
         <line num="14" count="5" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Divider">
+    <package name="components.elements.Divider">
       <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/Divider/index.ts">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -705,7 +703,7 @@
         <line num="14" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Icon">
+    <package name="components.elements.Icon">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Icon/index.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -714,7 +712,7 @@
         <line num="10" count="6" type="stmt"/>
       </file>
     </package>
-    <package name="elements.InputField">
+    <package name="components.elements.InputField">
       <metrics statements="58" coveredstatements="58" conditionals="40" coveredconditionals="33" methods="7" coveredmethods="7"/>
       <file name="getInputStyle.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/InputField/getInputStyle.ts">
         <metrics statements="24" coveredstatements="24" conditionals="18" coveredconditionals="15" methods="3" coveredmethods="3"/>
@@ -781,7 +779,7 @@
         <line num="79" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Portal">
+    <package name="components.elements.Portal">
       <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Portal/index.tsx">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
@@ -798,7 +796,7 @@
         <line num="22" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Radio">
+    <package name="components.elements.Radio">
       <metrics statements="60" coveredstatements="57" conditionals="42" coveredconditionals="32" methods="12" coveredmethods="10"/>
       <file name="Radio.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Radio/Radio.tsx">
         <metrics statements="23" coveredstatements="23" conditionals="16" coveredconditionals="11" methods="5" coveredmethods="4"/>
@@ -870,7 +868,7 @@
         <line num="66" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Spinner">
+    <package name="components.elements.Spinner">
       <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Spinner/index.tsx">
         <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
@@ -885,7 +883,7 @@
         <line num="58" count="6" type="stmt"/>
       </file>
     </package>
-    <package name="elements.TextArea">
+    <package name="components.elements.TextArea">
       <metrics statements="36" coveredstatements="36" conditionals="20" coveredconditionals="20" methods="5" coveredmethods="5"/>
       <file name="Styled.ts" path="/Users/son/Desktop/w/w-design/src/components/elements/TextArea/Styled.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -933,7 +931,7 @@
         <line num="34" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="elements.Typo">
+    <package name="components.elements.Typo">
       <metrics statements="18" coveredstatements="18" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/elements/Typo/index.tsx">
         <metrics statements="18" coveredstatements="18" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
@@ -957,7 +955,7 @@
         <line num="41" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="layout.Container">
+    <package name="components.layout.Container">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Container/index.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -969,7 +967,7 @@
         <line num="23" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="layout.DisplayElement">
+    <package name="components.layout.DisplayElement">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/DisplayElement/index.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -981,7 +979,7 @@
         <line num="19" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="layout.Flexbox">
+    <package name="components.layout.Flexbox">
       <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
       <file name="Column.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Flexbox/Column.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
@@ -1014,7 +1012,7 @@
         <line num="26" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="layout.Provider">
+    <package name="components.layout.Provider">
       <metrics statements="23" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
       <file name="Root.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/Root.tsx">
         <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
@@ -1047,6 +1045,24 @@
         <line num="1" count="20" type="stmt"/>
         <line num="2" count="20" type="stmt"/>
         <line num="5" count="20" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="12" coveredstatements="10" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <file name="useClickOutside.ts" path="/Users/son/Desktop/w/w-design/src/hooks/useClickOutside.ts">
+        <metrics statements="12" coveredstatements="10" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
       </file>
     </package>
   </project>

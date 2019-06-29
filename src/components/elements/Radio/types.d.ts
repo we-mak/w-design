@@ -33,4 +33,5 @@ export interface RadioGroupProps extends GlobProps, InputControlProps {
   value?: string;
   defaultValue?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onRadioChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

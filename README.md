@@ -111,8 +111,8 @@ Cover basic components
 | ----------------- | ---------------------- | -------------- |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
 | ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
-| ✅ DisplayElement | ❌ Label               | ❌Badges       |
-| ❌ Masonry        | ❌ Image               | ❌Collapsible  |
+| ✅ DisplayElement | ❌ Label               | ❌ Badges      |
+| ❌ Masonry        | ❌ Image               | ❌ Collapsible |
 | ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |
 |                   | ❌ Table               | ❌ Chip        |
 |                   | ❌ List                | ✅ Menu        |
@@ -130,6 +130,7 @@ Cover basic components
 |                   |                        | ✅ InputForm   |
 |                   |                        | ❌ Pagination  |
 |                   |                        | ✅ Card        |
+|                   |                        | ❌ Form        |
 
 ## 🐞 Report
 

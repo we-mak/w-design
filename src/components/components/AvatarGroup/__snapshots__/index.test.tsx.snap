@@ -4,7 +4,6 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c3 {
-  background: #6C869B;
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -62,6 +61,22 @@ Object {
 
 .c5:not(:first-child) {
   padding-left: 0.4rem;
+}
+
+.c6 {
+  font-weight: 500;
+  margin-bottom: 0.2em;
+}
+
+.c7 {
+  color: #4D6171;
+  font-size: 0.7rem;
+}
+
+.c8 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0 h1 {
@@ -202,17 +217,36 @@ Object {
           >
             <figure
               class="c3"
+              style="background-color: rgb(16, 22, 26);"
             >
               <span
                 class="c4"
               >
-                Wm
+                wd
               </span>
             </figure>
           </div>
           <div
             class="c5"
-          />
+          >
+            <div
+              class="c6"
+            >
+              we-design
+            </div>
+            <div
+              class="c7"
+            >
+              this is the description
+            </div>
+          </div>
+          <div
+            class="c8"
+          >
+            <div>
+              do action
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -228,18 +262,37 @@ Object {
           class="sc-AykKH fsIIiH"
         >
           <figure
-            class="sc-AykKC eWXjXZ"
+            class="sc-AykKC hTAlyy"
+            style="background-color: rgb(16, 22, 26);"
           >
             <span
               class="sc-AykKD gkSYHo"
             >
-              Wm
+              wd
             </span>
           </figure>
         </div>
         <div
           class="sc-AykKI eLQCqT"
-        />
+        >
+          <div
+            class="sc-AykKJ jeYZkL"
+          >
+            we-design
+          </div>
+          <div
+            class="sc-AykKK fHUmLc"
+          >
+            this is the description
+          </div>
+        </div>
+        <div
+          class="sc-fzXfLO euaKtg"
+        >
+          <div>
+            do action
+          </div>
+        </div>
       </div>
     </div>
   </div>,

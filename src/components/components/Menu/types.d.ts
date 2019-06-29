@@ -3,7 +3,7 @@ import { GlobProps } from "../../../typings";
 export interface MenuProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];
   fullWidth?: boolean;
-  width: string | number;
+  width?: string | number;
   // set default selected key
   defaultSelectedKey?: string;
   // get key is selecting

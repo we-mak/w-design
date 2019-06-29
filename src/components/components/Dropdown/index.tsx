@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import useClickOutside from "../../../hooks/useClickOutside";
 import Button from "../../elements/Button";
 import { Arrow } from "./Arrow";
 import { DropdownProps } from "./types";
@@ -38,50 +39,47 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
   const [isOpen, setOpen] = React.useState(false);
   const [panelstyle, setStyle] = React.useState({});
 
-  document.addEventListener("click", (e: any) => {
-    if (!e.target.closest(".dropdown") && isOpen) {
-      setOpen(false);
-    }
-  });
-
-  const buttonRef = React.useRef() as React.MutableRefObject<any>;
+  const buttonRef = useClickOutside(() => setOpen(false));
 
   const openDropdownPanel = () => {
     const buttonNode: HTMLElement = buttonRef!.current!;
     const dimension = buttonNode!.getBoundingClientRect();
 
+    let style;
+
     switch (position) {
       case "bottomCenter":
-        setStyle({
+        style = {
           transform: `translate3d(${-(dimension.right - dimension.left) / 2}px,0.2rem,0)`
-        });
+        };
         break;
       case "topLeft":
-        setStyle({
+        style = {
           transform: `translateY(${-dimension.height - 0.2 * 16}px)`,
           bottom: 0
-        });
+        };
         break;
       case "topCenter":
-        setStyle({
+        style = {
           transform: `translate3d(${-(dimension.right - dimension.left) / 2}px,${-dimension.height -
             0.2 * 16}px,0)`,
           bottom: 0
-        });
+        };
         break;
       case "topRight":
-        setStyle({
+        style = {
           transform: `translate3d(${-(dimension.right - dimension.left)}px,${-dimension.height -
             0.2 * 16}px,0)`,
           bottom: 0
-        });
+        };
         break;
       default:
-        setStyle({
+        style = {
           transform: "translateY(0.2rem)"
-        });
+        };
     }
 
+    setStyle(style);
     setOpen(!isOpen);
   };
 

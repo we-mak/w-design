@@ -1,5 +1,15 @@
 import * as React from "react";
 
+// declare global {
+//   namespace NodeJS {
+//     interface Global {
+//       document: Document;
+//       window: Window;
+//       navigator: Navigator;
+//     }
+//   }
+// }
+
 interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
 
 declare module "*.svg" {

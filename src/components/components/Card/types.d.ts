@@ -10,6 +10,7 @@ export interface CardMediaProps extends GlobProps {
   // image cover url
   imageUrl?: string;
   children?: React.ReactChild;
+  alt?: string;
 }
 
 export interface CardHeaderProps extends GlobProps {

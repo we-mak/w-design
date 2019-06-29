@@ -157,6 +157,36 @@ exports[`<InputForm/> should render correctly 1`] = `
   height: auto;
 }
 
+.c12 {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+  min-height: 0.8rem;
+}
+
+.c12::after {
+  -webkit-animation: btrQYj 500ms infinite linear;
+  animation: btrQYj 500ms infinite linear;
+  border: 0.1rem solid;
+  border-color: #004660;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.c12::after {
+  height: 0.8rem;
+  margin-left: -0.4rem;
+  margin-top: -0.4rem;
+  width: 0.8rem;
+}
+
 .c1 {
   position: relative;
   font-family: Helvetica,Arial,sans-serifpx;
@@ -239,6 +269,12 @@ exports[`<InputForm/> should render correctly 1`] = `
   color: #DC1F1F;
   font-size: 0.7rem;
   top: -0.2rem;
+}
+
+.c11 {
+  position: absolute;
+  right: 1rem;
+  top: 60%;
 }
 
 .c0 h1 {
@@ -379,9 +415,13 @@ exports[`<InputForm/> should render correctly 1`] = `
         label
          
       </label>
+      <i
+        aria-hidden="true"
+        class="icon-before fas fa-phone"
+      />
       <input
         autocomplete="off"
-        class="c3"
+        class="c3 icon-before"
         type="text"
         value=""
       />
@@ -390,6 +430,28 @@ exports[`<InputForm/> should render correctly 1`] = `
       >
         hint
       </small>
+    </div>
+    <div
+      class="c1"
+    >
+      <label
+        class="c2"
+      >
+         
+      </label>
+      <input
+        autocomplete="off"
+        class="c3 icon-after"
+        type="text"
+        value=""
+      />
+      <i
+        aria-hidden="true"
+        class="icon-after fas fa-phone"
+      />
+      <small
+        class="c4"
+      />
     </div>
     <div
       class="c1"
@@ -504,6 +566,31 @@ exports[`<InputForm/> should render correctly 1`] = `
       />
       <small
         class="c10"
+      />
+    </div>
+    <div
+      class="c1"
+    >
+      <label
+        class="c2"
+      >
+         
+      </label>
+      <input
+        autocomplete="off"
+        class="c3"
+        type="text"
+        value=""
+      />
+      <span
+        class="c11"
+      >
+        <div
+          class="c12"
+        />
+      </span>
+      <small
+        class="c4"
       />
     </div>
   </div>

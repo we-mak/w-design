@@ -19,15 +19,15 @@ Feel free to use this library, or help us to improve.
 
 ## Feature list
 
-| Layout            | Elements               | Components      |
-| ----------------- | ---------------------- | --------------- |
+| Layout            | Elements               | Components     |
+| ----------------- | ---------------------- | -------------- |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
 | ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
-| ✅ DisplayElement | ❌ Label               | ❌Badges       |
-| ❌ Masonry        | ❌ Image               | ❌Collapsible  |
+| ✅ DisplayElement | ❌ Label               | ❌ Badges      |
+| ❌ Masonry        | ❌ Image               | ❌ Collapsible |
 | ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |
 |                   | ❌ Table               | ❌ Chip        |
-|                   | ❌ List                | 🖌 Menu        |
+|                   | ❌ List                | ✅ Menu        |
 |                   | ✅ Divider             | ✅ Modal       |
 |                   | ❌ ProgressLoader      | ✅ Dropdown    |
 |                   | ✅ Portal              | ❌ Drawer      |
@@ -42,6 +42,7 @@ Feel free to use this library, or help us to improve.
 |                   |                        | ✅ InputForm   |
 |                   |                        | ❌ Pagination  |
 |                   |                        | ✅ Card        |
+|                   |                        | ❌ Form        |
 
 
 **Legends**

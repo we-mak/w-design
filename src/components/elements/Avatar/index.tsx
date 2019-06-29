@@ -29,4 +29,4 @@ const Avatar = ({
   );
 };
 
-export default Avatar;
+export default React.memo(Avatar);

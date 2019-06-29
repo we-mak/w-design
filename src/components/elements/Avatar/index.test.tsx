@@ -17,6 +17,11 @@ describe("<AvatarGroup/>", () => {
           presence="online"
           avatarUrl="https://api.adorable.io/avatars/240/thunder"
         />
+        <Avatar size="xs" presence="offline" />
+        <Avatar size="sm" presence="busy" />
+        <Avatar size="lg" />
+        <Avatar size="xl" />
+        <Avatar size="xxl" />
       </Provider>
     );
 

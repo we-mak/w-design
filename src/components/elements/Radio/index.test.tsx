@@ -12,37 +12,24 @@ describe("<Radio/>", () => {
     const { container } = render(
       <Provider>
         <RadioGroup
+          isRequired
           groupName="Radio"
           groupLabel="Radio"
           options={[
             {
               label: "Option 1",
               value: "foo",
+              name: "option 1",
               isChecked: true
             },
             {
               label: "Option 2",
-              value: "bar"
+              value: "bar",
+              isDisabled: true
             }
           ]}
         />
-        <RadioGroup
-          isDisabled
-          defaultValue="foo"
-          groupName="Radio"
-          groupLabel="Radio"
-          options={[
-            {
-              label: "Option 1",
-              value: "foo",
-              isChecked: true
-            },
-            {
-              label: "Option 2",
-              value: "bar"
-            }
-          ]}
-        />
+        <RadioGroup isDisabled defaultValue="foo" groupName="Radio" groupLabel="Radio" />
       </Provider>
     );
 
@@ -76,30 +63,54 @@ describe("<Radio/>", () => {
     expect(radio.value).toBe("bar");
   });
 
-  // it("should fire onRadioChange event", () => {
-  //   const onChange = jest.fn();
-  //   const { getByLabelText } = render(
-  //     <Provider>
-  //       <RadioGroup
-  //         groupName="Radio"
-  //         groupLabel="Group"
-  //         options={[
-  //           {
-  //             label: "Foo",
-  //             value: "foo"
-  //           },
-  //           {
-  //             label: "Bar",
-  //             value: "bar"
-  //           }
-  //         ]}
-  //         onRadioChange={onChange}
-  //       />
-  //     </Provider>
-  //   );
+  it("should fire onRadioChange event", () => {
+    const { getByLabelText } = render(
+      <Provider>
+        <RadioGroup
+          groupName="Radio"
+          groupLabel="Group"
+          options={[
+            {
+              label: "Foo",
+              value: "foo"
+            },
+            {
+              label: "Bar",
+              value: "bar"
+            }
+          ]}
+        />
+      </Provider>
+    );
 
-  //   const radio: any = getByLabelText(/Radio/i);
-  //   fireEvent.click(radio);
-  //   expect(onChange).toHaveBeenCalled();
-  // });
+    fireEvent.click(getByLabelText(/Foo/i));
+    expect((getByLabelText(/Foo/i) as any).checked).toBe(true);
+  });
+
+  it("should call onChange when it is a function", () => {
+    const onChange = jest.fn();
+    const { getByLabelText } = render(
+      <Provider>
+        <RadioGroup
+          groupName="Radio"
+          groupLabel="Group"
+          options={[
+            {
+              label: "Foo",
+              value: "foo"
+            },
+            {
+              label: "Bar",
+              value: "bar"
+            }
+          ]}
+          onChange={onChange}
+        />
+      </Provider>
+    );
+
+    fireEvent.click(getByLabelText(/Foo/i));
+
+    expect(onChange).toHaveBeenCalled();
+  });
 });

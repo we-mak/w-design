@@ -4,7 +4,6 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c3 {
-  background: transparent;
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -218,6 +217,7 @@ Object {
           >
             <figure
               class="c3"
+              style="background-color: rgb(16, 22, 26);"
             >
               <span
                 class="c4"
@@ -262,7 +262,8 @@ Object {
           class="sc-AykKH fsIIiH"
         >
           <figure
-            class="sc-AykKC eReUPW"
+            class="sc-AykKC hTAlyy"
+            style="background-color: rgb(16, 22, 26);"
           >
             <span
               class="sc-AykKD gkSYHo"

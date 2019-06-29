@@ -42,7 +42,7 @@ describe("<AvatarGroup/>", () => {
   it("should renders correctly", () => {
     const { container } = render(
       <Provider>
-        <Menu defaultSelectedKey="1" defaultOpenKeys={["sub-1"]}>
+        <Menu defaultSelectedKey="1" defaultOpenKeys={["sub-1"]} fullWidth>
           <MenuItem key="1" iconBefore={<Icon className="fas fa-user" />} after={<div>info</div>}>
             Item 1
           </MenuItem>

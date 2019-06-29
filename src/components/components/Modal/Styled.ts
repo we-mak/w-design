@@ -13,7 +13,7 @@ export const WModal = styled.div`
   right: 0;
   left: 0;
   justify-content: center;
-  z-index: 400;
+  z-index: 1000;
   .close-btn {
     float: right;
   }
@@ -24,14 +24,13 @@ WModal.displayName = "WModal";
 export const ModalContainer = styled.div<ModalContainerStyleProps>`
   background: #fff;
   border-radius: ${props => props.theme.radii[2]};
-  box-shadow: ${props => props.theme.shadows[1]};
+  box-shadow: ${props => props.theme.shadows[4]};
   display: flex;
   flex-direction: column;
   padding: 0 ${props => `${props.theme.space[2]}px`};
   position: absolute;
   top: 0;
   margin: 1rem auto;
-
   max-width: ${props => {
     if (props.size === "large") {
       return `960px;`;
@@ -40,10 +39,10 @@ export const ModalContainer = styled.div<ModalContainerStyleProps>`
     }
     return `680px`;
   }};
-
+  font-family: ${props => `${props.theme.fonts["normal"]}px`};
   width: 100%;
   z-index: 1;
-  animation: ${slideDown} 0.15s ease 1;
+  animation: ${slideDown} 0.3s ease 1;
   will-change: transform;
 `;
 ModalContainer.displayName = "ModalContainer";

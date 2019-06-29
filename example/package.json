@@ -1,25 +1,25 @@
 {
   "name": "example",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "homepage": "https://we-mak.github.io/w-design/",
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "highlight.js": "^9.15.6",
-    "prismjs": "^1.15.0",
+    "algoliasearch": "^3.33.0",
+    "prism-react-renderer": "^0.1.6",
     "react": "link:../node_modules/react",
     "react-dom": "^16.8.5",
+    "react-instantsearch-dom": "^5.5.0",
     "react-markdown": "^4.0.6",
-    "react-scripts": "^3.0.0",
+    "react-scripts": "^3.0.1",
     "w-design": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn install && yarn run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +31,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-styled-components": "^1.10.0",
     "gh-pages": "^2.0.1",
     "react-hooks-testing-library": "^0.6.0"
   }

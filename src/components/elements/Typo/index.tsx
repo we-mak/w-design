@@ -12,9 +12,9 @@ const WTypo = ({ tag, appearance, children, ...rest }: TypoProps) => (
 
 const Typo = styled(WTypo)`
   font-weight: 500;
-  font-family: ${(props: any) => props.theme.fonts.medium};
+  font-family: ${(props: TypoProps) => props.theme.fonts.medium};
   ${color};
-  font-size: ${(props: any) => {
+  font-size: ${(props: TypoProps) => {
     const { fontSizes } = props.theme;
 
     switch (props.appearance) {

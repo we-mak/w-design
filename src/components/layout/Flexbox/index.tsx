@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Column } from "./Column";
-import { Flex } from "./Flex";
+import { Flex, FlexProps } from "./Flex";
 import { GlobProps } from "../../../typings";
 
-interface FlexboxProps extends GlobProps {
+interface FlexboxProps extends GlobProps, FlexProps {
   children?: React.ReactChild | React.ReactChild[];
 }
 

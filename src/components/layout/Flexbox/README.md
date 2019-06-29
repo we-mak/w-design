@@ -11,6 +11,8 @@ Responsive Flexbox styles base on flexbox
 | noGap          | bool   | wrap    | flex-wrap definition          |
 | oneline        | bool   | wrap    | Set Flexbox columns to online |
 
+`space` from styled-system
+
 ### Default Flexbox
 
 ```js

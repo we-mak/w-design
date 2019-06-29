@@ -1,16 +1,7 @@
 import styled from "styled-components";
-import Tag from "clean-tag";
-import {
-  color,
-  space,
-  width,
-  flex,
-  order,
-  alignSelf,
-  display
-} from "styled-system";
+import { color, space, width, flex, order, alignSelf, display } from "styled-system";
 
-export const Column = styled(Tag)`
+export const Column = styled.div`
   flex: none;
   max-width: 100%;
   padding-left: 0.4rem;

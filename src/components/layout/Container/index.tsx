@@ -4,10 +4,9 @@
  * Wrapper layout component contains columns layout
  */
 import styled from "styled-components";
-import Tag from "clean-tag";
 import { color, space, display, maxWidth, minWidth } from "styled-system";
 
-const Container = styled(Tag)`
+const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -16,6 +15,7 @@ const Container = styled(Tag)`
   ${display};
   ${maxWidth};
   ${minWidth};
+  font-family: ${(props: any) => props.theme.fonts.normal};
 `;
 
 Container.displayName = "Container";

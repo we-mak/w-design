@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { space } from "styled-system";
 
 export interface FlexProps {
   gapless?: boolean;
@@ -11,6 +12,7 @@ export const Flex = styled.div`
   margin-left: -0.4rem;
   margin-right: -0.4rem;
   padding: 0.4rem;
+  ${space};
 
   ${(props: FlexProps) =>
     /* set margin left and right, and child padding to 0*/

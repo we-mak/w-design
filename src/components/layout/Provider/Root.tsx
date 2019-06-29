@@ -4,25 +4,23 @@ import theme from "../../../common/styleUtils/theme";
 const colors = theme.colors;
 
 const Root = styled.div`
-  font-family: ${(props: any) => props.theme.fonts.normal};
-
   h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
     font-size: 1.6rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.4rem;
   }
 
-  h4 {
+  h3 {
     font-size: 1.2rem;
   }
-  h5 {
+
+  h4 {
     font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.9rem;
   }
 
   h6 {
@@ -39,6 +37,7 @@ const Root = styled.div`
     line-height: 1.25;
     margin-bottom: 0.5em;
     margin-top: 0;
+    font-family: ${(props: any) => props.theme.fonts.medium};
   }
 
   h1,
@@ -58,9 +57,11 @@ const Root = styled.div`
     line-height: 1.5;
     margin-bottom: 0.5em;
     margin-top: 0;
+    font-family: ${(props: any) => props.theme.fonts.normal};
   }
 
   a {
+    font-family: ${(props: any) => props.theme.fonts.normal};
     color: ${colors.B50};
     outline: none;
     text-decoration: none;

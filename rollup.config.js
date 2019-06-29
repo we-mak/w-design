@@ -1,34 +1,36 @@
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "rollup-plugin-typescript2";
 import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
 import alias from "rollup-plugin-alias";
 import url from "rollup-plugin-url";
 import svgr from "@svgr/rollup";
-import pkg from "./package.json";
+import babel from "rollup-plugin-babel";
 import path from "path";
+import pkg from "./package.json";
+
+const globals = {
+  react: "React",
+  "styled-components": "styled"
+};
 
 export default {
   input: "src/index.tsx",
-  external: [
-    "stream",
-    ...Object.keys(pkg.dependencies || {}),
-    ...Object.keys(pkg.peerDependencies || {})
-  ],
+  external: [...Object.keys(pkg.peerDependencies || {}), ...Object.keys(pkg.dependencies || {})],
   output: [
     {
       file: pkg.main,
       format: "cjs",
-      exports: "named",
-      sourcemap: true
+      globals
     },
     {
       file: pkg.module,
       format: "es",
-      exports: "named",
-      sourcemap: true
+      globals
     }
   ],
   plugins: [
+    peerDepsExternal(),
     url(),
     svgr(),
     resolve(),
@@ -40,23 +42,10 @@ export default {
     alias({
       "styled-components": path.resolve(__dirname, "node_modules", "styled-components")
     }),
-    commonjs({
-      include: "node_modules/**",
-      namedExports: {
-        "node_modules/react-is/index.js": ["isElement", "isValidElementType", "ForwardRef"],
-        // "node_modules/styled-components/node_modules/react-is/index.js": [
-        //   "isElement",
-        //   "isValidElementType",
-        //   "ForwardRef"
-        // ],
-        "node_modules/react/index.js": [
-          "cloneElement",
-          "createContext",
-          "Component",
-          "createElement",
-          "useEffect"
-        ]
-      }
-    })
+    babel({
+      // plugins: ["babel-plugin-styled-components", "external-helpers"],
+      exclude: "node_modules/**"
+    }),
+    commonjs()
   ]
 };

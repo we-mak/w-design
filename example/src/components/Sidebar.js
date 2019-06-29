@@ -1,36 +1,75 @@
 import React from "react";
+import { Menu, MenuItem, MenuHeading } from "w-design";
 import { Link } from "@reach/router";
+
+const elements = [
+  {
+    title: "Avatar",
+    link: "/avatar"
+  },
+  {
+    title: "Button",
+    link: "/button"
+  },
+  {
+    title: "Spinner",
+    link: "/spinner"
+  }
+];
+
+const components = [
+  {
+    title: "Card",
+    link: "card"
+  },
+  {
+    title: "Dropdown",
+    link: "dropdown"
+  },
+  {
+    title: "Navbar",
+    link: "nav"
+  },
+  {
+    title: "Modal",
+    link: "modal"
+  },
+  {
+    title: "Form",
+    link: "form"
+  },
+  {
+    title: "Menu",
+    link: "menu"
+  }
+];
 
 export const Sidebar = () => {
   return (
-    <ul>
-      <li>
+    <Menu defaultSelectedKey="/">
+      <MenuItem key="/">
         <Link to="/">Introduction</Link>
-      </li>
-      <li>
+      </MenuItem>
+      <MenuItem key="/start">
         <Link to="/start">Getting start</Link>
-      </li>
-      <li>
+      </MenuItem>
+
+      <MenuItem key="/layout">
         <Link to="/layout">Layout</Link>
-      </li>
-      <li>
-        <Link to="/nav">Navbar</Link>
-      </li>
-      <li>
-        <Link to="/button">Buttons</Link>
-      </li>
-      <li>
-        <Link to="/button">Portal</Link>
-      </li>
-      <li>
-        <Link to="/modal">Modal</Link>
-      </li>
-      <li>
-        <Link to="/spinner">Spinner</Link>
-      </li>
-      <li>
-        <Link to="/form">Form</Link>
-      </li>
-    </ul>
+      </MenuItem>
+
+      <MenuHeading>Elements</MenuHeading>
+      {elements.map(el => (
+        <MenuItem key={el.link}>
+          <Link to={el.link}>{el.title}</Link>
+        </MenuItem>
+      ))}
+      <MenuHeading>Components</MenuHeading>
+      {components.map(c => (
+        <MenuItem key={c.link}>
+          <Link to={c.link}>{c.title}</Link>
+        </MenuItem>
+      ))}
+    </Menu>
   );
 };

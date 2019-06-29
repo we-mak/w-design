@@ -4,16 +4,19 @@
  */
 import * as React from "react";
 import InputField from "../../elements/InputField";
+import Icon from "../../elements/Icon";
+import Spinner from "../../elements/Spinner";
 import { InputFormProps } from "./types";
-import { Label, FieldGroup, TextHint, RequiredMark } from "./Styled";
-
-// TODO: add Icon
+import { Label, FieldGroup, TextHint, RequiredMark, SpinnerWrap } from "./Styled";
 
 const InputForm: React.FunctionComponent<InputFormProps> = props => {
   const {
     id,
     label,
     hintMessage,
+    iconBefore,
+    iconAfter,
+    isLoading,
     isRequired,
     isError,
     isWarning,
@@ -23,25 +26,29 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
   } = props;
   return (
     <FieldGroup>
-      {label && (
-        <Label htmlFor={id}>
-          {label} {isRequired && <RequiredMark aria-hidden="true">*</RequiredMark>}
-        </Label>
-      )}
+      <Label htmlFor={id}>
+        {label} {isRequired && <RequiredMark aria-hidden="true">*</RequiredMark>}
+      </Label>
+      {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
       <InputField
+        className={(iconBefore && `icon-before`) || (iconAfter && `icon-after`)}
         fluid
         id={id}
         isError={isError}
         isWarning={isWarning}
-        isValid={isSuccess}
         {...rest}
       />
-      {children}
-      {hintMessage && (
-        <TextHint isError={isError} isWarning={isWarning} isSuccess={isSuccess}>
-          {hintMessage}
-        </TextHint>
+      {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
+      {isLoading && (
+        <SpinnerWrap>
+          <Spinner />
+        </SpinnerWrap>
       )}
+
+      {children}
+      <TextHint isError={isError} isWarning={isWarning} isSuccess={isSuccess}>
+        {hintMessage}
+      </TextHint>
     </FieldGroup>
   );
 };

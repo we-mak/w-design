@@ -9,8 +9,8 @@ exports[`<Spinner/> should renders correctly 1`] = `
 }
 
 .c1::after {
-  -webkit-animation: iECmZH 500ms infinite linear;
-  animation: iECmZH 500ms infinite linear;
+  -webkit-animation: btrQYj 500ms infinite linear;
+  animation: btrQYj 500ms infinite linear;
   border: 0.1rem solid;
   border-color: #004660;
   border-radius: 50%;
@@ -31,28 +31,24 @@ exports[`<Spinner/> should renders correctly 1`] = `
   width: 0.8rem;
 }
 
-.c0 {
-  font-family: Helvetica,Arial,sans-serif;
-}
-
 .c0 h1 {
-  font-size: 2rem;
-}
-
-.c0 h2 {
   font-size: 1.6rem;
 }
 
-.c0 h3 {
+.c0 h2 {
   font-size: 1.4rem;
 }
 
-.c0 h4 {
+.c0 h3 {
   font-size: 1.2rem;
 }
 
-.c0 h5 {
+.c0 h4 {
   font-size: 1rem;
+}
+
+.c0 h5 {
+  font-size: 0.9rem;
 }
 
 .c0 h6 {
@@ -69,6 +65,7 @@ exports[`<Spinner/> should renders correctly 1`] = `
   line-height: 1.25;
   margin-bottom: 0.5em;
   margin-top: 0;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 .c0 h1,
@@ -88,9 +85,11 @@ exports[`<Spinner/> should renders correctly 1`] = `
   line-height: 1.5;
   margin-bottom: 0.5em;
   margin-top: 0;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 .c0 a {
+  font-family: Helvetica,Arial,sans-serif;
   color: #008CC0;
   outline: none;
   -webkit-text-decoration: none;
@@ -157,12 +156,14 @@ exports[`<Spinner/> should renders correctly 1`] = `
   padding: 0.6rem 0.4rem;
 }
 
-<div
-  className="c0"
->
+<div>
   <div
-    className="c1"
-  />
+    class="c0"
+  >
+    <div
+      class="c1"
+    />
+  </div>
 </div>
 `;
 
@@ -175,8 +176,8 @@ exports[`<Spinner/> should renders large sizecorrectly 1`] = `
 }
 
 .c1::after {
-  -webkit-animation: iECmZH 500ms infinite linear;
-  animation: iECmZH 500ms infinite linear;
+  -webkit-animation: btrQYj 500ms infinite linear;
+  animation: btrQYj 500ms infinite linear;
   border: 0.14rem solid;
   border-color: #004660;
   border-radius: 50%;
@@ -197,28 +198,24 @@ exports[`<Spinner/> should renders large sizecorrectly 1`] = `
   width: 1.6rem;
 }
 
-.c0 {
-  font-family: Helvetica,Arial,sans-serif;
-}
-
 .c0 h1 {
-  font-size: 2rem;
-}
-
-.c0 h2 {
   font-size: 1.6rem;
 }
 
-.c0 h3 {
+.c0 h2 {
   font-size: 1.4rem;
 }
 
-.c0 h4 {
+.c0 h3 {
   font-size: 1.2rem;
 }
 
-.c0 h5 {
+.c0 h4 {
   font-size: 1rem;
+}
+
+.c0 h5 {
+  font-size: 0.9rem;
 }
 
 .c0 h6 {
@@ -235,6 +232,7 @@ exports[`<Spinner/> should renders large sizecorrectly 1`] = `
   line-height: 1.25;
   margin-bottom: 0.5em;
   margin-top: 0;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 .c0 h1,
@@ -254,9 +252,11 @@ exports[`<Spinner/> should renders large sizecorrectly 1`] = `
   line-height: 1.5;
   margin-bottom: 0.5em;
   margin-top: 0;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 .c0 a {
+  font-family: Helvetica,Arial,sans-serif;
   color: #008CC0;
   outline: none;
   -webkit-text-decoration: none;
@@ -323,11 +323,13 @@ exports[`<Spinner/> should renders large sizecorrectly 1`] = `
   padding: 0.6rem 0.4rem;
 }
 
-<div
-  className="c0"
->
+<div>
   <div
-    className="c1"
-  />
+    class="c0"
+  >
+    <div
+      class="c1"
+    />
+  </div>
 </div>
 `;

@@ -10,8 +10,14 @@ import {
 } from "../../../common/styleUtils/utils";
 
 export const getInputStyle = (props: InputFieldProps) => {
-  const { size = "md", fluid, isError, isValid, isWarning, theme } = props;
-  const { colors, fontSizes, radii, lineHeights } = theme;
+  const {
+    size = "md",
+    fluid,
+    isError,
+    isValid,
+    isWarning,
+    theme: { colors, fontSizes, radii, lineHeights }
+  } = props;
 
   const boderColor = () => {
     if (isWarning) return colors["O30"];
@@ -45,6 +51,7 @@ export const getInputStyle = (props: InputFieldProps) => {
     color: ${colors["N70"]};
     padding: ${paddingStyle};
     font-size: ${fontSizeStyle};
+    font-family: inherit;
     height: ${heightStyle};
     width: ${width};
     line-height: ${lineHeights[1]};

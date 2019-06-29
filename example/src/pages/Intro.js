@@ -10,40 +10,39 @@ const p1 = `
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
-
+[![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 Main focus of this libary is styling with \`styled-system\` and \`styled-components\`, keep it as small as posible.
 
 Feel free to use this library, or help us to improve.
 
-## Covered features
+## Feature list
 
-Cover basic components
-
-| Layout            | Elements               | Components        |
-| ----------------- | ---------------------- | ----------------- |
-| ✅ ThemeProvider  | ✅ Button              | ❌ Progress Steps |
-| ✅ Container      | ✅ InputField          | ❌ Avatar Group   |
-| ✅ Flexbox        | ❌ Checkbox            | ✅ Navbar         |
-| ✅ DisplayElement | ❌ Label               | ❌Badges          |
-| ❌ Masonry        | ❌ Image               | ❌Arcordion       |
-|                   | ✅ Spinner             | ❌ Breadcrumbs    |
-|                   | ❌ Panel               | ❌ Card           |
-|                   | ❌ Table               | ❌ Chip           |
-|                   | ❌ List                | ❌ Menu           |
-|                   | ❌ Divider             | ✅ Modal          |
-|                   | ❌ Progress Loader     | ❌ Dropdown       |
-|                   | ✅ Portal              | ❌ Sidebar        |
-|                   | ❌ Avatar              | ❌ Steps          |
-|                   | ❌ Toggle              | ❌ Tabs           |
-|                   | ❌ Text Area           | ❌ Push Message   |
-|                   | ❌ Inline message      | ❌ Tooltip        |
-|                   | ✅ Typo                | ❌ Popover        |
-|                   | ✅ Icon (Font awesome) | ❌ Comment        |
-|                   |                        | ❌ Select         |
-|                   |                        | ✅ FormGroup      |
-|                   |                        | ✅ InputForm      |
-|                   |                        | ❌ Pagination     |
+| Layout            | Elements               | Components     |
+| ----------------- | ---------------------- | -------------- |
+| ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
+| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
+| ✅ DisplayElement | ❌ Label               | ❌ Badges      |
+| ❌ Masonry        | ❌ Image               | ❌ Collapsible |
+| ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |
+|                   | ❌ Table               | ❌ Chip        |
+|                   | ❌ List                | ✅ Menu        |
+|                   | ✅ Divider             | ✅ Modal       |
+|                   | ❌ ProgressLoader      | ✅ Dropdown    |
+|                   | ✅ Portal              | ❌ Drawer      |
+|                   | ✅ Avatar              | ❌ Steps       |
+|                   | ❌ Toggle              | ❌ Tabs        |
+|                   | ✅ TextArea            | ❌ PushMessage |
+|                   | ❌ InlineMessage       | ❌ Tooltip     |
+|                   | ✅ Typo                | ❌ Popover     |
+|                   | ✅ Icon (Font awesome) | ❌ Comment     |
+|                   | ✅ Radio               | ❌ Select      |
+|                   | ✅ Button              | ✅ FormGroup   |
+|                   |                        | ✅ InputForm   |
+|                   |                        | ❌ Pagination  |
+|                   |                        | ✅ Card        |
+|                   |                        | ❌ Form        |
 
 
 **Legends**
@@ -129,19 +128,19 @@ const Intro = () => {
     <>
       <Typo appearance="h1">Introduction</Typo>
       <ReactMarkdown source={p1} />
-      <CodeBlock language="lang-bash">npm start # runs rollup with watch flag</CodeBlock>
+      <CodeBlock language="bash" exampleCode="npm start # runs rollup with watch flag" />
       First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever
       you make changes.
       <br />
       The second part will be running the example/ create-react-app that's linked to the local
       version of your module.
-      <CodeBlock language="language-bash">
-        {`
-        # (in another tab)
-        cd example
-        # runs create-react-app dev server
-        npm start`}
-      </CodeBlock>
+      <CodeBlock
+        language="bash"
+        exampleCode={`# (in another tab)
+cd example
+# runs create-react-app dev server
+npm start`}
+      />
       Now, anytime you make a change to your library in src/ or to the example app's example/src,
       create-react-app will live-reload your local dev server so you can iterate on your component
       in real-time.

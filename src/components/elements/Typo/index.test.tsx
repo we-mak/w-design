@@ -1,13 +1,16 @@
 import * as React from "react";
-import { render } from "react-testing-library";
+import { render, cleanup } from "@testing-library/react";
 import "jest-styled-components";
 import Typo from "./index";
 import Provider from "../../layout/Provider";
+
+afterEach(cleanup);
 
 describe("<Typo/>", () => {
   it("should render correct with heading style", () => {
     const { container } = render(
       <Provider>
+        <Typo>Hello</Typo>
         <Typo appearance="h1">Hello</Typo>
         <Typo appearance="h2">Hello</Typo>
         <Typo appearance="h3">Hello</Typo>

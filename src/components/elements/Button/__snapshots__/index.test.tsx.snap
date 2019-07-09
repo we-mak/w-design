@@ -949,7 +949,6 @@ a.c13:hover {
       >
         <button
           class="c4"
-          data-testid="button"
           type="button"
         >
           Hello
@@ -960,7 +959,6 @@ a.c13:hover {
       >
         <button
           class="c5"
-          data-testid="button"
           type="button"
         >
           <i
@@ -975,7 +973,6 @@ a.c13:hover {
       >
         <button
           class="c6"
-          data-testid="button"
           type="button"
         >
           Hello
@@ -990,7 +987,6 @@ a.c13:hover {
       >
         <button
           class="c7"
-          data-testid="button"
           type="button"
         >
           <i
@@ -1004,7 +1000,6 @@ a.c13:hover {
       >
         <button
           class="c8"
-          data-testid="button"
           type="button"
         >
           Hello
@@ -1015,7 +1010,6 @@ a.c13:hover {
       >
         <button
           class="c9"
-          data-testid="button"
           type="button"
         >
           Hello
@@ -1026,7 +1020,6 @@ a.c13:hover {
       >
         <button
           class="c10"
-          data-testid="button"
           type="button"
         >
           Hello
@@ -1037,7 +1030,6 @@ a.c13:hover {
       >
         <button
           class="c11"
-          data-testid="button"
           type="button"
         >
           Hello
@@ -1048,7 +1040,6 @@ a.c13:hover {
       >
         <button
           class="c12"
-          data-testid="button"
           type="button"
         >
           Hello
@@ -1057,25 +1048,21 @@ a.c13:hover {
     </div>
     <a
       class="c13"
-      data-testid="button"
       href="/"
       type="button"
     />
     <span
       class="c14"
-      data-testid="button"
       disabled=""
       href="/"
       type="button"
     />
     <button
       class="c15"
-      data-testid="button"
       type="button"
     />
     <button
       class="c16"
-      data-testid="button"
       type="button"
     />
   </div>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1561780412916" clover="3.2.0">
-  <project timestamp="1561780412916" name="All files">
-    <metrics statements="840" coveredstatements="779" conditionals="493" coveredconditionals="430" methods="150" coveredmethods="137" elements="1483" coveredelements="1346" complexity="0" loc="840" ncloc="840" packages="25" files="50" classes="50"/>
+<coverage generated="1562675918175" clover="3.2.0">
+  <project timestamp="1562675918175" name="All files">
+    <metrics statements="849" coveredstatements="788" conditionals="500" coveredconditionals="435" methods="152" coveredmethods="139" elements="1501" coveredelements="1362" complexity="0" loc="849" ncloc="849" packages="25" files="50" classes="50"/>
     <package name="components.components.AvatarGroup">
       <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/components/AvatarGroup/index.tsx">
@@ -635,7 +635,7 @@
         <line num="103" count="23" type="cond" truecount="3" falsecount="1"/>
         <line num="104" count="23" type="stmt"/>
         <line num="107" count="23" type="stmt"/>
-        <line num="146" count="4" type="stmt"/>
+        <line num="144" count="4" type="stmt"/>
       </file>
     </package>
     <package name="components.elements.Checkbox">
@@ -963,10 +963,10 @@
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
+        <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.layout.DisplayElement">
@@ -987,8 +987,8 @@
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="2" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="2" type="stmt"/>
       </file>
       <file name="Flex.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Flexbox/Flex.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
@@ -1015,7 +1015,7 @@
       </file>
     </package>
     <package name="components.layout.Provider">
-      <metrics statements="23" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+      <metrics statements="32" coveredstatements="32" conditionals="13" coveredconditionals="11" methods="8" coveredmethods="8"/>
       <file name="Root.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/Root.tsx">
         <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
         <line num="1" count="20" type="stmt"/>
@@ -1031,22 +1031,31 @@
         <line num="126" count="20" type="stmt"/>
       </file>
       <file name="index.tsx" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/index.tsx">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="19" coveredstatements="19" conditionals="11" coveredconditionals="9" methods="3" coveredmethods="3"/>
         <line num="1" count="20" type="stmt"/>
         <line num="2" count="20" type="stmt"/>
         <line num="3" count="20" type="stmt"/>
         <line num="4" count="20" type="stmt"/>
         <line num="5" count="20" type="stmt"/>
         <line num="12" count="68" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="34" type="stmt"/>
+        <line num="15" count="34" type="stmt"/>
+        <line num="16" count="34" type="stmt"/>
+        <line num="17" count="34" type="stmt"/>
+        <line num="19" count="34" type="cond" truecount="3" falsecount="1"/>
+        <line num="20" count="34" type="stmt"/>
+        <line num="23" count="34" type="stmt"/>
+        <line num="24" count="29" type="cond" truecount="4" falsecount="1"/>
+        <line num="25" count="29" type="stmt"/>
+        <line num="26" count="29" type="stmt"/>
         <line num="31" count="34" type="stmt"/>
-        <line num="41" count="20" type="stmt"/>
-        <line num="43" count="20" type="stmt"/>
+        <line num="38" count="20" type="stmt"/>
+        <line num="40" count="20" type="stmt"/>
       </file>
       <file name="resetCSS.ts" path="/Users/son/Desktop/w/w-design/src/components/layout/Provider/resetCSS.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="20" type="stmt"/>
-        <line num="2" count="20" type="stmt"/>
-        <line num="5" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="20" type="stmt"/>
       </file>
     </package>
     <package name="hooks">

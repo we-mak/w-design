@@ -13,12 +13,19 @@ import {
   ColorProps,
   SpaceProps,
   DisplayProps,
-  WidthProps
+  MaxWidthProps,
+  MinWidthProps
 } from "styled-system";
 
 import { GlobProps } from "../../../typings";
 
-interface ContainerProps extends GlobProps, ColorProps, SpaceProps, DisplayProps, WidthProps {}
+interface ContainerProps
+  extends GlobProps,
+    ColorProps,
+    SpaceProps,
+    DisplayProps,
+    MaxWidthProps,
+    MinWidthProps {}
 
 const Container = styled.div<ContainerProps>`
   margin-left: auto;
@@ -29,7 +36,6 @@ const Container = styled.div<ContainerProps>`
   ${display};
   ${maxWidth};
   ${minWidth};
-  font-family: ${props => props.theme.fonts.normal};
 `;
 
 Container.displayName = "Container";

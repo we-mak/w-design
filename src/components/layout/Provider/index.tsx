@@ -11,30 +11,27 @@ interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
 function Provider(p: ThemeProps) {
   const { theme = {}, ...props } = p;
 
-  // React.useEffect(() => {
-  //   let stylesheet: HTMLStyleElement | null = document.createElement("style");
-  //   stylesheet.type = "text/css";
-  //   stylesheet.innerHTML = resetCSS;
+  React.useEffect(() => {
+    let stylesheet: HTMLStyleElement | null = document.createElement("style");
+    stylesheet.type = "text/css";
+    stylesheet.innerHTML = ResetCSS;
 
-  //   if (document && document.head) {
-  //     document.head.appendChild(stylesheet);
-  //   }
+    if (document && document.head) {
+      document.head.appendChild(stylesheet);
+    }
 
-  //   return function() {
-  //     if (stylesheet && document && document.head) {
-  //       document.head.removeChild(stylesheet);
-  //       stylesheet = null;
-  //     }
-  //   };
-  // });
+    return function() {
+      if (stylesheet && document && document.head) {
+        document.head.removeChild(stylesheet);
+        stylesheet = null;
+      }
+    };
+  }, []);
 
   return (
-    <>
-      <ResetCSS />
-      <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
-        <Root {...props as any} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
+      <Root {...props as any} />
+    </ThemeProvider>
   );
 }
 

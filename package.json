@@ -1,6 +1,6 @@
 {
   "name": "w-design",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "description": "A React UI library is built with styled-components",
   "author": "viiiprock",
   "license": "MIT",
@@ -69,7 +69,7 @@
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^5.0.0-beta.5"
   },
   "files": [
     "dist"

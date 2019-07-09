@@ -240,7 +240,6 @@ exports[`<Dropdown/> should renders correctly 1`] = `
         aria-expanded="false"
         aria-haspopup="true"
         class="c2"
-        data-testid="button"
         type="button"
       >
         <span
@@ -273,7 +272,6 @@ exports[`<Dropdown/> should renders correctly 1`] = `
         aria-expanded="false"
         aria-haspopup="true"
         class="c2"
-        data-testid="button"
         type="button"
       >
         <span
@@ -306,7 +304,6 @@ exports[`<Dropdown/> should renders correctly 1`] = `
         aria-expanded="false"
         aria-haspopup="true"
         class="c2"
-        data-testid="button"
         type="button"
       >
         <span
@@ -339,7 +336,6 @@ exports[`<Dropdown/> should renders correctly 1`] = `
         aria-expanded="false"
         aria-haspopup="true"
         class="c2"
-        data-testid="button"
         type="button"
       >
         <span
@@ -372,7 +368,6 @@ exports[`<Dropdown/> should renders correctly 1`] = `
         aria-expanded="false"
         aria-haspopup="true"
         class="c2"
-        data-testid="button"
         type="button"
       >
         <span

@@ -42,12 +42,12 @@ describe("<Button/>", () => {
   it('calls "onClick" prop on button click', () => {
     // Render new instance in every test to prevent leaking state
     const onClick = jest.fn();
-    const { getByTestId } = render(
+    const { getByText } = render(
       <Provider>
-        <Button onClick={onClick} />
+        <Button onClick={onClick}>Button</Button>
       </Provider>
     );
-    fireEvent.click(getByTestId("button"));
+    fireEvent.click(getByText(/Button/i));
     expect(onClick).toHaveBeenCalled();
   });
 });

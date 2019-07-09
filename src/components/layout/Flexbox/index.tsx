@@ -3,7 +3,7 @@ import { Column } from "./Column";
 import { Flex, FlexProps } from "./Flex";
 import { GlobProps } from "../../../typings";
 
-interface FlexboxProps extends GlobProps, FlexProps {
+export interface FlexboxProps extends GlobProps, FlexProps {
   children?: React.ReactChild | React.ReactChild[];
 }
 

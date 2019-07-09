@@ -12,6 +12,10 @@ import {
 } from "./Styled";
 import { ModalProps } from "./types";
 
+function isTouchDevice() {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+}
+
 const Modal = (props: ModalProps) => {
   const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
   // Main root layout selecting
@@ -29,7 +33,7 @@ const Modal = (props: ModalProps) => {
         top: ${scrollPosition}px;
         position: fixed;
         width: 100%;
-        padding-right: 15px;
+        padding-right: ${!isTouchDevice() && "15px"};
       `;
 
       // if (yPosition < 0) {

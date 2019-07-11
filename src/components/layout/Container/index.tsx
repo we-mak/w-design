@@ -31,6 +31,7 @@ const Container = styled.div<ContainerProps>`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  font-family: ${props => props.theme.fonts.normal};
   ${color};
   ${space};
   ${display};

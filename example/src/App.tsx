@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { Router } from "@reach/router";
 import { Provider, Container, Flexbox } from "w-design";
@@ -15,6 +15,9 @@ import LayoutPage from "./pages/LayoutPage";
 import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
 import SpinnerPage from "./pages/SpinnerPage";
+import { GlobalStyles } from "./globalStyles";
+
+const { Suspense } = React;
 
 const NavWrapper = styled.div`
   display: block;
@@ -40,6 +43,8 @@ function App() {
         }
       }}
     >
+      <GlobalStyles />
+
       <NavWrapper>
         <Container px={4} py={3} bg={"WHITE"}>
           <Header />

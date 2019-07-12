@@ -15,7 +15,7 @@ Container contains Flexbox components to form the responsive layout.
 
 `;
 
-const ContainerPage = () => {
+const ContainerPage: React.FunctionComponent<any> = () => {
   return (
     <>
       <Typo appearance="h1">Container</Typo>

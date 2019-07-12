@@ -33,8 +33,16 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "@types/algoliasearch": "^3.30.13",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
+    "@types/reach__router": "^1.2.4",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-instantsearch-dom": "^5.2.5",
     "babel-plugin-styled-components": "^1.10.0",
     "gh-pages": "^2.0.1",
-    "react-hooks-testing-library": "^0.6.0"
+    "react-hooks-testing-library": "^0.6.0",
+    "typescript": "^3.5.3"
   }
 }

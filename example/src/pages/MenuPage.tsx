@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Menu, MenuItem, MenuHeading, SubMenu, Icon, Typo, Divider } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
@@ -70,7 +70,7 @@ const Example1 = () => {
   );
 };
 
-const MenuPage = () => {
+const MenuPage: React.FunctionComponent<any> = () => {
   return (
     <>
       <h1>Menu</h1>

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Typo } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
@@ -20,7 +20,7 @@ Provider provides theme for your layout, you can supply your theme by insert you
 
 `;
 
-const Start = () => {
+const Start: React.FunctionComponent<any> = () => {
   return (
     <div>
       <Typo appearance="h1"> Getting start</Typo>

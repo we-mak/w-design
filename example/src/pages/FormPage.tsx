@@ -59,7 +59,7 @@ const inputFormApi = `
 
 `;
 
-const FormPage = () => {
+const FormPage: React.FunctionComponent<any> = () => {
   return (
     <>
       <Typo appearance="h1">Form</Typo>

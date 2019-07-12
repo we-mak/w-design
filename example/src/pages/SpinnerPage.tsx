@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Spinner, Typo } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
@@ -10,7 +10,7 @@ const api = `
 | large       | boolean | false   | spinner large size   |
 `;
 
-const SpinnerPage = () => (
+const SpinnerPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">Spinner</Typo>
     Useful for pending render, loading data...

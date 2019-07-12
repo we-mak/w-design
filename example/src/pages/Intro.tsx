@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Typo } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
@@ -123,7 +123,7 @@ This creates a production build of the example create-react-app that showcases y
 MIT © [We-mak](https://github.com/we-mak)
 `;
 
-const Intro = () => {
+const Intro: React.FunctionComponent<any> = () => {
   return (
     <>
       <Typo appearance="h1">Introduction</Typo>

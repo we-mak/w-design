@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Typo, Avatar, AvatarGroup, Button, ButtonGroup } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
@@ -26,7 +26,7 @@ Inherit all props from \`Avatar\`
 | actions     | ReactChild, ReactChild[] |         | avatar group actions     |
 `;
 
-const AvatarPage = () => {
+const AvatarPage: React.FunctionComponent<any> = () => {
   return (
     <>
       <Typo appearance="h1">Avatar</Typo>

@@ -1,7 +1,23 @@
 import styled from "styled-components";
-import { space } from "styled-system";
+import {
+  space,
+  justifyContent,
+  flexWrap,
+  flexDirection,
+  alignItems,
+  SpaceProps,
+  JustifyContentProps,
+  FlexWrapProps,
+  FlexDirectionProps,
+  AlignItemsProps
+} from "styled-system";
 
-export interface FlexProps {
+export interface FlexProps
+  extends SpaceProps,
+    JustifyContentProps,
+    FlexWrapProps,
+    FlexDirectionProps,
+    AlignItemsProps {
   gapless?: boolean;
   oneline?: boolean;
 }
@@ -13,6 +29,10 @@ export const Flex = styled.div`
   margin-right: -0.4rem;
   padding: 0.4rem;
   ${space};
+  ${justifyContent};
+  ${flexWrap};
+  ${flexDirection};
+  ${alignItems}
 
   ${(props: FlexProps) =>
     /* set margin left and right, and child padding to 0*/

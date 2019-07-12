@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Icon, Button, ButtonGroup } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
@@ -35,7 +35,7 @@ const api = `
 
 `;
 
-const ButtonPage = () => {
+const ButtonPage: React.FunctionComponent<any> = () => {
   return (
     <>
       <h1>Buttons</h1>

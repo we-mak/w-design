@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, connectHits } from "react-instantsearch-dom";
 import { Menu, MenuItem, Card, CardContent } from "w-design";

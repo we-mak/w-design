@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import * as React from "react";
 import { Button, ButtonGroup, Modal } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
+
+const { useState } = React;
 
 const api = `
 ### API
@@ -15,7 +17,7 @@ const api = `
 | size        | string                                         | "md"    | Size of modal                              |
 `;
 
-const ModalPage = () => {
+const ModalPage: React.FunctionComponent<any> = () => {
   const [isOpen, setOpen] = useState(false);
 
   const openModal = () => setOpen(true);

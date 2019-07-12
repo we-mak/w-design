@@ -1,8 +1,8 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
 import defaultTheme from "../../../common/styleUtils/theme";
-import { ResetCSS } from "./resetCSS";
 import Root from "./Root";
+import { GlobalStyle } from "./GlobalStyle";
 
 interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
   theme?: {};
@@ -11,27 +11,13 @@ interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
 function Provider(p: ThemeProps) {
   const { theme = {}, ...props } = p;
 
-  React.useEffect(() => {
-    let stylesheet: HTMLStyleElement | null = document.createElement("style");
-    stylesheet.type = "text/css";
-    stylesheet.innerHTML = ResetCSS;
-
-    if (document && document.head) {
-      document.head.appendChild(stylesheet);
-    }
-
-    return function() {
-      if (stylesheet && document && document.head) {
-        document.head.removeChild(stylesheet);
-        stylesheet = null;
-      }
-    };
-  }, []);
-
   return (
-    <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
-      <Root {...props as any} />
-    </ThemeProvider>
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
+        <Root {...props as any} />
+      </ThemeProvider>
+    </>
   );
 }
 

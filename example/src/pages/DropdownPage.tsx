@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Typo, Dropdown, Menu, MenuItem, ButtonGroup } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
@@ -9,7 +9,7 @@ const api = `
 
 `;
 
-const DropdownPage = () => (
+const DropdownPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">Dropdown</Typo>
 

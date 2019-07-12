@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import ReactMarkdown from "react-markdown";
 import {
   Typo,
@@ -20,7 +20,7 @@ const api = `
 
 `;
 
-const CardPage = () => (
+const CardPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">Card</Typo>
     <p>A content container</p>

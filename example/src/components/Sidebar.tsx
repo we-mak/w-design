@@ -44,7 +44,7 @@ const components = [
   }
 ];
 
-export const Sidebar = () => {
+export const Sidebar: React.FunctionComponent<any> = () => {
   return (
     <Menu defaultSelectedKey="/">
       <MenuItem key="/">

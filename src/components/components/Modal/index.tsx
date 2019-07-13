@@ -12,9 +12,9 @@ import {
 } from "./Styled";
 import { ModalProps } from "./types";
 
-function isTouchDevice() {
-  return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-}
+// function isTouchDevice() {
+//   return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+// }
 
 const Modal = (props: ModalProps) => {
   const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
@@ -32,8 +32,7 @@ const Modal = (props: ModalProps) => {
       documentBody.style = `
         top: ${scrollPosition}px;
         position: fixed;
-        width: 100%;
-        padding-right: ${!isTouchDevice() && "15px"};
+        width: 99vw;
       `;
 
       // if (yPosition < 0) {

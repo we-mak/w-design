@@ -43,9 +43,9 @@ export default {
       "styled-components": path.resolve(__dirname, "node_modules", "styled-components")
     }),
     babel({
-      // plugins: ["babel-plugin-styled-components", "external-helpers"],
       exclude: "node_modules/**"
     }),
     commonjs()
-  ]
+  ],
+  globals: { "styled-components": "styled" }
 };

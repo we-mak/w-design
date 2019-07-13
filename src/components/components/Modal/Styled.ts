@@ -6,7 +6,9 @@ export const WModal = styled.div`
   position: fixed;
   display: flex;
   padding: ${props => `${props.theme.space[0]}px`};
-  overflow-y: auto;
+  overflow-y: scroll;
+  padding-right: 0 !important;
+  width: 100% !important;
   align-items: center;
   top: 0;
   bottom: 0;

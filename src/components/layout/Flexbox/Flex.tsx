@@ -11,9 +11,11 @@ import {
   FlexDirectionProps,
   AlignItemsProps
 } from "styled-system";
+import { GlobProps } from "../../../typings";
 
 export interface FlexProps
-  extends SpaceProps,
+  extends GlobProps,
+    SpaceProps,
     JustifyContentProps,
     FlexWrapProps,
     FlexDirectionProps,
@@ -22,7 +24,7 @@ export interface FlexProps
   oneline?: boolean;
 }
 
-export const Flex = styled.div`
+export const Flex = styled.div<FlexProps>`
   display: flex;
   flex-wrap: wrap;
   margin-left: -0.4rem;

@@ -15,6 +15,7 @@ import LayoutPage from "./pages/LayoutPage";
 import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
 import SpinnerPage from "./pages/SpinnerPage";
+import TypoPage from "./pages/TypoPage";
 import { GlobalStyles } from "./globalStyles";
 
 const { Suspense } = React;
@@ -64,6 +65,7 @@ function App() {
                 <LayoutPage path="/layout" />
 
                 <SpinnerPage path="/spinner" />
+                <TypoPage path="/typo" />
                 <ButtonPage path="/button" />
                 <AvatarPage path="/avatar" />
 

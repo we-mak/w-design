@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, MenuItem, MenuHeading } from "w-design";
-import { Link } from "@reach/router";
+import { Link, Location } from "@reach/router";
 
 const elements = [
   {
@@ -14,6 +14,10 @@ const elements = [
   {
     title: "Spinner",
     link: "/spinner"
+  },
+  {
+    title: "Typo",
+    link: "/typo"
   }
 ];
 
@@ -46,30 +50,37 @@ const components = [
 
 export const Sidebar: React.FunctionComponent<any> = () => {
   return (
-    <Menu defaultSelectedKey="/">
-      <MenuItem key="/">
-        <Link to="/">Introduction</Link>
-      </MenuItem>
-      <MenuItem key="/start">
-        <Link to="/start">Getting start</Link>
-      </MenuItem>
+    <Location>
+      {({ location }) => {
+        console.log(location);
+        return (
+          <Menu defaultSelectedKey={location.pathname}>
+            <MenuItem key="/">
+              <Link to="/">Introduction</Link>
+            </MenuItem>
+            <MenuItem key="/start">
+              <Link to="/start">Getting start</Link>
+            </MenuItem>
 
-      <MenuItem key="/layout">
-        <Link to="/layout">Layout</Link>
-      </MenuItem>
+            <MenuItem key="/layout">
+              <Link to="/layout">Layout</Link>
+            </MenuItem>
 
-      <MenuHeading>Elements</MenuHeading>
-      {elements.map(el => (
-        <MenuItem key={el.link}>
-          <Link to={el.link}>{el.title}</Link>
-        </MenuItem>
-      ))}
-      <MenuHeading>Components</MenuHeading>
-      {components.map(c => (
-        <MenuItem key={c.link}>
-          <Link to={c.link}>{c.title}</Link>
-        </MenuItem>
-      ))}
-    </Menu>
+            <MenuHeading>Elements</MenuHeading>
+            {elements.map(el => (
+              <MenuItem key={el.link}>
+                <Link to={el.link}>{el.title}</Link>
+              </MenuItem>
+            ))}
+            <MenuHeading>Components</MenuHeading>
+            {components.map(c => (
+              <MenuItem key={c.link}>
+                <Link to={c.link}>{c.title}</Link>
+              </MenuItem>
+            ))}
+          </Menu>
+        );
+      }}
+    </Location>
   );
 };

@@ -64,7 +64,7 @@
     "rollup-plugin-url": "^2.2.0",
     "styled-components": "^5.0.0-beta.6-ej4",
     "ts-jest": "^24.0.0",
-    "typescript": "3.3.4000"
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
     "react": "^16.8.0",

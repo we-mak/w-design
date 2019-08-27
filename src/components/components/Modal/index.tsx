@@ -16,6 +16,9 @@ import { ModalProps } from "./types";
 //   return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 // }
 
+// TODO: check this library
+// https://github.com/jossmac/react-scrolllock
+
 const Modal = (props: ModalProps) => {
   const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
   // Main root layout selecting

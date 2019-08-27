@@ -30,6 +30,7 @@
     "react UI typescript"
   ],
   "dependencies": {
+    "@types/styled-system": "^5.0.0",
     "styled-system": "^5.0.0"
   },
   "devDependencies": {
@@ -43,7 +44,6 @@
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
     "@types/styled-components": "^4.1.16",
-    "@types/styled-system": "^5.0.0",
     "babel-plugin-styled-components": "^1.10.1",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
@@ -54,6 +54,7 @@
     "jest-styled-components": "^7.0.0-beta.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-is": "^16.8.6",
     "rollup": "^1.7.0",
     "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel": "^4.3.2",

@@ -6,6 +6,8 @@ import * as React from "react";
  * @param callback - the function to call when user clicks outside of the referenced component.
  * @returns a ref to be applied to the target element.
  */
+// TODO: flexible pass the active envent at document true/false
+
 const useClickOutside = (callback: (e: Event) => void): React.RefObject<any> => {
   // Set-up the reference that'll be used to refer to the component.
   const ref = React.useRef<HTMLElement>(null);

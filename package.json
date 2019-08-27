@@ -30,7 +30,9 @@
     "react UI typescript"
   ],
   "dependencies": {
+    "@types/body-scroll-lock": "^2.6.1",
     "@types/styled-system": "^5.0.0",
+    "body-scroll-lock": "^2.6.4",
     "styled-system": "^5.0.0"
   },
   "devDependencies": {

@@ -24,8 +24,8 @@ Feel free to use this library, or help us to improve.
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
 | ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
 | ✅ DisplayElement | ❌ Label               | ❌ Badges      |
-| ❌ Masonry        | ❌ Image               | ❌ Collapsible |
-| ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |
+| ✅ ThemeProvider  | ❌ Image               | ❌ Collapsible |
+|                   | ✅ Spinner             | ❌ Breadcrumbs |
 |                   | ❌ Table               | ❌ Chip        |
 |                   | ❌ List                | ✅ Menu        |
 |                   | ✅ Divider             | ✅ Modal       |

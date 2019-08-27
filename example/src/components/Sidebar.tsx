@@ -51,7 +51,7 @@ const components = [
 export const Sidebar: React.FunctionComponent<any> = () => {
   return (
     <Location>
-      {/* {({ location }) => {
+      {({ location }) => {
         console.log(location);
         return (
           <Menu defaultSelectedKey={location.pathname}>
@@ -80,7 +80,7 @@ export const Sidebar: React.FunctionComponent<any> = () => {
             ))}
           </Menu>
         );
-      }} */}
+      }}
     </Location>
   );
 };

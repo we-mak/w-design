@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-Change log now is at [RELEASE](https://github.com/we-mak/w-design/releases)
+Check out [RELEASE](https://github.com/we-mak/w-design/releases)
+
+---
+
+<a name="0.19.0"></a>#[v0.19.0]()
+
+### Features
+
+- Add `Label`
+- Restyle button (todo)
+- Add `Image`: lazy load, update card image (todo)
+- Fix https://github.com/we-mak/w-design/issues/38 (todo)
+- Use portal for dropdown menu (todo)
+
+* Update document (todo)
 
 ---
 

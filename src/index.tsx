@@ -9,6 +9,7 @@ export { default as Button, ButtonGroup } from "./components/elements/Button";
 export { default as Checkbox } from "./components/elements/Checkbox";
 export { default as CustomTag } from "./components/elements/CustomTag";
 export { default as Divider } from "./components/elements/Divider";
+export { default as Label } from "./components/elements/Label";
 export { default as Icon } from "./components/elements/Icon";
 export { default as InputField } from "./components/elements/InputField";
 export { default as Portal } from "./components/elements/Portal";

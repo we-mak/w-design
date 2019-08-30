@@ -1,6 +1,7 @@
 /**
  * FormGroup
- * Wrapping up InputField, Button together and group it into a combo component
+ * Wrapping up InputField, Button together and group it into
+ * a group of horizontal components
  * */
 import styled from "styled-components";
 

@@ -6,8 +6,9 @@ import * as React from "react";
 import InputField from "../../elements/InputField";
 import Icon from "../../elements/Icon";
 import Spinner from "../../elements/Spinner";
+import Label from "../../elements/Label";
 import { InputFormProps } from "./types";
-import { Label, FieldGroup, TextHint, RequiredMark, SpinnerWrap } from "./Styled";
+import { FieldGroup, TextHint, RequiredMark, SpinnerWrap } from "./Styled";
 
 const InputForm: React.FunctionComponent<InputFormProps> = props => {
   const {

@@ -2,8 +2,9 @@ import * as React from "react";
 import styled from "styled-components";
 import { borderRadius } from "styled-system";
 import { CardMediaProps } from "./types";
+import Picture from "../../elements/Picture";
 
-const CardMediaWrapper = styled.div`
+const CardMediaWrapper = styled.div<any>`
   &:first-child {
     padding-top: 0;
     img {
@@ -15,7 +16,7 @@ const CardMediaWrapper = styled.div`
 `;
 CardMediaWrapper.displayName = "CardMediaWrapper";
 
-const CoverImage = styled.img`
+const CoverImage = styled(Picture as any)`
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -23,10 +24,10 @@ const CoverImage = styled.img`
 `;
 CoverImage.displayName = "CoverImage";
 
-export const CardMedia = ({ imageUrl, children, ...rest }: CardMediaProps) => {
+export const CardMedia = ({ srcSets, imageUrl, children, ...rest }: CardMediaProps) => {
   return (
     <CardMediaWrapper {...rest}>
-      {imageUrl && <CoverImage src={imageUrl} />}
+      {imageUrl && <CoverImage dataSrc={imageUrl} srcSets={srcSets} />}
       {children}
     </CardMediaWrapper>
   );

@@ -6,14 +6,17 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-<a name="0.19.0"></a>#[v0.19.0]()
+<a name="0.22.0"></a>#[v0.22.0]()
 
 ### Features
 
 - Add `Label`
-- Add `Image`, `Picture`: lazy load, update card image (todo)
+- Add `Image` with IntersectionObserver lazy load
+- Add `Picture` in herit from `Image`
 - Fix https://github.com/we-mak/w-design/issues/38 (todo)
-- Add Drawer
+- Add `Drawer`
+- Update `Avatar` with lazy loading image
+- Update card image with lazy loading
 - Use portal for dropdown menu (todo)
 
 * Update document (todo)

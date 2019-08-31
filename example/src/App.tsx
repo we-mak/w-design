@@ -32,6 +32,8 @@ const NavWrapper = styled.div`
   z-index: 999;
 `;
 
+const baseUrl = process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "";
+
 function App() {
   return (
     <Provider
@@ -60,20 +62,20 @@ function App() {
           <Flexbox.Column width={3 / 4}>
             <Suspense fallback={<div>Loading...</div>}>
               <Router>
-                <Intro path="/" />
-                <Start path="/start" />
-                <LayoutPage path="/layout" />
+                <Intro path={baseUrl + "/"} />
+                <Start path={baseUrl + "/start"} />
+                <LayoutPage path={baseUrl + "/layout"} />
 
-                <SpinnerPage path="/spinner" />
-                <TypoPage path="/typo" />
-                <ButtonPage path="/button" />
-                <AvatarPage path="/avatar" />
+                <SpinnerPage path={baseUrl + "/spinner"} />
+                <TypoPage path={baseUrl + "/typo"} />
+                <ButtonPage path={baseUrl + "/button"} />
+                <AvatarPage path={baseUrl + "/avatar"} />
 
-                <CardPage path="/card" />
-                <DropdownPage path="/dropdown" />
-                <ModalPage path="/modal" />
-                <MenuPage path="/menu" />
-                <FormPage path="/form" />
+                <CardPage path={baseUrl + "/card"} />
+                <DropdownPage path={baseUrl + "/dropdown"} />
+                <ModalPage path={baseUrl + "/modal"} />
+                <MenuPage path={baseUrl + "/menu"} />
+                <FormPage path={baseUrl + "/form"} />
               </Router>
             </Suspense>
           </Flexbox.Column>

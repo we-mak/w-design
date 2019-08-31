@@ -30,6 +30,16 @@ const CardPage: React.FunctionComponent<any> = () => (
         <Card>
           <CardMedia
             imageUrl="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
+            srcSets={[
+              {
+                media: "480",
+                src: "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480441.jpg"
+              },
+              {
+                media: "680",
+                src: "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480425.jpg"
+              }
+            ]}
             alt=""
           />
           <CardHeader title="Beautiful salad" description="24/12/2019" />

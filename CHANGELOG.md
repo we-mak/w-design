@@ -11,6 +11,9 @@ Next
 - Use portal for dropdown menu (todo)
 - Add responsive show hide on section
 
+* Update document (todo)
+* Test Card, Picture, Image
+
 ---
 
 <a name="0.22.0-beta"></a>#[v0.22.0-beta]()
@@ -20,12 +23,9 @@ Next
 - Add `Label`
 - Add `Image` with IntersectionObserver lazy load
 - Add `Picture` in herit from `Image`
-- Fix https://github.com/we-mak/w-design/issues/38 (todo)
-- Add `Drawer` (todo)
+- Add `Drawer`
 - Update `Avatar` with lazy loading image
 - Update card image with lazy loading
-
-* Update document (todo)
 
 ---
 

@@ -169,7 +169,7 @@ For how-to questions and other non-issues, please use StackOverflow instead of G
 
 ### Development
 
-This package is built with dependencies: `styled-system`, `clean-tag`
+This package is built with dependencies: `styled-system`
 Props checking is under `TypeScript`
 
 Please check these packages before getting start to contribute.

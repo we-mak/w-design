@@ -7,6 +7,15 @@ import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
+const observeMock = {
+  observe: () => null,
+  unobserve: () => null
+};
+
+beforeEach(async () => {
+  (window as any).IntersectionObserver = () => observeMock;
+});
+
 describe("<Button/>", () => {
   it("should render with different appearance style", () => {
     const { container } = render(
@@ -17,8 +26,18 @@ describe("<Button/>", () => {
           </CardHeader>
 
           <CardMedia
-            imageUrl="https://dak95nwic4sny.cloudfront.net/73/cheetah-safari-41193237-1554105425-ImageGalleryLightboxLarge.jpg"
-            alt="test"
+            imageUrl="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
+            srcSets={[
+              {
+                media: "480",
+                src: "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480441.jpg"
+              },
+              {
+                media: "680",
+                src: "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480425.jpg"
+              }
+            ]}
+            alt=""
           />
           <CardContent>
             A safari is an overland journey, usually a trip by tourists in Africa. In the past, the

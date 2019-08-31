@@ -24,27 +24,27 @@ const elements = [
 const components = [
   {
     title: "Card",
-    link: "card"
+    link: "/card"
   },
   {
     title: "Dropdown",
-    link: "dropdown"
+    link: "/dropdown"
   },
   {
     title: "Navbar",
-    link: "nav"
+    link: "/nav"
   },
   {
     title: "Modal",
-    link: "modal"
+    link: "/modal"
   },
   {
     title: "Form",
-    link: "form"
+    link: "/form"
   },
   {
     title: "Menu",
-    link: "menu"
+    link: "/menu"
   }
 ];
 

@@ -1,29 +1,8 @@
 import * as React from "react";
 import { Column } from "./Column";
-import { Flex } from "./Flex";
-import {
-  SpaceProps,
-  JustifyContentProps,
-  FlexWrapProps,
-  FlexDirectionProps,
-  AlignItemsProps
-} from "styled-system";
+import { Flex, FlexProps } from "./Flex";
 
-import { GlobProps } from "../../../typings";
-
-export interface FlexboxProps
-  extends GlobProps,
-    SpaceProps,
-    JustifyContentProps,
-    FlexWrapProps,
-    FlexDirectionProps,
-    AlignItemsProps {
-  children?: React.ReactChild | React.ReactChild[];
-  gapless?: boolean;
-  oneline?: boolean;
-}
-
-class Flexbox extends React.PureComponent<FlexboxProps> {
+class Flexbox extends React.PureComponent<FlexProps> {
   static Column = Column;
 
   render() {

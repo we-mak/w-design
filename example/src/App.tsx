@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Router } from "@reach/router";
-import { Provider, Container, Flexbox } from "w-design";
+import { Provider, Container, Flexbox, DisplayElement } from "w-design";
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
@@ -56,10 +56,12 @@ function App() {
 
       <Container p={3} bg={"N1"}>
         <Flexbox mb="120px">
-          <Flexbox.Column width={1 / 4}>
-            <Sidebar />
+          <Flexbox.Column width={[0, 0, 0, 1 / 4]}>
+            <DisplayElement display={["none", "none", "none", "flex"]}>
+              <Sidebar />
+            </DisplayElement>
           </Flexbox.Column>
-          <Flexbox.Column width={3 / 4}>
+          <Flexbox.Column width={[1, 1, 1, 3 / 4]}>
             <Suspense fallback={<div>Loading...</div>}>
               <Router>
                 <Intro path={baseUrl + "/"} />

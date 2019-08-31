@@ -7,6 +7,9 @@ import logo from "../logom.png";
 const LogoType = styled.h3`
   margin: 0 !important;
   padding: 0 0.5rem;
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const { Section } = Navbar;

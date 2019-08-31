@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
+--
+
+Next
+
+- Use portal for dropdown menu (todo)
+
 ---
 
 <a name="0.22.0"></a>#[v0.22.0]()
@@ -14,10 +20,9 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - Add `Image` with IntersectionObserver lazy load
 - Add `Picture` in herit from `Image`
 - Fix https://github.com/we-mak/w-design/issues/38 (todo)
-- Add `Drawer`
+- Add `Drawer` (todo)
 - Update `Avatar` with lazy loading image
 - Update card image with lazy loading
-- Use portal for dropdown menu (todo)
 
 * Update document (todo)
 

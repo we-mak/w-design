@@ -115,8 +115,12 @@ const ContainerPage: React.FunctionComponent<any> = () => {
       <Typo appearance="h3">Responsive Column</Typo>
       <Container>
         <Flexbox>
-          <Flexbox.Column width={[1, 1 / 2, 1 / 3, 1 / 4]}>Column 1</Flexbox.Column>
-          <Flexbox.Column width={[1, 1 / 2, 1 / 3, 1 / 4, 1]}>Column 2</Flexbox.Column>
+          <Flexbox.Column width={[1, 1 / 2, 1 / 3, 1 / 4]} bg="N4">
+            Column 1
+          </Flexbox.Column>
+          <Flexbox.Column width={[1, 1 / 2, 1 / 3, 1 / 4, 1]} bg="N2">
+            Column 2
+          </Flexbox.Column>
         </Flexbox>
       </Container>
       <br />

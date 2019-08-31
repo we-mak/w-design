@@ -118,7 +118,7 @@ Cover basic components
 |                   | ❌ List                | ✅ Menu        |
 |                   | ✅ Divider             | ✅ Modal       |
 |                   | ❌ ProgressLoader      | ✅ Dropdown    |
-|                   | ✅ Portal              | ❌ Drawer      |
+|                   | ✅ Portal              | ✅ Drawer      |
 |                   | ✅ Avatar              | ❌ Steps       |
 |                   | ❌ Toggle              | ❌ Tabs        |
 |                   | ✅ TextArea            | ❌ PushMessage |

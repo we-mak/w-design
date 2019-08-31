@@ -43,10 +43,7 @@ export default {
       "styled-components": path.resolve(__dirname, "node_modules", "styled-components")
     }),
     babel({
-      exclude: "node_modules/**",
-      presets: [["@babel/preset-env", { modules: false, loose: true }], "@babel/preset-react"],
-      plugins: [["babel-plugin-styled-components", "transform-runtime"]],
-      babelrc: false
+      exclude: "node_modules/**"
     }),
     commonjs()
   ]

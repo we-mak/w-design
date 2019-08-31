@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Router } from "@reach/router";
-import { Provider, Container, Flexbox, DisplayElement } from "w-design";
+import { Provider, Container, Flexbox, Drawer } from "w-design";
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
@@ -34,33 +34,39 @@ const NavWrapper = styled.div`
 
 const baseUrl = process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "";
 
+const theme = {
+  fonts: {
+    normal: "'Montserrat', sans-serif",
+    medium: "'Montserrat', sans-serif",
+    demi: "'Montserrat', sans-serif",
+    bold: "'Montserrat', sans-serif"
+  }
+};
+
 function App() {
+  const [openMenu, setOpenMenu] = React.useState(false);
+
+  const handleToogleMenu = () => setOpenMenu(!openMenu);
   return (
-    <Provider
-      theme={{
-        fonts: {
-          normal: "'Montserrat', sans-serif",
-          medium: "'Montserrat', sans-serif",
-          demi: "'Montserrat', sans-serif",
-          bold: "'Montserrat', sans-serif"
-        }
-      }}
-    >
+    <Provider theme={theme}>
       <GlobalStyles />
 
       <NavWrapper>
         <Container px={4} py={3} bg={"WHITE"}>
-          <Header />
+          <Header toggleMenu={handleToogleMenu} />
         </Container>
       </NavWrapper>
 
+      <Drawer isOpen={openMenu} onClose={() => setOpenMenu(false)}>
+        <Sidebar />
+      </Drawer>
+
       <Container p={3} bg={"N1"}>
         <Flexbox mb="120px">
-          <Flexbox.Column width={[0, 0, 0, 1 / 4]}>
-            <DisplayElement display={["none", "none", "none", "flex"]}>
-              <Sidebar />
-            </DisplayElement>
+          <Flexbox.Column width={[0, 0, 0, 1 / 4]} display={["none", "none", "none", "flex"]}>
+            <Sidebar />
           </Flexbox.Column>
+
           <Flexbox.Column width={[1, 1, 1, 3 / 4]}>
             <Suspense fallback={<div>Loading...</div>}>
               <Router>

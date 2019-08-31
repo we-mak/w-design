@@ -23,7 +23,7 @@ const Avatar = ({
   return (
     <AvatarWrapper style={{ backgroundColor }} size={size} {...rest}>
       {dataInitial && <AvatarDataInit size={size}>{firstLetter(dataInitial)}</AvatarDataInit>}
-      {avatarUrl && <AvatarImage src={avatarUrl} alt={alt} />}
+      {avatarUrl && <AvatarImage data-src={avatarUrl} alt={alt} />}
       {presence && <PresenceMark presence={presence} size={size} />}
     </AvatarWrapper>
   );

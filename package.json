@@ -65,7 +65,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-typescript2": "^0.22.0",
     "rollup-plugin-url": "^2.2.0",
-    "styled-components": "^5.0.0-beta.6-ej4",
+    "styled-components": "^5.0.0-beta.8-groupsizefix",
     "ts-jest": "^24.0.0",
     "typescript": "^3.5.3"
   },

@@ -52,7 +52,7 @@ export const Sidebar: React.FunctionComponent<any> = () => {
   return (
     <Location>
       {({ location }) => {
-        console.log(location);
+        // console.log(location);
         return (
           <Menu defaultSelectedKey={location.pathname}>
             <MenuItem key="/">

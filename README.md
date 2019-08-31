@@ -112,7 +112,7 @@ Cover basic components
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
 | ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
 | ✅ DisplayElement | ✅ Label               | ❌ Badges      |
-| ✅ ThemeProvider  | ❌ Image               | ❌ Collapsible |
+| ✅ ThemeProvider  | ❌ Picture             | ❌ Collapsible |
 |                   | ✅ Spinner             | ❌ Breadcrumbs |
 |                   | ❌ Table               | ❌ Chip        |
 |                   | ❌ List                | ✅ Menu        |
@@ -127,7 +127,7 @@ Cover basic components
 |                   | ✅ Icon (Font awesome) | ❌ Comment     |
 |                   | ✅ Radio               | ❌ Select      |
 |                   | ✅ Button              | ✅ FormGroup   |
-|                   |                        | ✅ InputForm   |
+|                   | ❌ Image               | ✅ InputForm   |
 |                   |                        | ❌ Pagination  |
 |                   |                        | ✅ Card        |
 |                   |                        | ❌ Form        |

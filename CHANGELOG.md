@@ -11,9 +11,9 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Features
 
 - Add `Label`
-- Restyle button (todo)
-- Add `Image`: lazy load, update card image (todo)
+- Add `Image`, `Picture`: lazy load, update card image (todo)
 - Fix https://github.com/we-mak/w-design/issues/38 (todo)
+- Add Drawer
 - Use portal for dropdown menu (todo)
 
 * Update document (todo)

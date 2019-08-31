@@ -6,7 +6,7 @@
   "homepage": "https://we-mak.github.io/w-design/",
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "algoliasearch": "^3.33.0",
+    "algoliasearch": "^3.34.0",
     "prism-react-renderer": "^0.1.6",
     "react": "link:../node_modules/react",
     "react-dom": "^16.8.5",

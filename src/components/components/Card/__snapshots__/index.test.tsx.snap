@@ -35,6 +35,12 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-top-right-radius: 0.2rem;
 }
 
+.c4 img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 .c5 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;

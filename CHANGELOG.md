@@ -8,8 +8,10 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 Next
 
-- Use portal for dropdown menu (todo)
+- Use portal for dropdown menu
 - Add responsive show hide on section
+
+* Update document
 
 ---
 
@@ -23,9 +25,6 @@ Next
 - Add `Drawer`
 - Update `Avatar` with lazy loading image
 - Update card image with lazy loading
-
-* Update document (todo)
-* Test Card, Picture, Image
 
 ---
 

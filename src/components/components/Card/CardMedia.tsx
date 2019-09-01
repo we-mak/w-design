@@ -13,6 +13,12 @@ const CardMediaWrapper = styled.div<any>`
       ${borderRadius}
     }
   }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 `;
 CardMediaWrapper.displayName = "CardMediaWrapper";
 

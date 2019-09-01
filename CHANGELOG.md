@@ -8,11 +8,10 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 Next
 
-- Use portal for dropdown menu (todo)
+- Use portal for dropdown menu
 - Add responsive show hide on section
 
-* Update document (todo)
-* Test Card, Picture, Image
+* Update document
 
 ---
 

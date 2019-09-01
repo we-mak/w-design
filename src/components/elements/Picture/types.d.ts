@@ -1,6 +1,12 @@
 import { GlobProps } from "../../../typings";
 
-export interface PictureProps extends GlobProps, HTMLPictureElement {
+type srcSetProps = {
+  media: string;
+  src: string;
+};
+
+export interface PictureProps extends GlobProps {
   dataSrc?: string;
-  srcSets?: any[];
+  alt?: string;
+  srcSets?: srcSetProps[];
 }

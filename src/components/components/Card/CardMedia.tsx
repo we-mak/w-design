@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { borderRadius } from "styled-system";
-// import { CardMediaProps } from "./types";
+import { CardMediaProps } from "./types";
 import Picture from "../../elements/Picture";
 
 const CardMediaWrapper = styled.div<any>`
@@ -12,6 +12,12 @@ const CardMediaWrapper = styled.div<any>`
       border-top-right-radius: ${props => props.theme.radii[2]};
       ${borderRadius}
     }
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 `;
 CardMediaWrapper.displayName = "CardMediaWrapper";
@@ -24,7 +30,7 @@ const CoverImage = styled(Picture as any)`
 `;
 CoverImage.displayName = "CoverImage";
 
-export const CardMedia = ({ srcSets, imageUrl, alt, children, ...rest }: any) => {
+export const CardMedia = ({ srcSets, imageUrl, alt, children, ...rest }: CardMediaProps) => {
   return (
     <CardMediaWrapper {...rest}>
       {imageUrl && <CoverImage dataSrc={imageUrl} srcSets={srcSets} alt={alt} />}

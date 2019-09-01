@@ -1,9 +1,9 @@
 /**
  *
  */
-import React, { useState, useEffect, MutableRefObject, useRef } from "react";
+import React, { FC, useState, useEffect, MutableRefObject, useRef } from "react";
 
-export const Source = (props: any) => {
+export const Source: FC<any> = props => {
   const [src, setSrc] = useState(
     "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
   );

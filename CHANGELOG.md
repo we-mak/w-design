@@ -11,9 +11,6 @@ Next
 - Use portal for dropdown menu (todo)
 - Add responsive show hide on section
 
-* Update document (todo)
-* Test Card, Picture, Image
-
 ---
 
 <a name="0.22.0-beta"></a>#[v0.22.0-beta]()
@@ -26,6 +23,9 @@ Next
 - Add `Drawer`
 - Update `Avatar` with lazy loading image
 - Update card image with lazy loading
+
+* Update document (todo)
+* Test Card, Picture, Image
 
 ---
 

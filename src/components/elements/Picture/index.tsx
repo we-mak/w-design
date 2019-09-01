@@ -7,14 +7,14 @@ import Image from "../Image";
 import { PictureProps } from "./types";
 import { Source } from "./Source";
 
-const Picture = ({ srcSets, dataSrc, ...rest }: PictureProps) => {
+const Picture = ({ srcSets, dataSrc, alt }: PictureProps) => {
   return (
     <picture>
       {srcSets &&
         srcSets.map((s, idx) => (
           <Source key={idx} media={`(max-width: ${s.media}px)`} data-srcset={s.src} />
         ))}
-      <Image data-src={dataSrc} {...rest} />
+      <Image data-src={dataSrc} alt={alt} />
     </picture>
   );
 };

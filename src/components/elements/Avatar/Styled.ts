@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { space } from "styled-system";
 import { AvatarProps } from "./types";
+import Image from "../Image";
 
 const getSize = (props: AvatarProps) => {
   switch (props.size) {
@@ -85,7 +86,7 @@ export const AvatarDataInit = styled.span<AvatarProps>`
   ${getTextSize};
 `;
 
-export const AvatarImage = styled.img<AvatarProps>`
+export const AvatarImage = styled(Image)<AvatarProps>`
   border-radius: 50%;
   height: 100%;
   width: 100%;

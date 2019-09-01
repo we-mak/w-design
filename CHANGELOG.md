@@ -2,7 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
-Change log now is at [RELEASE](https://github.com/we-mak/w-design/releases)
+Check out [RELEASE](https://github.com/we-mak/w-design/releases)
+
+--
+
+Next
+
+- Use portal for dropdown menu
+- Add responsive show hide on section
+
+* Update document
+
+---
+
+<a name="0.22.0-beta"></a>#[v0.22.0-beta]()
+
+### Features
+
+- Add `Label`
+- Add `Image` with IntersectionObserver lazy load
+- Add `Picture` in herit from `Image`
+- Add `Drawer`
+- Update `Avatar` with lazy loading image
+- Update card image with lazy loading
 
 ---
 

@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button/> should render with different appearance style 1`] = `
-.c1 {
+.c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -18,10 +18,68 @@ exports[`<Button/> should render with different appearance style 1`] = `
   display: flex;
 }
 
-.c3 + .c2::before {
+.c2 + .c1::before {
   content: "";
   display: inline-block;
   width: 0.4rem;
+}
+
+.c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  font-family: Helvetica,Arial,sans-serif;
+  border: 0.05rem solid;
+  background: #E2EAF2;
+  border-color: #E2EAF2;
+  color: #394B59;
+  border-radius: 0.2rem;
+}
+
+.c3:hover {
+  background: #CED9E3;
+  border-color: #CED9E3;
+}
+
+.c3:active,
+.c3:focus {
+  background: #B1EAFF;
+  border-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c3:disabled,
+.c3[disabled] {
+  cursor: not-allowed;
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+}
+
+.c3 i.icon-before {
+  margin-right: 8px;
+}
+
+.c3 i.icon-after {
+  margin-left: 8px;
 }
 
 .c4 {
@@ -48,22 +106,22 @@ exports[`<Button/> should render with different appearance style 1`] = `
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
-  background: #E2EAF2;
-  border-color: #E2EAF2;
-  color: #202B33;
+  background: #008CC0;
+  border-color: #007099;
+  color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c4:hover {
-  background: #CED9E3;
-  border-color: #CED9E3;
+  background: #009AD3;
+  border-color: #008CC0;
 }
 
 .c4:active,
 .c4:focus {
-  background: #B1EAFF;
-  border-color: #B1EAFF;
-  box-shadow: 0 0 0 0.1rem #008CC0;
+  background: #007099;
+  border-color: #004660;
+  box-shadow: 0 0 0 0.1rem #B1EAFF;
 }
 
 .c4:disabled,
@@ -105,23 +163,20 @@ exports[`<Button/> should render with different appearance style 1`] = `
   height: 1.8rem;
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
-  border: 0.05rem solid;
-  background: #008CC0;
-  border-color: #007099;
-  color: #FBFBFB;
+  border: none;
+  background: transparent;
+  color: #008CC0;
   border-radius: 0.2rem;
 }
 
 .c5:hover {
-  background: #009AD3;
-  border-color: #008CC0;
+  background: #E2EAF2;
 }
 
 .c5:active,
 .c5:focus {
-  background: #007099;
-  border-color: #004660;
-  box-shadow: 0 0 0 0.1rem #B1EAFF;
+  background: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
 .c5:disabled,
@@ -159,24 +214,27 @@ exports[`<Button/> should render with different appearance style 1`] = `
   -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
   transition: all 0.25s cubic-bezier(0,0,0.2,1);
   line-height: 1.125;
-  padding: 0.35rem 0.4rem;
+  padding: 0;
   height: 1.8rem;
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
-  border: none;
-  background: transparent;
-  color: #008CC0;
+  border: 0.05rem solid;
+  background: #FA9B00;
+  border-color: #EF8100;
+  color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c6:hover {
-  background: #E2EAF2;
+  background: #FFAC23;
+  border-color: #FA9B00;
 }
 
 .c6:active,
 .c6:focus {
-  background: #B1EAFF;
-  box-shadow: 0 0 0 0.1rem #008CC0;
+  background: #EF8100;
+  border-color: #E15B00;
+  box-shadow: 0 0 0 0.1rem #FFC40D;
 }
 
 .c6:disabled,
@@ -185,6 +243,10 @@ exports[`<Button/> should render with different appearance style 1`] = `
   color: #90A9BF !important;
   background: #CED9E3 !important;
   border: none;
+}
+
+.c6 i {
+  margin: auto 8px !important;
 }
 
 .c6 i.icon-before {
@@ -214,27 +276,27 @@ exports[`<Button/> should render with different appearance style 1`] = `
   -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
   transition: all 0.25s cubic-bezier(0,0,0.2,1);
   line-height: 1.125;
-  padding: 0;
+  padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
-  background: #FA9B00;
-  border-color: #EF8100;
+  background: #29A634;
+  border-color: #238C2C;
   color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c7:hover {
-  background: #FFAC23;
-  border-color: #FA9B00;
+  background: #3BBC45;
+  border-color: #29A634;
 }
 
 .c7:active,
 .c7:focus {
-  background: #EF8100;
-  border-color: #E15B00;
-  box-shadow: 0 0 0 0.1rem #FFC40D;
+  background: #238C2C;
+  border-color: #1D7324;
+  box-shadow: 0 0 0 0.1rem #74FD7F;
 }
 
 .c7:disabled,
@@ -243,10 +305,6 @@ exports[`<Button/> should render with different appearance style 1`] = `
   color: #90A9BF !important;
   background: #CED9E3 !important;
   border: none;
-}
-
-.c7 i {
-  margin: auto 8px !important;
 }
 
 .c7 i.icon-before {
@@ -281,22 +339,22 @@ exports[`<Button/> should render with different appearance style 1`] = `
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
-  background: #29A634;
-  border-color: #238C2C;
+  background: #DC1F1F;
+  border-color: #C61515;
   color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c8:hover {
-  background: #3BBC45;
-  border-color: #29A634;
+  background: #F22828;
+  border-color: #DC1F1F;
 }
 
 .c8:active,
 .c8:focus {
-  background: #238C2C;
-  border-color: #1D7324;
-  box-shadow: 0 0 0 0.1rem #74FD7F;
+  background: #C61515;
+  border-color: #B40404;
+  box-shadow: 0 0 0 0.1rem #FFADAD;
 }
 
 .c8:disabled,
@@ -338,23 +396,20 @@ exports[`<Button/> should render with different appearance style 1`] = `
   height: 1.8rem;
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
-  border: 0.05rem solid;
-  background: #DC1F1F;
-  border-color: #C61515;
-  color: #FBFBFB;
+  border: none;
+  background: transparent;
+  color: #202B33;
   border-radius: 0.2rem;
 }
 
 .c9:hover {
-  background: #F22828;
-  border-color: #DC1F1F;
+  background: #EFF3F6;
 }
 
 .c9:active,
 .c9:focus {
-  background: #C61515;
-  border-color: #B40404;
-  box-shadow: 0 0 0 0.1rem #FFADAD;
+  background: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
 .c9:disabled,
@@ -396,20 +451,23 @@ exports[`<Button/> should render with different appearance style 1`] = `
   height: 1.8rem;
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
-  border: none;
+  border: 0.05rem solid;
   background: transparent;
+  border-color: transparent;
   color: #202B33;
   border-radius: 0.2rem;
 }
 
 .c10:hover {
-  background: #EFF3F6;
+  background: transparent;
+  border-color: transparent;
 }
 
 .c10:active,
 .c10:focus {
-  background: #B1EAFF;
-  box-shadow: 0 0 0 0.1rem #008CC0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 0 0.1rem #FBFBFB;
 }
 
 .c10:disabled,
@@ -452,22 +510,22 @@ exports[`<Button/> should render with different appearance style 1`] = `
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
-  background: transparent;
-  border-color: transparent;
-  color: #202B33;
+  background: #00B8D9;
+  border-color: #00A3BF;
+  color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
 .c11:hover {
-  background: transparent;
-  border-color: transparent;
+  background: #00C7E6;
+  border-color: #00B8D9;
 }
 
 .c11:active,
 .c11:focus {
-  background: transparent;
-  border-color: transparent;
-  box-shadow: 0 0 0 0.1rem #FBFBFB;
+  background: #00A3BF;
+  border-color: #008DA6;
+  box-shadow: 0 0 0 0.1rem #79E2F2;
 }
 
 .c11:disabled,
@@ -486,7 +544,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   margin-left: 8px;
 }
 
-.c12 {
+.c14 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -510,37 +568,37 @@ exports[`<Button/> should render with different appearance style 1`] = `
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
-  background: #00B8D9;
-  border-color: #00A3BF;
+  background: #004660;
+  border-color: #008CC0;
   color: #FBFBFB;
   border-radius: 0.2rem;
 }
 
-.c12:hover {
-  background: #00C7E6;
-  border-color: #00B8D9;
+.c14:hover {
+  background: #004660;
+  border-color: #008CC0;
 }
 
-.c12:active,
-.c12:focus {
-  background: #00A3BF;
-  border-color: #008DA6;
-  box-shadow: 0 0 0 0.1rem #79E2F2;
+.c14:active,
+.c14:focus {
+  background: #004660;
+  border-color: #008CC0;
+  box-shadow: 0 0 0 0.1rem;
 }
 
-.c12:disabled,
-.c12[disabled] {
+.c14:disabled,
+.c14[disabled] {
   cursor: not-allowed;
   color: #90A9BF !important;
   background: #CED9E3 !important;
   border: none;
 }
 
-.c12 i.icon-before {
+.c14 i.icon-before {
   margin-right: 8px;
 }
 
-.c12 i.icon-after {
+.c14 i.icon-after {
   margin-left: 8px;
 }
 
@@ -568,22 +626,26 @@ exports[`<Button/> should render with different appearance style 1`] = `
   font-size: 0.8rem;
   font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
-  background: #004660;
-  border-color: #008CC0;
-  color: #FBFBFB;
+  background: #E2EAF2;
+  border-color: #E2EAF2;
+  color: #394B59;
   border-radius: 0.2rem;
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+  min-height: 0.8rem;
 }
 
 .c15:hover {
-  background: #004660;
-  border-color: #008CC0;
+  background: #CED9E3;
+  border-color: #CED9E3;
 }
 
 .c15:active,
 .c15:focus {
-  background: #004660;
-  border-color: #008CC0;
-  box-shadow: 0 0 0 0.1rem;
+  background: #B1EAFF;
+  border-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
 .c15:disabled,
@@ -594,6 +656,29 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: none;
 }
 
+.c15::after {
+  -webkit-animation: btrQYj 500ms infinite linear;
+  animation: btrQYj 500ms infinite linear;
+  border: 0.1rem solid;
+  border-color: #004660;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.c15::after {
+  height: 0.8rem;
+  margin-left: -0.4rem;
+  margin-top: -0.4rem;
+  width: 0.8rem;
+}
+
 .c15 i.icon-before {
   margin-right: 8px;
 }
@@ -602,7 +687,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   margin-left: 8px;
 }
 
-.c16 {
+.c12 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -628,63 +713,45 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: 0.05rem solid;
   background: #E2EAF2;
   border-color: #E2EAF2;
-  color: #202B33;
+  color: #394B59;
   border-radius: 0.2rem;
-  color: transparent !important;
-  pointer-events: none;
-  position: relative;
-  min-height: 0.8rem;
 }
 
-.c16:hover {
+.c12:hover {
   background: #CED9E3;
   border-color: #CED9E3;
 }
 
-.c16:active,
-.c16:focus {
+.c12:active,
+.c12:focus {
   background: #B1EAFF;
   border-color: #B1EAFF;
   box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
-.c16:disabled,
-.c16[disabled] {
+.c12:disabled,
+.c12[disabled] {
   cursor: not-allowed;
   color: #90A9BF !important;
   background: #CED9E3 !important;
   border: none;
 }
 
-.c16::after {
-  -webkit-animation: btrQYj 500ms infinite linear;
-  animation: btrQYj 500ms infinite linear;
-  border: 0.1rem solid;
-  border-color: #004660;
-  border-radius: 50%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  content: "";
-  display: block;
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  z-index: 1;
-}
-
-.c16::after {
-  height: 0.8rem;
-  margin-left: -0.4rem;
-  margin-top: -0.4rem;
-  width: 0.8rem;
-}
-
-.c16 i.icon-before {
+.c12 i.icon-before {
   margin-right: 8px;
 }
 
-.c16 i.icon-after {
+.c12 i.icon-after {
   margin-left: 8px;
+}
+
+a.c12 {
+  line-height: initial;
+}
+
+a.c12:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c13 {
@@ -713,7 +780,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border: 0.05rem solid;
   background: #E2EAF2;
   border-color: #E2EAF2;
-  color: #202B33;
+  color: #394B59;
   border-radius: 0.2rem;
 }
 
@@ -745,326 +812,130 @@ exports[`<Button/> should render with different appearance style 1`] = `
   margin-left: 8px;
 }
 
-a.c13 {
-  line-height: initial;
-}
-
-a.c13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c14 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  outline: 0;
-  display: inline-block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  transition: all 0.25s cubic-bezier(0,0,0.2,1);
-  line-height: 1.125;
-  padding: 0.35rem 0.4rem;
-  height: 1.8rem;
-  font-size: 0.8rem;
-  font-family: Helvetica,Arial,sans-serif;
-  border: 0.05rem solid;
-  background: #E2EAF2;
-  border-color: #E2EAF2;
-  color: #202B33;
-  border-radius: 0.2rem;
-}
-
-.c14:hover {
-  background: #CED9E3;
-  border-color: #CED9E3;
-}
-
-.c14:active,
-.c14:focus {
-  background: #B1EAFF;
-  border-color: #B1EAFF;
-  box-shadow: 0 0 0 0.1rem #008CC0;
-}
-
-.c14:disabled,
-.c14[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #CED9E3 !important;
-  border: none;
-}
-
-.c14 i.icon-before {
-  margin-right: 8px;
-}
-
-.c14 i.icon-after {
-  margin-left: 8px;
-}
-
-.c0 h1 {
-  font-size: 1.6rem;
-}
-
-.c0 h2 {
-  font-size: 1.4rem;
-}
-
-.c0 h3 {
-  font-size: 1.2rem;
-}
-
-.c0 h4 {
-  font-size: 1rem;
-}
-
-.c0 h5 {
-  font-size: 0.9rem;
-}
-
-.c0 h6 {
-  font-size: 0.8rem;
-}
-
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6 {
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 0.5em;
-  margin-top: 0;
-  font-family: Helvetica,Arial,sans-serif;
-}
-
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4 {
-  color: #394B59;
-}
-
-.c0 h5,
-.c0 h6 {
-  color: #293742;
-}
-
-.c0 p {
-  color: #202B33;
-  line-height: 1.5;
-  margin-bottom: 0.5em;
-  margin-top: 0;
-  font-family: Helvetica,Arial,sans-serif;
-}
-
-.c0 a {
-  font-family: Helvetica,Arial,sans-serif;
-  color: #008CC0;
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 a:hover {
-  color: #00A7E4;
-}
-
-.c0 a:focus,
-.c0 a:hover,
-.c0 a:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c0 a:focus,
-.c0 a:active {
-  color: #007099;
-}
-
-.c0 a:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 b,
-.c0 strong {
-  font-weight: bolder;
-}
-
-.c0 small {
-  font-size: 80%;
-  font-weight: 400;
-  color: #566E82;
-}
-
-.c0 blockquote {
-  margin-left: 0;
-  padding: 0.4rem 0.8rem;
-  color: #566E82;
-}
-
-.c0 blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-.c0 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-align: left;
-  width: 100%;
-}
-
-.c0 th {
-  border-bottom: 0.05rem solid #BECEDC;
-  padding: 0.6rem 0.4rem;
-  border-bottom-width: 0.1rem;
-}
-
-.c0 td {
-  border-bottom: 0.05rem solid #EFF3F6;
-  padding: 0.6rem 0.4rem;
-}
-
 <div>
   <div
     class="c0"
   >
     <div
-      class="c1"
+      class="c1 c2"
     >
-      <div
-        class="c2 c3"
+      <button
+        class="c3"
+        type="button"
       >
-        <button
-          class="c4"
-          type="button"
-        >
-          Hello
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c5"
-          type="button"
-        >
-          <i
-            aria-hidden="true"
-            class="icon-before fas fa-phone"
-          />
-          Hello
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c6"
-          type="button"
-        >
-          Hello
-          <i
-            aria-hidden="true"
-            class="icon-after fas fa-phone"
-          />
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c7"
-          type="button"
-        >
-          <i
-            aria-hidden="true"
-            class="icon-before fas fa-phone"
-          />
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c8"
-          type="button"
-        >
-          Hello
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c9"
-          type="button"
-        >
-          Hello
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c10"
-          type="button"
-        >
-          Hello
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c11"
-          type="button"
-        >
-          Hello
-        </button>
-      </div>
-      <div
-        class="c2 c3"
-      >
-        <button
-          class="c12"
-          type="button"
-        >
-          Hello
-        </button>
-      </div>
+        Hello
+      </button>
     </div>
-    <a
-      class="c13"
-      href="/"
-      type="button"
-    />
-    <span
-      class="c14"
-      disabled=""
-      href="/"
-      type="button"
-    />
-    <button
-      class="c15"
-      type="button"
-    />
-    <button
-      class="c16"
-      type="button"
-    />
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c4"
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          class="icon-before fas fa-phone"
+        />
+        Hello
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c5"
+        type="button"
+      >
+        Hello
+        <i
+          aria-hidden="true"
+          class="icon-after fas fa-phone"
+        />
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c6"
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          class="icon-before fas fa-phone"
+        />
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c7"
+        type="button"
+      >
+        Hello
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c8"
+        type="button"
+      >
+        Hello
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c9"
+        type="button"
+      >
+        Hello
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c10"
+        type="button"
+      >
+        Hello
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c11"
+        type="button"
+      >
+        Hello
+      </button>
+    </div>
   </div>
+  <a
+    class="c12"
+    href="/"
+    type="button"
+  />
+  <span
+    class="c13"
+    disabled=""
+    href="/"
+    type="button"
+  />
+  <button
+    class="c14"
+    type="button"
+  />
+  <button
+    class="c15"
+    type="button"
+  />
 </div>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AvatarGroup/> should renders correctly 1`] = `
-.c1 {
+exports[`<Avatar/> should renders correctly 1`] = `
+.c0 {
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -13,7 +13,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   width: 2.8rem;
 }
 
-.c5 {
+.c4 {
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -25,7 +25,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   width: 1.4rem;
 }
 
-.c8 {
+.c7 {
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -37,7 +37,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   width: 2rem;
 }
 
-.c11 {
+.c10 {
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -49,7 +49,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   width: 3.2rem;
 }
 
-.c13 {
+.c12 {
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -61,7 +61,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   width: 4rem;
 }
 
-.c15 {
+.c14 {
   border-radius: 50%;
   color: rgba(255,255,255,0.85);
   display: inline-block;
@@ -73,7 +73,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   width: 6rem;
 }
 
-.c2 {
+.c1 {
   color: currentColor;
   left: 50%;
   position: absolute;
@@ -87,7 +87,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   font-size: 1rem;
 }
 
-.c6 {
+.c5 {
   color: currentColor;
   left: 50%;
   position: absolute;
@@ -101,7 +101,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   font-size: .6rem;
 }
 
-.c9 {
+.c8 {
   color: currentColor;
   left: 50%;
   position: absolute;
@@ -115,7 +115,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   font-size: .9rem;
 }
 
-.c12 {
+.c11 {
   color: currentColor;
   left: 50%;
   position: absolute;
@@ -129,7 +129,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   font-size: 1.8rem;
 }
 
-.c14 {
+.c13 {
   color: currentColor;
   left: 50%;
   position: absolute;
@@ -143,7 +143,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   font-size: 2rem;
 }
 
-.c16 {
+.c15 {
   color: currentColor;
   left: 50%;
   position: absolute;
@@ -157,7 +157,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   font-size: 2.8rem;
 }
 
-.c3 {
+.c2 {
   border-radius: 50%;
   height: 100%;
   width: 100%;
@@ -165,7 +165,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   z-index: 1;
 }
 
-.c4 {
+.c3 {
   border-radius: 50%;
   bottom: 0.1rem;
   pointer-events: none;
@@ -178,7 +178,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   border: 0.075rem solid #fff;
 }
 
-.c7 {
+.c6 {
   border-radius: 50%;
   bottom: 0.1rem;
   pointer-events: none;
@@ -191,7 +191,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   border: 0.075rem solid #fff;
 }
 
-.c10 {
+.c9 {
   border-radius: 50%;
   bottom: 0.1rem;
   pointer-events: none;
@@ -204,208 +204,80 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   border: 0.075rem solid #fff;
 }
 
-.c0 h1 {
-  font-size: 1.6rem;
-}
-
-.c0 h2 {
-  font-size: 1.4rem;
-}
-
-.c0 h3 {
-  font-size: 1.2rem;
-}
-
-.c0 h4 {
-  font-size: 1rem;
-}
-
-.c0 h5 {
-  font-size: 0.9rem;
-}
-
-.c0 h6 {
-  font-size: 0.8rem;
-}
-
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4,
-.c0 h5,
-.c0 h6 {
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 0.5em;
-  margin-top: 0;
-  font-family: Helvetica,Arial,sans-serif;
-}
-
-.c0 h1,
-.c0 h2,
-.c0 h3,
-.c0 h4 {
-  color: #394B59;
-}
-
-.c0 h5,
-.c0 h6 {
-  color: #293742;
-}
-
-.c0 p {
-  color: #202B33;
-  line-height: 1.5;
-  margin-bottom: 0.5em;
-  margin-top: 0;
-  font-family: Helvetica,Arial,sans-serif;
-}
-
-.c0 a {
-  font-family: Helvetica,Arial,sans-serif;
-  color: #008CC0;
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 a:hover {
-  color: #00A7E4;
-}
-
-.c0 a:focus,
-.c0 a:hover,
-.c0 a:active {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c0 a:focus,
-.c0 a:active {
-  color: #007099;
-}
-
-.c0 a:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 b,
-.c0 strong {
-  font-weight: bolder;
-}
-
-.c0 small {
-  font-size: 80%;
-  font-weight: 400;
-  color: #566E82;
-}
-
-.c0 blockquote {
-  margin-left: 0;
-  padding: 0.4rem 0.8rem;
-  color: #566E82;
-}
-
-.c0 blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-.c0 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-align: left;
-  width: 100%;
-}
-
-.c0 th {
-  border-bottom: 0.05rem solid #BECEDC;
-  padding: 0.6rem 0.4rem;
-  border-bottom-width: 0.1rem;
-}
-
-.c0 td {
-  border-bottom: 0.05rem solid #EFF3F6;
-  padding: 0.6rem 0.4rem;
-}
-
 <div>
-  <div
+  <figure
     class="c0"
   >
-    <figure
+    <span
       class="c1"
     >
-      <span
-        class="c2"
-      >
-        Wm
-      </span>
-      <img
-        alt="test"
-        class="c3"
-        src="https://api.adorable.io/avatars/240/thunder"
-      />
-      <span
-        class="c4"
-      />
-    </figure>
-    <figure
+      Wm
+    </span>
+    <img
+      alt="test"
+      class="c2"
+      data-src="https://api.adorable.io/avatars/240/thunder"
+      src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+    />
+    <span
+      class="c3"
+    />
+  </figure>
+  <figure
+    class="c4"
+    style="background-color: rgb(144, 169, 191);"
+  >
+    <span
       class="c5"
-      style="background-color: rgb(239, 243, 246);"
     >
-      <span
-        class="c6"
-      >
-        Wm
-      </span>
-      <span
-        class="c7"
-      />
-    </figure>
-    <figure
+      Wm
+    </span>
+    <span
+      class="c6"
+    />
+  </figure>
+  <figure
+    class="c7"
+    style="background-color: rgb(179, 245, 255);"
+  >
+    <span
       class="c8"
-      style="background-color: rgb(0, 167, 228);"
     >
-      <span
-        class="c9"
-      >
-        Wm
-      </span>
-      <span
-        class="c10"
-      />
-    </figure>
-    <figure
+      Wm
+    </span>
+    <span
+      class="c9"
+    />
+  </figure>
+  <figure
+    class="c10"
+    style="background-color: rgb(62, 203, 255);"
+  >
+    <span
       class="c11"
-      style="background-color: rgb(0, 154, 211);"
     >
-      <span
-        class="c12"
-      >
-        Wm
-      </span>
-    </figure>
-    <figure
+      Wm
+    </span>
+  </figure>
+  <figure
+    class="c12"
+    style="background-color: rgb(29, 115, 36);"
+  >
+    <span
       class="c13"
-      style="background-color: rgb(135, 160, 181);"
     >
-      <span
-        class="c14"
-      >
-        Wm
-      </span>
-    </figure>
-    <figure
+      Wm
+    </span>
+  </figure>
+  <figure
+    class="c14"
+    style="background-color: rgb(32, 43, 51);"
+  >
+    <span
       class="c15"
-      style="background-color: rgb(41, 55, 66);"
     >
-      <span
-        class="c16"
-      >
-        Wm
-      </span>
-    </figure>
-  </div>
+      Wm
+    </span>
+  </figure>
 </div>
 `;

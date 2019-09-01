@@ -1,4 +1,5 @@
 import { GlobProps } from "../../../typings";
+import { PictureProps } from "../../elements/Picture/types";
 
 export interface CardProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];
@@ -6,7 +7,7 @@ export interface CardProps extends GlobProps {
   isLoading?: boolean;
 }
 
-export interface CardMediaProps extends GlobProps {
+export interface CardMediaProps extends GlobProps, PictureProps {
   // image cover url
   imageUrl?: string;
   children?: React.ReactChild;

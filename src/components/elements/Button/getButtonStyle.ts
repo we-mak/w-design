@@ -79,7 +79,7 @@ const bordrActive = setColor(appearanceKeys, [
   "T50",
   "NONE"
 ]);
-const text = setColor(appearanceKeys, ["N70", "N1", "N1", "N1", "N1", "B50", "N70", "N1", "N70"]);
+const text = setColor(appearanceKeys, ["N50", "N1", "N1", "N1", "N1", "B50", "N70", "N1", "N70"]);
 const boxShadow = setColor(appearanceKeys, [
   "B50",
   "B5",

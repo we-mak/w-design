@@ -1,4 +1,5 @@
 import * as React from "react";
+import { disableBodyScroll, clearAllBodyScrollLocks, BodyScrollOptions } from "body-scroll-lock";
 import Portal from "../../elements/Portal";
 import Typo from "../../elements/Typo";
 import Button from "../../elements/Button";
@@ -12,39 +13,20 @@ import {
 } from "./Styled";
 import { ModalProps } from "./types";
 
-// function isTouchDevice() {
-//   return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
-// }
+const options: BodyScrollOptions = {
+  reserveScrollBarGap: true
+};
 
 const Modal = (props: ModalProps) => {
   const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
   // Main root layout selecting
   const documentBody: any = document.body;
-  // Get body scroll position
-  const getBodyPosition = () => documentBody.getBoundingClientRect().top;
-  // Get scroll position
-  const scrollPosition = getBodyPosition();
-  // const yPosition = documentBody.getBoundingClientRect().y;
 
   React.useLayoutEffect(() => {
-    if (!documentBody.position) {
-      // Prevent main layout scroll to top on open modal
-      documentBody.style = `
-        top: ${scrollPosition}px;
-        position: fixed;
-        width: 99vw;
-      `;
-
-      // if (yPosition < 0) {
-      //   documentBody.style.paddingRight = "15px";
-      // }
-    }
+    disableBodyScroll(documentBody, options);
 
     return () => {
-      // Remove style attribute
-      documentBody.removeAttribute("style");
-      // Set scroll position
-      scrollPosition !== 0 && window.scrollBy(0, -scrollPosition);
+      clearAllBodyScrollLocks();
     };
   }, []);
 

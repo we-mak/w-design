@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { AvatarProps } from "./types";
-import Avartar from "../../elements/Avatar";
+import { AvatarGroupProps } from "./types";
 
 const AvatarGroupWrapper = styled.div`
   align-content: space-between;
@@ -41,12 +40,10 @@ const AvatarActions = styled.div`
   flex: 0 0 auto;
 `;
 
-const AvatarGroup = ({ name, description, actions, ...rest }: AvatarProps) => {
+const AvatarGroup = ({ avatar, name, description, actions, ...rest }: AvatarGroupProps) => {
   return (
-    <AvatarGroupWrapper>
-      <AvatarWrapper>
-        <Avartar dataInitial={name} {...rest} />
-      </AvatarWrapper>
+    <AvatarGroupWrapper {...rest}>
+      <AvatarWrapper>{avatar}</AvatarWrapper>
       <AvatarContent>
         {name && <AvatarTitle>{name}</AvatarTitle>}
         {description && <AvatarDescription>{description}</AvatarDescription>}

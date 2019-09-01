@@ -24,58 +24,60 @@ const elements = [
 const components = [
   {
     title: "Card",
-    link: "card"
+    link: "/card"
   },
   {
     title: "Dropdown",
-    link: "dropdown"
+    link: "/dropdown"
   },
   {
     title: "Navbar",
-    link: "nav"
+    link: "/nav"
   },
   {
     title: "Modal",
-    link: "modal"
+    link: "/modal"
   },
   {
     title: "Form",
-    link: "form"
+    link: "/form"
   },
   {
     title: "Menu",
-    link: "menu"
+    link: "/menu"
   }
 ];
+
+const baseUrl = process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "";
 
 export const Sidebar: React.FunctionComponent<any> = () => {
   return (
     <Location>
       {({ location }) => {
-        console.log(location);
+        // console.log(location);
         return (
           <Menu defaultSelectedKey={location.pathname}>
-            <MenuItem key="/">
-              <Link to="/">Introduction</Link>
+            <MenuItem key={baseUrl + "/"}>
+              <Link to={baseUrl + "/"}>Introduction</Link>
             </MenuItem>
-            <MenuItem key="/start">
-              <Link to="/start">Getting start</Link>
+            <MenuItem key={baseUrl + "/start"}>
+              <Link to={baseUrl + "/start"}>Getting start</Link>
             </MenuItem>
 
-            <MenuItem key="/layout">
-              <Link to="/layout">Layout</Link>
+            <MenuItem key={baseUrl + "/layout"}>
+              <Link to={baseUrl + "/layout"}>Layout</Link>
             </MenuItem>
 
             <MenuHeading>Elements</MenuHeading>
             {elements.map(el => (
-              <MenuItem key={el.link}>
-                <Link to={el.link}>{el.title}</Link>
+              <MenuItem key={baseUrl + el.link}>
+                <Link to={baseUrl + el.link}>{el.title}</Link>
               </MenuItem>
             ))}
             <MenuHeading>Components</MenuHeading>
             {components.map(c => (
-              <MenuItem key={c.link}>
-                <Link to={c.link}>{c.title}</Link>
+              <MenuItem key={baseUrl + c.link}>
+                <Link to={baseUrl + c.link}>{c.title}</Link>
               </MenuItem>
             ))}
           </Menu>

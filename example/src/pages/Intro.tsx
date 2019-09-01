@@ -23,14 +23,14 @@ Feel free to use this library, or help us to improve.
 | ----------------- | ---------------------- | -------------- |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
 | ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
-| ✅ DisplayElement | ❌ Label               | ❌ Badges      |
-| ❌ Masonry        | ❌ Image               | ❌ Collapsible |
-| ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |
+| ✅ DisplayElement | ✅ Label               | ❌ Badges      |
+| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible |
+|                   | ✅ Spinner             | ❌ Breadcrumbs |
 |                   | ❌ Table               | ❌ Chip        |
 |                   | ❌ List                | ✅ Menu        |
 |                   | ✅ Divider             | ✅ Modal       |
 |                   | ❌ ProgressLoader      | ✅ Dropdown    |
-|                   | ✅ Portal              | ❌ Drawer      |
+|                   | ✅ Portal              | ✅ Drawer      |
 |                   | ✅ Avatar              | ❌ Steps       |
 |                   | ❌ Toggle              | ❌ Tabs        |
 |                   | ✅ TextArea            | ❌ PushMessage |
@@ -39,7 +39,7 @@ Feel free to use this library, or help us to improve.
 |                   | ✅ Icon (Font awesome) | ❌ Comment     |
 |                   | ✅ Radio               | ❌ Select      |
 |                   | ✅ Button              | ✅ FormGroup   |
-|                   |                        | ✅ InputForm   |
+|                   | ✅ Image               | ✅ InputForm   |
 |                   |                        | ❌ Pagination  |
 |                   |                        | ✅ Card        |
 |                   |                        | ❌ Form        |

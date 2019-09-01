@@ -9,8 +9,11 @@ export { default as Button, ButtonGroup } from "./components/elements/Button";
 export { default as Checkbox } from "./components/elements/Checkbox";
 export { default as CustomTag } from "./components/elements/CustomTag";
 export { default as Divider } from "./components/elements/Divider";
+export { default as Label } from "./components/elements/Label";
 export { default as Icon } from "./components/elements/Icon";
+export { default as Image } from "./components/elements/Image";
 export { default as InputField } from "./components/elements/InputField";
+export { default as Picture } from "./components/elements/Picture";
 export { default as Portal } from "./components/elements/Portal";
 export { default as RadioGroup } from "./components/elements/Radio";
 export { default as Spinner } from "./components/elements/Spinner";
@@ -25,6 +28,7 @@ export {
   CardContent,
   CardFooter
 } from "./components/components/Card";
+export { default as Drawer } from "./components/components/Drawer";
 export { default as Dropdown } from "./components/components/Dropdown";
 export { default as InputForm } from "./components/components/InputForm";
 export { default as FormGroup } from "./components/components/FormGroup";

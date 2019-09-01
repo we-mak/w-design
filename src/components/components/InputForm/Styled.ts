@@ -43,14 +43,6 @@ export const FieldGroup = styled.div<InputFormProps>`
 `;
 FieldGroup.displayName = "FieldGroup";
 
-export const Label = styled.label`
-  display: block;
-  line-height: ${props => props.theme.lineHeights[0]};
-  padding: ${props => props.theme.space[2]}px 0;
-  font-weight: ${props => props.theme.fontWeights.strong};
-`;
-Label.displayName = "Label";
-
 export const TextHint = styled.small<InputFormProps>`
   display: block;
   margin-top: 0.4rem;

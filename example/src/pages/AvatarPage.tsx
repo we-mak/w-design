@@ -133,7 +133,7 @@ const AvatarPage: React.FunctionComponent<any> = () => {
       <Typo appearance="h3">Example</Typo>
       <div style={{ maxWidth: "600px" }}>
         <AvatarGroup
-          avatarUrl="https://api.adorable.io/avatars/80/vn"
+          avatar={<Avatar avatarUrl="https://api.adorable.io/avatars/80/vn" />}
           name="Hello world"
           description={
             <div>

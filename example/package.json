@@ -6,11 +6,11 @@
   "homepage": "https://we-mak.github.io/w-design/",
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "algoliasearch": "^3.33.0",
+    "algoliasearch": "^3.34.0",
     "prism-react-renderer": "^0.1.6",
     "react": "link:../node_modules/react",
     "react-dom": "^16.8.5",
-    "react-instantsearch-dom": "^5.5.0",
+    "react-instantsearch-dom": "^5.7.0",
     "react-markdown": "^4.0.6",
     "react-scripts": "^3.0.1",
     "w-design": "link:.."
@@ -42,7 +42,6 @@
     "@types/react-instantsearch-dom": "^5.2.5",
     "babel-plugin-styled-components": "^1.10.0",
     "gh-pages": "^2.0.1",
-    "react-hooks-testing-library": "^0.6.0",
     "typescript": "^3.5.3"
   }
 }

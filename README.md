@@ -111,14 +111,14 @@ Cover basic components
 | ----------------- | ---------------------- | -------------- |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
 | ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
-| ✅ DisplayElement | ❌ Label               | ❌ Badges      |
-| ❌ Masonry        | ❌ Image               | ❌ Collapsible |
-| ✅ ThemeProvider  | ✅ Spinner             | ❌ Breadcrumbs |
+| ✅ DisplayElement | ✅ Label               | ❌ Badges      |
+| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible |
+|                   | ✅ Spinner             | ❌ Breadcrumbs |
 |                   | ❌ Table               | ❌ Chip        |
 |                   | ❌ List                | ✅ Menu        |
 |                   | ✅ Divider             | ✅ Modal       |
 |                   | ❌ ProgressLoader      | ✅ Dropdown    |
-|                   | ✅ Portal              | ❌ Drawer      |
+|                   | ✅ Portal              | ✅ Drawer      |
 |                   | ✅ Avatar              | ❌ Steps       |
 |                   | ❌ Toggle              | ❌ Tabs        |
 |                   | ✅ TextArea            | ❌ PushMessage |
@@ -127,7 +127,7 @@ Cover basic components
 |                   | ✅ Icon (Font awesome) | ❌ Comment     |
 |                   | ✅ Radio               | ❌ Select      |
 |                   | ✅ Button              | ✅ FormGroup   |
-|                   |                        | ✅ InputForm   |
+|                   | ✅ Image               | ✅ InputForm   |
 |                   |                        | ❌ Pagination  |
 |                   |                        | ✅ Card        |
 |                   |                        | ❌ Form        |
@@ -169,7 +169,7 @@ For how-to questions and other non-issues, please use StackOverflow instead of G
 
 ### Development
 
-This package is built with dependencies: `styled-system`, `clean-tag`
+This package is built with dependencies: `styled-system`
 Props checking is under `TypeScript`
 
 Please check these packages before getting start to contribute.

@@ -2,11 +2,16 @@ import * as React from "react";
 import { render } from "@testing-library/react";
 import "jest-styled-components";
 import DisplayElement from "./index";
+import Provider from "../../layout/Provider";
 
 describe("<DisplayElement/>", () => {
   // Column Style test
   it("should has display none with xs", () => {
-    const { container } = render(<DisplayElement display={["block"]} />);
+    const { container } = render(
+      <Provider>
+        <DisplayElement display={["block"]} />
+      </Provider>
+    );
     expect(container).toMatchSnapshot();
   });
 

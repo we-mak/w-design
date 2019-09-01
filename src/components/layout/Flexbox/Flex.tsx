@@ -22,6 +22,7 @@ export interface FlexProps
     AlignItemsProps {
   gapless?: boolean;
   oneline?: boolean;
+  children?: React.ReactChild | React.ReactChild[];
 }
 
 export const Flex = styled.div<FlexProps>`

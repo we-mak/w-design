@@ -1,10 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
+import { DisplayProps } from "styled-system";
 import { GlobProps } from "../../../typings";
 import { NavCenter } from "./NavCenter";
 import { NavSection } from "./NavSection";
 
-interface NavProps extends GlobProps {
+export interface NavProps extends GlobProps, DisplayProps {
   children?: React.ReactChild | React.ReactChild[];
 }
 

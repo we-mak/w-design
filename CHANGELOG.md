@@ -8,7 +8,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 Next
 
-- Use portal for dropdown menu
+- Fix Drawer `document` undefined
 - Add responsive show hide on section
 
 * Update document

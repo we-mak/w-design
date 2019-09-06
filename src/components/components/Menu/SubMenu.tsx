@@ -1,3 +1,6 @@
+/**
+ * Sub Menu
+ * */
 import * as React from "react";
 import styled from "styled-components";
 import Spinner from "../../elements/Spinner";
@@ -6,9 +9,7 @@ import { getSubMenuStyle } from "./Styled";
 import { Arrow } from "./Arrow";
 import { IconBefore } from "./MenuItem";
 import { useMenu } from "./MenuContext";
-/**
- * Sub Menu
- * */
+
 // titleSpinner
 const SubMenuTitle = styled.div`
   padding: 0.4rem;
@@ -30,8 +31,8 @@ const SubList = styled.ul`
   position: relative;
   display: block;
   opacity: ${(props: SubMenuProps) => (props.isOpen ? 1 : 0)};
-  transition: height 0.2s cubic-bezier(0.5, 0.045, 0.4, 1),
-    opacity 0.3s cubic-bezier(0.5, 0.045, 0.4, 1);
+  transition: height 0.3s cubic-bezier(0.5, 0.045, 0.4, 1),
+    opacity 0.1s cubic-bezier(0.5, 0.045, 0.4, 1);
   will-change: height;
   will-change: opacity;
   li {
@@ -84,7 +85,9 @@ export const SubMenu: React.FunctionComponent<SubMenuProps> = ({
     const menuNode: HTMLElement = menuRef!.current!;
     const titleNode: HTMLElement = titleRef!.current!;
 
-    return menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height;
+    return (
+      menuNode && titleNode && menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
+    );
   };
 
   React.useEffect(() => {

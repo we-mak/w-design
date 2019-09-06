@@ -20,7 +20,7 @@ const options: BodyScrollOptions = {
 const Modal = (props: ModalProps) => {
   const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
   // Main root layout selecting
-  const documentBody: any = document.body;
+  const documentBody: Element = document.body;
 
   React.useLayoutEffect(() => {
     disableBodyScroll(documentBody, options);

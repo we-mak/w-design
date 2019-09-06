@@ -62,7 +62,7 @@ const SubMenuStyled = styled.li`
 `;
 SubMenuStyled.displayName = "SubMenuComponent";
 
-export const SubMenu: React.FunctionComponent<SubMenuProps> = ({
+const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
   title,
   icon,
   isOpen,
@@ -125,4 +125,6 @@ export const SubMenu: React.FunctionComponent<SubMenuProps> = ({
     </SubMenuStyled>
   );
 };
+
+export const SubMenu = React.memo(SubMenuComponent);
 SubMenu.displayName = "SubMenu";

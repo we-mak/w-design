@@ -1,19 +1,16 @@
 import * as React from "react";
 import styled from "styled-components";
-import { DisplayProps } from "styled-system";
-import { GlobProps } from "../../../typings";
+import { display } from "styled-system";
 import { NavCenter } from "./NavCenter";
 import { NavSection } from "./NavSection";
-
-export interface NavProps extends GlobProps, DisplayProps {
-  children?: React.ReactChild | React.ReactChild[];
-}
+import { NavProps } from "./types";
 
 const Nav = styled.header`
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${display}
 `;
 Nav.displayName = "Nav";
 

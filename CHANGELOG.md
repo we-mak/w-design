@@ -8,11 +8,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 <a name="0.22.0"></a>#[v0.22.0]()
 
-- Fix Drawer `document` undefined
+- Fix Drawer `document` undefined at server side render
 - `Navbar` Add responsive show hide on `NavSection`
-- Test more
-
-* Update document
 
 ---
 

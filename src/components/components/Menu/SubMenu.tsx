@@ -90,14 +90,18 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
     );
   };
 
+  let animation: number | null = null;
   React.useEffect(() => {
-    requestAnimationFrame(() =>
+    animation = requestAnimationFrame(() =>
       setListStyle({
         height: open ? getMenuHeight() : 0
       })
     );
 
-    return () => setListStyle({});
+    return () => {
+      cancelAnimationFrame(animation!);
+      setListStyle({});
+    };
   }, [open]);
 
   const onToggleMenu = () => {

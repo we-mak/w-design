@@ -6,9 +6,10 @@ import { DrawerProps } from "./types";
 const options: BodyScrollOptions = {
   reserveScrollBarGap: true
 };
-const documentBody: any = document.body;
 
 const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
+  const documentBody: Element = document.body;
+
   if (isOpen) {
     disableBodyScroll(documentBody, options);
   } else {

@@ -14,6 +14,7 @@ import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
 import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
+import NavbarPage from "./pages/NavbarPage";
 import SpinnerPage from "./pages/SpinnerPage";
 import TypoPage from "./pages/TypoPage";
 import { GlobalStyles } from "./globalStyles";
@@ -73,16 +74,17 @@ function App() {
                 <Intro path={baseUrl + "/"} />
                 <Start path={baseUrl + "/start"} />
                 <LayoutPage path={baseUrl + "/layout"} />
-
+                {/* Elements */}
                 <SpinnerPage path={baseUrl + "/spinner"} />
                 <TypoPage path={baseUrl + "/typo"} />
                 <ButtonPage path={baseUrl + "/button"} />
                 <AvatarPage path={baseUrl + "/avatar"} />
-
+                {/* Components */}
                 <CardPage path={baseUrl + "/card"} />
                 <DropdownPage path={baseUrl + "/dropdown"} />
                 <ModalPage path={baseUrl + "/modal"} />
                 <MenuPage path={baseUrl + "/menu"} />
+                <NavbarPage path={baseUrl + "/nav"} />
                 <FormPage path={baseUrl + "/form"} />
               </Router>
             </Suspense>

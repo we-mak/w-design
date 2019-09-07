@@ -6,12 +6,10 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 --
 
-Next
+<a name="0.22.0"></a>#[v0.22.0]()
 
-- Use portal for dropdown menu
-- Add responsive show hide on section
-
-* Update document
+- Fix Drawer `document` undefined at server side render
+- `Navbar` Add responsive show hide on `NavSection`
 
 ---
 

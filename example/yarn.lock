@@ -1224,10 +1224,10 @@
   resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.30.13.tgz#5a499513b7cea86ca8f606a2ffe810294aa667e0"
   integrity sha512-6ioKTecYPbUMMKnA4IEjh18eA/OfWS28Er9FafsHaz8P4HJXnEd9FTCanad5nWx9Ox8uXHN4XcY985yB2bbx6g==
 
-"@types/algoliasearch@^3.30.13":
-  version "3.30.17"
-  resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.30.17.tgz#b43b30ad0550e1a740b977b5a39c37f97cfa0e5f"
-  integrity sha512-BDBV4gsS+Nlzn3OcIJLRD4Y0yj7TI5Pc9ozDLn+ug/tnb6R1V+VVzZoqgeEoPtrfhEC4gOTI1PmApE0eg/Slkw==
+"@types/algoliasearch@^3.30.13", "@types/algoliasearch@^3.30.16":
+  version "3.30.18"
+  resolved "https://registry.yarnpkg.com/@types/algoliasearch/-/algoliasearch-3.30.18.tgz#5b68d8fc67e5070fbb3f283d69c7948f84dc7e1c"
+  integrity sha512-X4ESBM6iVOX+/GOTkfVIGgVm0xalBybCI+InrMbqFfjN6j+5p+KV87elKkygTtlikxrcJQ5/HqNMtVyn3z6J2Q==
 
 "@types/babel__core@^7.1.0":
   version "7.1.2"
@@ -1315,9 +1315,9 @@
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
 
 "@types/node@^12.6.2":
-  version "12.7.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.2.tgz#c4e63af5e8823ce9cc3f0b34f7b998c2171f0c44"
-  integrity sha512-dyYO+f6ihZEtNPDcWNR1fkoTDf3zAK3lAABDze3mz6POyIercH0lEUawUFXlG8xaQZmm1yEBON/4TsYv/laDYg==
+  version "12.7.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.4.tgz#64db61e0359eb5a8d99b55e05c729f130a678b04"
+  integrity sha512-W0+n1Y+gK/8G2P/piTkBBN38Qc5Q1ZSO6B5H3QmPCUewaiXOo2GCAWZ4ElZCcNhjJuBSUSLGFUJnmlCn5+nxOQ==
 
 "@types/prop-types@*":
   version "15.7.1"
@@ -1683,35 +1683,19 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-algoliasearch-helper@^2.26.0:
-  version "2.28.0"
-  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-2.28.0.tgz#1cafa7fcd02c15e9411c4d1778e9a4e89581916d"
-  integrity sha512-ZWczpkns2tw9sAtFL+1Cn3XAGkaunYS+ckldBrHHHQZj1/vw9n8SOGUO7lwpjuKXG9+TWgzx6XP3ZsG3iM+6hw==
+algoliasearch-helper@0.0.0-27095c0:
+  version "0.0.0-27095c0"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-0.0.0-27095c0.tgz#8aa246e23fc665403917eeaf9cf7beeea70866f1"
+  integrity sha512-d0wlSReMpnz7sT5ibojXucYsWHTigu83ge+qktQ9m0u+kG7bHqRErzBUOZ03BMr9zd1sWSNR1TMR9l6AHHrqow==
   dependencies:
     events "^1.1.1"
-    lodash "^4.17.5"
-    qs "^6.5.1"
 
-algoliasearch@^3.27.1:
-  version "3.33.0"
-  resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-3.33.0.tgz#83b541124ebb0db54643009d4e660866b3177cdf"
-  integrity sha512-9DaVmOd7cvcZeYyV0BWAeJHVWJmgOL2DNUEBY/DTR4MzD1wCWs4Djl7LAlfvkGwGBdRHZCG+l0HA1572w3T8zg==
+algoliasearch-helper@0.0.0-6ac260d:
+  version "0.0.0-6ac260d"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-0.0.0-6ac260d.tgz#9f4a0f2c8f89eafe23559375907b4070afa4cbb1"
+  integrity sha512-wG1oVPEq4bXmNUeF2voio+0UpNRtDLTG7+OPCvTxMDIQvD2Exc0s2UsWl5fh6/Dc7O++b8Ic2g+YSVo5l+nBFg==
   dependencies:
-    agentkeepalive "^2.2.0"
-    debug "^2.6.9"
-    envify "^4.0.0"
-    es6-promise "^4.1.0"
-    events "^1.1.0"
-    foreach "^2.0.5"
-    global "^4.3.2"
-    inherits "^2.0.1"
-    isarray "^2.0.1"
-    load-script "^1.0.0"
-    object-keys "^1.0.11"
-    querystring-es3 "^0.2.1"
-    reduce "^1.0.1"
-    semver "^5.1.0"
-    tunnel-agent "^0.6.0"
+    events "^1.1.1"
 
 algoliasearch@^3.34.0:
   version "3.34.0"
@@ -6388,11 +6372,6 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-lodash@^4.17.4:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
-
 loglevel@^1.4.1:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.3.tgz#77f2eb64be55a404c9fd04ad16d57c1d6d6b1280"
@@ -8359,7 +8338,7 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qs@6.7.0, qs@^6.5.1:
+qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
@@ -8487,7 +8466,7 @@ react-dev-utils@^9.0.3:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@^16.8.5:
+react-dom@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
   integrity sha512-YFT2rxO9hM70ewk9jq0y6sQk8cL02xm4+IzYBz75CQGlClQQ1Bxq0nhHF6OtSbit+AIahujJgb/CPRibFkMNJQ==
@@ -8502,30 +8481,29 @@ react-error-overlay@^6.0.1:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.1.tgz#b8d3cf9bb991c02883225c48044cb3ee20413e0f"
   integrity sha512-V9yoTr6MeZXPPd4nV/05eCBvGH9cGzc52FN8fs0O0TVQ3HYYf1n7EgZVtHbldRq5xU9zEzoXIITjYNIfxDDdUw==
 
-react-instantsearch-core@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.7.0.tgz#6979ec419d2711033f6c83181de6cae9e1f064c2"
-  integrity sha512-fjexlv+hR8OyZraAmjwM+GmiVcJFzLUnufIKPMLO7/L4Mg5h0pETSXNBT22cCXTnda6XML//+GqQmWJFf+PBrA==
+react-instantsearch-core@^6.0.0-beta.0:
+  version "6.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.0.0-beta.0.tgz#30bf56f71e92dcdca91cb5c9a11bd39b7969c737"
+  integrity sha512-Fp8x564WJaTvC4e6JiueHRIVTCyCO7l+5F3RhHxmn9UKjzGhgWEok5159jEV3LlrtfINYUMAiLWslPw5o7u9Hg==
   dependencies:
     "@babel/runtime" "^7.1.2"
-    algoliasearch-helper "^2.26.0"
-    lodash "^4.17.4"
+    "@types/algoliasearch" "^3.30.16"
+    algoliasearch-helper "0.0.0-6ac260d"
+    fast-deep-equal "^2.0.1"
     prop-types "^15.5.10"
 
-react-instantsearch-dom@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.7.0.tgz#5a9b0cfb461c08a349a5fdc5d1cff50b8f5fcf56"
-  integrity sha512-FwFZZXwgaYtLrXD9KJNlrPVkfw8JOqVgpDBvra547udF4zbacZUuX7/qTyMHjVW/Lz59t5T25vCGLzmQiO89YA==
+react-instantsearch-dom@^6.0.0-beta.0:
+  version "6.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-6.0.0-beta.0.tgz#f6780c0b471fcaf5e3229962f84ef57aecc4388a"
+  integrity sha512-jOHYTHTOc+QWMhC8XPDjR0tKw9uySSMvkeo0hOAUvZihals6pk+b34cBKE08btfxZzwpxkidrWSUJMlrbV9geQ==
   dependencies:
     "@babel/runtime" "^7.1.2"
-    algoliasearch "^3.27.1"
-    algoliasearch-helper "^2.26.0"
+    algoliasearch-helper "0.0.0-27095c0"
     classnames "^2.2.5"
-    lodash "^4.17.4"
     prop-types "^15.5.10"
-    react-instantsearch-core "^5.7.0"
+    react-instantsearch-core "^6.0.0-beta.0"
 
-react-is@^16.8.1, react-is@^16.8.4:
+react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
@@ -8536,13 +8514,14 @@ react-lifecycles-compat@^3.0.4:
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
 react-markdown@^4.0.6:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-4.1.0.tgz#7fdf840ecbabc803f28156f7411c726b58f25a73"
-  integrity sha512-EOHsEAN+aoP8UVz7vTHx6Z63GJfhrO9KItKlfsiBtVVS9tmSWtUaBTw73+2SObrWiOiE2Cs9qUBL7ORsvVhOrA==
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-4.2.2.tgz#b378774fcffb354653db8749153fc8740f9ed2f1"
+  integrity sha512-/STJiRFmJuAIUdeBPp/VyO5bcenTIqP3LXuC3gYvregmYGKjnszGiFc2Ph0LsWC17Un3y/CT8TfxnwJT7v9EJw==
   dependencies:
     html-to-react "^1.3.4"
     mdast-add-list-metadata "1.0.1"
     prop-types "^15.7.2"
+    react-is "^16.8.6"
     remark-parse "^5.0.0"
     unified "^6.1.5"
     unist-util-visit "^1.3.0"
@@ -10025,9 +10004,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 typescript@^3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
-  integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.2.tgz#105b0f1934119dde543ac8eb71af3a91009efe54"
+  integrity sha512-lmQ4L+J6mnu3xweP8+rOrUwzmN+MRAj7TgtJtDaXE5PMyX2kCrklhg3rvOsOIfNeAWMQWO2F1GPc1kMD2vLAfw==
 
 ua-parser-js@^0.7.18:
   version "0.7.19"

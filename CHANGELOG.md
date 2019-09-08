@@ -7,15 +7,18 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - Add `List`
+- Add `SectionMessage`
 
 ---
 
-<a name="0.23.0"></a>#[v0.23.0]()
+<a name="0.22.6"></a>#[v0.22.6]()
 
-- Add `InlineMessage`
-- Move `Dropdown` rest props to button props, use Portal for `DropdownPanel`
-- Update dropdown style: button, caret
 - Split out normalize css
+- Update toggle Drawer perf
+- Move `Dropdown` rest props to button props
+
+- Use Portal for `DropdownPanel`
+- Update dropdown style: button, caret
 
 ---
 

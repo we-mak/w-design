@@ -16,6 +16,7 @@ import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
 import NavbarPage from "./pages/NavbarPage";
 import SpinnerPage from "./pages/SpinnerPage";
+import SectionMessagePage from "./pages/SectionMessagePage";
 import TypoPage from "./pages/TypoPage";
 import "./globalStyles.css";
 
@@ -74,10 +75,11 @@ function App() {
                   <Start path={baseUrl + "/start"} />
                   <LayoutPage path={baseUrl + "/layout"} />
                   {/* Elements */}
-                  <SpinnerPage path={baseUrl + "/spinner"} />
                   <TypoPage path={baseUrl + "/typo"} />
                   <ButtonPage path={baseUrl + "/button"} />
                   <AvatarPage path={baseUrl + "/avatar"} />
+                  <SpinnerPage path={baseUrl + "/spinner"} />
+                  <SectionMessagePage path={baseUrl + "/sectionmessage"} />
                   {/* Components */}
                   <CardPage path={baseUrl + "/card"} />
                   <DropdownPage path={baseUrl + "/dropdown"} />

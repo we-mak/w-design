@@ -9,23 +9,27 @@ const api = `
 
 `;
 
+const FirstExample = () => (
+  <Dropdown
+    title="Dropdown"
+    content={
+      <Menu>
+        <MenuItem key="1">Item 1</MenuItem>
+        <MenuItem key="2">Item 2</MenuItem>
+        <MenuItem key="3">Item 3</MenuItem>
+        <MenuItem key="4">Item 4</MenuItem>
+      </Menu>
+    }
+  />
+);
+
 const DropdownPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">Dropdown</Typo>
 
     <Typo appearance="h3">Example</Typo>
 
-    <Dropdown
-      title="Dropdown"
-      content={
-        <Menu>
-          <MenuItem key="1">Item 1</MenuItem>
-          <MenuItem key="2">Item 2</MenuItem>
-          <MenuItem key="3">Item 3</MenuItem>
-          <MenuItem key="4">Item 4</MenuItem>
-        </Menu>
-      }
-    />
+    <FirstExample />
 
     <CodeBlock
       exampleCode={`

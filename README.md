@@ -122,7 +122,7 @@ Cover basic components
 |                   | ✅ Avatar              | ❌ Steps       |
 |                   | ❌ Toggle              | ❌ Tabs        |
 |                   | ✅ TextArea            | ❌ PushMessage |
-|                   | ❌ InlineMessage       | ❌ Tooltip     |
+|                   | ✅ SectionMessage      | ❌ Tooltip     |
 |                   | ✅ Typo                | ❌ Popover     |
 |                   | ✅ Icon (Font awesome) | ❌ Comment     |
 |                   | ✅ Radio               | ❌ Select      |

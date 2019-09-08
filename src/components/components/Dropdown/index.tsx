@@ -84,7 +84,7 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
   };
 
   return (
-    <DropdownWrapper className="dropdown" {...rest}>
+    <DropdownWrapper className="dropdown">
       <Button
         buttonRef={buttonRef}
         ariaHaspopup={true}
@@ -92,6 +92,7 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
         size={size}
         iconAfter={iconAfter}
         onClick={openDropdownPanel}
+        {...rest}
       >
         <Title>
           {title}

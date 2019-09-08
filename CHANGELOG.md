@@ -4,7 +4,20 @@ All notable changes to this project will be documented in this file.
 
 Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
---
+### Next
+
+- Add `List`
+
+---
+
+<a name="0.23.0"></a>#[v0.23.0]()
+
+- Add `InlineMessage`
+- Move `Dropdown` rest props to button props, use Portal for `DropdownPanel`
+- Update dropdown style: button, caret
+- Split out normalize css
+
+---
 
 <a name="0.22.0"></a>#[v0.22.0]()
 

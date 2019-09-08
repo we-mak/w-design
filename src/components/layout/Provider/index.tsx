@@ -2,6 +2,7 @@ import * as React from "react";
 import { ThemeProvider } from "styled-components";
 import defaultTheme from "../../../common/styleUtils/theme";
 import { GlobalStyle } from "./GlobalStyle";
+import "./normalize.css";
 
 interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
   theme?: {};

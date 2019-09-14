@@ -23,4 +23,4 @@ function Provider(p: ThemeProps) {
 
 Provider.displayName = "WProvider";
 
-export default Provider;
+export default React.memo(Provider);

@@ -96,4 +96,4 @@ function App() {
     </Provider>
   );
 }
-export default App;
+export default React.memo(App);

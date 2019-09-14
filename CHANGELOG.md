@@ -11,15 +11,12 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-<a name="0.22.6"></a>#[v0.22.6]()
+<a name="0.22.4"></a>#[v0.22.4]()
 
 - Split out normalize css
 - Update toggle Drawer perf
 - Move `Dropdown` rest props to button props
 - Set remain props dropdown style to button props
-
-- Check window limit and auto adjust `DropdowPanel` position
-- Add menu caret props for dropdown
 
 ---
 

@@ -29,6 +29,7 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
     const positions = {
       Xcenter: -(panelWidth / 2 - width / 2),
       Xright: -(panelWidth - width),
+      // translate Y position
       Ybottom: height + defaultMargin
     };
 

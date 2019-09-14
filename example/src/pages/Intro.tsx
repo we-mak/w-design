@@ -13,44 +13,16 @@ const p1 = `
 [![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
-Main focus of this libary is styling with \`styled-system\` and \`styled-components\`, keep it as small as posible.
+Main focus of this libary is styling with \`styled-components\`, keep it as small as posible.
 
-Feel free to use this library, or help us to improve.
+Feel free to use this library, or help us to improve it.
 
-## Feature list
+## Features
 
-| Layout            | Elements               | Components     |
-| ----------------- | ---------------------- | -------------- |
-| ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
-| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
-| ✅ DisplayElement | ✅ Label               | ❌ Badges      |
-| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible |
-|                   | ✅ Spinner             | ❌ Breadcrumbs |
-|                   | ❌ Table               | ❌ Chip        |
-|                   | ❌ List                | ✅ Menu        |
-|                   | ✅ Divider             | ✅ Modal       |
-|                   | ❌ ProgressLoader      | ✅ Dropdown    |
-|                   | ✅ Portal              | ✅ Drawer      |
-|                   | ✅ Avatar              | ❌ Steps       |
-|                   | ❌ Toggle              | ❌ Tabs        |
-|                   | ✅ TextArea            | ❌ PushMessage |
-|                   | ❌ InlineMessage       | ❌ Tooltip     |
-|                   | ✅ Typo                | ❌ Popover     |
-|                   | ✅ Icon (Font awesome) | ❌ Comment     |
-|                   | ✅ Radio               | ❌ Select      |
-|                   | ✅ Button              | ✅ FormGroup   |
-|                   | ✅ Image               | ✅ InputForm   |
-|                   |                        | ❌ Pagination  |
-|                   |                        | ✅ Card        |
-|                   |                        | ❌ Form        |
-
-
-**Legends**
-
-- ✅ Implemented
-
-- ❌ Not Implemented
-
+- Written with React hooks, Typescript
+- Styled with styled-components
+- Suitable for web application UI
+- Support modern web browsers
 
 
 ## 🐞 Report

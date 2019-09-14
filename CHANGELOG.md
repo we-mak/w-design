@@ -16,9 +16,10 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - Split out normalize css
 - Update toggle Drawer perf
 - Move `Dropdown` rest props to button props
+- Set remain props dropdown style to button props
 
-- Use Portal for `DropdownPanel`
-- Update dropdown style: button, caret
+- Check window limit and auto adjust `DropdowPanel` position
+- Add menu caret props for dropdown
 
 ---
 

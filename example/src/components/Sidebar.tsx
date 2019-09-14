@@ -12,6 +12,10 @@ const elements = [
     link: "/button"
   },
   {
+    title: "SectionMessage",
+    link: "/sectionmessage"
+  },
+  {
     title: "Spinner",
     link: "/spinner"
   },

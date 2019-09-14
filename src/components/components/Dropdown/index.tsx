@@ -1,81 +1,74 @@
 import * as React from "react";
-import styled from "styled-components";
 import useClickOutside from "../../../hooks/useClickOutside";
 import Button from "../../elements/Button";
 import { Arrow } from "./Arrow";
+import { DropdownWrapper, DropdownPanel, Title } from "./Styled";
 import { DropdownProps } from "./types";
-
-const Title = styled.span`
-  align-self: center;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  max-width: 100%;
-  line-height: 1.2;
-`;
-Title.displayName = "Title";
-
-const DropdownWrapper = styled.div`
-  display: block;
-  position: relative;
-  width: fit-content;
-`;
-DropdownWrapper.displayName = "DropdownWrapper";
-
-const DropdownPanel = styled.div`
-  background: #fff;
-  border-radius: ${props => props.theme.radii[2]};
-  box-shadow: ${props => props.theme.shadows[4]};
-  position: absolute;
-  display: block;
-  min-width: 80px;
-  z-index: 300;
-  overflow-y: auto;
-  padding: 0.2rem;
-  max-height: 50vh;
-`;
-DropdownPanel.displayName = "DropdownPanel";
 
 const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }: DropdownProps) => {
   const [isOpen, setOpen] = React.useState(false);
   const [panelstyle, setStyle] = React.useState({});
 
   const buttonRef = useClickOutside(() => setOpen(false));
+  const panelRef: React.MutableRefObject<any> = React.useRef();
 
   const openDropdownPanel = () => {
     const buttonNode: HTMLElement = buttonRef!.current!;
-    const dimension = buttonNode!.getBoundingClientRect();
+    const panelNode: HTMLElement = panelRef!.current!;
+    const btnDimension = buttonNode!.getBoundingClientRect();
 
+    // Get Element positions
+    const { height, width } = btnDimension;
+    const panelWidth = panelNode.offsetWidth;
+
+    // difine values
+    let defaultMargin = 5; // Default Margin for Drop down panel
     let style;
+
+    // Relation Position of panel and button
+    const positions = {
+      Xcenter: -(panelWidth / 2 - width / 2),
+      Xright: -(panelWidth - width),
+      // translate Y position
+      Ybottom: height + defaultMargin
+    };
 
     switch (position) {
       case "bottomCenter":
         style = {
-          transform: `translate3d(${-(dimension.right - dimension.left) / 2}px,0.2rem,0)`
+          transform: `translate3d(${positions.Xcenter}px, ${positions.Ybottom}px, 0)`,
+          top: 0
+        };
+        break;
+      case "bottomRight":
+        style = {
+          transform: `translate3d(${positions.Xright}px, ${positions.Ybottom}px, 0)`,
+          top: 0
         };
         break;
       case "topLeft":
         style = {
-          transform: `translateY(${-dimension.height - 0.2 * 16}px)`,
-          bottom: 0
-        };
-        break;
-      case "topCenter":
-        style = {
-          transform: `translate3d(${-(dimension.right - dimension.left) / 2}px,${-dimension.height -
-            0.2 * 16}px,0)`,
+          transform: `translateY(${-(height + defaultMargin)}px)`,
           bottom: 0
         };
         break;
       case "topRight":
         style = {
-          transform: `translate3d(${-(dimension.right - dimension.left)}px,${-dimension.height -
-            0.2 * 16}px,0)`,
+          transform: `translate3d(${positions.Xright}px,${-(height + defaultMargin)}px, 0)`,
+          bottom: 0
+        };
+        break;
+      case "topCenter":
+        style = {
+          transform: `translate3d(${positions.Xcenter}px,${-(height + defaultMargin)}px,0)`,
           bottom: 0
         };
         break;
       default:
         style = {
-          transform: "translateY(0.2rem)"
+          transform: `translateY(${height + defaultMargin}px)`,
+          left: 0,
+          top: 0
         };
     }
 
@@ -84,7 +77,7 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
   };
 
   return (
-    <DropdownWrapper className="dropdown" {...rest}>
+    <DropdownWrapper>
       <Button
         buttonRef={buttonRef}
         ariaHaspopup={true}
@@ -92,13 +85,17 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
         size={size}
         iconAfter={iconAfter}
         onClick={openDropdownPanel}
+        {...rest}
       >
         <Title>
           {title}
           {!iconAfter && <Arrow />}
         </Title>
       </Button>
-      {isOpen && <DropdownPanel style={panelstyle}>{content}</DropdownPanel>}
+
+      <DropdownPanel isOpen={isOpen} ref={panelRef} style={panelstyle}>
+        {content}
+      </DropdownPanel>
     </DropdownWrapper>
   );
 };

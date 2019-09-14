@@ -9,24 +9,26 @@ const api = `
 
 `;
 
+const FirstExample = () => (
+  <Dropdown
+    title="Dropdown"
+    content={
+      <Menu>
+        <MenuItem key="1">Item 1</MenuItem>
+        <MenuItem key="2">Item 2</MenuItem>
+        <MenuItem key="3">Item 3</MenuItem>
+        <MenuItem key="4">Item 4</MenuItem>
+      </Menu>
+    }
+  />
+);
+
 const DropdownPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">Dropdown</Typo>
-
+    <p>Button and menu combination</p>
     <Typo appearance="h3">Example</Typo>
-
-    <Dropdown
-      title="Dropdown"
-      content={
-        <Menu>
-          <MenuItem key="1">Item 1</MenuItem>
-          <MenuItem key="2">Item 2</MenuItem>
-          <MenuItem key="3">Item 3</MenuItem>
-          <MenuItem key="4">Item 4</MenuItem>
-        </Menu>
-      }
-    />
-
+    <FirstExample />
     <CodeBlock
       exampleCode={`
   import { Dropdown } from "w-design";
@@ -44,10 +46,47 @@ const DropdownPage: React.FunctionComponent<any> = () => (
   />
     `}
     />
-
     <ButtonGroup>
       <Dropdown
-        title="Dropdown"
+        title="Default"
+        content={
+          <Menu>
+            <MenuItem key="1">Item 1</MenuItem>
+            <MenuItem key="2">Item 2</MenuItem>
+            <MenuItem key="3">Item 3</MenuItem>
+            <MenuItem key="4">Item 4</MenuItem>
+          </Menu>
+        }
+      />
+
+      <Dropdown
+        title="Bottom Center"
+        content={
+          <Menu>
+            <MenuItem key="1">Item 1</MenuItem>
+            <MenuItem key="2">Item 2</MenuItem>
+            <MenuItem key="3">Item 3</MenuItem>
+            <MenuItem key="4">Item 4</MenuItem>
+          </Menu>
+        }
+        position="bottomCenter"
+      />
+
+      <Dropdown
+        title="Bottom Right"
+        content={
+          <Menu>
+            <MenuItem key="1">Item 1</MenuItem>
+            <MenuItem key="2">Item 2</MenuItem>
+            <MenuItem key="3">Item 3</MenuItem>
+            <MenuItem key="4">Item 4</MenuItem>
+          </Menu>
+        }
+        position="bottomRight"
+      />
+
+      <Dropdown
+        title="Top Left"
         content={
           <Menu>
             <MenuItem key="1">Item 1</MenuItem>
@@ -58,8 +97,9 @@ const DropdownPage: React.FunctionComponent<any> = () => (
         }
         position="topLeft"
       />
+
       <Dropdown
-        title="Dropdown"
+        title="Top Right"
         content={
           <Menu>
             <MenuItem key="1">Item 1</MenuItem>
@@ -70,8 +110,9 @@ const DropdownPage: React.FunctionComponent<any> = () => (
         }
         position="topRight"
       />
+
       <Dropdown
-        title="Dropdown"
+        title="Top Center"
         content={
           <Menu>
             <MenuItem key="1">Item 1</MenuItem>
@@ -82,9 +123,24 @@ const DropdownPage: React.FunctionComponent<any> = () => (
         }
         position="topCenter"
       />
-    </ButtonGroup>
 
-    <h4>Api</h4>
+      <Dropdown
+        appearance="clean"
+        iconAfter="fas fa-cog"
+        content={
+          <Menu>
+            <MenuItem key="1">Item 1</MenuItem>
+            <MenuItem key="2">Item 2</MenuItem>
+            <MenuItem key="3">Item 3</MenuItem>
+            <MenuItem key="4">Item 4</MenuItem>
+          </Menu>
+        }
+      />
+    </ButtonGroup>
+    <br />
+    <br />
+
+    <Typo appearance="h3">Api</Typo>
     <ReactMarkdown source={api} />
   </>
 );

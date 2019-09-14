@@ -16,8 +16,9 @@ import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
 import NavbarPage from "./pages/NavbarPage";
 import SpinnerPage from "./pages/SpinnerPage";
+import SectionMessagePage from "./pages/SectionMessagePage";
 import TypoPage from "./pages/TypoPage";
-import { GlobalStyles } from "./globalStyles";
+import "./globalStyles.css";
 
 const { Suspense } = React;
 
@@ -50,48 +51,49 @@ function App() {
   const handleToogleMenu = () => setOpenMenu(!openMenu);
   return (
     <Provider theme={theme}>
-      <GlobalStyles />
+      <>
+        <NavWrapper>
+          <Container px={4} py={3} bg={"WHITE"}>
+            <Header toggleMenu={handleToogleMenu} />
+          </Container>
+        </NavWrapper>
 
-      <NavWrapper>
-        <Container px={4} py={3} bg={"WHITE"}>
-          <Header toggleMenu={handleToogleMenu} />
+        <Drawer isOpen={openMenu} onClose={() => setOpenMenu(false)}>
+          <Sidebar />
+        </Drawer>
+
+        <Container p={3} bg={"N1"}>
+          <Flexbox mb="120px">
+            <Flexbox.Column width={[0, 0, 0, 1 / 4]} display={["none", "none", "none", "flex"]}>
+              <Sidebar />
+            </Flexbox.Column>
+
+            <Flexbox.Column width={[1, 1, 1, 3 / 4]}>
+              <Suspense fallback={<div>Loading...</div>}>
+                <Router>
+                  <Intro path={baseUrl + "/"} />
+                  <Start path={baseUrl + "/start"} />
+                  <LayoutPage path={baseUrl + "/layout"} />
+                  {/* Elements */}
+                  <TypoPage path={baseUrl + "/typo"} />
+                  <ButtonPage path={baseUrl + "/button"} />
+                  <AvatarPage path={baseUrl + "/avatar"} />
+                  <SpinnerPage path={baseUrl + "/spinner"} />
+                  <SectionMessagePage path={baseUrl + "/sectionmessage"} />
+                  {/* Components */}
+                  <CardPage path={baseUrl + "/card"} />
+                  <DropdownPage path={baseUrl + "/dropdown"} />
+                  <ModalPage path={baseUrl + "/modal"} />
+                  <MenuPage path={baseUrl + "/menu"} />
+                  <NavbarPage path={baseUrl + "/nav"} />
+                  <FormPage path={baseUrl + "/form"} />
+                </Router>
+              </Suspense>
+            </Flexbox.Column>
+          </Flexbox>
         </Container>
-      </NavWrapper>
-
-      <Drawer isOpen={openMenu} onClose={() => setOpenMenu(false)}>
-        <Sidebar />
-      </Drawer>
-
-      <Container p={3} bg={"N1"}>
-        <Flexbox mb="120px">
-          <Flexbox.Column width={[0, 0, 0, 1 / 4]} display={["none", "none", "none", "flex"]}>
-            <Sidebar />
-          </Flexbox.Column>
-
-          <Flexbox.Column width={[1, 1, 1, 3 / 4]}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Router>
-                <Intro path={baseUrl + "/"} />
-                <Start path={baseUrl + "/start"} />
-                <LayoutPage path={baseUrl + "/layout"} />
-                {/* Elements */}
-                <SpinnerPage path={baseUrl + "/spinner"} />
-                <TypoPage path={baseUrl + "/typo"} />
-                <ButtonPage path={baseUrl + "/button"} />
-                <AvatarPage path={baseUrl + "/avatar"} />
-                {/* Components */}
-                <CardPage path={baseUrl + "/card"} />
-                <DropdownPage path={baseUrl + "/dropdown"} />
-                <ModalPage path={baseUrl + "/modal"} />
-                <MenuPage path={baseUrl + "/menu"} />
-                <NavbarPage path={baseUrl + "/nav"} />
-                <FormPage path={baseUrl + "/form"} />
-              </Router>
-            </Suspense>
-          </Flexbox.Column>
-        </Flexbox>
-      </Container>
+      </>
     </Provider>
   );
 }
-export default App;
+export default React.memo(App);

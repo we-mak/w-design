@@ -4,7 +4,21 @@ All notable changes to this project will be documented in this file.
 
 Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
---
+### Next
+
+- Add `List`
+- Add `SectionMessage`
+
+---
+
+<a name="0.22.4"></a>#[v0.22.4]()
+
+- Split out normalize css
+- Update toggle Drawer perf
+- Move `Dropdown` rest props to button props
+- Set remain props dropdown style to button props
+
+---
 
 <a name="0.22.0"></a>#[v0.22.0]()
 

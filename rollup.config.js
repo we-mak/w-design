@@ -6,6 +6,7 @@ import alias from "rollup-plugin-alias";
 import url from "rollup-plugin-url";
 import svgr from "@svgr/rollup";
 import babel from "rollup-plugin-babel";
+import postcss from "rollup-plugin-postcss";
 import path from "path";
 import pkg from "./package.json";
 
@@ -33,6 +34,9 @@ export default {
     peerDepsExternal(),
     url(),
     svgr(),
+    postcss({
+      extensions: [".css"]
+    }),
     resolve(),
     typescript({
       rollupCommonJSResolveHack: true,

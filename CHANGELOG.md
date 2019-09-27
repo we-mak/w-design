@@ -4,10 +4,29 @@ All notable changes to this project will be documented in this file.
 
 Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
-### Next
+---
 
-- Add `List`
-- Add `SectionMessage`
+<a name="0.28.5"></a>#[v0.28.5]()
+
+Add:
+
+- `List`
+- `SectionMessage`
+- `Comment`
+- `PushMessage`
+- `ProgressLoader`
+- `ImageUpload`
+- `Breadcrubms`
+- `shouldFitContainer` prop for `InputField`, `TextArea`
+- `align-self: center` to `AvatarGroup` content
+- margin props to `Typo`
+- image fluid prop
+
+Fix:
+
+- fix `InputForm` icon
+
+Todo: Refactor to Yarn, Lerna workspace
 
 ---
 

@@ -13,6 +13,7 @@
     "react-instantsearch-dom": "^6.0.0-beta.0",
     "react-markdown": "^4.0.6",
     "react-scripts": "^3.0.1",
+    "styled-components": "^5.0.0-beta.8-groupsizefix",
     "w-design": "link:.."
   },
   "scripts": {

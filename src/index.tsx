@@ -35,5 +35,8 @@ export { default as FormGroup } from "./components/components/FormGroup";
 export { default as Menu, MenuItem, MenuHeading, SubMenu } from "./components/components/Menu";
 export { default as Modal } from "./components/components/Modal";
 export { default as Navbar } from "./components/components/Navbar";
+// Widgets
+export { default as Comment } from "./components/widgets/Comment";
+
 // Hooks
 export { default as useClickOutside } from "./hooks/useClickOutside";

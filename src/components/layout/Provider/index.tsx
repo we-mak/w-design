@@ -5,7 +5,7 @@ import { GlobalStyle } from "./GlobalStyle";
 import "./normalize.css";
 
 interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
-  theme?: {};
+  theme?: object | ((theme: object) => object);
 }
 
 function Provider(p: ThemeProps) {
@@ -23,4 +23,4 @@ function Provider(p: ThemeProps) {
 
 Provider.displayName = "WProvider";
 
-export default React.memo(Provider);
+export default Provider;

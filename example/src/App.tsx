@@ -29,12 +29,13 @@ const NavWrapper = styled.div`
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 100;
   box-shadow: ${props => props.theme.shadows[1]};
   z-index: 999;
 `;
 
-const baseUrl = process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "";
+const { NODE_ENV, PUBLIC_URL } = process.env;
+
+const baseUrl = NODE_ENV === "production" ? PUBLIC_URL : "";
 
 const theme = {
   fonts: {
@@ -49,6 +50,7 @@ function App() {
   const [openMenu, setOpenMenu] = React.useState(false);
 
   const handleToogleMenu = () => setOpenMenu(!openMenu);
+
   return (
     <Provider theme={theme}>
       <>

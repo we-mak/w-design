@@ -13,7 +13,6 @@
     "react-instantsearch-dom": "^6.0.0-beta.0",
     "react-markdown": "^4.0.6",
     "react-scripts": "^3.0.1",
-    "styled-components": "^5.0.0-beta.8-groupsizefix",
     "w-design": "link:.."
   },
   "scripts": {
@@ -43,6 +42,6 @@
     "@types/react-instantsearch-dom": "^5.2.5",
     "babel-plugin-styled-components": "^1.10.0",
     "gh-pages": "^2.0.1",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.3"
   }
 }

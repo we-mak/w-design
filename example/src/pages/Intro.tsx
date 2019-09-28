@@ -20,9 +20,9 @@ Feel free to use this library, or help us to improve it.
 ## Features
 
 - Written with React hooks, Typescript
-- Styled with styled-components
+- Styled with styled-components and styled-system
 - Suitable for web application UI
-- Support modern web browsers
+- Supports modern web browsers
 
 
 ## 🐞 Report
@@ -30,10 +30,6 @@ Feel free to use this library, or help us to improve it.
 ### For Issues
 
 Please open [Issue](https://github.com/we-mak/w-design/issues) to report bugs.
-
-### Questions
-
-For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
 
 ### Development
 

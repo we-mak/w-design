@@ -16,6 +16,8 @@ AvatarWrapper.displayName = "AvatarWrapper";
 
 const AvatarContent = styled.div`
   flex: 1 1 auto;
+  align-self: center;
+
   &:not(:last-child) {
     padding-right: 0.4rem;
   }

@@ -147,6 +147,11 @@ const AvatarPage: React.FunctionComponent<any> = () => {
             </ButtonGroup>
           }
         />
+
+        <AvatarGroup
+          avatar={<Avatar avatarUrl="https://api.adorable.io/avatars/80/hello" />}
+          name="Joe Doe"
+        />
       </div>
       <CodeBlock
         exampleCode={`

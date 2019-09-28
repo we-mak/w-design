@@ -11,17 +11,19 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 Add:
 
 - `Comment`
+- `align-self: center` to `AvatarContent` of `AvatarGroup`
 
-- `PushMessage`
-- `List`
-- `SectionMessage`
-- `ProgressLoader`
-- `ImageUpload`
-- `Breadcrubms`
-- `shouldFitContainer` prop for `InputField`, `TextArea`
-- `align-self: center` to `AvatarGroup` content
-- margin props to `Typo`
-- image fluid prop
+* `shouldFitContainer` prop for `InputField`, `TextArea`
+
+* margin props to `Typo`
+* image fluid prop
+
+* `PushMessage`
+* `List`
+* `SectionMessage`
+* `ProgressLoader`
+* `ImageUpload`
+* `Breadcrubms`
 
 Fix:
 

@@ -15,7 +15,7 @@ export const FieldGroup = styled.div<InputFormProps>`
       height: 0.8rem;
       margin: 0 0.25rem;
       position: absolute;
-      top: 73%;
+      top: 50%;
       transform: translateY(-50%);
       width: 0.8rem;
       z-index: 2;
@@ -25,7 +25,7 @@ export const FieldGroup = styled.div<InputFormProps>`
       height: 0.8rem;
       margin: 0 0.25rem;
       position: absolute;
-      top: 73%;
+      top: 50%;
       transform: translateY(-50%);
       width: 0.8rem;
       z-index: 2;
@@ -34,14 +34,19 @@ export const FieldGroup = styled.div<InputFormProps>`
   }
   input {
     &.icon-before {
-      padding-left: 1.3rem !important;
+      padding-left: 1.4rem !important;
     }
     &.icon-after {
-      padding-right: 1.3rem !important;
+      padding-right: 1.4rem !important;
     }
   }
 `;
 FieldGroup.displayName = "FieldGroup";
+
+export const InputContainer = styled.span`
+  position: relative;
+  display: block;
+`;
 
 export const TextHint = styled.small<InputFormProps>`
   display: block;
@@ -63,7 +68,12 @@ export const RequiredMark = styled.sup`
 `;
 
 export const SpinnerWrap = styled.span`
+  height: 0.8rem;
+  margin: 0 0.25rem;
   position: absolute;
-  right: 1rem;
-  top: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.8rem;
+  z-index: 2;
+  right: 0.1rem;
 `;

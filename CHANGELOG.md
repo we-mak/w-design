@@ -15,17 +15,16 @@ Add:
 - `Typo`: fix heading typo consist with origin heading tag, add `margin, fontWeight, fontFamily` props
 - `Image`: add `width, height` props
 - `Picture`: add `width, height` props
+- fix `InputForm` icon position
 - `Comment`
 - `Breadcrubms`
+- `Masonry`
 
 * `PushMessage`
 * `List`
 * `SectionMessage`
 * `ProgressLoader`
 * `ImageUpload`
-* `Masonry`
-
-- fix `InputForm` icon
 
 ---
 

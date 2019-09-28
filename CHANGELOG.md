@@ -12,8 +12,7 @@ Add:
 
 - `Comment`
 - `align-self: center` to `AvatarContent` of `AvatarGroup`
-
-* `shouldFitContainer` prop for `InputField`, `TextArea`
+- set `fluid` prop for `TextArea`
 
 * margin props to `Typo`
 * image fluid prop

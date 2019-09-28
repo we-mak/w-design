@@ -95,6 +95,9 @@ const FormPage: React.FunctionComponent<any> = () => {
         <InputField size="sm" placeholder="Small input" />
         &nbsp;&nbsp;
       </div>
+      <br />
+      <InputField placeholder="fluid input" fluid />
+
       <CodeBlock
         exampleCode={`
   <InputField size="sm" placeholder="Small input" />
@@ -154,6 +157,8 @@ const FormPage: React.FunctionComponent<any> = () => {
 
       <Typo appearance="h3">TextArea</Typo>
       <TextArea label="Textarea label" />
+      <br />
+      <TextArea label="Textarea fluid" fluid />
     </>
   );
 };

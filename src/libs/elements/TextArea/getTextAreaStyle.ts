@@ -8,8 +8,12 @@ export const getTextAreaStyle = (props: TextAreaProps) => {
     isError,
     isValid,
     isWarning,
-    theme: { colors, radii }
+    theme: { colors, radii },
+    fluid
   } = props;
+
+  let width;
+  if (fluid) width = "100%";
 
   const boderColor = () => {
     if (isWarning) return colors["O30"];
@@ -30,9 +34,9 @@ export const getTextAreaStyle = (props: TextAreaProps) => {
     background: transparent;
     background-image: none;
     padding: 0.25rem 0.4rem;
-    width: 100%;
     outline: 0;
     line-height: 1.2rem;
+    width: ${width};
     max-width: 100%;
     border-radius: ${radii[2]};
     border: 0.05rem solid ${boderColor()};

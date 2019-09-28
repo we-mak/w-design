@@ -14,6 +14,7 @@ export interface InputFieldProps
     InputControlProps {
   name?: string;
   type?: string;
+  /* auto-complete attribute for input */
   autoComplete?: string;
   appearance?: "standard" | "none";
   isRequired?: boolean;

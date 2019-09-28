@@ -123,7 +123,7 @@ Cover basic components
 |                   | ❌ Toggle              | ❌ Tabs            |                 |
 |                   | ✅ TextArea            | ❌ Table           |                 |
 |                   | ✅ SectionMessage      | ❌ Select          |                 |
-|                   | ✅ Typo                | ❌ Comment         |                 |
+|                   | ✅ Typo                | ✅ Comment         |                 |
 |                   | ✅ Icon (Font awesome) | ❌ AnchorNavScroll |                 |
 |                   | ✅ Radio               |                    |                 |
 |                   | ✅ Button              | ✅ FormGroup       |                 |

@@ -10,7 +10,7 @@ const api = `
 const MediaPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">Image</Typo>
-    Image
+    Image component with built-in lazy loading with Intersection Observer api.
     <Typo appearance="h3">Example</Typo>
     <Image data-src="https://source.unsplash.com/random" width={320} />
     <br />

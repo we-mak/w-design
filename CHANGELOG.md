@@ -15,6 +15,7 @@ Add:
 - set `fluid` prop for `TextArea`
 - `Typo`: fix heading typo consist with origin heading tag, add `margin, fontWeight, fontFamily` props
 - `Image`: add `width, height` props
+- `Picture`: add `width, height` props
 
 * `PushMessage`
 * `List`

@@ -10,10 +10,11 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 Add:
 
+- `Comment`
+
+- `PushMessage`
 - `List`
 - `SectionMessage`
-- `Comment`
-- `PushMessage`
 - `ProgressLoader`
 - `ImageUpload`
 - `Breadcrubms`

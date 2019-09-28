@@ -13,8 +13,8 @@ Add:
 - `Comment`
 - `align-self: center` to `AvatarContent` of `AvatarGroup`
 - set `fluid` prop for `TextArea`
+- `Typo`: fix heading typo consist with origin heading tag, add `margin, fontWeight, fontFamily` props
 
-* margin props to `Typo`
 * image fluid prop
 
 * `PushMessage`

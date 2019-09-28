@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { color } from "styled-system";
+import { color, margin, fontWeight, fontFamily } from "styled-system";
 import { TypoProps } from "./types";
 import CustomTag from "../CustomTag";
 
@@ -11,9 +11,12 @@ const WTypo = ({ tag, appearance, children, ...rest }: TypoProps) => (
 );
 
 const Typo = styled(WTypo)`
-  font-weight: 500;
+  font-weight: 700;
   font-family: ${(props: TypoProps) => props.theme.fonts.medium};
   ${color};
+  ${margin};
+  ${fontWeight};
+  ${fontFamily};
   font-size: ${(props: TypoProps) => {
     const { fontSizes } = props.theme;
 

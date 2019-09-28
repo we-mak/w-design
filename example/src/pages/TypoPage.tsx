@@ -24,6 +24,22 @@ const Example = () => (
     <Typo appearance="h5">This is header 5</Typo>
     <h6>H6</h6>
     <Typo appearance="h6">This is header 6</Typo>
+
+    <Typo appearance="h2" m="2rem">
+      Margin 2rem
+    </Typo>
+
+    <Typo appearance="h2" color="teal">
+      Teal color
+    </Typo>
+
+    <Typo appearance="h2" fontWeight={500}>
+      Font weight 500
+    </Typo>
+
+    <Typo appearance="h2" fontFamily="Roboto">
+      Roboto font
+    </Typo>
   </>
 );
 

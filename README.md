@@ -131,6 +131,7 @@ Cover basic components
 |                   | ❌ SectionMessage      | ❌ Pagination      |                 |
 |                   | ❌ Tooltip             | ✅ Card            |                 |
 |                   | ❌ Popover             | ❌ Form            |                 |
+|                   | ✅ Breadcrumbs         |                    |                 |
 
 ## 🐞 Report
 

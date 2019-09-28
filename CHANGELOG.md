@@ -6,7 +6,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-<a name="0.28.5"></a>#[v0.28.5]()
+<a name="0.29.5"></a>#[v0.29.5]()
 
 Add:
 
@@ -23,12 +23,9 @@ Add:
 * `SectionMessage`
 * `ProgressLoader`
 * `ImageUpload`
-
-Fix:
+* `Masonry`
 
 - fix `InputForm` icon
-
-Todo: Refactor to Yarn, Lerna workspace
 
 ---
 

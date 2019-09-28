@@ -6,9 +6,9 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-<a name="0.29.5"></a>#[v0.29.5]()
+<a name="0.30.5-alpha"></a>#[v0.30.5-alpha]()
 
-Add:
+### Update
 
 - `align-self: center` to `AvatarContent` of `AvatarGroup`
 - set `fluid` prop for `TextArea`
@@ -16,15 +16,19 @@ Add:
 - `Image`: add `width, height` props
 - `Picture`: add `width, height` props
 - fix `InputForm` icon position
+
+### Add new features
+
 - `Comment`
 - `Breadcrubms`
 - `Masonry`
+- `PushMessage`
 
-* `PushMessage`
-* `List`
+* `AnchorScroll`
 * `SectionMessage`
+* `Upload`
 * `ProgressLoader`
-* `ImageUpload`
+* `List`
 
 ---
 

@@ -31,6 +31,10 @@ const elements = [
 
 const components = [
   {
+    title: "Anchor scroll",
+    link: "/anchor-scroll"
+  },
+  {
     title: "Card",
     link: "/card"
   },
@@ -38,6 +42,11 @@ const components = [
     title: "Dropdown",
     link: "/dropdown"
   },
+  {
+    title: "Form",
+    link: "/form"
+  },
+
   {
     title: "Navbar",
     link: "/nav"
@@ -47,12 +56,12 @@ const components = [
     link: "/modal"
   },
   {
-    title: "Form",
-    link: "/form"
-  },
-  {
     title: "Menu",
     link: "/menu"
+  },
+  {
+    title: "Push message",
+    link: "/push-message"
   }
 ];
 

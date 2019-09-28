@@ -103,35 +103,35 @@ defaultTheme = {
 </Provider>
 ```
 
-## Version 1.0.0 Features
+## Features list
 
-Cover basic components
+Cover basic components, widgets from 3rd parties libray
 
-| Layout            | Elements               | Components         | Widgets         |
-| ----------------- | ---------------------- | ------------------ | --------------- |
-| ✅ Container      | ✅ InputField          | ✅ AvatarGroup     |                 |
-| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar          | ❌ ImageUpload  |
-| ✅ DisplayElement | ✅ Label               | ❌ Badges          | ❌ Carousel     |
-| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible     | ❌ Page Cover   |
-| ❌ Masonry        | ✅ Spinner             | ❌ Breadcrumbs     | ❌ AvatarUpload |
-|                   | ❌ Chip                | ❌ PushMessage     |                 |
-|                   | ❌ List                | ✅ Menu            |                 |
-|                   | ✅ Divider             | ✅ Modal           |                 |
-|                   | ❌ ProgressLoader      | ✅ Dropdown        |                 |
-|                   | ✅ Portal              | ✅ Drawer          |                 |
-|                   | ✅ Avatar              | ❌ Steps           |                 |
-|                   | ❌ Toggle              | ❌ Tabs            |                 |
-|                   | ✅ TextArea            | ❌ Table           |                 |
-|                   | ✅ SectionMessage      | ❌ Select          |                 |
-|                   | ✅ Typo                | ✅ Comment         |                 |
-|                   | ✅ Icon (Font awesome) | ❌ AnchorNavScroll |                 |
-|                   | ✅ Radio               |                    |                 |
-|                   | ✅ Button              | ✅ FormGroup       |                 |
-|                   | ✅ Image               | ✅ InputForm       |                 |
-|                   | ❌ SectionMessage      | ❌ Pagination      |                 |
-|                   | ❌ Tooltip             | ✅ Card            |                 |
-|                   | ❌ Popover             | ❌ Form            |                 |
-|                   | ✅ Breadcrumbs         |                    |                 |
+| Layout            | Elements               | Components      | Widgets         |
+| ----------------- | ---------------------- | --------------- | --------------- |
+| ✅ Container      | ✅ InputField          | ✅ AvatarGroup  | ❌ Select       |
+| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       |                 |
+| ✅ DisplayElement | ✅ Label               | ❌ Badges       | ❌ Carousel     |
+| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible  | ❌ PageCover    |
+| ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  | ❌ AvatarPicker |
+|                   | ❌ Chip                | ❌ Steps        |                 |
+|                   | ✅ List                | ✅ Menu         |                 |
+|                   | ✅ Divider             | ✅ Modal        |                 |
+|                   | ✅ ProgressLoader      | ✅ Dropdown     |                 |
+|                   | ✅ Portal              | ✅ Drawer       |                 |
+|                   | ✅ Avatar              | ✅ AnchorScroll |                 |
+|                   | ❌ Toggle              | ❌ Tabs         |                 |
+|                   | ✅ TextArea            | ❌ Table        |                 |
+|                   | ✅ SectionMessage      | ✅ FormGroup    |                 |
+|                   | ✅ Typo                | ✅ Comment      |                 |
+|                   | ✅ Icon (Font awesome) | ✅ InputForm    |                 |
+|                   | ✅ Radio               | ❌ Pagination   |                 |
+|                   | ✅ Button              | ✅ Card         |                 |
+|                   | ✅ Image               | ❌ Form         |                 |
+|                   | ✅ SectionMessage      | ❌ Upload       |                 |
+|                   | ❌ Tooltip             |                 |                 |
+|                   | ❌ Popover             |                 |                 |
+|                   | ✅ Breadcrumbs         |                 |                 |
 
 ## 🐞 Report
 

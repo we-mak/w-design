@@ -16,6 +16,7 @@ import MenuPage from "./pages/MenuPage";
 import MediaPage from "./pages/MediaPage";
 import ModalPage from "./pages/ModalPage";
 import NavbarPage from "./pages/NavbarPage";
+import PushMessagePage from "./pages/PushMessagePage";
 import SpinnerPage from "./pages/SpinnerPage";
 import SectionMessagePage from "./pages/SectionMessagePage";
 import TypoPage from "./pages/TypoPage";
@@ -91,6 +92,7 @@ function App() {
                   <MenuPage path={baseUrl + "/menu"} />
                   <NavbarPage path={baseUrl + "/nav"} />
                   <FormPage path={baseUrl + "/form"} />
+                  <PushMessagePage path={baseUrl + "/push-message"} />
                 </Router>
               </Suspense>
             </Flexbox.Column>

@@ -2,6 +2,7 @@
  * Image with lazy loading functionally
  */
 import React, { useState, useEffect, MutableRefObject, useRef } from "react";
+import { ImageElement } from "./Styled";
 
 const Image = (props: any) => {
   const [src, setSrc] = useState(
@@ -30,7 +31,7 @@ const Image = (props: any) => {
     return () => observer.unobserve(imgRef!.current!);
   }, [imgRef.current]);
 
-  return <img ref={imgRef} src={src} {...props} />;
+  return <ImageElement ref={imgRef} src={src} {...props} />;
 };
 
 export default Image;

@@ -13,6 +13,7 @@ import DropdownPage from "./pages/DropdownPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
 import MenuPage from "./pages/MenuPage";
+import MediaPage from "./pages/MediaPage";
 import ModalPage from "./pages/ModalPage";
 import NavbarPage from "./pages/NavbarPage";
 import SpinnerPage from "./pages/SpinnerPage";
@@ -79,6 +80,7 @@ function App() {
                   {/* Elements */}
                   <TypoPage path={baseUrl + "/typo"} />
                   <ButtonPage path={baseUrl + "/button"} />
+                  <MediaPage path={baseUrl + "/media"} />
                   <AvatarPage path={baseUrl + "/avatar"} />
                   <SpinnerPage path={baseUrl + "/spinner"} />
                   <SectionMessagePage path={baseUrl + "/sectionmessage"} />

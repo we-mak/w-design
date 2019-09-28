@@ -6,6 +6,7 @@ export { default as DisplayElement } from "./libs/layout/DisplayElement";
 // Elements
 export { default as Avatar } from "./libs/elements/Avatar";
 export { default as Button, ButtonGroup } from "./libs/elements/Button";
+export { default as Breadcrumbs, BreadcrumbsItem } from "./libs/elements/Breadcrumbs";
 export { default as Checkbox } from "./libs/elements/Checkbox";
 export { default as CustomTag } from "./libs/elements/CustomTag";
 export { default as Divider } from "./libs/elements/Divider";

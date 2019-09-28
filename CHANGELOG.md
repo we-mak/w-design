@@ -10,19 +10,19 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 Add:
 
-- `Comment`
 - `align-self: center` to `AvatarContent` of `AvatarGroup`
 - set `fluid` prop for `TextArea`
 - `Typo`: fix heading typo consist with origin heading tag, add `margin, fontWeight, fontFamily` props
 - `Image`: add `width, height` props
 - `Picture`: add `width, height` props
+- `Comment`
+- `Breadcrubms`
 
 * `PushMessage`
 * `List`
 * `SectionMessage`
 * `ProgressLoader`
 * `ImageUpload`
-* `Breadcrubms`
 
 Fix:
 

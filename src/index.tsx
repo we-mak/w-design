@@ -22,6 +22,7 @@ export { default as Spinner } from "./libs/elements/Spinner";
 export { default as TextArea } from "./libs/elements/TextArea";
 export { default as Typo } from "./libs/elements/Typo";
 // Components
+export { default as AnchorScroll } from "./libs/components/AnchorScroll";
 export { default as AvatarGroup } from "./libs/components/AvatarGroup";
 export {
   default as Card,

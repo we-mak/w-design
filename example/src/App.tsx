@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
 import Start from "./pages/Start";
+import AnchorScrollPage from "./pages/AnchorScrollPage";
 import AvatarPage from "./pages/AvatarPage";
 import ButtonPage from "./pages/ButtonPage";
 import CardPage from "./pages/CardPage";
@@ -86,6 +87,7 @@ function App() {
                   <SpinnerPage path={baseUrl + "/spinner"} />
                   <SectionMessagePage path={baseUrl + "/sectionmessage"} />
                   {/* Components */}
+                  <AnchorScrollPage path={baseUrl + "/anchor-scroll"} />
                   <CardPage path={baseUrl + "/card"} />
                   <DropdownPage path={baseUrl + "/dropdown"} />
                   <ModalPage path={baseUrl + "/modal"} />

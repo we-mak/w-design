@@ -23,8 +23,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - `Breadcrubms`
 - `Masonry`
 - `PushMessage`
+- `AnchorScroll`
 
-* `AnchorScroll`
 * `SectionMessage`
 * `Upload`
 * `ProgressLoader`

@@ -31,6 +31,10 @@ Feel free to use this library, or help us to improve it.
 
 Please open [Issue](https://github.com/we-mak/w-design/issues) to report bugs.
 
+### Questions
+
+For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
+
 ### Development
 
 **Folders structure**

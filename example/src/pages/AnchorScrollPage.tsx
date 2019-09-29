@@ -6,7 +6,10 @@ const Example = () => {
   return (
     <Container>
       <AnchorScroll destination="target">
-        <span role="img">🚀</span>To target
+        <span role="img" aria-label="img" aria-labelledby="anchor link">
+          🚀
+        </span>
+        To target
       </AnchorScroll>
     </Container>
   );
@@ -63,7 +66,10 @@ easeInOutQuint(t: number) {
     `}
     />
     <div id="target">
-      <span role="img">💰</span>Target
+      <span role="img" aria-label="img" aria-labelledby="anchor target">
+        💰
+      </span>
+      Target
     </div>
   </>
 );

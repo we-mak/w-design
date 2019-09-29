@@ -18,6 +18,7 @@ import MediaPage from "./pages/MediaPage";
 import ModalPage from "./pages/ModalPage";
 import NavbarPage from "./pages/NavbarPage";
 import PushMessagePage from "./pages/PushMessagePage";
+import ProgressPage from "./pages/ProgressPage";
 import SpinnerPage from "./pages/SpinnerPage";
 import SectionMessagePage from "./pages/SectionMessagePage";
 import TypoPage from "./pages/TypoPage";
@@ -80,12 +81,13 @@ function App() {
                   <Start path={baseUrl + "/start"} />
                   <LayoutPage path={baseUrl + "/layout"} />
                   {/* Elements */}
-                  <TypoPage path={baseUrl + "/typo"} />
+                  <AvatarPage path={baseUrl + "/avatar"} />
                   <ButtonPage path={baseUrl + "/button"} />
                   <MediaPage path={baseUrl + "/media"} />
-                  <AvatarPage path={baseUrl + "/avatar"} />
+                  <ProgressPage path={baseUrl + "/progress"} />
                   <SpinnerPage path={baseUrl + "/spinner"} />
                   <SectionMessagePage path={baseUrl + "/sectionmessage"} />
+                  <TypoPage path={baseUrl + "/typo"} />
                   {/* Components */}
                   <AnchorScrollPage path={baseUrl + "/anchor-scroll"} />
                   <CardPage path={baseUrl + "/card"} />

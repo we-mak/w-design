@@ -16,6 +16,10 @@ const elements = [
     link: "/media"
   },
   {
+    title: "ProgressLoader",
+    link: "/progress"
+  },
+  {
     title: "SectionMessage",
     link: "/sectionmessage"
   },

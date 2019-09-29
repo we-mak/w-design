@@ -110,10 +110,10 @@ Cover basic components, widgets from 3rd parties libray
 | Layout            | Elements               | Components      | Widgets         |
 | ----------------- | ---------------------- | --------------- | --------------- |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup  | ❌ Select       |
-| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       |                 |
-| ✅ DisplayElement | ✅ Label               | ❌ Badges       | ❌ Carousel     |
-| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible  | ❌ PageCover    |
-| ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  | ❌ AvatarPicker |
+| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       | ❌ Carousel     |
+| ✅ DisplayElement | ✅ Label               | ❌ Badges       | ❌ PageCover    |
+| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible  | ❌ AvatarPicker |
+| ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  |                 |
 |                   | ❌ Chip                | ❌ Steps        |                 |
 |                   | ✅ List                | ✅ Menu         |                 |
 |                   | ✅ Divider             | ✅ Modal        |                 |

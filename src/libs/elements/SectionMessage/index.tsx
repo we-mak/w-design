@@ -1,5 +1,7 @@
 import * as React from "react";
 import Typo from "../Typo";
+import Icon from "../Icon";
+import Flexbox from "../../layout/Flexbox";
 import { Section } from "./Styled";
 import { SectionMessageProps } from "./types";
 
@@ -8,14 +10,35 @@ const SectionMessage: React.FC<SectionMessageProps> = ({
   title,
   children
 }) => {
+  let iconName = "fas fa-info-circle";
+
+  switch (appearance) {
+    case "confirm":
+      iconName = "fa fa-check-circle success";
+      break;
+    case "error":
+      iconName = "fa fa-times error";
+      break;
+    case "warn":
+      iconName = "fa fa-exclamation-triangle warn";
+      break;
+  }
+
   return (
     <Section appearance={appearance}>
-      {title && (
-        <Typo appearance="h5" tag="h1">
-          {title}
-        </Typo>
-      )}
-      {children}
+      <Flexbox>
+        <Flexbox.Column p={0}>
+          <Icon className={iconName} />
+        </Flexbox.Column>
+        <Flexbox.Column>
+          {title && (
+            <Typo appearance="h6" tag="h3">
+              {title}
+            </Typo>
+          )}
+          {children}
+        </Flexbox.Column>
+      </Flexbox>
     </Section>
   );
 };

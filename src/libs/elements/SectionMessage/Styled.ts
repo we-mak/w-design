@@ -5,24 +5,28 @@ const getSectionStyle = (props: SectionMessageProps) => {
   const { theme, appearance } = props;
 
   let backgroundColor = theme.colors["B0"];
+  let iconColor = theme.colors["B50"];
 
   switch (appearance) {
     case "confirm":
       backgroundColor = theme.colors["G0"];
+      iconColor = theme.colors["G50"];
       break;
     case "warn":
       backgroundColor = theme.colors["O0"];
+      iconColor = theme.colors["O50"];
       break;
     case "error":
       backgroundColor = theme.colors["R0"];
-      break;
-    default:
-      backgroundColor = theme.colors["B0"];
+      iconColor = theme.colors["R50"];
       break;
   }
 
   return `
     background: ${backgroundColor};
+    i {
+      color: ${iconColor}
+    }
   `;
 };
 

@@ -3,7 +3,7 @@ import { Typo, Container, SectionMessage } from "w-design";
 
 const Example = () => {
   return (
-    <Container>
+    <Container maxWidth={500}>
       <SectionMessage title="Info">The quick brown fox jumps over the lazy dog</SectionMessage>
       <SectionMessage appearance="confirm" title="Confirm">
         The quick brown fox jumps over the lazy dog

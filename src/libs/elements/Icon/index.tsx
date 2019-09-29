@@ -3,8 +3,8 @@
  */
 import * as React from "react";
 
-const Icon = ({ className }: { className: string }) => (
-  <i className={className} aria-hidden="true" />
+const Icon = ({ className, ...rest }: any) => (
+  <i className={className} aria-hidden="true" {...rest} />
 );
 
 export default Icon;

@@ -16,16 +16,16 @@ export const Message = ({
     return () => clearTimeout(timer);
   });
 
-  let iconName = "far fa-info-circle info";
+  let iconName = "fa fa-info-circle info";
   switch (appearance) {
     case "success":
-      iconName = "far fa-check-circle success";
+      iconName = "fa fa-check-circle success";
       break;
     case "error":
-      iconName = "far fa-times error";
+      iconName = "fa fa-times error";
       break;
     case "warn":
-      iconName = "far fa-info-circle warn";
+      iconName = "fa fa-exclamation-triangle warn";
       break;
   }
 

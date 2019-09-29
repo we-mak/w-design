@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Icon from "../../elements/Icon";
 import { MessagePanel } from "./Styled";
-import { MessageProps } from "./types";
+import { PushMessageProps } from "./types";
 
-export const Message = ({ value, appearance = "info", dismissTimeout = 3000 }: MessageProps) => {
+export const Message = ({
+  value,
+  appearance = "info",
+  dismissTimeout = 3000
+}: PushMessageProps) => {
   const [isShowMessage, setShowMessage] = useState(true);
 
   useEffect(() => {

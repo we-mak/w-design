@@ -13,6 +13,7 @@ import CardPage from "./pages/CardPage";
 import DropdownPage from "./pages/DropdownPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
+import ListPage from "./pages/ListPage";
 import MenuPage from "./pages/MenuPage";
 import MediaPage from "./pages/MediaPage";
 import ModalPage from "./pages/ModalPage";
@@ -81,6 +82,7 @@ function App() {
                   <Start path={baseUrl + "/start"} />
                   <LayoutPage path={baseUrl + "/layout"} />
                   {/* Elements */}
+                  <ListPage path={baseUrl + "/list"} />
                   <AvatarPage path={baseUrl + "/avatar"} />
                   <ButtonPage path={baseUrl + "/button"} />
                   <MediaPage path={baseUrl + "/media"} />

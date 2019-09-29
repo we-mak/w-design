@@ -12,6 +12,10 @@ const elements = [
     link: "/button"
   },
   {
+    title: "List",
+    link: "/list"
+  },
+  {
     title: "Media",
     link: "/media"
   },

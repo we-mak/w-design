@@ -6,7 +6,13 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-<a name="0.30.5-alpha"></a>#[v0.30.5-alpha]()
+### next
+
+- `List`
+
+---
+
+<a name="0.29.5-alpha"></a>#[v0.29.5-alpha]()
 
 ### Update
 
@@ -24,11 +30,10 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - `Masonry`
 - `PushMessage`
 - `AnchorScroll`
+- `SectionMessage`
 
-* `Upload`
-* `ProgressLoader`
-* `SectionMessage`
-* `List`
+- `Upload`
+- `ProgressLoader`
 
 ---
 

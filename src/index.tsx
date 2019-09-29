@@ -18,6 +18,7 @@ export { default as InputField } from "./libs/elements/InputField";
 export { default as Picture } from "./libs/elements/Picture";
 export { default as Portal } from "./libs/elements/Portal";
 export { default as RadioGroup } from "./libs/elements/Radio";
+export { default as SectionMessage } from "./libs/elements/SectionMessage";
 export { default as Spinner } from "./libs/elements/Spinner";
 export { default as TextArea } from "./libs/elements/TextArea";
 export { default as Typo } from "./libs/elements/Typo";

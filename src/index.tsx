@@ -1,8 +1,9 @@
 // Layouts
-export { default as Provider } from "./libs/layout/Provider";
 export { default as Container } from "./libs/layout/Container";
-export { default as Flexbox } from "./libs/layout/Flexbox";
 export { default as DisplayElement } from "./libs/layout/DisplayElement";
+export { default as Flexbox } from "./libs/layout/Flexbox";
+export { default as Masonry } from "./libs/layout/Masonry";
+export { default as Provider } from "./libs/layout/Provider";
 // Elements
 export { default as Avatar } from "./libs/elements/Avatar";
 export { default as Button, ButtonGroup } from "./libs/elements/Button";
@@ -36,6 +37,7 @@ export { default as FormGroup } from "./libs/components/FormGroup";
 export { default as Menu, MenuItem, MenuHeading, SubMenu } from "./libs/components/Menu";
 export { default as Modal } from "./libs/components/Modal";
 export { default as Navbar } from "./libs/components/Navbar";
+export { default as PushMessage } from "./libs/components/PushMessage";
 // Widgets
 export { default as Comment } from "./libs/widgets/Comment";
 

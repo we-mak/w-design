@@ -128,7 +128,7 @@ Cover basic components, widgets from 3rd parties libray
 |                   | ✅ Radio               | ❌ Pagination   |                 |
 |                   | ✅ Button              | ✅ Card         |                 |
 |                   | ✅ Image               | ❌ Form         |                 |
-|                   | ✅ SectionMessage      | ❌ Upload       |                 |
+|                   | ✅ SectionMessage      | ✅ Upload       |                 |
 |                   | ❌ Tooltip             |                 |                 |
 |                   | ❌ Popover             |                 |                 |
 |                   | ✅ Breadcrumbs         |                 |                 |

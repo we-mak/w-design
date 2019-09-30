@@ -44,16 +44,4 @@ export const MessagePanel = styled.div`
   justify-content: flex-start;
   align-items: center;
   animation: ${slideDown} 0.25s ease;
-  .info {
-    color: ${props => props.theme.colors["B50"]};
-  }
-  .warn {
-    color: ${props => props.theme.colors["O30"]};
-  }
-  .success {
-    color: ${props => props.theme.colors["G30"]};
-  }
-  .error {
-    color: ${props => props.theme.colors["R30"]};
-  }
 `;

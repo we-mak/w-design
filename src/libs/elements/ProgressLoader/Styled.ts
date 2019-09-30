@@ -24,11 +24,38 @@ export const ProgressBar = styled.div`
 `;
 ProgressBar.displayName = "ProgressBar";
 
-export const ProgressTrack = styled.div<ProgressLoaderProps>`
+const getProgressTrackStyle = (props: ProgressLoaderProps) => {
+  const { theme, percent, size, status } = props;
+
+  let height = "0.4rem";
+  let background = theme.colors["B50"];
+
+  if (size === "sm") {
+    height = "0.2rem";
+  }
+
+  switch (status) {
+    case "normal":
+      background = theme.colors["B50"];
+      break;
+    case "success":
+      background = theme.colors["G30"];
+      break;
+    case "error":
+      background = theme.colors["R30"];
+      break;
+  }
+
+  return `
+  background: ${background};
+  width: ${percent}%;
+  height: ${height};
+`;
+};
+
+export const ProgressTrack = styled.div`
   border-radius: 0.4rem;
-  width: 50%;
-  height: 8px;
-  background: ${props => props.theme.colors["B50"]};
+  ${getProgressTrackStyle};
 `;
 ProgressTrack.displayName = "ProgressTrack";
 

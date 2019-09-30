@@ -32,8 +32,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - `PushMessage`
 - `AnchorScroll`
 - `SectionMessage`
-
 - `ProgressLoader`
+
 - `Upload`
 
 ---

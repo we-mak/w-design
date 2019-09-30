@@ -20,6 +20,7 @@ import ModalPage from "./pages/ModalPage";
 import NavbarPage from "./pages/NavbarPage";
 import PushMessagePage from "./pages/PushMessagePage";
 import ProgressPage from "./pages/ProgressPage";
+import UploadPage from "./pages/UploadPage";
 import SpinnerPage from "./pages/SpinnerPage";
 import SectionMessagePage from "./pages/SectionMessagePage";
 import TypoPage from "./pages/TypoPage";
@@ -99,6 +100,7 @@ function App() {
                   <NavbarPage path={baseUrl + "/nav"} />
                   <FormPage path={baseUrl + "/form"} />
                   <PushMessagePage path={baseUrl + "/push-message"} />
+                  <UploadPage path={baseUrl + "/upload"} />
                 </Router>
               </Suspense>
             </Flexbox.Column>

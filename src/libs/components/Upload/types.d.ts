@@ -1,5 +1,7 @@
 import { GlobProps } from "../../../typings";
 
+export type UploadType = "textName" | "picture";
+
 export interface FileType {
   uid: string;
   size: number;

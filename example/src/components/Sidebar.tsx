@@ -70,6 +70,10 @@ const components = [
   {
     title: "Push message",
     link: "/push-message"
+  },
+  {
+    title: "Upload",
+    link: "/upload"
   }
 ];
 

@@ -41,6 +41,7 @@ export { default as Menu, MenuItem, MenuHeading, SubMenu } from "./libs/componen
 export { default as Modal } from "./libs/components/Modal";
 export { default as Navbar } from "./libs/components/Navbar";
 export { default as PushMessage } from "./libs/components/PushMessage";
+export { default as Upload } from "./libs/components/Upload";
 // Widgets
 export { default as Comment } from "./libs/widgets/Comment";
 

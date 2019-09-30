@@ -5,8 +5,8 @@ export interface ProgressLoaderProps extends GlobProps, SizeProps {
   percent: number;
   /* Status of progress */
   status?: "normal" | "success" | "error";
-  /** Type of progress */
-  appearance?: "line" | "circle";
+  /** TODO: Type of progress */
+  // appearance?: "line" | "circle";
   /* To show percent value of completation and icon */
   showInfo?: boolean;
   /* size of progress bar*/

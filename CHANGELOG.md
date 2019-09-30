@@ -9,6 +9,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### next
 
 - `List`
+- Refactor `Icon`
 
 ---
 
@@ -32,8 +33,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - `AnchorScroll`
 - `SectionMessage`
 
-- `Upload`
 - `ProgressLoader`
+- `Upload`
 
 ---
 

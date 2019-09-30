@@ -1,5 +1,5 @@
 import { ReactChild, ReactChildren } from "react";
-import { GlobProps } from "../../types";
+import { GlobProps } from "../../../typings";
 
 export interface ScrollLinkProps extends GlobProps {
   duration: number; //scroll duration time, default by 200

@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
-import { GlobProps } from "../../types";
+import { GlobProps } from "../../../typings";
 
 export interface SectionMessageProps extends GlobProps {
-  theme?: any;
   /* Message appearance */
   appearance?: "info" | "confirm" | "warn" | "error";
   title?: string;

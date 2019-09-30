@@ -1,10 +1,20 @@
 import * as React from "react";
-import { Typo } from "w-design";
+import { Typo, Container, ProgressLoader } from "w-design";
+
+const Example = () => {
+  return (
+    <Container>
+      <ProgressLoader percent={30} />
+    </Container>
+  );
+};
 
 const ProgressPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">ProgressLoader</Typo>
-    Text tag with flexible tag type following heading style
+    Display progress status of any task that takes time to complete.
+    <Typo appearance="h3">Example</Typo>
+    <Example />
   </>
 );
 

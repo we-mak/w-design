@@ -16,6 +16,7 @@ export { default as Icon } from "./libs/elements/Icon";
 export { default as Image } from "./libs/elements/Image";
 export { default as InputField } from "./libs/elements/InputField";
 export { default as Picture } from "./libs/elements/Picture";
+export { default as ProgressLoader } from "./libs/elements/ProgressLoader";
 export { default as Portal } from "./libs/elements/Portal";
 export { default as RadioGroup } from "./libs/elements/Radio";
 export { default as SectionMessage } from "./libs/elements/SectionMessage";

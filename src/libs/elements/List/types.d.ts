@@ -1,5 +1,5 @@
 import { ReactNode, ReactChild } from "react";
-import { GlobProps } from "../../types";
+import { GlobProps } from "../../../typings";
 
 export interface ListProps extends GlobProps {
   component: ReactNode;

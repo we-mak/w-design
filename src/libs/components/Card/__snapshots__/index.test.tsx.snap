@@ -2,7 +2,7 @@
 
 exports[`<Button/> should render with different appearance style 1`] = `
 .c2 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 0.9rem !important;
 }
@@ -42,13 +42,20 @@ exports[`<Button/> should render with different appearance style 1`] = `
 }
 
 .c5 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.c6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 0.8rem;
 }
 
-.c5:not(:last-child) {
+.c6:not(:last-child) {
   padding-bottom: 0;
 }
 
@@ -71,7 +78,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,13 +91,13 @@ exports[`<Button/> should render with different appearance style 1`] = `
   box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
 }
 
-.c8 {
+.c9 {
   font-size: 0;
   line-height: 0;
   width: 100%;
 }
 
-.c9 {
+.c10 {
   background: #BECEDC;
   width: 100%;
   min-height: 180px;
@@ -98,7 +105,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   animation: iazffo 1.5s infinite;
 }
 
-.c10 {
+.c11 {
   padding: 0.8rem;
   display: block;
   width: 100%;
@@ -107,7 +114,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   animation: iazffo 1.5s infinite;
 }
 
-.c10 h3 {
+.c11 h3 {
   background: #6C869B;
   background-size: 400% 100%;
   width: 50%;
@@ -115,13 +122,13 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-radius: 0.5rem;
 }
 
-.c10 ul {
+.c11 ul {
   width: 100%;
   list-style: none;
   padding: 0;
 }
 
-.c10 li {
+.c11 li {
   background: #BECEDC;
   background-size: 400% 100%;
   height: 1rem;
@@ -129,7 +136,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
   border-radius: 0.5rem;
 }
 
-.c6 {
+.c7 {
   padding: 0.8rem;
 }
 
@@ -168,33 +175,34 @@ exports[`<Button/> should render with different appearance style 1`] = `
         />
         <img
           alt=""
+          class="c5"
           data-src="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
           src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
         />
       </picture>
     </div>
     <div
-      class="c5"
+      class="c6"
     >
       A safari is an overland journey, usually a trip by tourists in Africa. In the past, the trip was often a big-game hunt, but today, safaris are often to observe
     </div>
     <div
-      class="c6"
+      class="c7"
     >
       Footer
     </div>
   </div>
   <div
-    class="c7"
+    class="c8"
   >
     <div
-      class="c8"
+      class="c9"
     >
       <div
-        class="c9"
+        class="c10"
       />
       <div
-        class="c10"
+        class="c11"
       >
         <h3 />
         <ul>

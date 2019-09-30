@@ -2,37 +2,37 @@
 
 exports[`<Typo/> should render correct with heading style 1`] = `
 .c0 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 0.8rem !important;
 }
 
 .c1 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 1.6rem !important;
 }
 
 .c2 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 1.4rem !important;
 }
 
 .c3 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 1.2rem !important;
 }
 
 .c4 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 1rem !important;
 }
 
 .c5 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 0.9rem !important;
 }
@@ -78,7 +78,7 @@ exports[`<Typo/> should render correct with heading style 1`] = `
 
 exports[`<Typo/> should render div with H1 style 1`] = `
 .c0 {
-  font-weight: 500;
+  font-weight: 700;
   font-family: Helvetica,Arial,sans-serif;
   font-size: 1.6rem !important;
 }

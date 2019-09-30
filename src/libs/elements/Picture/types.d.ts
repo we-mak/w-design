@@ -6,7 +6,7 @@ type srcSetProps = {
   src: string;
 };
 
-export interface PictureProps extends GlobProps, HTMLPictureElement {
+export interface PictureProps extends GlobProps {
   dataSrc?: string;
   alt?: string;
   srcSets?: srcSetProps[];

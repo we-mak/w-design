@@ -3,6 +3,7 @@
 exports[`<Image/> should render correct icon styled 1`] = `
 <div>
   <img
+    class=""
     src="https://api.adorable.io/avatars/240/thunder"
   />
 </div>

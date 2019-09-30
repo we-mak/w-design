@@ -27,6 +27,9 @@ Object {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .c5:not(:last-child) {
@@ -142,22 +145,22 @@ Object {
         class="sc-AykKD csiNKD"
       >
         <figure
-          class="sc-AykKI bzcZuU"
+          class="sc-AykKJ cpCLYx"
         >
           <span
-            class="sc-AykKJ bfHiDe"
+            class="sc-AykKK jIXnOz"
           >
             Wm
           </span>
           <img
-            class="sc-AykKK gTAqUd"
+            class="sc-AykKI bFthup sc-fzXfLO jXrjtT"
             data-src="https://api.adorable.io/avatars/80/vn"
             src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
           />
         </figure>
       </div>
       <div
-        class="sc-AykKE ofdxn"
+        class="sc-AykKE ikrQef"
       >
         <div
           class="sc-AykKF ktpJRT"

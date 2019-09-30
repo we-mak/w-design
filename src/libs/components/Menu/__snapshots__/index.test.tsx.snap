@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AvatarGroup/> should renders correctly 1`] = `
-.c3 {
+.c4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -84,7 +84,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   color: #007099;
 }
 
-.c4 {
+.c5 {
   margin-top: 0;
   padding: 0.2rem;
   position: relative;
@@ -107,43 +107,43 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   transition: all 0.09s linear;
 }
 
-.c4:hover {
+.c5:hover {
   cursor: pointer;
 }
 
-.c4:hover,
-.c4:focus {
+.c5:hover,
+.c5:focus {
   background-color: rgba(177,234,255,0.3);
   color: #007099;
 }
 
-.c4:focus,
-.c4:active {
+.c5:focus,
+.c5:active {
   box-shadow: 0 0 0 0.1rem rgba(0,183,250,0.5);
   outline: none;
 }
 
-.c4:focus > a,
-.c4:active > a {
+.c5:focus > a,
+.c5:active > a {
   color: #007099;
 }
 
-.c4 > * {
+.c5 > * {
   padding: 0.2rem;
 }
 
-.c4 a {
+.c5 a {
   width: 100%;
   color: #394B59;
 }
 
-.c4 a:hover {
+.c5 a:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007099;
 }
 
-.c5 {
+.c6 {
   margin-top: 0;
   padding: 0.2rem;
   position: relative;
@@ -168,36 +168,36 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   opacity: .5;
 }
 
-.c5:hover {
+.c6:hover {
   cursor: not-allowed;
 }
 
-.c5:focus,
-.c5:active {
+.c6:focus,
+.c6:active {
   outline: none;
 }
 
-.c5:focus > a,
-.c5:active > a {
+.c6:focus > a,
+.c6:active > a {
   color: #007099;
 }
 
-.c5 > * {
+.c6 > * {
   padding: 0.2rem;
 }
 
-.c5 a {
+.c6 a {
   width: 100%;
   color: #394B59;
 }
 
-.c5 a:hover {
+.c6 a:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #007099;
 }
 
-.c7 {
+.c8 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -215,7 +215,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   color: #60798E;
 }
 
-.c10 {
+.c11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -238,7 +238,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   transform: rotate(-180deg);
 }
 
-.c12 {
+.c13 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -258,7 +258,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   will-change: transform;
 }
 
-.c9 {
+.c10 {
   padding: 0.4rem;
   position: relative;
   display: -webkit-box;
@@ -275,15 +275,15 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   align-items: center;
 }
 
-.c9:hover {
+.c10:hover {
   color: #008CC0;
 }
 
-.c9:hover * {
+.c10:hover * {
   color: #008CC0;
 }
 
-.c11 {
+.c12 {
   padding: 0;
   position: relative;
   display: block;
@@ -294,11 +294,11 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   will-change: opacity;
 }
 
-.c11 li {
+.c12 li {
   padding-left: 2rem;
 }
 
-.c13 {
+.c14 {
   padding: 0;
   position: relative;
   display: block;
@@ -309,18 +309,18 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   will-change: opacity;
 }
 
-.c13 li {
+.c14 li {
   padding-left: 2rem;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   display: block;
   position: relative;
   will-change: transform;
 }
 
-.c8:hover {
+.c9:hover {
   cursor: pointer;
 }
 
@@ -338,7 +338,23 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
   width: 280px;
 }
 
-.c6 {
+.c3.info {
+  color: #008CC0;
+}
+
+.c3.warn {
+  color: #FA9B00;
+}
+
+.c3.success {
+  color: #29A634;
+}
+
+.c3.error {
+  color: #DC1F1F;
+}
+
+.c7 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -362,31 +378,17 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
       >
         <i
           aria-hidden="true"
-          class="fas fa-user"
+          class="c3 fas fa-user"
         />
       </span>
       Item 1
       <div
-        class="c3"
+        class="c4"
       >
         <div>
           info
         </div>
       </div>
-    </li>
-    <li
-      class="c4"
-      role="menuitem"
-    >
-      <span
-        class="c2"
-      >
-        <i
-          aria-hidden="true"
-          class="fas fa-user-astronaut"
-        />
-      </span>
-      Item 2
     </li>
     <li
       class="c5"
@@ -397,13 +399,13 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
       >
         <i
           aria-hidden="true"
-          class="fas fa-edit"
+          class="c3 fas fa-user-astronaut"
         />
       </span>
-      Item 3
+      Item 2
     </li>
     <li
-      class="c4"
+      class="c6"
       role="menuitem"
     >
       <span
@@ -411,36 +413,50 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
       >
         <i
           aria-hidden="true"
-          class="fas fa-paper-plane"
+          class="c3 fas fa-edit"
+        />
+      </span>
+      Item 3
+    </li>
+    <li
+      class="c5"
+      role="menuitem"
+    >
+      <span
+        class="c2"
+      >
+        <i
+          aria-hidden="true"
+          class="c3 fas fa-paper-plane"
         />
       </span>
       Item 4
     </li>
     <li
-      class="c6"
+      class="c7"
     />
     <li
-      class="c7"
+      class="c8"
     >
       Menu heading
     </li>
     <li
-      class="c8"
+      class="c9"
     >
       <div
-        class="c9"
+        class="c10"
       >
         <span
           class="c2"
         >
           <i
             aria-hidden="true"
-            class="fas fa-cog"
+            class="c3 fas fa-cog"
           />
         </span>
         Submenu title 1
         <span
-          class="c10"
+          class="c11"
         >
           <svg
             focusable="false"
@@ -457,23 +473,23 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
         </span>
       </div>
       <ul
-        class="c11"
+        class="c12"
         role="menu"
       >
         <li
-          class="c4"
+          class="c5"
           role="menuitem"
         >
           Item 5
         </li>
         <li
-          class="c4"
+          class="c5"
           role="menuitem"
         >
           Item 6
         </li>
         <li
-          class="c4"
+          class="c5"
           role="menuitem"
         >
           Item 7
@@ -481,22 +497,22 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
       </ul>
     </li>
     <li
-      class="c8"
+      class="c9"
     >
       <div
-        class="c9"
+        class="c10"
       >
         <span
           class="c2"
         >
           <i
             aria-hidden="true"
-            class="fas fa-mail"
+            class="c3 fas fa-mail"
           />
         </span>
         Submenu title 2
         <span
-          class="c12"
+          class="c13"
         >
           <svg
             focusable="false"
@@ -513,23 +529,23 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
         </span>
       </div>
       <ul
-        class="c13"
+        class="c14"
         role="menu"
       >
         <li
-          class="c4"
+          class="c5"
           role="menuitem"
         >
           Item 8
         </li>
         <li
-          class="c4"
+          class="c5"
           role="menuitem"
         >
           Item 9
         </li>
         <li
-          class="c4"
+          class="c5"
           role="menuitem"
         >
           Item 10

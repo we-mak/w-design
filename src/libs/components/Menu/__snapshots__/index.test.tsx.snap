@@ -25,7 +25,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 
 .c1 {
   margin-top: 0;
-  padding: 0.2rem;
+  padding: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -70,7 +70,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 }
 
 .c1 > * {
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 
 .c1 a {
@@ -86,7 +86,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 
 .c5 {
   margin-top: 0;
-  padding: 0.2rem;
+  padding: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -129,7 +129,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 }
 
 .c5 > * {
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 
 .c5 a {
@@ -145,7 +145,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 
 .c6 {
   margin-top: 0;
-  padding: 0.2rem;
+  padding: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -183,7 +183,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 }
 
 .c6 > * {
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 
 .c6 a {

@@ -33,6 +33,7 @@ export {
   CardContent,
   CardFooter
 } from "./libs/components/Card";
+export { default as Comment } from "./libs/components/Comment";
 export { default as Drawer } from "./libs/components/Drawer";
 export { default as Dropdown } from "./libs/components/Dropdown";
 export { default as InputForm } from "./libs/components/InputForm";
@@ -42,8 +43,6 @@ export { default as Modal } from "./libs/components/Modal";
 export { default as Navbar } from "./libs/components/Navbar";
 export { default as PushMessage } from "./libs/components/PushMessage";
 export { default as Upload } from "./libs/components/Upload";
-// Widgets
-export { default as Comment } from "./libs/widgets/Comment";
 
 // Hooks
 export { default as useClickOutside } from "./hooks/useClickOutside";

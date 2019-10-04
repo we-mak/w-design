@@ -33,7 +33,7 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
 
   return css`
     margin-top: 0;
-    padding: 0.2rem;
+    padding: 0;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -70,7 +70,7 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
     }
 
     > * {
-      padding: 0.2rem;
+      padding: 0.4rem;
     }
 
     a {

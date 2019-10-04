@@ -1,48 +1,64 @@
-import React, { FC, useState, useEffect, memo } from "react";
+/**
+ * Upload
+ * Simple upload file and image
+ * Inspired by:
+ * - https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
+ * - https://ant.design/components/upload/
+ */
+import React, { FC, useState, memo } from "react";
 import PushMessage from "../PushMessage";
 import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
 import { UploadProps } from "./types";
+import { PushMessageProps } from "../PushMessage/types";
 
-//https://www.html5rocks.com/en/tutorials/file/dndfiles/
+const Upload: FC<UploadProps> = ({
+  label = "+ Add file",
+  uploadType = "textName",
+  multiple = false,
+  accept,
+  disabled
+}) => {
+  const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
 
-const Upload: FC<UploadProps> = ({ label = "+ Add image", multiple = false }) => {
-  const [beforeUploadErr, setBeforUploadError] = useState("");
+  // Handle error from local reading file
+  function errorHandler(this: FileReader, event: any) {
+    const { error } = event;
 
-  useEffect(() => {
-    // handle upload remove upload error message
-    const timer = setTimeout(() => setBeforUploadError(""), 3000);
-    return () => clearTimeout(timer);
-  });
-
-  // handle error
-  const errorHandler = (e: any) => {
-    switch (e.target.error.code) {
-      case e.target.error.NOT_FOUND_ERR:
-        setBeforUploadError("File Not Found!");
+    switch (error.code) {
+      case error.NOT_FOUND_ERR:
+        setUploadFeedbackStatus({
+          value: "File Not Found!",
+          appearance: "error"
+        });
         break;
-      case e.target.error.NOT_READABLE_ERR:
-        setBeforUploadError("File is not readable");
+      case error.NOT_SUPPORTED_ERR:
+        setUploadFeedbackStatus({
+          value: "The operation is not supported",
+          appearance: "error"
+        });
         break;
-      case e.target.error.ABORT_ERR:
+      case error.ABORT_ERR:
         break; // noop
       default:
-        setBeforUploadError("An error occurred reading this file.");
+        setUploadFeedbackStatus({
+          value: "An error occurred reading this file.",
+          appearance: "error"
+        });
     }
-  };
+  }
 
-  // Handle start to upload image
-  const startUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files: FileList | null = e.target.files;
+  const handleUploadFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawfiles: FileList | null = e.target.files;
 
     // Read client file
-    if (files && files.length >= 0) {
-      for (let i = 0, file: File; (file = files[i]); i++) {
-        // Only process image files.
-        if (!file.type.match("image.*")) {
-          return setBeforUploadError("Only image is allowed");
-        }
-        const reader = new FileReader();
-        // hadling error
+    if (rawfiles && rawfiles.length >= 0) {
+      for (let i = 0, file: File; (file = rawfiles[i]); i++) {
+        // if (file.type.match("image.*")) {
+        //   // preview image
+        // }
+
+        const reader: FileReader = new FileReader();
+        // passing error from local
         reader.onerror = errorHandler;
 
         reader.onload = (f => {
@@ -50,6 +66,7 @@ const Upload: FC<UploadProps> = ({ label = "+ Add image", multiple = false }) =>
             console.log(e, f);
           };
         })(file);
+
         // Read in the image file as a data URL.
         reader.readAsDataURL(file);
       }
@@ -57,13 +74,17 @@ const Upload: FC<UploadProps> = ({ label = "+ Add image", multiple = false }) =>
   };
 
   return (
-    <UploadContainer>
-      {beforeUploadErr && (
-        <PushMessage messages={[{ value: beforeUploadErr, appearance: "error" }]} />
-      )}
+    <UploadContainer uploadType={uploadType}>
+      {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
       <UploadLabel>
         <span>{label}</span>
-        <UploadInput type="file" multiple={multiple} onChange={startUpload} />
+        <UploadInput
+          type="file"
+          accept={accept}
+          multiple={multiple}
+          onChange={handleUploadFiles}
+          disabled={disabled}
+        />
       </UploadLabel>
     </UploadContainer>
   );

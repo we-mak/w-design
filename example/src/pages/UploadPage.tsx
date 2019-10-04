@@ -4,7 +4,9 @@ import { Typo, Container, Upload } from "w-design";
 const Example = () => {
   return (
     <Container>
-      <Upload />
+      <Upload width={250} />
+      <br />
+      <Upload uploadType="picture" accept="image/*" />
     </Container>
   );
 };

@@ -15,7 +15,6 @@ export const firstLetter = (str: string) => {
   return matches && matches.join("");
 };
 
-
 export const removeAccentMarks = (str: string) => {
   str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
   str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
@@ -47,3 +46,14 @@ export const filterObject = (raw: object, removed: string[]) =>
       obj[key] = raw[key];
       return obj;
     }, {});
+
+/**
+ * setUid
+ * Set a local uid base on datetime
+ */
+
+export const setUid = (name?: string) => {
+  const now = +new Date();
+  let index = 0;
+  return `${name}-${now}-${++index}`;
+};

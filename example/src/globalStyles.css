@@ -3,6 +3,6 @@
 }
 
 .prism-code {
-  overflow: scroll;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }

@@ -103,34 +103,35 @@ defaultTheme = {
 </Provider>
 ```
 
-## Version 1.0.0 Features
+## Features list
 
-Cover basic components
+Cover basic components, widgets from 3rd parties libray
 
-| Layout            | Elements               | Components     |
-| ----------------- | ---------------------- | -------------- |
-| ✅ Container      | ✅ InputField          | ✅ AvatarGroup |
-| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar      |
-| ✅ DisplayElement | ✅ Label               | ❌ Badges      |
-| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible |
-|                   | ✅ Spinner             | ❌ Breadcrumbs |
-|                   | ❌ Table               | ❌ Chip        |
-|                   | ❌ List                | ✅ Menu        |
-|                   | ✅ Divider             | ✅ Modal       |
-|                   | ❌ ProgressLoader      | ✅ Dropdown    |
-|                   | ✅ Portal              | ✅ Drawer      |
-|                   | ✅ Avatar              | ❌ Steps       |
-|                   | ❌ Toggle              | ❌ Tabs        |
-|                   | ✅ TextArea            | ❌ PushMessage |
-|                   | ✅ SectionMessage      | ❌ Tooltip     |
-|                   | ✅ Typo                | ❌ Popover     |
-|                   | ✅ Icon (Font awesome) | ❌ Comment     |
-|                   | ✅ Radio               | ❌ Select      |
-|                   | ✅ Button              | ✅ FormGroup   |
-|                   | ✅ Image               | ✅ InputForm   |
-|                   |                        | ❌ Pagination  |
-|                   |                        | ✅ Card        |
-|                   |                        | ❌ Form        |
+| Layout            | Elements               | Components      |
+| ----------------- | ---------------------- | --------------- |
+| ✅ Container      | ✅ InputField          | ✅ AvatarGroup  |
+| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       |
+| ✅ DisplayElement | ✅ Label               | ❌ Badges       |
+| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible  |
+| ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  |
+|                   | ❌ Chip                | ❌ Steps        |
+|                   | ❌ List                | ✅ Menu         |
+|                   | ✅ Divider             | ✅ Modal        |
+|                   | ✅ ProgressLoader      | ✅ Dropdown     |
+|                   | ✅ Portal              | ✅ Drawer       |
+|                   | ✅ Avatar              | ✅ AnchorScroll |
+|                   | ❌ Toggle              | ❌ Tabs         |
+|                   | ✅ TextArea            | ❌ Table        |
+|                   | ✅ SectionMessage      | ✅ FormGroup    |
+|                   | ✅ Typo                | ✅ Comment      |
+|                   | ✅ Icon (Font awesome) | ✅ InputForm    |
+|                   | ✅ Radio               | ❌ Pagination   |
+|                   | ✅ Button              | ✅ Card         |
+|                   | ✅ Image               | ❌ Form         |
+|                   | ✅ SectionMessage      | ❌ Upload       |
+|                   | ❌ Tooltip             |                 |
+|                   | ❌ Popover             |                 |
+|                   | ✅ Breadcrumbs         |                 |
 
 ## 🐞 Report
 

@@ -36,6 +36,7 @@ export const colors = {
   B10: "#3ECBFF",
   B7: "#7CDCFF",
   B5: "#B1EAFF",
+  B0: "#daf5ff",
 
   // Red
   R50: "#B40404",
@@ -45,6 +46,7 @@ export const colors = {
   R10: "#FF5252",
   R7: "#FF8383",
   R5: "#FFADAD",
+  R0: "#ffd7d7",
 
   // Orange
   O50: "#E15B00",
@@ -54,6 +56,7 @@ export const colors = {
   O10: "#FFC40D",
   O7: "#FFDA49",
   O5: "#FFEA81",
+  O0: "#fff2d1",
 
   // Green
   G50: "#1D7324",
@@ -63,6 +66,7 @@ export const colors = {
   G10: "#4DD257",
   G7: "#55E560",
   G5: "#74FD7F",
+  G0: "#e0ffe2",
 
   // Purple
   P50: "#403294",

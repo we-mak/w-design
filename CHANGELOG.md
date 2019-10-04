@@ -4,10 +4,37 @@ All notable changes to this project will be documented in this file.
 
 Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
-### Next
+---
 
-- Add `List`
-- Add `SectionMessage`
+### next
+
+- `List`
+- `Upload`
+- Refactor `Icon`
+- Refactor monorepo
+
+---
+
+<a name="0.29.5-alpha"></a>#[v0.29.5-alpha]()
+
+### Update
+
+- `align-self: center` to `AvatarContent` of `AvatarGroup`
+- set `fluid` prop for `TextArea`
+- `Typo`: fix heading typo consist with origin heading tag, add `margin, fontWeight, fontFamily` props
+- `Image`: add `width, height` props
+- `Picture`: add `width, height` props
+- fix `InputForm` icon position
+
+### Add new features
+
+- `Comment`
+- `Breadcrubms`
+- `Masonry`
+- `PushMessage`
+- `AnchorScroll`
+- `SectionMessage`
+- `ProgressLoader`
 
 ---
 

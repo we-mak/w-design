@@ -6,15 +6,21 @@ import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import Intro from "./pages/Intro";
 import Start from "./pages/Start";
+import AnchorScrollPage from "./pages/AnchorScrollPage";
 import AvatarPage from "./pages/AvatarPage";
 import ButtonPage from "./pages/ButtonPage";
 import CardPage from "./pages/CardPage";
 import DropdownPage from "./pages/DropdownPage";
 import FormPage from "./pages/FormPage";
 import LayoutPage from "./pages/LayoutPage";
+import ListPage from "./pages/ListPage";
 import MenuPage from "./pages/MenuPage";
+import MediaPage from "./pages/MediaPage";
 import ModalPage from "./pages/ModalPage";
 import NavbarPage from "./pages/NavbarPage";
+import PushMessagePage from "./pages/PushMessagePage";
+import ProgressPage from "./pages/ProgressPage";
+import UploadPage from "./pages/UploadPage";
 import SpinnerPage from "./pages/SpinnerPage";
 import SectionMessagePage from "./pages/SectionMessagePage";
 import TypoPage from "./pages/TypoPage";
@@ -29,12 +35,13 @@ const NavWrapper = styled.div`
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 100;
   box-shadow: ${props => props.theme.shadows[1]};
   z-index: 999;
 `;
 
-const baseUrl = process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "";
+const { NODE_ENV, PUBLIC_URL } = process.env;
+
+const baseUrl = NODE_ENV === "production" ? PUBLIC_URL : "";
 
 const theme = {
   fonts: {
@@ -49,6 +56,7 @@ function App() {
   const [openMenu, setOpenMenu] = React.useState(false);
 
   const handleToogleMenu = () => setOpenMenu(!openMenu);
+
   return (
     <Provider theme={theme}>
       <>
@@ -75,18 +83,24 @@ function App() {
                   <Start path={baseUrl + "/start"} />
                   <LayoutPage path={baseUrl + "/layout"} />
                   {/* Elements */}
-                  <TypoPage path={baseUrl + "/typo"} />
-                  <ButtonPage path={baseUrl + "/button"} />
+                  <ListPage path={baseUrl + "/list"} />
                   <AvatarPage path={baseUrl + "/avatar"} />
+                  <ButtonPage path={baseUrl + "/button"} />
+                  <MediaPage path={baseUrl + "/media"} />
+                  <ProgressPage path={baseUrl + "/progress"} />
                   <SpinnerPage path={baseUrl + "/spinner"} />
                   <SectionMessagePage path={baseUrl + "/sectionmessage"} />
+                  <TypoPage path={baseUrl + "/typo"} />
                   {/* Components */}
+                  <AnchorScrollPage path={baseUrl + "/anchor-scroll"} />
                   <CardPage path={baseUrl + "/card"} />
                   <DropdownPage path={baseUrl + "/dropdown"} />
                   <ModalPage path={baseUrl + "/modal"} />
                   <MenuPage path={baseUrl + "/menu"} />
                   <NavbarPage path={baseUrl + "/nav"} />
                   <FormPage path={baseUrl + "/form"} />
+                  <PushMessagePage path={baseUrl + "/push-message"} />
+                  <UploadPage path={baseUrl + "/upload"} />
                 </Router>
               </Suspense>
             </Flexbox.Column>

@@ -12,6 +12,18 @@ const elements = [
     link: "/button"
   },
   {
+    title: "List",
+    link: "/list"
+  },
+  {
+    title: "Media",
+    link: "/media"
+  },
+  {
+    title: "ProgressLoader",
+    link: "/progress"
+  },
+  {
     title: "SectionMessage",
     link: "/sectionmessage"
   },
@@ -27,6 +39,10 @@ const elements = [
 
 const components = [
   {
+    title: "Anchor scroll",
+    link: "/anchor-scroll"
+  },
+  {
     title: "Card",
     link: "/card"
   },
@@ -34,6 +50,11 @@ const components = [
     title: "Dropdown",
     link: "/dropdown"
   },
+  {
+    title: "Form",
+    link: "/form"
+  },
+
   {
     title: "Navbar",
     link: "/nav"
@@ -43,12 +64,16 @@ const components = [
     link: "/modal"
   },
   {
-    title: "Form",
-    link: "/form"
-  },
-  {
     title: "Menu",
     link: "/menu"
+  },
+  {
+    title: "Push message",
+    link: "/push-message"
+  },
+  {
+    title: "Upload",
+    link: "/upload"
   }
 ];
 

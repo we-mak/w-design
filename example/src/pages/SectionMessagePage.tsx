@@ -1,10 +1,28 @@
 import * as React from "react";
-import { Typo } from "w-design";
+import { Typo, Container, SectionMessage } from "w-design";
+
+const Example = () => {
+  return (
+    <Container maxWidth={500}>
+      <SectionMessage title="Info">The quick brown fox jumps over the lazy dog</SectionMessage>
+      <SectionMessage appearance="confirm" title="Confirm">
+        The quick brown fox jumps over the lazy dog
+      </SectionMessage>
+      <SectionMessage title="Warn" appearance="warn">
+        The quick brown fox jumps over the lazy dog
+      </SectionMessage>
+      <SectionMessage title="Error" appearance="error">
+        The quick brown fox jumps over the lazy dog
+      </SectionMessage>
+    </Container>
+  );
+};
 
 const SectionMessagePage: React.FunctionComponent<any> = () => (
   <>
-    <Typo appearance="h1">Typo</Typo>
-    Text tag with flexible tag type following heading style
+    <Typo appearance="h1">SectionMessage</Typo>
+    Message block to notice user what happened, or something to require an action
+    <Example />
   </>
 );
 

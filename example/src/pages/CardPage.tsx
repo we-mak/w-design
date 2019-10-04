@@ -61,10 +61,7 @@ const CardPage: React.FunctionComponent<any> = () => (
               actions={<Button appearance="clean" iconBefore="fas fa-ellipsis-h" iconOnly />}
             />
           </CardHeader>
-          <CardMedia
-            imageUrl="https://dak95nwic4sny.cloudfront.net/73/cheetah-safari-41193237-1554105425-ImageGalleryLightboxLarge.jpg"
-            alt=""
-          />
+          <CardMedia imageUrl="https://source.unsplash.com/random?food" alt="" />
           <CardContent>
             A safari is an overland journey, usually a trip by tourists in Africa. In the past, the
             trip was often a big-game hunt, but today, safaris are often to observe
@@ -90,10 +87,7 @@ const CardPage: React.FunctionComponent<any> = () => (
               actions={<Button appearance="clean" iconBefore="fas fa-ellipsis-h" iconOnly />}
             />
           </CardHeader>
-          <CardMedia
-            imageUrl="https://dak95nwic4sny.cloudfront.net/73/cheetah-safari-41193237-1554105425-ImageGalleryLightboxLarge.jpg"
-            alt=""
-          />
+          <CardMedia imageUrl="https://source.unsplash.com/random" alt="" />
           <CardContent>
             A safari is an overland journey, usually a trip by tourists in Africa. In the past, the
             trip was often a big-game hunt, but today, safaris are often to observe
@@ -116,7 +110,7 @@ const CardPage: React.FunctionComponent<any> = () => (
       <Flexbox.Column width={[1, 1 / 2, 1 / 3]}>
         <Card>
           <CardMedia
-            imageUrl="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
+            imageUrl="https://source.unsplash.com/random"
             alt=""
           />
           <CardHeader title="Beautiful salad" description="24/12/2019" />
@@ -139,7 +133,7 @@ const CardPage: React.FunctionComponent<any> = () => (
             />
           </CardHeader>
           <CardMedia
-            imageUrl="https://dak95nwic4sny.cloudfront.net/73/cheetah-safari-41193237-1554105425-ImageGalleryLightboxLarge.jpg"
+            imageUrl="https://source.unsplash.com/random"
             alt=""
           />
           <CardContent>

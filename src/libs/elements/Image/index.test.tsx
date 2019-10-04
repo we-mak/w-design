@@ -14,10 +14,10 @@ beforeEach(async () => {
 });
 
 describe("<Image/>", () => {
-  it("should render correct icon styled", () => {
+  it("should render correct image", () => {
     const { container } = render(
       <Provider>
-        <Image src="https://api.adorable.io/avatars/240/thunder" />
+        <Image data-src="https://api.adorable.io/avatars/240/thunder" />
       </Provider>
     );
     expect(container).toMatchSnapshot();

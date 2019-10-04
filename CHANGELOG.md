@@ -11,6 +11,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - `List`
 - `Upload`
 - Refactor `Icon`
+- Refactor monorepo
 
 ---
 

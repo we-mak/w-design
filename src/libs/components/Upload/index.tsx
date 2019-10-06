@@ -7,9 +7,11 @@
  */
 import React, { FC, useState, memo } from "react";
 import PushMessage from "../PushMessage";
+import { FileList } from "./FileList";
 import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
 import { UploadProps } from "./types";
 import { PushMessageProps } from "../PushMessage/types";
+import { setUid } from "../../../common/helpers";
 
 const Upload: FC<UploadProps> = ({
   label = "+ Add file",
@@ -47,18 +49,22 @@ const Upload: FC<UploadProps> = ({
     }
   }
 
+  // Handle upload file: Use onchange event
+  // 1. Parse file info into custom object with unique id
+  // 2. Check load status error/success on local, preview file info
+  // 3. Check file types allowed,... anything before upload execute from props (if any)
+  // 4. Handle upload
+  // 5. Handle response upload info & status
   const handleUploadFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawfiles: FileList | null = e.target.files;
-
-    // Read client file
+    const rawfiles = Array.prototype.slice.call(e.target.files);
     if (rawfiles && rawfiles.length >= 0) {
-      for (let i = 0, file: File; (file = rawfiles[i]); i++) {
-        // if (file.type.match("image.*")) {
-        //   // preview image
-        // }
+      for (let i = 0, file; (file = rawfiles[i]); i++) {
+        // 1.
+        file.uid = setUid("file");
+        file.percent = 0;
 
+        // 2.
         const reader: FileReader = new FileReader();
-        // passing error from local
         reader.onerror = errorHandler;
 
         reader.onload = (f => {
@@ -74,20 +80,27 @@ const Upload: FC<UploadProps> = ({
   };
 
   return (
-    <UploadContainer uploadType={uploadType}>
-      {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
-      <UploadLabel>
-        <span>{label}</span>
-        <UploadInput
-          type="file"
-          accept={accept}
-          multiple={multiple}
-          onChange={handleUploadFiles}
-          disabled={disabled}
-        />
-      </UploadLabel>
-    </UploadContainer>
+    <>
+      <UploadContainer uploadType={uploadType}>
+        {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
+        <UploadLabel>
+          <span>{label}</span>
+          <UploadInput
+            type="file"
+            accept={accept}
+            multiple={multiple}
+            onChange={handleUploadFiles}
+            disabled={disabled}
+          />
+        </UploadLabel>
+      </UploadContainer>
+      <FileList />
+    </>
   );
 };
 
 export default memo(Upload);
+
+// if (file.type.match("image.*")) {
+//   // preview image
+// }

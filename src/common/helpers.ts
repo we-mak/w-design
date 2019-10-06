@@ -52,7 +52,7 @@ export const filterObject = (raw: object, removed: string[]) =>
  * Set a local uid base on datetime
  */
 
-export const setUid = (name?: string) => {
+export const setUid = (name: string) => {
   const now = +new Date();
   let index = 0;
   return `${name}-${now}-${++index}`;

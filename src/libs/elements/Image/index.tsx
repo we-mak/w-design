@@ -35,3 +35,4 @@ const Image = (props: any) => {
 };
 
 export default Image;
+export { ImageRatio } from "./ImageRatio";

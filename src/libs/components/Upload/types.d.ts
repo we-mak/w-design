@@ -47,12 +47,22 @@ export interface UploadProps extends GlobProps {
   multiple?: boolean;
   /* Label title under Label tag*/
   label?: string | ReactNode;
+  /* show file list when uploading */
+  showFileList?: boolean;
+  /* default file list */
   defaultFileList?: UploadFileType[];
+  /* current file list */
   fileList?: UploadFileType[];
+  /* Function to executed before upload. If `false` the upload will be reject */
+  beforeUpload?: (file, fileList) => boolean | Promise;
   /* restApi request upload use fetch Api*/
   requestUpload?: RequestUploadType;
   /* modified onchange behavior*/
   onChange?: (uploadInfo: UploadChangeParam) => void;
   /* disable input */
   disabled?: boolean;
+}
+
+export interface UploadListProps extends GlobProps {
+  fileList?: UploadFileType[];
 }

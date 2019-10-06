@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Image, Typo } from "w-design";
+import { Image, Typo, ImageRatio } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -17,6 +17,10 @@ const Example = () => {
       <Image data-src="https://source.unsplash.com/random" width={320} />
       <br />
       <Image data-src="https://source.unsplash.com/random?car" width="50%" />
+      <br />
+      <ImageRatio>
+        <Image data-src="https://source.unsplash.com/random?car" />
+      </ImageRatio>
     </>
   );
 };

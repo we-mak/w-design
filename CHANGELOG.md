@@ -6,10 +6,12 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-### next
+### <a name="0.30"></a>#[v0.30]()
 
-- `List`
 - `Upload`
+- `ImageRatioContainer`
+- `List`
+
 - Refactor `Icon`
 - Refactor monorepo
 

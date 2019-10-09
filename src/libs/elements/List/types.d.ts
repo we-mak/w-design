@@ -15,7 +15,7 @@ export interface ListItemProps extends GlobProps {
   key?: string | number;
   thumbnail?: string;
   title?: string | ReactNode;
-  description?: string;
+  description?: string | ReactNode;
   actions?: ReactNode[];
   hasDivider?: boolean;
   children?: ReactNode | ReactNode[];

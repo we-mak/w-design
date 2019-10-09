@@ -51,7 +51,7 @@ const Example = () => {
       ></List>
       <br />
       <div>Empty list example</div>
-      <List header="Empty list"></List>
+      <List header="Empty list" emptyView={<div>Hello</div>}></List>
     </>
   );
 };

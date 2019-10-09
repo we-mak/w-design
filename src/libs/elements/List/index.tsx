@@ -6,35 +6,20 @@
  * - If array is empty, return emptyView
  * - If array length > 0, render the items list with ListItem element
  * - Spinner exists if data is loading
-
- * Example Usage
- <List
-  header="List header"
-  isLoading
-  itemData={[{
-    ...data
-  }]}
-
-  renderItem={item => {
-    return (
-      <ListItem
-        thumbnail="*image"
-        title="Item title"
-        description="Item description"
-        actions=[...actionlist]
-      >
-        List item child content
-      </ListItem>
-    )
-  }}
- ></List>
  */
 import * as React from "react";
-import { ListContainer, ListWrapper, MenuList, SpinnerWrapper } from "./Styled";
-import { ListProps } from "./types";
 import Spinner from "../Spinner";
 import Typo from "../Typo";
 import Divider from "../Divider";
+import {
+  ListContainer,
+  ListWrapper,
+  MenuList,
+  SpinnerWrapper,
+  ListFooter,
+  EmptyContainer
+} from "./Styled";
+import { ListProps } from "./types";
 
 const List: React.FC<ListProps> = ({
   header,
@@ -42,7 +27,8 @@ const List: React.FC<ListProps> = ({
   isLoading = false,
   sourceData = [],
   rowKey,
-  rows
+  rows,
+  emptyView
 }) => {
   let keys: { [key: string]: string } = {};
 
@@ -84,14 +70,18 @@ const List: React.FC<ListProps> = ({
 
     childrenComponent = <MenuList>{childrenList}</MenuList>;
   } else if (!isLoading) {
-    childrenComponent = <div>Empty</div>;
+    if (emptyView) {
+      childrenComponent = <EmptyContainer>{emptyView}</EmptyContainer>;
+    } else {
+      childrenComponent = <EmptyContainer>No data...</EmptyContainer>;
+    }
   }
 
   return (
     <ListContainer>
       {header && (
         <>
-          <Typo tag="h3" mt="0.4rem" mb="0.2rem">
+          <Typo tag="h3" mt="0.4rem" mb="0">
             {header}
           </Typo>
           <Divider />
@@ -114,4 +104,4 @@ const List: React.FC<ListProps> = ({
 
 export default List;
 export { ListItem } from "./ListItem";
-export { ListFooter } from "./Styled";
+export { ListFooter };

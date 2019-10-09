@@ -1,6 +1,14 @@
 import styled from "styled-components";
-import { border, justifyContent } from "styled-system";
+import {
+  border,
+  margin,
+  justifyContent,
+  BorderProps,
+  MarginProps,
+  JustifyContentProps
+} from "styled-system";
 import { ListProps, ListItemProps } from "./types";
+import { GlobProps } from "../../../typings";
 
 export const ListContainer = styled.div`
   position: relative;
@@ -86,11 +94,20 @@ export const ThumbContainer = styled.div`
 `;
 ThumbContainer.displayName = "ThumbContainer";
 
-export const ListFooter = styled.div`
-  margin: 0 auto;
-  text-align: center;
+export interface ListFooterProps extends GlobProps, BorderProps, MarginProps, JustifyContentProps {}
+
+export const ListFooter = styled.div<ListFooterProps>`
+  display: flex;
   padding-top: 0.5em;
-  ${border}
-  ${justifyContent}
+  border-top: 1px solid ${props => props.theme.colors["N5"]};
+  ${border};
+  ${margin};
+  ${justifyContent};
 `;
 ListFooter.displayName = "ListFooter";
+
+export const EmptyContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+EmptyContainer.displayName = "EmptyContainer";

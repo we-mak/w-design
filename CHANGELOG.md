@@ -8,12 +8,16 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### <a name="0.30"></a>#[v0.30]()
 
-- `Upload`
-- `ImageRatioContainer`
-- `List`
+- ✓ `ImageRatio`
+- ⨉ `List`
+- ⨉ `Upload`
 
-- Refactor `Icon`
-- Refactor monorepo
+Add new hooks
+
+- ⨉ `useField`
+- ⨉ `useForm`
+- ⨉ Refactor `Icon`
+- ⨉ Refactor monorepo
 
 ---
 

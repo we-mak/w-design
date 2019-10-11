@@ -4,6 +4,7 @@
  * Inspired by:
  * - https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
  * - https://ant.design/components/upload/
+ *
  */
 import React, { FC, useState, memo } from "react";
 import PushMessage from "../PushMessage";
@@ -12,14 +13,19 @@ import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
 import { UploadProps } from "./types";
 import { PushMessageProps } from "../PushMessage/types";
 import { setUid } from "../../../common/helpers";
+import { fileToObject } from "./utils";
 
 const Upload: FC<UploadProps> = ({
   label = "+ Add file",
   uploadType = "textName",
   multiple = false,
   accept,
-  disabled
+  disabled,
+  showFileList = true,
+  defaultFileList = [],
+  beforeUpload
 }) => {
+  const [fileList, setFileList] = useState(defaultFileList);
   const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
 
   // Handle error from local reading file
@@ -58,26 +64,37 @@ const Upload: FC<UploadProps> = ({
   const handleUploadFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rawfiles = Array.prototype.slice.call(e.target.files);
     if (rawfiles && rawfiles.length >= 0) {
-      for (let i = 0, file; (file = rawfiles[i]); i++) {
-        // 1.
-        file.uid = setUid("file");
-        file.percent = 0;
-
-        // 2.
+      rawfiles.forEach(file => {
         const reader: FileReader = new FileReader();
         reader.onerror = errorHandler;
 
         reader.onload = (f => {
-          return (e: ProgressEvent) => {
-            console.log(e, f);
+          // update custom file object
+          f.uid = setUid("file");
+          f.percent = 0;
+          const parsedFile = fileToObject(f);
+
+          return async (e: ProgressEvent<any>) => {
+            // handle preview image from local url
+            console.log(e.target);
+            const { result } = e.target;
+
+            if (!beforeUpload) {
+              // return upload imediately
+            }
+
+            // update file list
+            setFileList([...fileList, { ...parsedFile, thumbUrl: result }]);
           };
         })(file);
 
         // Read in the image file as a data URL.
         reader.readAsDataURL(file);
-      }
+      });
     }
   };
+
+  console.log(fileList);
 
   return (
     <>
@@ -94,7 +111,11 @@ const Upload: FC<UploadProps> = ({
           />
         </UploadLabel>
       </UploadContainer>
-      <FileList />
+      {/**
+       * show file list
+       * only show file list if list length > 0 or showFileList prop = false
+       */
+      showFileList && fileList.length > 0 && <FileList fileList={fileList} />}
     </>
   );
 };

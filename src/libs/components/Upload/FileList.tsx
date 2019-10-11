@@ -1,21 +1,25 @@
 import * as React from "react";
 import ProgressLoader from "../../elements/ProgressLoader";
-import Image, { ImageRatio } from "../../elements/Image";
+import List, { ListItem } from "../../elements/List";
 import { UploadListProps } from "./types";
-import { ListContainer, ThumbContainer } from "./Styled";
+import { ListContainer } from "./Styled";
 
-export const FileList: React.FC<UploadListProps> = () => {
+export const FileList: React.FC<UploadListProps> = ({ fileList }) => {
   return (
     <ListContainer>
-      <ThumbContainer>
-        <ImageRatio paddingBottom={100}>
-          <Image data-src="https://source.unsplash.com/random/100" />
-        </ImageRatio>
-      </ThumbContainer>
-      <div>
-        <div>this is the file name</div>
-        <ProgressLoader size="sm" percent={20} />
-      </div>
+      <List
+        sourceData={fileList}
+        rows={(item: any) => {
+          return (
+            <ListItem thumbnail={item.thumbUrl}>
+              <div style={{ width: "100%" }}>
+                {item.name}
+                <ProgressLoader size="sm" percent={20} />
+              </div>
+            </ListItem>
+          );
+        }}
+      ></List>
     </ListContainer>
   );
 };

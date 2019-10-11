@@ -30,15 +30,17 @@ export const ListItem: React.FC<ListItemProps> = ({
         )}
 
         <ListItemMetaInfo>
-          <Typo tag="h4" fontWeight={600} marginBottom={0}>
-            {title}
-          </Typo>
-          <div>{description}</div>
+          {title && (
+            <Typo tag="h4" fontWeight={600} marginBottom={0}>
+              {title}
+            </Typo>
+          )}
+          {description && <div>{description}</div>}
         </ListItemMetaInfo>
       </ListItemMeta>
 
-      <ListItemMetaInfo>{children}</ListItemMetaInfo>
-      <ListItemActionGroup>{actions}</ListItemActionGroup>
+      {children}
+      {actions && <ListItemActionGroup>{actions}</ListItemActionGroup>}
     </ListItemStyled>
   );
 };

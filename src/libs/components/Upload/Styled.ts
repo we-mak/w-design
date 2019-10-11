@@ -105,9 +105,8 @@ const getListStyle = (props: UploadListProps) => {
 };
 
 export const ListContainer = styled.div`
-  display: flex;
+  display: block;
   position: relative;
-  justify-content: flex-start;
   padding: 0.4rem;
   border-radius: 0.2rem;
   background: #fff;
@@ -115,10 +114,3 @@ export const ListContainer = styled.div`
   ${getListStyle};
 `;
 ListContainer.displayName = "ListContainer";
-
-export const ThumbContainer = styled.div`
-  width: 2rem;
-  height: 2rem;
-  margin: 0.2rem;
-`;
-ThumbContainer.displayName = "ThumbContainer";

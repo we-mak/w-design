@@ -1,25 +1,17 @@
+import { useState, useEffect } from "react";
+import { FormType, ValidatorTypes } from "./types";
+import { InputFieldProps } from "../../libs/elements/InputField/types";
+
 /**
  * useField
- * Hooks to set field props to update component,
- * it has relationship with useForm as useForm child
+ * This hook update component via `InputField` props.
+ * @param form - form that returned from `useForm`
+ * @param validations - validation functions to validate value
+ * @param defaultValue - the initial value of the input field
  */
-import { useState, useEffect } from "react";
-
-export interface validatorTypes {
-  validate: Function;
-  message: string;
-  option?: any;
-}
-
-export default (
-  form: any,
-  name: string,
-  type?: string,
-  validations?: validatorTypes[],
-  isRequired?: boolean
-): object => {
-  const [value, setValue] = useState();
-  const [debouncedValue, setDebouncedValue]: [string, Function] = useState(value);
+const useField = (form?: FormType, validations?: ValidatorTypes[]): InputFieldProps => {
+  const [value, setValue] = useState("");
+  const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
     const handler = setTimeout(() => setDebouncedValue(value), 400);
@@ -28,37 +20,38 @@ export default (
     };
   }, [value]);
 
-  let success: boolean | undefined;
-  let error: boolean | undefined;
-  let errorMessage: string | undefined;
+  let status: "error" | "success";
+  let errorMessage: string;
 
-  // validate values
+  // Validation the debounce value
+  // on the top, we need to define a validation helper
+  // to return a validate
   if (debouncedValue) {
     validations &&
       validations.map(({ validate, message, option }) => {
         const valid = validate(debouncedValue, option);
         if (!valid) {
-          error = true;
+          status = "error";
           errorMessage = message;
+          return false;
         }
         return true;
       });
   }
 
-  // Success input
-  if (validations && debouncedValue && !error) success = true;
+  // Success validate
+  if (validations && debouncedValue) {
+    status = "success";
+  }
 
   let field = {
-    name,
-    type,
     value,
-    isError: error,
-    hintMessage: errorMessage,
-    isSuccess: success,
-    isRequired,
+    isSuccess: status! === "success",
+    isError: status! === "error",
+    hintMessage: errorMessage!,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       // clean form error when adding value
-      if (form.formErrMessage) {
+      if (form && form.formErrMessage) {
         form.setFormErr(false);
         form.setFormErrMessage("");
       }
@@ -66,6 +59,9 @@ export default (
     }
   };
 
-  form.addField(field);
+  form && form.addField(field);
+
   return field;
 };
+
+export default useField;

@@ -1,31 +1,29 @@
-/**
- * useForm.ts
- *
- */
 import * as React from "react";
+import { InputFieldProps } from "../../libs/elements/InputField/types";
+import { FormType } from "./types";
 
-interface formProps {
-  mandatory?: string;
-}
-
-export default ({ mandatory }: formProps) => {
-  const [formErrMessage, setFormErrMessage]: [string, Function] = React.useState("");
-  const [formErr, setFormErr]: [boolean, Function] = React.useState(false);
+/**
+ * useForm
+ * @param requiredMessage - generic message for required field notify when submit
+ */
+const useForm = (requiredMessage?: string): FormType => {
+  const [formErrMessage, setFormErrMessage] = React.useState("");
+  const [formErr, setFormErr] = React.useState(false);
   // prevent submit multiple times
-  const [submitted, setSubmitted]: [boolean, Function] = React.useState(false);
+  const [submitted, setSubmitted] = React.useState(false);
 
-  let fields: any[] = [];
-  let formDatas: any[] = [];
-  let formErrors: any[] = [];
+  let fields: Array<any> = [];
+  let formDatas: Array<any> = [];
+  let formErrors: Array<any> = [];
 
   const getFormData = () =>
-    fields.reduce((formData, f) => {
-      formData[f.name] = f.value;
-      return formData;
+    fields.reduce((data, f) => {
+      data[f.name] = f.value;
+      return data;
     }, {});
 
   return {
-    addField: (field: any) => fields.push(field),
+    addField: (field: InputFieldProps) => fields.push(field),
     onSubmit: (e: React.FormEvent) => {
       e.preventDefault();
 
@@ -33,7 +31,7 @@ export default ({ mandatory }: formProps) => {
         if (field.isRequired && !field.value) {
           field.isError = true;
           // Pass error message
-          setFormErrMessage(mandatory);
+          setFormErrMessage(requiredMessage!);
         }
 
         if (field.isError) {
@@ -53,6 +51,8 @@ export default ({ mandatory }: formProps) => {
         return setSubmitted(true);
       }
 
+      console.log(formDatas);
+
       return formDatas;
     },
     submitted,
@@ -62,3 +62,5 @@ export default ({ mandatory }: formProps) => {
     setFormErr
   };
 };
+
+export default useForm;

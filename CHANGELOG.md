@@ -8,21 +8,20 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### next
 
-- ⨉ Refactor `Icon`
-- ⨉ Refactor monorepo
+- Refactor `Icon`
+- Refactor monorepo
+- `CustomTag` with full `styled-system` options (this issue must be fixed https://github.com/styled-components/styled-components/issues/439)
+
+- `EmptyView`
 
 ---
 
-### <a name="0.30"></a>#[v0.30]()
+### <a name="0.32"></a>#[v0.32]()
 
-- ✓ `ImageRatio`
-- ✓ `List`
-- ⨉ `Upload`
+- `ImageRatio`
+- `List`
 
-Add new hooks
-
-- ⨉ `useField`
-- ⨉ `useForm`
+- `Upload`
 
 ---
 

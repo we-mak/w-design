@@ -110,8 +110,8 @@ Cover basic components, widgets from 3rd parties libray
 | Layout            | Elements               | Components      | Hooks              |
 | ----------------- | ---------------------- | --------------- | ------------------ |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup  | ✅ useClickOutside |
-| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       | ✅ useField        |
-| ✅ DisplayElement | ✅ Label               | ❌ Badges       | ✅ useForm         |
+| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       | ❌ useField        |
+| ✅ DisplayElement | ✅ Label               | ❌ Badges       | ❌ useForm         |
 | ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible  |                    |
 | ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  |                    |
 |                   | ❌ Chip                | ❌ Steps        |                    |

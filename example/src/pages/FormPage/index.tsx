@@ -159,7 +159,6 @@ const FormPage: React.FunctionComponent<any> = () => {
       <br />
       <TextArea label="Textarea fluid" fluid />
 
-      <Typo appearance="h3">Hooks</Typo>
       <HooksExample />
     </>
   );

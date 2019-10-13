@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Menu, MenuItem, MenuHeading, SubMenu, Icon, Typo, Divider } from "w-design";
+import { Menu, MenuItem, MenuHeading, SubMenu, Icon, Typo } from "w-design";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
@@ -53,7 +53,7 @@ const Example1 = () => {
       <MenuItem key="4" iconBefore={<Icon className="fas fa-paper-plane" />}>
         Item 4
       </MenuItem>
-      <Divider customHTMLtag="li" />
+
       <MenuHeading>Menu heading</MenuHeading>
       <SubMenu key="sub-1" icon={<Icon className="fas fa-cog" />} title="Submenu title 1">
         {subList1.map(item => (

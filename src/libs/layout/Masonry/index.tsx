@@ -6,7 +6,7 @@
  * TODO: Windowing render
  * idea to make it works:
  * - Base on intersection observer
- * - Check columns height
+ * - Check columns height, elements height with intial default value before load
  * - Check scroll position compare to "View port" (view port is basically initial container height)
  * - Check which items on each column are in "view port"
  * - Limit rendering items by index
@@ -23,16 +23,17 @@ const Masonry = ({ breakpoints, children, defaultCols = 3 }: MasonryProps) => {
 
   // Re-assign children component to right columns
   const mapChildren = () => {
-    let col: any[] = [];
+    let col: Array<any> = [];
 
     for (let i = 0; i < columns; i++) {
       const arr: ReactElement[] = [];
       col.push(arr);
     }
-    return children.reduce((p, c, i) => {
-      p[i % columns].push(c);
 
-      return p;
+    return children.reduce((accumulator, currentValue, currentIndex) => {
+      accumulator[currentIndex % columns].push(currentValue);
+
+      return accumulator;
     }, col);
   };
 

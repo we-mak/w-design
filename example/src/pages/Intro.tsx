@@ -22,7 +22,7 @@ Feel free to use this library, or help us to improve it.
 - Written with React hooks, Typescript
 - Styled with styled-components and styled-system
 - Suitable for web application UI
-- Supports modern web browsers
+- Supports modern web browsers. If you care about IE, don't use this library.
 
 
 ## 🐞 Report

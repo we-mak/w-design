@@ -12,7 +12,11 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - Refactor monorepo
 - `CustomTag` with full `styled-system` options (this issue must be fixed https://github.com/styled-components/styled-components/issues/439)
 
+### Features
+
 - `EmptyView`
+- `Badges`
+- `Collapsible`
 
 ---
 

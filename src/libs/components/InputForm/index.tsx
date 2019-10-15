@@ -38,6 +38,7 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
             isError={isError}
             isWarning={isWarning}
             isRequired={isRequired}
+            isValid={isSuccess}
             {...rest}
           />
           {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}

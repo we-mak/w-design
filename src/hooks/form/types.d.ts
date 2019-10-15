@@ -6,7 +6,7 @@ export type ValidatorType = {
   option?: any;
 };
 
-export type FieldStatus = "error" | "success" | "warn" | null;
+export type FieldStatus = "error" | "success" | "warn";
 
 export interface FieldProps extends InputFormProps {
   setStatus: Function;

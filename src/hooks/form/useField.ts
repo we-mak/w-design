@@ -7,32 +7,35 @@ import { FieldProps, FieldType, FieldStatus } from "./types";
  */
 
 const useField = ({ form, name, isRequired, defaultValue, validations }: FieldType): FieldProps => {
-  const [status, setStatus] = useState<FieldStatus>();
+  const [status, setStatus] = useState<FieldStatus | null>();
   const [hintMessage, setHintMessage] = useState();
   const [value, setValue] = useState(defaultValue || "");
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
-    const handler = setTimeout(() => setDebouncedValue(value), 400);
-    return () => clearTimeout(handler);
-  }, [value]);
-
-  // Validation the debounce value
-  // on the top, we need to define a validation helper
-  // to return a validate
-  if (debouncedValue && validations) {
-    validations.map(({ validate, message, option }) => {
-      const valid = validate(debouncedValue, option);
-      if (!valid) {
-        setStatus("error");
-        setHintMessage(message);
-        return false;
-      }
-
+    // render success if has value
+    // and no validation
+    if (value && !validations) {
       setStatus("success");
-      return true;
-    });
-  }
+    }
+
+    const handler = setTimeout(() => setDebouncedValue(value), 600);
+    // Validation the debounce value
+    // on the top, we need to define a validation helper
+    // to return a validate
+    if (debouncedValue && validations) {
+      validations.map(({ validate, message, option }) => {
+        const valid = validate(debouncedValue, option);
+
+        if (!valid) {
+          return setStatus("error"), setHintMessage(message);
+        }
+
+        return setStatus("success"), setHintMessage("");
+      });
+    }
+    return () => clearTimeout(handler);
+  }, [value, debouncedValue, validations]);
 
   const handleChangeVal = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (status === "success" || "error") {
@@ -46,15 +49,15 @@ const useField = ({ form, name, isRequired, defaultValue, validations }: FieldTy
       form.setFormErrorMessage("");
     }
 
-    return setValue(e.target.value.trim());
+    setValue(e.target.value.trim());
   };
 
   const field: FieldProps = {
     name,
     value,
     isRequired,
-    isSuccess: status! === "success",
-    isError: status! === "error",
+    isSuccess: status === "success",
+    isError: status === "error",
     hintMessage,
     onChange: handleChangeVal,
     // leaky extends state

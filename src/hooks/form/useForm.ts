@@ -1,65 +1,58 @@
 import * as React from "react";
-import { InputFieldProps } from "../../libs/elements/InputField/types";
-import { FormType } from "./types";
+import { FieldProps, FormType, FormProps } from "./types";
 
 /**
  * useForm
  * @param requiredMessage - generic message for required field notify when submit
  */
-const useForm = (requiredMessage?: string): FormType => {
-  const [formErrMessage, setFormErrMessage] = React.useState("");
-  const [formErr, setFormErr] = React.useState(false);
-  // prevent submit multiple times
-  const [submitted, setSubmitted] = React.useState(false);
+const useForm = ({ requiredMessage }: FormType): FormProps => {
+  const [formErrorMessage, setFormErrorMessage] = React.useState("");
 
-  let fields: Array<any> = [];
-  let formDatas: Array<any> = [];
+  // prevent submit multiple times
+  const [status, setStatus] = React.useState();
+
+  let fields: Array<FieldProps> = [];
+  let formData: FieldProps | {};
   let formErrors: Array<any> = [];
 
-  const getFormData = () =>
-    fields.reduce((data, f) => {
-      data[f.name] = f.value;
-      return data;
-    }, {});
-
   return {
-    addField: (field: InputFieldProps) => fields.push(field),
-    onSubmit: (e: React.FormEvent) => {
+    addField: (field: FieldProps) => fields.push(field),
+    onSubmit: (e: React.FormEvent, submitFetching: Function) => {
       e.preventDefault();
 
+      // Error from local
+      // reverse to check from top to bottom
       fields.reverse().map(field => {
         if (field.isRequired && !field.value) {
-          field.isError = true;
-          // Pass error message
-          setFormErrMessage(requiredMessage!);
-        }
-
-        if (field.isError) {
+          // update form status
+          setStatus("error");
+          // update field
+          field.setStatus("error");
+          requiredMessage && field.setHintMessage(requiredMessage);
           // focus to error field
-          e.target[field.name].focus();
-          setFormErr(true);
-          return formErrors.push(field.name);
+          e.target[field.name!].focus();
+          formErrors.push(field.name);
         }
 
-        return true;
+        return;
       });
 
-      formDatas = getFormData();
+      formData = fields.reduce((result, currentField: FieldProps) => {
+        result[currentField.name!] = currentField.value;
+        return result;
+      }, {});
 
-      // Submit data if no errors
-      if (formErrors.length === 0) {
-        return setSubmitted(true);
+      // false if there is any error
+      if (formErrors.length > 0) {
+        return false;
       }
 
-      console.log(formDatas);
-
-      return formDatas;
+      return submitFetching(formData);
     },
-    submitted,
-    formErrMessage,
-    setFormErrMessage,
-    formErr,
-    setFormErr
+    status,
+    formErrorMessage,
+    setFormErrorMessage,
+    setStatus
   };
 };
 

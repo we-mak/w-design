@@ -1,62 +1,66 @@
 import { useState, useEffect } from "react";
-import { FormType, ValidatorTypes } from "./types";
-import { InputFieldProps } from "../../libs/elements/InputField/types";
+import { FieldProps, FieldType, FieldStatus } from "./types";
 
 /**
  * useField
  * This hook update component via `InputField` props.
- * @param form - form that returned from `useForm`
- * @param validations - validation functions to validate value
- * @param defaultValue - the initial value of the input field
  */
-const useField = (form?: FormType, validations?: ValidatorTypes[]): InputFieldProps => {
-  const [value, setValue] = useState("");
+
+const useField = ({ form, name, isRequired, defaultValue, validations }: FieldType): FieldProps => {
+  const [status, setStatus] = useState<FieldStatus>();
+  const [hintMessage, setHintMessage] = useState();
+  const [value, setValue] = useState(defaultValue || "");
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {
     const handler = setTimeout(() => setDebouncedValue(value), 400);
-    return () => {
-      clearTimeout(handler);
-    };
+    return () => clearTimeout(handler);
   }, [value]);
-
-  let status: "error" | "success";
-  let errorMessage: string;
 
   // Validation the debounce value
   // on the top, we need to define a validation helper
   // to return a validate
-  if (debouncedValue) {
-    validations &&
-      validations.map(({ validate, message, option }) => {
-        const valid = validate(debouncedValue, option);
-        if (!valid) {
-          status = "error";
-          errorMessage = message;
-          return false;
-        }
-        return true;
-      });
+  if (debouncedValue && validations) {
+    validations.map(({ validate, message, option }) => {
+      const valid = validate(debouncedValue, option);
+      if (!valid) {
+        setStatus("error");
+        setHintMessage(message);
+        return false;
+      }
+
+      setStatus("success");
+      return true;
+    });
   }
 
-  // Success validate
-  if (validations && debouncedValue) {
-    status = "success";
-  }
+  const handleChangeVal = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (status === "success" || "error") {
+      setStatus(undefined);
+      setHintMessage("");
+    }
 
-  let field = {
+    // clean form error when adding value
+    if (form && form.formErrorMessage) {
+      form.setStatus(undefined);
+      form.setFormErrorMessage("");
+    }
+
+    return setValue(e.target.value.trim());
+  };
+
+  const field: FieldProps = {
+    name,
     value,
+    isRequired,
     isSuccess: status! === "success",
     isError: status! === "error",
-    hintMessage: errorMessage!,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-      // clean form error when adding value
-      if (form && form.formErrMessage) {
-        form.setFormErr(false);
-        form.setFormErrMessage("");
-      }
-      return setValue(e.target.value);
-    }
+    hintMessage,
+    onChange: handleChangeVal,
+    // leaky extends state
+    // TODO: check safety types since we don't have any props like this in FieldForm
+    setStatus,
+    setHintMessage
   };
 
   form && form.addField(field);

@@ -1,22 +1,45 @@
 import * as React from "react";
-import { Typo, Card, CardContent, Container, InputForm, Button, useField, useForm } from "w-design";
+import {
+  Typo,
+  Card,
+  CardContent,
+  Container,
+  InputForm,
+  Button,
+  useField,
+  useForm,
+  SectionMessage
+} from "w-design";
 import ReactMarkdown from "react-markdown";
 
 const Form = () => {
-  const form = useForm("required field");
-  const name = useField(form);
+  const form = useForm({ requiredMessage: "required field" });
+  const name = useField({ form, name: "name", defaultValue: "John Doe" });
+  const email = useField({ form, name: "email", isRequired: true });
+  const password = useField({ form, name: "password", isRequired: true });
+
   return (
-    <form onSubmit={form.onSubmit}>
-      <InputForm
-        name="name"
-        type="text"
-        label="Name"
-        placeholder="Add your name"
-        isRequired
-        {...name}
-      />
-      <InputForm name="email" type="email" label="Email" placeholder="add your email" />
-      <InputForm name="password" type="password" placeholder="add your password" label="Password" />
+    <form
+      onSubmit={(e: React.FormEvent) =>
+        form.onSubmit(e, (formdata: any) => {
+          // You can post data here
+          // change UI state
+          // by setting status to fetching, fetched, disable button
+          console.log(formdata);
+          form.setStatus("submitted");
+        })
+      }
+      noValidate
+    >
+      <InputForm {...name} type="text" label="Name" placeholder="Add your name" />
+      <InputForm {...email} type="email" label="Email" placeholder="add your email" />
+      <InputForm {...password} type="password" placeholder="add your password" label="Password" />
+
+      {form.status === "error" && form.formErrorMessage && (
+        <SectionMessage title="Error" appearance="error">
+          {form.formErrorMessage}
+        </SectionMessage>
+      )}
 
       <div
         style={{
@@ -24,7 +47,7 @@ const Form = () => {
           justifyContent: "flex-end"
         }}
       >
-        <Button appearance="primary" type="submit">
+        <Button appearance="primary" type="submit" isDisabled={form.status === "submitted"}>
           Submit
         </Button>
       </div>
@@ -36,17 +59,47 @@ export const HooksExample = () => {
   return (
     <>
       <Typo appearance="h3">Hooks</Typo>
+      We-design <code>useField</code> and <code>useForm</code> are simple hooks, it help to update
+      components state with values and other factors for your form, such as validation, error
+      status, message, and pass those values to the server.
+      <br />
+      If you need something more extendable, you may take a look at this{" "}
+      <a href="https://final-form.org" target="_blank" rel="noopener noreferrer">
+        https://final-form.org
+      </a>{" "}
+      library.
+      <br />
       <ReactMarkdown
         source={`
-\`useField\` and \`useForm\` hooks are helpers to update components state with values and other factors
-for your form, such as validation, error status, message.
+
+#### Use case
+
+Typically, when create a from, we need to resolve the user experience senarios that provide the good way to let user
+understand what he/she needs to do to the form by getting response from their behaviour:
+
+- When user is typing
+- When user finish adding information into the form
+- Response after submit the form.
+
 
 #### useField
 
-This hook update component via \`InputField\` props.
+This hook update component and return an \`InputField\` props object.
+
+**API**
+
+| Params       | type            | default | description                            |
+| ------------ | --------------- | ------- | -------------------------------------- |
+| form         | FormType        |         | form hooks values, came from \`useForm\` |
+| name         | string          |         | name of input field                    |
+| defaultValue | string          | ""      | input value                            |
+| validations? | ValidatorType[] |         | an array of validator object.          |
 
       `}
       />
+      <p>
+        <strong>Example</strong>
+      </p>
       <Container maxWidth={500}>
         <Card>
           <CardContent>

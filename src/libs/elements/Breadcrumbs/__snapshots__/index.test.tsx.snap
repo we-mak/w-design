@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs/> should render breadcrumbs correctly 1`] = `
+.c0 {
+  color: #566E82;
+  font-size: 0.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  line-height: 1.2;
+  height: 1.2rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0px;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #008CC0;
+}
+
+.c2 {
+  color: #566E82;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0px 0.2rem;
+}
+
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      1
+      <div
+        class="c2"
+        role="presentation"
+      >
+        /
+      </div>
+    </div>
+    <div
+      class="c1"
+    >
+      2
+      <div
+        class="c2"
+        role="presentation"
+      >
+        /
+      </div>
+    </div>
+    <div
+      class="c1"
+    >
+      Item 3
+    </div>
+  </nav>
+</div>
+`;

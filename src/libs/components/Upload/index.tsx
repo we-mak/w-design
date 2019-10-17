@@ -1,16 +1,22 @@
 /**
  * Upload
  * Simple upload file and image
- * Inspired by:
+ * Refs:
  * - https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
+ * - http://christopher5106.github.io/web/2015/12/13/HTML5-file-image-upload-and-resizing-javascript-with-progress-bar.html
  * - https://ant.design/components/upload/
  *
  */
+
+// TODO:
+//  Handle abort upload
+// Handle response upload info & status
+
 import React, { FC, useState, memo } from "react";
 import PushMessage from "../PushMessage";
 import { FileList } from "./FileList";
 import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
-import { UploadProps } from "./types";
+import { UploadProps, UploadFileType } from "./types";
 import { PushMessageProps } from "../PushMessage/types";
 import { setUid } from "../../../common/helpers";
 import { fileToObject } from "./utils";
@@ -56,42 +62,53 @@ const Upload: FC<UploadProps> = ({
   }
 
   // Handle upload file: Use onchange event
-  // 1. Parse file info into custom object with unique id
-  // 2. Check load status error/success on local, preview file info
-  // 3. Check file types allowed,... anything before upload execute from props (if any)
-  // 4. Handle upload
-  // 5. Handle response upload info & status
   const handleUploadFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rawfiles = Array.prototype.slice.call(e.target.files);
     if (rawfiles && rawfiles.length >= 0) {
       rawfiles.forEach(file => {
         const reader: FileReader = new FileReader();
+        // Check load status error/success on local, preview file info
         reader.onerror = errorHandler;
-
+        // Handle upload
         reader.onload = (f => {
-          // update custom file object
+          // Parse file info into custom object with unique id
           f.uid = setUid("file");
           f.percent = 0;
           const parsedFile = fileToObject(f);
 
           return async (e: ProgressEvent<any>) => {
+            // ProgressEvent interface https://xhr.spec.whatwg.org/#interface-progressevent
+
             // handle preview image from local url
-            console.log(e.target);
-            const { result } = e.target;
+            let thumb;
+            const { result } = await e.target;
 
-            if (!beforeUpload) {
-              // return upload imediately
+            if (!f.type.match("image.*")) {
+              thumb =
+                "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1OCIgaGVpZ2h0PSI1OCIgdmlld0JveD0iMCAwIDU4IDU4Ij4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjU4IiBoZWlnaHQ9IjU4IiBmaWxsPSIjRDhEOEQ4IiBmaWxsLW9wYWNpdHk9Ii4xIi8+CiAgICA8ZyBmaWxsLXJ1bGU9Im5vbnplcm8iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcgMSkiPgogICAgICA8cGF0aCBmaWxsPSIjRjBGMEYwIiBkPSJNMzAuOTg1LDAgTDEuOTYzLDAgQzEuMTU1LDAgMC41LDAuNjU1IDAuNSwxLjkyNiBMMC41LDU1IEMwLjUsNTUuMzQ1IDEuMTU1LDU2IDEuOTYzLDU2IEw0Mi4wMzcsNTYgQzQyLjg0NSw1NiA0My41LDU1LjM0NSA0My41LDU1IEw0My41LDEyLjk3OCBDNDMuNSwxMi4yODIgNDMuNDA3LDEyLjA1OCA0My4yNDMsMTEuODkzIEwzMS42MDcsMC4yNTcgQzMxLjQ0MiwwLjA5MyAzMS4yMTgsMCAzMC45ODUsMCBaIi8+CiAgICAgIDxwb2x5Z29uIGZpbGw9IiNENUQ1RDUiIHBvaW50cz0iMzEuNSAuMTUxIDMxLjUgMTIgNDMuMzQ5IDEyIi8+CiAgICAgIDxwYXRoIGZpbGw9IiMzRkIwRTQiIGQ9Ik0xMi41IDEzTDYuNSAxM0M1Ljk0OCAxMyA1LjUgMTIuNTUyIDUuNSAxMiA1LjUgMTEuNDQ4IDUuOTQ4IDExIDYuNSAxMUwxMi41IDExQzEzLjA1MiAxMSAxMy41IDExLjQ0OCAxMy41IDEyIDEzLjUgMTIuNTUyIDEzLjA1MiAxMyAxMi41IDEzek0xNS41IDE4TDYuNSAxOEM1Ljk0OCAxOCA1LjUgMTcuNTUyIDUuNSAxNyA1LjUgMTYuNDQ4IDUuOTQ4IDE2IDYuNSAxNkwxNS41IDE2QzE2LjA1MiAxNiAxNi41IDE2LjQ0OCAxNi41IDE3IDE2LjUgMTcuNTUyIDE2LjA1MiAxOCAxNS41IDE4ek0xOS41IDE4QzE5LjI0IDE4IDE4Ljk4IDE3Ljg5IDE4Ljc5IDE3LjcxIDE4LjYxIDE3LjUyIDE4LjUgMTcuMjYgMTguNSAxNyAxOC41IDE2Ljc0IDE4LjYxIDE2LjQ4IDE4Ljc5IDE2LjI5IDE5LjE2IDE1LjkyIDE5Ljg0IDE1LjkyIDIwLjIxIDE2LjI5IDIwLjM5IDE2LjQ4IDIwLjUgMTYuNzQgMjAuNSAxNyAyMC41IDE3LjI2IDIwLjM5IDE3LjUyIDIwLjIxIDE3LjcxIDIwLjAyIDE3Ljg5IDE5Ljc2IDE4IDE5LjUgMTh6TTMxLjUgMThMMjMuNSAxOEMyMi45NDggMTggMjIuNSAxNy41NTIgMjIuNSAxNyAyMi41IDE2LjQ0OCAyMi45NDggMTYgMjMuNSAxNkwzMS41IDE2QzMyLjA1MiAxNiAzMi41IDE2LjQ0OCAzMi41IDE3IDMyLjUgMTcuNTUyIDMyLjA1MiAxOCAzMS41IDE4ek02LjUgMzNDNi4yNCAzMyA1Ljk4IDMyLjg5IDUuNzkgMzIuNzEgNS42MSAzMi41MiA1LjUgMzIuMjYgNS41IDMyIDUuNSAzMS43NCA1LjYxIDMxLjQ4IDUuNzkgMzEuMjkgNi4xNiAzMC45MiA2Ljg0IDMwLjkyIDcuMjEgMzEuMjkgNy4zOSAzMS40OCA3LjUgMzEuNzMgNy41IDMyIDcuNSAzMi4yNiA3LjM5IDMyLjUyIDcuMjEgMzIuNzEgNy4wMiAzMi44OSA2Ljc2IDMzIDYuNSAzM3pNMTguNSAzM0wxMC41IDMzQzkuOTQ4IDMzIDkuNSAzMi41NTIgOS41IDMyIDkuNSAzMS40NDggOS45NDggMzEgMTAuNSAzMUwxOC41IDMxQzE5LjA1MiAzMSAxOS41IDMxLjQ0OCAxOS41IDMyIDE5LjUgMzIuNTUyIDE5LjA1MiAzMyAxOC41IDMzek0zNy41IDE4TDM1LjUgMThDMzQuOTQ4IDE4IDM0LjUgMTcuNTUyIDM0LjUgMTcgMzQuNSAxNi40NDggMzQuOTQ4IDE2IDM1LjUgMTZMMzcuNSAxNkMzOC4wNTIgMTYgMzguNSAxNi40NDggMzguNSAxNyAzOC41IDE3LjU1MiAzOC4wNTIgMTggMzcuNSAxOHpNMjguNSAyM0w2LjUgMjNDNS45NDggMjMgNS41IDIyLjU1MiA1LjUgMjIgNS41IDIxLjQ0OCA1Ljk0OCAyMSA2LjUgMjFMMjguNSAyMUMyOS4wNTIgMjEgMjkuNSAyMS40NDggMjkuNSAyMiAyOS41IDIyLjU1MiAyOS4wNTIgMjMgMjguNSAyM3pNMzcuNSAyM0wzMS41IDIzQzMwLjk0OCAyMyAzMC41IDIyLjU1MiAzMC41IDIyIDMwLjUgMjEuNDQ4IDMwLjk0OCAyMSAzMS41IDIxTDM3LjUgMjFDMzguMDUyIDIxIDM4LjUgMjEuNDQ4IDM4LjUgMjIgMzguNSAyMi41NTIgMzguMDUyIDIzIDM3LjUgMjN6TTEwLjUgMjhMNi41IDI4QzUuOTQ4IDI4IDUuNSAyNy41NTIgNS41IDI3IDUuNSAyNi40NDggNS45NDggMjYgNi41IDI2TDEwLjUgMjZDMTEuMDUyIDI2IDExLjUgMjYuNDQ4IDExLjUgMjcgMTEuNSAyNy41NTIgMTEuMDUyIDI4IDEwLjUgMjh6TTI0LjUgMjhMMTQuNSAyOEMxMy45NDggMjggMTMuNSAyNy41NTIgMTMuNSAyNyAxMy41IDI2LjQ0OCAxMy45NDggMjYgMTQuNSAyNkwyNC41IDI2QzI1LjA1MiAyNiAyNS41IDI2LjQ0OCAyNS41IDI3IDI1LjUgMjcuNTUyIDI1LjA1MiAyOCAyNC41IDI4ek0zNy41IDI4TDI4LjUgMjhDMjcuOTQ4IDI4IDI3LjUgMjcuNTUyIDI3LjUgMjcgMjcuNSAyNi40NDggMjcuOTQ4IDI2IDI4LjUgMjZMMzcuNSAyNkMzOC4wNTIgMjYgMzguNSAyNi40NDggMzguNSAyNyAzOC41IDI3LjU1MiAzOC4wNTIgMjggMzcuNSAyOHoiLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=";
+            } else {
+              thumb = result;
             }
-
             // update file list
-            setFileList([...fileList, { ...parsedFile, thumbUrl: result }]);
+            setFileList([...fileList, { ...parsedFile, thumbUrl: thumb }]);
+
+            // return upload imediately
+            // if there is no beforeUpload function
+            if (!beforeUpload) {
+              return upload(parsedFile);
+            }
+            // beforeUpload: Check file types allowed,... anything before upload execute from props (if any)
           };
         })(file);
 
-        // Read in the image file as a data URL.
+        // Read in the file as a data URL.
         reader.readAsDataURL(file);
       });
     }
+  };
+
+  const upload = (file: UploadFileType) => {
+    console.log(file);
   };
 
   console.log(fileList);
@@ -121,7 +138,3 @@ const Upload: FC<UploadProps> = ({
 };
 
 export default memo(Upload);
-
-// if (file.type.match("image.*")) {
-//   // preview image
-// }

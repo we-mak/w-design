@@ -38,7 +38,11 @@ export type RequestUploadType = {
   headers?: Headers; // Fetch api headers interface
 };
 
-export interface UploadProps extends GlobProps {
+export interface UploadListProps extends GlobProps {
+  fileList?: UploadFileType[];
+}
+
+export interface UploadProps extends UploadListProps {
   /* Accept input attribute*/
   accept?: string;
   /* upload type: file name in text or picture*/
@@ -61,8 +65,4 @@ export interface UploadProps extends GlobProps {
   disabled?: boolean;
   /* remove or abort upload*/
   onRemove?: (file: UploadFileType) => void | boolean | Promise<void | boolean>;
-}
-
-export interface UploadListProps extends GlobProps {
-  fileList?: UploadFileType[];
 }

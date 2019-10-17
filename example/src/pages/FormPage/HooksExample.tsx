@@ -11,6 +11,7 @@ import {
   SectionMessage
 } from "w-design";
 import ReactMarkdown from "react-markdown";
+import { CodeBlock } from "../../components/CodeBlock";
 
 const emailRegex = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
@@ -80,15 +81,9 @@ export const HooksExample = () => {
   return (
     <>
       <Typo appearance="h3">Hooks</Typo>
-      We-design <code>useField</code> and <code>useForm</code> are simple hooks, it help to update
-      components state with values and other factors for your form, such as validation, error
-      status, message, and pass those values to the server.
-      <br />
-      If you need something more extendable, you may take a look at this{" "}
-      <a href="https://final-form.org" target="_blank" rel="noopener noreferrer">
-        https://final-form.org
-      </a>{" "}
-      library.
+      We-design <code>useField</code> and <code>useForm</code> are simple hooks with just a few
+      lines of codes, it help to update components state with values and other factors for your
+      form, such as validation, error status, message, and pass those values to the server.
       <br />
       <ReactMarkdown
         source={`
@@ -128,6 +123,82 @@ This hook update component and return an \`InputField\` props object.
           </CardContent>
         </Card>
       </Container>
+      <CodeBlock
+        exampleCode={`
+const emailRegex = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+\\.)+([a-zA-Z0-9]{2,4})+$/;
+
+const validEmail = (value: string) => emailRegex.test(value);
+
+const CheckPass = ({ value }: { value: string }) => {
+  if (value.length <= 3) {
+    return <small style={{ color: "orange" }}>Your password is terrible</small>;
+  } else if (value.length > 0) {
+    return <small style={{ color: "green" }}>We are safe now. (Nope, actually)</small>;
+  }
+
+  return null;
+};
+
+const Form = () => {
+  const form = useForm({ requiredMessage: "required field" });
+  const name = useField({ form, name: "name", defaultValue: "John Doe" });
+  const email = useField({
+    form,
+    name: "email",
+    isRequired: true,
+    validations: [{ validate: validEmail, message: "not a valid email" }]
+  });
+  const password = useField({ form, name: "password", isRequired: true });
+
+  // You need to set noValidate because we are using our custom validator
+  return (
+    <form
+      onSubmit={(e: React.FormEvent) =>
+        form.onSubmit(e, (formdata: any) => {
+          // You can post data here
+          // change UI state
+          // by setting status to fetching, fetched, disable button
+          console.log(formdata);
+          form.setStatus("submitted");
+        })
+      }
+      noValidate
+    >
+      <InputForm {...name} type="text" label="Name" placeholder="Add your name" />
+      <InputForm {...email} type="email" label="Email" placeholder="add your email" />
+      <InputForm {...password} type="password" placeholder="add your password" label="Password">
+        {password.value && <CheckPass value={password.value} />}
+      </InputForm>
+
+      {form.status === "error" && form.formErrorMessage && (
+        <SectionMessage title="Error" appearance="error">
+          {form.formErrorMessage}
+        </SectionMessage>
+      )}
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end"
+        }}
+      >
+        <Button appearance="primary" type="submit" isDisabled={form.status === "submitted"}>
+          Submit
+        </Button>
+      </div>
+    </form>
+  );
+};
+      `}
+      />
+      <p>
+        Our hooks work well and tiny in size and fast. If you need something more extendable, you
+        may take a look at this{" "}
+        <a href="https://final-form.org" target="_blank" rel="noopener noreferrer">
+          https://final-form.org
+        </a>{" "}
+        library.
+      </p>
     </>
   );
 };

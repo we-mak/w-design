@@ -11,9 +11,6 @@ script:
   # - npm run build-lib
   - yarn test
   - yarn run coverage
-branches:
-  only:
-    - master
 # Send coverage data to Coveralls
 after_script: # Upload coverage reports
   - COVERALLS_REPO_TOKEN=$coveralls_repo_token yarn run coveralls

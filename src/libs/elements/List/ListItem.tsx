@@ -31,7 +31,7 @@ export const ListItem: React.FC<ListItemProps> = ({
 
         <ListItemMetaInfo>
           {title && (
-            <Typo tag="h4" fontWeight={600} marginBottom={0}>
+            <Typo tag="h4" fontWeight={600} mb={0}>
               {title}
             </Typo>
           )}

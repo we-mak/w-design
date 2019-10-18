@@ -46,56 +46,54 @@ exports[`<Masonry/> should render correct with masonry style 1`] = `
   margin: 0.5rem;
 }
 
-<div>
+<div
+  class="c0"
+>
   <div
-    class="c0"
+    class="msr_col"
   >
-    <div
-      class="msr_col"
+    <span
+      class="msr_item"
     >
-      <span
-        class="msr_item"
-      >
-        <img
-          src="https://source.unsplash.com/random?/car"
-        />
-      </span>
-      <span
-        class="msr_item"
-      >
-        <img
-          src="https://source.unsplash.com/random?/building"
-        />
-      </span>
-      <span
-        class="msr_item"
-      >
-        <img
-          src="https://source.unsplash.com/random?/motobike"
-        />
-      </span>
-      <span
-        class="msr_item"
-      >
-        <img
-          src="https://source.unsplash.com/random?/children"
-        />
-      </span>
-      <span
-        class="msr_item"
-      >
-        <img
-          src="https://source.unsplash.com/random?/car"
-        />
-      </span>
-      <span
-        class="msr_item"
-      >
-        <img
-          src="https://source.unsplash.com/random?/work"
-        />
-      </span>
-    </div>
+      <img
+        src="https://source.unsplash.com/random?/car"
+      />
+    </span>
+    <span
+      class="msr_item"
+    >
+      <img
+        src="https://source.unsplash.com/random?/building"
+      />
+    </span>
+    <span
+      class="msr_item"
+    >
+      <img
+        src="https://source.unsplash.com/random?/motobike"
+      />
+    </span>
+    <span
+      class="msr_item"
+    >
+      <img
+        src="https://source.unsplash.com/random?/children"
+      />
+    </span>
+    <span
+      class="msr_item"
+    >
+      <img
+        src="https://source.unsplash.com/random?/car"
+      />
+    </span>
+    <span
+      class="msr_item"
+    >
+      <img
+        src="https://source.unsplash.com/random?/work"
+      />
+    </span>
   </div>
 </div>
 `;

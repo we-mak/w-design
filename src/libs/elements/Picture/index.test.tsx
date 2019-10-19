@@ -1,8 +1,10 @@
 import * as React from "react";
-import { render } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import "jest-styled-components";
 import Picture from "./index";
 import Provider from "../../layout/Provider";
+
+afterEach(cleanup);
 
 const observeMock = {
   observe: () => null,

@@ -1,11 +1,11 @@
-import { ReactChild } from "react";
+import { ReactNode } from "react";
 import { GlobProps } from "../../types";
 
 export interface BreadcrumbsItemProps extends GlobProps {
   isCurrentPage?: boolean;
-  children?: ReactChild | string | number;
+  children?: ReactNode;
 }
 
 export interface BreadcrumbsProps extends GlobProps {
-  children?: ReactChild | string | number;
+  children?: ReactNode;
 }

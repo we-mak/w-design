@@ -49,9 +49,14 @@ describe("<Masonry/>", () => {
             return <img src={`${FILE_URL}/${img.coverId}`} key={img.id} />;
           })}
         </Masonry>
+        <Masonry breakpoints={[320, 480, 768, 920]}>
+          {images.map(img => {
+            return <img src={`${FILE_URL}/${img.coverId}`} key={img.id} />;
+          })}
+        </Masonry>
       </Provider>
     );
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   // it("should have 4 default column", () => {

@@ -11,14 +11,19 @@ describe("<AnchorScroll/>", () => {
   it("should renders correctly", () => {
     const { container } = render(
       <Provider>
-        <AnchorScroll destination="target">To target</AnchorScroll>
+        <AnchorScroll destination="target-1">To target</AnchorScroll>
+        <div id="target-1">Target 1</div>
 
-        <div id="target">
-          <span role="img" aria-label="img" aria-labelledby="anchor target">
-            💰
-          </span>
-          Target
-        </div>
+        <AnchorScroll
+          destination="target-2"
+          duration={200}
+          margin={5}
+          top={5}
+          callback={() => null}
+        >
+          To target
+        </AnchorScroll>
+        <div id="target-2">Target 2</div>
       </Provider>
     );
 

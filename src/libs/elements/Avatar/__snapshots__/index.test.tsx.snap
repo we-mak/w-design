@@ -225,7 +225,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="c4"
-    style="background-color: rgb(16, 22, 26);"
+    style="background-color: rgb(179, 245, 255);"
   >
     <span
       class="c5"
@@ -238,7 +238,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="c7"
-    style="background-color: rgb(255, 242, 209);"
+    style="background-color: rgb(82, 67, 170);"
   >
     <span
       class="c8"
@@ -251,7 +251,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="c10"
-    style="background-color: rgb(206, 217, 227);"
+    style="background-color: rgb(180, 4, 4);"
   >
     <span
       class="c11"
@@ -261,7 +261,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="c12"
-    style="background-color: rgb(255, 218, 73);"
+    style="background-color: rgb(157, 179, 198);"
   >
     <span
       class="c13"
@@ -271,7 +271,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="c14"
-    style="background-color: rgb(255, 196, 13);"
+    style="background-color: rgb(0, 140, 192);"
   >
     <span
       class="c15"

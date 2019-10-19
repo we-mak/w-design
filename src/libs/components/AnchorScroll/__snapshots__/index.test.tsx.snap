@@ -67,16 +67,20 @@ exports[`<AnchorScroll/> should renders correctly 1`] = `
     To target
   </button>
   <div
-    id="target"
+    id="target-1"
   >
-    <span
-      aria-label="img"
-      aria-labelledby="anchor target"
-      role="img"
-    >
-      💰
-    </span>
-    Target
+    Target 1
+  </div>
+  <button
+    class="c0"
+    type="button"
+  >
+    To target
+  </button>
+  <div
+    id="target-2"
+  >
+    Target 2
   </div>
 </div>
 `;

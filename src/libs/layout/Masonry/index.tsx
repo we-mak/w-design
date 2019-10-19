@@ -1,16 +1,16 @@
 /**
  * Masonry.tsx
- * original credit https://codepen.io/golle404/pen/wWoXwz?editors=0110
- * Feature
  * Flexbox masonry layout
- * TODO: Windowing render
- * idea to make it works:
- * - Base on intersection observer
- * - Check columns height
- * - Check scroll position compare to "View port" (view port is basically initial container height)
- * - Check which items on each column are in "view port"
- * - Limit rendering items by index
+ * original credit https://codepen.io/golle404/pen/wWoXwz?editors=0110
  */
+
+// TODO: Windowing render
+// idea to make it works:
+// - Base on intersection observer
+// - Check columns height, elements height with intial default value before load
+// - Check scroll position compare to "View port" (view port is basically initial container height)
+// - Check which items on each column are in "view port"
+// - Limit rendering items by index
 
 import React, { useRef, useEffect, MutableRefObject, useState, ReactElement, memo } from "react";
 import { MasonryLayout } from "./Styled";
@@ -23,16 +23,17 @@ const Masonry = ({ breakpoints, children, defaultCols = 3 }: MasonryProps) => {
 
   // Re-assign children component to right columns
   const mapChildren = () => {
-    let col: any[] = [];
+    let col: Array<any> = [];
 
     for (let i = 0; i < columns; i++) {
       const arr: ReactElement[] = [];
       col.push(arr);
     }
-    return children.reduce((p, c, i) => {
-      p[i % columns].push(c);
 
-      return p;
+    return children.reduce((accumulator, currentValue, currentIndex) => {
+      accumulator[currentIndex % columns].push(currentValue);
+
+      return accumulator;
     }, col);
   };
 

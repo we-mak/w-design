@@ -4,7 +4,7 @@ import { GlobProps } from "../../../typings";
 // Type of button
 export type UploadType = "textName" | "picture";
 // Status applied when upload file
-export type UploadStatus = "error" | "success" | "uploading";
+export type UploadStatus = "error" | "success" | "uploading" | "removed";
 
 export interface WFile extends File {
   uid: string;
@@ -38,7 +38,11 @@ export type RequestUploadType = {
   headers?: Headers; // Fetch api headers interface
 };
 
-export interface UploadProps extends GlobProps {
+export interface UploadListProps extends GlobProps {
+  fileList?: UploadFileType[];
+}
+
+export interface UploadProps extends UploadListProps {
   /* Accept input attribute*/
   accept?: string;
   /* upload type: file name in text or picture*/
@@ -47,12 +51,18 @@ export interface UploadProps extends GlobProps {
   multiple?: boolean;
   /* Label title under Label tag*/
   label?: string | ReactNode;
+  /* show file list when uploading */
+  showFileList?: boolean;
+  /* default file list */
   defaultFileList?: UploadFileType[];
-  fileList?: UploadFileType[];
+  /* Function to executed before upload. If `false` the upload will be reject */
+  beforeUpload?: (file, fileList) => boolean | Promise;
   /* restApi request upload use fetch Api*/
   requestUpload?: RequestUploadType;
   /* modified onchange behavior*/
   onChange?: (uploadInfo: UploadChangeParam) => void;
   /* disable input */
   disabled?: boolean;
+  /* remove or abort upload*/
+  onRemove?: (file: UploadFileType) => void | boolean | Promise<void | boolean>;
 }

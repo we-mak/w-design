@@ -6,12 +6,31 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-### next
+### <a name="0.38"></a>#[v0.38]()
 
-- `List`
-- `Upload`
 - Refactor `Icon`
 - Refactor monorepo
+- `CustomTag` with full `styled-system` options (this issue must be fixed https://github.com/styled-components/styled-components/issues/439)
+- Better `Spinner` animation
+
+#### Features
+
+- `Upload`
+- `EmptyView`
+- `Badges`
+- `Collapsible`
+
+---
+
+### <a name="0.34"></a>#[v0.34]()
+
+- `ImageRatio`
+- `List`
+
+#### Add Hooks
+
+- `useField`
+- `useForm`
 
 ---
 

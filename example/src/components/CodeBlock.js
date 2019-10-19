@@ -11,7 +11,8 @@ export const CodeBlock = ({ exampleCode, language = "jsx" }) => {
           style={{
             color: "rgb(214, 222, 235)",
             backgroundColor: "rgb(1, 22, 39)",
-            padding: ".5rem"
+            padding: "0.2rem 1.2rem",
+            borderRadius: ".4rem"
           }}
         >
           {tokens.map((line, i) => (

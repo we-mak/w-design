@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionMessage/> should renders correctly 1`] = `
+.c5 {
+  font-weight: 700;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 0.8rem !important;
+}
+
+.c3.info {
+  color: #008CC0;
+}
+
+.c3.warn {
+  color: #FA9B00;
+}
+
+.c3.success {
+  color: #29A634;
+}
+
+.c3.error {
+  color: #DC1F1F;
+}
+
+.c2 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  max-width: 100%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  padding: 0;
+}
+
+.c4 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  max-width: 100%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -0.4rem;
+  margin-right: -0.4rem;
+  padding: 0.4rem;
+}
+
+.c0 {
+  margin: 0.4rem 0;
+  padding: 0.8rem;
+  border-radius: 0.2rem;
+  background: #daf5ff;
+}
+
+.c0 i {
+  color: #008CC0;
+}
+
+<section
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <i
+        aria-hidden="true"
+        class="c3 fas fa-info-circle"
+      />
+    </div>
+    <div
+      class="c4"
+    >
+      <h3
+        class="c5"
+      >
+        Info
+      </h3>
+      The quick brown fox jumps over the lazy dog
+    </div>
+  </div>
+</section>
+`;

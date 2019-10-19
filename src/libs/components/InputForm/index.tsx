@@ -29,24 +29,26 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
     <FieldGroup>
       <Label htmlFor={id}>
         {label} {isRequired && <RequiredMark aria-hidden="true">*</RequiredMark>}
+        <InputContainer>
+          {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
+          <InputField
+            className={(iconBefore && `icon-before`) || (iconAfter && `icon-after`)}
+            fluid
+            id={id}
+            isError={isError}
+            isWarning={isWarning}
+            isRequired={isRequired}
+            isValid={isSuccess}
+            {...rest}
+          />
+          {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
+          {isLoading && (
+            <SpinnerWrap>
+              <Spinner />
+            </SpinnerWrap>
+          )}
+        </InputContainer>
       </Label>
-      <InputContainer>
-        {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
-        <InputField
-          className={(iconBefore && `icon-before`) || (iconAfter && `icon-after`)}
-          fluid
-          id={id}
-          isError={isError}
-          isWarning={isWarning}
-          {...rest}
-        />
-        {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
-        {isLoading && (
-          <SpinnerWrap>
-            <Spinner />
-          </SpinnerWrap>
-        )}
-      </InputContainer>
 
       {children}
       <TextHint isError={isError} isWarning={isWarning} isSuccess={isSuccess}>

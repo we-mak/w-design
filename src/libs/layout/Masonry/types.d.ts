@@ -1,7 +1,7 @@
 import { GlobProps } from "../../../typings";
 
 export interface MasonryProps extends GlobProps {
-  children: any[];
-  breakpoints: number[];
+  children: Array<any>;
+  breakpoints: Array<number>;
   defaultCols?: number;
 }

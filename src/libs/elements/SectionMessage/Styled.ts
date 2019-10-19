@@ -31,7 +31,7 @@ const getSectionStyle = (props: SectionMessageProps) => {
 };
 
 export const Section = styled.section`
-  margin: 0.4rem;
+  margin: 0.4rem 0;
   padding: 0.8rem;
   border-radius: 0.2rem;
   ${getSectionStyle};

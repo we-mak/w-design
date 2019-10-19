@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Image/> should render correct icon styled 1`] = `
+exports[`<Image/> should render correct image 1`] = `
 <div>
   <img
     class=""

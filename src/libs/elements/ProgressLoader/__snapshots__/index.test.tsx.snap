@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressLoader/> should renders correctly 1`] = `
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 {
+  width: 100%;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  position: relative;
+  background: #E2EAF2;
+}
+
+.c3 {
+  border-radius: 0.4rem;
+  background: #008CC0;
+  width: 0%;
+  height: 0.4rem;
+}
+
+.c4 {
+  width: 2rem;
+  word-break: normal;
+  white-space: nowrap;
+  margin: 0 0.4rem;
+  font-size: 0.7rem;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      />
+    </div>
+    <span
+      class="c4"
+      title="0%"
+    >
+      0%
+    </span>
+  </div>
+</div>
+`;

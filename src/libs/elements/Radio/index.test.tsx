@@ -6,34 +6,32 @@ import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
+const options = [
+  {
+    label: "Option 1",
+    value: "foo",
+    name: "option 1",
+    isChecked: true
+  },
+  {
+    label: "Option 2",
+    value: "bar",
+    isDisabled: true
+  }
+];
+
 describe("<Radio/>", () => {
   // Render test
   it("should renders correctly", () => {
     const { container } = render(
       <Provider>
-        <RadioGroup
-          isRequired
-          groupName="Radio"
-          groupLabel="Radio"
-          options={[
-            {
-              label: "Option 1",
-              value: "foo",
-              name: "option 1",
-              isChecked: true
-            },
-            {
-              label: "Option 2",
-              value: "bar",
-              isDisabled: true
-            }
-          ]}
-        />
-        <RadioGroup isDisabled defaultValue="foo" groupName="Radio" groupLabel="Radio" />
+        <RadioGroup isRequired groupName="Radio" groupLabel="Radio" options={options} />
+        <RadioGroup isDisabled defaultValue="foo" options={options} />
+        <RadioGroup value="test" />
       </Provider>
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   // Event

@@ -7,7 +7,7 @@ import Provider from "../../layout/Provider";
 afterEach(cleanup);
 
 describe("<Typo/>", () => {
-  it("should render correct with heading style", () => {
+  it("should render correctly", () => {
     const { container } = render(
       <Provider>
         <Typo>Hello</Typo>
@@ -25,7 +25,7 @@ describe("<Typo/>", () => {
   it("should render div with H1 style", () => {
     const { container } = render(
       <Provider>
-        <Typo appearance="h1" tag="div">
+        <Typo appearance="h1" tag="div" mb={10}>
           Hello
         </Typo>
       </Provider>

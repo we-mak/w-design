@@ -157,6 +157,58 @@ exports[`<InputForm/> should render correctly 1`] = `
   height: auto;
 }
 
+.c11 {
+  background: transparent;
+  background-image: none;
+  outline: none;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  border: 0.05rem solid #29A634;
+  border-radius: 0.2rem;
+  color: #202B33;
+  padding: 0.35rem 0.4rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  height: 1.8rem;
+  width: 100%;
+  line-height: 1.125;
+  -webkit-transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
+  transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
+}
+
+.c11:focus {
+  box-shadow: 0 0 0 0.1rem rgba(41,166,52,0.2);
+  border-color: #29A634;
+}
+
+.c11::-webkit-input-placeholder {
+  color: #90A9BF;
+}
+
+.c11::-moz-placeholder {
+  color: #90A9BF;
+}
+
+.c11:-ms-input-placeholder {
+  color: #90A9BF;
+}
+
+.c11::placeholder {
+  color: #90A9BF;
+}
+
+.c11:disabled,
+.c11[disabled] {
+  cursor: not-allowed;
+  color: #90A9BF !important;
+  background: #EFF3F6 !important;
+}
+
+.c11[type="file"] {
+  height: auto;
+}
+
 .c3.info {
   color: #008CC0;
 }
@@ -173,14 +225,14 @@ exports[`<InputForm/> should render correctly 1`] = `
   color: #DC1F1F;
 }
 
-.c13 {
+.c14 {
   color: transparent !important;
   pointer-events: none;
   position: relative;
   min-height: 0.8rem;
 }
 
-.c13::after {
+.c14::after {
   -webkit-animation: btrQYj 500ms infinite linear;
   animation: btrQYj 500ms infinite linear;
   border: 0.1rem solid;
@@ -196,7 +248,7 @@ exports[`<InputForm/> should render correctly 1`] = `
   z-index: 1;
 }
 
-.c13::after {
+.c14::after {
   height: 0.8rem;
   margin-left: -0.4rem;
   margin-top: -0.4rem;
@@ -280,7 +332,7 @@ exports[`<InputForm/> should render correctly 1`] = `
   color: #FA9B00;
 }
 
-.c11 {
+.c12 {
   display: block;
   margin-top: 0.4rem;
   color: #29A634;
@@ -292,7 +344,7 @@ exports[`<InputForm/> should render correctly 1`] = `
   top: -0.2rem;
 }
 
-.c12 {
+.c13 {
   height: 0.8rem;
   margin: 0 0.25rem;
   position: absolute;
@@ -314,21 +366,21 @@ exports[`<InputForm/> should render correctly 1`] = `
     >
       label
        
+      <span
+        class="c2"
+      >
+        <i
+          aria-hidden="true"
+          class="c3 icon-before fas fa-phone"
+        />
+        <input
+          autocomplete="off"
+          class="c4 icon-before"
+          type="text"
+          value=""
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <i
-        aria-hidden="true"
-        class="c3 icon-before fas fa-phone"
-      />
-      <input
-        autocomplete="off"
-        class="c4 icon-before"
-        type="text"
-        value=""
-      />
-    </span>
     <small
       class="c5"
     >
@@ -342,21 +394,21 @@ exports[`<InputForm/> should render correctly 1`] = `
       class="c1"
     >
        
+      <span
+        class="c2"
+      >
+        <input
+          autocomplete="off"
+          class="c4 icon-after"
+          type="text"
+          value=""
+        />
+        <i
+          aria-hidden="true"
+          class="c3 icon-after fas fa-phone"
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c4 icon-after"
-        type="text"
-        value=""
-      />
-      <i
-        aria-hidden="true"
-        class="c3 icon-after fas fa-phone"
-      />
-    </span>
     <small
       class="c5"
     />
@@ -368,17 +420,17 @@ exports[`<InputForm/> should render correctly 1`] = `
       class="c1"
     >
        
+      <span
+        class="c2"
+      >
+        <input
+          autocomplete="off"
+          class="c6"
+          type="text"
+          value=""
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c6"
-        type="text"
-        value=""
-      />
-    </span>
     <small
       class="c7"
     />
@@ -390,17 +442,17 @@ exports[`<InputForm/> should render correctly 1`] = `
       class="c1"
     >
        
+      <span
+        class="c2"
+      >
+        <input
+          autocomplete="off"
+          class="c4"
+          type="text"
+          value=""
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c4"
-        type="text"
-        value=""
-      />
-    </span>
     <small
       class="c5"
     />
@@ -412,18 +464,18 @@ exports[`<InputForm/> should render correctly 1`] = `
       class="c1"
     >
        
+      <span
+        class="c2"
+      >
+        <input
+          autocomplete="off"
+          class="c4"
+          disabled=""
+          type="text"
+          value=""
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c4"
-        disabled=""
-        type="text"
-        value=""
-      />
-    </span>
     <small
       class="c5"
     />
@@ -441,17 +493,18 @@ exports[`<InputForm/> should render correctly 1`] = `
       >
         *
       </sup>
+      <span
+        class="c2"
+      >
+        <input
+          autocomplete="off"
+          class="c4"
+          required=""
+          type="text"
+          value=""
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c4"
-        type="text"
-        value=""
-      />
-    </span>
     <small
       class="c5"
     />
@@ -463,17 +516,17 @@ exports[`<InputForm/> should render correctly 1`] = `
       class="c1"
     >
        
+      <span
+        class="c2"
+      >
+        <input
+          autocomplete="off"
+          class="c9"
+          type="text"
+          value=""
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c9"
-        type="text"
-        value=""
-      />
-    </span>
     <small
       class="c10"
     />
@@ -485,19 +538,19 @@ exports[`<InputForm/> should render correctly 1`] = `
       class="c1"
     >
        
+      <span
+        class="c2"
+      >
+        <input
+          autocomplete="off"
+          class="c11"
+          type="text"
+          value=""
+        />
+      </span>
     </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c4"
-        type="text"
-        value=""
-      />
-    </span>
     <small
-      class="c11"
+      class="c12"
     />
   </div>
   <div
@@ -507,24 +560,24 @@ exports[`<InputForm/> should render correctly 1`] = `
       class="c1"
     >
        
-    </label>
-    <span
-      class="c2"
-    >
-      <input
-        autocomplete="off"
-        class="c4"
-        type="text"
-        value=""
-      />
       <span
-        class="c12"
+        class="c2"
       >
-        <div
-          class="c13"
+        <input
+          autocomplete="off"
+          class="c4"
+          type="text"
+          value=""
         />
+        <span
+          class="c13"
+        >
+          <div
+            class="c14"
+          />
+        </span>
       </span>
-    </span>
+    </label>
     <small
       class="c5"
     />

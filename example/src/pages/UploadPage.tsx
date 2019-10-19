@@ -14,7 +14,7 @@ const Example = () => {
 const ProgressPage: React.FunctionComponent<any> = () => (
   <>
     <Typo appearance="h1">Upload</Typo>
-    Upload file or image
+    Upload file or image. Support AJAX upload via <code>XMLHttpRequest</code>.
     <Typo appearance="h3">Example</Typo>
     <Example />
   </>

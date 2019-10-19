@@ -107,31 +107,33 @@ defaultTheme = {
 
 Cover basic components, widgets from 3rd parties libray
 
-| Layout            | Elements               | Components      |
-| ----------------- | ---------------------- | --------------- |
-| ✅ Container      | ✅ InputField          | ✅ AvatarGroup  |
-| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       |
-| ✅ DisplayElement | ✅ Label               | ❌ Badges       |
-| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible  |
-| ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  |
-|                   | ❌ Chip                | ❌ Steps        |
-|                   | ❌ List                | ✅ Menu         |
-|                   | ✅ Divider             | ✅ Modal        |
-|                   | ✅ ProgressLoader      | ✅ Dropdown     |
-|                   | ✅ Portal              | ✅ Drawer       |
-|                   | ✅ Avatar              | ✅ AnchorScroll |
-|                   | ❌ Toggle              | ❌ Tabs         |
-|                   | ✅ TextArea            | ❌ Table        |
-|                   | ✅ SectionMessage      | ✅ FormGroup    |
-|                   | ✅ Typo                | ✅ Comment      |
-|                   | ✅ Icon (Font awesome) | ✅ InputForm    |
-|                   | ✅ Radio               | ❌ Pagination   |
-|                   | ✅ Button              | ✅ Card         |
-|                   | ✅ Image               | ❌ Form         |
-|                   | ✅ SectionMessage      | ❌ Upload       |
-|                   | ❌ Tooltip             |                 |
-|                   | ❌ Popover             |                 |
-|                   | ✅ Breadcrumbs         |                 |
+| Layout            | Elements               | Components      | Hooks              |
+| ----------------- | ---------------------- | --------------- | ------------------ |
+| ✅ Container      | ✅ InputField          | ✅ AvatarGroup  | ✅ useClickOutside |
+| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       | ✅ useField        |
+| ✅ DisplayElement | ✅ Label               | ❌ Badges       | ✅ useForm         |
+| ✅ ThemeProvider  | ✅ Picture             | ❌ Collapsible  |                    |
+| ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  |                    |
+|                   | ❌ Chip                | ❌ Steps        |                    |
+|                   | ✅ List                | ✅ Menu         |                    |
+|                   | ✅ Divider             | ✅ Modal        |                    |
+|                   | ✅ ProgressLoader      | ✅ Dropdown     |                    |
+|                   | ✅ Portal              | ✅ Drawer       |                    |
+|                   | ✅ Avatar              | ✅ AnchorScroll |                    |
+|                   | ❌ Toggle              | ❌ Tabs         |                    |
+|                   | ✅ TextArea            | ❌ Table        |                    |
+|                   | ✅ SectionMessage      | ✅ FormGroup    |                    |
+|                   | ✅ Typo                | ✅ Comment      |                    |
+|                   | ✅ Icon (Font awesome) | ✅ InputForm    |                    |
+|                   | ✅ Radio               | ❌ Pagination   |                    |
+|                   | ✅ Button              | ✅ Card         |                    |
+|                   | ✅ Image               | ❌ Upload       |                    |
+|                   | ✅ SectionMessage      |                 |                    |
+|                   | ❌ Tooltip             |                 |                    |
+|                   | ❌ Popover             |                 |                    |
+|                   | ✅ Breadcrumbs         |                 |                    |
+|                   | ✅ ImageRatio          |                 |                    |
+|                   | ❌ EmptyView           |                 |                    |
 
 ## 🐞 Report
 
@@ -193,7 +195,7 @@ npm start # runs create-react-app dev server
 
 Now, anytime you make a change to your library in src/ or to the example app's example/src, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
 
-###Publishing to NPM
+### Publishing to NPM
 
 `npm publish`
 

@@ -13,3 +13,17 @@ export const fileToObject = (file: WFile): UploadFileType => {
     percent: 0
   } as UploadFileType;
 };
+
+export function getFileItem(file: UploadFileType, fileList: UploadFileType[]) {
+  const matchKey = file.uid !== undefined ? "uid" : "name";
+  return fileList.filter(item => item[matchKey] === file[matchKey])[0];
+}
+
+export function removeFileItem(file: UploadFileType, fileList: UploadFileType[]) {
+  const matchKey = file.uid !== undefined ? "uid" : "name";
+  const removed = fileList.filter(item => item[matchKey] !== file[matchKey]);
+  if (removed.length === fileList.length) {
+    return null;
+  }
+  return removed;
+}

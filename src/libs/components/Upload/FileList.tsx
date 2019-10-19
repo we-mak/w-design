@@ -1,0 +1,25 @@
+import * as React from "react";
+import ProgressLoader from "../../elements/ProgressLoader";
+import List, { ListItem } from "../../elements/List";
+import { UploadListProps } from "./types";
+import { ListContainer } from "./Styled";
+
+export const FileList: React.FC<UploadListProps> = ({ fileList }) => {
+  return (
+    <ListContainer>
+      <List
+        sourceData={fileList}
+        rows={(item: any) => {
+          return (
+            <ListItem thumbnail={item.thumbUrl}>
+              <div style={{ width: "100%" }}>
+                {item.name}
+                <ProgressLoader size="sm" percent={20} />
+              </div>
+            </ListItem>
+          );
+        }}
+      ></List>
+    </ListContainer>
+  );
+};

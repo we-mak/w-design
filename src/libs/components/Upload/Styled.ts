@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { width, height, color } from "styled-system";
-import { UploadProps } from "./types";
+import { UploadProps, UploadListProps } from "./types";
 
+/**
+ * Main upload style
+ */
 const getUploadContainStyle = (props: UploadProps) => {
   const { theme, uploadType } = props;
 
@@ -90,3 +93,24 @@ export const UploadInput = styled.input`
   visibility: hidden;
 `;
 UploadInput.displayName = "UploadInput";
+
+/**
+ * File list style
+ */
+
+const getListStyle = (props: UploadListProps) => {
+  return `
+   border: 0.05rem solid ${props.theme.colors["N5"]}
+   `;
+};
+
+export const ListContainer = styled.div`
+  display: block;
+  position: relative;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  background: #fff;
+  width: 100%;
+  ${getListStyle};
+`;
+ListContainer.displayName = "ListContainer";

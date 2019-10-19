@@ -6,9 +6,16 @@ import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
+const observe = jest.fn();
+const unobserve = jest.fn();
+
 const observeMock = {
-  observe: () => null,
-  unobserve: () => null
+  observe: function() {
+    this.observe = observe;
+  },
+  unobserve: function() {
+    this.unobserve = unobserve;
+  }
 };
 
 beforeEach(async () => {

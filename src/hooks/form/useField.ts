@@ -60,8 +60,8 @@ const useField = ({ form, name, isRequired, defaultValue, validations }: FieldTy
     isError: status === "error",
     hintMessage,
     onChange: handleChangeVal,
-    // leaky extends state
-    // TODO: check safety types since we don't have any props like this in FieldForm
+    // implicit extending state when we pass below props to InputField (FieldForm)
+    // TODO: check types safety
     setStatus,
     setHintMessage
   };

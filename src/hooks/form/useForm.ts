@@ -30,7 +30,7 @@ const useForm = ({ requiredMessage }: FormType): FormProps => {
           field.setStatus("error");
           requiredMessage && field.setHintMessage(requiredMessage);
           // focus to error field
-          e.target[field.name!].focus();
+          field && field.name && e.target[field.name].focus();
           formErrors.push(field.name);
         }
 

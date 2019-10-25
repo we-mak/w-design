@@ -6,22 +6,6 @@ import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
-const observe = jest.fn();
-const unobserve = jest.fn();
-
-const observeMock = {
-  observe: function() {
-    this.observe = observe;
-  },
-  unobserve: function() {
-    this.unobserve = unobserve;
-  }
-};
-
-beforeEach(async () => {
-  (window as any).IntersectionObserver = () => observeMock;
-});
-
 describe("<Image/>", () => {
   it("should render correct image", () => {
     const { container } = render(

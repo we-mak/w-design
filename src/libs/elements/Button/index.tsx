@@ -115,7 +115,6 @@ const Button = (props: ButtonProps) => {
       id={id}
       iconOnly={iconOnly}
       disabled={isDisabled}
-      // TODO: change this to state
       isLoading={isLoading}
       isSelected={isSelected}
       // Link Props

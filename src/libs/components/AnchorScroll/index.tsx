@@ -82,13 +82,13 @@ const AnchorScroll: FC<ScrollLinkProps> = ({
     const onActive = () => {
       if (typeof destination !== "number") {
         const node = document.getElementById(destination);
-
+        // error to prevent missing target id
         if (!node) {
           throw new Error(`Anchor destination: "${destination}" not found`);
         }
 
         const destinationBounding = node.getBoundingClientRect();
-
+        // active button when reaches the target
         if (
           destinationBounding.top <= 0 + top - margin &&
           destinationBounding.bottom >= 0 + top - margin

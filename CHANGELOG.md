@@ -10,6 +10,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `EmptyView`
 - ❌ `Badges`
 - ❌ `Collapsible`
+- ❌ Refactor base style for `Button`, `InputField` to reduce file size
 
 ---
 
@@ -17,7 +18,6 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 - ❌ Better `Spinner` animation
 - ❌ Refactor `Icon`
-- ❌ Refactor `Button`, `InputField` to reduce file size
 - ❌ `CustomTag` with full `styled-system` options (this issue must be fixed https://github.com/styled-components/styled-components/issues/439)
 
 #### Features

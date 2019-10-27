@@ -18,7 +18,7 @@ describe("<Spinner/>", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should renders large sizecorrectly", () => {
+  it("should renders large size correctly", () => {
     const { container } = render(
       <Provider>
         <Spinner large />

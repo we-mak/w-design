@@ -7,22 +7,28 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Switch to monorepo
-- ❌ `EmptyView`
-- ❌ `Badges`
-- ❌ `Collapsible`
-- ❌ Refactor base style for `Button`, `InputField` to reduce file size
 
 ---
 
-### <a name="0.38"></a>#[v0.38]()
+### <a name="0.40"></a>#[v0.40]()
 
-- ❌ Better `Spinner` animation
-- ❌ Refactor `Icon`
-- ❌ `CustomTag` with full `styled-system` options (this issue must be fixed https://github.com/styled-components/styled-components/issues/439)
+Big refactor to have a better structure for all over project to reduce the file size,
+better distribute styling.
+Concept:
 
-#### Features
+- Refactor `CustomTag` with styles props
+  Check Issue (https://github.com/styled-components/styled-components/issues/439)
+- Access styled with custom hooks
+- Refactor other component i.e `Button`, `InputField` to reduce file size
+
+#### Changes
 
 - ❌ `Upload`
+- ❌ `EmptyView`
+- ❌ `Badges`
+- ❌ `Collapsible`
+- ❌ Refactor `Icon`
+- ❌ Refactor `Spinner`
 
 ---
 

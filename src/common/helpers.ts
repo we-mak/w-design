@@ -1,11 +1,42 @@
+///////////////// Object helpers ///////////////
 /**
+ * randomProperty
  * Pick random property from object
  */
-
 export const randomProperty = (obj: object) => {
   const keys = Object.keys(obj);
   return obj[keys[(keys.length * Math.random()) << 0]];
 };
+
+/**
+ * getValFromObjKey
+ * Get value from object key
+ */
+export const getValFromObjKey = (key: string, targetObject: object) => targetObject[key];
+
+/**
+ * filterObject
+ * filter out the object by key
+ */
+export const filterObject = (origin: object, removed: string[]) =>
+  Object.keys(origin)
+    .filter(key => !removed.includes(key))
+    .reduce((obj, key) => {
+      obj[key] = origin[key];
+      return obj;
+    }, {});
+
+/**
+ * setUid
+ * Set a local uid base on datetime
+ */
+export const setUid = (name: string) => {
+  const now = +new Date();
+  let index = 0;
+  return `${name}-${now}-${++index}`;
+};
+
+//////////////////// Text helper ///////////////////////
 
 /**
  * @function firstLetter - Retun first letter from a string
@@ -15,6 +46,10 @@ export const firstLetter = (str: string) => {
   return matches && matches.join("");
 };
 
+/**
+ *
+ * @param str target to string to remove accents
+ */
 export const removeAccentMarks = (str: string) => {
   str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
   str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
@@ -32,28 +67,4 @@ export const removeAccentMarks = (str: string) => {
   str = str.replace(/Đ/g, "D");
 
   return str;
-};
-
-/**
- * @function filterObject
- * filter out the object by key
- */
-
-export const filterObject = (raw: object, removed: string[]) =>
-  Object.keys(raw)
-    .filter(key => !removed.includes(key))
-    .reduce((obj, key) => {
-      obj[key] = raw[key];
-      return obj;
-    }, {});
-
-/**
- * setUid
- * Set a local uid base on datetime
- */
-
-export const setUid = (name: string) => {
-  const now = +new Date();
-  let index = 0;
-  return `${name}-${now}-${++index}`;
 };

@@ -5,7 +5,7 @@ import { TypoProps } from "./types";
 import CustomTag from "../CustomTag";
 
 const WTypo = ({ tag, appearance, children, ...rest }: TypoProps) => (
-  <CustomTag customHTMLtag={tag ? tag : appearance} {...rest}>
+  <CustomTag tag={tag ? tag : appearance} {...rest}>
     {children}
   </CustomTag>
 );

@@ -1,14 +1,8 @@
 import { css } from "styled-components";
 import { ButtonProps } from "./types";
-import {
-  getColor,
-  setColor,
-  getFontSize,
-  getAppearanceColor,
-  getElementSize,
-  padding,
-  height
-} from "../../../common/styleUtils/utils";
+import { setColor, getFontSize, getElementSize } from "../../../common/styleUtils/utils";
+import { padding, height } from "../../../common/styleUtils/constants";
+import { getValFromObjKey } from "../../../common/helpers";
 import { StyledSpinner } from "../Spinner";
 
 const appearanceKeys = [
@@ -101,7 +95,7 @@ const getLoadingState = (props: ButtonProps) => {
     return css`
       ${StyledSpinner};
       &::after {
-        border-color: ${getColor("WHITE", props.theme.colors)};
+        border-color: ${getValFromObjKey("WHITE", props.theme.colors)};
         border-right-color: transparent;
         border-top-color: transparent;
       }
@@ -124,13 +118,13 @@ export function getButtonStyle(props: ButtonProps) {
   const fontSizeStyle = getFontSize(size, fontSizes);
 
   /** Button appearance style*/
-  let bgStyle = getAppearanceColor(appearance, bg);
-  let bgHoverStyle = getAppearanceColor(appearance, bgHover);
-  let bgActiveStyle = getAppearanceColor(appearance, bgActive);
-  let borderStyle = getAppearanceColor(appearance, bordr);
-  let borderHoverStyle = getAppearanceColor(appearance, bordrHover);
-  let borderActiveStyle = getAppearanceColor(appearance, bordrActive);
-  let colorStyle = getAppearanceColor(appearance, text);
+  let bgStyle = getValFromObjKey(appearance, bg);
+  let bgHoverStyle = getValFromObjKey(appearance, bgHover);
+  let bgActiveStyle = getValFromObjKey(appearance, bgActive);
+  let borderStyle = getValFromObjKey(appearance, bordr);
+  let borderHoverStyle = getValFromObjKey(appearance, bordrHover);
+  let borderActiveStyle = getValFromObjKey(appearance, bordrActive);
+  let colorStyle = getValFromObjKey(appearance, text);
   // Selected values
   if (isSelected) {
     bgStyle = "B70";
@@ -170,7 +164,7 @@ export function getButtonStyle(props: ButtonProps) {
     }
   }
 
-  const boxShadowStyle = isSelected ? "transparent" : getAppearanceColor(appearance, boxShadow);
+  const boxShadowStyle = isSelected ? "transparent" : getValFromObjKey(appearance, boxShadow);
 
   // Apply loading style
   const loadingStyle = getLoadingState(props);
@@ -213,8 +207,8 @@ export function getButtonStyle(props: ButtonProps) {
     &:disabled,
     &[disabled] {
       cursor: not-allowed;
-      color: ${getColor("N7", colors)} !important;
-      background: ${getColor("N4", colors)} !important;
+      color: ${getValFromObjKey("N7", colors)} !important;
+      background: ${getValFromObjKey("N4", colors)} !important;
       border: none;
     }
 

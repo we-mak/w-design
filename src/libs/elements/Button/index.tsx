@@ -4,39 +4,6 @@ import { ButtonProps } from "./types";
 import { getButtonStyle } from "./getButtonStyle";
 import Icon from "../Icon";
 
-/**
- * Button Group
- *
- */
-
-const ButtonGroupWrapper = styled.div`
-  display: inline-flex;
-`;
-const ButtonGroupItem = styled.div`
-  flex: 1 0 auto;
-  display: flex;
-  & + &::before {
-    content: "";
-    display: inline-block;
-    width: 0.4rem;
-  }
-`;
-
-export const ButtonGroup = ({ children }: { children: React.ReactChild | React.ReactChild[] }) => (
-  <ButtonGroupWrapper>
-    {React.Children.map(children, (child, idx) => {
-      return (
-        <ButtonGroupItem key={idx}>{React.cloneElement(child as JSX.Element)}</ButtonGroupItem>
-      );
-    })}
-  </ButtonGroupWrapper>
-);
-
-/**
- * Button
- *
- */
-
 const StyledButton = styled.button`
   ${getButtonStyle}
 `;
@@ -117,7 +84,7 @@ const Button = (props: ButtonProps) => {
       disabled={isDisabled}
       isLoading={isLoading}
       isSelected={isSelected}
-      // Link Props
+      autoFocus={autoFocus}
       href={href}
       target={target}
       // Button Props
@@ -141,3 +108,4 @@ const Button = (props: ButtonProps) => {
 };
 
 export default Button;
+export { ButtonGroup } from "./ButtonGroup";

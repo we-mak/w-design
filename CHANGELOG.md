@@ -16,8 +16,6 @@ Big refactor to have a better structure for all over project to reduce the file 
 better distribute styling.
 Concept:
 
-- Refactor `CustomTag` with styles props
-  Check Issue (https://github.com/styled-components/styled-components/issues/439)
 - Access styled with custom hooks
 - Refactor other component i.e `Button`, `InputField` to reduce file size
 
@@ -29,6 +27,8 @@ Concept:
 - ❌ `Collapsible`
 - ❌ Refactor `Icon`
 - ❌ Refactor `Spinner`
+- ❌ Refactor `CustomTag` with styles props
+  Check Issue (https://github.com/styled-components/styled-components/issues/439)
 
 ---
 

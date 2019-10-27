@@ -1,8 +1,7 @@
 import { css } from "styled-components";
 import { ButtonProps } from "./types";
-import { setColor, getFontSize, getElementSize } from "../../../common/styleUtils/utils";
 import { padding, height } from "../../../common/styleUtils/constants";
-import { getValFromObjKey } from "../../../common/helpers";
+import { getValFromObjKey, setColor, getFontSize, getElementSize } from "../../../common/helpers";
 import { StyledSpinner } from "../Spinner";
 
 const appearanceKeys = [
@@ -16,17 +15,18 @@ const appearanceKeys = [
   "help",
   "clean"
 ];
-// Set button colors
+
+// Set button background colors
 const bg = setColor(appearanceKeys, [
   "N3",
   "B50",
   "O30",
   "R30",
   "G30",
-  "NONE",
-  "NONE",
+  "TRANSPARENT",
+  "TRANSPARENT",
   "T30",
-  "NONE"
+  "TRANSPARENT"
 ]);
 const bgHover = setColor(appearanceKeys, [
   "N4",
@@ -37,7 +37,7 @@ const bgHover = setColor(appearanceKeys, [
   "N3",
   "N2",
   "T20",
-  "NONE"
+  "TRANSPARENT"
 ]);
 const bgActive = setColor(appearanceKeys, [
   "B5",
@@ -48,9 +48,19 @@ const bgActive = setColor(appearanceKeys, [
   "B5",
   "B5",
   "T40",
-  "NONE"
+  "TRANSPARENT"
 ]);
-const bordr = setColor(appearanceKeys, ["N3", "B60", "O40", "R40", "G40", "", "", "T40", "NONE"]);
+const bordr = setColor(appearanceKeys, [
+  "N3",
+  "B60",
+  "O40",
+  "R40",
+  "G40",
+  "",
+  "",
+  "T40",
+  "TRANSPARENT"
+]);
 const bordrHover = setColor(appearanceKeys, [
   "N4",
   "B50",
@@ -60,7 +70,7 @@ const bordrHover = setColor(appearanceKeys, [
   "",
   "",
   "T30",
-  "NONE"
+  "TRANSPARENT"
 ]);
 const bordrActive = setColor(appearanceKeys, [
   "B5",
@@ -71,7 +81,7 @@ const bordrActive = setColor(appearanceKeys, [
   "",
   "",
   "T50",
-  "NONE"
+  "TRANSPARENT"
 ]);
 const text = setColor(appearanceKeys, ["N50", "N1", "N1", "N1", "N1", "B50", "N70", "N1", "N70"]);
 const boxShadow = setColor(appearanceKeys, [
@@ -95,7 +105,7 @@ const getLoadingState = (props: ButtonProps) => {
     return css`
       ${StyledSpinner};
       &::after {
-        border-color: ${getValFromObjKey("WHITE", props.theme.colors)};
+        border-color: ${props.theme.colors["WHITE"]};
         border-right-color: transparent;
         border-top-color: transparent;
       }
@@ -107,10 +117,6 @@ const getLoadingState = (props: ButtonProps) => {
 export function getButtonStyle(props: ButtonProps) {
   const { fontSizes, fonts, lineHeights, colors, radii, space } = props.theme;
   const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
-
-  // fluid button
-  let width;
-  if (fluid) width = "100%";
 
   /** Buttonn size style */
   const paddingStyle = iconOnly ? 0 : getElementSize(padding, size);
@@ -154,13 +160,13 @@ export function getButtonStyle(props: ButtonProps) {
     }
 
     if (appearance === "clean") {
-      bgStyle = "NONE";
-      bgHoverStyle = "NONE";
-      bgActiveStyle = "NONE";
-      borderStyle = "NONE";
-      borderHoverStyle = "NONE";
-      borderActiveStyle = "NONE";
-      colorStyle = "B50";
+      bgStyle = "TRANSPARENT";
+      bgHoverStyle = "TRANSPARENT";
+      bgActiveStyle = "TRANSPARENT";
+      borderStyle = "NONTRANSPARENTE";
+      borderHoverStyle = "TRANSPARENT";
+      borderActiveStyle = "TRANSPARENT";
+      colorStyle = "TRANSPARENT";
     }
   }
 
@@ -181,16 +187,25 @@ export function getButtonStyle(props: ButtonProps) {
     white-space: nowrap;
     transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
     line-height: ${lineHeights[1]};
-    width: ${width};
+    font-family: ${fonts["normal"]};
+    width: ${fluid && `100%`};
+    border-radius: ${radii[2]};
+
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};
-    font-family: ${fonts["normal"]};
     border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
     background: ${colors[bgStyle]};
     border-color: ${colors[borderStyle]};
     color: ${colors[colorStyle]};
-    border-radius: ${radii[2]};
+
+    &:disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      color: ${getValFromObjKey("N7", colors)} !important;
+      background: ${getValFromObjKey("N4", colors)} !important;
+      border: none;
+    }
 
     &:hover {
       background: ${colors[bgHoverStyle]};
@@ -202,14 +217,6 @@ export function getButtonStyle(props: ButtonProps) {
       background: ${colors[bgActiveStyle]};
       border-color: ${colors[borderActiveStyle]};
       box-shadow: 0 0 0 0.1rem ${colors[boxShadowStyle]};
-    }
-
-    &:disabled,
-    &[disabled] {
-      cursor: not-allowed;
-      color: ${getValFromObjKey("N7", colors)} !important;
-      background: ${getValFromObjKey("N4", colors)} !important;
-      border: none;
     }
 
     ${loadingStyle};

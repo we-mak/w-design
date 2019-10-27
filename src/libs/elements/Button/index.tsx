@@ -29,9 +29,9 @@ StyledSpan.displayName = "StyledSpanButton";
 
 const Button = (props: ButtonProps) => {
   const {
-    appearance = "default",
     type = "button",
-    size = "md",
+    appearance,
+    size,
     className,
     id,
     fluid,

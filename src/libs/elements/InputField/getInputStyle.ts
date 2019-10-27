@@ -1,8 +1,7 @@
 import { css } from "styled-components";
 import { InputFieldProps } from "./types";
-import { hex2Rgba, getFontSize, getElementSize } from "../../../common/styleUtils/utils";
 import { padding, height } from "../../../common/styleUtils/constants";
-import { getValFromObjKey } from "../../../common/helpers";
+import { getValFromObjKey, hex2Rgba, getFontSize, getElementSize } from "../../../common/helpers";
 
 export const getInputStyle = (props: InputFieldProps) => {
   const {

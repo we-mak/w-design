@@ -1,9 +1,8 @@
-import * as React from "react";
-import styled from "styled-components";
 /**
  * Button Group
- *
  */
+import * as React from "react";
+import styled from "styled-components";
 
 const ButtonGroupWrapper = styled.div`
   display: inline-flex;

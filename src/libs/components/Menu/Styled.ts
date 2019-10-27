@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { hex2Rgba } from "../../../common/styleUtils/utils";
+import { hex2Rgba } from "../../../common/helpers";
 import { MenuProps, MenuItemProps } from "./types";
 
 export const getMenuStyle = (props: MenuProps) => {

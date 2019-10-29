@@ -5,7 +5,7 @@ import { NavCenter } from "./NavCenter";
 import { NavSection } from "./NavSection";
 import { NavProps } from "./types";
 
-const Nav = styled.header`
+const Nav = styled.nav`
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;

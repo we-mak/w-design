@@ -1,100 +1,101 @@
 import { css } from "styled-components";
 import { ButtonProps } from "./types";
 import { padding, height } from "../../../common/styleUtils/constants";
-import { getValFromObjKey, setColor, getFontSize, getElementSize } from "../../../common/helpers";
+import { getValFromObjKey, getFontSize, getElementSize } from "../../../common/helpers";
 import { StyledSpinner } from "../Spinner";
 
-const appearanceKeys = [
-  "default",
-  "primary",
-  "warning",
-  "danger",
-  "success",
-  "link",
-  "subtle",
-  "help",
-  "clean"
-];
-
 // Set button background colors
-const bg = setColor(appearanceKeys, [
-  "N3",
-  "B50",
-  "O30",
-  "R30",
-  "G30",
-  "TRANSPARENT",
-  "TRANSPARENT",
-  "T30",
-  "TRANSPARENT"
-]);
-const bgHover = setColor(appearanceKeys, [
-  "N4",
-  "B40",
-  "O20",
-  "R20",
-  "G20",
-  "N3",
-  "N2",
-  "T20",
-  "TRANSPARENT"
-]);
-const bgActive = setColor(appearanceKeys, [
-  "B5",
-  "B60",
-  "O40",
-  "R40",
-  "G40",
-  "B5",
-  "B5",
-  "T40",
-  "TRANSPARENT"
-]);
-const bordr = setColor(appearanceKeys, [
-  "N3",
-  "B60",
-  "O40",
-  "R40",
-  "G40",
-  "",
-  "",
-  "T40",
-  "TRANSPARENT"
-]);
-const bordrHover = setColor(appearanceKeys, [
-  "N4",
-  "B50",
-  "O30",
-  "R30",
-  "G30",
-  "",
-  "",
-  "T30",
-  "TRANSPARENT"
-]);
-const bordrActive = setColor(appearanceKeys, [
-  "B5",
-  "B70",
-  "O50",
-  "R50",
-  "G50",
-  "",
-  "",
-  "T50",
-  "TRANSPARENT"
-]);
-const text = setColor(appearanceKeys, ["N50", "N1", "N1", "N1", "N1", "B50", "N70", "N1", "N70"]);
-const boxShadow = setColor(appearanceKeys, [
-  "B50",
-  "B5",
-  "O10",
-  "R5",
-  "G5",
-  "B50",
-  "B50",
-  "T10",
-  "N1"
-]);
+const bg = {
+  default: "N3",
+  primary: "B50",
+  warning: "O30",
+  danger: "R30",
+  success: "G30",
+  link: "TRANSPARENT",
+  subtle: "TRANSPARENT",
+  help: "T30",
+  clean: "TRANSPARENT"
+};
+
+const bgHover = {
+  default: "N4",
+  primary: "B40",
+  warning: "O20",
+  danger: "R20",
+  success: "G20",
+  link: "N3",
+  subtle: "N2",
+  help: "T20",
+  clean: "TRANSPARENT"
+};
+
+const bgActive = {
+  default: "B5",
+  primary: "B60",
+  warning: "O40",
+  danger: "R40",
+  success: "G40",
+  link: "B5",
+  subtle: "B5",
+  help: "T40",
+  clean: "TRANSPARENT"
+};
+const bordr = {
+  default: "N3",
+  primary: "B60",
+  warning: "O40",
+  danger: "R40",
+  success: "G40",
+  link: "",
+  subtle: "",
+  help: "T40",
+  clean: "TRANSPARENT"
+};
+
+const bordrHover = {
+  default: "N4",
+  primary: "B50",
+  warning: "O30",
+  danger: "R30",
+  success: "G30",
+  link: "",
+  subtle: "",
+  help: "T30",
+  clean: "TRANSPARENT"
+};
+const bordrActive = {
+  default: "B5",
+  primary: "B70",
+  warning: "O50",
+  danger: "R50",
+  success: "G50",
+  link: "",
+  subtle: "",
+  help: "T50",
+  clean: "TRANSPARENT"
+};
+const text = {
+  default: "N50",
+  primary: "N1",
+  warning: "N1",
+  danger: "N1",
+  success: "N1",
+  link: "B50",
+  subtle: "N70",
+  help: "N1",
+  clean: "N70"
+};
+const boxShadow = {
+  default: "B50",
+  primary: "B5",
+  warning: "O10",
+  danger: "R5",
+  success: "G5",
+  link: "B50",
+  subtle: "B50",
+  help: "T10",
+  clean: "N1"
+};
 
 /** Apply style to each appearance when isLoading = true */
 const getLoadingState = (props: ButtonProps) => {

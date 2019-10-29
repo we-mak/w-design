@@ -12,13 +12,6 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### <a name="0.40"></a>#[v0.40]()
 
-Big refactor to have a better structure for all over project to reduce the file size,
-better distribute styling.
-Concept:
-
-- Access styled with custom hooks
-- Refactor other component i.e `Button`, `InputField` to reduce file size
-
 #### Changes
 
 - ❌ `Upload`
@@ -29,6 +22,9 @@ Concept:
 - ❌ Refactor `Spinner`
 - ❌ Refactor `CustomTag` with styles props
   Check Issue (https://github.com/styled-components/styled-components/issues/439)
+
+- Refactor utils, `Button` to reduce file size
+- ✅ Remove trim value at `useField`
 
 ---
 

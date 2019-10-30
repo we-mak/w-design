@@ -19,11 +19,11 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Badges`
 - ❌ `Collapsible`
 - ❌ Refactor `Icon`
-- ❌ Refactor `Spinner`
 - ❌ Refactor `CustomTag` with styles props
   Check Issue (https://github.com/styled-components/styled-components/issues/439)
 
-- Refactor utils, `Button`
+- ✅ Refactor `Spinner`
+- ✅ Refactor utils, `Button`
 - ✅ Remove trim value at `useField`
 
 ---

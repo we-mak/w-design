@@ -109,6 +109,9 @@ const ButtonPage: React.FunctionComponent<any> = () => {
           <Button appearance="clean" isLoading>
             Clean button
           </Button>
+          <Button isLoading appearance="primary">
+            Is Loading
+          </Button>
           <Button isDisabled>Disabled</Button>
         </ButtonGroup>
 

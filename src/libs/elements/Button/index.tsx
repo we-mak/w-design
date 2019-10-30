@@ -3,6 +3,7 @@ import styled, { AnyStyledComponent } from "styled-components";
 import { ButtonProps } from "./types";
 import { getButtonStyle } from "./getButtonStyle";
 import Icon from "../Icon";
+import Spinner from "../Spinner";
 
 const StyledButton = styled.button`
   ${getButtonStyle}
@@ -26,6 +27,29 @@ const StyledSpan = styled.span`
   ${getButtonStyle}
 `;
 StyledSpan.displayName = "StyledSpanButton";
+
+const ChildContainer = styled.div<{ isLoading: boolean }>`
+  align-self: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: ${props => props.isLoading && `0`};
+`;
+
+ChildContainer.displayName = "ChildContainer";
+
+const SpinnerWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+`;
+
+SpinnerWrapper.displayName = "SpinnerWrapper";
 
 const Button = (props: ButtonProps) => {
   const {
@@ -53,6 +77,7 @@ const Button = (props: ButtonProps) => {
     tabIndex,
     children,
     buttonRef,
+    theme,
     ...rest
   } = props;
 
@@ -71,6 +96,10 @@ const Button = (props: ButtonProps) => {
     return () => (button = undefined);
   });
 
+  let spinnerColor = undefined;
+  if (appearance === ("primary" || "warning" || "success" || "help")) {
+    spinnerColor = `#fff`;
+  }
   return (
     <ButtonComponent
       ref={buttonRef}
@@ -100,9 +129,16 @@ const Button = (props: ButtonProps) => {
       onClick={isDisabled ? undefined : onClick}
       {...rest}
     >
-      {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
-      {children}
-      {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
+      {isLoading && (
+        <SpinnerWrapper>
+          <Spinner size="sm" spinnerColor={spinnerColor} />
+        </SpinnerWrapper>
+      )}
+      <ChildContainer isLoading={isLoading}>
+        {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
+        {children}
+        {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
+      </ChildContainer>
     </ButtonComponent>
   );
 };

@@ -159,6 +159,7 @@ export function getButtonStyle(props: ButtonProps) {
     cursor: pointer;
     outline: 0;
     display: inline-block;
+    position: relative;
     text-decoration: none;
     text-align: center;
     user-select: none;

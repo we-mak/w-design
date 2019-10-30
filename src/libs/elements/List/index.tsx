@@ -90,7 +90,7 @@ const List: React.FC<ListProps> = ({
 
       {isLoading && (
         <SpinnerWrapper>
-          <Spinner large />
+          <Spinner />
         </SpinnerWrapper>
       )}
 

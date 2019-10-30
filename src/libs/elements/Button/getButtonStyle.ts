@@ -2,7 +2,6 @@ import { css } from "styled-components";
 import { ButtonProps } from "./types";
 import { padding, height } from "../../../common/styleUtils/constants";
 import { getValFromObjKey, getFontSize, getElementSize } from "../../../common/helpers";
-import { StyledSpinner } from "../Spinner";
 
 // Set button background colors
 const bg = {
@@ -97,24 +96,6 @@ const boxShadow = {
   clean: "N1"
 };
 
-/** Apply style to each appearance when isLoading = true */
-const getLoadingState = (props: ButtonProps) => {
-  const { isLoading, appearance } = props;
-  if (isLoading) {
-    if (appearance === "default" || appearance === "link") return StyledSpinner;
-
-    return css`
-      ${StyledSpinner};
-      &::after {
-        border-color: ${props.theme.colors["WHITE"]};
-        border-right-color: transparent;
-        border-top-color: transparent;
-      }
-    `;
-  }
-  return;
-};
-
 export function getButtonStyle(props: ButtonProps) {
   const { fontSizes, fonts, lineHeights, colors, radii, space } = props.theme;
   const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
@@ -173,9 +154,6 @@ export function getButtonStyle(props: ButtonProps) {
 
   const boxShadowStyle = isSelected ? "transparent" : getValFromObjKey(appearance, boxShadow);
 
-  // Apply loading style
-  const loadingStyle = getLoadingState(props);
-
   return css`
     appearance: none;
     cursor: pointer;
@@ -219,8 +197,6 @@ export function getButtonStyle(props: ButtonProps) {
       border-color: ${colors[borderActiveStyle]};
       box-shadow: 0 0 0 0.1rem ${colors[boxShadowStyle]};
     }
-
-    ${loadingStyle};
 
     i {
       &.icon-before {

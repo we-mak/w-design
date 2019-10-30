@@ -16,13 +16,15 @@ const SpinnerPage: React.FunctionComponent<any> = () => (
     Useful for pending render, loading data...
     <Typo appearance="h3">Example</Typo>
     <Spinner />
-    <Spinner borderColor="green" />
-    <Spinner large />
+    <Spinner spinnerColor="green" />
+    <Spinner size="sm" />
+    <Spinner size="lg" />
     <CodeBlock
       exampleCode={`
 <Spinner />
-<Spinner borderColor="green" />
-<Spinner large />
+<Spinner spinnerColor="green" />
+<Spinner size="sm" />
+<Spinner size="lg" />
     `}
     />
     <h4>Api</h4>

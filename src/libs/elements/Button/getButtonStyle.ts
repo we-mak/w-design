@@ -164,7 +164,7 @@ export function getButtonStyle(props: ButtonProps) {
       bgStyle = "TRANSPARENT";
       bgHoverStyle = "TRANSPARENT";
       bgActiveStyle = "TRANSPARENT";
-      borderStyle = "NONTRANSPARENTE";
+      borderStyle = "TRANSPARENT";
       borderHoverStyle = "TRANSPARENT";
       borderActiveStyle = "TRANSPARENT";
       colorStyle = "TRANSPARENT";
@@ -202,10 +202,10 @@ export function getButtonStyle(props: ButtonProps) {
 
     &:disabled,
     &[disabled] {
-      cursor: not-allowed;
-      color: ${getValFromObjKey("N7", colors)} !important;
-      background: ${getValFromObjKey("N4", colors)} !important;
+      color: ${colors["N7"]} !important;
+      background: ${colors["N4"]} !important;
       border: none;
+      cursor: not-allowed;
     }
 
     &:hover {

@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 import { InputFieldProps } from "./types";
 import { padding, height } from "../../../common/styleUtils/constants";
-import { getValFromObjKey, hex2Rgba, getFontSize, getElementSize } from "../../../common/helpers";
+import { hex2Rgba, getFontSize, getElementSize } from "../../../common/helpers";
 
 export const getInputStyle = (props: InputFieldProps) => {
   const {
@@ -63,8 +63,8 @@ export const getInputStyle = (props: InputFieldProps) => {
     &:disabled,
     &[disabled] {
       cursor: not-allowed;
-      color: ${getValFromObjKey("N7", colors)} !important;
-      background: ${getValFromObjKey("N2", colors)} !important;
+      color: ${colors["N7"]} !important;
+      background: ${colors["N2"]} !important;
     }
 
     &[type="file"] {

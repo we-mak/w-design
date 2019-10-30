@@ -23,7 +23,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Refactor `CustomTag` with styles props
   Check Issue (https://github.com/styled-components/styled-components/issues/439)
 
-- Refactor utils, `Button` to reduce file size
+- Refactor utils, `Button`
 - ✅ Remove trim value at `useField`
 
 ---

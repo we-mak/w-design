@@ -7,28 +7,27 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Switch to monorepo
+- ❌ Migrate to emotion
+- ❌ Refactor `CustomTag` with styles props (check clean tag)
 
 ---
 
-### <a name="0.40"></a>#[v0.40]()
+<a name="0.38.4"></a>#[v0.38.4]()
 
 #### Changes
 
-- ❌ `Upload`
 - ❌ `EmptyView`
 - ❌ `Badges`
 - ❌ `Collapsible`
+- ❌ `Upload`
 - ❌ Refactor `Icon`
-- ❌ Refactor `CustomTag` with styles props
-  Check Issue (https://github.com/styled-components/styled-components/issues/439)
-
 - ✅ Refactor `Spinner`
 - ✅ Refactor utils, `Button`
 - ✅ Remove trim value at `useField`
 
 ---
 
-### <a name="0.34"></a>#[v0.34]()
+<a name="0.34"></a>#[v0.34]()
 
 - `ImageRatio`
 - `List`

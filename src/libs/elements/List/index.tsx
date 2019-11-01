@@ -20,6 +20,7 @@ import {
   EmptyContainer
 } from "./Styled";
 import { ListProps } from "./types";
+import EmptyView from "../EmptyView";
 
 const List: React.FC<ListProps> = ({
   header,
@@ -73,7 +74,11 @@ const List: React.FC<ListProps> = ({
     if (emptyView) {
       childrenComponent = <EmptyContainer>{emptyView}</EmptyContainer>;
     } else {
-      childrenComponent = <EmptyContainer>No data...</EmptyContainer>;
+      childrenComponent = (
+        <EmptyContainer>
+          <EmptyView />
+        </EmptyContainer>
+      );
     }
   }
 

@@ -7,7 +7,6 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Switch to monorepo
-- ❌ Migrate to emotion
 - ❌ Refactor `CustomTag` with styles props (check clean tag)
 
 ---

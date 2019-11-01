@@ -11,6 +11,7 @@ export { default as Button, ButtonGroup } from "./libs/elements/Button";
 export { default as Checkbox } from "./libs/elements/Checkbox";
 export { default as CustomTag } from "./libs/elements/CustomTag";
 export { default as Divider } from "./libs/elements/Divider";
+export { default as EmptyView } from "./libs/elements/EmptyView";
 export { default as Label } from "./libs/elements/Label";
 export { default as List, ListItem, ListFooter } from "./libs/elements/List";
 export { default as Icon } from "./libs/elements/Icon";

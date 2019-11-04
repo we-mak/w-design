@@ -6,6 +6,7 @@ export { default as Masonry } from "./libs/layout/Masonry";
 export { default as Provider } from "./libs/layout/Provider";
 // Elements
 export { default as Avatar } from "./libs/elements/Avatar";
+export { default as Box } from "./libs/elements/Box";
 export { default as Breadcrumbs, BreadcrumbsItem } from "./libs/elements/Breadcrumbs";
 export { default as Button, ButtonGroup } from "./libs/elements/Button";
 export { default as Checkbox } from "./libs/elements/Checkbox";

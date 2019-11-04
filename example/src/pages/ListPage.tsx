@@ -53,7 +53,7 @@ const Example = () => {
         }}
         footer={
           <ListFooter>
-            <Button onClick={() => setLoading(!loadingState)}>Footer Button</Button>
+            <Button onClick={() => setLoading(!loadingState)}>Set Loading</Button>
           </ListFooter>
         }
       ></List>

@@ -7,19 +7,20 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Switch to monorepo
-- ❌ Refactor `CustomTag` with styles props (check clean tag)
 
 ---
 
-<a name="0.38.4"></a>#[v0.38.4]()
+<a name="0.40.4"></a>#[v0.40.4]()
 
 #### Changes
 
-- ❌ `EmptyView`
+- ✅ `EmptyView`
+- ✅ `Box`
 - ❌ `Badges`
 - ❌ `Collapsible`
 - ❌ `Upload`
 - ❌ Refactor `Icon`
+- ❌ Fix `List` responsive
 - ✅ Refactor `Spinner`
 - ✅ Refactor utils, `Button`
 - ✅ Remove trim value at `useField`

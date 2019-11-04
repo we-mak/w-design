@@ -132,6 +132,7 @@ Cover basic components, widgets from 3rd parties libray
 |                   | ✅ Breadcrumbs         |                 |                    |
 |                   | ✅ ImageRatio          |                 |                    |
 |                   | ✅ EmptyView           |                 |                    |
+|                   | ✅ Box                 |                 |                    |
 
 ## 🐞 Report
 

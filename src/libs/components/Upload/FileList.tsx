@@ -14,7 +14,7 @@ export const FileList: React.FC<UploadListProps> = ({ fileList }) => {
             <ListItem thumbnail={item.thumbUrl}>
               <div style={{ width: "100%" }}>
                 {item.name}
-                <ProgressLoader size="sm" percent={20} />
+                <ProgressLoader size="sm" percent={item.percent} />
               </div>
             </ListItem>
           );

@@ -125,7 +125,7 @@ Cover basic components, widgets from 3rd parties libray
 |                   | ✅ Icon (Font awesome) | ✅ InputForm    |                    |
 |                   | ✅ Radio               | ❌ Pagination   |                    |
 |                   | ✅ Button              | ✅ Card         |                    |
-|                   | ✅ Image               | ✅ Upload       |                    |
+|                   | ✅ Image               |                 |                    |
 |                   | ✅ SectionMessage      |                 |                    |
 |                   | ❌ Tooltip             |                 |                    |
 |                   | ❌ Popover             |                 |                    |

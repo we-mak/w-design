@@ -4,7 +4,14 @@ import { Typo, Container, Upload } from "w-design";
 const Example = () => {
   return (
     <Container>
-      <Upload width={250} />
+      <Upload
+        multiple
+        width={250}
+        beforeUpload={(file: any, fileList: any) => {
+          console.log("before upload", file, fileList);
+          return true;
+        }}
+      />
       <br />
       <Upload uploadType="picture" accept="image/*" />
     </Container>

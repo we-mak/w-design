@@ -70,11 +70,11 @@ const components = [
   {
     title: "Push message",
     link: "/push-message"
-  },
-  {
-    title: "Upload",
-    link: "/upload"
   }
+  // {
+  //   title: "Upload",
+  //   link: "/upload"
+  // }
 ];
 
 const baseUrl = process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "";

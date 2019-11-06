@@ -23,7 +23,7 @@ export const ListItem: React.FC<ListItemProps> = ({
       <ListItemMeta>
         {thumbnail && (
           <ThumbContainer>
-            <ImageRatio paddingBottom={100}>
+            <ImageRatio paddingBottom={100} minWidth={36}>
               <Image data-src={thumbnail} />
             </ImageRatio>
           </ThumbContainer>

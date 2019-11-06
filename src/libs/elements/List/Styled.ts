@@ -91,6 +91,7 @@ ListItemActionGroup.displayName = "ListItemActionGroup";
 export const ThumbContainer = styled.div`
   width: 3rem;
   height: 3rem;
+  position: relative;
 `;
 ThumbContainer.displayName = "ThumbContainer";
 

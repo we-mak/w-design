@@ -7,10 +7,11 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Switch to monorepo
+- ❌ Refactor `Icon`
 
 ---
 
-<a name="0.40.4"></a>#[v0.40.4]()
+<a name="0.38.4"></a>#[v0.38.4]()
 
 #### Changes
 
@@ -18,9 +19,9 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ✅ `Box`
 - ❌ `Badges`
 - ❌ `Collapsible`
-- ❌ `Upload`
-- ❌ Refactor `Icon`
+- ❌ Replace `useLayoutEffect`
 - ❌ Fix `List` responsive
+- ✅ Remove hooks from main package
 - ✅ Refactor `Spinner`
 - ✅ Refactor utils, `Button`
 - ✅ Remove trim value at `useField`

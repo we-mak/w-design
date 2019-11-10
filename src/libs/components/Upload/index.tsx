@@ -124,14 +124,18 @@ const Upload: FC<UploadProps> = ({
 
       if (before && before.then) {
         before
-          .then((processedFile: FormDataEntryValue) => {
-            const processedFileType = Object.prototype.toString.call(processedFile);
-            if (processedFileType === "[object File]" || processedFileType === "[object Blob]") {
-              return post(processedFileType);
-            }
+          .then(() =>
+            // processedFile: FormDataEntryValue
+            {
+              // const processedFileType = Object.prototype.toString.call(processedFile);
 
-            return post(file);
-          })
+              // if (processedFileType === "[object File]" || processedFileType === "[object Blob]") {
+              //   return post(processedFileType);
+              // }
+
+              return post(file);
+            }
+          )
           .catch((err: any) => {
             console && console.log(err);
           });
@@ -150,7 +154,7 @@ const Upload: FC<UploadProps> = ({
     checkComponentMounted = true;
   }, [checkComponentMounted]);
 
-  const post = (file: UploadFileType | any) => {
+  const post = (file: UploadFileType) => {
     //  console.log(getFileItem(uploadFile, fileList));
 
     if (requestUpload) {
@@ -200,7 +204,6 @@ const Upload: FC<UploadProps> = ({
           let finalFile = new FormData();
           finalFile.append("file", file.data);
 
-          xhr.setRequestHeader("Content-Type", "multipart/form-data");
           xhr.send(finalFile);
         }
       );

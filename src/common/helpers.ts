@@ -86,6 +86,37 @@ export const removeAccentMarks = (str: string) => {
  *****************
  */
 
+import { css, CSSObject } from "styled-components";
+
+/**
+ * Media query
+ * Usage: Add mediaQ in styled component.
+
+const FakeInput = styled.div`
+  position: absolute;
+  left: 8em;
+  top: 4.5em;
+  ${mediaQ.xl`width: 50%`};
+`
+*/
+const screens = {
+  xxl: 90,
+  xl: 80,
+  lg: 64,
+  md: 48,
+  sm: 32,
+  xs: 24
+};
+
+export const mediaQ = Object.keys(screens).reduce((acc: any, key: string) => {
+  acc[key] = (params: TemplateStringsArray | CSSObject) => css`
+    @media (max-width: ${screens[key]}em) {
+      ${css(params)}
+    }
+  `;
+  return acc;
+}, {});
+
 // credit https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb/#answer-11508164
 export const hex2Rgba = (hex: string, alpha?: number): string => {
   // Check bad hex

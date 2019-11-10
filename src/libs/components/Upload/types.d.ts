@@ -12,7 +12,7 @@ export interface WFile extends File {
   readonly webkitRelativePath: string;
 }
 
-export interface UploadFileType {
+export interface UploadFileType<T = any> {
   uid: string;
   size: number;
   type: string;
@@ -21,10 +21,11 @@ export interface UploadFileType {
   lastModifiedDate: Date;
   percent?: number;
   url?: string;
-  thumbUrl?: string;
+  source?: string;
   status?: UploadStatus;
   webkitRelativePath?: string;
   error?: any;
+  response?: T;
 }
 
 export interface UploadChangeParam<T extends object = UploadFileType> {
@@ -34,12 +35,18 @@ export interface UploadChangeParam<T extends object = UploadFileType> {
 }
 
 export type RequestUploadType = {
-  endpoint?: string;
-  headers?: Headers; // Fetch api headers interface
+  endpoint: string;
+  // request method
+  method: "POST" | "PUT" | "post" | "put";
+  timeout: number;
+  headers?: { [key: string]: string }; // Fetch api headers interface
+  withCredentials?: boolean;
+  ignoreCache?: boolean;
+  // body?: any;
 };
 
 export interface UploadListProps extends GlobProps {
-  fileList?: UploadFileType[];
+  fileList?: UploadFileType[] | string[];
 }
 
 export interface UploadProps extends UploadListProps {
@@ -58,7 +65,7 @@ export interface UploadProps extends UploadListProps {
   /* Function to executed before upload. If `false` the upload will be reject */
   beforeUpload?: (file, fileList) => boolean | Promise;
   /* restApi request upload use fetch Api*/
-  requestUpload?: RequestUploadType;
+  requestUpload: RequestUploadType;
   /* modified onchange behavior*/
   onChange?: (uploadInfo: UploadChangeParam) => void;
   /* disable input */

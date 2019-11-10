@@ -11,16 +11,18 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-<a name="0.38.4"></a>#[v0.38.4]()
+<a name="0.40.4"></a>#[v0.40.4]()
 
 #### Changes
 
 - ✅ `EmptyView`
 - ✅ `Box`
-- ❌ `Badges`
+- ❌ `Badge`
+- ❌ `Tabs`
 - ❌ `Collapsible`
-- ❌ Replace `useLayoutEffect`
-- ❌ Fix `List` responsive
+- ❌ `Upload`
+- ✅ Replace `useLayoutEffect`
+- ✅ Fix `List` responsive
 - ✅ Remove hooks from main package
 - ✅ Refactor `Spinner`
 - ✅ Refactor utils, `Button`

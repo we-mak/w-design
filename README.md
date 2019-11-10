@@ -109,7 +109,7 @@ Cover basic components, widgets from 3rd parties libray
 | ----------------- | ---------------------- | --------------- | ------------------ |
 | ✅ Container      | ✅ InputField          | ✅ AvatarGroup  | ✅ useClickOutside |
 | ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       | ✅ useField        |
-| ✅ DisplayElement | ✅ Label               | ✅ Badges       | ✅ useForm         |
+| ✅ DisplayElement | ✅ Label               |                 | ✅ useForm         |
 | ✅ ThemeProvider  | ✅ Picture             | ✅ Collapsible  |                    |
 | ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  |                    |
 |                   | ❌ Chip                | ❌ Steps        |                    |
@@ -125,7 +125,7 @@ Cover basic components, widgets from 3rd parties libray
 |                   | ✅ Icon (Font awesome) | ✅ InputForm    |                    |
 |                   | ✅ Radio               | ❌ Pagination   |                    |
 |                   | ✅ Button              | ✅ Card         |                    |
-|                   | ✅ Image               |                 |                    |
+|                   | ✅ Image               | ❌ Upload       |                    |
 |                   | ✅ SectionMessage      |                 |                    |
 |                   | ❌ Tooltip             |                 |                    |
 |                   | ❌ Popover             |                 |                    |
@@ -133,6 +133,7 @@ Cover basic components, widgets from 3rd parties libray
 |                   | ✅ ImageRatio          |                 |                    |
 |                   | ✅ EmptyView           |                 |                    |
 |                   | ✅ Box                 |                 |                    |
+|                   | ✅ Badge               |                 |                    |
 
 ## 🐞 Report
 

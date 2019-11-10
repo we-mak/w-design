@@ -12,7 +12,7 @@
 //  Handle abort upload
 // Handle response upload info & status
 
-import React, { FC, useState, memo } from "react";
+import React, { FC, useState, memo, useEffect } from "react";
 import PushMessage from "../PushMessage";
 import { FileList } from "./FileList";
 import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
@@ -32,7 +32,8 @@ const Upload: FC<UploadProps> = ({
   disabled,
   showFileList = true,
   defaultFileList = [],
-  beforeUpload
+  beforeUpload,
+  requestUpload
 }) => {
   const [fileList, setFileList] = useState(defaultFileList);
   const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
@@ -85,24 +86,25 @@ const Upload: FC<UploadProps> = ({
             // ProgressEvent interface https://xhr.spec.whatwg.org/#interface-progressevent
 
             // handle preview image from local url
-            let thumb: string;
+            let source: string;
             const { result } = e.target;
 
             if (!f.type.match("image.*")) {
-              thumb = dummyThumb;
+              source = dummyThumb;
             } else {
-              thumb = result;
+              source = result;
             }
 
-            // parsing file object
-            const parsedFile = { ...fileToObject(f), thumbUrl: thumb };
+            // transform file object
+            const transformedFile = { ...fileToObject(f), source };
 
-            files = [...files, parsedFile];
+            files = [...files, transformedFile];
+            // update file list
+            setFileList([...fileList, ...files]);
 
-            return upload(parsedFile, files);
+            return upload(transformedFile, files);
           };
         })(file);
-
         // Read in the file as a data URL.
         reader.readAsDataURL(file);
       });
@@ -113,8 +115,9 @@ const Upload: FC<UploadProps> = ({
     // return upload imediately
     // if there is no beforeUpload function
     if (!beforeUpload) {
-      console.log("directly upload", file);
+      return post(file);
     }
+
     // beforeUpload: Check file types allowed,... anything before upload execute from props (if any)
     if (beforeUpload) {
       const before = beforeUpload(file, files);
@@ -124,25 +127,99 @@ const Upload: FC<UploadProps> = ({
           .then((processedFile: any) => {
             const processedFileType = Object.prototype.toString.call(processedFile);
             if (processedFileType === "[object File]" || processedFileType === "[object Blob]") {
-              console.log("processed promise", file);
+              return post(processedFileType);
             }
-            console.log("improcessed promise", file);
+
+            return post(file);
           })
           .catch((err: any) => {
             console && console.log(err);
           });
       } else if (before !== false) {
-        console.log("before boolean", file);
+        return post(file);
       }
     }
-
-    // update file list
-    setFileList([...fileList, file]);
+    // nothing to return
+    return null;
   };
+
+  // Handle post with xhr posting
+  let checkComponentMounted: boolean = false;
+  // Make sure component is mounted before upload
+  useEffect(() => {
+    checkComponentMounted = true;
+  }, [checkComponentMounted]);
+
+  const post = (file: UploadFileType | "[object File]" | "[object Blob]") => {
+    let uploadFile = file;
+    //  console.log(getFileItem(uploadFile, fileList));
+
+    if (requestUpload) {
+      const { method, endpoint, headers, ignoreCache } = requestUpload;
+
+      return new Promise(() =>
+        // resolve, reject
+        {
+          const xhr = new XMLHttpRequest();
+          let requestMethod = "POST";
+          if (method) {
+            requestMethod = method;
+          }
+
+          xhr.open(requestMethod, endpoint, true);
+
+          if (headers) {
+            Object.keys(headers).forEach(key => xhr.setRequestHeader(key, headers[key]));
+          }
+
+          if (ignoreCache) {
+            xhr.setRequestHeader("Cache-Control", "no-cache");
+          }
+
+          xhr.addEventListener("load", function() {
+            console.log(`Loaded: ${xhr.status} ${xhr.response}`);
+          });
+
+          xhr.onerror = function() {
+            console.log(`Network Error`);
+          };
+
+          xhr.onloadstart = () => {
+            console.log("start");
+          };
+
+          xhr.upload.onprogress = function(e) {
+            if (e.lengthComputable) {
+              console.log(e.loaded + " / " + e.total);
+            }
+          };
+
+          xhr.onloadend = () => {
+            console.log("end");
+          };
+
+          console.log(uploadFile, fileList);
+
+          // if (method === "POST" && body) {
+          //   xhr.setRequestHeader("Content-Type", "application/json");
+          //   xhr.send(JSON.stringify(body));
+          // } else {
+          //   xhr.send();
+          // }
+
+          xhr.send(JSON.stringify(uploadFile));
+        }
+      );
+    }
+
+    return;
+  };
+
+  // console.log(fileList);
 
   return (
     <>
-      <UploadContainer uploadType={uploadType}>
+      <UploadContainer uploadType={uploadType} requestUpload={requestUpload}>
         {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
         <UploadLabel>
           <span>{label}</span>

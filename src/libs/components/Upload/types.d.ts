@@ -21,7 +21,8 @@ export interface UploadFileType<T = any> {
   lastModifiedDate: Date;
   percent?: number;
   url?: string;
-  source?: string;
+  thumbUrl?: string;
+  data?: any;
   status?: UploadStatus;
   webkitRelativePath?: string;
   error?: any;

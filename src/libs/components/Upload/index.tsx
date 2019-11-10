@@ -1,11 +1,6 @@
 /**
  * Upload
- * Simple upload file and image
- * Refs:
- * - https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
- * - http://christopher5106.github.io/web/2015/12/13/HTML5-file-image-upload-and-resizing-javascript-with-progress-bar.html
- * - https://ant.design/components/upload/
- *
+ * Simple upload file
  */
 
 // TODO:
@@ -78,13 +73,7 @@ const Upload: FC<UploadProps> = ({
         reader.onerror = errorHandler;
         // Handle upload
         reader.onload = (f => {
-          // Parse file info into custom object with unique id
-          f.uid = setUid("file");
-          f.percent = 0;
-
           return (e: ProgressEvent<any>) => {
-            // ProgressEvent interface https://xhr.spec.whatwg.org/#interface-progressevent
-
             // handle preview image from local url
             let source: string;
             const { result } = e.target;
@@ -96,7 +85,13 @@ const Upload: FC<UploadProps> = ({
             }
 
             // transform file object
-            const transformedFile = { ...fileToObject(f), source };
+            let transformedFile = {
+              ...fileToObject(f),
+              source,
+              data: f,
+              uid: setUid("file"),
+              percent: 0
+            };
 
             files = [...files, transformedFile];
             // update file list
@@ -124,7 +119,7 @@ const Upload: FC<UploadProps> = ({
 
       if (before && before.then) {
         before
-          .then((processedFile: any) => {
+          .then((processedFile: FormDataEntryValue) => {
             const processedFileType = Object.prototype.toString.call(processedFile);
             if (processedFileType === "[object File]" || processedFileType === "[object Blob]") {
               return post(processedFileType);
@@ -150,8 +145,7 @@ const Upload: FC<UploadProps> = ({
     checkComponentMounted = true;
   }, [checkComponentMounted]);
 
-  const post = (file: UploadFileType | "[object File]" | "[object Blob]") => {
-    let uploadFile = file;
+  const post = (file: UploadFileType | any) => {
     //  console.log(getFileItem(uploadFile, fileList));
 
     if (requestUpload) {
@@ -198,16 +192,11 @@ const Upload: FC<UploadProps> = ({
             console.log("end");
           };
 
-          console.log(uploadFile, fileList);
+          let finalFile = new FormData();
+          finalFile.append("file", file.data);
 
-          // if (method === "POST" && body) {
-          //   xhr.setRequestHeader("Content-Type", "application/json");
-          //   xhr.send(JSON.stringify(body));
-          // } else {
-          //   xhr.send();
-          // }
-
-          xhr.send(JSON.stringify(uploadFile));
+          xhr.setRequestHeader("Content-Type", "multipart/form-data");
+          xhr.send(finalFile);
         }
       );
     }
@@ -215,7 +204,7 @@ const Upload: FC<UploadProps> = ({
     return;
   };
 
-  // console.log(fileList);
+  console.log(fileList);
 
   return (
     <>
@@ -225,6 +214,7 @@ const Upload: FC<UploadProps> = ({
           <span>{label}</span>
           <UploadInput
             type="file"
+            name="file"
             accept={accept}
             multiple={multiple}
             onChange={handleUploadFiles}

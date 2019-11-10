@@ -13,7 +13,7 @@ const Example = () => {
         // }}
 
         requestUpload={{
-          endpoint: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+          endpoint: "http://www.mocky.io/v2/5dc7a9263000000d00e1de5c",
           headers: {
             authorization: "authorization-text"
           }

@@ -8,9 +8,9 @@
  * - Spinner exists if data is loading
  */
 import * as React from "react";
-import Spinner from "../Spinner";
-import Typo from "../Typo";
-import Divider from "../Divider";
+import Spinner from "../../elements/Spinner";
+import Typo from "../../elements/Typo";
+import Divider from "../../elements/Divider";
 import {
   ListContainer,
   ListWrapper,
@@ -20,7 +20,7 @@ import {
   EmptyContainer
 } from "./Styled";
 import { ListProps } from "./types";
-import EmptyView from "../EmptyView";
+import EmptyView from "../../elements/EmptyView";
 
 const List: React.FC<ListProps> = ({
   header,

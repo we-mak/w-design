@@ -22,7 +22,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Collapsible`
 - ❌ `Upload`
 - ✅ Replace `useLayoutEffect`
-- ✅ Fix `List` responsive
+- ✅ Fix `List` responsive, moved to components directory
 - ✅ Remove hooks from main package
 - ✅ Refactor `Spinner`
 - ✅ Refactor utils, `Button`

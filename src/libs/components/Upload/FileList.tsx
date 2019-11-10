@@ -1,6 +1,6 @@
 import * as React from "react";
 import ProgressLoader from "../../elements/ProgressLoader";
-import List, { ListItem } from "../../elements/List";
+import List, { ListItem } from "../List";
 import { UploadListProps } from "./types";
 import { ListContainer } from "./Styled";
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image, { ImageRatio } from "../../elements/Image";
-import Typo from "../Typo";
+import Typo from "../../elements/Typo";
 import {
   ListItemStyled,
   ListItemMeta,

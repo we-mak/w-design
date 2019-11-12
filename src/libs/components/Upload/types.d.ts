@@ -48,6 +48,7 @@ export type RequestUploadType = {
 
 export interface UploadListProps extends GlobProps {
   fileList?: UploadFileType[] | string[];
+  rowKey?: string | ((item: any) => string);
 }
 
 export interface UploadProps extends UploadListProps {

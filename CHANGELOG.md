@@ -8,18 +8,18 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 - ❌ Switch to monorepo
 - ❌ Refactor `Icon`
+- ❌ `Badge`
+- ❌ `Tabs`
+- ❌ `Collapsible`
 
 ---
 
-<a name="0.40.4"></a>#[v0.40.4]()
+<a name="0.37.4"></a>#[v0.37.4]()
 
 #### Changes
 
 - ✅ `EmptyView`
 - ✅ `Box`
-- ❌ `Badge`
-- ❌ `Tabs`
-- ❌ `Collapsible`
 - ❌ `Upload`
 - ✅ Replace `useLayoutEffect`
 - ✅ Fix `List` responsive, moved to components directory

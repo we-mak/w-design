@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "../components/CodeBlock";
 
 const p1 = `
-#### React UI library build with typescript
+#### React UI library is built with typescript
 
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)

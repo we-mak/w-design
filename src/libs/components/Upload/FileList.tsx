@@ -4,7 +4,7 @@ import List, { ListItem } from "../List";
 import { UploadListProps } from "./types";
 import { ListContainer } from "./Styled";
 
-export const FileList: React.FC<UploadListProps> = ({ fileList }) => {
+export const FileList: React.FC<UploadListProps> = ({ fileList, ...rest }) => {
   return (
     <ListContainer>
       <List
@@ -19,6 +19,7 @@ export const FileList: React.FC<UploadListProps> = ({ fileList }) => {
             </ListItem>
           );
         }}
+        {...rest}
       ></List>
     </ListContainer>
   );

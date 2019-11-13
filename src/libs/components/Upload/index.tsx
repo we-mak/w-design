@@ -39,7 +39,7 @@ const Upload: FC<UploadProps> = ({
   const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
 
   // Handle error from local reading file
-  function errorHandler(this: FileReader, event: any) {
+  function localErrorHandler(this: FileReader, event: any) {
     const { error } = event;
 
     switch (error.code) {
@@ -74,7 +74,7 @@ const Upload: FC<UploadProps> = ({
       rawfiles.forEach(file => {
         const reader: FileReader = new FileReader();
         // Check load status error/success on local, preview file info
-        reader.onerror = errorHandler;
+        reader.onerror = localErrorHandler;
         // Handle upload
         reader.onload = (f => {
           return (e: ProgressEvent<any>) => {
@@ -168,14 +168,15 @@ const Upload: FC<UploadProps> = ({
         }
         xhr.onload = function() {
           if (this.status >= 200 && this.status < 300) {
-            resolve(xhr.response);
+            return resolve(xhr.response);
           } else {
-            reject({
+            return reject({
               status: this.status,
               statusText: xhr.statusText
             });
           }
         };
+
         xhr.onerror = function() {
           return reject({
             status: this.status,

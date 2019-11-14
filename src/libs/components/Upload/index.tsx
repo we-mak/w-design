@@ -36,7 +36,9 @@ const Upload: FC<UploadProps> = ({
   requestUpload
 }) => {
   const [fileList, setFileList] = useState(defaultFileList);
-  const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
+  const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<
+    PushMessageProps
+  >();
 
   // Handle error from local reading file
   function localErrorHandler(this: FileReader, event: any) {
@@ -67,8 +69,8 @@ const Upload: FC<UploadProps> = ({
 
   // Handle upload file: Use onchange event
   const handleUploadFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawfiles = Array.prototype.slice.call(e.target.files);
     let files: UploadFileType[] = [];
+    const rawfiles = Array.prototype.slice.call(e.target.files);
 
     if (rawfiles && rawfiles.length >= 0) {
       rawfiles.forEach(file => {
@@ -98,9 +100,8 @@ const Upload: FC<UploadProps> = ({
             };
 
             files = [...files, transformedFile];
-
             // update file list
-            return setFileList([...fileList, ...files]);
+            return setFileList([...files]);
           };
         })(file);
         // Read in the file as a data URL.
@@ -121,13 +122,18 @@ const Upload: FC<UploadProps> = ({
               .then((processedFile: FormDataEntryValue) => {
                 // transform file to something
                 // such as add water mark
-                const processedFileType = Object.prototype.toString.call(processedFile);
+                const processedFileType = Object.prototype.toString.call(
+                  processedFile
+                );
 
                 if (
                   processedFileType === "[object File]" ||
                   processedFileType === "[object Blob]"
                 ) {
-                  const newFile = Object.assign({ ...file }, { data: processedFileType });
+                  const newFile = Object.assign(
+                    { ...file },
+                    { data: processedFileType }
+                  );
                   return post(newFile);
                 }
                 return post(file);
@@ -161,7 +167,9 @@ const Upload: FC<UploadProps> = ({
         }
         xhr.open(requestMethod, endpoint, true);
         if (headers) {
-          Object.keys(headers).forEach(key => xhr.setRequestHeader(key, headers[key]));
+          Object.keys(headers).forEach(key =>
+            xhr.setRequestHeader(key, headers[key])
+          );
         }
         if (ignoreCache) {
           xhr.setRequestHeader("Cache-Control", "no-cache");
@@ -209,7 +217,9 @@ const Upload: FC<UploadProps> = ({
   return (
     <>
       <UploadContainer uploadType={uploadType} requestUpload={requestUpload}>
-        {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
+        {uploadFeedbackStatus && (
+          <PushMessage messages={[uploadFeedbackStatus]} />
+        )}
         <UploadLabel>
           <span>{label}</span>
           <UploadInput

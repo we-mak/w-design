@@ -4,7 +4,7 @@ import { GlobProps } from "../../../typings";
 // Type of button
 export type UploadType = "textName" | "picture";
 // Status applied when upload file
-export type UploadStatus = "error" | "success" | "uploading" | "removed";
+export type UploadStatus = "error" | "success" | "uploading";
 
 export interface WFile extends File {
   uid: string;
@@ -47,8 +47,10 @@ export type RequestUploadType = {
 };
 
 export interface UploadListProps extends GlobProps {
-  fileList?: UploadFileType[] | string[];
+  fileList?: UploadFileType[];
   rowKey?: string | ((item: any) => string);
+  onUpload?: (file: UploadFileType) => void;
+  onCancel?: (file: UploadFileType) => void;
 }
 
 export interface UploadProps extends UploadListProps {
@@ -60,8 +62,6 @@ export interface UploadProps extends UploadListProps {
   multiple?: boolean;
   /* Label title under Label tag*/
   label?: string | ReactNode;
-  /* show file list when uploading */
-  showFileList?: boolean;
   /* default file list */
   defaultFileList?: UploadFileType[];
   /* Function to executed before upload. If `false` the upload will be reject */

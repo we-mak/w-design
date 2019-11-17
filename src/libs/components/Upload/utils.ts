@@ -33,26 +33,6 @@ export function updateFileState(
   );
 }
 
-// https://github.com/ant-design/ant-design/blob/master/components/upload/utils.tsx
-// export function genPercentAdd() {
-//   let k = 0.1;
-//   const i = 0.01;
-//   const end = 0.98;
-//   return (s: number) => {
-//     let start = s;
-//     if (start >= end) {
-//       return start;
-//     }
-
-//     start += k;
-//     k -= i;
-//     if (k < 0.001) {
-//       k = 0.001;
-//     }
-//     return start;
-//   };
-// }
-
 export function removeFileItem(
   file: UploadFileType,
   fileList: UploadFileType[]

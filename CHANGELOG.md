@@ -11,6 +11,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Badge`
 - ❌ `Tabs`
 - ❌ `Collapsible`
+- ❌ `Upload`: Consider the UX because of update list (list re-render on each change) before upload
 
 ---
 

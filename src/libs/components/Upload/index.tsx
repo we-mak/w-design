@@ -173,32 +173,8 @@ const Upload: FC<UploadProps> = ({
           xhr.setRequestHeader("Cache-Control", "no-cache");
         }
 
-        // xhr.onload = function() {
-        //   if (this.status >= 200 && this.status < 300) {
-        //     return resolve(xhr.response);
-        //   } else {
-        //     return reject({
-        //       status: this.status,
-        //       statusText: xhr.statusText
-        //     });
-        //   }
-        // };
-
-        xhr.onloadstart = function() {
-          const newFileList = updateFileState(file, fileList, {
-            status: "uploading"
-          });
-
-          setFileList(newFileList);
-        };
-
-        xhr.onloadend = function() {
+        xhr.onload = function() {
           if (this.status >= 200 && this.status < 300) {
-            const newFileList = updateFileState(file, fileList, {
-              status: "success",
-              response: JSON.parse(xhr.response)
-            });
-            setFileList(newFileList);
             return resolve(xhr.response);
           } else {
             return reject({
@@ -208,16 +184,14 @@ const Upload: FC<UploadProps> = ({
           }
         };
 
-        xhr.onerror = function() {
+        xhr.onloadstart = function() {
           const newFileList = updateFileState(file, fileList, {
-            status: "error",
-            response: {
-              status: this.status,
-              statusText: xhr.statusText
-            }
+            status: "uploading"
           });
           setFileList(newFileList);
+        };
 
+        xhr.onerror = function() {
           return reject({
             status: this.status,
             statusText: xhr.statusText
@@ -234,14 +208,17 @@ const Upload: FC<UploadProps> = ({
         xhr.send(finalFile);
       });
 
-      console.log("uploaded", result);
+      const newFileList = updateFileState(file, fileList, {
+        status: "success",
+        response: result
+      });
+      setFileList(newFileList);
     } catch (err) {
-      console.error("there was an error!", err);
-      // return setFileList(
-      //   fileList.map(item =>
-      //     item.uid === fileInFileList.uid ? { ...item, status: "error" } : item
-      //   )
-      // );
+      const newFileList = updateFileState(file, fileList, {
+        status: "error",
+        response: err
+      });
+      setFileList(newFileList);
     }
   };
 

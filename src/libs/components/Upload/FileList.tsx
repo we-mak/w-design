@@ -17,8 +17,6 @@ export const FileList: React.FC<UploadListProps> = ({
     setList(fileList);
   }, [fileList]);
 
-  console.log(list);
-
   return (
     <ListContainer>
       <List
@@ -29,24 +27,31 @@ export const FileList: React.FC<UploadListProps> = ({
               thumbnail={item.source}
               actions={[
                 <Button
+                  key={0}
                   appearance="primary"
                   iconOnly
                   iconBefore="fas fa-file-upload"
-                  key={0}
                   onClick={() => onUpload && onUpload(item)}
+                  isLoading={item.status === "progress"}
+                  isDisabled={item.status === "success"}
                 ></Button>,
                 <Button
+                  key={1}
                   iconOnly
                   iconBefore="fas fa-times"
-                  key={1}
                   onClick={() => onCancel && onCancel(item)}
+                  isDisabled={item.status === "success"}
                 ></Button>
               ]}
             >
               <div style={{ width: "100%" }}>
                 {item.name}
-                {item.percent && (
-                  <ProgressLoader size="sm" percent={item.percent} />
+                {item.status && (
+                  <ProgressLoader
+                    size="sm"
+                    percent={item.percent}
+                    status={item.status}
+                  />
                 )}
               </div>
             </ListItem>

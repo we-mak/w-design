@@ -4,7 +4,7 @@ import { GlobProps } from "../../../typings";
 // Type of button
 export type UploadType = "textName" | "picture";
 // Status applied when upload file
-export type UploadStatus = "error" | "success" | "uploading";
+export type UploadStatus = "error" | "success" | "progress";
 
 export interface WFile extends File {
   uid: string;

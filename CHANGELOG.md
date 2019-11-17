@@ -22,6 +22,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ✅ `Box`
 - ❌ `Upload`
 - ✅ Replace `useLayoutEffect`
+- ✅ Fix `Button` prevent onClick when loading
 - ✅ Fix `List` responsive, moved to components directory
 - ✅ Remove hooks from main package
 - ✅ Refactor `Spinner`

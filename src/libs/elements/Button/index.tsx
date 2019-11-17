@@ -126,7 +126,7 @@ const Button = (props: ButtonProps) => {
       aria-label={ariaLabel}
       //
       tabIndex={tabIndex}
-      onClick={isDisabled ? undefined : onClick}
+      onClick={isDisabled || isLoading ? undefined : onClick}
       {...rest}
     >
       {isLoading && (

@@ -29,29 +29,29 @@ export function updateFileState(
 ) {
   const matchKey = file.uid !== undefined ? "uid" : "name";
   return fileList.map(item =>
-    item[matchKey] === file[matchKey] ? { ...item, ...newProps } : item
+    item[matchKey] === file[matchKey] ? Object.assign(item, newProps) : item
   );
 }
 
 // https://github.com/ant-design/ant-design/blob/master/components/upload/utils.tsx
-export function genPercentAdd() {
-  let k = 0.1;
-  const i = 0.01;
-  const end = 0.98;
-  return (s: number) => {
-    let start = s;
-    if (start >= end) {
-      return start;
-    }
+// export function genPercentAdd() {
+//   let k = 0.1;
+//   const i = 0.01;
+//   const end = 0.98;
+//   return (s: number) => {
+//     let start = s;
+//     if (start >= end) {
+//       return start;
+//     }
 
-    start += k;
-    k -= i;
-    if (k < 0.001) {
-      k = 0.001;
-    }
-    return start;
-  };
-}
+//     start += k;
+//     k -= i;
+//     if (k < 0.001) {
+//       k = 0.001;
+//     }
+//     return start;
+//   };
+// }
 
 export function removeFileItem(
   file: UploadFileType,

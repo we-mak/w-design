@@ -12,19 +12,21 @@ import { ProgressLoaderProps } from "./types";
 const ProgressLoader: React.FC<ProgressLoaderProps> = ({
   percent = 0,
   showInfo = true,
-  status = "normal",
+  status = "progress",
   size
 }) => {
   const [progressStatus, setProgressStatus] = React.useState(status);
 
   React.useEffect(() => {
-    if (percent === 100) {
+    if (percent === 100 && status !== "error") {
       setProgressStatus("success");
+    } else {
+      setProgressStatus(status);
     }
-  }, [percent]);
+  }, [percent, status]);
 
   const stats = () => {
-    if (percent === 100) {
+    if (percent === 100 && progressStatus !== "error") {
       return <Icon className="fas fa-check-circle success" />;
     }
     if (status === "error") {
@@ -37,9 +39,15 @@ const ProgressLoader: React.FC<ProgressLoaderProps> = ({
     <ProgressContainer>
       <ProgressWrapper>
         <ProgressBar>
-          <ProgressTrack percent={percent} status={progressStatus} size={size} />
+          <ProgressTrack
+            percent={percent}
+            status={progressStatus}
+            size={size}
+          />
         </ProgressBar>
-        {showInfo && <ProgressStatus title={`${percent}%`}>{stats()}</ProgressStatus>}
+        {showInfo && (
+          <ProgressStatus title={`${percent}%`}>{stats()}</ProgressStatus>
+        )}
       </ProgressWrapper>
     </ProgressContainer>
   );

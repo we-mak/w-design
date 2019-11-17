@@ -8,10 +8,6 @@
  * Simple upload file
  */
 
-// TODO:
-//  Handle abort upload
-// Handle response upload info & status
-
 import React, { FC, useState, memo } from "react";
 import PushMessage from "../PushMessage";
 import { FileList } from "./FileList";
@@ -125,32 +121,23 @@ const Upload: FC<UploadProps> = ({
               processedFileType === "[object File]" ||
               processedFileType === "[object Blob]"
             ) {
-              const newFile = Object.assign(
-                { ...file },
-                { data: processedFileType }
-              );
+              const newFile = Object.assign(file, {
+                data: processedFileType
+              });
               return post(newFile);
             }
             return post(file);
           })
           .catch((err: any) => {
-            console && console.log(err);
+            console && console.error(err);
           });
       } else if (before !== false) {
-        return setTimeout(() => post(file), 0);
+        return post(file);
       }
     }
 
     // return without before upload
-    return setTimeout(() => post(file), 0);
-  };
-
-  const handleUploadCancel = (file: UploadFileType) => {
-    // TODO:
-    // if not at uploading process: remove of the list
-    // if upload is in progress: handle abort event
-    const fileInFileList = getFileItem(file, fileList);
-    return setFileList(fileList.filter(item => fileInFileList != item));
+    return post(file);
   };
 
   const post = async (file: UploadFileType): Promise<void> => {
@@ -186,7 +173,7 @@ const Upload: FC<UploadProps> = ({
 
         xhr.onloadstart = function() {
           const newFileList = updateFileState(file, fileList, {
-            status: "uploading"
+            status: "progress"
           });
           setFileList(newFileList);
         };
@@ -197,10 +184,18 @@ const Upload: FC<UploadProps> = ({
             statusText: xhr.statusText
           });
         };
+
         xhr.upload.onprogress = function(e) {
+          let percentLoaded = 0;
+
           if (e.lengthComputable) {
-            console.log(Math.round((e.loaded / e.total) * 100));
+            percentLoaded = Math.round((e.loaded / e.total) * 100);
           }
+
+          const newFileList = updateFileState(file, fileList, {
+            percent: percentLoaded
+          });
+          setFileList(newFileList);
         };
 
         let finalFile = new FormData();
@@ -220,6 +215,14 @@ const Upload: FC<UploadProps> = ({
       });
       setFileList(newFileList);
     }
+  };
+
+  const handleUploadCancel = (file: UploadFileType) => {
+    // TODO:
+    // if not at uploading process: remove of the list
+    // if upload is in progress: handle abort event
+    const fileInFileList = getFileItem(file, fileList);
+    return setFileList(fileList.filter(item => fileInFileList != item));
   };
 
   return (

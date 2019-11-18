@@ -96,7 +96,7 @@ const Upload: FC<UploadProps> = ({
 
             files = [...files, transformedFile];
             // update file list
-            return setFileList([...files]);
+            return setFileList([...fileList, ...files]);
           };
         })(file);
         // Read in the file as a data URL.

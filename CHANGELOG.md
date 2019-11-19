@@ -6,11 +6,17 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### Next
 
-- ❌ Switch to monorepo
 - ❌ Refactor `Icon`
 - ❌ `Badge`
 - ❌ `Tabs`
 - ❌ `Collapsible`
+- ❌ Avatar `Upload`
+
+---
+
+### <a name="0.40.0"></a>#[v0.40.0]()
+
+- ❌ Switch to monorepo
 
 ---
 
@@ -20,7 +26,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 - ✅ `EmptyView`
 - ✅ `Box`
-- ❌ `Upload`
+- ✅ Basic List upload `Upload`
 - ✅ Replace `useLayoutEffect`
 - ✅ Fix `Button` prevent onClick when loading
 - ✅ Fix `List` responsive, moved to components directory

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { GlobProps } from "../../../typings";
 
 // Type of button
-export type UploadType = "textName" | "picture";
+export type UploadType = "textName" | "avatar";
 // Status applied when upload file
 export type UploadStatus = "error" | "success" | "progress";
 

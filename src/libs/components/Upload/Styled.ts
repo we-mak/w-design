@@ -6,7 +6,7 @@ import { UploadProps, UploadListProps } from "./types";
  * Main upload style
  */
 const getUploadContainStyle = (props: UploadProps) => {
-  const { theme, uploadType } = props;
+  const { theme } = props;
 
   let width = "";
   let height = `1.8rem`;
@@ -17,16 +17,16 @@ const getUploadContainStyle = (props: UploadProps) => {
   let backgroundActiveColor = `${theme.colors["B5"]}`;
   let boxShadow = `0 0 0 0.1rem ${theme.colors["B50"]}`;
 
-  if (uploadType === "picture") {
-    height = `120px`;
-    width = `120px`;
-    border = `1px dashed ${theme.colors["N30"]}`;
-    borderHover = `1px dashed ${theme.colors["B50"]}`;
-    backgroundColor = `${theme.colors["N1"]}`;
-    backgroundHoverColor = `${theme.colors["B0"]}`;
-    backgroundActiveColor = "";
-    boxShadow = "";
-  }
+  // if (uploadType === "picture") {
+  //   height = `120px`;
+  //   width = `120px`;
+  //   border = `1px dashed ${theme.colors["N30"]}`;
+  //   borderHover = `1px dashed ${theme.colors["B50"]}`;
+  //   backgroundColor = `${theme.colors["N1"]}`;
+  //   backgroundHoverColor = `${theme.colors["B0"]}`;
+  //   backgroundActiveColor = "";
+  //   boxShadow = "";
+  // }
 
   return `
     background: ${backgroundColor};

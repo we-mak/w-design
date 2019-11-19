@@ -21,7 +21,7 @@ const Example = () => {
       />
       <br />
 
-      <Upload
+      {/* <Upload
         uploadType="picture"
         accept="image/*"
         requestUpload={{
@@ -30,7 +30,7 @@ const Example = () => {
             authorization: "authorization-text"
           }
         }}
-      />
+      /> */}
     </Container>
   );
 };

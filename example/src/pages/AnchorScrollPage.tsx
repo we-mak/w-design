@@ -5,7 +5,7 @@ import { CodeBlock } from "../components/CodeBlock";
 const Example = () => {
   return (
     <Container>
-      <AnchorScroll destination="target">
+      <AnchorScroll destination="target" callback={() => console.log("fire callback")}>
         <span role="img" aria-label="img" aria-labelledby="anchor link">
           🚀
         </span>

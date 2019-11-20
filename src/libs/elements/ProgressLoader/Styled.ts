@@ -35,7 +35,7 @@ const getProgressTrackStyle = (props: ProgressLoaderProps) => {
   }
 
   switch (status) {
-    case "normal":
+    case "progress":
       background = theme.colors["B50"];
       break;
     case "success":

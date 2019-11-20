@@ -6,32 +6,35 @@ export const fonts = {
   demiBold: "Helvetica, Arial, sans-serif"
 };
 
-export const fontSizes = [0.7, 0.8, 0.9, 1, 1.2, 1.4, 1.6, 1.8, 2].map(n => `${n}rem`);
-
+export const fontSizes = [
+  "0.7rem",
+  "0.8rem",
+  "0.9rem",
+  "1rem",
+  "1.2rem",
+  "1.4rem",
+  "1.6rem",
+  "1.8rem",
+  "2rem"
+];
 export const fontWeights = {
   normal: 400,
   strong: 500,
   bold: 700,
   xbold: 900
 };
-
 // for any scale, either array or objects will work
 export const lineHeights = [1, 1.125, 1.25, 1.5];
-
 // space is used for margin and padding scales
 // it's recommended to use powers of two to ensure alignment
 // when used in nested elements
 export const space = [0, 4, 8, 16, 32, 64, 128];
-
 // breakpoint values
-export const breakpoints = [30, 37.5, 52.5, 60, 80, 90].map(n => `${n}rem`);
+export const breakpoints = ["24em", "32em", "48em", "64em", "80em"];
+// radius values
+export const radii = ["0rem", "0.1rem", "0.2rem", "0.3rem", "0.4rem"];
 
-export const radii = [0, 0.1, 0.2, 0.3, 0.4].map(n => `${n}rem`);
-
-export const letterSpacings = {
-  normal: "normal",
-  caps: "0.25rem"
-};
+export const letterSpacings = { normal: "normal", caps: "0.25rem" };
 
 export const shadows = [
   "none",
@@ -43,8 +46,6 @@ export const shadows = [
   `0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12)`,
   `0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)`
 ];
-
-export { colors } from "./colors";
 
 export default {
   fonts,

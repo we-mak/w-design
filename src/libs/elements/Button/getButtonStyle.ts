@@ -1,122 +1,104 @@
 import { css } from "styled-components";
 import { ButtonProps } from "./types";
-import {
-  getColor,
-  setColor,
-  getFontSize,
-  getAppearanceColor,
-  getElementSize,
-  padding,
-  height
-} from "../../../common/styleUtils/utils";
-import { StyledSpinner } from "../Spinner";
+import { padding, height } from "../../../common/styleUtils/constants";
+import { getValFromObjKey, getFontSize, getElementSize } from "../../../common/helpers";
 
-const appearanceKeys = [
-  "default",
-  "primary",
-  "warning",
-  "danger",
-  "success",
-  "link",
-  "subtle",
-  "help",
-  "clean"
-];
-// Set button colors
-const bg = setColor(appearanceKeys, [
-  "N3",
-  "B50",
-  "O30",
-  "R30",
-  "G30",
-  "NONE",
-  "NONE",
-  "T30",
-  "NONE"
-]);
-const bgHover = setColor(appearanceKeys, [
-  "N4",
-  "B40",
-  "O20",
-  "R20",
-  "G20",
-  "N3",
-  "N2",
-  "T20",
-  "NONE"
-]);
-const bgActive = setColor(appearanceKeys, [
-  "B5",
-  "B60",
-  "O40",
-  "R40",
-  "G40",
-  "B5",
-  "B5",
-  "T40",
-  "NONE"
-]);
-const bordr = setColor(appearanceKeys, ["N3", "B60", "O40", "R40", "G40", "", "", "T40", "NONE"]);
-const bordrHover = setColor(appearanceKeys, [
-  "N4",
-  "B50",
-  "O30",
-  "R30",
-  "G30",
-  "",
-  "",
-  "T30",
-  "NONE"
-]);
-const bordrActive = setColor(appearanceKeys, [
-  "B5",
-  "B70",
-  "O50",
-  "R50",
-  "G50",
-  "",
-  "",
-  "T50",
-  "NONE"
-]);
-const text = setColor(appearanceKeys, ["N50", "N1", "N1", "N1", "N1", "B50", "N70", "N1", "N70"]);
-const boxShadow = setColor(appearanceKeys, [
-  "B50",
-  "B5",
-  "O10",
-  "R5",
-  "G5",
-  "B50",
-  "B50",
-  "T10",
-  "N1"
-]);
+// Set button background colors
+const bg = {
+  default: "N3",
+  primary: "B50",
+  warning: "O30",
+  danger: "R30",
+  success: "G30",
+  link: "TRANSPARENT",
+  subtle: "TRANSPARENT",
+  help: "T30",
+  clean: "TRANSPARENT"
+};
 
-/** Apply style to each appearance when isLoading = true */
-const getLoadingState = (props: ButtonProps) => {
-  const { isLoading, appearance } = props;
-  if (isLoading) {
-    if (appearance === "default" || appearance === "link") return StyledSpinner;
+const bgHover = {
+  default: "N4",
+  primary: "B40",
+  warning: "O20",
+  danger: "R20",
+  success: "G20",
+  link: "N3",
+  subtle: "N2",
+  help: "T20",
+  clean: "TRANSPARENT"
+};
 
-    return css`
-      ${StyledSpinner};
-      &::after {
-        border-color: ${getColor("WHITE", props.theme.colors)};
-        border-right-color: transparent;
-        border-top-color: transparent;
-      }
-    `;
-  }
-  return;
+const bgActive = {
+  default: "B5",
+  primary: "B60",
+  warning: "O40",
+  danger: "R40",
+  success: "G40",
+  link: "B5",
+  subtle: "B5",
+  help: "T40",
+  clean: "TRANSPARENT"
+};
+const bordr = {
+  default: "N3",
+  primary: "B60",
+  warning: "O40",
+  danger: "R40",
+  success: "G40",
+  link: "",
+  subtle: "",
+  help: "T40",
+  clean: "TRANSPARENT"
+};
+
+const bordrHover = {
+  default: "N4",
+  primary: "B50",
+  warning: "O30",
+  danger: "R30",
+  success: "G30",
+  link: "",
+  subtle: "",
+  help: "T30",
+  clean: "TRANSPARENT"
+};
+const bordrActive = {
+  default: "B5",
+  primary: "B70",
+  warning: "O50",
+  danger: "R50",
+  success: "G50",
+  link: "",
+  subtle: "",
+  help: "T50",
+  clean: "TRANSPARENT"
+};
+const text = {
+  default: "N50",
+  primary: "N1",
+  warning: "N1",
+  danger: "N1",
+  success: "N1",
+  link: "B50",
+  subtle: "N70",
+  help: "N1",
+  clean: "N70"
+};
+const boxShadow = {
+  default: "B50",
+  primary: "B5",
+  warning: "O10",
+  danger: "R5",
+  success: "G5",
+  link: "B50",
+  subtle: "B50",
+  help: "T10",
+  clean: "N1"
 };
 
 export function getButtonStyle(props: ButtonProps) {
   const { fontSizes, fonts, lineHeights, colors, radii, space } = props.theme;
   const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
-
-  // fluid button
-  let width;
-  if (fluid) width = "100%";
 
   /** Buttonn size style */
   const paddingStyle = iconOnly ? 0 : getElementSize(padding, size);
@@ -124,13 +106,13 @@ export function getButtonStyle(props: ButtonProps) {
   const fontSizeStyle = getFontSize(size, fontSizes);
 
   /** Button appearance style*/
-  let bgStyle = getAppearanceColor(appearance, bg);
-  let bgHoverStyle = getAppearanceColor(appearance, bgHover);
-  let bgActiveStyle = getAppearanceColor(appearance, bgActive);
-  let borderStyle = getAppearanceColor(appearance, bordr);
-  let borderHoverStyle = getAppearanceColor(appearance, bordrHover);
-  let borderActiveStyle = getAppearanceColor(appearance, bordrActive);
-  let colorStyle = getAppearanceColor(appearance, text);
+  let bgStyle = getValFromObjKey(appearance, bg);
+  let bgHoverStyle = getValFromObjKey(appearance, bgHover);
+  let bgActiveStyle = getValFromObjKey(appearance, bgActive);
+  let borderStyle = getValFromObjKey(appearance, bordr);
+  let borderHoverStyle = getValFromObjKey(appearance, bordrHover);
+  let borderActiveStyle = getValFromObjKey(appearance, bordrActive);
+  let colorStyle = getValFromObjKey(appearance, text);
   // Selected values
   if (isSelected) {
     bgStyle = "B70";
@@ -160,26 +142,24 @@ export function getButtonStyle(props: ButtonProps) {
     }
 
     if (appearance === "clean") {
-      bgStyle = "NONE";
-      bgHoverStyle = "NONE";
-      bgActiveStyle = "NONE";
-      borderStyle = "NONE";
-      borderHoverStyle = "NONE";
-      borderActiveStyle = "NONE";
-      colorStyle = "B50";
+      bgStyle = "TRANSPARENT";
+      bgHoverStyle = "TRANSPARENT";
+      bgActiveStyle = "TRANSPARENT";
+      borderStyle = "TRANSPARENT";
+      borderHoverStyle = "TRANSPARENT";
+      borderActiveStyle = "TRANSPARENT";
+      colorStyle = "TRANSPARENT";
     }
   }
 
-  const boxShadowStyle = isSelected ? "transparent" : getAppearanceColor(appearance, boxShadow);
-
-  // Apply loading style
-  const loadingStyle = getLoadingState(props);
+  const boxShadowStyle = isSelected ? "transparent" : getValFromObjKey(appearance, boxShadow);
 
   return css`
     appearance: none;
     cursor: pointer;
     outline: 0;
     display: inline-block;
+    position: relative;
     text-decoration: none;
     text-align: center;
     user-select: none;
@@ -187,16 +167,25 @@ export function getButtonStyle(props: ButtonProps) {
     white-space: nowrap;
     transition: all 0.25s cubic-bezier(0, 0, 0.2, 1);
     line-height: ${lineHeights[1]};
-    width: ${width};
+    font-family: ${fonts["normal"]};
+    width: ${fluid && `100%`};
+    border-radius: ${radii[2]};
+
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};
-    font-family: ${fonts["normal"]};
     border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
     background: ${colors[bgStyle]};
     border-color: ${colors[borderStyle]};
     color: ${colors[colorStyle]};
-    border-radius: ${radii[2]};
+
+    &:disabled,
+    &[disabled] {
+      color: ${colors["N7"]} !important;
+      background: ${colors["N4"]} !important;
+      border: none;
+      cursor: not-allowed;
+    }
 
     &:hover {
       background: ${colors[bgHoverStyle]};
@@ -209,16 +198,6 @@ export function getButtonStyle(props: ButtonProps) {
       border-color: ${colors[borderActiveStyle]};
       box-shadow: 0 0 0 0.1rem ${colors[boxShadowStyle]};
     }
-
-    &:disabled,
-    &[disabled] {
-      cursor: not-allowed;
-      color: ${getColor("N7", colors)} !important;
-      background: ${getColor("N4", colors)} !important;
-      border: none;
-    }
-
-    ${loadingStyle};
 
     i {
       &.icon-before {

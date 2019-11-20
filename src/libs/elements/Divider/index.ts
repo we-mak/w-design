@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { hex2Rgba } from "../../../common/styleUtils/utils";
+import { hex2Rgba } from "../../../common/helpers";
 import CustomTag from "../CustomTag";
 
 const Divider = styled(CustomTag)`

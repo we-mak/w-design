@@ -8,6 +8,7 @@ exports[`<Dropdown/> should renders correctly 1`] = `
   cursor: pointer;
   outline: 0;
   display: inline-block;
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
@@ -20,15 +21,23 @@ exports[`<Dropdown/> should renders correctly 1`] = `
   -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
   transition: all 0.25s cubic-bezier(0,0,0.2,1);
   line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
   padding: 0.35rem 0.4rem;
   height: 1.8rem;
   font-size: 0.8rem;
-  font-family: Helvetica,Arial,sans-serif;
   border: 0.05rem solid;
   background: #E2EAF2;
   border-color: #E2EAF2;
   color: #394B59;
-  border-radius: 0.2rem;
+}
+
+.c1:disabled,
+.c1[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
 }
 
 .c1:hover {
@@ -43,14 +52,6 @@ exports[`<Dropdown/> should renders correctly 1`] = `
   box-shadow: 0 0 0 0.1rem #008CC0;
 }
 
-.c1:disabled,
-.c1[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #CED9E3 !important;
-  border: none;
-}
-
 .c1 i.icon-before {
   margin-right: 8px;
 }
@@ -59,7 +60,24 @@ exports[`<Dropdown/> should renders correctly 1`] = `
   margin-left: 8px;
 }
 
-.c3 {
+.c2 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c4 {
   margin: auto;
   margin-left: 0.4rem;
   float: right;
@@ -81,7 +99,7 @@ exports[`<Dropdown/> should renders correctly 1`] = `
   user-select: none;
 }
 
-.c2 {
+.c3 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -104,7 +122,7 @@ exports[`<Dropdown/> should renders correctly 1`] = `
   width: fit-content;
 }
 
-.c4 {
+.c5 {
   background: #fff;
   border-radius: 0.2rem;
   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
@@ -128,30 +146,34 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       class="c1"
       type="button"
     >
-      <span
+      <div
         class="c2"
       >
-        Dropdown
         <span
           class="c3"
         >
-          <svg
-            focusable="false"
-            height="22"
-            role="presentation"
-            viewBox="0 0 24 24"
-            width="24"
+          Dropdown
+          <span
+            class="c4"
           >
-            <path
-              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
     </button>
     <div
-      class="c4"
+      class="c5"
     >
       <ul>
         <li>
@@ -178,30 +200,34 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       class="c1"
       type="button"
     >
-      <span
+      <div
         class="c2"
       >
-        bottomCenter
         <span
           class="c3"
         >
-          <svg
-            focusable="false"
-            height="22"
-            role="presentation"
-            viewBox="0 0 24 24"
-            width="24"
+          bottomCenter
+          <span
+            class="c4"
           >
-            <path
-              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
     </button>
     <div
-      class="c4"
+      class="c5"
     />
   </div>
   <div
@@ -213,30 +239,34 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       class="c1"
       type="button"
     >
-      <span
+      <div
         class="c2"
       >
-        topLeft
         <span
           class="c3"
         >
-          <svg
-            focusable="false"
-            height="22"
-            role="presentation"
-            viewBox="0 0 24 24"
-            width="24"
+          topLeft
+          <span
+            class="c4"
           >
-            <path
-              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
     </button>
     <div
-      class="c4"
+      class="c5"
     />
   </div>
   <div
@@ -248,30 +278,34 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       class="c1"
       type="button"
     >
-      <span
+      <div
         class="c2"
       >
-        topCenter
         <span
           class="c3"
         >
-          <svg
-            focusable="false"
-            height="22"
-            role="presentation"
-            viewBox="0 0 24 24"
-            width="24"
+          topCenter
+          <span
+            class="c4"
           >
-            <path
-              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
     </button>
     <div
-      class="c4"
+      class="c5"
     />
   </div>
   <div
@@ -283,30 +317,34 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       class="c1"
       type="button"
     >
-      <span
+      <div
         class="c2"
       >
-        topRight
         <span
           class="c3"
         >
-          <svg
-            focusable="false"
-            height="22"
-            role="presentation"
-            viewBox="0 0 24 24"
-            width="24"
+          topRight
+          <span
+            class="c4"
           >
-            <path
-              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </span>
-      </span>
+      </div>
     </button>
     <div
-      class="c4"
+      class="c5"
     />
   </div>
 </div>

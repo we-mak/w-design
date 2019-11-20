@@ -31,10 +31,10 @@ export const Flex = styled.div<FlexProps>`
   margin-left: -0.4rem;
   margin-right: -0.4rem;
   padding: 0.4rem;
-  ${space};
-  ${justifyContent};
-  ${flexWrap};
-  ${flexDirection};
+  ${space}
+  ${justifyContent}
+  ${flexWrap}
+  ${flexDirection}
   ${alignItems}
 
   ${(props: FlexProps) =>

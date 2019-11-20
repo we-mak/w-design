@@ -7,15 +7,6 @@ import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
-const observeMock = {
-  observe: () => null,
-  unobserve: () => null
-};
-
-beforeEach(async () => {
-  (window as any).IntersectionObserver = () => observeMock;
-});
-
 describe("<Button/>", () => {
   it("should render with different appearance style", () => {
     const { container } = render(

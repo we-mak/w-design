@@ -6,29 +6,25 @@ import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
-const observe = jest.fn();
-const unobserve = jest.fn();
-
-const observeMock = {
-  observe: function() {
-    this.observe = observe;
-  },
-  unobserve: function() {
-    this.unobserve = unobserve;
-  }
-};
-
-beforeEach(async () => {
-  (window as any).IntersectionObserver = () => observeMock;
-});
-
 describe("<Image/>", () => {
+  const props = {
+    "data-src": "https://api.adorable.io/avatars/240/thunder",
+    alt: "Test"
+  };
+
   it("should render correct image", () => {
     const { container } = render(
       <Provider>
-        <Image data-src="https://api.adorable.io/avatars/240/thunder" />
+        <Image {...props} />
       </Provider>
     );
     expect(container).toMatchSnapshot();
   });
+
+  // describe('when the Image is out of view', ()=> {
+  //   beforeAll(() => {
+  //     const mockEntry = { isIntersecting: false }
+
+  //   })
+  // })
 });

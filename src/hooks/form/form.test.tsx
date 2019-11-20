@@ -6,7 +6,7 @@
 // We need a test that produce the code behavior depends on what
 // hooks input and output
 import * as React from "react";
-import { cleanup, render } from "@testing-library/react";
+import { cleanup, render, fireEvent } from "@testing-library/react";
 import InputForm from "../../libs/components/InputForm";
 import useField from "./useField";
 import useForm from "./useForm";
@@ -21,6 +21,12 @@ const validEmail = (value: string) => emailRegex.test(value);
 
 const Form = ({ onSubmit }: { onSubmit?: (formdata: any) => void }) => {
   const form = useForm({ requiredMessage: "required field" });
+
+  const name = useField({
+    form,
+    name: "name",
+    isRequired: false
+  });
 
   const email = useField({
     form,
@@ -42,6 +48,12 @@ const Form = ({ onSubmit }: { onSubmit?: (formdata: any) => void }) => {
         noValidate
       >
         <InputForm
+          {...name}
+          type="name"
+          label="Name"
+          placeholder="add your name"
+        />
+        <InputForm
           {...email}
           type="email"
           label="Email"
@@ -54,18 +66,24 @@ const Form = ({ onSubmit }: { onSubmit?: (formdata: any) => void }) => {
   );
 };
 
-describe("useField and useForm hooks", () => {
+describe("formHooks", () => {
   it("has default value of email", () => {
     const { getByTestId } = render(<Form />);
     const inputVal = getByTestId(/email/i);
     expect(inputVal["value"]).toBe("test@test.com");
   });
 
-  it("calls on submit", () => {
+  it("change value and call on submit", () => {
     const handleSubmit = jest.fn();
-    const { getByText } = render(<Form onSubmit={handleSubmit} />);
+    const { container } = render(<Form onSubmit={handleSubmit} />);
 
-    getByText(/submit/i).click();
-    expect(handleSubmit).toHaveBeenCalledTimes(1);
+    const email: any = container.querySelector("input[name=email]");
+
+    fireEvent.change(email, { target: { value: "foo@test.com" } });
+    expect(email.value).toBe("foo@test.com");
+
+    const form: any = container.querySelector("form");
+    fireEvent.submit(form);
+    expect(handleSubmit).toBeCalled();
   });
 });

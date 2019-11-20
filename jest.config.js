@@ -1,4 +1,5 @@
 module.exports = {
+  setupFilesAfterEnv: ["<rootDir>/src/setupTests.js"],
   transform: {
     ".*.tsx?$": "ts-jest",
     ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"

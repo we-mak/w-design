@@ -62,7 +62,7 @@ exports[`<Nav/> should render correct icon styled 1`] = `
 }
 
 <div>
-  <header
+  <nav
     class="c0"
   >
     <section
@@ -75,6 +75,6 @@ exports[`<Nav/> should render correct icon styled 1`] = `
     >
       Section
     </section>
-  </header>
+  </nav>
 </div>
 `;

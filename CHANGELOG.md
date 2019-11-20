@@ -4,25 +4,40 @@ All notable changes to this project will be documented in this file.
 
 Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
----
+### Next
 
-### <a name="0.38"></a>#[v0.38]()
-
-- Refactor `Icon`
-- Refactor monorepo
-- `CustomTag` with full `styled-system` options (this issue must be fixed https://github.com/styled-components/styled-components/issues/439)
-- Better `Spinner` animation
-
-#### Features
-
-- `Upload`
-- `EmptyView`
-- `Badges`
-- `Collapsible`
+- ❌ Refactor `Icon`
+- ❌ `Badge`
+- ❌ `Tabs`
+- ❌ `Collapsible`
+- ❌ Avatar `Upload`
 
 ---
 
-### <a name="0.34"></a>#[v0.34]()
+### <a name="0.40.0"></a>#[v0.40.0]()
+
+- ❌ Switch to monorepo
+
+---
+
+<a name="0.37.4"></a>#[v0.37.4]()
+
+#### Changes
+
+- ✅ `EmptyView`
+- ✅ `Box`
+- ✅ Basic List upload `Upload`
+- ✅ Replace `useLayoutEffect`
+- ✅ Fix `Button` prevent onClick when loading
+- ✅ Fix `List` responsive, moved to components directory
+- ✅ Remove hooks from main package
+- ✅ Refactor `Spinner`
+- ✅ Refactor utils, `Button`
+- ✅ Remove trim value at `useField`
+
+---
+
+<a name="0.34"></a>#[v0.34]()
 
 - `ImageRatio`
 - `List`

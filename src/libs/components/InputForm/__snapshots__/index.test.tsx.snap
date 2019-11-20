@@ -226,33 +226,42 @@ exports[`<InputForm/> should render correctly 1`] = `
 }
 
 .c14 {
-  color: transparent !important;
-  pointer-events: none;
   position: relative;
-  min-height: 0.8rem;
+  margin: 0 auto;
+  width: 1.4rem;
 }
 
-.c14::after {
-  -webkit-animation: btrQYj 500ms infinite linear;
-  animation: btrQYj 500ms infinite linear;
-  border: 0.1rem solid;
-  border-color: #004660;
-  border-radius: 50%;
-  border-right-color: transparent;
-  border-top-color: transparent;
+.c14:before {
   content: "";
   display: block;
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  z-index: 1;
+  padding-top: 100%;
 }
 
-.c14::after {
-  height: 0.8rem;
-  margin-left: -0.4rem;
-  margin-top: -0.4rem;
-  width: 0.8rem;
+.c15 {
+  -webkit-animation: eYEYhP 2s linear infinite;
+  animation: eYEYhP 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.c16 {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dKIScq 1.5s ease-in-out infinite;
+  animation: dKIScq 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #008CC0;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
 }
 
 .c1 {
@@ -345,16 +354,12 @@ exports[`<InputForm/> should render correctly 1`] = `
 }
 
 .c13 {
-  height: 0.8rem;
   margin: 0 0.25rem;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 0.8rem;
+  top: 10%;
   z-index: 2;
-  right: 0.1rem;
+  right: 0;
+  display: block;
 }
 
 <div>
@@ -574,7 +579,20 @@ exports[`<InputForm/> should render correctly 1`] = `
         >
           <div
             class="c14"
-          />
+          >
+            <svg
+              class="c15"
+              viewBox="25 25 50 50"
+            >
+              <circle
+                class="c16"
+                cx="50"
+                cy="50"
+                fill="none"
+                r="20"
+              />
+            </svg>
+          </div>
         </span>
       </span>
     </label>

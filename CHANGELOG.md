@@ -6,33 +6,38 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### Next
 
+- ❌ Refactor `Icon`
+- ❌ `Badge`
+- ❌ `Tabs`
+- ❌ `Collapsible`
+- ❌ Avatar `Upload`
+
+---
+
+### <a name="0.40.0"></a>#[v0.40.0]()
+
 - ❌ Switch to monorepo
 
 ---
 
-### <a name="0.40"></a>#[v0.40]()
-
-Big refactor to have a better structure for all over project to reduce the file size,
-better distribute styling.
-Concept:
-
-- Refactor `CustomTag` with styles props
-  Check Issue (https://github.com/styled-components/styled-components/issues/439)
-- Access styled with custom hooks
-- Refactor other component i.e `Button`, `InputField` to reduce file size
+<a name="0.37.4"></a>#[v0.37.4]()
 
 #### Changes
 
-- ❌ `Upload`
-- ❌ `EmptyView`
-- ❌ `Badges`
-- ❌ `Collapsible`
-- ❌ Refactor `Icon`
-- ❌ Refactor `Spinner`
+- ✅ `EmptyView`
+- ✅ `Box`
+- ✅ Basic List upload `Upload`
+- ✅ Replace `useLayoutEffect`
+- ✅ Fix `Button` prevent onClick when loading
+- ✅ Fix `List` responsive, moved to components directory
+- ✅ Remove hooks from main package
+- ✅ Refactor `Spinner`
+- ✅ Refactor utils, `Button`
+- ✅ Remove trim value at `useField`
 
 ---
 
-### <a name="0.34"></a>#[v0.34]()
+<a name="0.34"></a>#[v0.34]()
 
 - `ImageRatio`
 - `List`

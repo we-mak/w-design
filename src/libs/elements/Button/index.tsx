@@ -3,39 +3,7 @@ import styled, { AnyStyledComponent } from "styled-components";
 import { ButtonProps } from "./types";
 import { getButtonStyle } from "./getButtonStyle";
 import Icon from "../Icon";
-
-/**
- * Button Group
- *
- */
-
-const ButtonGroupWrapper = styled.div`
-  display: inline-flex;
-`;
-const ButtonGroupItem = styled.div`
-  flex: 1 0 auto;
-  display: flex;
-  & + &::before {
-    content: "";
-    display: inline-block;
-    width: 0.4rem;
-  }
-`;
-
-export const ButtonGroup = ({ children }: { children: React.ReactChild | React.ReactChild[] }) => (
-  <ButtonGroupWrapper>
-    {React.Children.map(children, (child, idx) => {
-      return (
-        <ButtonGroupItem key={idx}>{React.cloneElement(child as JSX.Element)}</ButtonGroupItem>
-      );
-    })}
-  </ButtonGroupWrapper>
-);
-
-/**
- * Button
- *
- */
+import Spinner from "../Spinner";
 
 const StyledButton = styled.button`
   ${getButtonStyle}
@@ -60,11 +28,34 @@ const StyledSpan = styled.span`
 `;
 StyledSpan.displayName = "StyledSpanButton";
 
+const ChildContainer = styled.div<{ isLoading: boolean }>`
+  align-self: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: ${props => props.isLoading && `0`};
+`;
+
+ChildContainer.displayName = "ChildContainer";
+
+const SpinnerWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+`;
+
+SpinnerWrapper.displayName = "SpinnerWrapper";
+
 const Button = (props: ButtonProps) => {
   const {
-    appearance = "default",
     type = "button",
-    size = "md",
+    appearance,
+    size,
     className,
     id,
     fluid,
@@ -86,6 +77,7 @@ const Button = (props: ButtonProps) => {
     tabIndex,
     children,
     buttonRef,
+    theme,
     ...rest
   } = props;
 
@@ -104,6 +96,10 @@ const Button = (props: ButtonProps) => {
     return () => (button = undefined);
   });
 
+  let spinnerColor = undefined;
+  if (appearance === ("primary" || "warning" || "success" || "help")) {
+    spinnerColor = `#fff`;
+  }
   return (
     <ButtonComponent
       ref={buttonRef}
@@ -117,7 +113,7 @@ const Button = (props: ButtonProps) => {
       disabled={isDisabled}
       isLoading={isLoading}
       isSelected={isSelected}
-      // Link Props
+      autoFocus={autoFocus}
       href={href}
       target={target}
       // Button Props
@@ -130,14 +126,22 @@ const Button = (props: ButtonProps) => {
       aria-label={ariaLabel}
       //
       tabIndex={tabIndex}
-      onClick={isDisabled ? undefined : onClick}
+      onClick={isDisabled || isLoading ? undefined : onClick}
       {...rest}
     >
-      {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
-      {children}
-      {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
+      {isLoading && (
+        <SpinnerWrapper>
+          <Spinner size="sm" spinnerColor={spinnerColor} />
+        </SpinnerWrapper>
+      )}
+      <ChildContainer isLoading={isLoading}>
+        {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
+        {children}
+        {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
+      </ChildContainer>
     </ButtonComponent>
   );
 };
 
 export default Button;
+export { ButtonGroup } from "./ButtonGroup";

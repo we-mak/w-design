@@ -1,7 +1,7 @@
 {
   "name": "w-design",
-  "version": "0.34.1",
-  "description": "A React UI library is built with styled-components",
+  "version": "0.37.4",
+  "description": "A React UI library is built with css-in-js, typescript",
   "author": "viiiprock",
   "license": "MIT",
   "repository": "we-mak/w-design",
@@ -25,10 +25,11 @@
     "deploy": "gh-pages -d ./example/build"
   },
   "keywords": [
+    "react",
     "styled-system",
-    "styled-component",
-    "react UI library",
-    "react UI typescript"
+    "UI library",
+    "typescript",
+    "minimal"
   ],
   "dependencies": {
     "@types/body-scroll-lock": "^2.6.1",
@@ -69,16 +70,16 @@
     "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-typescript2": "^0.25.0",
+    "rollup-plugin-typescript2": "^0.24.3",
     "rollup-plugin-url": "^3.0.0",
-    "styled-components": "^5.0.0-beta.8-groupsizefix",
+    "styled-components": "^5.0.0-rc.0",
     "ts-jest": "^24.0.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.7.2"
   },
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "styled-components": "^5.0.0-beta.5"
+    "styled-components": "^5.0.0-rc.0"
   },
   "files": [
     "dist"

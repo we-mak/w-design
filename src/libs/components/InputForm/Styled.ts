@@ -66,14 +66,14 @@ export const RequiredMark = styled.sup`
   font-size: ${props => props.theme.fontSizes[0]};
   top: -0.2rem;
 `;
+RequiredMark.displayName = "RequiredMark";
 
 export const SpinnerWrap = styled.span`
-  height: 0.8rem;
   margin: 0 0.25rem;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0.8rem;
+  top: 10%;
   z-index: 2;
-  right: 0.1rem;
+  right: 0;
+  display: block;
 `;
+SpinnerWrap.displayName = "SpinnerWrap";

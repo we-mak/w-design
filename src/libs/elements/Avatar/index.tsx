@@ -14,7 +14,7 @@ const Avatar = ({
 }: AvatarProps) => {
   const [backgroundColor, setBackgroundColor] = React.useState("");
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (!avatarUrl) {
       setBackgroundColor(randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"])));
     }

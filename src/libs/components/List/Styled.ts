@@ -9,6 +9,7 @@ import {
 } from "styled-system";
 import { ListProps, ListItemProps } from "./types";
 import { GlobProps } from "../../../typings";
+import { mediaQ } from "../../../common/helpers";
 
 export const ListContainer = styled.div`
   position: relative;
@@ -58,6 +59,7 @@ const getItemStyle = (props: ListItemProps) => {
 export const ListItemStyled = styled.li<ListItemProps>`
   display: flex;
   align-items: center;
+  ${mediaQ.md`display: block;`}
   ${getItemStyle}
 `;
 ListItemStyled.displayName = "ListItemStyled";
@@ -78,7 +80,7 @@ ListItemMetaInfo.displayName = "ListItemMetaInfo";
 
 export const ListItemActionGroup = styled.div`
   align-items: center;
-  margin: 0 0.4rem;
+  margin: 0.4rem;
   display: inline-flex;
   > * {
     &:not(:last-child) {
@@ -91,6 +93,7 @@ ListItemActionGroup.displayName = "ListItemActionGroup";
 export const ThumbContainer = styled.div`
   width: 3rem;
   height: 3rem;
+  position: relative;
 `;
 ThumbContainer.displayName = "ThumbContainer";
 

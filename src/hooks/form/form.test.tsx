@@ -47,7 +47,12 @@ const Form = ({ onSubmit }: { onSubmit?: (formdata: any) => void }) => {
         }
         noValidate
       >
-        <InputForm {...name} type="name" label="Name" placeholder="add your name" />
+        <InputForm
+          {...name}
+          type="name"
+          label="Name"
+          placeholder="add your name"
+        />
         <InputForm
           {...email}
           type="email"
@@ -70,14 +75,15 @@ describe("formHooks", () => {
 
   it("change value and call on submit", () => {
     const handleSubmit = jest.fn();
-    const { getByText, container } = render(<Form onSubmit={handleSubmit} />);
+    const { container } = render(<Form onSubmit={handleSubmit} />);
 
     const email: any = container.querySelector("input[name=email]");
 
     fireEvent.change(email, { target: { value: "foo@test.com" } });
     expect(email.value).toBe("foo@test.com");
 
-    getByText(/submit/i).click();
-    expect(handleSubmit).toHaveBeenCalledTimes(1);
+    const form: any = container.querySelector("form");
+    fireEvent.submit(form);
+    expect(handleSubmit).toBeCalled();
   });
 });

@@ -1,12 +1,24 @@
 import { keyframes } from "styled-components";
 
 export const spin = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
     transform: rotate(360deg);
     }
+`;
+
+export const dashRotate = keyframes`
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
 `;
 
 export const slideDown = keyframes`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { width, height } from "styled-system";
+import { width, height, layout } from "styled-system";
 import { ImageRatioProps } from "./ImageRatio";
 
 export const ImageElement = styled.img<HTMLImageElement>`
@@ -22,7 +22,8 @@ const getRatioStyle = (props: ImageRatioProps) => {
 export const ImageRatioElement = styled.div<ImageRatioProps>`
   height: 0;
   position: relative;
-  ${getRatioStyle};
+  ${getRatioStyle}
+  ${layout}
 
   img {
     position: absolute;

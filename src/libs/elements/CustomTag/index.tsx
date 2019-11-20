@@ -1,5 +1,6 @@
 import * as React from "react";
 import { CSSProp } from "styled-components";
+
 import { GlobProps } from "../../../typings";
 
 export interface TagProps extends GlobProps {

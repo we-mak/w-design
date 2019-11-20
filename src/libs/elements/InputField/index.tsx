@@ -15,13 +15,13 @@ StyledInput.displayName = "StyledInput";
 const InputField = (props: InputFieldProps) => {
   const {
     inputRef,
-    appearance = "standard",
+    appearance,
     type = "text",
     name,
     className,
     id,
     autoComplete = "off",
-    size = "md",
+    size,
     tabIndex,
     value,
     defaultValue,

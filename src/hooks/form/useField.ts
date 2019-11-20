@@ -49,7 +49,7 @@ const useField = ({ form, name, isRequired, defaultValue, validations }: FieldTy
       form.setFormErrorMessage("");
     }
 
-    setValue(e.target.value.trim());
+    setValue(e.target.value);
   };
 
   const field: FieldProps = {

@@ -28,12 +28,16 @@ const Example = () => {
       thumbnail: "https://source.unsplash.com/random?scientist/100x100"
     }
   ];
+
+  const [loadingState, setLoading] = React.useState(false);
+
   return (
     <>
       <div>Example full list</div>
       <List
         header="List header"
         sourceData={listData}
+        isLoading={loadingState}
         rows={(item: any) => {
           return (
             <ListItem
@@ -47,11 +51,16 @@ const Example = () => {
             </ListItem>
           );
         }}
-        footer={<ListFooter>List Footer</ListFooter>}
+        footer={
+          <ListFooter>
+            <Button onClick={() => setLoading(!loadingState)}>Set Loading</Button>
+          </ListFooter>
+        }
       ></List>
+
       <br />
       <div>Empty list example</div>
-      <List header="Empty list" emptyView={<div>Hello</div>}></List>
+      <List header="Empty list"></List>
     </>
   );
 };

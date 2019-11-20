@@ -99,6 +99,29 @@ const ButtonPage: React.FunctionComponent<any> = () => {
         `}
         />
       </section>
+
+      <section>
+        <p />
+        <h4>Button state</h4>
+        <p>State button</p>
+        <ButtonGroup>
+          <Button isLoading>Is Loading</Button>
+          <Button appearance="clean" isLoading>
+            Clean button
+          </Button>
+          <Button isLoading appearance="primary">
+            Is Loading
+          </Button>
+          <Button isDisabled>Disabled</Button>
+        </ButtonGroup>
+
+        <CodeBlock
+          exampleCode={`
+<Button iconBefore="fas fa-atom">Icon Before</Button>
+<Button isDisabled>Disabled</Button>
+        `}
+        />
+      </section>
       <ReactMarkdown source={api} />
     </>
   );

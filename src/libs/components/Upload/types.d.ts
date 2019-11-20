@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 import { GlobProps } from "../../../typings";
 
 // Type of button
-export type UploadType = "textName" | "picture";
+export type UploadType = "textName" | "avatar";
 // Status applied when upload file
-export type UploadStatus = "error" | "success" | "uploading" | "removed";
+export type UploadStatus = "error" | "success" | "progress";
 
 export interface WFile extends File {
   uid: string;
@@ -12,7 +12,7 @@ export interface WFile extends File {
   readonly webkitRelativePath: string;
 }
 
-export interface UploadFileType {
+export interface UploadFileType<T = any> {
   uid: string;
   size: number;
   type: string;
@@ -22,9 +22,11 @@ export interface UploadFileType {
   percent?: number;
   url?: string;
   thumbUrl?: string;
+  data?: any;
   status?: UploadStatus;
   webkitRelativePath?: string;
   error?: any;
+  response?: T;
 }
 
 export interface UploadChangeParam<T extends object = UploadFileType> {
@@ -34,12 +36,21 @@ export interface UploadChangeParam<T extends object = UploadFileType> {
 }
 
 export type RequestUploadType = {
-  endpoint?: string;
-  headers?: Headers; // Fetch api headers interface
+  endpoint: string;
+  // request method
+  method: "POST" | "PUT" | "post" | "put";
+  timeout: number;
+  headers?: { [key: string]: string }; // Fetch api headers interface
+  withCredentials?: boolean;
+  ignoreCache?: boolean;
+  // body?: any;
 };
 
 export interface UploadListProps extends GlobProps {
   fileList?: UploadFileType[];
+  rowKey?: string | ((item: any) => string);
+  onUpload?: (file: UploadFileType) => void;
+  onCancel?: (file: UploadFileType) => void;
 }
 
 export interface UploadProps extends UploadListProps {
@@ -51,14 +62,12 @@ export interface UploadProps extends UploadListProps {
   multiple?: boolean;
   /* Label title under Label tag*/
   label?: string | ReactNode;
-  /* show file list when uploading */
-  showFileList?: boolean;
   /* default file list */
   defaultFileList?: UploadFileType[];
   /* Function to executed before upload. If `false` the upload will be reject */
   beforeUpload?: (file, fileList) => boolean | Promise;
   /* restApi request upload use fetch Api*/
-  requestUpload?: RequestUploadType;
+  requestUpload: RequestUploadType;
   /* modified onchange behavior*/
   onChange?: (uploadInfo: UploadChangeParam) => void;
   /* disable input */

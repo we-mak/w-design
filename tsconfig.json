@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
     "module": "esnext",
@@ -24,6 +23,6 @@
     "noEmit": true,
     "experimentalDecorators": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "example", "rollup.config.js"]
+  "include": ["packages/**/*"],
+  "exclude": ["node_modules", "rollup.config.js"]
 }

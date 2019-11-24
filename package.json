@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "description": "Small React UI library for web app",
+  "description": "React UI toolkit library for web app",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -51,12 +51,7 @@ export default {
       declaration: true
     }),
     babel({
-      exclude: ["node_modules/**"],
-      presets: [
-        ["@babel/preset-env", { modules: false, loose: true }],
-        "@babel/preset-react"
-      ],
-      plugins: ["babel-plugin-styled-components"]
+      exclude: ["node_modules/**"]
     }),
     commonjs()
   ]

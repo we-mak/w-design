@@ -8,6 +8,9 @@
   "main": "lib/core.js",
   "typings": "lib/core.d.ts",
   "module": "lib/core.es.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib"
   },

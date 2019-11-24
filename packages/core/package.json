@@ -1,6 +1,6 @@
 {
   "name": "@w-design/core",
-  "version": "0.41.0-alpha.0",
+  "version": "0.41.0-alpha.2+1fb2277",
   "description": "Base components and elements",
   "author": "Son_dang <son.dang@doda100.com >",
   "homepage": "https://github.com/we-mak/w-design#readme",
@@ -26,5 +26,6 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.7.4"
-  }
+  },
+  "gitHead": "1fb227728f3af52e6bfafe318e3fd7d631f2ec60"
 }

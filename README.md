@@ -3,7 +3,7 @@
  <h1>w-design</h1>
 </div>
 
-A React UI library build with styled-components
+A React UI library toolkit build with styled-components
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
@@ -178,34 +178,39 @@ Please check these packages before getting start to contribute.
 
 Local development is broken into two parts (ideally using two tabs).
 
-```sh
-npm start # runs rollup with watch flag
-```
-
-First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
-
-The second part will be running the example/ create-react-app that's linked to the local version of your module.
+#### Package
 
 ```sh
-# (in another tab)
-cd example
-npm start # runs create-react-app dev server
+yarn dev # runs rollup with watch flag
 ```
 
-Now, anytime you make a change to your library in src/ or to the example app's example/src, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
+It runs rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
+
+Then init the yarn workspace link for the package by `yarn link` at package directory
+
+#### Docs page
+
+Docs page is using `next.js` that's linked to the local version of the package.
+
+Run `yarn link @w-design/<package-name>`
+Add to `package.json` as dependency
+
+```json
+{
+  ...
+  "dependencies": {
+  "@w-design/core": "link:.."
+  }
+}
+```
 
 ### Publishing to NPM
 
-`npm publish`
+`yarn publish`
 
 This builds cjs and es versions of your module to dist/ and then publishes your module to npm.
 
 Make sure that any npm modules you want as peer dependencies are properly marked as peerDependencies in package.json. The rollup config will automatically recognize them as peers and not try to bundle them in your module.
-
-Deploying to Github Pages
-`npm run deploy`
-
-This creates a production build of the example create-react-app that showcases your library and then runs gh-pages to deploy the resulting bundle.
 
 ## License
 

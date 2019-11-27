@@ -2,7 +2,7 @@
 import * as React from "react";
 import { render } from "@testing-library/react";
 import Container from "./index";
-import Provider from "../../layout/Provider";
+import { Provider } from "../..";
 
 describe("<Container/>", () => {
   // Render test

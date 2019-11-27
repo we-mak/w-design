@@ -1,13 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import { display } from "styled-system";
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "../../typings";
 
 const Base = styled.div`
   ${display}
 `;
 
-interface DisplayProps extends GlobProps {
+export interface DisplayProps extends GlobProps {
   display: string[];
 }
 

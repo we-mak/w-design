@@ -12,7 +12,14 @@
 // - Check which items on each column are in "view port"
 // - Limit rendering items by index
 
-import React, { useRef, useEffect, MutableRefObject, useState, ReactElement, memo } from "react";
+import React, {
+  useRef,
+  useEffect,
+  MutableRefObject,
+  useState,
+  ReactElement,
+  memo
+} from "react";
 import { MasonryLayout } from "./Styled";
 import { MasonryProps } from "./types";
 
@@ -66,7 +73,11 @@ const Masonry = ({ breakpoints, children, defaultCols = 3 }: MasonryProps) => {
     <MasonryLayout ref={masonryRef}>
       {mapChildren().map((col: ReactElement[], i: number) => {
         return (
-          <div className="msr_col" key={i} ref={colRef => (columnRefs[i] = colRef)}>
+          <div
+            className="msr_col"
+            key={i}
+            ref={colRef => (columnRefs[i] = colRef)}
+          >
             {col.map((child: ReactElement, i: number) => {
               return (
                 <span className="msr_item" key={i}>
@@ -82,3 +93,5 @@ const Masonry = ({ breakpoints, children, defaultCols = 3 }: MasonryProps) => {
 };
 
 export default memo(Masonry);
+
+export { MasonryProps };

@@ -29,6 +29,10 @@
     "coverage": "cross-env CI=1 jest --coverage -u --colors",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
+  "dependencies": {
+    "@types/styled-system": "^5.1.4",
+    "styled-system": "^5.1.2"
+  },
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

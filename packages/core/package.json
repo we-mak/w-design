@@ -6,7 +6,7 @@
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
   "main": "lib/core.js",
-  "typings": "lib/core.d.ts",
+  "typings": "lib/index.d.ts",
   "module": "lib/core.es.js",
   "publishConfig": {
     "access": "public"

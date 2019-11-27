@@ -4,7 +4,7 @@ import defaultTheme from "../../common/theme";
 import { GlobalStyle } from "./GlobalStyle";
 import "./normalize.css";
 
-interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
+export interface ThemeProps extends React.HTMLProps<HTMLDivElement> {
   theme?: object | ((theme: object) => object);
 }
 

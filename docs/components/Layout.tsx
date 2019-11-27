@@ -17,5 +17,10 @@ type LayoutType = {
 };
 
 export const Layout: React.FC<LayoutType> = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <>
+      <NavWrapper>Nav</NavWrapper>
+      {children}
+    </>
+  );
 };

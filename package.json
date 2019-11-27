@@ -15,8 +15,7 @@
     "typescript"
   ],
   "workspaces": [
-    "packages/*",
-    "docs"
+    "packages/*"
   ],
   "private": true,
   "publishConfig": {

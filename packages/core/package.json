@@ -27,6 +27,9 @@
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"
   },
+  "dependencies": {
+    "@w-design/helpers": "^0.40.0"
+  },
   "devDependencies": {
     "@babel/preset-typescript": "^7.7.4"
   },

@@ -47,6 +47,23 @@ export const shadows = [
   `0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)`
 ];
 
+/**
+ * Generic padding styles by size
+ */
+export const padding = {
+  sm: "0.15rem 0.3rem",
+  md: "0.35rem 0.4rem",
+  lg: "0.45rem 0.6rem"
+};
+/**
+ * Generic height by size
+ */
+export const height = {
+  sm: "1.4rem",
+  md: "1.8rem",
+  lg: "2rem"
+};
+
 export default {
   fonts,
   fontSizes,
@@ -57,5 +74,7 @@ export default {
   radii,
   letterSpacings,
   shadows,
-  colors
+  colors,
+  padding,
+  height
 };

@@ -13,10 +13,8 @@ function Provider(p: ThemeProps) {
 
   return (
     <ThemeProvider theme={{ ...defaultTheme, ...theme }}>
-      <>
-        <GlobalStyle />
-        {children}
-      </>
+      <GlobalStyle />
+      {children}
     </ThemeProvider>
   );
 }

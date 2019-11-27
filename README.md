@@ -3,24 +3,28 @@
  <h1>w-design</h1>
 </div>
 
-A React UI library toolkit build with styled-components
+---
+
+W-design is a React UI library toolkit build with `styled-components`, `styled-system`.
+It's focus on web application. Supports mostly modern browser and skips taking care of IE.
 
 [![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
 
+---
+
+## Packages
+
 ## Install
 
-If use `npm`
+If use npm
+`npm install --save @w-design/<name-of-package> styled-components`
 
-```sh
-npm install --save w-design styled-components
-```
+Or yarn
 
-for yarn
-
-`yarn add w-design` or `npm install w-design`
+`yarn add @w-design/<name-of-package>`
 
 ## Usage guide
 

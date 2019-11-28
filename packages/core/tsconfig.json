@@ -3,8 +3,5 @@
   "compilerOptions": {
     "outDir": "./lib"
   },
-  "baseUrl": "../",
-  "paths": {
-    "@w-design/*": ["./packages/*/src"]
-  }
+  "include": ["src/**/*"]
 }

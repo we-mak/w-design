@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "dist",
     "module": "esnext",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "dom", "esnext.asynciterable"],
@@ -21,7 +20,11 @@
     "strict": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@w-design/*": ["./packages/*/src"]
+    }
   },
   "include": ["packages/**/*"],
   "exclude": ["node_modules", "rollup.config.js"]

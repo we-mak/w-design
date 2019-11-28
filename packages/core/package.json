@@ -5,9 +5,9 @@
   "author": "Son_dang <son.dang@doda100.com >",
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
-  "main": "lib/core.js",
+  "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "module": "lib/core.es.js",
+  "module": "lib/index.es.js",
   "publishConfig": {
     "access": "public"
   },

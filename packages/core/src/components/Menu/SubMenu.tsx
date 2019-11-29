@@ -3,12 +3,12 @@
  * */
 import * as React from "react";
 import styled from "styled-components";
-import Spinner from "../../elements/Spinner";
-import { SubMenuProps } from "./types";
-import { getSubMenuStyle } from "./Styled";
+import { Spinner } from "../..";
 import { Arrow } from "./Arrow";
 import { IconBefore } from "./MenuItem";
 import { useMenu } from "./MenuContext";
+import { getSubMenuStyle } from "./Styled";
+import { SubMenuProps } from "./types";
 
 // titleSpinner
 const SubMenuTitle = styled.div`
@@ -86,7 +86,9 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
     const titleNode: HTMLElement = titleRef!.current!;
 
     return (
-      menuNode && titleNode && menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
+      menuNode &&
+      titleNode &&
+      menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
     );
   };
 
@@ -116,14 +118,20 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
 
   return (
     <SubMenuStyled ref={menuRef} {...rest}>
-      <SubMenuTitle onClick={onToggleMenu} onFocus={onLoadingList} ref={titleRef}>
+      <SubMenuTitle
+        onClick={onToggleMenu}
+        onFocus={onLoadingList}
+        ref={titleRef}
+      >
         {icon && <IconBefore>{icon}</IconBefore>}
         {title}
         {isLoading ? <Loader /> : <Arrow isOpen={open} />}
       </SubMenuTitle>
       <SubList role="menu" isOpen={open} style={listStyle}>
         {React.Children.map(children!, (child: any) => {
-          return React.cloneElement(child, { eventKey: child.key || "submenu-key" });
+          return React.cloneElement(child, {
+            eventKey: child.key || "submenu-key"
+          });
         })}
       </SubList>
     </SubMenuStyled>

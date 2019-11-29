@@ -1,8 +1,10 @@
 import * as React from "react";
-import { disableBodyScroll, clearAllBodyScrollLocks, BodyScrollOptions } from "body-scroll-lock";
-import Portal from "../../elements/Portal";
-import Typo from "../../elements/Typo";
-import Button from "../../elements/Button";
+import {
+  disableBodyScroll,
+  clearAllBodyScrollLocks,
+  BodyScrollOptions
+} from "body-scroll-lock";
+import { Button, Typo, Portal } from "../..";
 import {
   WModal,
   ModalContainer,
@@ -11,14 +13,21 @@ import {
   ModalHeader,
   ModalFooter
 } from "./Styled";
-import { ModalProps } from "./types";
+import { ModalProps, ModalContainerStyleProps } from "./types";
 
 const options: BodyScrollOptions = {
   reserveScrollBarGap: true
 };
 
 const Modal = (props: ModalProps) => {
-  const { onClose, modalTitle, modalBody, modalFooter, size = "medium", ...rest } = props;
+  const {
+    onClose,
+    modalTitle,
+    modalBody,
+    modalFooter,
+    size = "medium",
+    ...rest
+  } = props;
   // Main root layout selecting
   const documentBody: Element = document.body;
 
@@ -59,3 +68,4 @@ const Modal = (props: ModalProps) => {
 };
 
 export default Modal;
+export { ModalProps, ModalContainerStyleProps };

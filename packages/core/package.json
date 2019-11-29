@@ -28,7 +28,10 @@
     "url": "https://github.com/we-mak/w-design/issues"
   },
   "dependencies": {
-    "@w-design/helpers": "^0.40.0"
+    "@types/body-scroll-lock": "^2.6.1",
+    "@w-design/helpers": "^0.40.0",
+    "@w-design/hooks": "^0.40.0",
+    "body-scroll-lock": "^2.6.4"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.7.4"

@@ -3,9 +3,9 @@
  * */
 import * as React from "react";
 import styled from "styled-components";
-import { MenuItemProps } from "./types";
-import { getMenuItemStyle } from "./Styled";
 import { useMenu } from "./MenuContext";
+import { getMenuItemStyle } from "./Styled";
+import { MenuItemProps } from "./types";
 
 const MenuItemAfter = styled.div`
   align-items: center;

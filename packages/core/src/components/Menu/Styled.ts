@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { hex2Rgba } from "../../../common/helpers";
+import { hex2Rgba } from "@w-design/helpers";
 import { MenuProps, MenuItemProps } from "./types";
 
 export const getMenuStyle = (props: MenuProps) => {
@@ -62,7 +62,8 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
 
     &:focus,
     &:active {
-      ${!isDisabled && `box-shadow: 0 0 0 0.1rem ${hex2Rgba(theme.colors["B20"], 0.5)}`};
+      ${!isDisabled &&
+        `box-shadow: 0 0 0 0.1rem ${hex2Rgba(theme.colors["B20"], 0.5)}`};
       outline: none;
       > a {
         color: ${theme.colors["B60"]};

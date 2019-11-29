@@ -8,9 +8,7 @@
  * - Spinner exists if data is loading
  */
 import * as React from "react";
-import Spinner from "../../elements/Spinner";
-import Typo from "../../elements/Typo";
-import Divider from "../../elements/Divider";
+import { EmptyView, Divider, Typo, Spinner } from "../..";
 import {
   ListContainer,
   ListWrapper,
@@ -19,8 +17,7 @@ import {
   ListFooter,
   EmptyContainer
 } from "./Styled";
-import { ListProps } from "./types";
-import EmptyView from "../../elements/EmptyView";
+import { ListProps, ListItemProps, ListFooterProps } from "./types";
 
 const List: React.FC<ListProps> = ({
   header,
@@ -57,7 +54,9 @@ const List: React.FC<ListProps> = ({
   let childrenComponent: React.ReactNode | React.ReactNode[];
 
   if (sourceData.length > 0) {
-    const items = sourceData.map((item: any, index: number) => renderItem(item, index));
+    const items = sourceData.map((item: any, index: number) =>
+      renderItem(item, index)
+    );
 
     const childrenList: Array<React.ReactNode> = [];
 
@@ -109,4 +108,4 @@ const List: React.FC<ListProps> = ({
 
 export default List;
 export { ListItem } from "./ListItem";
-export { ListFooter };
+export { ListFooter, ListProps, ListItemProps, ListFooterProps };

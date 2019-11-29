@@ -1,4 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import { slideDown } from "@w-design/helpers";
 
 export const MessageContainer = styled.section`
   position: fixed;
@@ -17,18 +18,6 @@ export const MessageContainer = styled.section`
   font-variant: tabular-nums;
 `;
 MessageContainer.displayName = "MessageContainer";
-
-// get this from animation
-const slideDown = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(-1.6rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 export const MessagePanel = styled.div`
   padding: 0.4rem;

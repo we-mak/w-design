@@ -1,15 +1,7 @@
 import styled from "styled-components";
-import {
-  border,
-  margin,
-  justifyContent,
-  BorderProps,
-  MarginProps,
-  JustifyContentProps
-} from "styled-system";
-import { ListProps, ListItemProps } from "./types";
-import { GlobProps } from "../../../typings";
-import { mediaQ } from "../../../common/helpers";
+import { border, margin, justifyContent } from "styled-system";
+import { mediaQ } from "@w-design/helpers";
+import { ListProps, ListItemProps, ListFooterProps } from "./types";
 
 export const ListContainer = styled.div`
   position: relative;
@@ -96,8 +88,6 @@ export const ThumbContainer = styled.div`
   position: relative;
 `;
 ThumbContainer.displayName = "ThumbContainer";
-
-export interface ListFooterProps extends GlobProps, BorderProps, MarginProps, JustifyContentProps {}
 
 export const ListFooter = styled.div<ListFooterProps>`
   display: flex;

@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-import Avatar from "../../elements/Avatar";
-import AvatarGroup from "../AvatarGroup";
-import { CommentProps } from "./types";
+import { Avatar, AvatarGroup } from "../..";
 import { Message, CommentContainer } from "./Styled";
+import { CommentProps } from "./types";
 
 const Comment: FC<CommentProps> = ({
   time,
@@ -19,7 +18,9 @@ const Comment: FC<CommentProps> = ({
   return (
     <CommentContainer {...rest}>
       <AvatarGroup
-        avatar={<Avatar size={avatarSize} avatarUrl={avatarUrl} alt={alt}></Avatar>}
+        avatar={
+          <Avatar size={avatarSize} avatarUrl={avatarUrl} alt={alt}></Avatar>
+        }
         name={userName}
         description={
           <>
@@ -43,3 +44,4 @@ const Comment: FC<CommentProps> = ({
 };
 
 export default Comment;
+export { CommentProps };

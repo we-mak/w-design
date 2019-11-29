@@ -1,4 +1,4 @@
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "../../typings";
 
 export interface DrawerProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];

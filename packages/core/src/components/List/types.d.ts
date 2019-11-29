@@ -1,5 +1,6 @@
 import { ReactNode, ReactElement } from "react";
-import { GlobProps } from "../../../typings";
+import { BorderProps, MarginProps, JustifyContentProps } from "styled-system";
+import { GlobProps } from "../../typings";
 
 export interface ListProps extends GlobProps {
   header?: ReactNode;
@@ -20,3 +21,9 @@ export interface ListItemProps extends GlobProps {
   hasDivider?: boolean;
   children?: ReactNode | ReactNode[];
 }
+
+export interface ListFooterProps
+  extends GlobProps,
+    BorderProps,
+    MarginProps,
+    JustifyContentProps {}

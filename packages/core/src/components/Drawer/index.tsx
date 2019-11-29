@@ -1,5 +1,9 @@
 import React, { useEffect, memo, useState } from "react";
-import { disableBodyScroll, clearAllBodyScrollLocks, BodyScrollOptions } from "body-scroll-lock";
+import {
+  disableBodyScroll,
+  clearAllBodyScrollLocks,
+  BodyScrollOptions
+} from "body-scroll-lock";
 // import Portal from "../../elements/Portal";
 import { DrawerContainer, Overlay, DrawerPanel } from "./Styled";
 import { DrawerProps } from "./types";
@@ -43,3 +47,4 @@ const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
 };
 
 export default memo(Drawer);
+export { DrawerProps };

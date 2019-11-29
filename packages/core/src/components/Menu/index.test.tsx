@@ -1,9 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import "jest-styled-components";
+import { Provider, Icon } from "../..";
 import Menu, { MenuItem, MenuHeading, SubMenu } from "./index";
-import { Icon } from "../../../index";
-import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
@@ -43,27 +41,49 @@ describe("<AvatarGroup/>", () => {
     const { container } = render(
       <Provider>
         <Menu defaultSelectedKey="1" defaultOpenKeys={["sub-1"]} fullWidth>
-          <MenuItem key="1" iconBefore={<Icon className="fas fa-user" />} after={<div>info</div>}>
+          <MenuItem
+            key="1"
+            iconBefore={<Icon className="fas fa-user" />}
+            after={<div>info</div>}
+          >
             Item 1
           </MenuItem>
-          <MenuItem key="2" iconBefore={<Icon className="fas fa-user-astronaut" />}>
+          <MenuItem
+            key="2"
+            iconBefore={<Icon className="fas fa-user-astronaut" />}
+          >
             Item 2
           </MenuItem>
-          <MenuItem key="3" iconBefore={<Icon className="fas fa-edit" />} isDisabled>
+          <MenuItem
+            key="3"
+            iconBefore={<Icon className="fas fa-edit" />}
+            isDisabled
+          >
             Item 3
           </MenuItem>
-          <MenuItem key="4" iconBefore={<Icon className="fas fa-paper-plane" />}>
+          <MenuItem
+            key="4"
+            iconBefore={<Icon className="fas fa-paper-plane" />}
+          >
             Item 4
           </MenuItem>
 
           <MenuHeading>Menu heading</MenuHeading>
-          <SubMenu key="sub-1" icon={<Icon className="fas fa-cog" />} title="Submenu title 1">
+          <SubMenu
+            key="sub-1"
+            icon={<Icon className="fas fa-cog" />}
+            title="Submenu title 1"
+          >
             {subList1.map(item => (
               <MenuItem key={item.key}>{item.title}</MenuItem>
             ))}
           </SubMenu>
 
-          <SubMenu key="sub-2" icon={<Icon className="fas fa-mail" />} title="Submenu title 2">
+          <SubMenu
+            key="sub-2"
+            icon={<Icon className="fas fa-mail" />}
+            title="Submenu title 2"
+          >
             {subList2.map(item => (
               <MenuItem key={item.key}>{item.title}</MenuItem>
             ))}

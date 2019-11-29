@@ -59,16 +59,34 @@ export {
   CardMediaProps,
   CardHeaderProps
 } from "./components/Card";
-export { default as Comment } from "./components/Comment";
-export { default as Drawer } from "./components/Drawer";
-export { default as Dropdown } from "./components/Dropdown";
-export { default as List, ListItem, ListFooter } from "./components/List";
+export { default as Comment, CommentProps } from "./components/Comment";
+export { default as Drawer, DrawerProps } from "./components/Drawer";
+export { default as Dropdown, DropdownProps } from "./components/Dropdown";
+export {
+  default as List,
+  ListItem,
+  ListFooter,
+  ListProps,
+  ListItemProps,
+  ListFooterProps
+} from "./components/List";
 export {
   default as Menu,
   MenuItem,
   MenuHeading,
-  SubMenu
+  SubMenu,
+  MenuProps,
+  MenuItemProps,
+  SubMenuProps,
+  MenuContextProps
 } from "./components/Menu";
-export { default as Modal } from "./components/Modal";
+export {
+  default as Modal,
+  ModalProps,
+  ModalContainerStyleProps
+} from "./components/Modal";
 export { default as Navbar, NavProps } from "./components/Navbar";
-export { default as PushMessage } from "./components/PushMessage";
+export {
+  default as PushMessage,
+  PushMessageProps
+} from "./components/PushMessage";

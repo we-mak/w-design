@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import { slideDown } from "@w-design/helpers";
 import { ModalContainerStyleProps } from "./types";
-import { slideDown } from "../../../common/styleUtils/keyframes";
 
 export const WModal = styled.div`
   position: fixed;

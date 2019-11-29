@@ -1,8 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
-import { MenuProps } from "./types";
-import { getMenuStyle } from "./Styled";
 import { MenuContext } from "./MenuContext";
+import { getMenuStyle } from "./Styled";
+import {
+  MenuProps,
+  MenuItemProps,
+  SubMenuProps,
+  MenuContextProps
+} from "./types";
 // import to export
 import { MenuItem } from "./MenuItem";
 import { MenuHeading } from "./MenuHeading";
@@ -32,14 +37,22 @@ const Menu = (props: MenuProps) => {
   const [openKeys, setOpenKeys] = React.useState(defaultOpenKeys);
 
   const value = React.useMemo(() => {
-    return { selectedKey, setSelectedKey, openKeys, setOpenKeys, defaultOpenKeys };
+    return {
+      selectedKey,
+      setSelectedKey,
+      openKeys,
+      setOpenKeys,
+      defaultOpenKeys
+    };
   }, [selectedKey, openKeys]);
 
   return (
     <MenuContext.Provider value={value}>
       <MenuStyled role="menu" width={width} {...rest}>
         {React.Children.map(children!, (child: any) => {
-          return React.cloneElement(child, { eventKey: child.key || "menu-key" });
+          return React.cloneElement(child, {
+            eventKey: child.key || "menu-key"
+          });
         })}
       </MenuStyled>
     </MenuContext.Provider>
@@ -47,4 +60,12 @@ const Menu = (props: MenuProps) => {
 };
 
 export default Menu;
-export { MenuItem, SubMenu, MenuHeading };
+export {
+  MenuItem,
+  SubMenu,
+  MenuHeading,
+  MenuProps,
+  MenuItemProps,
+  SubMenuProps,
+  MenuContextProps
+};

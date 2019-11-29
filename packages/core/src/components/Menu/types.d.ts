@@ -1,4 +1,4 @@
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "../../typings";
 
 export interface MenuProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];
@@ -36,7 +36,7 @@ export interface SubMenuProps extends GlobProps {
   onLoadingList?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }
 
-export interface ContextProps {
+export interface MenuContextProps {
   // Menu Item
   defaultSelectedKey?: string;
   selectedKey?: string;

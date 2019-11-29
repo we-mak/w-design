@@ -1,11 +1,18 @@
 import * as React from "react";
-import useClickOutside from "../../../hooks/useClickOutside";
-import Button from "../../elements/Button";
+import { useClickOutside } from "@w-design/hooks";
+import { Button } from "../..";
 import { Arrow } from "./Arrow";
 import { DropdownWrapper, DropdownPanel, Title } from "./Styled";
 import { DropdownProps } from "./types";
 
-const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }: DropdownProps) => {
+const Dropdown = ({
+  title,
+  size = "md",
+  iconAfter,
+  content,
+  position,
+  ...rest
+}: DropdownProps) => {
   const [isOpen, setOpen] = React.useState(false);
   const [panelstyle, setStyle] = React.useState({});
 
@@ -54,13 +61,17 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
         break;
       case "topRight":
         style = {
-          transform: `translate3d(${positions.Xright}px,${-(height + defaultMargin)}px, 0)`,
+          transform: `translate3d(${positions.Xright}px,${-(
+            height + defaultMargin
+          )}px, 0)`,
           bottom: 0
         };
         break;
       case "topCenter":
         style = {
-          transform: `translate3d(${positions.Xcenter}px,${-(height + defaultMargin)}px,0)`,
+          transform: `translate3d(${positions.Xcenter}px,${-(
+            height + defaultMargin
+          )}px,0)`,
           bottom: 0
         };
         break;
@@ -101,3 +112,4 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
 };
 
 export default Dropdown;
+export { DropdownProps };

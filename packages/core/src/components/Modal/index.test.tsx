@@ -1,8 +1,7 @@
 import * as React from "react";
 import { cleanup, render, fireEvent } from "@testing-library/react";
-import "jest-styled-components";
+import { Provider } from "../..";
 import Modal from "./index";
-import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
@@ -10,7 +9,10 @@ describe("<Modal/>", () => {
   const spyScrollTo = jest.fn();
 
   beforeEach(() => {
-    Object.defineProperty(window, "scrollTo", { value: spyScrollTo, writable: true });
+    Object.defineProperty(window, "scrollTo", {
+      value: spyScrollTo,
+      writable: true
+    });
     spyScrollTo.mockClear();
   });
 

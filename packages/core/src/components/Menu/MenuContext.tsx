@@ -1,14 +1,22 @@
 import * as React from "react";
-import { ContextProps } from "./types";
+import { MenuContextProps } from "./types";
 
-export const MenuContext = React.createContext<ContextProps | undefined>(undefined);
+export const MenuContext = React.createContext<MenuContextProps | undefined>(
+  undefined
+);
 
 export const useMenu = () => {
   const context = React.useContext(MenuContext);
   if (!context) {
     throw new Error("useMenu must be used within a Menu as Menu Provider");
   }
-  const { selectedKey, setSelectedKey, openKeys, setOpenKeys, defaultOpenKeys } = context;
+  const {
+    selectedKey,
+    setSelectedKey,
+    openKeys,
+    setOpenKeys,
+    defaultOpenKeys
+  } = context;
 
   const onSelectItem = (key: string) => setSelectedKey(key);
   const onSelectKeys = (key: string) => setOpenKeys(openKeys!.push(key));

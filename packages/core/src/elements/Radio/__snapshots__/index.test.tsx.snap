@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio/> should renders correctly 1`] = `
+.c3 {
+  line-height: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  color: #FBFBFB;
+  fill: transparent;
+}
+
+.c3 circle:first-of-type {
+  stroke-width: 0.08rem;
+  -webkit-transition: stroke 0.2s ease-in-out 0s;
+  transition: stroke 0.2s ease-in-out 0s;
+}
+
+.c3 circle:first-of-type {
+  stroke: #BECEDC;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  position: relative;
+  line-height: 1.2;
+  margin: 4px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c4 {
+  padding: 5px 0;
+}
+
+.c2 {
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c0 {
+  display: block;
+  line-height: 1;
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+<div>
+  <label
+    class="c0"
+  >
+    Radio
+  </label>
+  <label
+    class="c1"
+  >
+    <input
+      aria-label="Option 1"
+      class="c2"
+      name="option 1"
+      required=""
+      type="radio"
+      value="foo"
+    />
+    <div
+      class="c3"
+    >
+      <svg
+        focusable="false"
+        height="28"
+        role="presentation"
+        viewBox="0 0 24 24"
+        width="28"
+      >
+        <g
+          fill-rule="evenodd"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            fill="currentColor"
+            r="7"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            fill="inherit"
+            r="3"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      class="c4"
+    >
+      Option 1
+    </div>
+  </label>
+  <label
+    class="c1"
+  >
+    <input
+      aria-label="Option 2"
+      class="c2"
+      disabled=""
+      name="Radio"
+      required=""
+      type="radio"
+      value="bar"
+    />
+    <div
+      class="c3"
+    >
+      <svg
+        focusable="false"
+        height="28"
+        role="presentation"
+        viewBox="0 0 24 24"
+        width="28"
+      >
+        <g
+          fill-rule="evenodd"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            fill="currentColor"
+            r="7"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            fill="inherit"
+            r="3"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      class="c4"
+    >
+      Option 2
+    </div>
+  </label>
+</div>
+`;

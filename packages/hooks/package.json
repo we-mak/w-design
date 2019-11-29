@@ -1,17 +1,16 @@
 {
-  "name": "@w-design/helpers",
+  "name": "@w-design/hooks",
   "version": "0.40.0",
-  "description": "Helpers for w-design",
+  "description": "W-design react custom hooks",
   "keywords": [
-    "helpers",
-    "w-design"
+    "w-design",
+    "react",
+    "hooks"
   ],
   "author": "Son_dang <son.dang@doda100.com >",
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
   "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "module": "lib/index.es.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -24,7 +23,7 @@
     "url": "git+https://viiiprock@github.com/we-mak/w-design.git"
   },
   "scripts": {
-    "test": "cross-env CI=1 jest test -u --colors"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"

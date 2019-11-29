@@ -1,0 +1,544 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvatarGroup/> should renders correctly 1`] = `
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 0.4rem;
+}
+
+.c2 {
+  display: inline;
+  color: #566E82;
+  margin: 0 0.4rem;
+}
+
+.c1 {
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 0.1rem;
+  -webkit-transition: all 0.09s linear;
+  transition: all 0.09s linear;
+  background-color: rgba(177,234,255,0.3);
+  color: #007099;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover,
+.c1:focus {
+  background-color: rgba(177,234,255,0.3);
+  color: #007099;
+}
+
+.c1:focus,
+.c1:active {
+  box-shadow: 0 0 0 0.1rem rgba(0,183,250,0.5);
+  outline: none;
+}
+
+.c1:focus > a,
+.c1:active > a {
+  color: #007099;
+}
+
+.c1 > * {
+  padding: 0.4rem;
+}
+
+.c1 a {
+  width: 100%;
+  color: #394B59;
+}
+
+.c1 a:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #007099;
+}
+
+.c5 {
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 0.1rem;
+  -webkit-transition: all 0.09s linear;
+  transition: all 0.09s linear;
+}
+
+.c5:hover {
+  cursor: pointer;
+}
+
+.c5:hover,
+.c5:focus {
+  background-color: rgba(177,234,255,0.3);
+  color: #007099;
+}
+
+.c5:focus,
+.c5:active {
+  box-shadow: 0 0 0 0.1rem rgba(0,183,250,0.5);
+  outline: none;
+}
+
+.c5:focus > a,
+.c5:active > a {
+  color: #007099;
+}
+
+.c5 > * {
+  padding: 0.4rem;
+}
+
+.c5 a {
+  width: 100%;
+  color: #394B59;
+}
+
+.c5 a:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #007099;
+}
+
+.c6 {
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 0.1rem;
+  -webkit-transition: all 0.09s linear;
+  transition: all 0.09s linear;
+  background-color: rgba(108,134,155,0.3);
+  opacity: .5;
+}
+
+.c6:hover {
+  cursor: not-allowed;
+}
+
+.c6:focus,
+.c6:active {
+  outline: none;
+}
+
+.c6:focus > a,
+.c6:active > a {
+  color: #007099;
+}
+
+.c6 > * {
+  padding: 0.4rem;
+}
+
+.c6 a {
+  width: 100%;
+  color: #394B59;
+}
+
+.c6 a:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #007099;
+}
+
+.c7 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  padding: 0 0.2rem;
+  margin: 0.2rem;
+  text-transform: uppercase;
+  color: #60798E;
+}
+
+.c10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 0.4rem;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.5,0.045,0.4,1);
+  -webkit-transition: transform 0.3s cubic-bezier(0.5,0.045,0.4,1);
+  transition: transform 0.3s cubic-bezier(0.5,0.045,0.4,1);
+  will-change: transform;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.c12 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 0.4rem;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.5,0.045,0.4,1);
+  -webkit-transition: transform 0.3s cubic-bezier(0.5,0.045,0.4,1);
+  transition: transform 0.3s cubic-bezier(0.5,0.045,0.4,1);
+  will-change: transform;
+}
+
+.c9 {
+  padding: 0.4rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9:hover {
+  color: #008CC0;
+}
+
+.c9:hover * {
+  color: #008CC0;
+}
+
+.c11 {
+  padding: 0;
+  position: relative;
+  display: block;
+  opacity: 1;
+  -webkit-transition: height 0.3s cubic-bezier(0.5,0.045,0.4,1), opacity 0.1s cubic-bezier(0.5,0.045,0.4,1);
+  transition: height 0.3s cubic-bezier(0.5,0.045,0.4,1), opacity 0.1s cubic-bezier(0.5,0.045,0.4,1);
+  will-change: height;
+  will-change: opacity;
+}
+
+.c11 li {
+  padding-left: 2rem;
+}
+
+.c13 {
+  padding: 0;
+  position: relative;
+  display: block;
+  opacity: 0;
+  -webkit-transition: height 0.3s cubic-bezier(0.5,0.045,0.4,1), opacity 0.1s cubic-bezier(0.5,0.045,0.4,1);
+  transition: height 0.3s cubic-bezier(0.5,0.045,0.4,1), opacity 0.1s cubic-bezier(0.5,0.045,0.4,1);
+  will-change: height;
+  will-change: opacity;
+}
+
+.c13 li {
+  padding-left: 2rem;
+}
+
+.c8 {
+  width: 100%;
+  display: block;
+  position: relative;
+  will-change: transform;
+}
+
+.c8:hover {
+  cursor: pointer;
+}
+
+.c0 {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem;
+  background: #FFF;
+  font-family: Helvetica,Arial,sans-serif;
+  color: #202B33;
+  min-width: 180px;
+  -webkit-transform: translateY(0.2rem);
+  -ms-transform: translateY(0.2rem);
+  transform: translateY(0.2rem);
+  width: 280px;
+}
+
+.c3.info {
+  color: #008CC0;
+}
+
+.c3.warn {
+  color: #FA9B00;
+}
+
+.c3.success {
+  color: #29A634;
+}
+
+.c3.error {
+  color: #DC1F1F;
+}
+
+<div>
+  <ul
+    class="c0"
+    role="menu"
+  >
+    <li
+      class="c1"
+      role="menuitem"
+    >
+      <span
+        class="c2"
+      >
+        <i
+          aria-hidden="true"
+          class="c3 fas fa-user"
+        />
+      </span>
+      Item 1
+      <div
+        class="c4"
+      >
+        <div>
+          info
+        </div>
+      </div>
+    </li>
+    <li
+      class="c5"
+      role="menuitem"
+    >
+      <span
+        class="c2"
+      >
+        <i
+          aria-hidden="true"
+          class="c3 fas fa-user-astronaut"
+        />
+      </span>
+      Item 2
+    </li>
+    <li
+      class="c6"
+      role="menuitem"
+    >
+      <span
+        class="c2"
+      >
+        <i
+          aria-hidden="true"
+          class="c3 fas fa-edit"
+        />
+      </span>
+      Item 3
+    </li>
+    <li
+      class="c5"
+      role="menuitem"
+    >
+      <span
+        class="c2"
+      >
+        <i
+          aria-hidden="true"
+          class="c3 fas fa-paper-plane"
+        />
+      </span>
+      Item 4
+    </li>
+    <li
+      class="c7"
+    >
+      Menu heading
+    </li>
+    <li
+      class="c8"
+    >
+      <div
+        class="c9"
+      >
+        <span
+          class="c2"
+        >
+          <i
+            aria-hidden="true"
+            class="c3 fas fa-cog"
+          />
+        </span>
+        Submenu title 1
+        <span
+          class="c10"
+        >
+          <svg
+            focusable="false"
+            height="24"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </div>
+      <ul
+        class="c11"
+        role="menu"
+      >
+        <li
+          class="c5"
+          role="menuitem"
+        >
+          Item 5
+        </li>
+        <li
+          class="c5"
+          role="menuitem"
+        >
+          Item 6
+        </li>
+        <li
+          class="c5"
+          role="menuitem"
+        >
+          Item 7
+        </li>
+      </ul>
+    </li>
+    <li
+      class="c8"
+    >
+      <div
+        class="c9"
+      >
+        <span
+          class="c2"
+        >
+          <i
+            aria-hidden="true"
+            class="c3 fas fa-mail"
+          />
+        </span>
+        Submenu title 2
+        <span
+          class="c12"
+        >
+          <svg
+            focusable="false"
+            height="24"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </div>
+      <ul
+        class="c13"
+        role="menu"
+      >
+        <li
+          class="c5"
+          role="menuitem"
+        >
+          Item 8
+        </li>
+        <li
+          class="c5"
+          role="menuitem"
+        >
+          Item 9
+        </li>
+        <li
+          class="c5"
+          role="menuitem"
+        >
+          Item 10
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;

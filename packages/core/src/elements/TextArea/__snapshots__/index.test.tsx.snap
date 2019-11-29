@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextArea/> should render correct with TextArea style 1`] = `
+.c1 {
+  display: block;
+  line-height: 1.8;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.c0 {
+  position: relative;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+
+.c0:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: none;
+  padding: 0.25rem 0.4rem;
+  outline: 0;
+  line-height: 1.2rem;
+  max-width: 100%;
+  border-radius: 0.2rem;
+  border: 0.05rem solid #BECEDC;
+}
+
+.c2:focus {
+  box-shadow: 0 0 0 0.1rem rgba(0,140,192,0.2);
+  border-color: #008CC0;
+}
+
+.c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: none;
+  padding: 0.25rem 0.4rem;
+  outline: 0;
+  line-height: 1.2rem;
+  max-width: 100%;
+  border-radius: 0.2rem;
+  border: 0.05rem solid #FA9B00;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 0.1rem rgba(250,155,0,0.2);
+  border-color: #FA9B00;
+}
+
+.c4 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: none;
+  padding: 0.25rem 0.4rem;
+  outline: 0;
+  line-height: 1.2rem;
+  max-width: 100%;
+  border-radius: 0.2rem;
+  border: 0.05rem solid #29A634;
+}
+
+.c4:focus {
+  box-shadow: 0 0 0 0.1rem rgba(41,166,52,0.2);
+  border-color: #29A634;
+}
+
+.c5 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: none;
+  padding: 0.25rem 0.4rem;
+  outline: 0;
+  line-height: 1.2rem;
+  max-width: 100%;
+  border-radius: 0.2rem;
+  border: 0.05rem solid #DC1F1F;
+}
+
+.c5:focus {
+  box-shadow: 0 0 0 0.1rem rgba(220,31,31,0.2);
+  border-color: #DC1F1F;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    >
+      TextArea
+    </label>
+    <textarea
+      autocomplete="off"
+      class="c2"
+    />
+  </div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    />
+    <textarea
+      autocomplete="off"
+      class="c3"
+    />
+  </div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    />
+    <textarea
+      autocomplete="off"
+      class="c4"
+    />
+  </div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    />
+    <textarea
+      autocomplete="off"
+      class="c5"
+    />
+  </div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    />
+    <textarea
+      autocomplete="off"
+      class="c5"
+    />
+  </div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    />
+    <textarea
+      autocomplete="on"
+      class="c2"
+    />
+  </div>
+</div>
+`;

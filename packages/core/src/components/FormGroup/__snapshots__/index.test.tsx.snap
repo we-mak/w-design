@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal> should render correct modal 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 input,
+.c0 select {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c0 button {
+  z-index: 1;
+}
+
+.c0 input:first-child:not(:last-child),
+.c0 select:first-child:not(:last-child),
+.c0 button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c0 input:not(:first-child):not(:last-child),
+.c0 select:not(:first-child):not(:last-child),
+.c0 button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin-left: -0.05rem;
+}
+
+.c0 input:last-child:not(:first-child),
+.c0 select:last-child:not(:first-child),
+.c0 button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: -0.05rem;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;

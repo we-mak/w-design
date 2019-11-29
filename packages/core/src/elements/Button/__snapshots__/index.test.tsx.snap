@@ -1,0 +1,1038 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button/> should render with different appearance style 1`] = `
+.c6.info {
+  color: #008CC0;
+}
+
+.c6.warn {
+  color: #FA9B00;
+}
+
+.c6.success {
+  color: #29A634;
+}
+
+.c6.error {
+  color: #DC1F1F;
+}
+
+.c18 {
+  position: relative;
+  margin: 0 auto;
+  width: 1.4rem;
+}
+
+.c18:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.c19 {
+  -webkit-animation: eYEYhP 2s linear infinite;
+  animation: eYEYhP 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.c20 {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dKIScq 1.5s ease-in-out infinite;
+  animation: dKIScq 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #008CC0;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+
+.c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #E2EAF2;
+  border-color: #E2EAF2;
+  color: #394B59;
+}
+
+.c3:disabled,
+.c3[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c3:hover {
+  background: #CED9E3;
+  border-color: #CED9E3;
+}
+
+.c3:active,
+.c3:focus {
+  background: #B1EAFF;
+  border-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c3 i.icon-before {
+  margin-right: 8px;
+}
+
+.c3 i.icon-after {
+  margin-left: 8px;
+}
+
+.c5 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #008CC0;
+  border-color: #007099;
+  color: #FBFBFB;
+}
+
+.c5:disabled,
+.c5[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c5:hover {
+  background: #009AD3;
+  border-color: #008CC0;
+}
+
+.c5:active,
+.c5:focus {
+  background: #007099;
+  border-color: #004660;
+  box-shadow: 0 0 0 0.1rem #B1EAFF;
+}
+
+.c5 i.icon-before {
+  margin-right: 8px;
+}
+
+.c5 i.icon-after {
+  margin-left: 8px;
+}
+
+.c7 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  color: #008CC0;
+}
+
+.c7:disabled,
+.c7[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c7:hover {
+  background: #E2EAF2;
+}
+
+.c7:active,
+.c7:focus {
+  background: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c7 i.icon-before {
+  margin-right: 8px;
+}
+
+.c7 i.icon-after {
+  margin-left: 8px;
+}
+
+.c8 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #FA9B00;
+  border-color: #EF8100;
+  color: #FBFBFB;
+}
+
+.c8:disabled,
+.c8[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c8:hover {
+  background: #FFAC23;
+  border-color: #FA9B00;
+}
+
+.c8:active,
+.c8:focus {
+  background: #EF8100;
+  border-color: #E15B00;
+  box-shadow: 0 0 0 0.1rem #FFC40D;
+}
+
+.c8 i {
+  margin: auto 8px !important;
+}
+
+.c8 i.icon-before {
+  margin-right: 8px;
+}
+
+.c8 i.icon-after {
+  margin-left: 8px;
+}
+
+.c9 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #29A634;
+  border-color: #238C2C;
+  color: #FBFBFB;
+}
+
+.c9:disabled,
+.c9[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c9:hover {
+  background: #3BBC45;
+  border-color: #29A634;
+}
+
+.c9:active,
+.c9:focus {
+  background: #238C2C;
+  border-color: #1D7324;
+  box-shadow: 0 0 0 0.1rem #74FD7F;
+}
+
+.c9 i.icon-before {
+  margin-right: 8px;
+}
+
+.c9 i.icon-after {
+  margin-left: 8px;
+}
+
+.c10 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #DC1F1F;
+  border-color: #C61515;
+  color: #FBFBFB;
+}
+
+.c10:disabled,
+.c10[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c10:hover {
+  background: #F22828;
+  border-color: #DC1F1F;
+}
+
+.c10:active,
+.c10:focus {
+  background: #C61515;
+  border-color: #B40404;
+  box-shadow: 0 0 0 0.1rem #FFADAD;
+}
+
+.c10 i.icon-before {
+  margin-right: 8px;
+}
+
+.c10 i.icon-after {
+  margin-left: 8px;
+}
+
+.c11 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  color: #202B33;
+}
+
+.c11:disabled,
+.c11[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c11:hover {
+  background: #EFF3F6;
+}
+
+.c11:active,
+.c11:focus {
+  background: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c11 i.icon-before {
+  margin-right: 8px;
+}
+
+.c11 i.icon-after {
+  margin-left: 8px;
+}
+
+.c12 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: transparent;
+  border-color: transparent;
+  color: #202B33;
+}
+
+.c12:disabled,
+.c12[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c12:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.c12:active,
+.c12:focus {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 0 0.1rem #FBFBFB;
+}
+
+.c12 i.icon-before {
+  margin-right: 8px;
+}
+
+.c12 i.icon-after {
+  margin-left: 8px;
+}
+
+.c13 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #00B8D9;
+  border-color: #00A3BF;
+  color: #FBFBFB;
+}
+
+.c13:disabled,
+.c13[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c13:hover {
+  background: #00C7E6;
+  border-color: #00B8D9;
+}
+
+.c13:active,
+.c13:focus {
+  background: #00A3BF;
+  border-color: #008DA6;
+  box-shadow: 0 0 0 0.1rem #79E2F2;
+}
+
+.c13 i.icon-before {
+  margin-right: 8px;
+}
+
+.c13 i.icon-after {
+  margin-left: 8px;
+}
+
+.c16 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #004660;
+  border-color: #008CC0;
+  color: #FBFBFB;
+}
+
+.c16:disabled,
+.c16[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c16:hover {
+  background: #004660;
+  border-color: #008CC0;
+}
+
+.c16:active,
+.c16:focus {
+  background: #004660;
+  border-color: #008CC0;
+  box-shadow: 0 0 0 0.1rem;
+}
+
+.c16 i.icon-before {
+  margin-right: 8px;
+}
+
+.c16 i.icon-after {
+  margin-left: 8px;
+}
+
+.c14 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #E2EAF2;
+  border-color: #E2EAF2;
+  color: #394B59;
+}
+
+.c14:disabled,
+.c14[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c14:hover {
+  background: #CED9E3;
+  border-color: #CED9E3;
+}
+
+.c14:active,
+.c14:focus {
+  background: #B1EAFF;
+  border-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c14 i.icon-before {
+  margin-right: 8px;
+}
+
+.c14 i.icon-after {
+  margin-left: 8px;
+}
+
+a.c14 {
+  line-height: initial;
+}
+
+a.c14:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  transition: all 0.25s cubic-bezier(0,0,0.2,1);
+  line-height: 1.125;
+  font-family: Helvetica,Arial,sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.4rem;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0.05rem solid;
+  background: #E2EAF2;
+  border-color: #E2EAF2;
+  color: #394B59;
+}
+
+.c15:disabled,
+.c15[disabled] {
+  color: #90A9BF !important;
+  background: #CED9E3 !important;
+  border: none;
+  cursor: not-allowed;
+}
+
+.c15:hover {
+  background: #CED9E3;
+  border-color: #CED9E3;
+}
+
+.c15:active,
+.c15:focus {
+  background: #B1EAFF;
+  border-color: #B1EAFF;
+  box-shadow: 0 0 0 0.1rem #008CC0;
+}
+
+.c15 i.icon-before {
+  margin-right: 8px;
+}
+
+.c15 i.icon-after {
+  margin-left: 8px;
+}
+
+.c4 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c21 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.c17 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c2 {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 + .c1::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c3"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c5"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          <i
+            aria-hidden="true"
+            class="c6 icon-before fas fa-phone"
+          />
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c7"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          Hello
+          <i
+            aria-hidden="true"
+            class="c6 icon-after fas fa-phone"
+          />
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c8"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          <i
+            aria-hidden="true"
+            class="c6 icon-before fas fa-phone"
+          />
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c9"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c10"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c11"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c12"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="c1 c2"
+    >
+      <button
+        class="c13"
+        type="button"
+      >
+        <div
+          class="c4"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+  </div>
+  <a
+    class="c14"
+    href="/"
+    type="button"
+  >
+    <div
+      class="c4"
+    />
+  </a>
+  <span
+    class="c15"
+    disabled=""
+    href="/"
+    type="button"
+  >
+    <div
+      class="c4"
+    />
+  </span>
+  <button
+    class="c16"
+    type="button"
+  >
+    <div
+      class="c4"
+    />
+  </button>
+  <button
+    class="c3"
+    type="button"
+  >
+    <div
+      class="c17"
+    >
+      <div
+        class="c18"
+      >
+        <svg
+          class="c19"
+          viewBox="25 25 50 50"
+        >
+          <circle
+            class="c20"
+            cx="50"
+            cy="50"
+            fill="none"
+            r="20"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="c21"
+    />
+  </button>
+</div>
+`;

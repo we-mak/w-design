@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox/> should renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 input,
+.c0 select {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c0 button {
+  z-index: 1;
+}
+
+.c0 input:first-child:not(:last-child),
+.c0 select:first-child:not(:last-child),
+.c0 button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.c0 input:not(:first-child):not(:last-child),
+.c0 select:not(:first-child):not(:last-child),
+.c0 button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin-left: -0.05rem;
+}
+
+.c0 input:last-child:not(:first-child),
+.c0 select:last-child:not(:first-child),
+.c0 button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: -0.05rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  position: relative;
+  line-height: 1.2;
+  margin: 4px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c4 {
+  padding: 5px 0;
+}
+
+.c2 {
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c3 {
+  line-height: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  color: #FBFBFB;
+  fill: transparent;
+}
+
+.c3 rect:first-child {
+  stroke-width: 0.08rem;
+  -webkit-transition: stroke 0.2s ease-in-out 0s;
+  transition: stroke 0.2s ease-in-out 0s;
+}
+
+.c3 rect:first-child {
+  stroke: #BECEDC;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    >
+      <input
+        class="c2"
+        data-testid="checkbox"
+        name="Checkbox"
+        type="checkbox"
+        value=""
+      />
+      <span
+        class="c3"
+      >
+        <svg
+          focusable="false"
+          height="28"
+          role="presentation"
+          viewBox="0 0 24 24"
+          width="28"
+        >
+          <g
+            fill-rule="evenodd"
+          >
+            <rect
+              fill="currentColor"
+              height="12"
+              rx="2"
+              width="12"
+              x="6"
+              y="6"
+            />
+            <path
+              d="M9.707 11.293a1 1 0 1 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L11 12.586l-1.293-1.293z"
+              fill="inherit"
+            />
+          </g>
+        </svg>
+      </span>
+      <span
+        class="c4"
+      >
+        Test checkbox
+      </span>
+    </label>
+  </div>
+</div>
+`;

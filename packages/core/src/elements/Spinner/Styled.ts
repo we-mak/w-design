@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { spin, dashRotate } from "../../../common/styleUtils/keyframes";
+import { spin, dashRotate } from "@w-design/helpers";
 
 const spinnerSize = ({ size }: { size: "sm" | "md" | "lg" }) => {
   if (size === "sm") return `1.4`;
@@ -38,7 +38,8 @@ export const SpinnerCircle = styled.circle<{ spinnerColor?: string }>`
   stroke-dashoffset: 0;
   animation: ${dashRotate} 1.5s ease-in-out infinite;
   stroke-linecap: round;
-  stroke: ${props => (props.spinnerColor ? props.spinnerColor : props.theme.colors["B50"])};
+  stroke: ${props =>
+    props.spinnerColor ? props.spinnerColor : props.theme.colors["B50"]};
   stroke-width: 3;
   stroke-miterlimit: 10;
 `;

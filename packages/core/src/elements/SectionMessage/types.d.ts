@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "../../typings";
 
 export interface SectionMessageProps extends GlobProps {
   /* Message appearance */

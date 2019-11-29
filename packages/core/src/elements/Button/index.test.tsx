@@ -1,8 +1,6 @@
 import * as React from "react";
 import { cleanup, render, fireEvent } from "@testing-library/react";
-import "jest-styled-components";
-import Button, { ButtonGroup } from "./index";
-import Provider from "../../layout/Provider";
+import { Provider, Button, ButtonGroup } from "../..";
 
 afterEach(cleanup);
 

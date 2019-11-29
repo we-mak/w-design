@@ -22,7 +22,9 @@ export const ButtonGroup: React.FC<React.ReactNode> = ({ children }) => (
   <ButtonGroupWrapper>
     {React.Children.map(children, (child, idx) => {
       return (
-        <ButtonGroupItem key={idx}>{React.cloneElement(child as JSX.Element)}</ButtonGroupItem>
+        <ButtonGroupItem key={idx}>
+          {React.cloneElement(child as JSX.Element)}
+        </ButtonGroupItem>
       );
     })}
   </ButtonGroupWrapper>

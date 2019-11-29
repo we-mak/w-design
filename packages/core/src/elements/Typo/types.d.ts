@@ -1,6 +1,6 @@
 import { ReactChild } from "react";
 import { MarginProps, FontWeightProps, ColorProps } from "styled-system";
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "../../typings";
 
 export interface TypoProps
   extends GlobProps,

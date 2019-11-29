@@ -42,7 +42,13 @@ const AvatarActions = styled.div`
   flex: 0 0 auto;
 `;
 
-const AvatarGroup = ({ avatar, name, description, actions, ...rest }: AvatarGroupProps) => {
+const AvatarGroup = ({
+  avatar,
+  name,
+  description,
+  actions,
+  ...rest
+}: AvatarGroupProps) => {
   return (
     <AvatarGroupWrapper {...rest}>
       <AvatarWrapper>{avatar}</AvatarWrapper>
@@ -56,3 +62,4 @@ const AvatarGroup = ({ avatar, name, description, actions, ...rest }: AvatarGrou
 };
 
 export default AvatarGroup;
+export { AvatarGroupProps };

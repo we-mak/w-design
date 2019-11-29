@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { hex2Rgba } from "../../../common/helpers";
-import CustomTag from "../CustomTag";
+import { hex2Rgba } from "@w-design/helpers";
+import { CustomTag } from "../..";
 
 const Divider = styled(CustomTag)`
   flex-shrink: 0;

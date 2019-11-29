@@ -1,4 +1,4 @@
-import { GlobProps, SizeProps } from "../../../typings";
+import { GlobProps, SizeProps } from "../../typings";
 
 export interface AvatarProps extends SizeProps, GlobProps {
   size?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";

@@ -1,8 +1,6 @@
 import * as React from "react";
 import { render } from "@testing-library/react";
-import "jest-styled-components";
-import Divider from "./index";
-import Provider from "../../layout/Provider";
+import { Provider, Divider } from "../..";
 
 describe("<Divider/>", () => {
   it("should render correct with divider style", () => {

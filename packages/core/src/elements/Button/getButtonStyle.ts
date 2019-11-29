@@ -1,7 +1,10 @@
 import { css } from "styled-components";
 import { ButtonProps } from "./types";
-import { padding, height } from "../../../common/styleUtils/constants";
-import { getValFromObjKey, getFontSize, getElementSize } from "../../../common/helpers";
+import {
+  getValFromObjKey,
+  getFontSize,
+  getElementSize
+} from "@w-design/helpers";
 
 // Set button background colors
 const bg = {
@@ -97,14 +100,29 @@ const boxShadow = {
 };
 
 export function getButtonStyle(props: ButtonProps) {
-  const { fontSizes, fonts, lineHeights, colors, radii, space } = props.theme;
-  const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
+  const {
+    fontSizes,
+    fonts,
+    lineHeights,
+    colors,
+    radii,
+    space,
+    padding,
+    height
+  } = props.theme;
+
+  const {
+    appearance = "default",
+    size = "md",
+    isSelected,
+    fluid,
+    iconOnly
+  } = props;
 
   /** Buttonn size style */
   const paddingStyle = iconOnly ? 0 : getElementSize(padding, size);
   const heightStyle = getElementSize(height, size);
   const fontSizeStyle = getFontSize(size, fontSizes);
-
   /** Button appearance style*/
   let bgStyle = getValFromObjKey(appearance, bg);
   let bgHoverStyle = getValFromObjKey(appearance, bgHover);
@@ -152,7 +170,9 @@ export function getButtonStyle(props: ButtonProps) {
     }
   }
 
-  const boxShadowStyle = isSelected ? "transparent" : getValFromObjKey(appearance, boxShadow);
+  const boxShadowStyle = isSelected
+    ? "transparent"
+    : getValFromObjKey(appearance, boxShadow);
 
   return css`
     appearance: none;
@@ -174,7 +194,9 @@ export function getButtonStyle(props: ButtonProps) {
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};
-    border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
+    border: ${appearance === "link" || appearance === "subtle"
+      ? "none"
+      : "0.05rem solid"};
     background: ${colors[bgStyle]};
     border-color: ${colors[borderStyle]};
     color: ${colors[colorStyle]};
@@ -206,7 +228,6 @@ export function getButtonStyle(props: ButtonProps) {
       &.icon-after {
         margin-left: ${space[2]}px;
       }
-
       ${iconOnly && `margin: auto ${space[2]}px !important`};
     }
   `;

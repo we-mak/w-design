@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-interface PortalProps extends React.ReactElement<any> {
+export interface PortalProps extends React.ReactElement<any> {
   children?: React.ReactNode;
 }
 

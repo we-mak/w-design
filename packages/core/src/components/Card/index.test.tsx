@@ -1,9 +1,7 @@
 import * as React from "react";
 import { cleanup, render } from "@testing-library/react";
-import "jest-styled-components";
 import Card, { CardMedia, CardHeader, CardContent, CardFooter } from "./index";
-
-import Provider from "../../layout/Provider";
+import { Provider } from "../..";
 
 afterEach(cleanup);
 
@@ -21,18 +19,21 @@ describe("<Button/>", () => {
             srcSets={[
               {
                 media: "480",
-                src: "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480441.jpg"
+                src:
+                  "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480441.jpg"
               },
               {
                 media: "680",
-                src: "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480425.jpg"
+                src:
+                  "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480425.jpg"
               }
             ]}
             alt=""
           />
           <CardContent>
-            A safari is an overland journey, usually a trip by tourists in Africa. In the past, the
-            trip was often a big-game hunt, but today, safaris are often to observe
+            A safari is an overland journey, usually a trip by tourists in
+            Africa. In the past, the trip was often a big-game hunt, but today,
+            safaris are often to observe
           </CardContent>
 
           <CardFooter>Footer</CardFooter>

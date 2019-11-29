@@ -1,7 +1,5 @@
 import * as React from "react";
-import Typo from "../Typo";
-import Icon from "../Icon";
-import Flexbox from "../../layout/Flexbox";
+import { Flexbox, Icon, Typo } from "../..";
 import { Section } from "./Styled";
 import { SectionMessageProps } from "./types";
 
@@ -44,3 +42,4 @@ const SectionMessage: React.FC<SectionMessageProps> = ({
 };
 
 export default SectionMessage;
+export { SectionMessageProps };

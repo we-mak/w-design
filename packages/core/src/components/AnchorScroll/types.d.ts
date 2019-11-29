@@ -1,7 +1,7 @@
 import { ReactChild, ReactChildren } from "react";
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "../../typings";
 
-export interface ScrollLinkProps extends GlobProps {
+export interface AnchorScrollProps extends GlobProps {
   destination: string | number; // id or position of target
   children: ReactChild | ReactChildren;
   duration?: number; //scroll duration time, default by 200

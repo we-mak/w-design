@@ -1,8 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import "jest-styled-components";
 import SectionMessage from "./index";
-import Provider from "../../layout/Provider";
+import { Provider } from "../..";
 
 afterEach(cleanup);
 
@@ -11,7 +10,9 @@ describe("<SectionMessage/>", () => {
   it("should renders correctly", () => {
     const { container } = render(
       <Provider>
-        <SectionMessage title="Info">The quick brown fox jumps over the lazy dog</SectionMessage>
+        <SectionMessage title="Info">
+          The quick brown fox jumps over the lazy dog
+        </SectionMessage>
         <SectionMessage appearance="confirm" title="Confirm">
           The quick brown fox jumps over the lazy dog
         </SectionMessage>

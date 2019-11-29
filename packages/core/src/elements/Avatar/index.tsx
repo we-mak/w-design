@@ -1,8 +1,13 @@
 import * as React from "react";
-import { AvatarWrapper, AvatarDataInit, AvatarImage, PresenceMark } from "./Styled";
-import { firstLetter, randomProperty, filterObject } from "../../../common/helpers";
-import { colors } from "../../../common/styleUtils/colors";
+import {
+  AvatarWrapper,
+  AvatarDataInit,
+  AvatarImage,
+  PresenceMark
+} from "./Styled";
+import { firstLetter, randomProperty, filterObject } from "@w-design/helpers";
 import { AvatarProps } from "./types";
+import { colors } from "../../common/colors";
 
 const Avatar = ({
   size = "md",
@@ -16,13 +21,17 @@ const Avatar = ({
 
   React.useEffect(() => {
     if (!avatarUrl) {
-      setBackgroundColor(randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"])));
+      setBackgroundColor(
+        randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"]))
+      );
     }
   }, []);
 
   return (
     <AvatarWrapper style={{ backgroundColor }} size={size} {...rest}>
-      {dataInitial && <AvatarDataInit size={size}>{firstLetter(dataInitial)}</AvatarDataInit>}
+      {dataInitial && (
+        <AvatarDataInit size={size}>{firstLetter(dataInitial)}</AvatarDataInit>
+      )}
       {avatarUrl && <AvatarImage data-src={avatarUrl} alt={alt} />}
       {presence && <PresenceMark presence={presence} size={size} />}
     </AvatarWrapper>
@@ -30,3 +39,4 @@ const Avatar = ({
 };
 
 export default React.memo(Avatar);
+export { AvatarProps };

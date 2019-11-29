@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { color, margin, fontWeight, fontFamily } from "styled-system";
+import { CustomTag } from "../..";
 import { TypoProps } from "./types";
-import CustomTag from "../CustomTag";
 
 const WTypo = ({ tag, appearance, children, ...rest }: TypoProps) => (
   <CustomTag tag={tag ? tag : appearance} {...rest}>
@@ -42,3 +42,4 @@ const Typo = styled(WTypo)`
 Typo.displayName = "Typo";
 
 export default Typo;
+export { TypoProps };

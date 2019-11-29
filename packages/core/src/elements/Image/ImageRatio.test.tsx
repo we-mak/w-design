@@ -1,9 +1,8 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import "jest-styled-components";
 import Image from "./index";
 import { ImageRatio } from "./ImageRatio";
-import Provider from "../../layout/Provider";
+import { Provider } from "../..";
 
 afterEach(cleanup);
 

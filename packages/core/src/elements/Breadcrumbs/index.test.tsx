@@ -1,9 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import "jest-styled-components";
-import Breadcrumbs from "./index";
 import { BreadcrumbsItem } from "./BreadcrumbsItem";
-import Provider from "../../layout/Provider";
+import { Provider, Breadcrumbs } from "../..";
 
 afterEach(cleanup);
 

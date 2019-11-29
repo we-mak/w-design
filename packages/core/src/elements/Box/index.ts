@@ -18,7 +18,7 @@ import {
   flexbox,
   FlexboxProps
 } from "styled-system";
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "../../typings";
 
 export interface BoxProps
   extends GlobProps,

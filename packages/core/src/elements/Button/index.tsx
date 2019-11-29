@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled, { AnyStyledComponent } from "styled-components";
-import { ButtonProps } from "./types";
+import { Icon } from "../..";
+import { Spinner } from "../..";
 import { getButtonStyle } from "./getButtonStyle";
-import Icon from "../Icon";
-import Spinner from "../Spinner";
+import { ButtonProps } from "./types";
 
 const StyledButton = styled.button`
   ${getButtonStyle}
@@ -145,3 +145,4 @@ const Button = (props: ButtonProps) => {
 
 export default Button;
 export { ButtonGroup } from "./ButtonGroup";
+export { ButtonProps };

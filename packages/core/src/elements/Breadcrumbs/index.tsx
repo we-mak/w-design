@@ -1,6 +1,6 @@
 import React, { Children, isValidElement } from "react";
 import { BreadcrumbsContainer } from "./Styled";
-import { BreadcrumbsProps } from "./types";
+import { BreadcrumbsProps, BreadcrumbsItemProps } from "./types";
 
 const Breadcrumbs = ({ children, ...rest }: BreadcrumbsProps) => {
   const elements = Children.map(children, child => {
@@ -17,3 +17,4 @@ const Breadcrumbs = ({ children, ...rest }: BreadcrumbsProps) => {
 
 export default Breadcrumbs;
 export { BreadcrumbsItem } from "./BreadcrumbsItem";
+export { BreadcrumbsProps, BreadcrumbsItemProps };

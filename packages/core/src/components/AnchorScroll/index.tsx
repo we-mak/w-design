@@ -3,10 +3,10 @@
  * Smooth scrolling when click at an anchor link
  */
 import React, { FC, useState, useEffect, SyntheticEvent } from "react";
-import Button from "../../elements/Button";
-import { ScrollLinkProps } from "./types";
+import { Button } from "../..";
+import { AnchorScrollProps } from "./types";
 
-const AnchorScroll: FC<ScrollLinkProps> = ({
+const AnchorScroll: FC<AnchorScrollProps> = ({
   duration = 300,
   easing = (t: number) => t, // linear easing
   margin = 0,
@@ -22,7 +22,8 @@ const AnchorScroll: FC<ScrollLinkProps> = ({
 
     // Initial position of window and time
     const start = window.pageYOffset;
-    const startTime = "now" in window.performance ? performance.now() : new Date().getTime();
+    const startTime =
+      "now" in window.performance ? performance.now() : new Date().getTime();
 
     // Take height of window and document to resolve max scrollable value
     const documentHeight = Math.max(
@@ -61,10 +62,14 @@ const AnchorScroll: FC<ScrollLinkProps> = ({
     }
 
     const scroll = () => {
-      const now = "now" in window.performance ? performance.now() : new Date().getTime();
+      const now =
+        "now" in window.performance ? performance.now() : new Date().getTime();
       const time = Math.min(1, (now - startTime) / duration);
       const timeFunction = easing(time);
-      window.scroll(0, Math.ceil(timeFunction * (scrollTarget - start) + start));
+      window.scroll(
+        0,
+        Math.ceil(timeFunction * (scrollTarget - start) + start)
+      );
 
       if (window.pageYOffset === scrollTarget) {
         if (callback) {
@@ -109,10 +114,16 @@ const AnchorScroll: FC<ScrollLinkProps> = ({
   }, [destination, margin, top]);
 
   return (
-    <Button isSelected={isActive} appearance="clean" size="sm" onClick={scrollToDestination}>
+    <Button
+      isSelected={isActive}
+      appearance="clean"
+      size="sm"
+      onClick={scrollToDestination}
+    >
       {children}
     </Button>
   );
 };
 
 export default AnchorScroll;
+export { AnchorScrollProps };

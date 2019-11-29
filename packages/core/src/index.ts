@@ -16,3 +16,5 @@ export { default as Container, ContainerProps } from "./base/Container";
 export { default as DisplayElement, DisplayProps } from "./base/DisplayElement";
 export { default as Flexbox, FlexProps, ColumnProps } from "./base/Flexbox";
 export { default as Masonry, MasonryProps } from "./base/Masonry";
+// Components
+export { default as Navbar, NavProps } from "./components/Navbar";

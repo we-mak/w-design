@@ -32,3 +32,4 @@ class Navbar extends React.PureComponent<NavProps> {
 }
 
 export default Navbar;
+export { NavProps };

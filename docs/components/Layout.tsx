@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Provider, Container } from "@w-design/core";
+import { Header } from "./Header";
 
 const NavWrapper = styled.div`
   display: block;
@@ -31,7 +32,7 @@ export const Layout: React.FC<LayoutType> = ({ children }) => {
     <Provider theme={theme}>
       <NavWrapper>
         <Container px={4} py={3} bg={"WHITE"}>
-          Container
+          <Header />
         </Container>
       </NavWrapper>
       {children}

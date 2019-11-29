@@ -4,7 +4,9 @@ module.exports = {
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  plugins: [["babel-plugin-styled-components", "transform-runtime"]],
+  plugins: [
+    ["styled-components", { ssr: true, displayName: true, preprocess: false }]
+  ],
   env: {
     build: {
       ignore: ["**/*.test.tsx", "**/*.test.ts", "__snapshots__", "__tests__"]

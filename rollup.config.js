@@ -2,7 +2,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "rollup-plugin-typescript2";
 import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
-import url from "rollup-plugin-url";
+import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
 import babel from "rollup-plugin-babel";
 import postcss from "rollup-plugin-postcss";
@@ -16,6 +16,8 @@ const globals = {
   react: "React",
   "styled-components": "styled"
 };
+
+const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
 export default {
   input: "src/index.ts",
@@ -51,7 +53,9 @@ export default {
       declaration: true
     }),
     babel({
-      exclude: ["node_modules/**"]
+      extensions,
+      exclude: ["node_modules/**"],
+      plugins: [["styled-components", { displayName: true, preprocess: false }]]
     }),
     commonjs()
   ]

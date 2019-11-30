@@ -1,8 +1,7 @@
 import * as React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-import "jest-styled-components";
+import { Provider } from "@w-design/core";
 import RadioGroup from "./index";
-import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
@@ -25,7 +24,12 @@ describe("<Radio/>", () => {
   it("should renders correctly", () => {
     const { container } = render(
       <Provider>
-        <RadioGroup isRequired groupName="Radio" groupLabel="Radio" options={options} />
+        <RadioGroup
+          isRequired
+          groupName="Radio"
+          groupLabel="Radio"
+          options={options}
+        />
         <RadioGroup isDisabled defaultValue="foo" options={options} />
         <RadioGroup value="test" />
       </Provider>

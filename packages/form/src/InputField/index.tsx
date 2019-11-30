@@ -4,8 +4,8 @@
  */
 import * as React from "react";
 import styled from "styled-components";
-import { InputFieldProps } from "./types";
 import { getInputStyle } from "./getInputStyle";
+import { InputFieldProps } from "./types";
 
 const StyledInput = styled.input<any>`
   ${getInputStyle};

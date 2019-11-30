@@ -7,11 +7,10 @@
 // hooks input and output
 import * as React from "react";
 import { cleanup, render, fireEvent } from "@testing-library/react";
-import InputForm from "../../libs/components/InputForm";
+import { Provider, Button } from "@w-design/core";
 import useField from "./useField";
 import useForm from "./useForm";
-import Button from "../../libs/elements/Button";
-import { Provider } from "../..";
+import { InputForm } from "..";
 
 afterEach(cleanup);
 

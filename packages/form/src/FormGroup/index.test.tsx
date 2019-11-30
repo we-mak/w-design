@@ -1,13 +1,12 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import "jest-styled-components";
+import { Provider } from "@w-design/core";
 import FormGroup from "./index";
-import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 
-describe("<Modal>", () => {
-  it("should render correct modal", () => {
+describe("<FormGroup>", () => {
+  it("should render correct form group component", () => {
     const { container } = render(
       <Provider>
         <FormGroup />

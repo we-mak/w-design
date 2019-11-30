@@ -1,4 +1,4 @@
-import { GlobProps } from "../../../typings";
+import { GlobProps } from "@w-design/core";
 
 export interface MasonryProps extends GlobProps {
   children: Array<any>;

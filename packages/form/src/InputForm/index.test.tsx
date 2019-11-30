@@ -1,8 +1,7 @@
 import * as React from "react";
 import { cleanup, render } from "@testing-library/react";
-import "jest-styled-components";
+import { Provider } from "@w-design/core";
 import InputForm from "./index";
-import Provider from "../../layout/Provider";
 
 afterEach(cleanup);
 

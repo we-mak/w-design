@@ -1,5 +1,5 @@
-import { ActionProps } from "../../../typings";
-import { InputFieldProps } from "../../elements/InputField/types";
+import { ActionProps } from "@w-design/core";
+import { InputFieldProps } from "../InputField/types";
 
 export interface InputFormProps extends InputFieldProps, ActionProps {
   label?: string;

@@ -1,7 +1,6 @@
 import { css } from "styled-components";
+import { hex2Rgba, getFontSize, getElementSize } from "@w-design/helpers";
 import { InputFieldProps } from "./types";
-import { padding, height } from "../../../common/styleUtils/constants";
-import { hex2Rgba, getFontSize, getElementSize } from "../../../common/helpers";
 
 export const getInputStyle = (props: InputFieldProps) => {
   const {
@@ -10,7 +9,7 @@ export const getInputStyle = (props: InputFieldProps) => {
     isError,
     isValid,
     isWarning,
-    theme: { colors, fontSizes, radii, lineHeights }
+    theme: { colors, fontSizes, radii, lineHeights, height, padding }
   } = props;
 
   const boderColor = () => {

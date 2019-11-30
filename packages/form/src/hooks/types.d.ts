@@ -1,4 +1,4 @@
-import { InputFormProps } from "../../libs/components/InputForm/types";
+import { InputFormProps } from "../InputForm/types";
 
 export type ValidatorType = {
   validate: Function;

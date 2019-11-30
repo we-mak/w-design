@@ -11,6 +11,8 @@
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "module": "lib/index.es.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -23,9 +25,12 @@
     "url": "git+https://viiiprock@github.com/we-mak/w-design.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "cross-env CI=1 jest test -u --colors"
   },
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"
+  },
+  "dependencies": {
+    "@w-design/core": "^0.41.0-alpha.2+1fb2277"
   }
 }

@@ -3,7 +3,7 @@ import {
   InputControlProps,
   SyntheticEventProps,
   MouseEventProps
-} from "../../../typings";
+} from "@w-design/core";
 
 export interface CheckboxProps
   extends GlobProps,

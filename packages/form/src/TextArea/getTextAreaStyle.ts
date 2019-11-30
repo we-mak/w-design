@@ -1,6 +1,5 @@
 import { css } from "styled-components";
-import { hex2Rgba } from "../../../common/helpers";
-
+import { hex2Rgba } from "@w-design/helpers";
 import { TextAreaProps } from "./types";
 
 export const getTextAreaStyle = (props: TextAreaProps) => {

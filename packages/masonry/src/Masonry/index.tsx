@@ -93,5 +93,4 @@ const Masonry = ({ breakpoints, children, defaultCols = 3 }: MasonryProps) => {
 };
 
 export default memo(Masonry);
-
 export { MasonryProps };

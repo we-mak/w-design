@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
-import FormGroup from "../../components/FormGroup";
+import { FormGroup } from "..";
 import { CheckboxProps } from "./types";
 
 const Label = styled.label<CheckboxProps>`
@@ -117,9 +117,22 @@ const Checkbox = ({
           {...rest}
         />
         <CheckboxIcon isChecked={isChecked}>
-          <svg width="28" height="28" viewBox="0 0 24 24" focusable="false" role="presentation">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            focusable="false"
+            role="presentation"
+          >
             <g fillRule="evenodd">
-              <rect fill="currentColor" x="6" y="6" width="12" height="12" rx="2" />
+              <rect
+                fill="currentColor"
+                x="6"
+                y="6"
+                width="12"
+                height="12"
+                rx="2"
+              />
               <path
                 d="M9.707 11.293a1 1 0 1 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L11 12.586l-1.293-1.293z"
                 fill="inherit"

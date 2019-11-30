@@ -3,12 +3,16 @@
  * Input form with label, text hint...
  */
 import * as React from "react";
-import InputField from "../../elements/InputField";
-import Icon from "../../elements/Icon";
-import Spinner from "../../elements/Spinner";
-import Label from "../../elements/Label";
+import { Spinner, Icon } from "@w-design/core";
+import { Label, InputField } from "..";
 import { InputFormProps } from "./types";
-import { FieldGroup, TextHint, RequiredMark, SpinnerWrap, InputContainer } from "./Styled";
+import {
+  FieldGroup,
+  TextHint,
+  RequiredMark,
+  SpinnerWrap,
+  InputContainer
+} from "./Styled";
 
 const InputForm: React.FunctionComponent<InputFormProps> = props => {
   const {
@@ -28,11 +32,14 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
   return (
     <FieldGroup>
       <Label htmlFor={id}>
-        {label} {isRequired && <RequiredMark aria-hidden="true">*</RequiredMark>}
+        {label}{" "}
+        {isRequired && <RequiredMark aria-hidden="true">*</RequiredMark>}
         <InputContainer>
           {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
           <InputField
-            className={(iconBefore && `icon-before`) || (iconAfter && `icon-after`)}
+            className={
+              (iconBefore && `icon-before`) || (iconAfter && `icon-after`)
+            }
             fluid
             id={id}
             isError={isError}

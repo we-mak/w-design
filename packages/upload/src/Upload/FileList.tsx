@@ -1,9 +1,7 @@
 import * as React from "react";
-import ProgressLoader from "../../elements/ProgressLoader";
-import List, { ListItem } from "../List";
+import { Button, ProgressLoader, List, ListItem } from "@w-design/core";
 import { UploadListProps } from "./types";
 import { ListContainer } from "./Styled";
-import Button from "../../elements/Button";
 
 export const FileList: React.FC<UploadListProps> = ({
   fileList,

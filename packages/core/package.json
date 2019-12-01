@@ -1,18 +1,22 @@
 {
   "name": "@w-design/core",
-  "version": "0.41.0-alpha.2+1fb2277",
-  "description": "Base components and elements",
+  "version": "0.41.0",
+  "description": "w-design core components",
+  "keywords": [
+    "w-design",
+    "react",
+    "core",
+    "components"
+  ],
   "author": "Son_dang <son.dang@doda100.com >",
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "module": "lib/index.es.js",
-  "publishConfig": {
-    "access": "public"
-  },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
   },
   "files": [
     "lib"
@@ -32,9 +36,5 @@
     "@w-design/helpers": "^0.40.0",
     "@w-design/hooks": "^0.40.0",
     "body-scroll-lock": "^2.6.4"
-  },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.7.4"
-  },
-  "gitHead": "1fb227728f3af52e6bfafe318e3fd7d631f2ec60"
+  }
 }

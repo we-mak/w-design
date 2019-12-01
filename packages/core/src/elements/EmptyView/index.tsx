@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box } from "../..";
+import Box from "../Box";
 
 type EmptyView = {
   message?: string;

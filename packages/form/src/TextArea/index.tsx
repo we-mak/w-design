@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Label } from "..";
+import Label from "../Label";
 import { TextAreaWrapper } from "./Styled";
 import { getTextAreaStyle } from "./getTextAreaStyle";
 import { TextAreaProps } from "./types";

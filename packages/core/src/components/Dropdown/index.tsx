@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useClickOutside } from "@w-design/hooks";
-import { Button } from "../..";
+import Button from "../../elements/Button";
 import { Arrow } from "./Arrow";
 import { DropdownWrapper, DropdownPanel, Title } from "./Styled";
 import { DropdownProps } from "./types";

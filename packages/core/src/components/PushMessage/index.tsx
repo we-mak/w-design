@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Portal } from "../..";
+import Portal from "../../elements/Portal";
 import { Message } from "./Message";
 import { MessageContainer } from "./Styled";
 import { PushMessageProps } from "./types";

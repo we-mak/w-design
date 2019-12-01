@@ -4,7 +4,8 @@
  */
 import * as React from "react";
 import { Spinner, Icon } from "@w-design/core";
-import { Label, InputField } from "..";
+import Label from "../Label";
+import InputField from "../InputField";
 import { InputFormProps } from "./types";
 import {
   FieldGroup,

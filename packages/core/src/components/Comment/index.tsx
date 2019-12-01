@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { Avatar, AvatarGroup } from "../..";
+import Avatar from "../../elements/Avatar";
+import AvatarGroup from "../AvatarGroup";
 import { Message, CommentContainer } from "./Styled";
 import { CommentProps } from "./types";
 

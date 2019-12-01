@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { color, margin, fontWeight, fontFamily } from "styled-system";
-import { CustomTag } from "../..";
+import CustomTag from "../CustomTag";
 import { TypoProps } from "./types";
 
 const WTypo = ({ tag, appearance, children, ...rest }: TypoProps) => (

@@ -4,7 +4,9 @@ import {
   clearAllBodyScrollLocks,
   BodyScrollOptions
 } from "body-scroll-lock";
-import { Button, Typo, Portal } from "../..";
+import Button from "../../elements/Button";
+import Typo from "../../elements/Typo";
+import Portal from "../../elements/Portal";
 import {
   WModal,
   ModalContainer,

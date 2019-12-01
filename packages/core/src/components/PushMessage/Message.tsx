@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Icon } from "../..";
+import Icon from "../../elements/Icon";
 import { MessagePanel } from "./Styled";
 import { PushMessageProps } from "./types";
 

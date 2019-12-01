@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled, { AnyStyledComponent } from "styled-components";
-import { Icon } from "../..";
-import { Spinner } from "../..";
+import Icon from "../Icon";
+import Spinner from "../Spinner";
 import { getButtonStyle } from "./getButtonStyle";
 import { ButtonProps } from "./types";
 

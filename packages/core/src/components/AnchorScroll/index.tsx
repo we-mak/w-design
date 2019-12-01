@@ -3,7 +3,7 @@
  * Smooth scrolling when click at an anchor link
  */
 import React, { FC, useState, useEffect, SyntheticEvent } from "react";
-import { Button } from "../..";
+import Button from "../../elements/Button";
 import { AnchorScrollProps } from "./types";
 
 const AnchorScroll: FC<AnchorScrollProps> = ({

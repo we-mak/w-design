@@ -1,5 +1,7 @@
 import * as React from "react";
-import { Flexbox, Icon, Typo } from "../..";
+import Flexbox from "../../base/Flexbox";
+import Typo from "../Typo";
+import Icon from "../Icon";
 import { Section } from "./Styled";
 import { SectionMessageProps } from "./types";
 

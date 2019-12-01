@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
 import { Provider } from "@w-design/core";
-import Masonry from "./index";
+import Masonry from "../src/Masonry";
 
 afterEach(cleanup);
 

@@ -3,7 +3,7 @@
  * inherit lazy load from Image
  */
 import React, { FC } from "react";
-import { Image } from "../..";
+import Image from "../Image";
 import { Source } from "./Source";
 import { PictureProps } from "./types";
 

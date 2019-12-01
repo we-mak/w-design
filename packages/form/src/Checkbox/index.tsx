@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
-import { FormGroup } from "..";
+import FormGroup from "../FormGroup";
 import { CheckboxProps } from "./types";
 
 const Label = styled.label<CheckboxProps>`

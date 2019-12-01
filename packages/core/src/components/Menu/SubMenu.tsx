@@ -3,7 +3,7 @@
  * */
 import * as React from "react";
 import styled from "styled-components";
-import { Spinner } from "../..";
+import Spinner from "../../elements/Spinner";
 import { Arrow } from "./Arrow";
 import { IconBefore } from "./MenuItem";
 import { useMenu } from "./MenuContext";

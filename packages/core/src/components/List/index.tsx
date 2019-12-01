@@ -8,7 +8,10 @@
  * - Spinner exists if data is loading
  */
 import * as React from "react";
-import { EmptyView, Divider, Typo, Spinner } from "../..";
+import EmptyView from "../../elements/EmptyView";
+import Divider from "../../elements/Divider";
+import Typo from "../../elements/Typo";
+import Spinner from "../../elements/Spinner";
 import {
   ListContainer,
   ListWrapper,

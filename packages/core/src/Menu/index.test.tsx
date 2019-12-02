@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import { Provider, Icon } from "../..";
+import Provider from "../Provider";
+import Icon from "../Icon";
 import Menu, { MenuItem, MenuHeading, SubMenu } from "./index";
 
 afterEach(cleanup);

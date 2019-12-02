@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cleanup, render } from "@testing-library/react";
+import Provider from "../Provider";
 import Nav from "./index";
-import { Provider } from "../..";
 
 afterEach(cleanup);
 

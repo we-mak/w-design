@@ -1,56 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Drawer/> should renders correctly 1`] = `
-.c0 {
-  position: fixed;
-  padding: 0px;
-  width: auto;
-  height: auto;
-  top: 0;
-  z-index: 1000;
-}
-
-.c1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: auto;
-  max-width: 280px;
-  background-color: #fff;
-  z-index: 1;
-  -webkit-transform: translateX(-280px);
-  -ms-transform: translateX(-280px);
-  transform: translateX(-280px);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  -webkit-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  will-change: transform;
-}
-
-.c2 {
-  background: rgba(0,18,35,0.75);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-AykKC dxXTna"
   >
     <div
-      class="c1"
+      class="sc-AykKD euJBJI"
     />
     <div
-      class="c2"
+      class="sc-AykKE kWRLIi"
     />
   </div>
 </div>

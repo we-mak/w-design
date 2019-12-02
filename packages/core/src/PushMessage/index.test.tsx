@@ -1,6 +1,6 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import { Provider } from "../..";
+import Provider from "../Provider";
 import PushMessage from "./index";
 
 afterEach(cleanup);

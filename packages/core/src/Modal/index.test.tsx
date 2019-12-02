@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cleanup, render, fireEvent } from "@testing-library/react";
-import { Provider } from "../..";
+import Provider from "../Provider";
 import Modal from "./index";
 
 afterEach(cleanup);

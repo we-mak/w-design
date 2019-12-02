@@ -1,6 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
-import { Provider, Avatar } from "../..";
+import Provider from "../Provider";
+import Avatar from "../Avatar";
 import AvatarGroup from "./index";
 
 afterEach(cleanup);

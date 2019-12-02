@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
+import Provider from "../Provider";
 import Flexbox from "./index";
-import { Provider } from "../..";
 
 afterAll(cleanup);
 

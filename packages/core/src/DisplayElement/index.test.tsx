@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render } from "@testing-library/react";
+import Provider from "../Provider";
 import DisplayElement from "./index";
-import { Provider } from "../../";
 
 describe("<DisplayElement/>", () => {
   // Column Style test

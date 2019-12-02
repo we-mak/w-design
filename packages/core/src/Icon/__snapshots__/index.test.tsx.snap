@@ -1,26 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Icon/> should render correct icon styled 1`] = `
-.c0.info {
-  color: #008CC0;
-}
-
-.c0.warn {
-  color: #FA9B00;
-}
-
-.c0.success {
-  color: #29A634;
-}
-
-.c0.error {
-  color: #DC1F1F;
-}
-
 <div>
   <i
     aria-hidden="true"
-    class="c0 fas fa-clock"
+    class="sc-fzXfLT fEexBX fas fa-clock"
   />
 </div>
 `;

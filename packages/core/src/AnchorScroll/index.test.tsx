@@ -1,8 +1,8 @@
 import * as React from "react";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
+import Provider from "../Provider";
 import AnchorScroll from "./index";
-import { Provider } from "../..";
 
 afterEach(cleanup);
 

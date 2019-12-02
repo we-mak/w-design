@@ -1,75 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Typo/> should render correctly 1`] = `
-.c0 {
-  font-weight: 700;
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 0.8rem !important;
-}
-
-.c1 {
-  font-weight: 700;
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 1.6rem !important;
-}
-
-.c2 {
-  font-weight: 700;
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 1.4rem !important;
-}
-
-.c3 {
-  font-weight: 700;
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 1.2rem !important;
-}
-
-.c4 {
-  font-weight: 700;
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 1rem !important;
-}
-
-.c5 {
-  font-weight: 700;
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 0.9rem !important;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-AykKC fgftwt"
   >
     Hello
   </div>
   <h1
-    class="c1"
+    class="sc-AykKC gPCutE"
   >
     Hello
   </h1>
   <h2
-    class="c2"
+    class="sc-AykKC kXaoUa"
   >
     Hello
   </h2>
   <h3
-    class="c3"
+    class="sc-AykKC dPczVA"
   >
     Hello
   </h3>
   <h4
-    class="c4"
+    class="sc-AykKC qhRWM"
   >
     Hello
   </h4>
   <h5
-    class="c5"
+    class="sc-AykKC iKenVG"
   >
     Hello
   </h5>
   <h6
-    class="c0"
+    class="sc-AykKC fgftwt"
   >
     Hello
   </h6>
@@ -77,16 +41,9 @@ exports[`<Typo/> should render correctly 1`] = `
 `;
 
 exports[`<Typo/> should render div with H1 style 1`] = `
-.c0 {
-  font-weight: 700;
-  font-family: Helvetica,Arial,sans-serif;
-  margin-bottom: 10px;
-  font-size: 1.6rem !important;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-AykKC fwdzsa"
     mb="10"
   >
     Hello

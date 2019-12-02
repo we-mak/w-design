@@ -1,480 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InputForm/> should render correctly 1`] = `
-.c4 {
-  background: transparent;
-  background-image: none;
-  outline: none;
-  max-width: 100%;
-  display: block;
-  position: relative;
-  border: 0.05rem solid #BECEDC;
-  border-radius: 0.2rem;
-  color: #202B33;
-  padding: 0.35rem 0.4rem;
-  font-size: 0.8rem;
-  font-family: inherit;
-  height: 1.8rem;
-  width: 100%;
-  line-height: 1.125;
-  -webkit-transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-  transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-}
-
-.c4:focus {
-  box-shadow: 0 0 0 0.1rem rgba(0,140,192,0.2);
-  border-color: #008CC0;
-}
-
-.c4::-webkit-input-placeholder {
-  color: #90A9BF;
-}
-
-.c4::-moz-placeholder {
-  color: #90A9BF;
-}
-
-.c4:-ms-input-placeholder {
-  color: #90A9BF;
-}
-
-.c4::placeholder {
-  color: #90A9BF;
-}
-
-.c4:disabled,
-.c4[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #EFF3F6 !important;
-}
-
-.c4[type="file"] {
-  height: auto;
-}
-
-.c6 {
-  background: transparent;
-  background-image: none;
-  outline: none;
-  max-width: 100%;
-  display: block;
-  position: relative;
-  border: 0.05rem solid #DC1F1F;
-  border-radius: 0.2rem;
-  color: #202B33;
-  padding: 0.35rem 0.4rem;
-  font-size: 0.8rem;
-  font-family: inherit;
-  height: 1.8rem;
-  width: 100%;
-  line-height: 1.125;
-  -webkit-transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-  transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-}
-
-.c6:focus {
-  box-shadow: 0 0 0 0.1rem rgba(220,31,31,0.2);
-  border-color: #DC1F1F;
-}
-
-.c6::-webkit-input-placeholder {
-  color: #90A9BF;
-}
-
-.c6::-moz-placeholder {
-  color: #90A9BF;
-}
-
-.c6:-ms-input-placeholder {
-  color: #90A9BF;
-}
-
-.c6::placeholder {
-  color: #90A9BF;
-}
-
-.c6:disabled,
-.c6[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #EFF3F6 !important;
-}
-
-.c6[type="file"] {
-  height: auto;
-}
-
-.c9 {
-  background: transparent;
-  background-image: none;
-  outline: none;
-  max-width: 100%;
-  display: block;
-  position: relative;
-  border: 0.05rem solid #FA9B00;
-  border-radius: 0.2rem;
-  color: #202B33;
-  padding: 0.35rem 0.4rem;
-  font-size: 0.8rem;
-  font-family: inherit;
-  height: 1.8rem;
-  width: 100%;
-  line-height: 1.125;
-  -webkit-transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-  transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-}
-
-.c9:focus {
-  box-shadow: 0 0 0 0.1rem rgba(250,155,0,0.2);
-  border-color: #FA9B00;
-}
-
-.c9::-webkit-input-placeholder {
-  color: #90A9BF;
-}
-
-.c9::-moz-placeholder {
-  color: #90A9BF;
-}
-
-.c9:-ms-input-placeholder {
-  color: #90A9BF;
-}
-
-.c9::placeholder {
-  color: #90A9BF;
-}
-
-.c9:disabled,
-.c9[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #EFF3F6 !important;
-}
-
-.c9[type="file"] {
-  height: auto;
-}
-
-.c11 {
-  background: transparent;
-  background-image: none;
-  outline: none;
-  max-width: 100%;
-  display: block;
-  position: relative;
-  border: 0.05rem solid #29A634;
-  border-radius: 0.2rem;
-  color: #202B33;
-  padding: 0.35rem 0.4rem;
-  font-size: 0.8rem;
-  font-family: inherit;
-  height: 1.8rem;
-  width: 100%;
-  line-height: 1.125;
-  -webkit-transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-  transition: background 0.2s,border 0.2s,box-shadow 0.2s,color 0.2s;
-}
-
-.c11:focus {
-  box-shadow: 0 0 0 0.1rem rgba(41,166,52,0.2);
-  border-color: #29A634;
-}
-
-.c11::-webkit-input-placeholder {
-  color: #90A9BF;
-}
-
-.c11::-moz-placeholder {
-  color: #90A9BF;
-}
-
-.c11:-ms-input-placeholder {
-  color: #90A9BF;
-}
-
-.c11::placeholder {
-  color: #90A9BF;
-}
-
-.c11:disabled,
-.c11[disabled] {
-  cursor: not-allowed;
-  color: #90A9BF !important;
-  background: #EFF3F6 !important;
-}
-
-.c11[type="file"] {
-  height: auto;
-}
-
-.c3.info {
-  color: #008CC0;
-}
-
-.c3.warn {
-  color: #FA9B00;
-}
-
-.c3.success {
-  color: #29A634;
-}
-
-.c3.error {
-  color: #DC1F1F;
-}
-
-.c14 {
-  position: relative;
-  margin: 0 auto;
-  width: 1.4rem;
-}
-
-.c14:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-
-.c15 {
-  -webkit-animation: eYEYhP 2s linear infinite;
-  animation: eYEYhP 2s linear infinite;
-  height: 100%;
-  -webkit-transform-origin: center center;
-  -ms-transform-origin: center center;
-  transform-origin: center center;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.c16 {
-  stroke-dasharray: 1,200;
-  stroke-dashoffset: 0;
-  -webkit-animation: dKIScq 1.5s ease-in-out infinite;
-  animation: dKIScq 1.5s ease-in-out infinite;
-  stroke-linecap: round;
-  stroke: #008CC0;
-  stroke-width: 3;
-  stroke-miterlimit: 10;
-}
-
-.c1 {
-  display: block;
-  line-height: 1.8;
-  font-weight: 500;
-  padding: 8px 0;
-}
-
-.c0 {
-  position: relative;
-  font-family: Helvetica,Arial,sans-serifpx;
-}
-
-.c0:not(:last-child) {
-  margin-bottom: 8px;
-}
-
-.c0 i {
-  color: #6C869B;
-}
-
-.c0 i.icon-before {
-  height: 0.8rem;
-  margin: 0 0.25rem;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 0.8rem;
-  z-index: 2;
-  left: 0.1rem;
-}
-
-.c0 i.icon-after {
-  height: 0.8rem;
-  margin: 0 0.25rem;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 0.8rem;
-  z-index: 2;
-  right: 0.1rem;
-}
-
-.c0 input.icon-before {
-  padding-left: 1.4rem !important;
-}
-
-.c0 input.icon-after {
-  padding-right: 1.4rem !important;
-}
-
-.c2 {
-  position: relative;
-  display: block;
-}
-
-.c5 {
-  display: block;
-  margin-top: 0.4rem;
-  color: #566E82;
-}
-
-.c7 {
-  display: block;
-  margin-top: 0.4rem;
-  color: #DC1F1F;
-}
-
-.c10 {
-  display: block;
-  margin-top: 0.4rem;
-  color: #FA9B00;
-}
-
-.c12 {
-  display: block;
-  margin-top: 0.4rem;
-  color: #29A634;
-}
-
-.c8 {
-  color: #DC1F1F;
-  font-size: 0.7rem;
-  top: -0.2rem;
-}
-
-.c13 {
-  margin: 0 0.25rem;
-  position: absolute;
-  top: 10%;
-  z-index: 2;
-  right: 0;
-  display: block;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
       label
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <i
           aria-hidden="true"
-          class="c3 icon-before fas fa-phone"
+          class="sc-fzXfLT fEexBX icon-before fas fa-phone"
         />
         <input
           autocomplete="off"
-          class="c4 icon-before"
+          class="sc-fzXfQU hleGtZ icon-before"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="c5"
+      class="sc-fzXfQX fJBhzS"
     >
       hint
     </small>
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c4 icon-after"
+          class="sc-fzXfQU hleGtZ icon-after"
           type="text"
           value=""
         />
         <i
           aria-hidden="true"
-          class="c3 icon-after fas fa-phone"
+          class="sc-fzXfLT fEexBX icon-after fas fa-phone"
         />
       </span>
     </label>
     <small
-      class="c5"
+      class="sc-fzXfQX fJBhzS"
     />
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c6"
+          class="sc-fzXfQU hsFjiG"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="c7"
+      class="sc-fzXfQX dktqfX"
     />
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c4"
+          class="sc-fzXfQU hleGtZ"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="c5"
+      class="sc-fzXfQX fJBhzS"
     />
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c4"
+          class="sc-fzXfQU hleGtZ"
           disabled=""
           type="text"
           value=""
@@ -482,28 +121,28 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="c5"
+      class="sc-fzXfQX fJBhzS"
     />
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <sup
         aria-hidden="true"
-        class="c8"
+        class="sc-fzXfQY cWzzKu"
       >
         *
       </sup>
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c4"
+          class="sc-fzXfQU hleGtZ"
           required=""
           type="text"
           value=""
@@ -511,81 +150,81 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="c5"
+      class="sc-fzXfQX fJBhzS"
     />
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c9"
+          class="sc-fzXfQU euuea"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="c10"
+      class="sc-fzXfQX gwLMok"
     />
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c11"
+          class="sc-fzXfQU CGwRP"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="c12"
+      class="sc-fzXfQX eKZFQr"
     />
   </div>
   <div
-    class="c0"
+    class="sc-fzXfQV iFLFou"
   >
     <label
-      class="c1"
+      class="sc-fzXfQT cwWujf"
     >
        
       <span
-        class="c2"
+        class="sc-fzXfQW htzQXe"
       >
         <input
           autocomplete="off"
-          class="c4"
+          class="sc-fzXfQU hleGtZ"
           type="text"
           value=""
         />
         <span
-          class="c13"
+          class="sc-fzXfQZ eFNNCj"
         >
           <div
-            class="c14"
+            class="sc-fzXfLU emfNQl"
           >
             <svg
-              class="c15"
+              class="sc-fzXfLV htslQH"
               viewBox="25 25 50 50"
             >
               <circle
-                class="c16"
+                class="sc-fzXfLW cyBfbK"
                 cx="50"
                 cy="50"
                 fill="none"
@@ -597,7 +236,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="c5"
+      class="sc-fzXfQX fJBhzS"
     />
   </div>
 </div>

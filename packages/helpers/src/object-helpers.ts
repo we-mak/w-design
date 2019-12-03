@@ -22,7 +22,7 @@ export const getValFromObjKey = (key: string, targetObject: object) =>
 
 /**
  * filterObject
- * filter out the object by key
+ * filter out the object by keys
  */
 export const filterObject = (origin: object, removed: string[]) =>
   Object.keys(origin)

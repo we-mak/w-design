@@ -25,8 +25,9 @@ module.exports = {
   setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
   coveragePathIgnorePatterns: [
     ".*\\.d\\.ts|tsx",
+    ".js", // ignore built js files
     "<rootDir>/node_modules/",
-    "<rootDir>/pacakages/*/node_modules/"
+    "<rootDir>/packages/*/node_modules/"
   ],
   verbose: true
 };

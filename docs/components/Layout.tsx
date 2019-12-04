@@ -1,9 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Provider, Container } from "@w-design/core";
+import { MDXProvider } from "@mdx-js/react";
+import { Provider, Container, Flexbox, Drawer } from "@w-design/core";
 import { Header } from "./Header";
+import { CodeBlock } from "./CodeBlock";
+import { Sidebar } from "./Sidebar";
 
-const NavWrapper = styled.div`
+const NavWrapper = styled.header`
   display: block;
   position: sticky;
   top: 0;
@@ -13,6 +16,7 @@ const NavWrapper = styled.div`
   box-shadow: ${props => props.theme.shadows[1]};
   z-index: 999;
 `;
+NavWrapper.displayName = "NavWrapper";
 
 const theme = {
   fonts: {
@@ -27,15 +31,42 @@ type LayoutType = {
   children: React.ReactNode;
 };
 
+const components = {
+  pre: (props: any) => <div {...props} />,
+  code: CodeBlock
+};
+
 export const Layout: React.FC<LayoutType> = ({ children }) => {
+  const [openMenu, setOpenMenu] = React.useState(false);
+
+  const handleToogleMenu = () => setOpenMenu(!openMenu);
+
   return (
     <Provider theme={theme}>
       <NavWrapper>
-        <Container px={4} py={3} bg={"WHITE"}>
-          <Header />
+        <Container px={4} py={3}>
+          <Header toggleMenu={handleToogleMenu} />
         </Container>
       </NavWrapper>
-      {children}
+
+      {/* Mobile Sidebar */}
+      <Drawer isOpen={openMenu} onClose={() => setOpenMenu(false)}>
+        <Sidebar />
+      </Drawer>
+
+      <Container p={3}>
+        <Flexbox mb="120px">
+          <Flexbox.Column
+            width={[0, 0, 0, 1 / 4]}
+            display={["none", "none", "none", "flex"]}
+          >
+            <Sidebar />
+          </Flexbox.Column>
+          <Flexbox.Column width={[1, 1, 1, 3 / 4]}>
+            <MDXProvider components={components}>{children}</MDXProvider>
+          </Flexbox.Column>
+        </Flexbox>
+      </Container>
     </Provider>
   );
 };

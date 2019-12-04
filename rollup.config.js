@@ -17,8 +17,6 @@ const globals = {
   "styled-components": "styled"
 };
 
-const extensions = [".js", ".jsx", ".ts", ".tsx"];
-
 export default {
   input: "src/index.ts",
   external: [
@@ -48,14 +46,13 @@ export default {
     }),
     resolve(),
     typescript({
+      tsconfig: `tsconfig.json`,
       rollupCommonJSResolveHack: true,
-      clean: true,
-      declaration: true
+      clean: true
     }),
     babel({
-      extensions,
       exclude: ["node_modules/**"],
-      plugins: [["styled-components", { displayName: true, preprocess: false }]]
+      plugins: [["styled-components", { displayName: true }]]
     }),
     commonjs()
   ]

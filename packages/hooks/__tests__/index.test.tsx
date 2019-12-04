@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-import useClickOutside from "./index";
+import { useClickOutside } from "../";
 
 afterEach(cleanup);
 
@@ -17,7 +17,6 @@ const Test = () => {
 describe("useClickOutside", () => {
   test("should return true when click on parent", () => {
     const { container } = render(<Test />);
-
     fireEvent.click(container);
   });
 });

@@ -17,7 +17,7 @@ export const CodeBlock = ({ children, className }) => {
           style={{
             color: "rgb(214, 222, 235)",
             backgroundColor: "rgb(1, 22, 39)",
-            padding: "0.2rem 1.2rem",
+            padding: "1rem 1.2rem 0 1.2rem",
             borderRadius: ".4rem"
           }}
         >

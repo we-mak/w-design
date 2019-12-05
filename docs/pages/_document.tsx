@@ -35,6 +35,7 @@ class MyDocument extends Document {
           integrity="sha256-nkldBwBn2NQqRL1mod7BqHsJ6cEOn6u/ln6F/lI4CFo="
           crossOrigin="anonymous"
         />
+
         <body>
           <Main />
           <NextScript />

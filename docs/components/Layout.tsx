@@ -1,9 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-import { MDXProvider } from "@mdx-js/react";
 import { Provider, Container, Flexbox, Drawer } from "@w-design/core";
 import { Header } from "./Header";
-import { CodeBlock } from "./CodeBlock";
 import { Sidebar } from "./Sidebar";
 
 const NavWrapper = styled.header`
@@ -15,6 +13,7 @@ const NavWrapper = styled.header`
   width: 100%;
   box-shadow: ${props => props.theme.shadows[1]};
   z-index: 999;
+  background-color: white;
 `;
 NavWrapper.displayName = "NavWrapper";
 
@@ -29,11 +28,6 @@ const theme = {
 
 type LayoutType = {
   children: React.ReactNode;
-};
-
-const components = {
-  pre: (props: any) => <div {...props} />,
-  code: CodeBlock
 };
 
 export const Layout: React.FC<LayoutType> = ({ children }) => {
@@ -62,9 +56,7 @@ export const Layout: React.FC<LayoutType> = ({ children }) => {
           >
             <Sidebar />
           </Flexbox.Column>
-          <Flexbox.Column width={[1, 1, 1, 3 / 4]}>
-            <MDXProvider components={components}>{children}</MDXProvider>
-          </Flexbox.Column>
+          <Flexbox.Column width={[1, 1, 1, 3 / 4]}>{children}</Flexbox.Column>
         </Flexbox>
       </Container>
     </Provider>

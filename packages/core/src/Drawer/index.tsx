@@ -13,7 +13,11 @@ const options: BodyScrollOptions = {
 };
 
 const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
-  const documentBody: Element = document.body;
+  let documentBody: Element;
+  if (typeof document !== "undefined") {
+    documentBody = document.body;
+  }
+
   const [panelStyle, setPanelStyle] = useState({});
 
   let animation: number | null = null;

@@ -24,7 +24,7 @@
   "scripts": {
     "dev": "lerna exec --no-sort -- rollup -w -c=../../rollup.config.js",
     "build": "cross-env NODE_ENV=production lerna exec --parallel -- rollup -c=../../rollup.config.js",
-    "test": "cross-env CI=1 lerna exec --parallel -- jest -u --colors",
+    "test": "cross-env CI=1 lerna exec --parallel -- jest -u --colors --verbose",
     "bootstrap": "lerna bootstrap",
     "coverage": "cross-env CI=1 jest --coverage -u --colors",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"

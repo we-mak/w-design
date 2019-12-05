@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`object helper tests randomProperty should get the radom value from object 1`] = `"dolor"`;
+exports[`object helper tests randomProperty should get the radom value from object 1`] = `"lorem"`;
 
-exports[`string helper tests setUid set an unique string 1`] = `"somename-1575500329916-1"`;
+exports[`string helper tests setUid set an unique string 1`] = `"somename-1575526926126-1"`;

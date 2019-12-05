@@ -5,5 +5,6 @@ module.exports = {
   ...base,
   name: pack.name,
   displayName: pack.name,
-  rootDir: "../.."
+  rootDir: "../..",
+  verbose: true
 };

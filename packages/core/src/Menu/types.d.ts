@@ -1,4 +1,4 @@
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface MenuProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];

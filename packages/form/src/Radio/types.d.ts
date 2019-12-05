@@ -3,7 +3,7 @@ import {
   InputControlProps,
   MouseEventProps,
   SyntheticEventProps
-} from "@w-design//core";
+} from "../../../types/typings";
 
 export interface RadioProps
   extends GlobProps,

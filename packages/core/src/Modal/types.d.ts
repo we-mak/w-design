@@ -1,5 +1,9 @@
 import { ReactChild, MouseEventHandler } from "react";
-import { GlobProps, SyntheticEventProps, MouseEventProps } from "../typings";
+import {
+  GlobProps,
+  SyntheticEventProps,
+  MouseEventProps
+} from "../../../types/typings";
 
 export interface ModalContainerStyleProps {
   size?: "large" | "medium" | "small";

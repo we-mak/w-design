@@ -1,4 +1,4 @@
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface AvatarGroupProps extends GlobProps {
   name?: string | React.ReactChild;

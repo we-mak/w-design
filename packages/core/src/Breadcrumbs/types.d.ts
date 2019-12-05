@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface BreadcrumbsItemProps extends GlobProps {
   isCurrentPage?: boolean;

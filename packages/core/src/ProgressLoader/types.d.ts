@@ -1,4 +1,4 @@
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface ProgressLoaderProps extends GlobProps, SizeProps {
   /* The completation in percent*/

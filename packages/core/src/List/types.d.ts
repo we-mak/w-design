@@ -1,6 +1,6 @@
 import { ReactNode, ReactElement } from "react";
 import { BorderProps, MarginProps, JustifyContentProps } from "styled-system";
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface ListProps extends GlobProps {
   header?: ReactNode;

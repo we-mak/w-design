@@ -1,5 +1,5 @@
 import { ReactChild } from "react";
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface CommentProps extends GlobProps {
   message: string;

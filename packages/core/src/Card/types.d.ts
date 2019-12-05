@@ -1,5 +1,5 @@
 import { PictureProps } from "../Picture";
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface CardProps extends GlobProps {
   children?: React.ReactChild | React.ReactChild[];

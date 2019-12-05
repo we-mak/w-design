@@ -1,0 +1,60 @@
+# Avatar Group
+An block of avatar group components
+
+## Example
+
+<div style={{ maxWidth: "600px" }}>
+  <AvatarGroup
+    avatar={<Avatar avatarUrl="https://api.adorable.io/avatars/80/vn" />}
+    name="Hello world"
+    description={
+      <div>
+        This is the description of the avatar, can be apply with string or
+        react child
+      </div>
+    }
+    actions={
+      <ButtonGroup>
+        <Button appearance="primary">Message</Button>
+        <Button>More</Button>
+      </ButtonGroup>
+    }
+  />
+
+  <AvatarGroup
+    avatar={
+      <Avatar avatarUrl="https://api.adorable.io/avatars/80/hello" />
+    }
+    name="Joe Doe"
+  />
+</div>
+
+```jsx
+import { AvatarGroup } from "@w-design/core";
+
+<AvatarGroup
+  avatarUrl="https://api.adorable.io/avatars/80/vn"
+  name="Hello world"
+  description={
+    <div>
+      This is the description of the avatar, can be apply with string or react child
+    </div>
+  }
+  actions={
+    <ButtonGroup>
+      <Button appearance="primary">Message</Button>
+      <Button>More</Button>
+    </ButtonGroup>
+  }
+/>
+```
+
+## API
+
+Inherit all props from `Avatar` and extends with
+
+| Props       | Type                     | default | description              |
+| ----------- | ------------------------ | ------- | ------------------------ |
+| name        | string                   |         | name of avatar           |
+| description | string, ReactChild       |         | avatar group description |
+| actions     | ReactChild, ReactChild[] |         | avatar group actions     |

@@ -12,6 +12,23 @@ Smooth scrolling when click to an anchor link in the page
 </AnchorScroll>
 
 
+```jsx
+<AnchorScroll destination="target" callback={() => console.log("fire callback")}>
+  <span role="img" aria-label="img" aria-labelledby="anchor link">
+    🚀
+  </span>
+  To target
+</AnchorScroll>
+
+// And the target at somewhere
+<div id="target" style={{margin: "2rem 0"}}>
+  <span role="img" aria-label="img" aria-labelledby="anchor target">
+    💰
+  </span>
+  Target
+</div>
+```
+
 ## Custom animation
 
 AnchorScroll intially only use liner animation but you can pick one of below to set whatever kind you want

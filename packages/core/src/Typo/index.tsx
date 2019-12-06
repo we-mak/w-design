@@ -42,4 +42,3 @@ const Typo = styled(WTypo)`
 Typo.displayName = "Typo";
 
 export default Typo;
-export { TypoProps };

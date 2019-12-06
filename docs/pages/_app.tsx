@@ -1,5 +1,14 @@
 import React from "react";
-import { AnchorScroll, Avatar, AvatarGroup } from "@w-design/core";
+import {
+  AnchorScroll,
+  Avatar,
+  AvatarGroup,
+  Box,
+  Breadcrumbs,
+  BreadcrumbsItem,
+  Button,
+  ButtonGroup
+} from "@w-design/core";
 import { MDXProvider } from "@mdx-js/react";
 import { CodeBlock } from "../components/CodeBlock";
 import { Layout } from "../components/Layout";
@@ -10,7 +19,12 @@ const components = {
   code: CodeBlock,
   AnchorScroll,
   Avatar,
-  AvatarGroup
+  AvatarGroup,
+  Box,
+  Breadcrumbs,
+  BreadcrumbsItem,
+  Button,
+  ButtonGroup
 };
 
 export default ({ Component, pageProps }) => (

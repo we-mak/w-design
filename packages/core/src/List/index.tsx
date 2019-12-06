@@ -20,7 +20,7 @@ import {
   ListFooter,
   EmptyContainer
 } from "./Styled";
-import { ListProps, ListItemProps, ListFooterProps } from "./types";
+import { ListProps } from "./types";
 
 const List: React.FC<ListProps> = ({
   header,
@@ -111,4 +111,4 @@ const List: React.FC<ListProps> = ({
 
 export default List;
 export { ListItem } from "./ListItem";
-export { ListFooter, ListProps, ListItemProps, ListFooterProps };
+export { ListFooter };

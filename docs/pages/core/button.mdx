@@ -1,0 +1,80 @@
+# Button
+
+Button is used to trigger an event
+
+## Example
+
+### Auto focus
+
+<Button autoFocus>Auto focus button</Button>
+
+```jsx
+<Button autoFocus>Default button</Button>
+```
+
+---
+
+### Button appearances
+
+<ButtonGroup>
+  <Button>Default button</Button>
+  <Button appearance="primary">Primary button</Button>
+  <Button appearance="danger">Danger button</Button>
+  <Button appearance="warning">Warning button</Button>
+  <Button appearance="success">Success button</Button>
+  <Button appearance="help">Help button</Button>
+</ButtonGroup>
+<Box m={2} />
+<ButtonGroup>
+  <Button appearance="subtle">Subtle button</Button>
+  <Button appearance="link">Link button</Button>
+  <Button appearance="clean">Clean button</Button>
+</ButtonGroup>
+
+```jsx
+<Button>Default button</Button>
+<Button appearance="primary">Primary button</Button>
+<Button appearance="danger">Danger button</Button>
+<Button appearance="warning">Warning button</Button>
+<Button appearance="success">Success button</Button>
+<Button appearance="help">Help button</Button>
+<Button appearance="subtle">Subtle button</Button>
+<Button appearance="link">Link button</Button>
+<Button appearance="clean">Clean button</Button>
+```
+
+## Button sizes
+
+<Button appearance="primary" fluid>
+  Fluid button
+</Button>
+
+---
+
+## API
+
+| Props        | Type                | default   | description             |
+| ------------ | ------------------- | --------- | ----------------------- |
+| buttonRef    | React.RefAttributes |           | button ref              |
+| appearance   | string              | "default" | applied style of button |
+| type         | string              | button    | button type attribute   |
+| size         | string              | "md"      | button size style       |
+| fluid        | boolean             |           | fluid style button      |
+| iconBefore   |                     |           |                         |
+| iconAfter    |                     |           |                         |
+| iconOnly     |                     |           |                         |
+| fluid        |                     |           |                         |
+| form         |                     |           |                         |
+| isLoading    |                     |           |                         |
+| isDisabled   |                     |           |                         |
+| isSelected   |                     |           |                         |
+| href         |                     |           |                         |
+| target       |                     |           |                         |
+| autoFocus    |                     |           |                         |
+| onClick      |                     |           |                         |
+| tabIndex     |                     |           |                         |
+| children     |                     |           |                         |
+| ariaHaspopup |                     |           |                         |
+| ariaExpanded |                     |           |                         |
+| ariaControls |                     |           |                         |
+| ariaLabel    |                     |           |                         |

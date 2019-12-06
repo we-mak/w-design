@@ -145,4 +145,3 @@ const Button = (props: ButtonProps) => {
 
 export default Button;
 export { ButtonGroup } from "./ButtonGroup";
-export { ButtonProps };

@@ -23,4 +23,3 @@ const PushMessage = ({ messages }: { messages: PushMessageProps[] }) => {
 };
 
 export default PushMessage;
-export { PushMessageProps };

@@ -126,4 +126,3 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
 };
 
 export default AnchorScroll;
-export { AnchorScrollProps };

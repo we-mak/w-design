@@ -19,4 +19,3 @@ const Spinner: FC<SpinnerProps> = ({ size = "md", spinnerColor }) => {
 };
 
 export default Spinner;
-export { SpinnerProps };

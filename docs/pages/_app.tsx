@@ -7,12 +7,20 @@ import {
   Breadcrumbs,
   BreadcrumbsItem,
   Button,
-  ButtonGroup
+  ButtonGroup,
+  Card,
+  CardContent,
+  CardMedia,
+  CardFooter,
+  Icon,
+  Flexbox
 } from "@w-design/core";
 import { MDXProvider } from "@mdx-js/react";
 import { CodeBlock } from "../components/CodeBlock";
 import { Layout } from "../components/Layout";
 import "../css/index.css";
+
+const { Column } = Flexbox;
 
 const components = {
   pre: (props: any) => <div {...props} />,
@@ -24,7 +32,14 @@ const components = {
   Breadcrumbs,
   BreadcrumbsItem,
   Button,
-  ButtonGroup
+  ButtonGroup,
+  Card,
+  CardContent,
+  CardMedia,
+  CardFooter,
+  Icon,
+  Flexbox,
+  Column
 };
 
 export default ({ Component, pageProps }) => (

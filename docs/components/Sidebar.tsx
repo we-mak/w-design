@@ -30,6 +30,10 @@ const core = [
     link: "/core/button"
   },
   {
+    title: "Card",
+    link: "/core/card"
+  },
+  {
     title: "List",
     link: "/core/list"
   },
@@ -88,9 +92,10 @@ export const Sidebar: React.FunctionComponent<any> = () => {
           </Link>
         </MenuItem>
 
+        <MenuHeading>UI Packages</MenuHeading>
         <SubMenu
           key="core"
-          title="Core"
+          title="Core components"
           icon={<Icon className="fas fa-atom" />}
         >
           {core.map(el => (
@@ -101,6 +106,14 @@ export const Sidebar: React.FunctionComponent<any> = () => {
             </MenuItem>
           ))}
         </SubMenu>
+
+        <MenuHeading>Hooks</MenuHeading>
+        <MenuItem key="/clickoutside">
+          <Link href="/clickoutside">
+            <a>useClickOutside</a>
+          </Link>
+        </MenuItem>
+        <MenuHeading>Utilities</MenuHeading>
       </Menu>
     </SidebarWrapper>
   );

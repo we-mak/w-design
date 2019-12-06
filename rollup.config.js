@@ -14,6 +14,7 @@ const PKG_JSON = require(path.join(PACKAGE_ROOT_PATH, "package.json"));
 
 const globals = {
   react: "React",
+  "react-dom": "ReactDOM",
   "styled-components": "styled"
 };
 

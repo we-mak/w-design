@@ -5,7 +5,7 @@ import { fadeInOut } from "@w-design/helpers";
 import { CardHeader } from "./CardHeader";
 import { CardMedia } from "./CardMedia";
 import { CardContent } from "./CardContent";
-import { CardProps } from "./types";
+import { CardProps, CardMediaProps, CardHeaderProps } from "./types";
 
 const getCardStyle = (props: CardProps) => {
   return css`
@@ -103,4 +103,12 @@ const CardFooter = styled.div`
 CardFooter.displayName = "CardFooter";
 
 export default Card;
-export { CardMedia, CardHeader, CardContent, CardFooter };
+export {
+  CardMedia,
+  CardHeader,
+  CardContent,
+  CardFooter,
+  CardProps,
+  CardMediaProps,
+  CardHeaderProps
+};

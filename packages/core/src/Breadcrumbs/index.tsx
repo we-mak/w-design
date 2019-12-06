@@ -16,4 +16,5 @@ const Breadcrumbs = ({ children, ...rest }: BreadcrumbsProps) => {
 };
 
 export default Breadcrumbs;
+export { BreadcrumbsProps };
 export { BreadcrumbsItem } from "./BreadcrumbsItem";

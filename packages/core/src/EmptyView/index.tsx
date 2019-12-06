@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "../Box";
 
-type EmptyView = {
+export type EmptyViewProps = {
   message?: string;
 };
 
@@ -19,7 +19,7 @@ const svg = (
   </svg>
 );
 
-const EmptyView = ({ message = "No data" }) => {
+const EmptyView: React.FC<EmptyViewProps> = ({ message = "No data" }) => {
   return (
     <Box pt="2rem" pb="2rem">
       {svg}

@@ -51,3 +51,4 @@ const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
 };
 
 export default memo(Drawer);
+export { DrawerProps };

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { SpinnerProps } from "./types";
 import { SpinnerWrapper, SpinnerCircular, SpinnerCircle } from "./Styled";
+import { SpinnerProps } from "./types";
 
 const Spinner: FC<SpinnerProps> = ({ size = "md", spinnerColor }) => {
   return (
@@ -19,3 +19,4 @@ const Spinner: FC<SpinnerProps> = ({ size = "md", spinnerColor }) => {
 };
 
 export default Spinner;
+export { SpinnerProps };

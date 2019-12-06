@@ -44,3 +44,4 @@ const SectionMessage: React.FC<SectionMessageProps> = ({
 };
 
 export default SectionMessage;
+export { SectionMessageProps };

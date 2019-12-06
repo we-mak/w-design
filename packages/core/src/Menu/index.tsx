@@ -2,7 +2,12 @@ import * as React from "react";
 import styled from "styled-components";
 import { MenuContext } from "./MenuContext";
 import { getMenuStyle } from "./Styled";
-import { MenuProps } from "./types";
+import {
+  MenuProps,
+  MenuItemProps,
+  SubMenuProps,
+  MenuContextProps
+} from "./types";
 // import to export
 import { MenuItem } from "./MenuItem";
 import { MenuHeading } from "./MenuHeading";
@@ -55,4 +60,12 @@ const Menu = (props: MenuProps) => {
 };
 
 export default Menu;
-export { MenuItem, SubMenu, MenuHeading };
+export {
+  MenuItem,
+  SubMenu,
+  MenuHeading,
+  MenuProps,
+  MenuItemProps,
+  SubMenuProps,
+  MenuContextProps
+};

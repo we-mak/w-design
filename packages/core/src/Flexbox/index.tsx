@@ -19,3 +19,4 @@ class Flexbox extends React.PureComponent<FlexProps> {
 }
 
 export default Flexbox;
+export { FlexProps };

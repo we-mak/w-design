@@ -2,7 +2,11 @@ export { default as AnchorScroll, AnchorScrollProps } from "./AnchorScroll";
 export { default as Avatar, AvatarProps } from "./Avatar";
 export { default as AvatarGroup } from "./AvatarGroup";
 export { default as Box, BoxProps } from "./Box";
-export { default as Breadcrumbs, BreadcrumbsProps } from "./Breadcrumbs";
+export {
+  default as Breadcrumbs,
+  BreadcrumbsItem,
+  BreadcrumbsProps
+} from "./Breadcrumbs";
 export { default as Button, ButtonGroup, ButtonProps } from "./Button";
 export {
   default as Card,

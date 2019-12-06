@@ -190,7 +190,6 @@ export function getButtonStyle(props: ButtonProps) {
     font-family: ${fonts["normal"]};
     width: ${fluid && `100%`};
     border-radius: ${radii[2]};
-
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};

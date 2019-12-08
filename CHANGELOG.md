@@ -14,9 +14,10 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-### <a name="0.40.0"></a>#[v0.40.0]()
+### <a name="0.41.0"></a>#[v0.41.0]()
 
-- ❌ Switch to monorepo
+- ✅ Switch to monorepo
+- ✅ Fixed https://github.com/we-mak/w-design/issues/54
 
 ---
 

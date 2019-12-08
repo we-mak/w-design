@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Provider, Container, Flexbox, Drawer } from "@w-design/core";
+import { Provider, Drawer, Container, Flexbox } from "@w-design/core";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 

@@ -5,216 +5,61 @@
 
 ---
 
-W-design is a React UI library toolkit build with `styled-components`, `styled-system`.
-It's focus on web application. Supports mostly modern browser and skips taking care of IE.
+# Introduction
 
-[![npm version](https://badge.fury.io/js/w-design.svg)](https://badge.fury.io/js/w-design)
+#### A React UI toolkit library is built with typescript
+
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
 
----
+Main focus of this libary is styling with css-in-js, keep it as small as posible.
+Feel free to use this library, or help us to improve it.
+
+## Features
+
+- Written with React hooks, Typescript
+- Styled with styled-components and styled-system
+- Suitable for web application
+- Supports modern web browsers. If you care about IE, don't use this library.
 
 ## Packages
 
-## Install
+---
 
-If use npm
-`npm install --save @w-design/<name-of-package> styled-components`
+Published libaries at `npm`
 
-Or yarn
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fcore.svg?label=%40w-design%2Fcore.svg)](https://www.npmjs.com/package/@w-design/core)
+  Core elements & components
 
-`yarn add @w-design/<name-of-package>`
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fform.svg?label=%40w-design%2Fform.svg)](https://www.npmjs.com/package/@w-design/form)
+  All needed form, input, box... components and hooks to handle form behaviour
 
-## Usage guide
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fmasonry.svg?label=%40w-design%2Fmasonry.svg)](https://www.npmjs.com/package/@w-design/masonry)
+  Masonry component layout with flex box layout
 
-To keep thing simple with theme, you must use `Provider` on the top..
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fupload.svg?label=%40w-design%2Fupload.svg)](https://www.npmjs.com/package/@w-design/upload)
+  Upload components with XHR request supports
 
-```js
-import { Provider, Container } from "w-design";
-ReactDOM.render(
-  <Provider>
-    <Container> Lorem ipsum </Container>
-  </Provider>,
-  mountNode
-);
-```
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fhooks.svg?label=%40w-design%2Fhooks.svg)](https://www.npmjs.com/package/@w-design/hooks)
+  React custom hooks
 
-Theme provider is based on [styled-components](https://www.styled-components.com/) and making theme with [styled-system](http://jxnblk.com/styled-system/)
-
-Provider provides theme for your layout, you can supply your theme by insert your theme object by `theme` props
-Default theme
-
-```js static
-defaultTheme = {
-  breakpoint: ["24em", "32em", "48em", "64em", "80em"],
-  fonts:
-    '-apple-system, BlinkMacSystemFont, Helvetica, "Helvetica Neue", system-ui, sans-serif',
-  fontSizes: [
-    "0.7rem",
-    "0.8rem",
-    "0.9rem",
-    "1rem",
-    "1.2rem",
-    "1.4rem",
-    "1.6rem",
-    "1.8rem",
-    "2rem"
-  ],
-  fontWeights = { normal: 400, strong: 500, bold: 700, xbold: 900 },
-  lineHeights = [1, 1.125, 1.25, 1.5],
-  letterSpacings = { normal: "normal", caps: "0.25em" },
-  radii = ["0rem", "0.1rem", "0.2rem", "0.3rem", "0.4rem"],
-  space = [0, 4, 8, 16, 32, 64, 128], // space is used for margin and padding scales
-  shadows = [
-    "none",
-    `0 .2rem .5rem ${hex2Rgba(colors.N50, 0.5)}`,
-    `inset 0 0 0 1px rgba(87, 85, 217, .2), 0 0 4px rgba(87, 85, 217, .2)`
-  ],
-  colors: {...} // see colors
-};
-```
-
-```js
-<Provider>
-  <h1>Default </h1>
-  <p>
-    Lorem ipsum
-    <span>
-      <a href="#">dolor </a>
-    </span>
-    sip amet
-  </p>
-</Provider>
-```
-
-```js
-<Provider
-  theme={{
-    fonts: "Roboto, Helvetica, sans-serif"
-  }}
->
-  <h1>Roboto</h1>
-  <p>
-    Lorem ipsum
-    <span>
-      <a href="#">dolor </a>
-    </span>
-    sip amet
-  </p>
-</Provider>
-```
-
-## Features list
-
-Cover basic components, widgets from 3rd parties libray
-
-| Layout            | Elements               | Components      | Hooks              |
-| ----------------- | ---------------------- | --------------- | ------------------ |
-| ✅ Container      | ✅ InputField          | ✅ AvatarGroup  | ✅ useClickOutside |
-| ✅ Flexbox        | ✅ Checkbox            | ✅ Navbar       | ✅ useField        |
-| ✅ DisplayElement | ✅ Label               | ✅ Menu         | ✅ useForm         |
-| ✅ ThemeProvider  | ✅ Picture             | ✅ Collapsible  |                    |
-| ✅ Masonry        | ✅ Spinner             | ✅ PushMessage  |                    |
-|                   | ❌ Chip                | ❌ Steps        |                    |
-|                   | ✅ Divider             | ✅ Modal        |                    |
-|                   | ✅ ProgressLoader      | ✅ Dropdown     |                    |
-|                   | ✅ Portal              | ✅ Drawer       |                    |
-|                   | ✅ Avatar              | ✅ AnchorScroll |                    |
-|                   | ❌ Toggle              | ❌ Tabs         |                    |
-|                   | ✅ TextArea            | ❌ Table        |                    |
-|                   | ✅ SectionMessage      | ✅ FormGroup    |                    |
-|                   | ✅ Typo                | ✅ Comment      |                    |
-|                   | ✅ Icon (Font awesome) | ✅ InputForm    |                    |
-|                   | ✅ Radio               | ❌ Pagination   |                    |
-|                   | ✅ Button              | ✅ Card         |                    |
-|                   | ✅ Image               | ✅ Upload       |                    |
-|                   | ✅ SectionMessage      | ✅ List         |                    |
-|                   | ❌ Tooltip             |                 |                    |
-|                   | ❌ Popover             |                 |                    |
-|                   | ✅ Breadcrumbs         |                 |                    |
-|                   | ✅ ImageRatio          |                 |                    |
-|                   | ✅ EmptyView           |                 |                    |
-|                   | ✅ Box                 |                 |                    |
-|                   | ✅ Badge               |                 |                    |
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fhelpers.svg?label=%40w-design%2Fhelpers.svg)](https://www.npmjs.com/package/@w-design/helpers)
+  Utility functions to help to resolve style, object, array, string...
 
 ## 🐞 Report
 
 ### For Issues
 
-Please open Issue to report bugs.
+Please open [Issue](https://github.com/we-mak/w-design/issues) to report bugs.
 
 ### Questions
 
 For how-to questions and other non-issues, please use StackOverflow instead of Github issues. Add tag 'w-design' for your question in StackOverflow.
 
-### Folders structure
+## Development
 
-```sh
-├── packages # Build packages
-│   └── **/*
-│
-├── src
-│   ├── @types/**/*.d.ts ## definite for dependencies package
-│   ├── common ## static default variables, utilitites
-│   └── components ## Core library component folder
-│
-│
-├── resources
-│   ├── GUI ## UI design system files
-│   └── img ## Image for docs
-│
-├── CHANGELOG.md ## Change history of every changes of each release.
-├── README.md ## Guide content
-├── tslint.json
-├── tsconfig.json
-├── jest.config.json
-├── rollup.config.js ## rollup config
-└── package.json ## npm packages config
-```
-
-### Development
-
-This package is built with dependencies: `styled-system`
-Props checking is under `TypeScript`
-
-Please check these packages before getting start to contribute.
-
-Local development is broken into two parts (ideally using two tabs).
-
-#### Package
-
-```sh
-yarn dev # runs rollup with watch flag
-```
-
-It runs rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
-
-Then init the yarn workspace link for the package by `yarn link` at package directory
-
-#### Docs page
-
-Docs page is using `next.js` that's linked to the local version of the package.
-
-Run `yarn link @w-design/<package-name>`
-Add to `package.json` as dependency
-
-```json
-{
-  ...
-  "dependencies": {
-  "@w-design/core": "link:.."
-  }
-}
-```
-
-### Publishing to NPM
-
-`yarn publish`
-
-This builds cjs and es versions of your module to dist/ and then publishes your module to npm.
-
-Make sure that any npm modules you want as peer dependencies are properly marked as peerDependencies in package.json. The rollup config will automatically recognize them as peers and not try to bundle them in your module.
+We are using [Lerna](https://lerna.js.org/) to manage monorepo packages, please check their document.
 
 ## License
 

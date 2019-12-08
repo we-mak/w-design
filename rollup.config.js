@@ -11,15 +11,13 @@ import pkg from "./package.json";
 
 const PACKAGE_ROOT_PATH = process.cwd();
 const PKG_JSON = require(path.join(PACKAGE_ROOT_PATH, "package.json"));
-// const PKG_INPUT = require(path.join(PACKAGE_ROOT_PATH, "pkInput.json"));
+// const PKG_ENTRY = require(path.join(PACKAGE_ROOT_PATH, "entry.json"));
 
 const globals = {
   react: "React",
   "react-dom": "ReactDOM",
   "styled-components": "styled"
 };
-
-const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
 export default {
   input: "src/index.ts",
@@ -33,12 +31,16 @@ export default {
       file: PKG_JSON.main,
       format: "cjs",
       globals
+      // dir: "lib/cjs",
+      // exports: "named"
     },
     {
       name: PKG_JSON.name,
       file: PKG_JSON.module,
       format: "es",
       globals
+      // dir: "lib/es",
+      // exports: "named"
     }
   ],
   plugins: [
@@ -48,9 +50,7 @@ export default {
     postcss({
       extensions: [".css"]
     }),
-    resolve({
-      extensions
-    }),
+    resolve(),
     typescript({
       tsconfig: "tsconfig.json",
       rollupCommonJSResolveHack: true,
@@ -61,8 +61,6 @@ export default {
       exclude: ["../../node_modules/**"],
       configFile: "../../babel.config.js"
     }),
-    commonjs({
-      include: "../../node_modules/**"
-    })
+    commonjs()
   ]
 };

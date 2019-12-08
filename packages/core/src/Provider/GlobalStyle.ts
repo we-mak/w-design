@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import { normalizeStyles } from "./normalize";
 
 export const GlobalStyle = createGlobalStyle`
+  ${normalizeStyles}
 
   h1,
   h2,

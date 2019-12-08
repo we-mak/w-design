@@ -11,9 +11,9 @@
   "author": "Son_dang <son.dang@doda100.com >",
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
-  "main": "lib/cjs/index.js",
-  "module": "lib/es/index.es.js",
-  "types": "lib/cjs/index.d.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -23,8 +23,7 @@
     "test": "__tests__"
   },
   "files": [
-    "lib/cjs/*",
-    "lib/es/*"
+    "lib"
   ],
   "repository": {
     "type": "git",

@@ -9,8 +9,7 @@ cache:
     - node_modules
 script:
   - yarn build
-  - yarn test
-  - yarn run coverage
+  - yarn coverage # included test
 # Send coverage data to Coveralls
 after_script: # Upload coverage reports
   - COVERALLS_REPO_TOKEN=$coveralls_repo_token yarn run coveralls

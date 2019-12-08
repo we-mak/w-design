@@ -46,6 +46,10 @@ const core = [
     link: "/core/collapsible"
   },
   {
+    title: "Comment",
+    link: "/core/comment"
+  },
+  {
     title: "Container",
     link: "/core/container"
   },

@@ -6,6 +6,14 @@ import { Menu, MenuItem, MenuHeading, SubMenu, Icon } from "@w-design/core";
 
 const core = [
   {
+    title: "Provider",
+    link: "/core/provider"
+  },
+  {
+    title: "Portal",
+    link: "/core/portal"
+  },
+  {
     title: "Anchor Scroll",
     link: "/core/anchor"
   },
@@ -34,12 +42,52 @@ const core = [
     link: "/core/card"
   },
   {
-    title: "List",
-    link: "/core/list"
+    title: "Collapsible",
+    link: "/core/collapsible"
+  },
+  {
+    title: "Container",
+    link: "/core/container"
+  },
+  {
+    title: "Custom tag",
+    link: "/core/customtag"
+  },
+  {
+    title: "Divider",
+    link: "/core/divider"
+  },
+  {
+    title: "Drawer",
+    link: "/core/drawer"
+  },
+  {
+    title: "Empty view",
+    link: "/core/emptyview"
+  },
+  {
+    title: "Flexbox",
+    link: "/core/flexbox"
   },
   {
     title: "Media",
     link: "/core/media"
+  },
+  {
+    title: "List",
+    link: "/core/list"
+  },
+  {
+    title: "Menu",
+    link: "/core/menu"
+  },
+  {
+    title: "Modal",
+    link: "/core/modal"
+  },
+  {
+    title: "Navbar",
+    link: "/core/navbar"
   },
   {
     title: "ProgressLoader",

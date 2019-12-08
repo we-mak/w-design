@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { GlobProps } from "@w-design/core";
+import { GlobProps } from "../../types/typings";
 
 // Type of button
 export type UploadType = "textName" | "avatar";

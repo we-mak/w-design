@@ -5,11 +5,28 @@ module.exports = {
     "@babel/preset-typescript"
   ],
   plugins: [
-    ["styled-components", { ssr: true, displayName: true, preprocess: false }]
+    [
+      "babel-plugin-styled-components",
+      { ssr: true, displayName: true, preprocess: false }
+    ]
   ],
   env: {
-    build: {
-      ignore: ["**/*.test.tsx", "**/*.test.ts", "__snapshots__", "__tests__"]
+    development: {
+      plugins: [
+        [
+          "babel-plugin-styled-components",
+          { ssr: true, displayName: true, preprocess: false }
+        ]
+      ]
+    },
+    production: {
+      ignore: ["**/*.test.tsx", "**/*.test.ts", "__snapshots__", "__tests__"],
+      plugins: [
+        [
+          "babel-plugin-styled-components",
+          { ssr: true, displayName: true, preprocess: false }
+        ]
+      ]
     }
   },
   ignore: ["node_modules"]

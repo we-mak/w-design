@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Navbar, DisplayElement } from "@w-design/core";
+import { Navbar, DisplayElement, Button } from "@w-design/core";
 
 const LogoType = styled.h3`
   margin: 0 !important;
@@ -12,12 +12,23 @@ const LogoType = styled.h3`
 
 const { Section } = Navbar;
 
-export const Header = () => {
+export const Header = ({
+  toggleMenu
+}: {
+  toggleMenu?: (e: React.SyntheticEvent<HTMLElement>) => void;
+}) => {
   return (
     <Navbar>
       <Section>
         <DisplayElement display={["block", "block", "block", "none"]}>
-          Mobile
+          <Button
+            onClick={toggleMenu}
+            iconBefore="fas fa-hamburger"
+            iconOnly
+            appearance="clean"
+            size="lg"
+            style={{ paddingRight: ".5rem" }}
+          ></Button>
         </DisplayElement>
         <a href="/" style={{ display: "flex", alignItems: "center" }}>
           <img

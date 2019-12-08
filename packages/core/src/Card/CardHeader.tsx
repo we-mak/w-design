@@ -20,6 +20,7 @@ const CardHeaderDescription = styled.div`
   color: ${props => props.theme.colors["N30"]};
   font-size: ${props => props.theme.fontSizes[0]};
 `;
+CardHeaderDescription.displayName = "CardHeaderDescription";
 
 export const CardHeader = ({
   title,

@@ -29,8 +29,9 @@ const StyledSpan = styled.span`
 StyledSpan.displayName = "StyledSpanButton";
 
 const ChildContainer = styled.div<{ isLoading: boolean }>`
-  align-self: center;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: nowrap;
   max-width: 100%;
   position: relative;
@@ -38,7 +39,6 @@ const ChildContainer = styled.div<{ isLoading: boolean }>`
   height: 100%;
   opacity: ${props => props.isLoading && `0`};
 `;
-
 ChildContainer.displayName = "ChildContainer";
 
 const SpinnerWrapper = styled.div`
@@ -144,5 +144,5 @@ const Button = (props: ButtonProps) => {
 };
 
 export default Button;
-export { ButtonGroup } from "./ButtonGroup";
 export { ButtonProps };
+export { ButtonGroup } from "./ButtonGroup";

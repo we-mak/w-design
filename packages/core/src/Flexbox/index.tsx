@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Column, ColumnProps } from "./Column";
+import { Column } from "./Column";
 import { Flex, FlexProps } from "./Flex";
 
 class Flexbox extends React.PureComponent<FlexProps> {
@@ -19,4 +19,4 @@ class Flexbox extends React.PureComponent<FlexProps> {
 }
 
 export default Flexbox;
-export { FlexProps, ColumnProps };
+export { FlexProps };

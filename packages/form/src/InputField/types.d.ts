@@ -4,7 +4,7 @@ import {
   SyntheticEventProps,
   KeyboardEventProps,
   InputControlProps
-} from "@w-design/core";
+} from "../../../types/typings";
 
 export interface InputFieldProps
   extends GlobProps,

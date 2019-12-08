@@ -1,4 +1,4 @@
-import { GlobProps, SizeProps } from "../typings";
+import { GlobProps, SizeProps } from "../../../types/typings";
 
 export interface DropdownProps extends GlobProps, SizeProps {
   title?: string;

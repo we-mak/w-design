@@ -17,8 +17,9 @@ const useClickOutside = (
   const handleClick: EventListener = event => {
     // Not clicked on this component nor its children.
     if (!ref.current || !ref.current.contains(event.target as Node)) {
-      callback(event);
+      return callback(event);
     }
+    return null;
   };
 
   React.useEffect(() => {

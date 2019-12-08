@@ -5,7 +5,7 @@ import {
   ActionProps,
   SyntheticEventProps,
   MouseEventProps
-} from "../typings";
+} from "../../../types/typings";
 
 export interface ButtonProps
   extends GlobProps,

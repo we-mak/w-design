@@ -1,4 +1,4 @@
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 import { WidthProps, HeightProps } from "styled-system";
 
 type srcSetProps = {

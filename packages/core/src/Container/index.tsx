@@ -17,7 +17,7 @@ import {
   MinWidthProps
 } from "styled-system";
 
-import { GlobProps } from "../typings";
+import { GlobProps } from "../../../types/typings";
 
 export interface ContainerProps
   extends GlobProps,

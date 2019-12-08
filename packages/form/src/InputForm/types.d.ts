@@ -1,4 +1,4 @@
-import { ActionProps } from "@w-design/core";
+import { ActionProps } from "../../../types/typings";
 import { InputFieldProps } from "../InputField/types";
 
 export interface InputFormProps extends InputFieldProps, ActionProps {

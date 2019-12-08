@@ -1,6 +1,6 @@
 {
   "name": "@w-design/core",
-  "version": "0.41.0-alpha.28+d990095",
+  "version": "0.41.0",
   "description": "w-design core components",
   "keywords": [
     "w-design",
@@ -12,8 +12,9 @@
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
   "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
   "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "sideEffects": false,
   "publishConfig": {
     "access": "public"
   },
@@ -36,8 +37,8 @@
   },
   "dependencies": {
     "@types/body-scroll-lock": "^2.6.1",
-    "@w-design/helpers": "^0.40.0",
-    "@w-design/hooks": "^0.40.0",
+    "@w-design/helpers": "^0.41.0",
+    "@w-design/hooks": "^0.41.0",
     "body-scroll-lock": "^2.6.4"
   },
   "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f"

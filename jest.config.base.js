@@ -28,6 +28,5 @@ module.exports = {
     ".js", // ignore built js files
     "<rootDir>/node_modules/",
     "<rootDir>/packages/*/node_modules/"
-  ],
-  verbose: true
+  ]
 };

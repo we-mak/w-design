@@ -1,3 +1,4 @@
+export {};
 declare namespace jest {
   interface Options {
     media?: string;

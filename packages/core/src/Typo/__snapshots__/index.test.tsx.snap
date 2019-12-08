@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Typo/> should render correctly 1`] = `
+<div>
+  <div
+    class="sc-AykKC fgftwt"
+  >
+    Hello
+  </div>
+  <h1
+    class="sc-AykKC gPCutE"
+  >
+    Hello
+  </h1>
+  <h2
+    class="sc-AykKC kXaoUa"
+  >
+    Hello
+  </h2>
+  <h3
+    class="sc-AykKC dPczVA"
+  >
+    Hello
+  </h3>
+  <h4
+    class="sc-AykKC qhRWM"
+  >
+    Hello
+  </h4>
+  <h5
+    class="sc-AykKC iKenVG"
+  >
+    Hello
+  </h5>
+  <h6
+    class="sc-AykKC fgftwt"
+  >
+    Hello
+  </h6>
+</div>
+`;
+
+exports[`<Typo/> should render div with H1 style 1`] = `
+<div>
+  <div
+    class="sc-AykKC fwdzsa"
+    mb="10"
+  >
+    Hello
+  </div>
+</div>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav/> should render correct icon styled 1`] = `
+<div>
+  <nav
+    class="sc-AykKE lfJzsT"
+  >
+    <section
+      class="sc-AykKC lmvdDq"
+    >
+      Center
+    </section>
+    <section
+      class="sc-AykKD ufcKc"
+    >
+      Section
+    </section>
+  </nav>
+</div>
+`;

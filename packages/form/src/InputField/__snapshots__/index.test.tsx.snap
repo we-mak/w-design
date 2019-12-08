@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvatarGroup/> should renders correctly 1`] = `
+<div>
+  <input
+    autocomplete="off"
+    class="sc-fzXfQT jvkGDu"
+    placeholder="Default input"
+    type="text"
+    value=""
+  />
+  <input
+    autocomplete="off"
+    class="sc-fzXfQT iRtmwF"
+    placeholder="Large input"
+    type="text"
+    value=""
+  />
+  <input
+    autocomplete="off"
+    class="sc-fzXfQT bJlPSq"
+    placeholder="Small input"
+    type="text"
+    value=""
+  />
+</div>
+`;

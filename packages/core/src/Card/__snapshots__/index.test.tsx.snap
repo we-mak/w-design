@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button/> should render with different appearance style 1`] = `
+<div>
+  <div
+    class="sc-AykKK hxOySw"
+  >
+    <div
+      class="sc-AykKD kOzLBB"
+    >
+      <h3
+        class="sc-AykKC iKenVG"
+      >
+        Test title
+      </h3>
+      <div
+        class="sc-AykKE fOJddD"
+      >
+        Lorem ipsum
+      </div>
+      Header
+    </div>
+    <div
+      class="sc-AykKH bxOaxr"
+    >
+      <picture>
+        <source
+          data-srcset="https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480441.jpg"
+          media="(max-width: 480px)"
+          srcset="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+        />
+        <source
+          data-srcset="https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480425.jpg"
+          media="(max-width: 680px)"
+          srcset="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+        />
+        <img
+          alt=""
+          class="sc-AykKF cElFvy sc-AykKI kbAmYH"
+          data-src="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
+          src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+        />
+      </picture>
+    </div>
+    <div
+      class="sc-AykKJ bCTlnw"
+    >
+      A safari is an overland journey, usually a trip by tourists in Africa. In the past, the trip was often a big-game hunt, but today, safaris are often to observe
+    </div>
+    <div
+      class="sc-fzXfLR JCXeo"
+    >
+      Footer
+    </div>
+  </div>
+  <div
+    class="sc-AykKK kycMSO"
+  >
+    <div
+      class="sc-fzXfLO ciWrxF"
+    >
+      <div
+        class="sc-fzXfLP gQtUNS"
+      />
+      <div
+        class="sc-fzXfLQ hKDtjo"
+      >
+        <h3 />
+        <ul>
+          <li />
+          <li />
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

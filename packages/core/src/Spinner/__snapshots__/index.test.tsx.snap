@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner/> should renders correctly 1`] = `
+<div>
+  <div
+    class="sc-AykKC fwVfkE"
+  >
+    <svg
+      class="sc-AykKD hGQySD"
+      viewBox="25 25 50 50"
+    >
+      <circle
+        class="sc-AykKE hFWLqm"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="20"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<Spinner/> should renders large size correctly 1`] = `
+<div>
+  <div
+    class="sc-AykKC cEUPgV"
+  >
+    <svg
+      class="sc-AykKD hGQySD"
+      viewBox="25 25 50 50"
+    >
+      <circle
+        class="sc-AykKE hFWLqm"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="20"
+      />
+    </svg>
+  </div>
+  <div
+    class="sc-AykKC fwVfkE"
+  >
+    <svg
+      class="sc-AykKD hGQySD"
+      viewBox="25 25 50 50"
+    >
+      <circle
+        class="sc-AykKE hFWLqm"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="20"
+      />
+    </svg>
+  </div>
+  <div
+    class="sc-AykKC eMGNbZ"
+  >
+    <svg
+      class="sc-AykKD hGQySD"
+      viewBox="25 25 50 50"
+    >
+      <circle
+        class="sc-AykKE hFWLqm"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="20"
+      />
+    </svg>
+  </div>
+</div>
+`;

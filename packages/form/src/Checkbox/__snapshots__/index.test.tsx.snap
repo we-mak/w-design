@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox/> should renders correctly 1`] = `
+<div>
+  <div
+    class="sc-fzXfQT dAHXSN"
+  >
+    <label
+      class="sc-fzXfQU ihmzWb"
+    >
+      <input
+        class="sc-fzXfQW eHFnWa"
+        data-testid="checkbox"
+        name="Checkbox"
+        type="checkbox"
+        value=""
+      />
+      <span
+        class="sc-fzXfQX icblZf"
+      >
+        <svg
+          focusable="false"
+          height="28"
+          role="presentation"
+          viewBox="0 0 24 24"
+          width="28"
+        >
+          <g
+            fill-rule="evenodd"
+          >
+            <rect
+              fill="currentColor"
+              height="12"
+              rx="2"
+              width="12"
+              x="6"
+              y="6"
+            />
+            <path
+              d="M9.707 11.293a1 1 0 1 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L11 12.586l-1.293-1.293z"
+              fill="inherit"
+            />
+          </g>
+        </svg>
+      </span>
+      <span
+        class="sc-fzXfQV kNyuhE"
+      >
+        Test checkbox
+      </span>
+    </label>
+  </div>
+</div>
+`;

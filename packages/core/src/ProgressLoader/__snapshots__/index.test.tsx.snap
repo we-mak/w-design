@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressLoader/> should renders correctly 1`] = `
+<div
+  class="sc-AykKD cVMlZV"
+>
+  <div
+    class="sc-AykKE jMzefX"
+  >
+    <div
+      class="sc-AykKF kZDhiU"
+    >
+      <div
+        class="sc-AykKG fJnhcn"
+      />
+    </div>
+    <span
+      class="sc-AykKH khKZjo"
+      title="0%"
+    >
+      0%
+    </span>
+  </div>
+</div>
+`;

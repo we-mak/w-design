@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionMessage/> should renders correctly 1`] = `
+<section
+  class="sc-AykKG byaGkZ"
+>
+  <div
+    class="sc-AykKD kmLDa"
+  >
+    <div
+      class="sc-AykKC kiPyWe"
+    >
+      <i
+        aria-hidden="true"
+        class="sc-AykKF gbYWnX fas fa-info-circle"
+      />
+    </div>
+    <div
+      class="sc-AykKC OPjhS"
+    >
+      <h3
+        class="sc-AykKE cNuJbz"
+      >
+        Info
+      </h3>
+      The quick brown fox jumps over the lazy dog
+    </div>
+  </div>
+</section>
+`;

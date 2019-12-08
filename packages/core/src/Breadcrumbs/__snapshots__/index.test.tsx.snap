@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs/> should render breadcrumbs correctly 1`] = `
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="sc-AykKC eNkhro"
+  >
+    <div
+      class="sc-AykKD dMYWOK"
+    >
+      1
+      <div
+        class="sc-AykKE jYYhPG"
+        role="presentation"
+      >
+        /
+      </div>
+    </div>
+    <div
+      class="sc-AykKD dMYWOK"
+    >
+      2
+      <div
+        class="sc-AykKE jYYhPG"
+        role="presentation"
+      >
+        /
+      </div>
+    </div>
+    <div
+      class="sc-AykKD dMYWOK"
+    >
+      Item 3
+    </div>
+  </nav>
+</div>
+`;

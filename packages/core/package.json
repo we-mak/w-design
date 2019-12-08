@@ -1,0 +1,45 @@
+{
+  "name": "@w-design/core",
+  "version": "0.41.0",
+  "description": "w-design core components",
+  "keywords": [
+    "w-design",
+    "react",
+    "core",
+    "components"
+  ],
+  "author": "Son_dang <son.dang@doda100.com >",
+  "homepage": "https://github.com/we-mak/w-design#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://viiiprock@github.com/we-mak/w-design.git"
+  },
+  "scripts": {
+    "test": "cross-env CI=1 jest test -u --colors"
+  },
+  "bugs": {
+    "url": "https://github.com/we-mak/w-design/issues"
+  },
+  "dependencies": {
+    "@types/body-scroll-lock": "^2.6.1",
+    "@w-design/helpers": "^0.41.0",
+    "@w-design/hooks": "^0.41.0",
+    "body-scroll-lock": "^2.6.4"
+  },
+  "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f"
+}

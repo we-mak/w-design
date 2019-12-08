@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnchorScroll should renders correctly 1`] = `
+<div>
+  <button
+    class="sc-AykKG bbRNay"
+    type="button"
+  >
+    <div
+      class="sc-AykKJ fBVMpK"
+    >
+      anchor
+    </div>
+  </button>
+  <div
+    id="target"
+  >
+    Target
+  </div>
+</div>
+`;

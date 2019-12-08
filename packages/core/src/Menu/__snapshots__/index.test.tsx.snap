@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvatarGroup/> should renders correctly 1`] = `
+<div>
+  <ul
+    class="sc-fzXfLS kxzdkG"
+    role="menu"
+  >
+    <li
+      class="sc-AykKF eRUCRq"
+      role="menuitem"
+    >
+      <span
+        class="sc-AykKE hymfMA"
+      >
+        <i
+          aria-hidden="true"
+          class="sc-AykKC evFTwk fas fa-user"
+        />
+      </span>
+      Item 1
+      <div
+        class="sc-AykKD jlmPkV"
+      >
+        <div>
+          info
+        </div>
+      </div>
+    </li>
+    <li
+      class="sc-AykKF gYaOrZ"
+      role="menuitem"
+    >
+      <span
+        class="sc-AykKE hymfMA"
+      >
+        <i
+          aria-hidden="true"
+          class="sc-AykKC evFTwk fas fa-user-astronaut"
+        />
+      </span>
+      Item 2
+    </li>
+    <li
+      class="sc-AykKF etdUmp"
+      role="menuitem"
+    >
+      <span
+        class="sc-AykKE hymfMA"
+      >
+        <i
+          aria-hidden="true"
+          class="sc-AykKC evFTwk fas fa-edit"
+        />
+      </span>
+      Item 3
+    </li>
+    <li
+      class="sc-AykKF gYaOrZ"
+      role="menuitem"
+    >
+      <span
+        class="sc-AykKE hymfMA"
+      >
+        <i
+          aria-hidden="true"
+          class="sc-AykKC evFTwk fas fa-paper-plane"
+        />
+      </span>
+      Item 4
+    </li>
+    <li
+      class="sc-AykKG gxHAww"
+    >
+      Menu heading
+    </li>
+    <li
+      class="sc-fzXfLR gOtmZs"
+    >
+      <div
+        class="sc-fzXfLO hJzSnE"
+      >
+        <span
+          class="sc-AykKE hymfMA"
+        >
+          <i
+            aria-hidden="true"
+            class="sc-AykKC evFTwk fas fa-cog"
+          />
+        </span>
+        Submenu title 1
+        <span
+          class="sc-AykKK dFUmMW"
+        >
+          <svg
+            focusable="false"
+            height="24"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </div>
+      <ul
+        class="sc-fzXfLP ckCHgf"
+        role="menu"
+      >
+        <li
+          class="sc-AykKF gYaOrZ"
+          role="menuitem"
+        >
+          Item 5
+        </li>
+        <li
+          class="sc-AykKF gYaOrZ"
+          role="menuitem"
+        >
+          Item 6
+        </li>
+        <li
+          class="sc-AykKF gYaOrZ"
+          role="menuitem"
+        >
+          Item 7
+        </li>
+      </ul>
+    </li>
+    <li
+      class="sc-fzXfLR gOtmZs"
+    >
+      <div
+        class="sc-fzXfLO hJzSnE"
+      >
+        <span
+          class="sc-AykKE hymfMA"
+        >
+          <i
+            aria-hidden="true"
+            class="sc-AykKC evFTwk fas fa-mail"
+          />
+        </span>
+        Submenu title 2
+        <span
+          class="sc-AykKK ctEQIz"
+        >
+          <svg
+            focusable="false"
+            height="24"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </div>
+      <ul
+        class="sc-fzXfLP HkZjO"
+        role="menu"
+      >
+        <li
+          class="sc-AykKF gYaOrZ"
+          role="menuitem"
+        >
+          Item 8
+        </li>
+        <li
+          class="sc-AykKF gYaOrZ"
+          role="menuitem"
+        >
+          Item 9
+        </li>
+        <li
+          class="sc-AykKF gYaOrZ"
+          role="menuitem"
+        >
+          Item 10
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;

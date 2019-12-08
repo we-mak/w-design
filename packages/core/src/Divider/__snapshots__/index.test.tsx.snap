@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Divider/> should render correct with divider style 1`] = `
+<div>
+  <div
+    class="sc-fzXfMB hsexDF"
+  />
+</div>
+`;

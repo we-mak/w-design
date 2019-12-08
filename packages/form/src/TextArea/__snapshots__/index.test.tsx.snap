@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextArea/> should render correct with TextArea style 1`] = `
+<div>
+  <div
+    class="sc-fzXfQU gIzRMJ"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+      TextArea
+    </label>
+    <textarea
+      autocomplete="off"
+      class="sc-fzXfQV dDkvmd"
+    />
+  </div>
+  <div
+    class="sc-fzXfQU gIzRMJ"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    />
+    <textarea
+      autocomplete="off"
+      class="sc-fzXfQV cMyUWe"
+    />
+  </div>
+  <div
+    class="sc-fzXfQU gIzRMJ"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    />
+    <textarea
+      autocomplete="off"
+      class="sc-fzXfQV dqrgxn"
+    />
+  </div>
+  <div
+    class="sc-fzXfQU gIzRMJ"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    />
+    <textarea
+      autocomplete="off"
+      class="sc-fzXfQV khLBja"
+    />
+  </div>
+  <div
+    class="sc-fzXfQU gIzRMJ"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    />
+    <textarea
+      autocomplete="off"
+      class="sc-fzXfQV khLBja"
+    />
+  </div>
+  <div
+    class="sc-fzXfQU gIzRMJ"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    />
+    <textarea
+      autocomplete="on"
+      class="sc-fzXfQV dDkvmd"
+    />
+  </div>
+</div>
+`;

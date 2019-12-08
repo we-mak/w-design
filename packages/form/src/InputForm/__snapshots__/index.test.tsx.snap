@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputForm/> should render correctly 1`] = `
+<div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+      label
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <i
+          aria-hidden="true"
+          class="sc-fzXfLT fEexBX icon-before fas fa-phone"
+        />
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU hleGtZ icon-before"
+          type="text"
+          value=""
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX fJBhzS"
+    >
+      hint
+    </small>
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU hleGtZ icon-after"
+          type="text"
+          value=""
+        />
+        <i
+          aria-hidden="true"
+          class="sc-fzXfLT fEexBX icon-after fas fa-phone"
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX fJBhzS"
+    />
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU hsFjiG"
+          type="text"
+          value=""
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX dktqfX"
+    />
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU hleGtZ"
+          type="text"
+          value=""
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX fJBhzS"
+    />
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU hleGtZ"
+          disabled=""
+          type="text"
+          value=""
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX fJBhzS"
+    />
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <sup
+        aria-hidden="true"
+        class="sc-fzXfQY cWzzKu"
+      >
+        *
+      </sup>
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU hleGtZ"
+          required=""
+          type="text"
+          value=""
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX fJBhzS"
+    />
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU euuea"
+          type="text"
+          value=""
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX gwLMok"
+    />
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU CGwRP"
+          type="text"
+          value=""
+        />
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX eKZFQr"
+    />
+  </div>
+  <div
+    class="sc-fzXfQV iFLFou"
+  >
+    <label
+      class="sc-fzXfQT cwWujf"
+    >
+       
+      <span
+        class="sc-fzXfQW htzQXe"
+      >
+        <input
+          autocomplete="off"
+          class="sc-fzXfQU hleGtZ"
+          type="text"
+          value=""
+        />
+        <span
+          class="sc-fzXfQZ eFNNCj"
+        >
+          <div
+            class="sc-fzXfLU emfNQl"
+          >
+            <svg
+              class="sc-fzXfLV htslQH"
+              viewBox="25 25 50 50"
+            >
+              <circle
+                class="sc-fzXfLW cyBfbK"
+                cx="50"
+                cy="50"
+                fill="none"
+                r="20"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+    </label>
+    <small
+      class="sc-fzXfQX fJBhzS"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,110 @@
+# Card
+
+A content container
+
+## Example
+
+<Flexbox>
+  <Column width={[1, 1 / 2, 1 / 3]}>
+    <Card>
+      <CardMedia
+        imageUrl="https://source.unsplash.com/random?food"
+        srcSets={[
+          {
+            media: "480",
+            src:
+              "https://source.unsplash.com/random?food"
+          },
+          {
+            media: "680",
+            src:
+              "https://source.unsplash.com/random?food"
+          }
+        ]}
+        alt=""
+      />
+      <CardHeader title="Beautiful salad" description="24/12/2019" />
+      <CardContent>
+        This strawberry spinach salad is a blend of baby spinach leaves,
+        fresh strawberries, red onion, almonds, feta cheese and avocado!
+      </CardContent>
+    </Card>
+  </Column>
+
+  <Column width={[1, 1 / 2, 1 / 3]}>
+    <Card raised>
+      <CardHeader>
+        <AvatarGroup
+          size="sm"
+          avatar={<Avatar size="sm" avatarUrl="https://api.adorable.io/avatars/80/tr" />}
+          name="Hello world"
+          description="24/12/2019"
+          actions={
+            <Button
+              appearance="clean"
+              iconBefore="fas fa-ellipsis-h"
+              iconOnly
+            />
+          }
+        />
+      </CardHeader>
+      <CardMedia
+        imageUrl="https://source.unsplash.com/random?portrait"
+        alt=""
+      />
+      <CardContent>
+        A safari is an overland journey, usually a trip by tourists in
+        Africa. In the past, the trip was often a big-game hunt, but today,
+        safaris are often to observe
+      </CardContent>
+      <CardFooter>
+        <ButtonGroup>
+          <Button appearance="primary">Primary action</Button>
+          <Button>Secodary action</Button>
+        </ButtonGroup>
+      </CardFooter>
+    </Card>
+  </Column>
+
+  <Column width={[1, 1 / 2, 1 / 3]}>
+    <Card isLoading>
+      <CardHeader>
+        <AvatarGroup
+          size="sm"
+          avatar={<Avatar size="sm" avatarUrl="https://api.adorable.io/avatars/80/tr" />}
+          name="Hello world"
+          description="24/12/2019"
+          actions={
+            <Button
+              appearance="clean"
+              iconBefore="fas fa-ellipsis-h"
+              iconOnly
+            />
+          }
+        />
+      </CardHeader>
+      <CardMedia
+        imageUrl="https://source.unsplash.com/random?food"
+        alt=""
+      />
+      <CardContent>
+        A safari is an overland journey, usually a trip by tourists in
+        Africa. In the past, the trip was often a big-game hunt, but today,
+        safaris are often to observe
+      </CardContent>
+      <CardFooter>
+        <ButtonGroup>
+          <Button appearance="primary">Primary action</Button>
+          <Button>Secodary action</Button>
+        </ButtonGroup>
+      </CardFooter>
+    </Card>
+  </Column>
+
+</Flexbox>
+
+## API
+
+| Props | type | default | description |
+| ----- | ---- | ------- | ----------- |
+|       |      |         |             |

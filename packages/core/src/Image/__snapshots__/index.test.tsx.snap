@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image/> should render correct image 1`] = `
+<div>
+  <img
+    alt="Test"
+    class="sc-AykKG jOTVdb"
+    data-src="https://api.adorable.io/avatars/240/thunder"
+    src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+  />
+</div>
+`;

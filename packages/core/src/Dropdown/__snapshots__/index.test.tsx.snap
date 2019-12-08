@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown/> should renders correctly 1`] = `
+<div>
+  <div
+    class="sc-fzXfLS lpcpDL"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="sc-AykKG fPUkuM"
+      type="button"
+    >
+      <div
+        class="sc-AykKJ fBVMpK"
+      >
+        <span
+          class="sc-fzXfLR lbhTAk"
+        >
+          Dropdown
+          <span
+            class="sc-fzXfLQ kIjcsx"
+          >
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+    </button>
+    <div
+      class="sc-fzXfLT eyXmnZ"
+    >
+      <ul>
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+        <li>
+          Item 4
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="sc-fzXfLS lpcpDL"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="sc-AykKG fPUkuM"
+      type="button"
+    >
+      <div
+        class="sc-AykKJ fBVMpK"
+      >
+        <span
+          class="sc-fzXfLR lbhTAk"
+        >
+          bottomCenter
+          <span
+            class="sc-fzXfLQ kIjcsx"
+          >
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+    </button>
+    <div
+      class="sc-fzXfLT eyXmnZ"
+    />
+  </div>
+  <div
+    class="sc-fzXfLS lpcpDL"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="sc-AykKG fPUkuM"
+      type="button"
+    >
+      <div
+        class="sc-AykKJ fBVMpK"
+      >
+        <span
+          class="sc-fzXfLR lbhTAk"
+        >
+          topLeft
+          <span
+            class="sc-fzXfLQ kIjcsx"
+          >
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+    </button>
+    <div
+      class="sc-fzXfLT eyXmnZ"
+    />
+  </div>
+  <div
+    class="sc-fzXfLS lpcpDL"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="sc-AykKG fPUkuM"
+      type="button"
+    >
+      <div
+        class="sc-AykKJ fBVMpK"
+      >
+        <span
+          class="sc-fzXfLR lbhTAk"
+        >
+          topCenter
+          <span
+            class="sc-fzXfLQ kIjcsx"
+          >
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+    </button>
+    <div
+      class="sc-fzXfLT eyXmnZ"
+    />
+  </div>
+  <div
+    class="sc-fzXfLS lpcpDL"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="sc-AykKG fPUkuM"
+      type="button"
+    >
+      <div
+        class="sc-AykKJ fBVMpK"
+      >
+        <span
+          class="sc-fzXfLR lbhTAk"
+        >
+          topRight
+          <span
+            class="sc-fzXfLQ kIjcsx"
+          >
+            <svg
+              focusable="false"
+              height="22"
+              role="presentation"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M6.744 8.744a1.053 1.053 0 0 0 0 1.49l4.547 4.557a1 1 0 0 0 1.416 0l4.55-4.558a1.051 1.051 0 1 0-1.488-1.488l-3.77 3.776-3.768-3.776a1.051 1.051 0 0 0-1.487 0z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </span>
+      </div>
+    </button>
+    <div
+      class="sc-fzXfLT eyXmnZ"
+    />
+  </div>
+</div>
+`;

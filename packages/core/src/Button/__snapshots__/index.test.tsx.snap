@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button/> should render with different appearance style 1`] = `
+<div>
+  <div
+    class="sc-fzXfMz eRgZjZ"
+  >
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX bsdLgz"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX dFClWr"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          <i
+            aria-hidden="true"
+            class="sc-fzXfLT fEexBX icon-before fas fa-phone"
+          />
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX hyhsmV"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          Hello
+          <i
+            aria-hidden="true"
+            class="sc-fzXfLT fEexBX icon-after fas fa-phone"
+          />
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX bZjwoA"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          <i
+            aria-hidden="true"
+            class="sc-fzXfLT fEexBX icon-before fas fa-phone"
+          />
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX ixBvQR"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX eAxAIz"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX eoZCXK"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX PMJgB"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-fzXfMA jbxAiJ"
+    >
+      <button
+        class="sc-fzXfLX dVJFUs"
+        type="button"
+      >
+        <div
+          class="sc-fzXfMx kZqzqj"
+        >
+          Hello
+        </div>
+      </button>
+    </div>
+  </div>
+  <a
+    class="sc-fzXfMv kksIfF"
+    href="/"
+    type="button"
+  >
+    <div
+      class="sc-fzXfMx kZqzqj"
+    />
+  </a>
+  <span
+    class="sc-fzXfMw eDGqaH"
+    disabled=""
+    href="/"
+    type="button"
+  >
+    <div
+      class="sc-fzXfMx kZqzqj"
+    />
+  </span>
+  <button
+    class="sc-fzXfLX bbdQJi"
+    type="button"
+  >
+    <div
+      class="sc-fzXfMx kZqzqj"
+    />
+  </button>
+  <button
+    class="sc-fzXfLX bsdLgz"
+    type="button"
+  >
+    <div
+      class="sc-fzXfMy fWycis"
+    >
+      <div
+        class="sc-fzXfLU emfNQl"
+      >
+        <svg
+          class="sc-fzXfLV htslQH"
+          viewBox="25 25 50 50"
+        >
+          <circle
+            class="sc-fzXfLW cyBfbK"
+            cx="50"
+            cy="50"
+            fill="none"
+            r="20"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="sc-fzXfMx bdVFKP"
+    />
+  </button>
+</div>
+`;

@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
     "declaration": true,
-    "declarationDir": "dist",
-    "module": "esnext",
     "target": "es5",
+    "module": "esnext",
     "lib": ["es5", "es6", "es7", "dom", "esnext.asynciterable"],
     "jsx": "react",
     "moduleResolution": "node",
@@ -22,8 +20,13 @@
     "strict": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@w-design/*": ["./packages/*/src"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "example", "rollup.config.js"]
+  "include": ["packages/**/*"],
+  "exclude": ["node_modules", "rollup.config.js"],
+  "files": ["./index.d.ts"]
 }

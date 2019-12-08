@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List/> should render correctly 1`] = `
+<div
+  class="sc-AykKI hTqEPx"
+>
+  <h3
+    class="sc-AykKE cNiiXx"
+    mb="0"
+    mt="0.4rem"
+  >
+    List header
+  </h3>
+  <div
+    class="sc-AykKD jFihhE"
+  />
+  <div
+    class="sc-AykKJ kjwLwN"
+  >
+    <ul
+      class="sc-fzXfLO fjKZof"
+    >
+      <li
+        class="sc-fzXfLP dkOwhO"
+      >
+        <div
+          class="sc-fzXfLQ jzdaBm"
+        >
+          <div
+            class="sc-fzXfLT jsoGIn"
+          >
+            <div
+              class="sc-fzXfLX iGFXJu"
+            >
+              <img
+                class="sc-fzXfLW kMNITt"
+                data-src="https://source.unsplash.com/random"
+                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+              />
+            </div>
+          </div>
+          <div
+            class="sc-fzXfLR hvpWUh"
+          >
+            <h4
+              class="sc-AykKE iwIAuj"
+              font-weight="600"
+              mb="0"
+            >
+              Test
+            </h4>
+            <div>
+              W-design is give you an option to provide solution to make great UI for you web application
+            </div>
+          </div>
+        </div>
+        this is the child content
+        <div
+          class="sc-fzXfLS bRewkX"
+        />
+      </li>
+      <li
+        class="sc-fzXfLP dkOwhO"
+      >
+        <div
+          class="sc-fzXfLQ jzdaBm"
+        >
+          <div
+            class="sc-fzXfLT jsoGIn"
+          >
+            <div
+              class="sc-fzXfLX iGFXJu"
+            >
+              <img
+                class="sc-fzXfLW kMNITt"
+                data-src="https://source.unsplash.com/random"
+                src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+              />
+            </div>
+          </div>
+          <div
+            class="sc-fzXfLR hvpWUh"
+          >
+            <h4
+              class="sc-AykKE iwIAuj"
+              font-weight="600"
+              mb="0"
+            >
+              Test
+            </h4>
+            <div>
+              W-design is give you an option to provide solution to make great UI for you web application
+            </div>
+          </div>
+        </div>
+        this is the child content
+        <div
+          class="sc-fzXfLS bRewkX"
+        />
+      </li>
+    </ul>
+    <div
+      class="sc-fzXfLU esNUdH"
+    >
+      List Footer
+    </div>
+  </div>
+</div>
+`;

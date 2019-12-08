@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment/> should renders correctly 1`] = `
+<div>
+  <div
+    class="sc-fzXfLS fBgdEZ"
+  >
+    <div
+      class="sc-AykKI jOZHmx"
+    >
+      <div
+        class="sc-AykKJ blkNIl"
+      >
+        <figure
+          class="sc-AykKE fYeJqq"
+        >
+          <span
+            class="sc-AykKF jSGGQp"
+          >
+            Wm
+          </span>
+          <img
+            alt=""
+            class="sc-AykKC dDedwH sc-AykKG goprXt"
+            data-src="https://source.unsplash.com/random"
+            src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+          />
+        </figure>
+      </div>
+      <div
+        class="sc-AykKK fDpRoZ"
+      >
+        
+        <div
+          class="sc-fzXfLP ifyiMT"
+        >
+          <time />
+          <div>
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

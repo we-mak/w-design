@@ -37,9 +37,11 @@
   },
   "dependencies": {
     "@types/body-scroll-lock": "^2.6.1",
+    "@types/styled-system": "^5.1.4",
     "@w-design/helpers": "^0.41.0",
     "@w-design/hooks": "^0.41.0",
-    "body-scroll-lock": "^2.6.4"
+    "body-scroll-lock": "^2.6.4",
+    "styled-system": "^5.1.4"
   },
   "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f"
 }

@@ -34,7 +34,10 @@
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@w-design/core": "^0.41.0"
+  },
+  "devDependencies": {
     "@w-design/core": "^0.41.0"
   },
   "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f"

@@ -21,7 +21,6 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "experimentalDecorators": true,
-    "baseUrl": ".",
     "paths": {
       "@w-design/*": ["./packages/*/src"]
     }

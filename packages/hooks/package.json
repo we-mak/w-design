@@ -13,6 +13,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "module": "lib/index.es.js",
+  "sideEffects": false,
   "publishConfig": {
     "access": "public"
   },

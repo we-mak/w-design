@@ -13,6 +13,7 @@
   "main": "lib/cjs/index.js",
   "typings": "lib/cjs/index.d.ts",
   "module": "lib/es/index.js",
+  "sideEffects": false,
   "files": [
     "lib/es",
     "lib/cjs"

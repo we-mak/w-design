@@ -1,11 +1,11 @@
 import * as React from "react";
-import { createPortal } from "react-dom";
+import * as ReactDOM from "react-dom";
 
 export interface PortalProps extends React.ReactElement<any> {
   children?: React.ReactNode;
 }
 
-const Portal: any = ({ children }: PortalProps) => {
+const Portal: React.FC<PortalProps> = ({ children }) => {
   const Root = document.body;
   let target: HTMLElement = document.createElement("div");
 
@@ -16,7 +16,7 @@ const Portal: any = ({ children }: PortalProps) => {
     };
   }, [target]);
 
-  return createPortal(children, target);
+  return ReactDOM.createPortal(children, target);
 };
 
 export default Portal;

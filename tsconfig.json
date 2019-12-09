@@ -26,6 +26,6 @@
     }
   },
   "include": ["packages/**/*"],
-  "exclude": ["node_modules", "rollup.config.js"],
+  "exclude": ["node_modules", "rollup.config.js", "setupTests.js"],
   "files": ["./index.d.ts"]
 }

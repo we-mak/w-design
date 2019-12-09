@@ -10,7 +10,7 @@ import pkg from "./package.json";
 
 const PACKAGE_ROOT_PATH = process.cwd();
 const PKG_JSON = require(path.join(PACKAGE_ROOT_PATH, "package.json"));
-// const PKG_ENTRY = require(path.join(PACKAGE_ROOT_PATH, "entry.json"));
+const PKG_ENTRY = require(path.join(PACKAGE_ROOT_PATH, "entry.json"));
 
 const globals = {
   react: "React",
@@ -19,7 +19,7 @@ const globals = {
 };
 
 export default {
-  input: "src/index.ts",
+  input: PKG_ENTRY,
   external: [
     ...Object.keys(pkg.peerDependencies || {}),
     ...Object.keys(PKG_JSON.dependencies || {})
@@ -27,19 +27,19 @@ export default {
   output: [
     {
       name: PKG_JSON.name,
-      file: PKG_JSON.main,
+      // file: PKG_JSON.main,
       format: "cjs",
-      globals
-      // dir: "lib/cjs",
-      // exports: "named"
+      globals,
+      dir: "lib/cjs",
+      exports: "named"
     },
     {
       name: PKG_JSON.name,
-      file: PKG_JSON.module,
+      // file: PKG_JSON.module,
       format: "es",
-      globals
-      // dir: "lib/es",
-      // exports: "named"
+      globals,
+      dir: "lib/es",
+      exports: "named"
     }
   ],
   plugins: [

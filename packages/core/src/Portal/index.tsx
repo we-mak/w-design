@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createPortal } from "react-dom";
 
 export interface PortalProps extends React.ReactElement<any> {
   children?: React.ReactNode;
@@ -16,7 +16,7 @@ const Portal: any = ({ children }: PortalProps) => {
     };
   }, [target]);
 
-  return ReactDOM.createPortal(children, target);
+  return createPortal(children, target);
 };
 
 export default Portal;

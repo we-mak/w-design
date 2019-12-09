@@ -30,7 +30,6 @@
     "coverage": "cross-env CI=1 jest --coverage -u --colors",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
-  "dependencies": {},
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

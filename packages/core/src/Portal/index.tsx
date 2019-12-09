@@ -5,7 +5,7 @@ export interface PortalProps extends React.ReactElement<any> {
   children?: React.ReactNode;
 }
 
-const Portal: React.FC<PortalProps> = ({ children }) => {
+const Portal: any = ({ children }: PortalProps) => {
   const Root = document.body;
   let target: HTMLElement = document.createElement("div");
 

@@ -10,7 +10,7 @@ import { cleanup, render, fireEvent } from "@testing-library/react";
 import { Provider, Button } from "@w-design/core";
 import useField from "./useField";
 import useForm from "./useForm";
-import { InputForm } from "..";
+import InputForm from "../InputForm";
 
 afterEach(cleanup);
 

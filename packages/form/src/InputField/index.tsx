@@ -5,7 +5,35 @@
 import * as React from "react";
 import styled from "styled-components";
 import { getInputStyle } from "./getInputStyle";
-import { InputFieldProps } from "./types";
+import {
+  GlobProps,
+  SizeProps,
+  SyntheticEventProps,
+  KeyboardEventProps,
+  InputControlProps
+} from "../../../types/typings";
+
+export interface InputFieldProps
+  extends GlobProps,
+    SizeProps,
+    SyntheticEventProps,
+    KeyboardEventProps,
+    InputControlProps {
+  name?: string;
+  type?: string;
+  /* auto-complete attribute for input */
+  autoComplete?: string;
+  appearance?: "standard" | "none";
+  isRequired?: boolean;
+  isError?: boolean;
+  isValid?: boolean;
+  isWarning?: boolean;
+  isFocus?: boolean;
+  isDisabled?: boolean;
+  tabIndex?: number;
+  /** input ref*/
+  inputRef?: (ref: HTMLInputElement) => {};
+}
 
 const StyledInput = styled.input<any>`
   ${getInputStyle};

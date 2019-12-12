@@ -1,22 +1,21 @@
 import * as React from "react";
 import { Column } from "./Column";
-import { Flex, FlexProps } from "./Flex";
+import * as FlexElement from "./Flex";
 
-class Flexbox extends React.PureComponent<FlexProps> {
+class Flexbox extends React.PureComponent<FlexElement.FlexProps> {
   static Column = Column;
 
   render() {
     const { children, ...rest } = this.props;
 
     return (
-      <Flex {...rest}>
+      <FlexElement.Flex {...rest}>
         {React.Children.map(children, child =>
           React.cloneElement(child as React.ReactElement<HTMLElement>)
         )}
-      </Flex>
+      </FlexElement.Flex>
     );
   }
 }
 
 export default Flexbox;
-export { FlexProps };

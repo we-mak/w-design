@@ -1,7 +1,30 @@
 import * as React from "react";
 import styled from "styled-components";
 import { RadioIcon } from "./RadioIcon";
-import { RadioProps } from "./types";
+import {
+  GlobProps,
+  InputControlProps,
+  MouseEventProps,
+  SyntheticEventProps
+} from "../../../types/typings";
+
+export interface RadioProps
+  extends GlobProps,
+    InputControlProps,
+    MouseEventProps,
+    SyntheticEventProps {
+  radioRef?: React.RefObject<HTMLInputElement>;
+  name?: string;
+  defaultChecked?: boolean;
+  isChecked?: boolean;
+  isDisabled?: boolean;
+  isRequired?: boolean;
+  ariaRequired?: boolean;
+  isIndeterminate?: boolean;
+  label?: string;
+  value?: string;
+  defaultValue?: string;
+}
 
 const Label = styled.label<RadioProps>`
   display: flex;
@@ -59,7 +82,13 @@ export const Radio = ({
         {...rest}
       />
       <RadioIcon isChecked={isChecked}>
-        <svg width="28" height="28" viewBox="0 0 24 24" focusable="false" role="presentation">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          focusable="false"
+          role="presentation"
+        >
           <g fillRule="evenodd">
             <circle fill="currentColor" cx="12" cy="12" r="7" />
             <circle fill="inherit" cx="12" cy="12" r="3" />

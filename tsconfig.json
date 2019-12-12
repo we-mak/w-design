@@ -19,13 +19,24 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "resolveJsonModule": true,
-    "noEmit": true,
     "experimentalDecorators": true,
+    "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
-      "@w-design/*": ["./packages/*/src"]
+      "@w-design/helpers": ["./packages/helpers/src"],
+      "@w-design/helpers/*": ["./packages/helpers/src/*"],
+      "@w-design/hooks": ["./packages/hooks/src"],
+      "@w-design/hooks/*": ["./packages/hooks/src/*"],
+      "@w-design/core": ["./packages/core/src"],
+      "@w-design/core/*": ["./packages/core/src/*"],
+      "@w-design/form": ["./packages/form/src"],
+      "@w-design/form/*": ["./packages/form/src/*"],
+      "@w-design/masonry": ["./packages/masonry/src"],
+      "@w-design/masonry/*": ["./packages/masonry/src/*"],
+      "@w-design/upload": ["./packages/upload/src"],
+      "@w-design/upload/*": ["./packages/upload/src/*"]
     }
   },
-  "include": ["packages/**/*"],
   "exclude": ["node_modules", "rollup.config.js", "setupTests.js"],
   "files": ["./index.d.ts"]
 }

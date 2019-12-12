@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Icon from "../Icon";
 import { MessagePanel } from "./Styled";
-import { PushMessageProps } from "./types";
+import { PushMessageProps } from "./index";
 
 export const Message = ({
   value,

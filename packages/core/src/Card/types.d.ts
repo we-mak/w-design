@@ -1,4 +1,4 @@
-import { PictureProps } from "../Picture";
+import { PictureProps } from "../Picture/types";
 import { GlobProps } from "../../../types/typings";
 
 export interface CardProps extends GlobProps {

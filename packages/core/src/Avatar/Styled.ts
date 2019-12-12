@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { space } from "styled-system";
-import { AvatarProps } from "./types";
+import { AvatarProps } from "./index";
 import Image from "../Image";
 
 const getSize = (props: AvatarProps) => {

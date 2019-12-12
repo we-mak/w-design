@@ -9,7 +9,9 @@
  */
 
 import React, { FC, useState, memo } from "react";
-import { PushMessage, PushMessageProps } from "@w-design/core";
+import { PushMessage } from "@w-design/core";
+import { PushMessageProps } from "@w-design/core/lib/types/PushMessage";
+
 import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState } from "./utils";

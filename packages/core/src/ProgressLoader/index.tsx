@@ -54,4 +54,3 @@ const ProgressLoader: React.FC<ProgressLoaderProps> = ({
 };
 
 export default React.memo(ProgressLoader);
-export { ProgressLoaderProps };

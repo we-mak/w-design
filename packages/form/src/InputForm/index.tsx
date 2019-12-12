@@ -6,7 +6,6 @@ import * as React from "react";
 import { Spinner, Icon } from "@w-design/core";
 import Label from "../Label";
 import InputField from "../InputField";
-import { InputFormProps } from "./types";
 import {
   FieldGroup,
   TextHint,
@@ -14,6 +13,16 @@ import {
   SpinnerWrap,
   InputContainer
 } from "./Styled";
+import { ActionProps } from "../../../types/typings";
+import { InputFieldProps } from "../InputField";
+
+export interface InputFormProps extends InputFieldProps, ActionProps {
+  label?: string;
+  isError?: boolean;
+  isWarning?: boolean;
+  isSuccess?: boolean;
+  hintMessage?: string;
+}
 
 const InputForm: React.FunctionComponent<InputFormProps> = props => {
   const {
@@ -49,6 +58,7 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
             isValid={isSuccess}
             {...rest}
           />
+
           {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
           {isLoading && (
             <SpinnerWrap>

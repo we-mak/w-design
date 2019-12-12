@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 import { hex2Rgba, getFontSize, getElementSize } from "@w-design/helpers";
-import { InputFieldProps } from "./types";
+import { InputFieldProps } from "./index";
 
 export const getInputStyle = (props: InputFieldProps) => {
   const {

@@ -2,9 +2,26 @@
  * AnchorScroll
  * Smooth scrolling when click at an anchor link
  */
-import React, { FC, useState, useEffect, SyntheticEvent } from "react";
+import React, {
+  FC,
+  useState,
+  useEffect,
+  SyntheticEvent,
+  ReactChild,
+  ReactChildren
+} from "react";
+import { GlobProps } from "../../../types/typings";
 import Button from "../Button";
-import { AnchorScrollProps } from "./types";
+
+export interface AnchorScrollProps extends GlobProps {
+  destination: string | number; // id or position of target
+  children: ReactChild | ReactChildren;
+  duration?: number; //scroll duration time, default by 200
+  easing?: Function; // easing function
+  margin?: number; // addition or subtraction scroll target point
+  top?: number; // addition height based on fixed menu height
+  callback?: Function; //callback function after scrolled
+}
 
 const AnchorScroll: FC<AnchorScrollProps> = ({
   duration = 300,
@@ -126,4 +143,3 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
 };
 
 export default AnchorScroll;
-export { AnchorScrollProps };

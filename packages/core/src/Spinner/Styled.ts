@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { spin, dashRotate } from "@w-design/helpers";
+import { SizeProps } from "../../../types/typings";
 
-const spinnerSize = ({ size }: { size: "sm" | "md" | "lg" }) => {
+const spinnerSize = ({ size }: SizeProps) => {
   if (size === "sm") return `1.4`;
   if (size === "lg") return `3`;
   return `2`;
 };
 
-export const SpinnerWrapper = styled.div<{ size: "sm" | "md" | "lg" }>`
+export const SpinnerWrapper = styled.div<SizeProps>`
   position: relative;
   margin: 0 auto;
   width: ${spinnerSize}rem;

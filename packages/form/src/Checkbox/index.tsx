@@ -1,7 +1,30 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 import FormGroup from "../FormGroup";
-import { CheckboxProps } from "./types";
+import {
+  GlobProps,
+  InputControlProps,
+  SyntheticEventProps,
+  MouseEventProps
+} from "../../../types/typings";
+
+export interface CheckboxProps
+  extends GlobProps,
+    InputControlProps,
+    SyntheticEventProps,
+    MouseEventProps {
+  //
+  checkboxRef?: React.RefObject<HTMLInputElement>;
+  name?: string;
+  defaultChecked?: boolean;
+  isChecked?: boolean;
+  isDisabled?: boolean;
+  isRequired?: boolean;
+  isIndeterminate?: boolean;
+  label?: string;
+  value?: number | string;
+  ariaRequired?: boolean;
+}
 
 const Label = styled.label<CheckboxProps>`
   display: flex;

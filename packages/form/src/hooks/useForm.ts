@@ -1,5 +1,18 @@
 import * as React from "react";
-import { FieldProps, FormType, FormProps } from "./types";
+import { FieldProps } from "./useField";
+
+export interface FormProps {
+  addField: (field: FieldProps) => void;
+  onSubmit: (e: React.FormEvent, submitFetching: Function) => void;
+  formErrorMessage: string;
+  setFormErrorMessage: Function;
+  setStatus: Function;
+  status?: "error" | "submitting" | "submitted";
+}
+
+export interface FormType {
+  requiredMessage?: string; //generic message for required field notify when submit
+}
 
 /**
  * useForm

@@ -11,10 +11,15 @@
   "author": "Son_dang <son.dang@doda100.com >",
   "homepage": "https://github.com/we-mak/w-design#readme",
   "license": "MIT",
-  "main": "lib/index.js",
-  "module": "lib/index.es.js",
-  "typings": "lib/index.d.ts",
   "sideEffects": false,
+  "main": "lib/cjs/index.js",
+  "typings": "lib/types/index.d.ts",
+  "module": "lib/es/index.js",
+  "files": [
+    "lib/types",
+    "lib/cjs",
+    "lib/es"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -22,15 +27,18 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://viiiprock@github.com/we-mak/w-design.git"
   },
   "scripts": {
-    "test": "cross-env CI=1 jest test -u --colors"
+    "clean": "rimraf ./lib",
+    "dev": "cross-env NODE_ENV=development tsc --watch --noEmit",
+    "test": "cross-env CI=1 jest test -u --colors",
+    "build": "cross-env NODE_ENV=production && yarn build:cjs && yarn build:es",
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib/cjs --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
+    "build:es": "BABEL_ENV=es babel src --out-dir lib/es --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
+    "postbuild": "tsc --emitDeclarationOnly --p tsconfig.json"
   },
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"
@@ -41,5 +49,6 @@
   "devDependencies": {
     "@w-design/core": "^0.41.0"
   },
-  "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f"
+  "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f",
+  "dependencies": {}
 }

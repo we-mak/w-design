@@ -21,7 +21,12 @@ import React, {
   memo
 } from "react";
 import { MasonryLayout } from "./Styled";
-import { MasonryProps } from "./types";
+
+export interface MasonryProps {
+  children: Array<any>;
+  breakpoints: Array<number>;
+  defaultCols?: number;
+}
 
 const Masonry = ({ breakpoints, children, defaultCols = 3 }: MasonryProps) => {
   const [columns, setColumns] = useState(defaultCols);
@@ -93,4 +98,3 @@ const Masonry = ({ breakpoints, children, defaultCols = 3 }: MasonryProps) => {
 };
 
 export default memo(Masonry);
-export { MasonryProps };

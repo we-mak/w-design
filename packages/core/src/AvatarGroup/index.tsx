@@ -1,6 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
-import { AvatarGroupProps } from "./types";
+import { GlobProps } from "../../../types/typings";
+
+export interface AvatarGroupProps extends GlobProps {
+  name?: string | React.ReactChild;
+  description?: React.ReactChild | string;
+  actions?: React.ReactChild | React.ReactChild[];
+  avatar: React.ReactChild;
+}
 
 const AvatarGroupWrapper = styled.div`
   align-content: space-between;
@@ -62,4 +69,3 @@ const AvatarGroup = ({
 };
 
 export default AvatarGroup;
-export { AvatarGroupProps };

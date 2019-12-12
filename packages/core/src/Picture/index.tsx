@@ -37,4 +37,3 @@ const Picture: FC<PictureProps> = ({
 };
 
 export default Picture;
-export { PictureProps };

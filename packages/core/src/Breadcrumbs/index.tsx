@@ -1,6 +1,10 @@
-import React, { Children, isValidElement } from "react";
+import React, { Children, isValidElement, ReactNode } from "react";
 import { BreadcrumbsContainer } from "./Styled";
-import { BreadcrumbsProps } from "./types";
+import { GlobProps } from "../../../types/typings";
+
+export interface BreadcrumbsProps extends GlobProps {
+  children?: ReactNode;
+}
 
 const Breadcrumbs = ({ children, ...rest }: BreadcrumbsProps) => {
   const elements = Children.map(children, child => {
@@ -16,5 +20,4 @@ const Breadcrumbs = ({ children, ...rest }: BreadcrumbsProps) => {
 };
 
 export default Breadcrumbs;
-export { BreadcrumbsProps };
 export { BreadcrumbsItem } from "./BreadcrumbsItem";

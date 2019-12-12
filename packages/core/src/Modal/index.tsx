@@ -15,7 +15,7 @@ import {
   ModalHeader,
   ModalFooter
 } from "./Styled";
-import { ModalProps, ModalContainerStyleProps } from "./types";
+import { ModalProps } from "./types";
 
 const options: BodyScrollOptions = {
   reserveScrollBarGap: true
@@ -70,4 +70,3 @@ const Modal = (props: ModalProps) => {
 };
 
 export default Modal;
-export { ModalProps, ModalContainerStyleProps };

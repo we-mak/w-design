@@ -112,4 +112,3 @@ const Dropdown = ({
 };
 
 export default Dropdown;
-export { DropdownProps };

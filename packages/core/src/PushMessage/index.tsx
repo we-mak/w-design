@@ -2,7 +2,12 @@ import React, { ReactNode } from "react";
 import Portal from "../Portal";
 import { Message } from "./Message";
 import { MessageContainer } from "./Styled";
-import { PushMessageProps } from "./types";
+
+export interface PushMessageProps {
+  value: string;
+  appearance: "info" | "warn" | "success" | "error";
+  dismissTimeout?: number; // time to auto dismiss message automatically
+}
 
 const PushMessage = ({ messages }: { messages: PushMessageProps[] }) => {
   let message: ReactNode;
@@ -23,4 +28,3 @@ const PushMessage = ({ messages }: { messages: PushMessageProps[] }) => {
 };
 
 export default PushMessage;
-export { PushMessageProps };

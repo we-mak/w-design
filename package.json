@@ -15,35 +15,36 @@
     "typescript"
   ],
   "workspaces": [
-    "packages/*",
-    "docs"
+    "packages/*"
   ],
   "private": true,
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "dev": "lerna exec --no-sort -- rollup -w -c=../../rollup.config.js",
+    "dev": "cross-env lerna exec --no-sort -- yarn dev",
     "prebuild": "rimraf ./packages/*/lib",
-    "build": "cross-env NODE_ENV=production lerna exec --stream -- rollup -c=../../rollup.config.js",
-    "test": "cross-env CI=1 lerna exec --parallel -- jest -u --colors --verbose",
+    "build": "CI=1 lerna exec --stream -- yarn build",
     "bootstrap": "lerna bootstrap",
+    "test": "cross-env CI=1 lerna exec --parallel -- jest -u --colors --verbose",
     "coverage": "cross-env CI=1 jest --coverage -u --colors",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "styled-components": "^5.0.0-rc.2"
+    "styled-components": "^5.0.0-regexrehydrate"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.4",
     "@babel/runtime": "^7.7.2",
-    "@rollup/plugin-node-resolve": "^6.0.0",
-    "@rollup/plugin-url": "^4.0.0",
     "@svgr/rollup": "^4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -75,12 +76,7 @@
     "react-is": "^16.12.0",
     "react-test-renderer": "^16.12.0",
     "rimraf": "^3.0.0",
-    "rollup": "^1.27.4",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-typescript2": "^0.25.2",
-    "styled-components": "^5.0.0-rc.2",
+    "styled-components": "^5.0.0-regexrehydrate",
     "stylelint": "^12.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",

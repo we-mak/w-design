@@ -1,6 +1,0 @@
-{
-  "index": "src/index.ts",
-  "object": "src/object-helpers.ts",
-  "string": "src/string-helpers.ts",
-  "styled": "src/styled-helpers.ts"
-}

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SectionMessageProps } from "./types";
+import { SectionMessageProps } from "./index";
 
 const getSectionStyle = (props: SectionMessageProps) => {
   const { theme, appearance } = props;

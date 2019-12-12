@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InputFormProps } from "./types";
+import { InputFormProps } from "./index";
 
 export const FieldGroup = styled.div<InputFormProps>`
   position: relative;

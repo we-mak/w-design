@@ -3,7 +3,14 @@ import Flexbox from "../Flexbox";
 import Typo from "../Typo";
 import Icon from "../Icon";
 import { Section } from "./Styled";
-import { SectionMessageProps } from "./types";
+import { GlobProps } from "../../../types/typings";
+
+export interface SectionMessageProps extends GlobProps {
+  /* Message appearance */
+  appearance?: "info" | "confirm" | "warn" | "error";
+  title?: string;
+  children: React.ReactNode;
+}
 
 const SectionMessage: React.FC<SectionMessageProps> = ({
   appearance = "info",
@@ -44,4 +51,3 @@ const SectionMessage: React.FC<SectionMessageProps> = ({
 };
 
 export default SectionMessage;
-export { SectionMessageProps };

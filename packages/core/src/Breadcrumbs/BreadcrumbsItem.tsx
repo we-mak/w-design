@@ -1,6 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { BreadcrumbsItemWrapper, Seperator } from "./Styled";
-import { BreadcrumbsItemProps } from "./types";
+import { GlobProps } from "../../../types/typings";
+
+export interface BreadcrumbsItemProps extends GlobProps {
+  isCurrentPage?: boolean;
+  children?: ReactNode;
+}
 
 export const BreadcrumbsItem = ({
   isCurrentPage,

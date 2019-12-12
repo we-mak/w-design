@@ -1,12 +1,40 @@
 import { useState, useEffect } from "react";
-import { FieldProps, FieldType, FieldStatus } from "./types";
+import { InputFormProps } from "../InputForm";
+import { FormProps } from "./useForm";
+
+export type ValidatorType = {
+  validate: Function;
+  message: string;
+  option?: any;
+};
+
+export type FieldStatus = "error" | "success" | "warn";
+
+export interface FieldProps extends InputFormProps {
+  setStatus: Function;
+  setHintMessage: Function;
+}
+
+export interface FieldType {
+  form: FormProps; // form that returned from `useForm`
+  name: string;
+  isRequired: boolean;
+  defaultValue?: string; // the initial value of the input field
+  validations?: ValidatorType[]; // validation functions applied to value
+}
 
 /**
  * useField
  * This hook update component via `InputField` props.
  */
 
-const useField = ({ form, name, isRequired, defaultValue, validations }: FieldType): FieldProps => {
+const useField = ({
+  form,
+  name,
+  isRequired = false,
+  defaultValue,
+  validations
+}: FieldType): FieldProps => {
   const [status, setStatus] = useState<FieldStatus | null>();
   const [hintMessage, setHintMessage] = useState();
   const [value, setValue] = useState(defaultValue || "");

@@ -6,8 +6,18 @@ import {
   PresenceMark
 } from "./Styled";
 import { firstLetter, randomProperty, filterObject } from "@w-design/helpers";
-import { AvatarProps } from "./types";
 import { colors } from "../common/colors";
+import { GlobProps } from "../../../types/typings";
+
+export interface AvatarProps extends GlobProps {
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+  // User online status
+  presence?: "online" | "offline" | "busy";
+  avatarUrl?: string;
+  // Initial content of avatar if without image
+  dataInitial?: string;
+  alt?: string;
+}
 
 const Avatar = ({
   size = "md",
@@ -39,4 +49,3 @@ const Avatar = ({
 };
 
 export default React.memo(Avatar);
-export { AvatarProps };

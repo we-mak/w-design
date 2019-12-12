@@ -1,8 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import { color, margin, fontWeight, fontFamily } from "styled-system";
+import {
+  color,
+  margin,
+  fontWeight,
+  fontFamily,
+  MarginProps,
+  FontFamilyProps,
+  FontWeightProps,
+  ColorProps
+} from "styled-system";
 import CustomTag from "../CustomTag";
-import { TypoProps } from "./types";
+import { GlobProps } from "../../../types/typings";
+
+export interface TypoProps
+  extends GlobProps,
+    MarginProps,
+    FontWeightProps,
+    FontFamilyProps,
+    ColorProps {
+  appearance?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  tag?: "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  children?: any;
+}
 
 const WTypo = ({ tag, appearance, children, ...rest }: TypoProps) => (
   <CustomTag tag={tag ? tag : appearance} {...rest}>
@@ -42,4 +62,3 @@ const Typo = styled(WTypo)`
 Typo.displayName = "Typo";
 
 export default Typo;
-export { TypoProps };

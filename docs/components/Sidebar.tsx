@@ -6,14 +6,6 @@ import { Menu, MenuItem, MenuHeading, SubMenu, Icon } from "@w-design/core";
 
 const core = [
   {
-    title: "Provider",
-    link: "/core/provider"
-  },
-  {
-    title: "Portal",
-    link: "/core/portal"
-  },
-  {
     title: "Anchor Scroll",
     link: "/core/anchor"
   },
@@ -72,6 +64,10 @@ const core = [
   {
     title: "Flexbox",
     link: "/core/flexbox"
+  },
+  {
+    title: "Portal",
+    link: "/core/portal"
   },
   {
     title: "Media",

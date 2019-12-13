@@ -62,7 +62,7 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
           {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
           {isLoading && (
             <SpinnerWrap>
-              <Spinner size="sm" />
+              <Spinner />
             </SpinnerWrap>
           )}
         </InputContainer>

@@ -1,10 +1,6 @@
 import { css } from "styled-components";
 import { ButtonProps } from "./types";
-import {
-  getValFromObjKey,
-  getFontSize,
-  getElementSize
-} from "@w-design/helpers";
+import { getValFromObjKey, getFontSize, getElementSize } from "@w-design/helpers";
 
 // Set button background colors
 const bg = {
@@ -100,24 +96,9 @@ const boxShadow = {
 };
 
 export function getButtonStyle(props: ButtonProps) {
-  const {
-    fontSizes,
-    fonts,
-    lineHeights,
-    colors,
-    radii,
-    space,
-    padding,
-    height
-  } = props.theme;
+  const { fontSizes, fonts, lineHeights, colors, radii, space, padding, height } = props.theme;
 
-  const {
-    appearance = "default",
-    size = "md",
-    isSelected,
-    fluid,
-    iconOnly
-  } = props;
+  const { appearance = "default", size = "md", isSelected, fluid, iconOnly } = props;
 
   /** Buttonn size style */
   const paddingStyle = iconOnly ? 0 : getElementSize(padding, size);
@@ -166,13 +147,11 @@ export function getButtonStyle(props: ButtonProps) {
       borderStyle = "TRANSPARENT";
       borderHoverStyle = "TRANSPARENT";
       borderActiveStyle = "TRANSPARENT";
-      colorStyle = "TRANSPARENT";
+      colorStyle = "B50";
     }
   }
 
-  const boxShadowStyle = isSelected
-    ? "transparent"
-    : getValFromObjKey(appearance, boxShadow);
+  const boxShadowStyle = isSelected ? "transparent" : getValFromObjKey(appearance, boxShadow);
 
   return css`
     appearance: none;
@@ -193,9 +172,7 @@ export function getButtonStyle(props: ButtonProps) {
     padding: ${paddingStyle};
     height: ${heightStyle};
     font-size: ${fontSizeStyle};
-    border: ${appearance === "link" || appearance === "subtle"
-      ? "none"
-      : "0.05rem solid"};
+    border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
     background: ${colors[bgStyle]};
     border-color: ${colors[borderStyle]};
     color: ${colors[colorStyle]};

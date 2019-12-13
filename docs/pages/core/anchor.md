@@ -1,16 +1,20 @@
 # AnchorScroll
 
-Smooth scrolling when click to an anchor link in the page
+Smooth scrolling when click to an anchor link in the page. This component is helpful for improve the user
+interactive on the layout.
 
 ## Example
 
 <AnchorScroll destination="target" callback={() => console.log("fire callback")}>
-  <span role="img" aria-label="img" aria-labelledby="anchor link">
-    🚀
-  </span>
-  To target
+<span role="img" aria-label="img" aria-labelledby="anchor link">
+🚀
+</span>
+To target
 </AnchorScroll>
 
+<AnchorScroll destination={500}>
+  Scroll to 500px
+</AnchorScroll>
 
 ```jsx
 <AnchorScroll destination="target" callback={() => console.log("fire callback")}>
@@ -79,5 +83,13 @@ AnchorScroll intially only use liner animation but you can pick one of below to 
   Target
 </div>
 
-
 ## API
+
+| Props       | Type           | default            | description                                        |
+| ----------- | -------------- | ------------------ | -------------------------------------------------- |
+| destination | string, number | `md`               | target id or position cordinate                    |
+| duration    | number         | `200`              | scroll duration time                               |
+| easing      | Function       | `(t: number) => t` | easing animation function, is linear by default    |
+| margin      | number         | `0`                | addition or subtraction scroll target point        |
+| top         | number         | `0`                | addition height, useful when has fixed menu on top |
+| callback    | Function       | undefined          | callback function after scrolled                   |

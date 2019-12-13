@@ -62,17 +62,35 @@ add the Fontawesome library in your app.
 
 ## Button State
 
-Button state behaviors
+**Button state behaviors**
 
+Loading state
 <ButtonGroup>
-  <Button isLoading>Is Loading</Button>
-  <Button appearance="clean" isLoading>
-    Clean button
-  </Button>
-  <Button isLoading appearance="primary">
-    Is Loading
-  </Button>
-  <Button isDisabled>Disabled</Button>
+<Button isLoading>Is Loading</Button>
+<Button appearance="clean" isLoading>
+Clean button
+</Button>
+<Button isLoading appearance="primary">
+Is Loading
+</Button>
+<Button isDisabled>Disabled</Button>
+</ButtonGroup>
+<Box m={2} />
+
+Selected state
+<ButtonGroup>
+<Button isSelected>Default button</Button>
+<Button isSelected appearance="primary">Primary button</Button>
+<Button isSelected appearance="danger">Danger button</Button>
+<Button isSelected appearance="warning">Warning button</Button>
+<Button isSelected appearance="success">Success button</Button>
+</ButtonGroup>
+<Box m={2} />
+<ButtonGroup>
+<Button isSelected appearance="help">Help button</Button>
+<Button isSelected appearance="subtle">Subtle button</Button>
+<Button isSelected appearance="link">Link button</Button>
+<Button isSelected appearance="clean">Clean button</Button>
 </ButtonGroup>
 
 ```jsx

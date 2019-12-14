@@ -20,7 +20,17 @@ import {
   ListFooter,
   EmptyContainer
 } from "./Styled";
-import { ListProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface ListProps extends GlobProps {
+  header?: React.ReactNode;
+  footer?: any;
+  isLoading?: boolean;
+  sourceData?: any[];
+  rowKey?: string | ((item: any) => string);
+  rows?: (item: any, index: number) => React.ReactNode;
+  emptyView?: React.ReactElement;
+}
 
 const List: React.FC<ListProps> = ({
   header,
@@ -57,9 +67,7 @@ const List: React.FC<ListProps> = ({
   let childrenComponent: React.ReactNode | React.ReactNode[];
 
   if (sourceData.length > 0) {
-    const items = sourceData.map((item: any, index: number) =>
-      renderItem(item, index)
-    );
+    const items = sourceData.map((item: any, index: number) => renderItem(item, index));
 
     const childrenList: Array<React.ReactNode> = [];
 

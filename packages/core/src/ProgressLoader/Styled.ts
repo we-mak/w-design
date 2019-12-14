@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ProgressLoaderProps } from "./types";
+import { ProgressLoaderProps } from "./";
 
 export const ProgressContainer = styled.div`
   position: relative;

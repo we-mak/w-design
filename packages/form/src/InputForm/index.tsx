@@ -6,14 +6,8 @@ import * as React from "react";
 import { Spinner, Icon } from "@w-design/core";
 import Label from "../Label";
 import InputField from "../InputField";
-import {
-  FieldGroup,
-  TextHint,
-  RequiredMark,
-  SpinnerWrap,
-  InputContainer
-} from "./Styled";
-import { ActionProps } from "../../../types/typings";
+import { FieldGroup, TextHint, RequiredMark, SpinnerWrap, InputContainer } from "./Styled";
+import { ActionProps } from "@w-design/core/lib/types/common/props";
 import { InputFieldProps } from "../InputField";
 
 export interface InputFormProps extends InputFieldProps, ActionProps {
@@ -42,14 +36,11 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
   return (
     <FieldGroup>
       <Label htmlFor={id}>
-        {label}{" "}
-        {isRequired && <RequiredMark aria-hidden="true">*</RequiredMark>}
+        {label} {isRequired && <RequiredMark aria-hidden="true">*</RequiredMark>}
         <InputContainer>
           {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}
           <InputField
-            className={
-              (iconBefore && `icon-before`) || (iconAfter && `icon-after`)
-            }
+            className={(iconBefore && `icon-before`) || (iconAfter && `icon-after`)}
             fluid
             id={id}
             isError={isError}

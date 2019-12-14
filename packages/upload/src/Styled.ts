@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { width, height, color } from "styled-system";
-import { UploadProps, UploadListProps } from "./types";
+import { UploadProps } from "./Upload";
+import { UploadListProps } from "./FileList";
 
 /**
  * Main upload style

@@ -1,7 +1,18 @@
 import styled from "styled-components";
-import { border, margin, justifyContent } from "styled-system";
+import {
+  border,
+  margin,
+  justifyContent,
+  BorderProps,
+  MarginProps,
+  JustifyContentProps
+} from "styled-system";
 import { mediaQ } from "@w-design/helpers";
-import { ListProps, ListItemProps, ListFooterProps } from "./types";
+import { GlobProps } from "../common/props";
+import { ListProps } from "./";
+import { ListItemProps } from "./ListItem";
+
+export interface ListFooterProps extends GlobProps, BorderProps, MarginProps, JustifyContentProps {}
 
 export const ListContainer = styled.div`
   position: relative;

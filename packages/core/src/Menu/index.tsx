@@ -2,11 +2,27 @@ import * as React from "react";
 import styled from "styled-components";
 import { MenuContext } from "./MenuContext";
 import { getMenuStyle } from "./Styled";
-import { MenuProps } from "./types";
 // import to export
 import { MenuItem } from "./MenuItem";
 import { MenuHeading } from "./MenuHeading";
 import { SubMenu } from "./SubMenu";
+import { GlobProps } from "../common/props";
+
+export interface MenuProps extends GlobProps {
+  children?: React.ReactChild | React.ReactChild[];
+  fullWidth?: boolean;
+  width?: string | number;
+  // set default selected key
+  defaultSelectedKey?: string | number;
+  // get key is selecting
+  selectedKey?: string | number;
+  // set default open sub menu keys
+  defaultOpenKeys?: string[] | number[];
+  // open keys list
+  openKeys?: string[] | number[];
+  // open submenu
+  onOpenKeyChange?: (keys?: string[] | number[]) => void;
+}
 
 // TODO:
 // use ref on child
@@ -29,14 +45,17 @@ const Menu = (props: MenuProps) => {
   } = props;
 
   const [selectedKey, setSelectedKey] = React.useState(defaultSelectedKey);
-  const [openKeys, setOpenKeys] = React.useState(defaultOpenKeys);
+  const [
+    openKeys
+    //  setOpenKeys
+  ] = React.useState(defaultOpenKeys);
 
   const value = React.useMemo(() => {
     return {
       selectedKey,
       setSelectedKey,
       openKeys,
-      setOpenKeys,
+      // setOpenKeys,
       defaultOpenKeys
     };
   }, [selectedKey, openKeys]);

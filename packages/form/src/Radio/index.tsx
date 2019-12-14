@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Radio, RadioProps } from "./Radio";
-import { GlobProps, InputControlProps } from "../../../types/typings";
+import { GlobProps, InputControlProps } from "@w-design/core/lib/types/common/props";
 
 export interface RadioGroupProps extends GlobProps, InputControlProps {
   groupLabel?: string;
@@ -34,9 +34,7 @@ const RadioGroup = ({
   value,
   defaultValue = ""
 }: RadioGroupProps) => {
-  const [optionValue, setValue] = React.useState(
-    value !== undefined ? value : defaultValue
-  );
+  const [optionValue, setValue] = React.useState(value !== undefined ? value : defaultValue);
 
   const onRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.currentTarget.value);

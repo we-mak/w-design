@@ -1,6 +1,6 @@
 import { css } from "styled-components";
-import { ButtonProps } from "./types";
 import { getValFromObjKey, getFontSize, getElementSize } from "@w-design/helpers";
+import { ButtonProps } from "./";
 
 // Set button background colors
 const bg = {

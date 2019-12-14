@@ -5,7 +5,13 @@ import { fadeInOut } from "@w-design/helpers";
 import { CardHeader } from "./CardHeader";
 import { CardMedia } from "./CardMedia";
 import { CardContent } from "./CardContent";
-import { CardProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface CardProps extends GlobProps {
+  children?: React.ReactChild | React.ReactChild[];
+  raised?: boolean;
+  isLoading?: boolean;
+}
 
 const getCardStyle = (props: CardProps) => {
   return css`

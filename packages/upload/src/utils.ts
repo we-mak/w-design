@@ -1,4 +1,5 @@
-import { WFile, UploadFileType, UploadStatus } from "./types";
+import { WFile, UploadStatus } from "./FileList";
+import { UploadFileType } from "./FileList";
 
 // Handle parsing file upload to custom object
 export const fileToObject = (file: WFile): UploadFileType => {
@@ -33,10 +34,7 @@ export function updateFileState(
   );
 }
 
-export function removeFileItem(
-  file: UploadFileType,
-  fileList: UploadFileType[]
-) {
+export function removeFileItem(file: UploadFileType, fileList: UploadFileType[]) {
   const matchKey = file.uid !== undefined ? "uid" : "name";
   const removed = fileList.filter(item => item[matchKey] !== file[matchKey]);
   if (removed.length === fileList.length) {

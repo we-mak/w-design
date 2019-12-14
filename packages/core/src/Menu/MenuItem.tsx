@@ -5,7 +5,17 @@ import * as React from "react";
 import styled from "styled-components";
 import { useMenu } from "./MenuContext";
 import { getMenuItemStyle } from "./Styled";
-import { MenuItemProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface MenuItemProps extends GlobProps {
+  eventKey?: string;
+  children?: any;
+  after?: React.ReactChild | React.ReactChild[];
+  iconBefore?: React.ReactChild;
+  isSelected?: boolean;
+  tabIndex?: number;
+  isDisabled?: boolean;
+}
 
 const MenuItemAfter = styled.div`
   align-items: center;

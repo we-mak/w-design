@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DrawerProps } from "./types";
+import { DrawerProps } from "./";
 
 export const DrawerContainer = styled.div`
   position: fixed;

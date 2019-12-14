@@ -9,7 +9,7 @@ import {
   SyntheticEventProps,
   KeyboardEventProps,
   InputControlProps
-} from "../../../types/typings";
+} from "@w-design/core/lib/types/common/props";
 
 export interface TextAreaProps
   extends GlobProps,

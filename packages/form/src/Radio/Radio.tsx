@@ -6,7 +6,7 @@ import {
   InputControlProps,
   MouseEventProps,
   SyntheticEventProps
-} from "../../../types/typings";
+} from "@w-design/core/lib/types/common/props";
 
 export interface RadioProps
   extends GlobProps,
@@ -82,13 +82,7 @@ export const Radio = ({
         {...rest}
       />
       <RadioIcon isChecked={isChecked}>
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          focusable="false"
-          role="presentation"
-        >
+        <svg width="28" height="28" viewBox="0 0 24 24" focusable="false" role="presentation">
           <g fillRule="evenodd">
             <circle fill="currentColor" cx="12" cy="12" r="7" />
             <circle fill="inherit" cx="12" cy="12" r="3" />

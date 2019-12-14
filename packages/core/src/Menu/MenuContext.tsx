@@ -1,9 +1,16 @@
 import * as React from "react";
-import { MenuContextProps } from "./types";
+export interface MenuContextProps {
+  // Menu Item
+  defaultSelectedKey?: string | number;
+  selectedKey?: string | number;
+  setSelectedKey: (key: string | number) => void;
+  // Submenu
+  defaultOpenKeys?: string[] | number[];
+  openKeys: string[] | number[];
+  // setOpenKeys: (key: string | number) => Array<void>;
+}
 
-export const MenuContext = React.createContext<MenuContextProps | undefined>(
-  undefined
-);
+export const MenuContext = React.createContext<MenuContextProps | undefined>(undefined);
 
 export const useMenu = () => {
   const context = React.useContext(MenuContext);
@@ -13,13 +20,13 @@ export const useMenu = () => {
   const {
     selectedKey,
     setSelectedKey,
-    openKeys,
-    setOpenKeys,
+    openKeys = [],
+    // setOpenKeys,
     defaultOpenKeys
   } = context;
 
-  const onSelectItem = (key: string) => setSelectedKey(key);
-  const onSelectKeys = (key: string) => setOpenKeys(openKeys!.push(key));
+  const onSelectItem = (key: string | number) => setSelectedKey(key);
+  // const onSelectKeys = (key: string | number) => setOpenKeys(openKeys.push(key));
 
   const setDefaultOpenKey = (key?: string) => {
     for (let i in defaultOpenKeys) {
@@ -36,7 +43,7 @@ export const useMenu = () => {
     selectedKey,
     onSelectItem,
     setDefaultOpenKey,
-    openKeys,
-    onSelectKeys
+    openKeys
+    // onSelectKeys
   };
 };

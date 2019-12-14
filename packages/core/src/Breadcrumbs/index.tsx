@@ -1,6 +1,6 @@
 import React, { Children, isValidElement, ReactNode } from "react";
 import { BreadcrumbsContainer } from "./Styled";
-import { GlobProps } from "../../../types/typings";
+import { GlobProps } from "../common/props";
 
 export interface BreadcrumbsProps extends GlobProps {
   children?: ReactNode;

@@ -1,7 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import Typo from "../Typo";
-import { CardHeaderProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface CardHeaderProps extends GlobProps {
+  title?: string;
+  description?: string | React.ReactChild;
+  children?: React.ReactChild;
+}
 
 const CardHeaderWrapper = styled.div`
   padding: 0.8rem;
@@ -22,12 +28,7 @@ const CardHeaderDescription = styled.div`
 `;
 CardHeaderDescription.displayName = "CardHeaderDescription";
 
-export const CardHeader = ({
-  title,
-  children,
-  description,
-  ...rest
-}: CardHeaderProps) => {
+export const CardHeader = ({ title, children, description, ...rest }: CardHeaderProps) => {
   return (
     <CardHeaderWrapper {...rest}>
       {title && (
@@ -35,9 +36,7 @@ export const CardHeader = ({
           {title}
         </Typo>
       )}
-      {description && (
-        <CardHeaderDescription>{description}</CardHeaderDescription>
-      )}
+      {description && <CardHeaderDescription>{description}</CardHeaderDescription>}
       {children}
     </CardHeaderWrapper>
   );

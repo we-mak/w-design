@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { SubMenuProps } from "./types";
+import { SubMenuProps } from "./SubMenu";
 
 const ArrowStyled = styled.span`
   align-items: center;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { display } from "styled-system";
-import { NavProps } from "./types";
+import { NavProps } from "./";
 
 export const NavSection = styled.section<NavProps>`
   align-items: center;

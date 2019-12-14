@@ -8,7 +8,17 @@ import {
   ListItemActionGroup,
   ThumbContainer
 } from "./Styled";
-import { ListItemProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface ListItemProps extends GlobProps {
+  key?: string | number;
+  thumbnail?: string;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  actions?: React.ReactNode[];
+  hasDivider?: boolean;
+  children?: React.ReactNode | React.ReactNode[];
+}
 
 export const ListItem: React.FC<ListItemProps> = ({
   children,

@@ -2,9 +2,9 @@
  * AnchorScroll
  * Smooth scrolling when click at an anchor link
  */
-import React, { FC, useState, useEffect, SyntheticEvent, ReactChild, ReactChildren } from 'react';
-import { GlobProps } from '../../../types/typings';
-import Button from '../Button';
+import React, { FC, useState, useEffect, SyntheticEvent, ReactChild, ReactChildren } from "react";
+import { GlobProps } from "../common/props";
+import Button from "../Button";
 
 export interface AnchorScrollProps extends GlobProps {
   destination: string | number; // id or position of target
@@ -32,7 +32,7 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
 
     // Initial position of window and time
     const start = window.pageYOffset;
-    const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+    const startTime = "now" in window.performance ? performance.now() : new Date().getTime();
 
     // Take height of window and document to resolve max scrollable value
     const documentHeight = Math.max(
@@ -45,11 +45,11 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
     const windowHeight =
       window.innerHeight ||
       document.documentElement.clientHeight ||
-      document.getElementsByTagName('body')[0].clientHeight;
+      document.getElementsByTagName("body")[0].clientHeight;
 
     // Get destination offset
     const destinationOffset =
-      typeof destination === 'number'
+      typeof destination === "number"
         ? destination
         : document.getElementById(destination)!.offsetTop;
 
@@ -60,7 +60,7 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
         : destinationOffset + margin
     );
 
-    if ('requestAnimationFrame' in window === false) {
+    if ("requestAnimationFrame" in window === false) {
       // If requestAnimationFrame is not supported
       // Move window to destination position and trigger callback function
       window.scroll(0, scrollTarget);
@@ -71,7 +71,7 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
     }
 
     const scroll = () => {
-      const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+      const now = "now" in window.performance ? performance.now() : new Date().getTime();
       const time = Math.min(1, (now - startTime) / duration);
       const timeFunction = easing(time);
       window.scroll(0, Math.ceil(timeFunction * (scrollTarget - start) + start));
@@ -90,7 +90,7 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
 
   useEffect(() => {
     const onActive = () => {
-      if (typeof destination !== 'number') {
+      if (typeof destination !== "number") {
         const node = document.getElementById(destination);
         // error to prevent missing target id
         if (!node) {
@@ -112,9 +112,9 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
     };
 
     onActive();
-    window.addEventListener('scroll', onActive);
+    window.addEventListener("scroll", onActive);
     return () => {
-      window.removeEventListener('scroll', onActive);
+      window.removeEventListener("scroll", onActive);
     };
   }, [destination, margin, top]);
 

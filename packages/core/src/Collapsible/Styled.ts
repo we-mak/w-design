@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components";
-import { ColapsiblePanelProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface ColapsiblePanelProps extends GlobProps {
+  isOpen: boolean;
+}
 
 export const ColapsiblePanel = styled.div((props: ColapsiblePanelProps) => {
   return css`

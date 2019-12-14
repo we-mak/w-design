@@ -3,7 +3,7 @@ import Flexbox from "../Flexbox";
 import Typo from "../Typo";
 import Icon from "../Icon";
 import { Section } from "./Styled";
-import { GlobProps } from "../../../types/typings";
+import { GlobProps } from "../common/props";
 
 export interface SectionMessageProps extends GlobProps {
   /* Message appearance */

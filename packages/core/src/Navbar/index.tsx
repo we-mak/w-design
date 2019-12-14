@@ -1,9 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
-import { display } from "styled-system";
+import { display, DisplayProps } from "styled-system";
 import { NavCenter } from "./NavCenter";
 import { NavSection } from "./NavSection";
-import { NavProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface NavProps extends GlobProps, DisplayProps {
+  children?: React.ReactChild | React.ReactChild[];
+}
 
 const Nav = styled.nav`
   align-items: stretch;

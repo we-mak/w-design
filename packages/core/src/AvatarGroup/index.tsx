@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { GlobProps } from "../../../types/typings";
+import { GlobProps } from "../common/props";
 
 export interface AvatarGroupProps extends GlobProps {
   name?: string | React.ReactChild;
@@ -49,13 +49,7 @@ const AvatarActions = styled.div`
   flex: 0 0 auto;
 `;
 
-const AvatarGroup = ({
-  avatar,
-  name,
-  description,
-  actions,
-  ...rest
-}: AvatarGroupProps) => {
+const AvatarGroup = ({ avatar, name, description, actions, ...rest }: AvatarGroupProps) => {
   return (
     <AvatarGroupWrapper {...rest}>
       <AvatarWrapper>{avatar}</AvatarWrapper>

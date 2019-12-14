@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { display } from "styled-system";
-import { GlobProps } from "../../../types/typings";
+import { GlobProps } from "../common/props";
 
 const Base = styled.div`
   ${display}

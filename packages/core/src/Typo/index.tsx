@@ -11,7 +11,7 @@ import {
   ColorProps
 } from "styled-system";
 import CustomTag from "../CustomTag";
-import { GlobProps } from "../../../types/typings";
+import { GlobProps } from "../common/props";
 
 export interface TypoProps
   extends GlobProps,

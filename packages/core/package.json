@@ -33,7 +33,8 @@
   },
   "scripts": {
     "clean": "rimraf ./lib",
-    "dev": "cross-env NODE_ENV=development tsc --watch --noEmit",
+    "dev": "cross-env NODE_ENV=development && yarn type-check",
+    "type-check": "tsc --watch --noEmit",
     "test": "cross-env CI=1 jest test -u --colors",
     "build": "cross-env NODE_ENV=production && yarn build:cjs && yarn build:es",
     "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib/cjs --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
@@ -51,5 +52,8 @@
     "body-scroll-lock": "^2.6.4",
     "styled-system": "^5.1.4"
   },
-  "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f"
+  "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f",
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^2.3.0"
+  }
 }

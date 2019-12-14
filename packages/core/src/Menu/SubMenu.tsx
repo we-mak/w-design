@@ -8,7 +8,18 @@ import { Arrow } from "./Arrow";
 import { IconBefore } from "./MenuItem";
 import { useMenu } from "./MenuContext";
 import { getSubMenuStyle } from "./Styled";
-import { SubMenuProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface SubMenuProps extends GlobProps {
+  eventKey?: string;
+  children?: React.ReactChild | React.ReactChild[];
+  title?: string;
+  isOpen?: boolean;
+  icon?: React.ReactChild;
+  disabled?: boolean;
+  isLoading?: boolean;
+  onLoadingList?: (e: React.SyntheticEvent<HTMLElement>) => void;
+}
 
 // titleSpinner
 const SubMenuTitle = styled.div`
@@ -86,9 +97,7 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
     const titleNode: HTMLElement = titleRef!.current!;
 
     return (
-      menuNode &&
-      titleNode &&
-      menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
+      menuNode && titleNode && menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
     );
   };
 
@@ -118,11 +127,7 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
 
   return (
     <SubMenuStyled ref={menuRef} {...rest}>
-      <SubMenuTitle
-        onClick={onToggleMenu}
-        onFocus={onLoadingList}
-        ref={titleRef}
-      >
+      <SubMenuTitle onClick={onToggleMenu} onFocus={onLoadingList} ref={titleRef}>
         {icon && <IconBefore>{icon}</IconBefore>}
         {title}
         {isLoading ? <Loader /> : <Arrow isOpen={open} />}

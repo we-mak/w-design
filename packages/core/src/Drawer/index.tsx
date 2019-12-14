@@ -1,12 +1,14 @@
 import React, { useEffect, memo, useState } from "react";
-import {
-  disableBodyScroll,
-  clearAllBodyScrollLocks,
-  BodyScrollOptions
-} from "body-scroll-lock";
+import { disableBodyScroll, clearAllBodyScrollLocks, BodyScrollOptions } from "body-scroll-lock";
 // import Portal from "../../elements/Portal";
 import { DrawerContainer, Overlay, DrawerPanel } from "./Styled";
-import { DrawerProps } from "./types";
+import { GlobProps } from "../common/props";
+
+export interface DrawerProps extends GlobProps {
+  children?: React.ReactChild | React.ReactChild[];
+  onClose?: (e: React.SyntheticEvent<HTMLElement>) => void;
+  isOpen: boolean;
+}
 
 const options: BodyScrollOptions = {
   reserveScrollBarGap: true

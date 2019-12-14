@@ -7,7 +7,20 @@ import {
   ProgressTrack,
   ProgressStatus
 } from "./Styled";
-import { ProgressLoaderProps } from "./types";
+import { GlobProps, SizeProps } from "../common/props";
+
+export interface ProgressLoaderProps extends GlobProps, SizeProps {
+  /* The completation in percent*/
+  percent: number;
+  /* Status of progress */
+  status?: "progress" | "success" | "error";
+  /** TODO: Type of progress */
+  // appearance?: "line" | "circle";
+  /* To show percent value of completation and icon */
+  showInfo?: boolean;
+  /* size of progress bar*/
+  size?: "sm" | "md";
+}
 
 const ProgressLoader: React.FC<ProgressLoaderProps> = ({
   percent = 0,
@@ -39,15 +52,9 @@ const ProgressLoader: React.FC<ProgressLoaderProps> = ({
     <ProgressContainer>
       <ProgressWrapper>
         <ProgressBar>
-          <ProgressTrack
-            percent={percent}
-            status={progressStatus}
-            size={size}
-          />
+          <ProgressTrack percent={percent} status={progressStatus} size={size} />
         </ProgressBar>
-        {showInfo && (
-          <ProgressStatus title={`${percent}%`}>{stats()}</ProgressStatus>
-        )}
+        {showInfo && <ProgressStatus title={`${percent}%`}>{stats()}</ProgressStatus>}
       </ProgressWrapper>
     </ProgressContainer>
   );

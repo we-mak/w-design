@@ -2,7 +2,15 @@ import * as React from "react";
 import styled from "styled-components";
 import { borderRadius } from "styled-system";
 import Picture from "../Picture";
-import { CardMediaProps } from "./types";
+import { PictureProps } from "../Picture";
+import { GlobProps } from "../common/props";
+
+export interface CardMediaProps extends GlobProps, PictureProps {
+  // image cover url
+  imageUrl?: string;
+  children?: React.ReactChild;
+  alt?: string;
+}
 
 const CardMediaWrapper = styled.div<any>`
   &:first-child {
@@ -30,18 +38,10 @@ const CoverImage = styled(Picture as any)`
 `;
 CoverImage.displayName = "CoverImage";
 
-export const CardMedia = ({
-  srcSets,
-  imageUrl,
-  alt,
-  children,
-  ...rest
-}: CardMediaProps) => {
+export const CardMedia = ({ srcSets, imageUrl, alt, children, ...rest }: CardMediaProps) => {
   return (
     <CardMediaWrapper {...rest}>
-      {imageUrl && (
-        <CoverImage dataSrc={imageUrl} srcSets={srcSets} alt={alt} />
-      )}
+      {imageUrl && <CoverImage dataSrc={imageUrl} srcSets={srcSets} alt={alt} />}
       {children}
     </CardMediaWrapper>
   );

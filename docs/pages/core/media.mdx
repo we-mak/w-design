@@ -1,0 +1,36 @@
+import { Image, ImageRatio } from "@w-design/core";
+
+# Image
+
+Image component with built-in lazy loading with `Intersection Observer`.
+
+## Example
+
+Fixed width image
+
+<Image data-src="https://source.unsplash.com/random" width={320} />
+
+```jsx
+<Image data-src="https://source.unsplash.com/random" width={320} />
+```
+
+Pecent width image
+
+<Image data-src="https://source.unsplash.com/random?car" width="50%" />
+
+```jsx
+<Image data-src="https://source.unsplash.com/random?car" width="50%" />
+```
+
+Wrapping with ratio
+
+<ImageRatio>
+  <Image data-src="https://source.unsplash.com/random?building" />
+</ImageRatio>
+
+## API
+
+| Props  | type | default | description          |
+| ------ | ---- | ------- | -------------------- |
+| height |      |         | styled-system height |
+| width  |      |         | styled-system width  |

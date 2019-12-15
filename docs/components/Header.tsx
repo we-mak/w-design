@@ -27,26 +27,17 @@ export const Header = ({
             iconOnly
             appearance="clean"
             size="lg"
-            style={{ paddingRight: ".5rem" }}
           ></Button>
         </DisplayElement>
         <a href="/" style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src="/logom.png"
-            style={{ width: "45px", height: "45px" }}
-            alt="We-design logo"
-          />
+          <img src="/logom.png" style={{ width: "45px", height: "45px" }} alt="We-design logo" />
           <LogoType>W-design</LogoType>
         </a>
       </Section>
 
       <Section style={{ display: "inline-block" }}>Search</Section>
       <Section>
-        <a
-          href="https://github.com/we-mak/w-design"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/we-mak/w-design" target="_blank" rel="noopener noreferrer">
           Github
         </a>
       </Section>

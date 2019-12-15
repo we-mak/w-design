@@ -58,6 +58,10 @@ const core = [
     link: "/core/drawer"
   },
   {
+    title: "Dropdown",
+    link: "/core/dropdown"
+  },
+  {
     title: "Empty view",
     link: "/core/emptyview"
   },
@@ -92,6 +96,10 @@ const core = [
   {
     title: "ProgressLoader",
     link: "/core/progress"
+  },
+  {
+    title: "PushMessage",
+    link: "/core/pushmessage"
   },
   {
     title: "SectionMessage",
@@ -141,11 +149,7 @@ export const Sidebar: React.FunctionComponent<any> = () => {
         </MenuItem>
 
         <MenuHeading>UI Packages</MenuHeading>
-        <SubMenu
-          key="core"
-          title="Core components"
-          icon={<Icon className="fas fa-atom" />}
-        >
+        <SubMenu key="core" title="Core components" icon={<Icon className="fas fa-atom" />}>
           {core.map(el => (
             <MenuItem key={el.link}>
               <Link href={el.link}>

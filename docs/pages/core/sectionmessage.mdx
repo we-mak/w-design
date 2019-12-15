@@ -1,0 +1,43 @@
+import { Container, SectionMessage } from "@w-design/core";
+
+# SectionMessage
+
+Message block to notice user what happened, or something to require an action
+
+## Example
+
+<Container maxWidth={500}>
+  <SectionMessage title="Info">The quick brown fox jumps over the lazy dog</SectionMessage>
+  <SectionMessage appearance="confirm" title="Confirm">
+    The quick brown fox jumps over the lazy dog
+  </SectionMessage>
+  <SectionMessage title="Warn" appearance="warn">
+    The quick brown fox jumps over the lazy dog
+  </SectionMessage>
+  <SectionMessage title="Error" appearance="error">
+    The quick brown fox jumps over the lazy dog
+  </SectionMessage>
+</Container>
+
+```jsx
+<Container maxWidth={500}>
+  <SectionMessage title="Info">The quick brown fox jumps over the lazy dog</SectionMessage>
+  <SectionMessage appearance="confirm" title="Confirm">
+    The quick brown fox jumps over the lazy dog
+  </SectionMessage>
+  <SectionMessage title="Warn" appearance="warn">
+    The quick brown fox jumps over the lazy dog
+  </SectionMessage>
+  <SectionMessage title="Error" appearance="error">
+    The quick brown fox jumps over the lazy dog
+  </SectionMessage>
+</Container>
+```
+
+## API
+
+| Props      | type                                         | default | description                   |
+| ---------- | -------------------------------------------- | ------- | ----------------------------- |
+| appearance | string: "info" , "confirm" , "warn" ,"error" | "info"  | appearance of section message |
+| title      | string                                       |         | title of message              |
+| child      | ReactNode                                    |         | Content of section message    |

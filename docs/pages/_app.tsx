@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  AnchorScroll,
   Avatar,
   AvatarGroup,
   Box,
@@ -13,20 +12,17 @@ import {
   CardHeader,
   CardMedia,
   CardFooter,
-  Icon,
-  Flexbox
+  Container,
+  Icon
 } from "@w-design/core";
 import { MDXProvider } from "@mdx-js/react";
 import { CodeBlock } from "../components/CodeBlock";
 import { Layout } from "../components/Layout";
 import "../css/index.css";
 
-const { Column } = Flexbox;
-
 const components = {
   pre: (props: any) => <div {...props} />,
   code: CodeBlock,
-  AnchorScroll,
   Avatar,
   AvatarGroup,
   Box,
@@ -39,9 +35,8 @@ const components = {
   CardContent,
   CardMedia,
   CardFooter,
-  Icon,
-  Flexbox,
-  Column
+  Container,
+  Icon
 };
 
 export default ({ Component, pageProps }) => (

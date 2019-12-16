@@ -34,7 +34,8 @@
   "scripts": {
     "clean": "rimraf ./lib",
     "dev": "cross-env NODE_ENV=development && yarn type-check",
-    "type-check": "tsc --watch --noEmit",
+    "watch": "BABEL_ENV=dev babel src --out-dir lib/cjs --extensions .ts,.tsx --watch --config-file ../../babel.config.js",
+    "type-check": "tsc --watch --p tsconfig.json --noEmit",
     "test": "cross-env CI=1 jest test -u --colors",
     "build": "cross-env NODE_ENV=production && yarn build:cjs && yarn build:es",
     "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib/cjs --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",

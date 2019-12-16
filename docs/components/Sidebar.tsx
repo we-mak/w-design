@@ -115,6 +115,45 @@ const core = [
   }
 ];
 
+const form = [
+  {
+    title: "Introduction",
+    link: "/form/intro"
+  },
+  {
+    title: "Input Field",
+    link: "/form/inputfield"
+  },
+  {
+    title: "Input Form",
+    link: "/form/inputform"
+  },
+  {
+    title: "Label",
+    link: "/form/label"
+  },
+  {
+    title: "Radio",
+    link: "/form/radio"
+  },
+  {
+    title: "Checkbox",
+    link: "/form/checkbox"
+  },
+  {
+    title: "TextArea",
+    link: "/form/textarea"
+  },
+  {
+    title: "FormGroup",
+    link: "/form/formgroup"
+  },
+  {
+    title: "Form hooks",
+    link: "/form/hooks"
+  }
+];
+
 const SidebarWrapper = styled.aside`
   display: block;
   position: fixed;
@@ -151,6 +190,16 @@ export const Sidebar: React.FunctionComponent<any> = () => {
         <MenuHeading>UI Packages</MenuHeading>
         <SubMenu key="core" title="Core components" icon={<Icon className="fas fa-atom" />}>
           {core.map(el => (
+            <MenuItem key={el.link}>
+              <Link href={el.link}>
+                <a>{el.title}</a>
+              </Link>
+            </MenuItem>
+          ))}
+        </SubMenu>
+
+        <SubMenu key="form" title="Form" icon={<Icon className="fas fa-list" />}>
+          {form.map(el => (
             <MenuItem key={el.link}>
               <Link href={el.link}>
                 <a>{el.title}</a>

@@ -1,0 +1,40 @@
+import FormExample from "./_example/FormExample";
+
+# hooks
+
+W-design `useField` and `useForm` are simple hooks with just a few
+lines of codes, it help to update components state with values and other factors for your
+form, such as validation, error status, message, and pass those values to the server.
+
+## Use case
+
+Typically, when create a from, we need to resolve the user experience senarios that provide the good way to let user
+understand what he/she needs to do to the form by getting response from their behaviour:
+
+- When user is typing
+- When user finish adding information into the form
+- Response after submit the form.
+
+## Example
+
+<FormExample />
+
+### useField
+
+This hook update component and return an `InputField` props object.
+
+#### API
+
+| Params       | type              | default | description                            |
+| ------------ | ----------------- | ------- | -------------------------------------- |
+| form         | `FormType`        |         | form hooks values, came from `useForm` |
+| name         | `string`          |         | name of input field                    |
+| defaultValue | `string`          | ""      | input value                            |
+| validations? | `ValidatorType[]` |         | an array of validator object.          |
+
+### useForm
+
+#### API
+
+Our hooks work well and tiny in size and fast. If you need something more extendable, you
+may take a look at this [final-form.org](https://final-form.org) library.

@@ -1,0 +1,22 @@
+import { InputForm } from "@w-design/form";
+
+# InputForm
+
+<InputForm label="Label" hintMessage="Text hint" placeholder="Text..." isRequired />
+<InputForm label="Icon before" iconBefore="fas fa-user" placeholder="Text..." />
+<InputForm label="Icon after" iconAfter="fas fa-user" placeholder="Text..." />
+<InputForm label="Is loading" isLoading placeholder="Text..." />
+
+## API
+
+| Props       | type      | default | description                                                     |
+| ----------- | --------- | ------- | --------------------------------------------------------------- |
+| id          | `string`  |         | Text field id attribute, automatically apply for label identify |
+| label       | `string`  |         | Input label                                                     |
+| hintMessage | `string`  |         | Text hint message for the input                                 |
+| isRequired  | `boolean` | false   |                                                                 |
+| isError     | `boolean` | false   |                                                                 |
+| isWarning   | `boolean` | false   |                                                                 |
+| isSuccess   | `boolean` | false   |                                                                 |
+| children    | `any`     |         | other element appears below the input field                     |
+| fluid       | `boolean` | false   |                                                                 |

@@ -13,7 +13,9 @@
     "@mdx-js/loader": "^1.5.1",
     "@next/mdx": "^9.1.4",
     "prism-react-renderer": "^1.0.2",
-    "@w-design/core": "link:..."
+    "@w-design/core": "link:...",
+    "@w-design/form": "link:...",
+    "@w-design/upload": "link:..."
   },
   "devDependencies": {
     "@types/node": "^12.12.17",

@@ -4,6 +4,10 @@ hr {
   margin: 0.5rem 0;
 }
 
+table {
+  margin: 1rem 0;
+}
+
 code {
   color: chocolate;
 }

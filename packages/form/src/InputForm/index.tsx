@@ -4,11 +4,15 @@
  */
 import * as React from "react";
 import { Spinner, Icon } from "@w-design/core";
+import { ActionProps } from "@w-design/core/lib/types/common/props";
 import Label from "../Label";
 import InputField from "../InputField";
-import { FieldGroup, TextHint, RequiredMark, SpinnerWrap, InputContainer } from "./Styled";
-import { ActionProps } from "@w-design/core/lib/types/common/props";
 import { InputFieldProps } from "../InputField";
+import { InputContainer } from "./InputContainer";
+import { TextHint } from "./TextHint";
+import { SpinnerContainer } from "./SpinnerContainer";
+import { FieldGroup } from "./FieldGroup";
+import { RequiredMark } from "./RequiredMark";
 
 export interface InputFormProps extends InputFieldProps, ActionProps {
   label?: string;
@@ -52,9 +56,9 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
 
           {iconAfter && <Icon className={`icon-after ${iconAfter}`} />}
           {isLoading && (
-            <SpinnerWrap>
-              <Spinner />
-            </SpinnerWrap>
+            <SpinnerContainer>
+              <Spinner size="sm" />
+            </SpinnerContainer>
           )}
         </InputContainer>
       </Label>

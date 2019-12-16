@@ -1,0 +1,62 @@
+import { InputField } from "@w-design/form";
+
+# InputField
+
+A single input field component
+
+## Example
+
+<InputField placeholder="Normal status" />
+&nbsp;&nbsp;
+<InputField isError placeholder="Error status" />
+&nbsp;&nbsp;
+<InputField isValid placeholder="Valid status" />
+&nbsp;&nbsp;
+<InputField isWarning placeholder="Warning status" />
+
+```jsx
+<InputField placeholder="Normal status" />
+<InputField isError placeholder="Error status" />
+<InputField isValid placeholder="Valid status" />
+<InputField isWarning placeholder="Warning status" />
+```
+
+### InputField Size
+
+<InputField size="lg" placeholder="Large input" />
+&nbsp;&nbsp;
+<InputField placeholder="Default input" />
+&nbsp;&nbsp;
+<InputField size="sm" placeholder="Small input" />
+&nbsp;&nbsp;
+<InputField placeholder="fluid input" fluid />
+
+```jsx
+<InputField size="lg" placeholder="Large input" />
+<InputField placeholder="Default input" />
+<InputField size="sm" placeholder="Small input" />
+<InputField placeholder="fluid input" fluid />
+```
+
+## API
+
+| Props        | type                                               | default    | description                   |
+| ------------ | -------------------------------------------------- | ---------- | ----------------------------- |
+| inputRef     | `(ref: HTMLInputElement) => {}`                    |            | input refs                    |
+| appearance   | `string`                                           | "standard" |                               |
+| type         | `string`                                           | "text"     | html input type               |
+| name         | `string`                                           |            | field name                    |
+| className    | `string`                                           |            | class name of input field     |
+| autoComplete | `string`                                           | "off"      | control browser auto complete |
+| size         | `string`: "sm", "md", "lg"                         | "md"       | size of input field           |
+| tabIndex     | `number`                                           |            | tabindex order                |
+| value        | `string`                                           |            | input value                   |
+| defaultValue | `string`                                           |            |                               |
+| isRequired   | `boolean`                                          | undefined  | required field                |
+| isError      | `boolean`                                          | undefined  | error status of input value   |
+| isValid      | `boolean`                                          | undefined  | input value validate          |
+| isWarning    | `boolean`                                          | undefined  | warn status of input value    |
+| isFocus      | `boolean`                                          | false      |                               |
+| isDisabled   | `boolean`                                          | false      |                               |
+| onChange     | `(e: React.ChangeEvent<HTMLInputElement>) => void` |            |                               |
+| onBlur       | `(e: React.SyntheticEvent<HTMLElement>) => void`   |            |                               |

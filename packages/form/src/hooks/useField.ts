@@ -18,7 +18,7 @@ export interface FieldProps extends InputFormProps {
 export interface FieldType {
   form: FormProps; // form that returned from `useForm`
   name: string;
-  isRequired: boolean;
+  isRequired?: boolean;
   defaultValue?: string; // the initial value of the input field
   validations?: ValidatorType[]; // validation functions applied to value
 }

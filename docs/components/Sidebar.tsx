@@ -208,6 +208,18 @@ export const Sidebar: React.FunctionComponent<any> = () => {
           ))}
         </SubMenu>
 
+        <MenuItem key="/upload">
+          <Link href="/upload">
+            <a>Upload</a>
+          </Link>
+        </MenuItem>
+
+        <MenuItem key="/Masonry">
+          <Link href="/masonry">
+            <a>Masonry</a>
+          </Link>
+        </MenuItem>
+
         <MenuHeading>Hooks</MenuHeading>
         <MenuItem key="/clickoutside">
           <Link href="/clickoutside">

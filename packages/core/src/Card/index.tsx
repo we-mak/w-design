@@ -8,7 +8,7 @@ import { CardContent } from "./CardContent";
 import { GlobProps } from "../common/props";
 
 export interface CardProps extends GlobProps {
-  children?: React.ReactChild | React.ReactChild[];
+  children?: React.ReactNode;
   raised?: boolean;
   isLoading?: boolean;
 }
@@ -22,7 +22,7 @@ const getCardStyle = (props: CardProps) => {
     box-shadow: ${props.theme.shadows[2]};
 
     ${props.raised &&
-      `
+    `
     transition: box-shadow 0.2s cubic-bezier(0.5, 0.045, 0.4, 1);
     &:hover {
       box-shadow: ${props.theme.shadows[4]}
@@ -97,8 +97,8 @@ const Card = ({ children, isLoading, ...rest }: CardProps) => {
           </ContentPlaceHolder>
         </CardLoading>
       ) : (
-        children
-      )}
+          children
+        )}
     </CardWrapper>
   );
 };

@@ -13,7 +13,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/we-mak/w-design.svg)](https://greenkeeper.io/)
 
-Main focus of this libary is styling with css-in-js, keep it as small as posible.
+Main focus of this libary is styling with css-in-js, keep it as small as posible. Suitable for web application.
 Feel free to use this library, or help us to improve it.
 
 ## Features
@@ -60,6 +60,15 @@ For how-to questions and other non-issues, please use StackOverflow instead of G
 ## Development
 
 We are using [Lerna](https://lerna.js.org/) to manage monorepo packages, please check their document.
+
+TODO: hot reloading on dev not works yet
+
+### Steps to publish
+
+1. Check update all packages dependencies
+2. Run all tests and coverage
+3. Build packages
+4. Publish
 
 ## License
 

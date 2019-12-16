@@ -14,27 +14,28 @@ import {
 
 export interface ButtonProps
   extends GlobProps,
-    SizeProps,
-    LinkProps,
-    ActionProps,
-    SyntheticEventProps,
-    MouseEventProps {
+  SizeProps,
+  LinkProps,
+  ActionProps,
+  SyntheticEventProps,
+  MouseEventProps {
   /** button apperance type */
   appearance?:
-    | "default"
-    | "primary"
-    | "danger"
-    | "warning"
-    | "success"
-    | "subtle"
-    | "link"
-    | "help"
-    | "clean";
+  | "default"
+  | "primary"
+  | "danger"
+  | "warning"
+  | "success"
+  | "subtle"
+  | "link"
+  | "help"
+  | "clean";
   /** WAI-ARIA support */
   ariaControls?: string;
   ariaExpanded?: boolean;
   ariaLabel?: string;
   ariaHaspopup?: boolean;
+  role?: string;
   /** button type attribute*/
   type?: "button" | "submit" | "reset";
   /** Name property of a linked form that the button submits when clicked. */
@@ -42,7 +43,7 @@ export interface ButtonProps
   /** selected button */
   isSelected?: boolean;
   /** children */
-  children?: any;
+  children?: React.ReactNode;
   buttonRef?: React.RefObject<HTMLElement>;
   isRequired?: boolean;
 }

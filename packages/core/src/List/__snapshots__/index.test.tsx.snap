@@ -21,7 +21,7 @@ exports[`<List/> should render correctly 1`] = `
       class="sc-fzXfLO fjKZof"
     >
       <li
-        class="sc-fzXfLP dkOwhO"
+        class="sc-fzXfLP bszDrO"
       >
         <div
           class="sc-fzXfLQ jzdaBm"
@@ -60,7 +60,7 @@ exports[`<List/> should render correctly 1`] = `
         />
       </li>
       <li
-        class="sc-fzXfLP dkOwhO"
+        class="sc-fzXfLP bszDrO"
       >
         <div
           class="sc-fzXfLQ jzdaBm"

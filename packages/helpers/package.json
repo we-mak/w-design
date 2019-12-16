@@ -33,12 +33,12 @@
     "clean": "rimraf ./lib",
     "dev": "cross-env NODE_ENV=development && yarn type-check",
     "watch": "BABEL_ENV=dev babel src --out-dir lib/cjs --extensions .ts,.tsx --watch --config-file ../../babel.config.js",
-    "type-check": "tsc --watch --p tsconfig.json --noEmit",
+    "type-check": "tsc -p tsconfig.json -w --noEmit",
     "test": "cross-env CI=1 jest test -u --colors",
     "build": "cross-env NODE_ENV=production && yarn build:cjs && yarn build:es",
-    "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib/cjs --extensions \".ts,.tsx\" --config-file ../../babel.config.js --no-comments",
-    "build:es": "BABEL_ENV=es babel src --out-dir lib/es --extensions \".ts,.tsx\" --config-file ../../babel.config.js --no-comments",
-    "postbuild": "tsc --emitDeclarationOnly --p tsconfig.json"
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib/cjs --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
+    "build:es": "BABEL_ENV=es babel src --out-dir lib/es --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
+    "postbuild": "tsc --emitDeclarationOnly -p tsconfig.json"
   },
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"

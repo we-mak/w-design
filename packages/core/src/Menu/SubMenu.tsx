@@ -22,7 +22,7 @@ export interface SubMenuProps extends GlobProps {
 }
 
 // titleSpinner
-const SubMenuTitle = styled.div`
+const Title = styled.div`
   padding: 0.4rem;
   position: relative;
   display: flex;
@@ -35,7 +35,7 @@ const SubMenuTitle = styled.div`
     }
   }
 `;
-SubMenuTitle.displayName = "SubMenuTitle";
+
 // list
 const SubList = styled.ul`
   padding: 0;
@@ -68,10 +68,9 @@ Loader.displayName = "Loader";
 /**
  * Submenu Container
  */
-const SubMenuStyled = styled.li`
+const Container = styled.li`
   ${getSubMenuStyle}
 `;
-SubMenuStyled.displayName = "SubMenuComponent";
 
 const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
   title,
@@ -126,12 +125,12 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
   };
 
   return (
-    <SubMenuStyled ref={menuRef} {...rest}>
-      <SubMenuTitle onClick={onToggleMenu} onFocus={onLoadingList} ref={titleRef}>
+    <Container ref={menuRef} {...rest}>
+      <Title onClick={onToggleMenu} onFocus={onLoadingList} ref={titleRef}>
         {icon && <IconBefore>{icon}</IconBefore>}
         {title}
         {isLoading ? <Loader /> : <Arrow isOpen={open} />}
-      </SubMenuTitle>
+      </Title>
       <SubList role="menu" isOpen={open} style={listStyle}>
         {React.Children.map(children!, (child: any) => {
           return React.cloneElement(child, {
@@ -139,9 +138,8 @@ const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
           });
         })}
       </SubList>
-    </SubMenuStyled>
+    </Container>
   );
 };
 
 export const SubMenu = React.memo(SubMenuComponent);
-SubMenu.displayName = "SubMenu";

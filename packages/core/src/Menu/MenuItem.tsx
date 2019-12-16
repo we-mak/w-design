@@ -17,7 +17,7 @@ export interface MenuItemProps extends GlobProps {
   isDisabled?: boolean;
 }
 
-const MenuItemAfter = styled.div`
+const ItemAfter = styled.div`
   align-items: center;
   display: flex;
   height: 100%;
@@ -26,19 +26,16 @@ const MenuItemAfter = styled.div`
   top: 0;
   margin: 0 0.4rem;
 `;
-MenuItemAfter.displayName = "AfterItem";
 
 export const IconBefore = styled.span`
   display: inline;
   color: ${props => props.theme.colors["N30"]};
   margin: 0 0.4rem;
 `;
-IconBefore.displayName = "IconBefore";
 
-const MenuItemStyled = styled.li`
+const Wrapper = styled.li`
   ${getMenuItemStyle}
 `;
-MenuItemStyled.displayName = "MenuItemComponent";
 
 export const MenuItem = ({
   children,
@@ -51,7 +48,7 @@ export const MenuItem = ({
   const { selectedKey, onSelectItem } = useMenu();
 
   return (
-    <MenuItemStyled
+    <Wrapper
       role="menuitem"
       onClick={() => {
         if (isDisabled) return;
@@ -66,7 +63,7 @@ export const MenuItem = ({
     >
       {iconBefore && <IconBefore>{iconBefore}</IconBefore>}
       {children}
-      {after && <MenuItemAfter>{after}</MenuItemAfter>}
-    </MenuItemStyled>
+      {after && <ItemAfter>{after}</ItemAfter>}
+    </Wrapper>
   );
 };

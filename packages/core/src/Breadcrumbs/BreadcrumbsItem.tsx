@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
-import { BreadcrumbsItemWrapper, Seperator } from "./Styled";
+import { Seperator } from "./Seperator";
+import { BreadcrumbsItemContainer } from "./BreadcrumbsItemContainer";
 import { GlobProps } from "../common/props";
 
 export interface BreadcrumbsItemProps extends GlobProps {
@@ -9,9 +10,9 @@ export interface BreadcrumbsItemProps extends GlobProps {
 
 export const BreadcrumbsItem = ({ isCurrentPage, children }: BreadcrumbsItemProps) => {
   return (
-    <BreadcrumbsItemWrapper>
+    <BreadcrumbsItemContainer>
       {children}
       {!isCurrentPage && <Seperator role="presentation">/</Seperator>}
-    </BreadcrumbsItemWrapper>
+    </BreadcrumbsItemContainer>
   );
 };

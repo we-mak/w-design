@@ -6,11 +6,11 @@ exports[`<Spinner/> should renders correctly 1`] = `
     class="sc-AykKC fwVfkE"
   >
     <svg
-      class="sc-AykKD hGQySD"
+      class="sc-AykKD hNKatW"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-AykKE hFWLqm"
+        class="sc-AykKE gnttPX"
         cx="50"
         cy="50"
         fill="none"
@@ -27,11 +27,11 @@ exports[`<Spinner/> should renders large size correctly 1`] = `
     class="sc-AykKC cEUPgV"
   >
     <svg
-      class="sc-AykKD hGQySD"
+      class="sc-AykKD hNKatW"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-AykKE hFWLqm"
+        class="sc-AykKE gnttPX"
         cx="50"
         cy="50"
         fill="none"
@@ -43,11 +43,11 @@ exports[`<Spinner/> should renders large size correctly 1`] = `
     class="sc-AykKC fwVfkE"
   >
     <svg
-      class="sc-AykKD hGQySD"
+      class="sc-AykKD hNKatW"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-AykKE hFWLqm"
+        class="sc-AykKE gnttPX"
         cx="50"
         cy="50"
         fill="none"
@@ -59,11 +59,11 @@ exports[`<Spinner/> should renders large size correctly 1`] = `
     class="sc-AykKC eMGNbZ"
   >
     <svg
-      class="sc-AykKD hGQySD"
+      class="sc-AykKD hNKatW"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-AykKE hFWLqm"
+        class="sc-AykKE gnttPX"
         cx="50"
         cy="50"
         fill="none"

@@ -4,7 +4,7 @@ import {
   filterObject,
   firstLetter,
   removeAccentMarks
-} from "../lib";
+} from "../src";
 import { setUid } from "../src";
 
 const testObject = {
@@ -13,7 +13,7 @@ const testObject = {
   baz: "dolor"
 };
 
-describe("object helper tests", () => {
+describe("object-helpers", () => {
   test("randomProperty should get the radom value from object", () => {
     expect(randomProperty(testObject)).toMatchSnapshot();
   });
@@ -30,7 +30,7 @@ describe("object helper tests", () => {
   });
 });
 
-describe("string helper tests", () => {
+describe("string-helper", () => {
   test("firstLetter should get the first letter from string", () => {
     expect(firstLetter("Lorem Ipsum")).toBe("LI");
   });

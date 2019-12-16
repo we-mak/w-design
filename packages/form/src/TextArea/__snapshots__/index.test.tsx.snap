@@ -3,71 +3,71 @@
 exports[`<TextArea/> should render correct with TextArea style 1`] = `
 <div>
   <div
-    class="sc-fzXfQU gIzRMJ"
+    class="sc-AykKD eMqpMZ"
   >
     <label
-      class="sc-fzXfQT cwWujf"
+      class="sc-AykKC dUVGKz"
     >
       TextArea
     </label>
     <textarea
       autocomplete="off"
-      class="sc-fzXfQV dDkvmd"
+      class="sc-AykKE hgCwUB"
     />
   </div>
   <div
-    class="sc-fzXfQU gIzRMJ"
+    class="sc-AykKD eMqpMZ"
   >
     <label
-      class="sc-fzXfQT cwWujf"
+      class="sc-AykKC dUVGKz"
     />
     <textarea
       autocomplete="off"
-      class="sc-fzXfQV cMyUWe"
+      class="sc-AykKE gpQWEC"
     />
   </div>
   <div
-    class="sc-fzXfQU gIzRMJ"
+    class="sc-AykKD eMqpMZ"
   >
     <label
-      class="sc-fzXfQT cwWujf"
+      class="sc-AykKC dUVGKz"
     />
     <textarea
       autocomplete="off"
-      class="sc-fzXfQV dqrgxn"
+      class="sc-AykKE gTJifL"
     />
   </div>
   <div
-    class="sc-fzXfQU gIzRMJ"
+    class="sc-AykKD eMqpMZ"
   >
     <label
-      class="sc-fzXfQT cwWujf"
+      class="sc-AykKC dUVGKz"
     />
     <textarea
       autocomplete="off"
-      class="sc-fzXfQV khLBja"
+      class="sc-AykKE cvHTsC"
     />
   </div>
   <div
-    class="sc-fzXfQU gIzRMJ"
+    class="sc-AykKD eMqpMZ"
   >
     <label
-      class="sc-fzXfQT cwWujf"
+      class="sc-AykKC dUVGKz"
     />
     <textarea
       autocomplete="off"
-      class="sc-fzXfQV khLBja"
+      class="sc-AykKE cvHTsC"
     />
   </div>
   <div
-    class="sc-fzXfQU gIzRMJ"
+    class="sc-AykKD eMqpMZ"
   >
     <label
-      class="sc-fzXfQT cwWujf"
+      class="sc-AykKC dUVGKz"
     />
     <textarea
       autocomplete="on"
-      class="sc-fzXfQV dDkvmd"
+      class="sc-AykKE hgCwUB"
     />
   </div>
 </div>

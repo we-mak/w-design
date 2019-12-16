@@ -12,16 +12,17 @@ exports[`<Comment/> should renders correctly 1`] = `
         class="sc-AykKJ blkNIl"
       >
         <figure
-          class="sc-AykKE fYeJqq"
+          class="sc-AykKC erfkjk"
+          style="background-color: white;"
         >
           <span
-            class="sc-AykKF jSGGQp"
+            class="sc-AykKE jIRtDc"
           >
             Wm
           </span>
           <img
             alt=""
-            class="sc-AykKC dDedwH sc-AykKG goprXt"
+            class="sc-AykKF cElFvy sc-AykKH gwfeJC"
             data-src="https://source.unsplash.com/random"
             src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
           />

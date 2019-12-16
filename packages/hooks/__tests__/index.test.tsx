@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-import { useClickOutside } from "../";
+import { useClickOutside } from "../src";
 
 afterEach(cleanup);
 

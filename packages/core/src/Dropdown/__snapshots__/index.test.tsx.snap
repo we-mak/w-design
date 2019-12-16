@@ -8,11 +8,11 @@ exports[`<Dropdown/> should renders correctly 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AykKG fPUkuM"
+      class="sc-AykKG eVAuDO"
       type="button"
     >
       <div
-        class="sc-AykKJ fBVMpK"
+        class="sc-AykKJ kTUdhc"
       >
         <span
           class="sc-fzXfLR lbhTAk"
@@ -62,11 +62,11 @@ exports[`<Dropdown/> should renders correctly 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AykKG fPUkuM"
+      class="sc-AykKG eVAuDO"
       type="button"
     >
       <div
-        class="sc-AykKJ fBVMpK"
+        class="sc-AykKJ kTUdhc"
       >
         <span
           class="sc-fzXfLR lbhTAk"
@@ -101,11 +101,11 @@ exports[`<Dropdown/> should renders correctly 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AykKG fPUkuM"
+      class="sc-AykKG eVAuDO"
       type="button"
     >
       <div
-        class="sc-AykKJ fBVMpK"
+        class="sc-AykKJ kTUdhc"
       >
         <span
           class="sc-fzXfLR lbhTAk"
@@ -140,11 +140,11 @@ exports[`<Dropdown/> should renders correctly 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AykKG fPUkuM"
+      class="sc-AykKG eVAuDO"
       type="button"
     >
       <div
-        class="sc-AykKJ fBVMpK"
+        class="sc-AykKJ kTUdhc"
       >
         <span
           class="sc-fzXfLR lbhTAk"
@@ -179,11 +179,11 @@ exports[`<Dropdown/> should renders correctly 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AykKG fPUkuM"
+      class="sc-AykKG eVAuDO"
       type="button"
     >
       <div
-        class="sc-AykKJ fBVMpK"
+        class="sc-AykKJ kTUdhc"
       >
         <span
           class="sc-fzXfLR lbhTAk"

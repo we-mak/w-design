@@ -29,10 +29,9 @@ export interface MenuProps extends GlobProps {
 // add onOpenChange to call when open and close submenu
 // add onSelect to have the callback when menu Item is selected
 
-const MenuStyled = styled.ul`
+const Container = styled.ul`
   ${getMenuStyle}
 `;
-MenuStyled.displayName = "MenuContainer";
 
 const Menu = (props: MenuProps) => {
   const {
@@ -62,13 +61,13 @@ const Menu = (props: MenuProps) => {
 
   return (
     <MenuContext.Provider value={value}>
-      <MenuStyled role="menu" width={width} {...rest}>
+      <Container role="menu" width={width} {...rest}>
         {React.Children.map(children!, (child: any) => {
           return React.cloneElement(child, {
             eventKey: child.key || "menu-key"
           });
         })}
-      </MenuStyled>
+      </Container>
     </MenuContext.Provider>
   );
 };

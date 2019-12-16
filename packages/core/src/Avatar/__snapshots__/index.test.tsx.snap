@@ -3,75 +3,76 @@
 exports[`<Avatar/> should renders correctly 1`] = `
 <div>
   <figure
-    class="sc-AykKE jAzKFE"
+    class="sc-AykKC hTAlyy"
+    style="background-color: white;"
   >
     <span
-      class="sc-AykKF MHQgm"
+      class="sc-AykKE dyNutN"
     >
       Wm
     </span>
     <img
       alt="test"
-      class="sc-AykKC dDedwH sc-AykKG goprXt"
+      class="sc-AykKF cElFvy sc-AykKH gwfeJC"
       data-src="https://api.adorable.io/avatars/240/thunder"
       src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
     />
     <span
-      class="sc-AykKH axJbq"
+      class="sc-AykKD jbUuma"
     />
   </figure>
   <figure
-    class="sc-AykKE fYeJqq"
-    style="background-color: rgb(121, 226, 242);"
+    class="sc-AykKC erfkjk"
+    style="background-color: rgb(135, 119, 217);"
   >
     <span
-      class="sc-AykKF jSGGQp"
+      class="sc-AykKE jIRtDc"
     >
       Wm
     </span>
     <span
-      class="sc-AykKH eohDgq"
+      class="sc-AykKD aiESe"
     />
   </figure>
   <figure
-    class="sc-AykKE fogrNI"
-    style="background-color: rgb(255, 173, 173);"
+    class="sc-AykKC cVUTfi"
+    style="background-color: rgb(41, 166, 52);"
   >
     <span
-      class="sc-AykKF cJIpVE"
+      class="sc-AykKE czTcIr"
     >
       Wm
     </span>
     <span
-      class="sc-AykKH jlUPgu"
+      class="sc-AykKD fXVQSi"
     />
   </figure>
   <figure
-    class="sc-AykKE bduLYi"
-    style="background-color: rgb(192, 182, 242);"
+    class="sc-AykKC kLQWpY"
+    style="background-color: rgb(230, 252, 255);"
   >
     <span
-      class="sc-AykKF kfbUKA"
+      class="sc-AykKE dTSzpn"
     >
       Wm
     </span>
   </figure>
   <figure
-    class="sc-AykKE fPiBOs"
-    style="background-color: rgb(0, 70, 96);"
+    class="sc-AykKC dwXdfS"
+    style="background-color: rgb(77, 210, 87);"
   >
     <span
-      class="sc-AykKF fTWQPX"
+      class="sc-AykKE iGcvdy"
     >
       Wm
     </span>
   </figure>
   <figure
-    class="sc-AykKE gqkLPc"
-    style="background-color: rgb(180, 4, 4);"
+    class="sc-AykKC dXZngC"
+    style="background-color: rgb(255, 172, 35);"
   >
     <span
-      class="sc-AykKF eJGSSB"
+      class="sc-AykKE jNTgWk"
     >
       Wm
     </span>

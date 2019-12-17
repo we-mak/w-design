@@ -6,7 +6,7 @@ import { NavSection } from "./NavSection";
 import { GlobProps } from "../common/props";
 
 export interface NavProps extends GlobProps, DisplayProps {
-  children?: React.ReactChild | React.ReactChild[];
+  children?: React.ReactNode | React.ReactNode[];
 }
 
 const Nav = styled.nav`

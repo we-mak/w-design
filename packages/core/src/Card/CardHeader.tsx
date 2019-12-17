@@ -4,9 +4,9 @@ import Typo from "../Typo";
 import { GlobProps } from "../common/props";
 
 export interface CardHeaderProps extends GlobProps {
-  title?: string;
-  description?: string | React.ReactChild;
-  children?: React.ReactChild;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const CardHeaderWrapper = styled.div`

@@ -19,13 +19,13 @@ export interface ModalContainerStyleProps {
 
 export interface ModalProps
   extends GlobProps,
-    ModalContainerStyleProps,
-    SyntheticEventProps,
-    MouseEventProps {
+  ModalContainerStyleProps,
+  SyntheticEventProps,
+  MouseEventProps {
   onClose: (e: React.SyntheticEvent<HTMLElement>) => void;
   modalTitle?: string;
-  modalBody?: React.ReactChild;
-  modalFooter?: React.ReactChild;
+  modalBody?: React.ReactNode;
+  modalFooter?: React.ReactNode;
 }
 
 const options: BodyScrollOptions = {

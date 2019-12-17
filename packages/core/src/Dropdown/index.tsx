@@ -1,14 +1,13 @@
 import * as React from "react";
 import { useClickOutside } from "@w-design/hooks";
-import Button from "../Button";
+import Button, { ButtonProps } from "../Button";
 import { Arrow } from "./Arrow";
 import { DropdownWrapper, DropdownPanel, Title } from "./Styled";
 import { GlobProps, SizeProps } from "../common/props";
 
-export interface DropdownProps extends GlobProps, SizeProps {
+export interface DropdownProps extends GlobProps, SizeProps, ButtonProps {
   title?: string;
-  iconAfter?: string;
-  content?: React.ReactChild | React.ReactChild[];
+  content?: React.ReactNode | React.ReactNode[];
   position?: "bottomCenter" | "bottomRight" | "topLeft" | "topRight" | "topCenter";
 }
 

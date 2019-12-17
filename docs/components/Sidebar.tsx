@@ -34,8 +34,8 @@ const core = [
     link: "/core/card"
   },
   {
-    title: "Collapsible",
-    link: "/core/collapsible"
+    title: "Collapse",
+    link: "/core/collapse"
   },
   {
     title: "Comment",

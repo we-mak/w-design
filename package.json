@@ -23,6 +23,7 @@
   },
   "scripts": {
     "dev": "cross-env lerna exec --no-sort -- yarn dev",
+    "watch": "cross-env lerna exec --no-sort -- yarn watch",
     "prebuild": "rimraf ./packages/*/lib",
     "build": "CI=1 lerna exec --stream -- yarn build",
     "bootstrap": "lerna bootstrap",
@@ -65,7 +66,7 @@
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "jest-dom": "^4.0.0",
-    "jest-styled-components": "^6.3.4",
+    "jest-styled-components": "^7.0.0-beta.2",
     "jest-transform-css": "^2.0.0",
     "lerna": "^3.19.0",
     "lint-staged": "^9.4.3",

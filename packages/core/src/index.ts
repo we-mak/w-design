@@ -11,6 +11,7 @@ export {
   CardContent,
   CardFooter
 } from "./Card";
+export { default as Collapse } from "./Collapse";
 export { default as Comment } from "./Comment";
 export { default as Container } from "./Container";
 export { default as CustomTag } from "./CustomTag";

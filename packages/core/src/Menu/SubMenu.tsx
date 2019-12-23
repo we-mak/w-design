@@ -7,7 +7,7 @@ import Spinner from "../Spinner";
 import { Arrow } from "./Arrow";
 import { IconBefore } from "./MenuItem";
 import { useMenu } from "./MenuContext";
-import { getSubMenuStyle } from "./Styled";
+import { getSubMenuStyle } from "./getStyled";
 import { GlobProps } from "../common/props";
 
 export interface SubMenuProps extends GlobProps {

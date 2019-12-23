@@ -22,8 +22,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "cross-env lerna exec --no-sort -- yarn dev",
-    "watch": "cross-env lerna exec --no-sort -- yarn watch",
+    "dev": "lerna run dev --stream",
     "prebuild": "rimraf ./packages/*/lib",
     "build": "CI=1 lerna exec --stream -- yarn build",
     "bootstrap": "lerna bootstrap",

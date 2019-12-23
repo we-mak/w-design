@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 import { hex2Rgba } from "@w-design/helpers";
-import { MenuProps } from "./";
+import { MenuProps } from ".";
 import { MenuItemProps } from "./MenuItem";
 
 export const getMenuStyle = (props: MenuProps) => {

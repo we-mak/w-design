@@ -1,12 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import { MenuContext } from "./MenuContext";
-import { getMenuStyle } from "./Styled";
-// import to export
-import { MenuItem } from "./MenuItem";
-import { MenuHeading } from "./MenuHeading";
-import { SubMenu } from "./SubMenu";
+import { getMenuStyle } from "./getStyled";
 import { GlobProps } from "../common/props";
+
+// export elements
+export { MenuItem } from "./MenuItem";
+export { MenuHeading } from "./MenuHeading";
+export { SubMenu } from "./SubMenu";
 
 export interface MenuProps extends GlobProps {
   children?: React.ReactNode;
@@ -73,4 +74,3 @@ const Menu = (props: MenuProps) => {
 };
 
 export default Menu;
-export { MenuItem, SubMenu, MenuHeading };

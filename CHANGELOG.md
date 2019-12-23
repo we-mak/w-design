@@ -9,27 +9,35 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Refactor `Icon`
 - ❌ Avatar `Upload`
 
-### <a name="0.44.0"></a>#[v0.44.0]()
+---
 
-Universal styles: Seperate pakage resolve generic styles for the tool kit
+### <a name="0.45.0"></a>#[v0.45.0]()
+
+Universal styles: Resolve sharing styles to multiple components for the toolkit.
+Such as size, appearance...
 
 ---
 
-### <a name="0.43.0"></a>#[v0.43.0]()
+### <a name="0.44.2"></a>#[v0.44.2]()
 
 - ❌ `Collapse`
 - ❌ `Badge`
 - ❌ `Tabs`
 - ❌ Inherit `SubMenu` with `Collapse` component
+- ❌ `Menu` open keys
+- ❌ Improve development exeprience with hot reload setup
+- ✅ Fixed https://github.com/we-mak/w-design/issues/56
+- ✅ Update modal types
 
 ---
 
 ### <a name="0.42.0"></a>#[v0.42.0]()
 
 Split code at bundling packages:
-* Replace rollup with `babel`,`tsc` build.
-* Update documents
-* Some minor tweaks
+
+- Replace rollup with `babel`,`tsc` build.
+- Update documents
+- Some minor tweaks
 
 ---
 

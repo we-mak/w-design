@@ -54,7 +54,5 @@
     "styled-system": "^5.1.4"
   },
   "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f",
-  "devDependencies": {
-    "eslint-plugin-react-hooks": "^2.3.0"
-  }
+  "devDependencies": {}
 }

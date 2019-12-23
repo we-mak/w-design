@@ -1,1 +1,1 @@
-export { default as Masonry, MasonryProps } from "./Masonry";
+export { default as Masonry } from "./Masonry";

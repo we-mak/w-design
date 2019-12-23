@@ -2,7 +2,8 @@ import * as React from "react";
 import { useClickOutside } from "@w-design/hooks";
 import Button, { ButtonProps } from "../Button";
 import { Arrow } from "./Arrow";
-import { DropdownWrapper, DropdownPanel, Title } from "./Styled";
+import { DropdownWrapper, Title } from "./Styled";
+import { DropdownPanel } from "./DropdownPanel";
 import { GlobProps, SizeProps } from "../common/props";
 
 export interface DropdownProps extends GlobProps, SizeProps, ButtonProps {

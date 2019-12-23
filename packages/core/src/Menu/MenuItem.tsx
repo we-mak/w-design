@@ -15,6 +15,7 @@ export interface MenuItemProps extends GlobProps {
   isSelected?: boolean;
   tabIndex?: number;
   isDisabled?: boolean;
+  role?: string;
 }
 
 const ItemAfter = styled.div`

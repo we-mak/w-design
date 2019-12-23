@@ -9,7 +9,7 @@ import { SubMenu } from "./SubMenu";
 import { GlobProps } from "../common/props";
 
 export interface MenuProps extends GlobProps {
-  children?: React.ReactChild | React.ReactChild[];
+  children?: React.ReactNode;
   fullWidth?: boolean;
   width?: string | number;
   // set default selected key

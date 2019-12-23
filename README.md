@@ -3,8 +3,6 @@
  <h1>w-design</h1>
 </div>
 
-
-
 # Introduction
 
 #### A React UI toolkit library is built with typescript
@@ -25,9 +23,7 @@ Feel free to use this library, or help us to improve it.
 
 ## Packages
 
-
-
-Published libaries at `npm`
+Published libraries at `npm`
 
 - [![npm](https://img.shields.io/npm/v/%40w-design%2Fcore.svg?label=%40w-design%2Fcore.svg)](https://www.npmjs.com/package/@w-design/core)
   Core elements & components

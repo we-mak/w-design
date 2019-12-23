@@ -20,7 +20,7 @@ import React, {
   ReactElement,
   memo
 } from "react";
-import { MasonryLayout } from "./Styled";
+import { MasonryLayout } from "./MasonryLayout";
 
 export interface MasonryProps {
   children: Array<any>;

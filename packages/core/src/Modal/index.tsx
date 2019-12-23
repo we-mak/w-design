@@ -26,6 +26,7 @@ export interface ModalProps
   modalTitle?: string;
   modalBody?: React.ReactNode;
   modalFooter?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const options: BodyScrollOptions = {

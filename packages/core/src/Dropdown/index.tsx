@@ -1,10 +1,24 @@
 import * as React from "react";
+import styled from "styled-components";
 import { useClickOutside } from "@w-design/hooks";
 import Button, { ButtonProps } from "../Button";
 import { Arrow } from "./Arrow";
-import { DropdownWrapper, Title } from "./Styled";
 import { DropdownPanel } from "./DropdownPanel";
 import { GlobProps, SizeProps } from "../common/props";
+
+const Wrapper = styled.div`
+  display: block;
+  position: relative;
+  width: fit-content;
+`;
+
+const Title = styled.span`
+  align-self: center;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  line-height: 1.2;
+`;
 
 export interface DropdownProps extends GlobProps, SizeProps, ButtonProps {
   title?: string;
@@ -16,10 +30,14 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
   const [isOpen, setOpen] = React.useState(false);
   const [panelstyle, setStyle] = React.useState({});
 
-  const buttonRef = useClickOutside(() => setOpen(false));
-  const panelRef: React.MutableRefObject<any> = React.useRef();
+  const buttonRef: React.MutableRefObject<any> = React.useRef();
+  const panelRef = useClickOutside(e => {
+    if (!buttonRef!.current!.contains(e.target)) {
+      setOpen(false);
+    }
+  });
 
-  const openDropdownPanel = () => {
+  function openDropdownPanel() {
     const buttonNode: HTMLElement = buttonRef!.current!;
     const panelNode: HTMLElement = panelRef!.current!;
     const btnDimension = buttonNode!.getBoundingClientRect();
@@ -29,9 +47,8 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
     const panelWidth = panelNode.offsetWidth;
 
     // difine values
-    let defaultMargin = 5; // Default Margin for Drop down panel
+    let defaultMargin = 5; // Default Margin for Dropdown panel
     let style;
-
     // Relation Position of panel and button
     const positions = {
       Xcenter: -(panelWidth / 2 - width / 2),
@@ -81,10 +98,10 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
 
     setStyle(style);
     setOpen(!isOpen);
-  };
+  }
 
   return (
-    <DropdownWrapper>
+    <Wrapper>
       <Button
         buttonRef={buttonRef}
         ariaHaspopup={true}
@@ -103,7 +120,7 @@ const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }:
       <DropdownPanel isOpen={isOpen} ref={panelRef} style={panelstyle}>
         {content}
       </DropdownPanel>
-    </DropdownWrapper>
+    </Wrapper>
   );
 };
 

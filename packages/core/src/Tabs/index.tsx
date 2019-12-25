@@ -3,15 +3,26 @@
  * Tab components
  */
 import * as React from "react";
-import { TabsContainer, TabsList, Tab } from "./Styled";
+import styled from "styled-components";
+import { TabsList, Tab } from "./getStyled";
+
+const Container = styled.div`
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 0%;
+`;
 
 const Tabs = () => {
   return (
-    <TabsContainer>
+    <Container>
       <TabsList role="tablist" aria-orientation="horizontal">
-        <Tab>Tabs</Tab>
+        <Tab>Tab 1</Tab>
+        <Tab>Tab 2</Tab>
       </TabsList>
-    </TabsContainer>
+    </Container>
   );
 };
 

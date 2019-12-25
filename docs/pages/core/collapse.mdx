@@ -2,4 +2,25 @@ import { Collapse } from "@w-design/core";
 
 # Collapse
 
-<Collapse />
+A collapsible content triggered by a button. This component can be use as a show/hide content to keep the page clean.
+W-design submenu list inherits from `Collapse` component.
+
+### Example
+
+<Box maxWidth={300}>
+  <Collapse title="Collapse component">
+    Software is like entropy: It is difficult to grasp, weighs nothing, and obeys the Second Law of
+    Thermodynamics; i.e., it always increases.
+  </Collapse>
+</Box>
+
+### API
+
+| Props         | type             | default | description                       |
+| ------------- | ---------------- | ------- | --------------------------------- |
+| title         | string           |         | title of the collapse             |
+| tag           | string           | "div"   | Html tag of the wrapper component |
+| icon          | React.ReactChild |         |                                   |
+| isDefaultOpen | boolean          |         |                                   |
+| onLoadingList | boolean          |         |                                   |
+| children      | string           |         |                                   |

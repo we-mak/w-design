@@ -21,7 +21,6 @@ export interface SubMenuProps extends GlobProps {
   onLoadingList?: (e: React.SyntheticEvent<HTMLElement>) => void;
 }
 
-// titleSpinner
 const Title = styled.div`
   padding: 0.4rem;
   position: relative;
@@ -41,7 +40,7 @@ const SubList = styled.ul`
   padding: 0;
   position: relative;
   display: block;
-  opacity: ${(props: SubMenuProps) => (props.isOpen ? 1 : 0)};
+  /* opacity: ${(props: SubMenuProps) => (props.isOpen ? 1 : 0)}; */
   transition: height 0.3s cubic-bezier(0.5, 0.045, 0.4, 1),
     opacity 0.1s cubic-bezier(0.5, 0.045, 0.4, 1);
   will-change: height;
@@ -50,7 +49,6 @@ const SubList = styled.ul`
     padding-left: 2rem;
   }
 `;
-SubList.displayName = "SubList";
 
 // Loading
 const Loader = styled(Spinner)`
@@ -63,7 +61,6 @@ const Loader = styled(Spinner)`
   margin: 0 0.4rem;
   padding: 0 0.6rem;
 `;
-Loader.displayName = "Loader";
 
 /**
  * Submenu Container
@@ -123,13 +120,15 @@ export const SubMenu: React.FunctionComponent<SubMenuProps> = React.memo(
           {title}
           {isLoading ? <Loader /> : <Arrow isOpen={open} />}
         </Title>
-        <SubList role="menu" isOpen={open} style={listStyle}>
-          {React.Children.map(children!, (child: any) => {
-            return React.cloneElement(child, {
-              eventKey: child.key || "submenu-key"
-            });
-          })}
-        </SubList>
+        {open && (
+          <SubList role="menu" style={listStyle}>
+            {React.Children.map(children!, (child: any) => {
+              return React.cloneElement(child, {
+                eventKey: child.key || "submenu-key"
+              });
+            })}
+          </SubList>
+        )}
       </Container>
     );
   }

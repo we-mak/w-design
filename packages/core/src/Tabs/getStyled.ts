@@ -1,14 +1,5 @@
 import styled from "styled-components";
 
-export const TabsContainer = styled.div`
-  display: flex;
-  flex-basis: 100%;
-  flex-direction: column;
-  flex-grow: 1;
-  max-width: 100%;
-  min-height: 0%;
-`;
-
 export const TabsList = styled.div`
   position: relative;
 `;

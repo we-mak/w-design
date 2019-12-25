@@ -25,7 +25,7 @@ Such as size, appearance...
 - ❌ `Tabs`
 - ❌ Inherit `SubMenu` with `Collapse` component
 - ❌ `Menu` open keys
-- ❌ Improve development exeprience with hot reload setup
+- ✅ Improve development exeprience with hot reload setup
 - ✅ Fixed https://github.com/we-mak/w-design/issues/56
 - ✅ Update modal types
 

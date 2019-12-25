@@ -18,6 +18,10 @@ const core = [
     link: "/core/avatar-group"
   },
   {
+    title: "Badge",
+    link: "/core/badge"
+  },
+  {
     title: "Box",
     link: "/core/box"
   },

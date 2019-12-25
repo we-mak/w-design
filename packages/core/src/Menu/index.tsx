@@ -45,17 +45,14 @@ const Menu = (props: MenuProps) => {
   } = props;
 
   const [selectedKey, setSelectedKey] = React.useState(defaultSelectedKey);
-  const [
-    openKeys
-    //  setOpenKeys
-  ] = React.useState(defaultOpenKeys);
+  const [openKeys, setOpenKeys] = React.useState(defaultOpenKeys);
 
   const value = React.useMemo(() => {
     return {
       selectedKey,
       setSelectedKey,
       openKeys,
-      // setOpenKeys,
+      setOpenKeys,
       defaultOpenKeys
     };
   }, [selectedKey, openKeys]);

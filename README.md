@@ -16,10 +16,11 @@ Feel free to use this library, or help us to improve it.
 
 ## Features
 
-- Written with React hooks, Typescript
+- Written with Typescript to improve dev experience.
+- Code splitting built with babel.
 - Styled with styled-components and styled-system
-- Suitable for web application
-- Supports modern web browsers. If you care about IE, don't use this library.
+- Suitable for web application.
+- Supports modern web browsers, included common js & es. If you care about IE, don't use this library.
 
 ## Packages
 
@@ -57,7 +58,12 @@ For how-to questions and other non-issues, please use StackOverflow instead of G
 
 We are using [Lerna](https://lerna.js.org/) to manage monorepo packages, please check their document.
 
-TODO: hot reloading on dev not works yet
+At the root directory, do following steps:
+
+1. Pull the repository and install by `yarn install`
+2. Bootstrap all packages `yarn bootstrap`
+3. Build packages `yarn build` before execute run dev
+4. After finished, run `yarn dev:es` and `yarn dev:type` at separate terminal. This command will execute watching all packages within lerna parallel mode. You can update the packages now
 
 ### Steps to publish
 

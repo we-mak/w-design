@@ -72,74 +72,65 @@ const Container = styled.li`
   ${getSubMenuStyle}
 `;
 
-const SubMenuComponent: React.FunctionComponent<SubMenuProps> = ({
-  title,
-  icon,
-  isOpen,
-  isLoading,
-  onLoadingList,
-  children,
-  eventKey,
-  ...rest
-}) => {
-  const { setDefaultOpenKey } = useMenu();
-  const [open, setOpen] = React.useState(setDefaultOpenKey(eventKey));
-  const [listStyle, setListStyle] = React.useState({});
+export const SubMenu: React.FunctionComponent<SubMenuProps> = React.memo(
+  ({ title, icon, isOpen, isLoading, onLoadingList, children, eventKey, ...rest }) => {
+    const { setDefaultOpenKey } = useMenu();
+    const [open, setOpen] = React.useState(setDefaultOpenKey(eventKey));
+    const [listStyle, setListStyle] = React.useState({});
 
-  // Use sub menu title as a marker
-  // to apply the result height of sub menu list
-  const menuRef = React.useRef(null);
-  const titleRef = React.useRef(null);
+    // Use sub menu title as a marker
+    // to apply the result height of sub menu list
+    const menuRef = React.useRef(null);
+    const titleRef = React.useRef(null);
 
-  const getMenuHeight = () => {
-    const menuNode: HTMLElement = menuRef!.current!;
-    const titleNode: HTMLElement = titleRef!.current!;
+    const getMenuHeight = () => {
+      const menuNode: HTMLElement = menuRef!.current!;
+      const titleNode: HTMLElement = titleRef!.current!;
+
+      return (
+        menuNode && titleNode && menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
+      );
+    };
+
+    let animation: number | null = null;
+    React.useEffect(() => {
+      animation = requestAnimationFrame(() =>
+        setListStyle({
+          height: open ? getMenuHeight() : 0
+        })
+      );
+
+      return () => {
+        cancelAnimationFrame(animation!);
+        setListStyle({});
+      };
+    }, [open]);
+
+    const onToggleMenu = () => {
+      requestAnimationFrame(() =>
+        setListStyle({
+          height: open ? getMenuHeight() : 0
+        })
+      );
+
+      return setOpen(!open);
+    };
 
     return (
-      menuNode && titleNode && menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
+      <Container ref={menuRef} {...rest}>
+        <Title onClick={onToggleMenu} onFocus={onLoadingList} ref={titleRef}>
+          {icon && <IconBefore>{icon}</IconBefore>}
+          {title}
+          {isLoading ? <Loader /> : <Arrow isOpen={open} />}
+        </Title>
+        <SubList role="menu" isOpen={open} style={listStyle}>
+          {React.Children.map(children!, (child: any) => {
+            return React.cloneElement(child, {
+              eventKey: child.key || "submenu-key"
+            });
+          })}
+        </SubList>
+      </Container>
     );
-  };
-
-  let animation: number | null = null;
-  React.useEffect(() => {
-    animation = requestAnimationFrame(() =>
-      setListStyle({
-        height: open ? getMenuHeight() : 0
-      })
-    );
-
-    return () => {
-      cancelAnimationFrame(animation!);
-      setListStyle({});
-    };
-  }, [open]);
-
-  const onToggleMenu = () => {
-    requestAnimationFrame(() =>
-      setListStyle({
-        height: open ? getMenuHeight() : 0
-      })
-    );
-
-    return setOpen(!open);
-  };
-
-  return (
-    <Container ref={menuRef} {...rest}>
-      <Title onClick={onToggleMenu} onFocus={onLoadingList} ref={titleRef}>
-        {icon && <IconBefore>{icon}</IconBefore>}
-        {title}
-        {isLoading ? <Loader /> : <Arrow isOpen={open} />}
-      </Title>
-      <SubList role="menu" isOpen={open} style={listStyle}>
-        {React.Children.map(children!, (child: any) => {
-          return React.cloneElement(child, {
-            eventKey: child.key || "submenu-key"
-          });
-        })}
-      </SubList>
-    </Container>
-  );
-};
-
-export const SubMenu = React.memo(SubMenuComponent);
+  }
+);

@@ -33,10 +33,10 @@
   },
   "scripts": {
     "clean": "rimraf ./lib",
-    "dev": "cross-env NODE_ENV=development && yarn type-check",
-    "type-check": "tsc -p tsconfig.json -w --noEmit",
+    "dev:es": "BABEL_ENV=dev babel src --watch --out-dir lib/es --extensions .ts,.tsx --config-file ../../babel.config.js",
+    "dev:type": "tsc -p tsconfig.json -w --emitDeclarationOnly",
     "test": "cross-env CI=1 jest test -u --colors",
-    "build": "cross-env NODE_ENV=production && yarn build:cjs && yarn build:es",
+    "build": "cross-env NODE_ENV=production yarn build:cjs && yarn build:es",
     "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib/cjs --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
     "build:es": "BABEL_ENV=es babel src --out-dir lib/es --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
     "postbuild": "tsc --emitDeclarationOnly -p tsconfig.json"

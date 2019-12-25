@@ -1,16 +1,11 @@
 export { default as AnchorScroll } from "./AnchorScroll";
 export { default as Avatar } from "./Avatar";
 export { default as AvatarGroup } from "./AvatarGroup";
+export { default as Badge } from "./Badge";
 export { default as Box } from "./Box";
 export { default as Breadcrumbs, BreadcrumbsItem } from "./Breadcrumbs";
 export { default as Button, ButtonGroup } from "./Button";
-export {
-  default as Card,
-  CardMedia,
-  CardHeader,
-  CardContent,
-  CardFooter
-} from "./Card";
+export { default as Card, CardMedia, CardHeader, CardContent, CardFooter } from "./Card";
 export { default as Collapse } from "./Collapse";
 export { default as Comment } from "./Comment";
 export { default as Container } from "./Container";

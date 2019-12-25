@@ -22,10 +22,11 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "lerna run dev --stream",
-    "prebuild": "rimraf ./packages/*/lib",
-    "build": "CI=1 lerna exec --stream -- yarn build",
     "bootstrap": "lerna bootstrap",
+    "dev:es": "lerna run dev:es --parallel",
+    "dev:type": "lerna run dev:type --parallel",
+    "prebuild": "lerna exec --parallel -- yarn clean",
+    "build": "CI=1 lerna exec --stream -- yarn build",
     "test": "cross-env CI=1 lerna exec --parallel -- jest -u --colors --verbose",
     "coverage": "cross-env CI=1 jest --coverage -u --colors",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"

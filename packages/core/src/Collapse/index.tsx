@@ -16,7 +16,7 @@ import {
   getCollapseContainerStyle,
   getCollapseTitleStyle,
   getLoaderStyle,
-  getSubListStyle
+  getContentStyle
 } from "./getStyled";
 import { GlobProps } from "../common/props";
 
@@ -43,8 +43,13 @@ const Loader = styled(Spinner)`
   ${getLoaderStyle}
 `;
 
-const SubList = styled(CustomTag)`
-  ${getSubListStyle}
+export interface ContentProps {
+  role?: string;
+  height?: number;
+}
+
+const Content = styled(CustomTag)`
+  ${getContentStyle}
 `;
 
 const Collapse: React.FC<CollapseProps> = ({
@@ -58,7 +63,7 @@ const Collapse: React.FC<CollapseProps> = ({
   ...rest
 }) => {
   const [open, setOpen] = React.useState(isDefaultOpen);
-  const [listStyle, setListStyle] = React.useState({});
+  const [contentHeight, setContentHeight] = React.useState();
 
   // Use sub menu title as a marker
   // to apply the result height of sub menu list
@@ -69,33 +74,20 @@ const Collapse: React.FC<CollapseProps> = ({
     const menuNode: HTMLElement = menuRef!.current!;
     const titleNode: HTMLElement = titleRef!.current!;
 
-    return (
-      menuNode && titleNode && menuNode!.scrollHeight - titleNode!.getBoundingClientRect().height
-    );
+    return menuNode && titleNode && menuNode!.scrollHeight - titleNode!.clientHeight;
   };
 
   let animation: number | null;
 
   React.useEffect(() => {
-    animation = requestAnimationFrame(() =>
-      setListStyle({
-        height: open ? getMenuHeight() : 0
-      })
-    );
+    animation = requestAnimationFrame(() => setContentHeight(open ? getMenuHeight() : 0));
 
     return () => {
       cancelAnimationFrame(animation!);
-      setListStyle({});
     };
   }, [open]);
 
   const onToggleMenu = () => {
-    requestAnimationFrame(() =>
-      setListStyle({
-        height: open ? getMenuHeight() : 0
-      })
-    );
-
     return setOpen(!open);
   };
 
@@ -107,11 +99,7 @@ const Collapse: React.FC<CollapseProps> = ({
         {isLoading ? <Loader /> : <Arrow isOpen={open} />}
       </Title>
 
-      {open && (
-        <SubList role="menu" style={listStyle}>
-          {children}
-        </SubList>
-      )}
+      <Content height={contentHeight}>{open && <>{children}</>}</Content>
     </Container>
   );
 };

@@ -1,4 +1,5 @@
 import { css } from "styled-components";
+import { ContentProps } from ".";
 
 export const getCollapseContainerStyle = () => {
   return css`
@@ -38,15 +39,18 @@ export const getLoaderStyle = () => css`
   padding: 0 0.6rem;
 `;
 
-export const getSubListStyle = () => css`
-  padding: 0;
-  position: relative;
-  display: block;
-  transition: height 0.3s cubic-bezier(0.5, 0.045, 0.4, 1),
-    opacity 0.1s cubic-bezier(0.5, 0.045, 0.4, 1);
-  will-change: height;
-  will-change: opacity;
-  li {
-    padding-left: 2rem;
-  }
-`;
+export const getContentStyle = ({ height }: ContentProps) => {
+  return css`
+    padding: 0.4rem;
+    position: relative;
+    display: block;
+    height: ${height}px;
+    opacity: ${height && height > 0 ? 1 : 0};
+    transition: height 120ms cubic-bezier(0.5, 0.045, 0.4, 1),
+      opacity 420ms cubic-bezier(0.5, 0.045, 0.4, 1);
+    will-change: opacity;
+    li {
+      padding-left: 2rem;
+    }
+  `;
+};

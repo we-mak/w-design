@@ -2,4 +2,23 @@ import { Badge } from "@w-design/core";
 
 # Badge
 
-<Badge />
+Badge is the number indicator. Mostly used as the quantity label of countable thing.
+
+### Example
+
+<Badge>{100}</Badge>
+<Box m={10} />
+<Badge appearance="primary">{100}</Badge>
+<Box m={10} />
+<Badge appearance="danger" maxCount={99}>
+  {100}
+</Badge>
+<Box m={20} />
+
+### API
+
+| Props      | Type                           | default   | description           |
+| ---------- | ------------------------------ | --------- | --------------------- |
+| appearance | `default`, `primary`, `danger` | "default" | visual style of badge |
+| max        | `number`                       |           | mark of user status   |
+| children   | `number`                       |           | mark of user status   |

@@ -7,13 +7,20 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Refactor `Icon`
+- ❌ `Toggle`
+- ❌ `Chip`
+- ❌ `Popover`
+- ❌ `Steps`
+- ❌ `Table`
+- ❌ `Pagination`
+- ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
+  Such as size, appearance...
 
 ---
 
 ### <a name="0.46.0"></a>#[v0.46.0]()
 
-- ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
-  Such as size, appearance...
+- ❌ `Selector`
 - ❌ Avatar `Upload`
 - ❌ `react-select` package
 - ❌ Add search to document website
@@ -24,7 +31,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 - ✅ `Collapse`
 - ❌ `Badge`
-- ❌ `Tabs`
+- ✅ `Tabs`
 - ✅ Inherit `SubMenu` with `Collapse` component
 - ✅ add `tagRef` props to `CustomTag`
 - ✅ Improve development exeprience with hot reload setup

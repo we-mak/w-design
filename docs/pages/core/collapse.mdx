@@ -16,11 +16,11 @@ W-design submenu list inherits from `Collapse` component.
 
 ### API
 
-| Props         | type             | default | description                       |
-| ------------- | ---------------- | ------- | --------------------------------- |
-| title         | string           |         | title of the collapse             |
-| tag           | string           | "div"   | Html tag of the wrapper component |
-| icon          | React.ReactChild |         |                                   |
-| isDefaultOpen | boolean          |         |                                   |
-| onLoadingList | boolean          |         |                                   |
-| children      | string           |         |                                   |
+| Props         | type             | default                                          | description                       |
+| ------------- | ---------------- | ------------------------------------------------ | --------------------------------- |
+| title         | string           |                                                  | title of the collapse             |
+| tag           | string           | "div"                                            | Html tag of the wrapper component |
+| icon          | React.ReactChild |                                                  |                                   |
+| isDefaultOpen | boolean          | false                                            | set default copllapse open state  |
+| onLoadingList | boolean          | `(e: React.SyntheticEvent<HTMLElement>) => void` |                                   |
+| children      | ReactNode        |                                                  |                                   |

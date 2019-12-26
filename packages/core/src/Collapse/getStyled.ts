@@ -41,7 +41,6 @@ export const getLoaderStyle = () => css`
 
 export const getContentStyle = ({ height }: ContentProps) => {
   return css`
-    padding: 0.4rem;
     position: relative;
     display: block;
     height: ${height}px;

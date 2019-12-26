@@ -22,10 +22,10 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### Core package <a name="0.44.3"></a>#[v0.44.3]()
 
-- ❌ `Collapse`
+- ✅ `Collapse`
 - ❌ `Badge`
 - ❌ `Tabs`
-- ❌ Inherit `SubMenu` with `Collapse` component
+- ✅ Inherit `SubMenu` with `Collapse` component
 - ✅ add `tagRef` props to `CustomTag`
 - ✅ Improve development exeprience with hot reload setup
 - ✅ Fixed https://github.com/we-mak/w-design/issues/56

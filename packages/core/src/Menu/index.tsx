@@ -26,7 +26,6 @@ export interface MenuProps extends GlobProps {
 }
 
 // TODO:
-// use ref on child
 // add onOpenChange to call when open and close submenu
 // add onSelect to have the callback when menu Item is selected
 

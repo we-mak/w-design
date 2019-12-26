@@ -90,15 +90,3 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
     `}
   `;
 };
-
-export const getSubMenuStyle = () => {
-  return css`
-    width: 100%;
-    display: block;
-    position: relative;
-    will-change: transform;
-    &:hover {
-      cursor: pointer;
-    }
-  `;
-};

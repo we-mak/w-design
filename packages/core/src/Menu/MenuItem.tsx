@@ -4,7 +4,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { useMenu } from "./MenuContext";
-import { getMenuItemStyle } from "./Styled";
+import { getMenuItemStyle } from "./getStyled";
 import { GlobProps } from "../common/props";
 
 export interface MenuItemProps extends GlobProps {
@@ -15,6 +15,7 @@ export interface MenuItemProps extends GlobProps {
   isSelected?: boolean;
   tabIndex?: number;
   isDisabled?: boolean;
+  role?: string;
 }
 
 const ItemAfter = styled.div`

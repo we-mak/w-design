@@ -1,58 +1,84 @@
 /*
+ * Copyright (c) We-Mak.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ * **************
  * Tabs
- * Tab components
+ * Tabs component
  */
 import * as React from "react";
-import { TabsContainer, TabsList, Tab } from "./Styled";
+import styled from "styled-components";
+import { TabsContext } from "./TabsContext";
+import { TabList } from "./TabList";
+import { GlobProps } from "../common/props";
+import { TabPanel } from "./TabPanel";
+// export
+export { Tab } from "./Tab";
 
-const Tabs = () => {
+const Container = styled.div`
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 0;
+  position: relative;
+  margin: 0.4rem 0;
+`;
+
+const Lane = styled.span`
+  background-color: rgb(235, 236, 240);
+  bottom: 0px;
+  content: "";
+  height: 2px;
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 1.7rem;
+  width: inherit;
+  border-radius: 2px;
+  margin: 0px;
+`;
+
+export interface TabsProps extends GlobProps {
+  defaultActive?: number;
+  children: React.ReactElement[];
+}
+
+const Tabs: React.FC<TabsProps> = ({ defaultActive = 0, children }) => {
+  const [selectedIndex, setSelectedIndex] = React.useState(defaultActive);
+
+  const value = React.useMemo(() => {
+    return {
+      selectedIndex,
+      setSelectedIndex
+    };
+  }, [selectedIndex]);
+
+  const renderTabContent = () => {
+    if (children[selectedIndex]) {
+      return children[selectedIndex].props.content;
+    }
+  };
+
   return (
-    <TabsContainer>
-      <TabsList role="tablist" aria-orientation="horizontal">
-        <Tab>Tabs</Tab>
-      </TabsList>
-    </TabsContainer>
+    <TabsContext.Provider value={value}>
+      <Container>
+        <Lane></Lane>
+        <TabList>
+          {React.Children.map(children, (child: React.ReactElement, index: number) => {
+            return React.cloneElement(child, {
+              // Passing index to define select tab
+              index
+            });
+          })}
+        </TabList>
+
+        <TabPanel role="tabpanel">{renderTabContent()}</TabPanel>
+      </Container>
+    </TabsContext.Provider>
   );
 };
 
 export default Tabs;
-
-// class Tabs extends React.PureComponent {
-//   state = {
-//     activeTabIndex: 0
-//   };
-
-//   handleTabClick = tabIndex => {
-//     this.setState({
-//       activeTabIndex: tabIndex
-//     });
-//   };
-
-//   renderChildrenTab() {
-//     return React.Children.map(this.props.children, (child, index) =>
-//       React.cloneElement(child, {
-//         onClick: this.handleTabClick,
-//         tabIndex: index,
-//         isActive: index === this.state.activeTabIndex
-//       })
-//     );
-//   }
-
-//   renderActiveContent() {
-//     //eslint-disable-line
-//     const { children } = this.props;
-//     const { activeTabIndex } = this.state;
-//     if (children[activeTabIndex]) {
-//       return children[activeTabIndex].props.children;
-//     }
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         <TabTitle modalTab>{this.renderChildrenTab()}</TabTitle>
-//         <TabContent role="tabpanel">{this.renderActiveContent()}</TabContent>
-//       </div>
-//     );
-//   }
-// }

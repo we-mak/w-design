@@ -18,6 +18,10 @@ const core = [
     link: "/core/avatar-group"
   },
   {
+    title: "Badge",
+    link: "/core/badge"
+  },
+  {
     title: "Box",
     link: "/core/box"
   },
@@ -110,6 +114,10 @@ const core = [
     link: "/core/spinner"
   },
   {
+    title: "Tabs",
+    link: "/core/tabs"
+  },
+  {
     title: "Typo",
     link: "/core/typo"
   }
@@ -169,11 +177,11 @@ const SidebarWrapper = styled.aside`
 SidebarWrapper.displayName = "SidebarWrapper";
 
 export const Sidebar: React.FunctionComponent<any> = () => {
-  const router = useRouter();
+  const { pathname } = useRouter();
 
   return (
     <SidebarWrapper>
-      <Menu defaultSelectedKey={router.pathname}>
+      <Menu defaultSelectedKey={pathname} defaultOpenKeys={[pathname.split("/")[1]]}>
         <MenuHeading>W-design</MenuHeading>
         <MenuItem key="/">
           <Link href="/">

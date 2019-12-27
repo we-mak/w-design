@@ -5,13 +5,16 @@ import { GlobProps } from "../common/props";
 export interface TagProps extends GlobProps {
   /** custom html tag */
   tag?: string;
-  children?: any;
+  children?: React.ReactNode;
   css?: CSSProp;
+  tagRef?: React.MutableRefObject<any>;
+  role?: string;
+  style?: object;
 }
 
 // Create custom html tag
-const CustomTag: React.FC<TagProps> = ({ tag, children, css, ...rest }) => {
-  return React.createElement(tag || "div", { children, css, ...rest });
+const CustomTag: React.FC<TagProps> = ({ tag = "div", children, css, tagRef, ...rest }) => {
+  return React.createElement(tag, { children, css, ...rest, ref: tagRef });
 };
 
 export default CustomTag;

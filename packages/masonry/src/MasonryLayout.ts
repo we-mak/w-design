@@ -19,4 +19,3 @@ export const MasonryLayout = styled.div`
     margin: 0.5rem;
   }
 `;
-MasonryLayout.displayName = "MasonryLayout";

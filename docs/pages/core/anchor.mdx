@@ -1,4 +1,4 @@
-import {AnchorScroll} from '@w-design/core'
+import { AnchorScroll } from '@w-design/core'
 
 
 # AnchorScroll
@@ -9,29 +9,21 @@ interactive on the layout.
 ## Example
 
 <AnchorScroll destination="target" callback={() => console.log("fire callback")}>
-<span role="img" aria-label="img" aria-labelledby="anchor link">
-🚀
-</span>
-To target
+  <span role="img" aria-label="img" aria-labelledby="anchor link">🚀</span>
+  To target
 </AnchorScroll>
 
-<AnchorScroll destination={500}>
-  Scroll to 500px
-</AnchorScroll>
+<AnchorScroll destination={500}>Scroll to 500px</AnchorScroll>
 
 ```jsx
 <AnchorScroll destination="target" callback={() => console.log("fire callback")}>
-  <span role="img" aria-label="img" aria-labelledby="anchor link">
-    🚀
-  </span>
+  <span role="img" aria-label="img" aria-labelledby="anchor link">🚀</span>
   To target
 </AnchorScroll>
 
 // And the target at somewhere
 <div id="target" style={{margin: "2rem 0"}}>
-  <span role="img" aria-label="img" aria-labelledby="anchor target">
-    💰
-  </span>
+  <span role="img" aria-label="img" aria-labelledby="anchor target">💰</span>
   Target
 </div>
 ```
@@ -80,9 +72,7 @@ AnchorScroll intially only use liner animation but you can pick one of below to 
 ```
 
 <div id="target" style={{margin: "2rem 0"}}>
-  <span role="img" aria-label="img" aria-labelledby="anchor target">
-    💰
-  </span>
+  <span role="img" aria-label="img" aria-labelledby="anchor target">💰</span>
   Target
 </div>
 

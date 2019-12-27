@@ -6,5 +6,8 @@ module.exports = {
   name: pack.name,
   displayName: pack.name,
   rootDir: "../..",
-  verbose: true
+  testMatch: [
+    `<rootDir>/packages/core/**/*.test.+(ts|tsx|js)`,
+    `<rootDir>/packages/core/**/__tests__/*.+(ts|tsx|js)`
+  ]
 };

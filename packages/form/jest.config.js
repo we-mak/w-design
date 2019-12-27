@@ -6,5 +6,8 @@ module.exports = {
   name: pack.name,
   displayName: pack.name,
   rootDir: "../..",
-  verbose: true
+  testMatch: [
+    `<rootDir>/packages/form/**/*.test.+(ts|tsx|js)`,
+    `<rootDir>/packages/form/**/__tests__/*.+(ts|tsx|js)`
+  ]
 };

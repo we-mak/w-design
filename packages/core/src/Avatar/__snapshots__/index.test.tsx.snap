@@ -23,7 +23,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-AykKC erfkjk"
-    style="background-color: rgb(135, 119, 217);"
+    style="background-color: rgb(41, 55, 66);"
   >
     <span
       class="sc-AykKE jIRtDc"
@@ -36,7 +36,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-AykKC cVUTfi"
-    style="background-color: rgb(41, 166, 52);"
+    style="background-color: rgb(255, 173, 173);"
   >
     <span
       class="sc-AykKE czTcIr"
@@ -49,7 +49,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-AykKC kLQWpY"
-    style="background-color: rgb(230, 252, 255);"
+    style="background-color: rgb(255, 82, 82);"
   >
     <span
       class="sc-AykKE dTSzpn"
@@ -59,7 +59,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-AykKC dwXdfS"
-    style="background-color: rgb(77, 210, 87);"
+    style="background-color: rgb(225, 91, 0);"
   >
     <span
       class="sc-AykKE iGcvdy"
@@ -69,7 +69,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-AykKC dXZngC"
-    style="background-color: rgb(255, 172, 35);"
+    style="background-color: rgb(64, 50, 148);"
   >
     <span
       class="sc-AykKE jNTgWk"

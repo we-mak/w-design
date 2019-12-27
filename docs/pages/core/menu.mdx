@@ -1,4 +1,4 @@
-import { Menu, MenuItem, MenuHeading, SubMenu } from "@w-design/core";
+import { Menu, MenuItem, MenuHeading, SubMenu, Box } from "@w-design/core";
 import MenuFullExample from './_example/MenuFullExample'
 
 # Menu
@@ -17,7 +17,9 @@ import { Menu, MenuItem } from "@w-design/core";
 
 <Menu>
   <MenuItem iconBefore={<Icon className="fas fa-user" />}>Item 1</MenuItem>
-  <MenuItem>Item 2</MenuItem>
+  <MenuItem>
+    <Box>Item 2</Box>
+  </MenuItem>
 </Menu>
 ```
 

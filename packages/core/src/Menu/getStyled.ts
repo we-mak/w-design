@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 import { hex2Rgba } from "@w-design/helpers";
-import { MenuProps } from "./";
+import { MenuProps } from ".";
 import { MenuItemProps } from "./MenuItem";
 
 export const getMenuStyle = (props: MenuProps) => {
@@ -88,17 +88,5 @@ export const getMenuItemStyle = (props: MenuItemProps) => {
       background-color: ${hex2Rgba(theme.colors["B5"], 0.3)};
       color: ${theme.colors["B60"]};
     `}
-  `;
-};
-
-export const getSubMenuStyle = () => {
-  return css`
-    width: 100%;
-    display: block;
-    position: relative;
-    will-change: transform;
-    &:hover {
-      cursor: pointer;
-    }
   `;
 };

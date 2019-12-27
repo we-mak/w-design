@@ -4,19 +4,29 @@ import { useClickOutside } from "../src";
 
 afterEach(cleanup);
 
-const Test = () => {
-  const ref = useClickOutside(() => null);
-
-  return (
-    <div>
-      <div ref={ref}>foo</div>
-    </div>
-  );
-};
+const fn = jest.fn();
 
 describe("useClickOutside", () => {
-  test("should return true when click on parent", () => {
+  const Test = () => {
+    const ref = useClickOutside(fn);
+
+    return (
+      <div data-testid="outside">
+        <div ref={ref}>foo</div>
+      </div>
+    );
+  };
+
+  test("should not call function when click on element", () => {
     const { container } = render(<Test />);
+
     fireEvent.click(container);
+    expect(fn).not.toBeCalled();
   });
+
+  // test("should call function when click outside element", () => {
+  //   const { getByTestId } = render(<Test />);
+  //   fireEvent.click(getByTestId(/outside/i));
+  //   expect(fn).toBeCalled();
+  // });
 });

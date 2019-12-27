@@ -2,4 +2,4 @@
 
 exports[`object-helpers randomProperty should get the radom value from object 1`] = `"dolor"`;
 
-exports[`string-helper setUid set an unique string 1`] = `"somename-1576536169724-1"`;
+exports[`string-helper setUid set an unique string 1`] = `"somename-1577421627155-1"`;

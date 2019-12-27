@@ -6,5 +6,9 @@ module.exports = {
   name: pack.name,
   displayName: pack.name,
   rootDir: "../..",
-  verbose: true
+  testMatch: [`<rootDir>/packages/helpers/__tests__/*.+(ts|tsx|js)`],
+  coveragePathIgnorePatterns: [
+    ...base.coveragePathIgnorePatterns,
+    "styled-helpers.ts" // ignore styled because it used styled functions
+  ]
 };

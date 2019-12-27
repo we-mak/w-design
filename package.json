@@ -26,9 +26,9 @@
     "dev:es": "lerna run dev:es --parallel",
     "dev:type": "lerna run dev:type --parallel",
     "prebuild": "lerna exec --parallel -- yarn clean",
-    "build": "CI=1 lerna exec --stream -- yarn build",
-    "test": "cross-env CI=1 lerna exec --parallel -- jest -u --colors --verbose",
-    "coverage": "cross-env CI=1 jest --coverage -u --colors",
+    "build": "lerna exec --stream -- yarn build",
+    "test": "cross-env lerna run test",
+    "coverage": "cross-env lerna run coverage",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "peerDependencies": {

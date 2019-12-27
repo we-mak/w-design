@@ -30,7 +30,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Core package <a name="0.44.3"></a>#[v0.44.3]()
 
 - ✅ `Collapse`
-- ❌ `Badge`
+- ✅ `Badge`
 - ✅ `Tabs`
 - ✅ Inherit `SubMenu` with `Collapse` component
 - ✅ add `tagRef` props to `CustomTag`

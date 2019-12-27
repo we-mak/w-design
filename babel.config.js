@@ -11,10 +11,7 @@ let presets = [
 ];
 
 const productionPlugins = [
-  [
-    "babel-plugin-styled-components",
-    { ssr: true, displayName: true, preprocess: false }
-  ]
+  ["babel-plugin-styled-components", { ssr: true, displayName: true, preprocess: false }]
 ];
 module.exports = {
   presets,
@@ -22,10 +19,7 @@ module.exports = {
     ["@babel/plugin-proposal-class-properties", { loose: true }],
     ["@babel/plugin-proposal-object-rest-spread", { loose: true }],
     "@babel/plugin-transform-runtime",
-    [
-      "babel-plugin-styled-components",
-      { ssr: true, displayName: true, preprocess: false }
-    ]
+    ["babel-plugin-styled-components", { ssr: true, displayName: true, preprocess: false }]
   ],
   env: {
     dev: {
@@ -36,6 +30,7 @@ module.exports = {
         "**/*.d.ts",
         "**/*.test.tsx",
         "**/*.test.ts",
+        "**/*.test.js",
         "__snapshots__",
         "__tests__"
       ],
@@ -46,6 +41,7 @@ module.exports = {
         "**/*.d.ts",
         "**/*.test.tsx",
         "**/*.test.ts",
+        "**/*.test.js",
         "__snapshots__",
         "__tests__"
       ],

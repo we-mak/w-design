@@ -74,11 +74,11 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
     >
       Menu heading
     </li>
-    <li
-      class="sc-fzXfLR gOtmZs"
+    <div
+      class="sc-fzXfLO ihLDNV"
     >
       <div
-        class="sc-fzXfLO hJzSnE"
+        class="sc-fzXfLP fNiwBp"
       >
         <span
           class="sc-AykKE hymfMA"
@@ -106,9 +106,8 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
           </svg>
         </span>
       </div>
-      <ul
-        class="sc-fzXfLP ckCHgf"
-        role="menu"
+      <div
+        class="sc-fzXfLR LNZIK"
       >
         <li
           class="sc-AykKF gYaOrZ"
@@ -128,13 +127,13 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
         >
           Item 7
         </li>
-      </ul>
-    </li>
-    <li
-      class="sc-fzXfLR gOtmZs"
+      </div>
+    </div>
+    <div
+      class="sc-fzXfLO ihLDNV"
     >
       <div
-        class="sc-fzXfLO hJzSnE"
+        class="sc-fzXfLP fNiwBp"
       >
         <span
           class="sc-AykKE hymfMA"
@@ -162,30 +161,10 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
           </svg>
         </span>
       </div>
-      <ul
-        class="sc-fzXfLP HkZjO"
-        role="menu"
-      >
-        <li
-          class="sc-AykKF gYaOrZ"
-          role="menuitem"
-        >
-          Item 8
-        </li>
-        <li
-          class="sc-AykKF gYaOrZ"
-          role="menuitem"
-        >
-          Item 9
-        </li>
-        <li
-          class="sc-AykKF gYaOrZ"
-          role="menuitem"
-        >
-          Item 10
-        </li>
-      </ul>
-    </li>
+      <div
+        class="sc-fzXfLR LNZIK"
+      />
+    </div>
   </ul>
 </div>
 `;

@@ -10,6 +10,12 @@ module.exports = {
       statements: 80
     }
   },
+  collectCoverage: true,
+  coveragePathIgnorePatterns: [
+    ".*\\.d\\.ts|tsx",
+    ".js", // ignore built js files
+    "<rootDir>/node_modules/"
+  ],
   globals: {
     "ts-jest": {
       extends: "./babel.config.js"
@@ -23,10 +29,6 @@ module.exports = {
     ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
   },
   setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
-  coveragePathIgnorePatterns: [
-    ".*\\.d\\.ts|tsx",
-    ".js", // ignore built js files
-    "<rootDir>/node_modules/",
-    "<rootDir>/packages/*/node_modules/"
-  ]
+  // sometimes we don't test
+  passWithNoTests: true
 };

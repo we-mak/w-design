@@ -18,7 +18,6 @@ const useClickOutside = (callback: (e: Event) => void): React.RefObject<any> => 
       if (!ref.current || ref.current.contains(event.target as Node)) {
         return;
       }
-
       callback(event);
     };
 

@@ -2,14 +2,14 @@ module.exports = {
   clearMocks: true,
   coverageDirectory: "coverage",
   coverageReporters: ["text", "clover"],
-  coverageThreshold: {
-    global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
-    }
-  },
+  // coverageThreshold: {
+  //   global: {
+  //     branches: 80,
+  //     functions: 80,
+  //     lines: 80,
+  //     statements: 80
+  //   }
+  // },
   collectCoverage: true,
   coveragePathIgnorePatterns: [
     ".*\\.d\\.ts|tsx",
@@ -28,7 +28,5 @@ module.exports = {
     ".*.tsx?$": "ts-jest",
     ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
   },
-  setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
-  // sometimes we don't test
-  passWithNoTests: true
+  setupFilesAfterEnv: ["<rootDir>/setupTests.js"]
 };

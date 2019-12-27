@@ -7,5 +7,5 @@
     "declarationDir": "lib/types"
   },
   "include": ["src/**/*", "__tests__"],
-  "exclude": ["node_modules", "**/*.test.tsx", "**/*.test.ts", "__snapshots__", "src/__tests__"]
+  "exclude": ["node_modules", "**/*.test.tsx", "**/*.test.ts", "__snapshots__", "__tests__"]
 }

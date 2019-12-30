@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Container } from "@w-design/core";
-import Upload from "@w-design/upload";
+import { Upload } from "@w-design/upload";
 
 export default () => {
   return (

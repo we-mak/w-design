@@ -72,9 +72,9 @@ const useField = ({
     }
 
     // clean form error when adding value
-    if (form && form.formErrorMessage) {
+    if (form && form.formMessage) {
       form.setStatus(undefined);
-      form.setFormErrorMessage("");
+      form.setFormMessage("");
     }
 
     setValue(e.target.value);

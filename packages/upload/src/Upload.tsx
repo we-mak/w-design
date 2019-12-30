@@ -7,15 +7,14 @@
  * Upload
  * Simple upload file
  */
-
 import React, { FC, useState, memo, ReactNode } from "react";
 import { PushMessage } from "@w-design/core";
 import { PushMessageProps } from "@w-design/core/lib/types/PushMessage";
 import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState } from "./utils";
-import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
 import { UploadFileType, UploadListProps } from "./FileList";
+import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
 
 // Type of button
 export type UploadTypeProps = "textName" | "avatar";

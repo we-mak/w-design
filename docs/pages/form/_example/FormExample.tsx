@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Container, Card, CardContent, Button, SectionMessage } from "@w-design/core";
-import { InputForm, useField, useForm } from "@w-design/form";
+import { InputForm, useField, useForm, FormFooter } from "@w-design/form";
 
 const emailRegex = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
@@ -64,16 +64,11 @@ export default () => {
               </SectionMessage>
             )}
 
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "flex-end"
-              }}
-            >
+            <FormFooter>
               <Button appearance="primary" type="submit" isDisabled={form.status === "submitted"}>
                 Submit
               </Button>
-            </div>
+            </FormFooter>
           </form>
         </CardContent>
       </Card>

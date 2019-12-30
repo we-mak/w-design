@@ -19,7 +19,12 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
   Such as size, appearance...
 - ❌ Avatar `Upload`
 - ❌ Prevent update `PushMessage`
-- ❌ Add form group `TextHint`
+
+---
+
+### Form <a name="0.43.0"></a>[v0.43.0]()
+
+- ✅ Add `FormFooter`
 - ✅ `useForm` hooks: Change `formErrorMessage` to `formMessage`
 
 ---

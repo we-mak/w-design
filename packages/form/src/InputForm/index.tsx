@@ -72,3 +72,4 @@ const InputForm: React.FunctionComponent<InputFormProps> = props => {
 };
 
 export default InputForm;
+export { TextHint };

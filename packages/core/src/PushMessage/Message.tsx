@@ -3,6 +3,8 @@ import Icon from "../Icon";
 import { MessagePanel } from "./Styled";
 import { PushMessageProps } from "./index";
 
+// TODO: prevent rerendering
+
 export const Message = ({
   value,
   appearance = "info",

@@ -17,6 +17,8 @@ export const getMenuStyle = (props: MenuProps) => {
   };
 
   return css`
+    display: block;
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 0.4rem;

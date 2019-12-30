@@ -22,8 +22,8 @@ const useClickOutside = (callback: (e: Event) => void): React.RefObject<any> => 
     };
 
     // Create event listener when mounting the component.
-    document.addEventListener("mousedown", handleClick);
-    document.addEventListener("touchstart", handleClick);
+    document.addEventListener("mousedown", handleClick, false);
+    document.addEventListener("touchstart", handleClick, false);
     return () => {
       // Destroy event listener when unmounting the component.
       document.removeEventListener("mousedown", handleClick);

@@ -5,6 +5,9 @@
  * */
 import styled from "styled-components";
 
+// TODO:
+// Add text hint
+
 const FormGroup = styled.div`
   display: flex;
   input,

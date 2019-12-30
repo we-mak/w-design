@@ -7,7 +7,7 @@ module.exports = {
   displayName: pack.name,
   rootDir: "../..",
   testMatch: [
-    `<rootDir>/packages/masonry/**/*.test.+(ts|tsx|js)`,
-    `<rootDir>/packages/masonry/**/__tests__/*.+(ts|tsx|js)`
+    `<rootDir>/packages/masonry/**/*.test.+(ts|tsx)`,
+    `<rootDir>/packages/masonry/**/__tests__/*.+(ts|tsx)`
   ]
 };

@@ -35,7 +35,6 @@ export const Header = ({
         </a>
       </Section>
 
-      <Section style={{ display: "inline-block" }}>Search</Section>
       <Section>
         <a href="https://github.com/we-mak/w-design" target="_blank" rel="noopener noreferrer">
           Github

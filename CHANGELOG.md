@@ -6,28 +6,26 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### Next
 
-- ❌ Refactor `Icon`
+- ❌ Add search to document website
+- ❌ Split out `Icon` to separate package
 - ❌ `Toggle`
 - ❌ `Chip`
 - ❌ `Popover`
 - ❌ `Steps`
 - ❌ `Table`
 - ❌ `Pagination`
+- ❌ `Actions`
 - ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
-
----
-
-### <a name="0.46.0"></a>#[v0.46.0]()
-
-- ❌ `Selector`
 - ❌ Avatar `Upload`
-- ❌ `react-select` package
-- ❌ Add search to document website
+- ❌ Prevent update `PushMessage`
+- ❌ Add form group `TextHint`
+- ❌ More appearance for `Typo`
+- ❌ `formErrorMessage` to `formMessage`
 
 ---
 
-### Core package <a name="0.44.3"></a>#[v0.44.3]()
+### Core package <a name="0.44.3"></a>[v0.44.3]()
 
 - ✅ `Collapse`
 - ✅ `Badge`
@@ -40,7 +38,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-### <a name="0.42.0"></a>#[v0.42.0]()
+### <a name="0.42.0"></a>[v0.42.0]()
 
 Split code at bundling packages:
 

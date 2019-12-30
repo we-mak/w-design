@@ -23,7 +23,7 @@ module.exports = {
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   roots: ["<rootDir>/packages"],
-  testMatch: ["**/__tests__/*.+(ts|tsx|js)", "**/*.test.+(ts|tsx|js)"],
+  testMatch: ["**/__tests__/*.+(ts|tsx)", "**/*.test.+(ts|tsx)"],
   transform: {
     ".*.tsx?$": "ts-jest",
     ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"

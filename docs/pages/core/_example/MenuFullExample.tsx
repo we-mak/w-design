@@ -35,16 +35,16 @@ export default () => {
   return (
     <Menu defaultSelectedKey="1" defaultOpenKeys={["sub-1"]}>
       <MenuItem key="1" iconBefore={<Icon className="fas fa-user" />} after={<div>info</div>}>
-        Item 1
+        Automobile
       </MenuItem>
       <MenuItem key="2" iconBefore={<Icon className="fas fa-user-astronaut" />}>
-        Item 2
+        Fashion
       </MenuItem>
       <MenuItem key="3" iconBefore={<Icon className="fas fa-edit" />} isDisabled>
-        Item 3
+        Cell phone
       </MenuItem>
       <MenuItem key="4" iconBefore={<Icon className="fas fa-paper-plane" />}>
-        Item 4
+        Real estate & property
       </MenuItem>
 
       <MenuHeading>Menu heading</MenuHeading>

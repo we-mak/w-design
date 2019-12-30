@@ -4,6 +4,10 @@ import { Typo } from "@w-design/core";
 
 Text tag with flexible tag type following heading style
 
+### Example
+
+---
+
 <h1>H1</h1>
 <Typo appearance="h1">This is header 1</Typo>
 <h2>H2</h2>
@@ -59,3 +63,11 @@ Text tag with flexible tag type following heading style
   Roboto font
 </Typo>
 ```
+
+### API
+
+| Props      | type                                             | default                      | description      |
+| ---------- | ------------------------------------------------ | ---------------------------- | ---------------- |
+| tag        | enum?: "div", "h1", "h2", "h3", "h4", "h5", "h6" | appearance value             | tag variants     |
+| appearance | enum: "h1", "h2", "h3", "h4", "h5", "h6"         | must be declare in component | based to style   |
+| color      | hex, rgba color                                  | undefined                    | color of heading |

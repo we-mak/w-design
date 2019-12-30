@@ -162,7 +162,7 @@ const form = [
   }
 ];
 
-const SidebarWrapper = styled.aside`
+const Wrapper = styled.aside`
   display: block;
   position: fixed;
   height: 100%;
@@ -170,17 +170,15 @@ const SidebarWrapper = styled.aside`
   width: 280px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-top: 80px;
   bottom: 0.5rem;
-  top: 0;
+  top: 78px;
 `;
-SidebarWrapper.displayName = "SidebarWrapper";
 
 export const Sidebar: React.FunctionComponent<any> = () => {
   const { pathname } = useRouter();
 
   return (
-    <SidebarWrapper>
+    <Wrapper>
       <Menu defaultSelectedKey={pathname} defaultOpenKeys={[pathname.split("/")[1]]}>
         <MenuHeading>W-design</MenuHeading>
         <MenuItem key="/">
@@ -236,6 +234,6 @@ export const Sidebar: React.FunctionComponent<any> = () => {
         </MenuItem>
         <MenuHeading>Utilities</MenuHeading>
       </Menu>
-    </SidebarWrapper>
+    </Wrapper>
   );
 };

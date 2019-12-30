@@ -20,7 +20,6 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Avatar `Upload`
 - ❌ Prevent update `PushMessage`
 - ❌ Add form group `TextHint`
-- ❌ More appearance for `Typo`
 - ✅ `useForm` hooks: Change `formErrorMessage` to `formMessage`
 
 ---

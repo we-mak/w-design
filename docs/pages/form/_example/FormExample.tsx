@@ -58,9 +58,9 @@ export default () => {
               {password.value && <CheckPass value={password.value} />}
             </InputForm>
 
-            {form.status === "error" && form.formErrorMessage && (
+            {form.status === "error" && form.formMessage && (
               <SectionMessage title="Error" appearance="error">
-                {form.formErrorMessage}
+                {form.formMessage}
               </SectionMessage>
             )}
 

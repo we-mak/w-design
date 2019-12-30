@@ -4,8 +4,8 @@ import { FieldProps } from "./useField";
 export interface FormProps {
   addField: (field: FieldProps) => void;
   onSubmit: (e: React.FormEvent, submitFetching: Function) => void;
-  formErrorMessage: string;
-  setFormErrorMessage: Function;
+  formMessage: string;
+  setFormMessage: Function;
   setStatus: Function;
   status?: "error" | "submitting" | "submitted";
 }
@@ -19,7 +19,7 @@ export interface FormType {
  * @param requiredMessage - generic message for required field notify when submit
  */
 const useForm = ({ requiredMessage }: FormType): FormProps => {
-  const [formErrorMessage, setFormErrorMessage] = React.useState("");
+  const [formMessage, setFormMessage] = React.useState("");
 
   // prevent submit multiple times
   const [status, setStatus] = React.useState();
@@ -63,8 +63,8 @@ const useForm = ({ requiredMessage }: FormType): FormProps => {
       return submitFetching(formData);
     },
     status,
-    formErrorMessage,
-    setFormErrorMessage,
+    formMessage,
+    setFormMessage,
     setStatus
   };
 };

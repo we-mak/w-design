@@ -21,7 +21,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Prevent update `PushMessage`
 - ❌ Add form group `TextHint`
 - ❌ More appearance for `Typo`
-- ❌ `formErrorMessage` to `formMessage`
+- ✅ `useForm` hooks: Change `formErrorMessage` to `formMessage`
 
 ---
 

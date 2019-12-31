@@ -1,6 +1,6 @@
 {
   "name": "@w-design/core",
-  "version": "0.44.4",
+  "version": "0.44.5",
   "description": "w-design core components",
   "keywords": [
     "w-design",
@@ -48,8 +48,8 @@
   "dependencies": {
     "@types/body-scroll-lock": "^2.6.1",
     "@types/styled-system": "^5.1.4",
-    "@w-design/helpers": "^0.41.1",
-    "@w-design/hooks": "^0.41.1",
+    "@w-design/helpers": "^0.41.2",
+    "@w-design/hooks": "^0.41.2",
     "body-scroll-lock": "^2.6.4",
     "styled-system": "^5.1.4"
   },

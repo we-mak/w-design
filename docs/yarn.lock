@@ -934,6 +934,14 @@
   version "0.0.0"
   uid ""
 
+"@w-design/form@link:...":
+  version "0.0.0"
+  uid ""
+
+"@w-design/upload@link:...":
+  version "0.0.0"
+  uid ""
+
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"

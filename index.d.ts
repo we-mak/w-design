@@ -5,6 +5,7 @@ declare global {
       document: Document;
       window: Window;
       navigator: Navigator;
+      XMLHttpRequest: XMLHttpRequest;
     }
   }
   interface Window {

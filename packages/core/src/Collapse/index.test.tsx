@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cleanup, render } from "@testing-library/react";
-import Provider from "../../Provider";
-import Collapse from "../";
+import Provider from "../Provider";
+import Collapse from "./";
 
 afterEach(cleanup);
 

@@ -26,7 +26,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF jmggvB"
+      class="sc-AykKF hHWZny"
     >
       hint
     </small>
@@ -54,7 +54,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF jmggvB"
+      class="sc-AykKF hHWZny"
     />
   </div>
   <div
@@ -76,7 +76,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF gMYpbG"
+      class="sc-AykKF fiPhTD"
     />
   </div>
   <div
@@ -98,7 +98,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF jmggvB"
+      class="sc-AykKF hHWZny"
     />
   </div>
   <div
@@ -121,7 +121,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF jmggvB"
+      class="sc-AykKF hHWZny"
     />
   </div>
   <div
@@ -150,7 +150,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF jmggvB"
+      class="sc-AykKF hHWZny"
     />
   </div>
   <div
@@ -172,7 +172,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF jZqLjT"
+      class="sc-AykKF ivhEbQ"
     />
   </div>
   <div
@@ -194,7 +194,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF inEEMa"
+      class="sc-AykKF gJvxDX"
     />
   </div>
   <div
@@ -236,7 +236,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-AykKF jmggvB"
+      class="sc-AykKF hHWZny"
     />
   </div>
 </div>

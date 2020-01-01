@@ -4,19 +4,24 @@ const withMDX = require("@next/mdx")({
 });
 const withCSS = require("@zeit/next-css");
 
-module.exports = withPlugins([
+module.exports = withPlugins(
   [
-    withMDX,
-    {
-      pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"]
-    }
-  ],
-  [
-    withCSS,
-    {
-      cssLoaderOptions: {
-        url: false
+    [
+      withMDX,
+      {
+        pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"]
       }
-    }
-  ]
-]);
+    ],
+    [
+      withCSS,
+      {
+        cssLoaderOptions: {
+          url: false
+        }
+      }
+    ]
+  ],
+  {
+    assetPrefix: process.env.NODE_ENV === "production" ? "/w-design" : ""
+  }
+);

@@ -8,6 +8,7 @@
  * Simple upload file
  */
 import React, { FC, useState, memo, ReactNode } from "react";
+import styled from "styled-components";
 import { PushMessage } from "@w-design/core";
 import { PushMessageProps } from "@w-design/core/lib/types/PushMessage";
 import { setUid } from "@w-design/helpers";
@@ -15,7 +16,52 @@ import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState } from "./utils";
 import { UploadFileType, UploadListProps } from "./FileList";
 import dummyThumb from "./dummyThumb";
-import { UploadContainer, UploadLabel, UploadInput } from "./Styled";
+import { getUploadContainStyle } from "./getStyled";
+
+const Container = styled.div`
+  ${getUploadContainStyle};
+`;
+
+const Label = styled.label`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  text-align: center;
+  position: relative;
+  display: block;
+  padding: 0.4rem;
+  cursor: pointer;
+  span {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const Input = styled.input`
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+`;
+
+export type RequestUploadType = {
+  endpoint: string;
+  method: "POST" | "PUT" | "post" | "put"; // request method
+  headers?: { [key: string]: string }; // Fetch api headers interface
+  timeout?: number;
+  withCredentials?: boolean;
+  ignoreCache?: boolean;
+  // body?: any;
+};
 
 // Type of button
 export type UploadTypeProps = "textName" | "avatar";
@@ -25,17 +71,6 @@ export interface UploadChangeParam<T extends object = UploadFileType> {
   fileList: UploadFileType[];
   event?: { percent: number };
 }
-
-export type RequestUploadType = {
-  endpoint: string;
-  // request method
-  method: "POST" | "PUT" | "post" | "put";
-  headers?: { [key: string]: string }; // Fetch api headers interface
-  timeout?: number;
-  withCredentials?: boolean;
-  ignoreCache?: boolean;
-  // body?: any;
-};
 
 export interface UploadProps extends UploadListProps {
   /* Accept input attribute*/
@@ -70,9 +105,6 @@ const Upload: FC<UploadProps> = ({
   beforeUpload,
   requestUpload
 }) => {
-  // init xhr request
-  const xhr = new XMLHttpRequest();
-
   const [fileList, setFileList] = useState(defaultFileList);
   const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
 
@@ -108,6 +140,7 @@ const Upload: FC<UploadProps> = ({
     }
   }
 
+  // Resolve file change before upload to server
   const handleFilesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let files: UploadFileType[] = [];
     const rawfiles = Array.prototype.slice.call(e.target.files);
@@ -117,7 +150,6 @@ const Upload: FC<UploadProps> = ({
         const reader: FileReader = new FileReader();
         // Check load status error/success on local, preview file info
         reader.onerror = localErrorHandler;
-        // Handle upload
         reader.onload = (f => {
           return (e: ProgressEvent<any>) => {
             // handle preview image from local url
@@ -190,7 +222,7 @@ const Upload: FC<UploadProps> = ({
 
       setFileList(newFileList);
 
-      return xhr.abort();
+      // return xhr.abort();
     }
 
     const fileInFileList = getFileItem(file, fileList);
@@ -198,6 +230,7 @@ const Upload: FC<UploadProps> = ({
   };
 
   const post = async (file: UploadFileType): Promise<void> => {
+    const xhr = new XMLHttpRequest();
     // set default method is "POST"
     const { method = "POST", endpoint, headers, ignoreCache } = requestUpload;
 
@@ -206,7 +239,7 @@ const Upload: FC<UploadProps> = ({
         xhr.open(method, endpoint, true);
 
         if (headers) {
-          Object.keys(headers).forEach(key => xhr.setRequestHeader(key, headers[key]));
+          Object.keys(headers).forEach(key => xhr!.setRequestHeader(key, headers[key]));
         }
         if (ignoreCache) {
           xhr.setRequestHeader("Cache-Control", "no-cache");
@@ -214,11 +247,11 @@ const Upload: FC<UploadProps> = ({
 
         xhr.onload = function() {
           if (this.status >= 200 && this.status < 300) {
-            return resolve(xhr.response);
+            return resolve(xhr!.response);
           } else {
             return reject({
               status: this.status,
-              statusText: xhr.statusText
+              statusText: xhr!.statusText
             });
           }
         };
@@ -252,7 +285,7 @@ const Upload: FC<UploadProps> = ({
 
         let finalFile = new FormData();
         finalFile.append("file", file.data);
-        xhr.send(finalFile);
+        xhr!.send(finalFile);
       });
 
       const newFileList = updateFileState(file, fileList, {
@@ -271,11 +304,11 @@ const Upload: FC<UploadProps> = ({
 
   return (
     <>
-      <UploadContainer uploadType={uploadType} requestUpload={requestUpload}>
+      <Container uploadType={uploadType} requestUpload={requestUpload}>
         {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
-        <UploadLabel>
+        <Label>
           <span>{label}</span>
-          <UploadInput
+          <Input
             type="file"
             name="file"
             accept={accept}
@@ -283,13 +316,13 @@ const Upload: FC<UploadProps> = ({
             onChange={handleFilesChange}
             disabled={disabled}
           />
-        </UploadLabel>
-      </UploadContainer>
+        </Label>
+      </Container>
       {/**
        * show file list
        * only show file list if list length > 0 or uploadType = picture
        */
-      uploadType === "avatar" && fileList.length > 0 && (
+      uploadType !== "avatar" && fileList.length > 0 && (
         <FileList
           fileList={fileList}
           rowKey={item => item.uid}

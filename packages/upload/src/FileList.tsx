@@ -1,7 +1,12 @@
 import * as React from "react";
+import styled from "styled-components";
 import { Button, ProgressLoader, List, ListItem } from "@w-design/core";
 import { GlobProps } from "@w-design/core/lib/types/common/props";
-import { ListContainer } from "./Styled";
+import { getListStyle } from "./getStyled";
+
+const Container = styled.div`
+  ${getListStyle};
+`;
 
 // Status applied when upload file
 export type UploadStatus = "error" | "success" | "progress";
@@ -44,7 +49,7 @@ export const FileList: React.FC<UploadListProps> = ({ fileList, onUpload, onCanc
   }, [fileList]);
 
   return (
-    <ListContainer>
+    <Container>
       <List
         sourceData={list}
         rows={(item: any) => {
@@ -81,6 +86,6 @@ export const FileList: React.FC<UploadListProps> = ({ fileList, onUpload, onCanc
         }}
         {...rest}
       ></List>
-    </ListContainer>
+    </Container>
   );
 };

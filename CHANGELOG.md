@@ -7,7 +7,6 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Add search to document website
-- ❌ Split out `Icon` to separate package
 - ❌ `Toggle`
 - ❌ `Chip`
 - ❌ `Popover`
@@ -17,8 +16,14 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Actions`
 - ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
-- ❌ Avatar `Upload`
+- ❌ Split out `Icon` to separate package
 - ❌ Prevent update `PushMessage`
+
+---
+
+### Next
+
+- ❌ `Upload` XMLHttpRequest to support server side render
 
 ---
 

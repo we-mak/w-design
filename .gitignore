@@ -10,7 +10,6 @@ coverage
 
 # builds
 build
-dist
 .rpt2_cache
 packages/*/lib
 docs/.next

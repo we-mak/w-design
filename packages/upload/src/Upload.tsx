@@ -15,7 +15,6 @@ import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState } from "./utils";
 import { UploadFileType, UploadListProps } from "./FileList";
-import { RequestUploadType, RequestUploadProps } from "./xhrRequest";
 
 import dummyThumb from "./dummyThumb";
 import { getUploadContainStyle } from "./getStyled";
@@ -56,7 +55,7 @@ const Input = styled.input`
 `;
 
 // Type of button
-export type UploadTypeProps = "textName" | "avatar";
+export type UploadTypeProps = "textName" | "picture";
 
 export interface UploadChangeParam<T extends object = UploadFileType> {
   file: T;
@@ -64,7 +63,7 @@ export interface UploadChangeParam<T extends object = UploadFileType> {
   event?: { percent: number };
 }
 
-export interface UploadProps extends UploadListProps, RequestUploadProps {
+export interface UploadProps extends UploadListProps {
   /* Accept input attribute*/
   accept?: string;
   /* upload type: file name in text or picture*/
@@ -87,6 +86,16 @@ export interface UploadProps extends UploadListProps, RequestUploadProps {
   onRemove?: (file: UploadFileType) => void | boolean | Promise<void | boolean>;
 }
 
+export interface RequestUploadType {
+  endpoint: string;
+  method: "POST" | "PUT" | "post" | "put";
+  headers?: Object;
+  timeout?: number;
+  withCredentials?: boolean;
+  ignoreCache?: boolean;
+  body?: Object;
+}
+
 const Upload: FC<UploadProps> = ({
   label = "+ Add file",
   uploadType = "textName",
@@ -101,7 +110,7 @@ const Upload: FC<UploadProps> = ({
   const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
 
   // only allow single upload for avatar
-  if (uploadType === "avatar") {
+  if (uploadType === "picture") {
     multiple = false;
   }
 
@@ -205,22 +214,6 @@ const Upload: FC<UploadProps> = ({
     return post(file);
   };
 
-  const handleUploadCancel = (file: UploadFileType) => {
-    // if upload is in progress: handle abort event
-    if (file.status === "progress") {
-      const newFileList = updateFileState(file, fileList, {
-        status: "error"
-      });
-
-      setFileList(newFileList);
-
-      // return xhr.abort();
-    }
-
-    const fileInFileList = getFileItem(file, fileList);
-    return setFileList(fileList.filter(item => fileInFileList != item));
-  };
-
   const post = async (file: UploadFileType): Promise<void> => {
     const xhr = new XMLHttpRequest();
     // set default method is "POST"
@@ -294,6 +287,22 @@ const Upload: FC<UploadProps> = ({
     }
   };
 
+  const handleUploadCancel = (file: UploadFileType) => {
+    // if upload is in progress: handle abort event
+    if (file.status === "progress") {
+      const newFileList = updateFileState(file, fileList, {
+        status: "error"
+      });
+
+      setFileList(newFileList);
+
+      // return xhr.abort();
+    }
+
+    const fileInFileList = getFileItem(file, fileList);
+    return setFileList(fileList.filter(item => fileInFileList != item));
+  };
+
   return (
     <>
       <Container uploadType={uploadType} requestUpload={requestUpload}>
@@ -314,7 +323,7 @@ const Upload: FC<UploadProps> = ({
        * show file list
        * only show file list if list length > 0 or uploadType = picture
        */
-      uploadType !== "avatar" && fileList.length > 0 && (
+      uploadType !== "picture" && fileList.length > 0 && (
         <FileList
           fileList={fileList}
           rowKey={item => item.uid}

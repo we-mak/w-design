@@ -15,6 +15,8 @@ import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState } from "./utils";
 import { UploadFileType, UploadListProps } from "./FileList";
+import { RequestUploadType, RequestUploadProps } from "./xhrRequest";
+
 import dummyThumb from "./dummyThumb";
 import { getUploadContainStyle } from "./getStyled";
 
@@ -53,16 +55,6 @@ const Input = styled.input`
   visibility: hidden;
 `;
 
-export type RequestUploadType = {
-  endpoint: string;
-  method: "POST" | "PUT" | "post" | "put"; // request method
-  headers?: { [key: string]: string }; // Fetch api headers interface
-  timeout?: number;
-  withCredentials?: boolean;
-  ignoreCache?: boolean;
-  // body?: any;
-};
-
 // Type of button
 export type UploadTypeProps = "textName" | "avatar";
 
@@ -72,7 +64,7 @@ export interface UploadChangeParam<T extends object = UploadFileType> {
   event?: { percent: number };
 }
 
-export interface UploadProps extends UploadListProps {
+export interface UploadProps extends UploadListProps, RequestUploadProps {
   /* Accept input attribute*/
   accept?: string;
   /* upload type: file name in text or picture*/
@@ -247,11 +239,11 @@ const Upload: FC<UploadProps> = ({
 
         xhr.onload = function() {
           if (this.status >= 200 && this.status < 300) {
-            return resolve(xhr!.response);
+            return resolve(xhr.response);
           } else {
             return reject({
               status: this.status,
-              statusText: xhr!.statusText
+              statusText: xhr.statusText
             });
           }
         };
@@ -283,9 +275,9 @@ const Upload: FC<UploadProps> = ({
           setFileList(newFileList);
         };
 
-        let finalFile = new FormData();
-        finalFile.append("file", file.data);
-        xhr!.send(finalFile);
+        let formData = new FormData();
+        formData.append("file", file.data);
+        xhr.send(formData);
       });
 
       const newFileList = updateFileState(file, fileList, {

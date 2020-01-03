@@ -11,21 +11,24 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Chip`
 - ❌ `Popover`
 - ❌ `Steps`
-- ❌ `Table`
 - ❌ `Pagination`
 - ❌ `Actions`
 - ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
 - ❌ Split out `Icon` to separate package
-- ❌ Prevent update `PushMessage`
 
 ---
 
-### Next
+### Upload <a name="0.44.0"></a>[v0.44.0]()
 
-- ❌ `Upload` XMLHttpRequest to support server side render
+- ✅ `Upload` XMLHttpRequest to support server side render
 - ❌ `AvatarUpload`
 - ❌ `CoverUpload`
+
+### Core package <a name="0.44.7"></a>[v0.44.7]()
+
+- ❌ Fix `Button` disable interactive style
+- ❌ Prevent update `PushMessage`
 
 ---
 

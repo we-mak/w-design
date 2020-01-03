@@ -4,7 +4,7 @@ import { UploadProps } from "./Upload";
 import { UploadListProps } from "./FileList";
 
 /**
- * Main upload style
+ * Upload style
  */
 export const getUploadContainStyle = (props: UploadProps) => {
   const { theme } = props;
@@ -19,8 +19,8 @@ export const getUploadContainStyle = (props: UploadProps) => {
   let boxShadow = `0 0 0 0.1rem ${theme.colors["B50"]}`;
 
   // if (uploadType === "picture") {
-  //   height = `120px`;
-  //   width = `120px`;
+  //   containHeight = `120px`;
+  //   containWidth = `120px`;
   //   border = `1px dashed ${theme.colors["N30"]}`;
   //   borderHover = `1px dashed ${theme.colors["B50"]}`;
   //   backgroundColor = `${theme.colors["N1"]}`;
@@ -88,10 +88,6 @@ export const inputStyle = css`
   height: 0;
   visibility: hidden;
 `;
-
-/**
- * File list style
- */
 
 export const getListStyle = (props: UploadListProps) => {
   return css`

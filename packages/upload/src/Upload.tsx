@@ -32,9 +32,6 @@ const Input = styled.input`
   ${inputStyle}
 `;
 
-// Type of button
-export type UploadTypeProps = "textName" | "picture";
-
 export interface UploadChangeParam<T extends object = UploadFileType> {
   file: T;
   fileList: UploadFileType[];
@@ -44,8 +41,6 @@ export interface UploadChangeParam<T extends object = UploadFileType> {
 export interface UploadProps extends UploadListProps {
   /* Accept input attribute*/
   accept?: string;
-  /* upload type: file name in text or picture*/
-  uploadType?: UploadTypeProps;
   /* allow upload multiple files*/
   multiple?: boolean;
   /* Label title under Label tag*/
@@ -66,7 +61,6 @@ export interface UploadProps extends UploadListProps {
 
 const Upload: FC<UploadProps> = ({
   label = "+ Add file",
-  uploadType = "textName",
   multiple = false,
   accept,
   disabled,
@@ -76,11 +70,6 @@ const Upload: FC<UploadProps> = ({
 }) => {
   const [fileList, setFileList] = useState(defaultFileList);
   const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
-
-  // only allow single upload for avatar
-  if (uploadType === "picture") {
-    multiple = false;
-  }
 
   // Handle error from local reading file
   function localErrorHandler(this: FileReader, event: any) {
@@ -251,7 +240,7 @@ const Upload: FC<UploadProps> = ({
 
   return (
     <>
-      <Container uploadType={uploadType} requestUpload={requestUpload}>
+      <Container requestUpload={requestUpload}>
         {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
         <Label>
           <span>{label}</span>
@@ -265,11 +254,12 @@ const Upload: FC<UploadProps> = ({
           />
         </Label>
       </Container>
+
       {/**
        * show file list
-       * only show file list if list length > 0 or uploadType = picture
+       * only show file list if list length > 0
        */
-      uploadType !== "picture" && fileList.length > 0 && (
+      fileList.length > 0 && (
         <FileList
           fileList={fileList}
           rowKey={item => item.uid}
@@ -282,25 +272,6 @@ const Upload: FC<UploadProps> = ({
 };
 
 export default memo(Upload);
-
-// onLoadStart: () => {
-//   const newFileList = updateFileState(file, fileList, {
-//     status: "progress"
-//   });
-//   setFileList(newFileList);
-// },
-// onProgress: e => {
-//   let percentLoaded = 0;
-
-//   if (e.lengthComputable) {
-//     percentLoaded = Math.round((e.loaded / e.total) * 100);
-//   }
-
-//   const newFileList = updateFileState(file, fileList, {
-//     percent: percentLoaded
-//   });
-//   setFileList(newFileList);
-// }
 
 // it('changes image url', async () => {
 //   const { getByTestId } = render(<ImageUploader {...props} />);

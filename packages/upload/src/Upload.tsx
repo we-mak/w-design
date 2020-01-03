@@ -7,7 +7,7 @@
  * Upload
  * Simple upload file
  */
-import React, { FC, useState, memo, ReactNode } from "react";
+import React, { FC, useState, memo, ReactNode, useEffect } from "react";
 import styled from "styled-components";
 import { PushMessage } from "@w-design/core";
 import { PushMessageProps } from "@w-design/core/lib/types/PushMessage";
@@ -15,43 +15,21 @@ import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState } from "./utils";
 import { UploadFileType, UploadListProps } from "./FileList";
-
+import { RequestUploadType, xhrRequest } from "./xhrRequest";
+//
 import dummyThumb from "./dummyThumb";
-import { getUploadContainStyle } from "./getStyled";
+import { getUploadContainStyle, labelStyle, inputStyle } from "./getStyled";
 
 const Container = styled.div`
   ${getUploadContainStyle};
 `;
 
 const Label = styled.label`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  text-align: center;
-  position: relative;
-  display: block;
-  padding: 0.4rem;
-  cursor: pointer;
-  span {
-    margin: auto;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  ${labelStyle}
 `;
 
 const Input = styled.input`
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  visibility: hidden;
+  ${inputStyle}
 `;
 
 // Type of button
@@ -84,16 +62,6 @@ export interface UploadProps extends UploadListProps {
   disabled?: boolean;
   /* remove or abort upload*/
   onRemove?: (file: UploadFileType) => void | boolean | Promise<void | boolean>;
-}
-
-export interface RequestUploadType {
-  endpoint: string;
-  method: "POST" | "PUT" | "post" | "put";
-  headers?: Object;
-  timeout?: number;
-  withCredentials?: boolean;
-  ignoreCache?: boolean;
-  body?: Object;
 }
 
 const Upload: FC<UploadProps> = ({
@@ -142,7 +110,7 @@ const Upload: FC<UploadProps> = ({
   }
 
   // Resolve file change before upload to server
-  const handleFilesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFilesChange = function(e: React.ChangeEvent<HTMLInputElement>) {
     let files: UploadFileType[] = [];
     const rawfiles = Array.prototype.slice.call(e.target.files);
 
@@ -182,8 +150,10 @@ const Upload: FC<UploadProps> = ({
     }
   };
 
+  // Handle trigger upload on click on upload button
   const handleFileUpload = (file: UploadFileType) => {
-    // beforeUpload: Check file types allowed,... anything before upload execute from props (if any)
+    // beforeUpload
+    // Check file types allowed,... anything before upload execute from props (if any)
     if (beforeUpload) {
       const before = beforeUpload(file, fileList);
 
@@ -214,89 +184,65 @@ const Upload: FC<UploadProps> = ({
     return post(file);
   };
 
+  const [xhr, setXhr] = useState<any>(undefined);
+
+  useEffect(() => {
+    if (!xhr) {
+      setXhr(xhrRequest());
+    }
+  }, [xhr, xhrRequest]);
+
   const post = async (file: UploadFileType): Promise<void> => {
-    const xhr = new XMLHttpRequest();
-    // set default method is "POST"
-    const { method = "POST", endpoint, headers, ignoreCache } = requestUpload;
-
-    try {
-      const result = await new Promise((resolve, reject) => {
-        xhr.open(method, endpoint, true);
-
-        if (headers) {
-          Object.keys(headers).forEach(key => xhr!.setRequestHeader(key, headers[key]));
-        }
-        if (ignoreCache) {
-          xhr.setRequestHeader("Cache-Control", "no-cache");
-        }
-
-        xhr.onload = function() {
-          if (this.status >= 200 && this.status < 300) {
-            return resolve(xhr.response);
-          } else {
-            return reject({
-              status: this.status,
-              statusText: xhr.statusText
+    if (xhr) {
+      try {
+        const result = await xhr.upload({
+          ...requestUpload,
+          file,
+          onLoadStart: () => {
+            const newFileList = updateFileState(file, fileList, {
+              status: "progress"
             });
+            setFileList(newFileList);
+          },
+          onProgress: (e: ProgressEvent<EventTarget>) => {
+            let percentLoaded = 0;
+
+            if (e.lengthComputable) {
+              percentLoaded = Math.round((e.loaded / e.total) * 100);
+            }
+
+            const newFileList = updateFileState(file, fileList, {
+              percent: percentLoaded
+            });
+            setFileList(newFileList);
           }
-        };
+        });
 
-        xhr.onloadstart = function() {
-          const newFileList = updateFileState(file, fileList, {
-            status: "progress"
-          });
-          setFileList(newFileList);
-        };
+        const newFileList = updateFileState(file, fileList, {
+          status: "success",
+          response: result
+        });
 
-        xhr.onerror = function() {
-          return reject({
-            status: this.status,
-            statusText: xhr.statusText
-          });
-        };
-
-        xhr.upload.onprogress = function(e) {
-          let percentLoaded = 0;
-
-          if (e.lengthComputable) {
-            percentLoaded = Math.round((e.loaded / e.total) * 100);
-          }
-
-          const newFileList = updateFileState(file, fileList, {
-            percent: percentLoaded
-          });
-          setFileList(newFileList);
-        };
-
-        let formData = new FormData();
-        formData.append("file", file.data);
-        xhr.send(formData);
-      });
-
-      const newFileList = updateFileState(file, fileList, {
-        status: "success",
-        response: result
-      });
-      setFileList(newFileList);
-    } catch (err) {
-      const newFileList = updateFileState(file, fileList, {
-        status: "error",
-        response: err
-      });
-      setFileList(newFileList);
+        return setFileList(newFileList);
+      } catch (err) {
+        const newFileList = updateFileState(file, fileList, {
+          status: "error",
+          response: err
+        });
+        return setFileList(newFileList);
+      }
     }
   };
 
   const handleUploadCancel = (file: UploadFileType) => {
+    if (!xhr) return;
     // if upload is in progress: handle abort event
     if (file.status === "progress") {
       const newFileList = updateFileState(file, fileList, {
         status: "error"
       });
-
       setFileList(newFileList);
-
-      // return xhr.abort();
+      return xhr && xhr.abort();
     }
 
     const fileInFileList = getFileItem(file, fileList);
@@ -336,6 +282,25 @@ const Upload: FC<UploadProps> = ({
 };
 
 export default memo(Upload);
+
+// onLoadStart: () => {
+//   const newFileList = updateFileState(file, fileList, {
+//     status: "progress"
+//   });
+//   setFileList(newFileList);
+// },
+// onProgress: e => {
+//   let percentLoaded = 0;
+
+//   if (e.lengthComputable) {
+//     percentLoaded = Math.round((e.loaded / e.total) * 100);
+//   }
+
+//   const newFileList = updateFileState(file, fileList, {
+//     percent: percentLoaded
+//   });
+//   setFileList(newFileList);
+// }
 
 // it('changes image url', async () => {
 //   const { getByTestId } = render(<ImageUploader {...props} />);

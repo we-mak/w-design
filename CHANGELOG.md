@@ -24,6 +24,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ `Upload` XMLHttpRequest to support server side render
+- ❌ `AvatarUpload`
+- ❌ `CoverUpload`
 
 ---
 

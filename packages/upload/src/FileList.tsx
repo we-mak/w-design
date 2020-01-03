@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Button, ProgressLoader, List, ListItem } from "@w-design/core";
+import { Button, ProgressLoader, List, ListItem, Box } from "@w-design/core";
 import { GlobProps } from "@w-design/core/lib/types/common/props";
 import { getListStyle } from "./getStyled";
 
@@ -75,12 +75,12 @@ export const FileList: React.FC<UploadListProps> = ({ fileList, onUpload, onCanc
                 ></Button>
               ]}
             >
-              <div style={{ width: "100%" }}>
+              <Box width="100%">
                 {item.name}
                 {item.status && (
                   <ProgressLoader size="sm" percent={item.percent} status={item.status} />
                 )}
-              </div>
+              </Box>
             </ListItem>
           );
         }}

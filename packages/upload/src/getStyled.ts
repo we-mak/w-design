@@ -58,6 +58,37 @@ export const getUploadContainStyle = (props: UploadProps) => {
   `;
 };
 
+export const labelStyle = css`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  text-align: center;
+  position: relative;
+  display: block;
+  padding: 0.4rem;
+  cursor: pointer;
+  span {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const inputStyle = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+`;
+
 /**
  * File list style
  */

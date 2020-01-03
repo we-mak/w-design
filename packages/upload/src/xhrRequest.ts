@@ -21,14 +21,15 @@ export interface RequestUploadType {
 
 /* Extended functions*/
 export interface RequestUploadProps {
-  file: UploadFileType;
-  onProgress: (ev: ProgressEvent<EventTarget>) => any;
-  onLoadStart?: () => any; // ((this: XMLHttpRequest, ev: ProgressEvent<EventTarget>) => any) | null
+  onLoadStart?: (e: ProgressEvent<EventTarget>) => any;
+  onProgress?: (e: ProgressEvent<EventTarget>) => any;
   onSuccess?: (body: Object) => void;
-  onError?: (event: Error, body?: Object) => void;
+  onError?: (e?: ProgressEvent<EventTarget>, body?: Object) => void;
 }
 
-interface XhrRequestType extends RequestUploadType, RequestUploadProps {}
+interface XhrRequestType extends RequestUploadType, RequestUploadProps {
+  file: UploadFileType;
+}
 
 // function getBody(xhr: XMLHttpRequest) {
 //   const text = xhr.responseText || xhr.response;
@@ -43,68 +44,84 @@ interface XhrRequestType extends RequestUploadType, RequestUploadProps {}
 //   }
 // }
 
-export function xhrRequest(option: XhrRequestType) {
+export const xhrRequest = (): {
+  upload?: (options: XhrRequestType) => Promise<any>;
+  abort?: () => void;
+} => {
   const xhr = new XMLHttpRequest();
 
-  const { method = "POST", endpoint, headers, ignoreCache, onLoadStart, onProgress, file } = option;
+  const upload = ({
+    method = "POST",
+    endpoint,
+    headers,
+    withCredentials,
+    ignoreCache,
+    file,
+    onLoadStart,
+    onProgress
+  }: XhrRequestType) => {
+    return new Promise((resolve, reject) => {
+      xhr.open(method, endpoint, true);
 
-  const upload = new Promise((resolve, reject) => {
-    xhr.open(method, endpoint, true);
+      // Set request headers
+      if (headers) {
+        // close default XHR header
+        // when set headers['X-Requested-With'] = null
+        if (headers["X-Requested-With"] !== null) {
+          xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        }
 
-    // Set request headers
-    if (headers) {
-      // close default XHR header
-      // when set headers['X-Requested-With'] = null
-      if (headers["X-Requested-With"] !== null) {
-        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        Object.keys(headers).forEach(key => xhr.setRequestHeader(key, headers[key]));
       }
 
-      Object.keys(headers).forEach(key => xhr.setRequestHeader(key, headers[key]));
-    }
+      if (ignoreCache) {
+        xhr.setRequestHeader("Cache-Control", "no-cache");
+      }
 
-    if (ignoreCache) {
-      xhr.setRequestHeader("Cache-Control", "no-cache");
-    }
+      if (withCredentials && "withCredentials" in xhr) {
+        xhr.withCredentials = true;
+      }
 
-    if (option.withCredentials && "withCredentials" in xhr) {
-      xhr.withCredentials = true;
-    }
+      xhr.onload = function() {
+        if (this.status >= 200 && this.status < 300) {
+          // add success
+          // onSuccess && onSuccess(getBody(xhr));
+          return resolve({
+            status: this.status,
+            statusText: this.statusText
+          });
+        } else {
+          return reject({
+            status: this.status,
+            statusText: this.statusText
+          });
+        }
+      };
 
-    xhr.onload = function() {
-      if (this.status >= 200 && this.status < 300) {
-        // add success
-        // onSuccess && onSuccess(getBody(xhr));
-        return resolve(xhr.response);
-      } else {
+      if (onLoadStart) {
+        xhr.onloadstart = e => onLoadStart(e);
+      }
+      if (onProgress) {
+        xhr.upload.onprogress = e => onProgress(e);
+      }
+
+      xhr.onerror = function() {
         return reject({
           status: this.status,
-          statusText: xhr.statusText
+          statusText: this.statusText
         });
-      }
-    };
+      };
 
-    if (onLoadStart) {
-      xhr.onloadstart = onLoadStart();
-    }
-
-    xhr.upload.onprogress = e => onProgress(e);
-
-    xhr.onerror = function() {
-      return reject({
-        status: this.status,
-        statusText: xhr.statusText
-      });
-    };
-
-    let formData = new FormData();
-    formData.append("file", file.data);
-    xhr.send(formData);
-  });
-
-  const abort = () => xhr.abort();
+      let formData = new FormData();
+      formData.append("file", file.data);
+      xhr.send(formData);
+    });
+  };
 
   return {
     upload,
-    abort
+    abort() {
+      return xhr.abort();
+    }
   };
-}
+};

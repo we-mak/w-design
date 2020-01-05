@@ -6,8 +6,12 @@ export interface PortalProps extends React.ReactElement<any> {
 }
 
 const Portal: any = ({ children }: PortalProps) => {
-  const Root = document.body;
-  let target: HTMLElement = document.createElement("div");
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  const Root = window.document.body;
+  let target: HTMLElement = window.document.createElement("div");
 
   React.useEffect(() => {
     Root.appendChild(target);

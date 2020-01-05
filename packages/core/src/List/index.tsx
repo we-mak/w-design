@@ -14,8 +14,12 @@ import Divider from "../Divider";
 import Typo from "../Typo";
 import Box from "../Box";
 import Spinner from "../Spinner";
-import { ListWrapper, ListFooter } from "./Styled";
+import { getFooterStyle, getListContainerStyle } from "./getStyled";
 import { GlobProps } from "../common/props";
+
+const ListContainer = styled.div<ListProps>`
+  ${getListContainerStyle}
+`;
 
 const SpinContainer = styled.div`
   position: absolute;
@@ -32,6 +36,10 @@ const MenuList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+`;
+
+const Footer = styled.div`
+  ${getFooterStyle}
 `;
 
 export interface ListProps extends GlobProps {
@@ -127,14 +135,14 @@ const List: React.FC<ListProps> = ({
         </SpinContainer>
       )}
 
-      <ListWrapper isLoading={isLoading}>
+      <ListContainer isLoading={isLoading}>
         {childrenComponent}
         {footer}
-      </ListWrapper>
+      </ListContainer>
     </Box>
   );
 };
 
 export default List;
 export { ListItem } from "./ListItem";
-export { ListFooter };
+export { Footer };

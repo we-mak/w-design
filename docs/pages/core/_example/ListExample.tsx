@@ -59,12 +59,11 @@ export default () => {
       ></List>
 
       <br />
-      <h4>Empty list example</h4>
-      <List header="Empty list"></List>
-      <h4>Children list</h4>
-      <List header="Children list">
-        <ListItem>Item 1</ListItem>
-        <ListItem>Item 2</ListItem>
+      <List header="Empty list example"></List>
+      <br />
+      <List header="Children list example">
+        <ListItem title="Item 1" description="Lorem ipsum 1"></ListItem>
+        <ListItem title="Item 2" description="Lorem ipsum 2"></ListItem>
       </List>
     </>
   );

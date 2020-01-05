@@ -78,7 +78,7 @@ const List: React.FC<ListProps> = ({
     return rows(item, index);
   };
 
-  let childrenComponent: React.ReactNode = null;
+  let childrenComponent: React.ReactNode = <MenuList>{children}</MenuList>;
 
   if (sourceData.length > 0) {
     const items = sourceData.map((item: any, index: number) => renderItem(item, index));
@@ -101,7 +101,7 @@ const List: React.FC<ListProps> = ({
           {emptyView}
         </Box>
       );
-    } else {
+    } else if (!children) {
       childrenComponent = (
         <Box display="flex" justifyContent="center">
           <EmptyView />
@@ -128,7 +128,7 @@ const List: React.FC<ListProps> = ({
       )}
 
       <ListWrapper isLoading={isLoading}>
-        {childrenComponent ? childrenComponent : <MenuList>{children}</MenuList>}
+        {childrenComponent}
         {footer}
       </ListWrapper>
     </Box>

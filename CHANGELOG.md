@@ -25,10 +25,11 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `AvatarUpload`
 - ❌ `CoverUpload`
 
-### Core package <a name="0.44.8"></a>[v0.44.8]()
+### Core package <a name="0.45"></a>[v0.45]()
 
 - ✅ Remove box-shadow for disabled `Button`
-- ❌ `List`: Add children props
+- ✅ `List`: Add children props
+- ✅ Change `EmptyView` icon
 - ❌ Prevent update `PushMessage` on each parent render
 
 ---

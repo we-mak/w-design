@@ -182,6 +182,7 @@ export function getButtonStyle(props: ButtonProps) {
       color: ${colors["N7"]} !important;
       background: ${colors["N4"]} !important;
       border: none;
+      box-shadow: none !important;
       cursor: not-allowed;
     }
 

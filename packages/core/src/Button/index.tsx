@@ -14,22 +14,22 @@ import {
 
 export interface ButtonProps
   extends GlobProps,
-  SizeProps,
-  LinkProps,
-  ActionProps,
-  SyntheticEventProps,
-  MouseEventProps {
+    SizeProps,
+    LinkProps,
+    ActionProps,
+    SyntheticEventProps,
+    MouseEventProps {
   /** button apperance type */
   appearance?:
-  | "default"
-  | "primary"
-  | "danger"
-  | "warning"
-  | "success"
-  | "subtle"
-  | "link"
-  | "help"
-  | "clean";
+    | "default"
+    | "primary"
+    | "danger"
+    | "warning"
+    | "success"
+    | "subtle"
+    | "link"
+    | "help"
+    | "clean";
   /** WAI-ARIA support */
   ariaControls?: string;
   ariaExpanded?: boolean;
@@ -48,13 +48,11 @@ export interface ButtonProps
   isRequired?: boolean;
 }
 
-const StyledButton = styled.button`
+const Btn = styled.button`
   ${getButtonStyle}
 `;
 
-StyledButton.displayName = "StyledButton";
-
-const StyledA = styled.a`
+const A = styled.a`
   ${getButtonStyle}
   a& {
     line-height: initial;
@@ -64,12 +62,9 @@ const StyledA = styled.a`
   }
 `;
 
-StyledA.displayName = "StyledAButton";
-
-const StyledSpan = styled.span`
+const Span = styled.span`
   ${getButtonStyle}
 `;
-StyledSpan.displayName = "StyledSpanButton";
 
 const ChildContainer = styled.div<{ isLoading: boolean }>`
   display: inline-flex;
@@ -82,17 +77,14 @@ const ChildContainer = styled.div<{ isLoading: boolean }>`
   height: 100%;
   opacity: ${props => props.isLoading && `0`};
 `;
-ChildContainer.displayName = "ChildContainer";
 
-const SpinnerWrapper = styled.div`
+const SpinContainer = styled.div`
   position: absolute;
   left: 0;
   right: 0;
   top: 10%;
   bottom: 10%;
 `;
-
-SpinnerWrapper.displayName = "SpinnerWrapper";
 
 const Button = (props: ButtonProps) => {
   const {
@@ -127,9 +119,9 @@ const Button = (props: ButtonProps) => {
   let ButtonComponent: AnyStyledComponent;
 
   if (href) {
-    isDisabled ? (ButtonComponent = StyledSpan) : (ButtonComponent = StyledA);
+    isDisabled ? (ButtonComponent = Span) : (ButtonComponent = A);
   } else {
-    ButtonComponent = StyledButton;
+    ButtonComponent = Btn;
   }
 
   let button!: HTMLElement | undefined;
@@ -173,9 +165,9 @@ const Button = (props: ButtonProps) => {
       {...rest}
     >
       {isLoading && (
-        <SpinnerWrapper>
+        <SpinContainer>
           <Spinner size="sm" spinnerColor={spinnerColor} />
-        </SpinnerWrapper>
+        </SpinContainer>
       )}
       <ChildContainer isLoading={isLoading}>
         {iconBefore && <Icon className={`icon-before ${iconBefore}`} />}

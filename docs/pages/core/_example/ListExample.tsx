@@ -59,8 +59,13 @@ export default () => {
       ></List>
 
       <br />
-      <div>Empty list example</div>
+      <h4>Empty list example</h4>
       <List header="Empty list"></List>
+      <h4>Children list</h4>
+      <List header="Children list">
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 2</ListItem>
+      </List>
     </>
   );
 };

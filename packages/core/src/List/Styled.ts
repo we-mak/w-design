@@ -14,11 +14,6 @@ import { ListItemProps } from "./ListItem";
 
 export interface ListFooterProps extends GlobProps, BorderProps, MarginProps, JustifyContentProps {}
 
-export const ListContainer = styled.div`
-  position: relative;
-`;
-ListContainer.displayName = "ListContainer";
-
 export const ListWrapper = styled.div<ListProps>`
   overflow: visible !important;
   font-variant: tabular-nums;
@@ -26,26 +21,6 @@ export const ListWrapper = styled.div<ListProps>`
   position: relative;
   opacity: ${props => props.isLoading && `0.5`};
 `;
-ListWrapper.displayName = "ListWrapper";
-
-export const SpinnerWrapper = styled.div`
-  position: absolute;
-  z-index: 300;
-  top: 50%;
-  bottom: 50%;
-  left: 0;
-  right: 0;
-`;
-SpinnerWrapper.displayName = "SpinnerWrapper";
-
-export const MenuList = styled.ul`
-  overflow-y: auto;
-  overflow-x: hidden;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`;
-MenuList.displayName = "MenuList";
 
 const getItemStyle = (props: ListItemProps) => {
   const { theme, hasDivider } = props;
@@ -109,9 +84,3 @@ export const ListFooter = styled.div<ListFooterProps>`
   ${justifyContent};
 `;
 ListFooter.displayName = "ListFooter";
-
-export const EmptyContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-EmptyContainer.displayName = "EmptyContainer";

@@ -28,9 +28,9 @@ const getBadgeStyle = ({ appearance = "default", theme }: BadgeProps) => {
     text-align: center;
     border-radius: 2rem;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 11px;
     color: ${colorStyle};
-    padding: ${padding["sm"]};
+    padding: ${padding["xs"]};
     background: ${colors[bgStyle]};
   `;
 };

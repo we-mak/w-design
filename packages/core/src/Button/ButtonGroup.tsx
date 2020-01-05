@@ -3,12 +3,9 @@
  */
 import * as React from "react";
 import styled from "styled-components";
+import Box from "../Box";
 
-const ButtonGroupWrapper = styled.div`
-  display: inline-flex;
-`;
-
-const ButtonGroupItem = styled.div`
+const GroupItem = styled.div`
   flex: 1 0 auto;
   display: flex;
   & + &::before {
@@ -19,13 +16,9 @@ const ButtonGroupItem = styled.div`
 `;
 
 export const ButtonGroup: React.FC<React.ReactNode> = ({ children }) => (
-  <ButtonGroupWrapper>
+  <Box display="inline-flex">
     {React.Children.map(children, (child, idx) => {
-      return (
-        <ButtonGroupItem key={idx}>
-          {React.cloneElement(child as JSX.Element)}
-        </ButtonGroupItem>
-      );
+      return <GroupItem key={idx}>{React.cloneElement(child as JSX.Element)}</GroupItem>;
     })}
-  </ButtonGroupWrapper>
+  </Box>
 );

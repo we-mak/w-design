@@ -8,19 +8,31 @@
  * - Spinner exists if data is loading
  */
 import * as React from "react";
+import styled from "styled-components";
 import EmptyView from "../EmptyView";
 import Divider from "../Divider";
 import Typo from "../Typo";
+import Box from "../Box";
 import Spinner from "../Spinner";
-import {
-  ListContainer,
-  ListWrapper,
-  MenuList,
-  SpinnerWrapper,
-  ListFooter,
-  EmptyContainer
-} from "./Styled";
+import { ListWrapper, ListFooter } from "./Styled";
 import { GlobProps } from "../common/props";
+
+const SpinContainer = styled.div`
+  position: absolute;
+  z-index: 300;
+  top: 50%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+`;
+
+const MenuList = styled.ul`
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
 
 export interface ListProps extends GlobProps {
   header?: React.ReactNode;
@@ -30,6 +42,7 @@ export interface ListProps extends GlobProps {
   rowKey?: string | ((item: any) => string);
   rows?: (item: any, index: number) => React.ReactNode;
   emptyView?: React.ReactElement;
+  children?: React.ReactNode;
 }
 
 const List: React.FC<ListProps> = ({
@@ -39,7 +52,8 @@ const List: React.FC<ListProps> = ({
   sourceData = [],
   rowKey,
   rows,
-  emptyView
+  emptyView,
+  children
 }) => {
   let keys: { [key: string]: string } = {};
 
@@ -64,7 +78,7 @@ const List: React.FC<ListProps> = ({
     return rows(item, index);
   };
 
-  let childrenComponent: React.ReactNode | React.ReactNode[];
+  let childrenComponent: React.ReactNode = null;
 
   if (sourceData.length > 0) {
     const items = sourceData.map((item: any, index: number) => renderItem(item, index));
@@ -82,18 +96,22 @@ const List: React.FC<ListProps> = ({
     childrenComponent = <MenuList>{childrenList}</MenuList>;
   } else if (!isLoading) {
     if (emptyView) {
-      childrenComponent = <EmptyContainer>{emptyView}</EmptyContainer>;
+      childrenComponent = (
+        <Box display="flex" justifyContent="center">
+          {emptyView}
+        </Box>
+      );
     } else {
       childrenComponent = (
-        <EmptyContainer>
+        <Box display="flex" justifyContent="center">
           <EmptyView />
-        </EmptyContainer>
+        </Box>
       );
     }
   }
 
   return (
-    <ListContainer>
+    <Box position="relative">
       {header && (
         <>
           <Typo tag="h3" mt="0.4rem" mb="0">
@@ -104,16 +122,16 @@ const List: React.FC<ListProps> = ({
       )}
 
       {isLoading && (
-        <SpinnerWrapper>
+        <SpinContainer>
           <Spinner />
-        </SpinnerWrapper>
+        </SpinContainer>
       )}
 
       <ListWrapper isLoading={isLoading}>
-        {childrenComponent}
+        {childrenComponent ? childrenComponent : <MenuList>{children}</MenuList>}
         {footer}
       </ListWrapper>
-    </ListContainer>
+    </Box>
   );
 };
 

@@ -32,8 +32,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ✅ Remove box-shadow for disabled `Button`
 - ✅ `List`: Add children props
 - ✅ Change `EmptyView` icon
-- ❌ Prevent update `PushMessage` on each parent render
 - ✅ Fix `Portal` on ssr
+- ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 
 ---
 

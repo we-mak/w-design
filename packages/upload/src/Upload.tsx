@@ -9,8 +9,6 @@
  */
 import React, { FC, useState, memo, ReactNode, useEffect } from "react";
 import styled from "styled-components";
-import { PushMessage } from "@w-design/core";
-import { PushMessageProps } from "@w-design/core/lib/types/PushMessage";
 import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState } from "./utils";
@@ -69,32 +67,22 @@ const Upload: FC<UploadProps> = ({
   requestUpload
 }) => {
   const [fileList, setFileList] = useState(defaultFileList);
-  const [uploadFeedbackStatus, setUploadFeedbackStatus] = useState<PushMessageProps>();
 
   // Handle error from local reading file
-  function localErrorHandler(this: FileReader, event: any) {
+  function localErrorHandler(event: any) {
     const { error } = event;
 
     switch (error.code) {
       case error.NOT_FOUND_ERR:
-        setUploadFeedbackStatus({
-          value: "File Not Found!",
-          appearance: "error"
-        });
+        new Error("File Not Found!");
         break;
       case error.NOT_SUPPORTED_ERR:
-        setUploadFeedbackStatus({
-          value: "The operation is not supported",
-          appearance: "error"
-        });
+        new Error("The operation is not supported");
         break;
       case error.ABORT_ERR:
         break; // noop
       default:
-        setUploadFeedbackStatus({
-          value: "An error occurred reading this file.",
-          appearance: "error"
-        });
+        new Error("An error occurred reading this file.");
     }
   }
 
@@ -241,7 +229,6 @@ const Upload: FC<UploadProps> = ({
   return (
     <>
       <Container requestUpload={requestUpload}>
-        {uploadFeedbackStatus && <PushMessage messages={[uploadFeedbackStatus]} />}
         <Label>
           <span>{label}</span>
           <Input

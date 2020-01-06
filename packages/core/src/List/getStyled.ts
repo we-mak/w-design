@@ -12,8 +12,6 @@ import { GlobProps } from "../common/props";
 import { ListProps } from ".";
 import { ListItemProps } from "./ListItem";
 
-export interface ListFooterProps extends GlobProps, BorderProps, MarginProps, JustifyContentProps {}
-
 export const getListContainerStyle = ({ isLoading }: ListProps) => css`
   overflow: visible !important;
   font-variant: tabular-nums;
@@ -39,6 +37,8 @@ export const getListItemStyle = (props: ListItemProps) => {
     ${divider}
   `;
 };
+
+export interface ListFooterProps extends GlobProps, BorderProps, MarginProps, JustifyContentProps {}
 
 export const getFooterStyle = ({ theme }: ListFooterProps) => css`
   display: flex;

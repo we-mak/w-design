@@ -1,22 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect, memo } from "react";
+import styled from "styled-components";
+import { slideDown } from "@w-design/helpers";
 import Icon from "../Icon";
-import { MessagePanel } from "./Styled";
 import { PushMessageProps } from "./index";
 
-// TODO: prevent rerendering
+const Panel = styled.div`
+  padding: 0.4rem;
+  margin: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  box-shadow: ${props => props.theme.shadows[1]};
+  width: fit-content;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  animation: ${slideDown} 0.25s ease;
+`;
 
-export const Message = ({
-  value,
-  appearance = "info",
-  dismissTimeout = 3000
-}: PushMessageProps) => {
+const Message = ({ value, appearance = "info", dismissTimeout = 3000 }: PushMessageProps) => {
   const [isShowMessage, setShowMessage] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // handle upload remove upload error message
     const timer = setTimeout(() => setShowMessage(false), dismissTimeout);
     return () => clearTimeout(timer);
-  });
+  }, []);
 
   let iconName = "fa fa-info-circle info";
   switch (appearance) {
@@ -32,12 +43,14 @@ export const Message = ({
   }
 
   return isShowMessage ? (
-    <MessagePanel>
+    <Panel>
       <Icon className={iconName}></Icon>
       &nbsp;
       {value}
-    </MessagePanel>
+    </Panel>
   ) : (
     <></>
   );
 };
+
+export default memo(Message);

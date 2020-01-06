@@ -38,7 +38,7 @@ const MenuList = styled.ul`
   padding: 0;
 `;
 
-const Footer = styled.div`
+const ListFooter = styled.div`
   ${getFooterStyle}
 `;
 
@@ -102,14 +102,14 @@ const List: React.FC<ListProps> = ({
     });
 
     childrenComponent = <MenuList>{childrenList}</MenuList>;
-  } else if (!isLoading) {
+  } else if (!isLoading && !children) {
     if (emptyView) {
       childrenComponent = (
         <Box display="flex" justifyContent="center">
           {emptyView}
         </Box>
       );
-    } else if (!children) {
+    } else {
       childrenComponent = (
         <Box display="flex" justifyContent="center">
           <EmptyView />
@@ -145,4 +145,4 @@ const List: React.FC<ListProps> = ({
 
 export default List;
 export { ListItem } from "./ListItem";
-export { Footer };
+export { ListFooter };

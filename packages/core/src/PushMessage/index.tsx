@@ -1,7 +1,24 @@
-import React, { ReactNode } from "react";
+import * as React from "react";
+import styled from "styled-components";
 import Portal from "../Portal";
-import { Message } from "./Message";
-import { MessageContainer } from "./Styled";
+import Message from "./Message";
+
+const Container = styled.section`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: ${props => props.theme.fonts["normal"]};
+  font-size: ${props => props.theme.fontSizes[0]};
+  font-feature-settings: "tnum";
+  font-variant: tabular-nums;
+`;
 
 export interface PushMessageProps {
   value: string;
@@ -10,19 +27,22 @@ export interface PushMessageProps {
 }
 
 const PushMessage = ({ messages }: { messages: PushMessageProps[] }) => {
-  let message: ReactNode;
+  // let messageNodes: React.ReactNode = [];
 
-  for (let i = 0; i < messages.length; i++) {
-    message = (
-      <Message value={messages[i].value} appearance={messages[i].appearance} />
-    );
-  }
+  // for (let i in messages) {
+  //   messageNodes = <Message value={messages[i].value} appearance={messages[i].appearance} />;
+  // }
 
   return (
     <Portal>
-      <MessageContainer>
-        <div>{message}</div>
-      </MessageContainer>
+      <Container>
+        {/* <div>{messageNodes}</div> */}
+        <div>
+          {messages.map((m, i) => (
+            <Message value={m.value} appearance={m.appearance} key={i} />
+          ))}
+        </div>
+      </Container>
     </Portal>
   );
 };

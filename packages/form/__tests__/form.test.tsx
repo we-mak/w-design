@@ -8,9 +8,9 @@
 import * as React from "react";
 import { cleanup, render, fireEvent } from "@testing-library/react";
 import { Provider, Button } from "@w-design/core";
-import useField from "./useField";
-import useForm from "./useForm";
-import InputForm from "../InputForm";
+import useField from "../src/hooks/useField";
+import useForm from "../src/hooks/useForm";
+import InputForm from "../src/InputForm";
 
 afterEach(cleanup);
 
@@ -46,12 +46,7 @@ const Form = ({ onSubmit }: { onSubmit?: (formdata: any) => void }) => {
         }
         noValidate
       >
-        <InputForm
-          {...name}
-          type="name"
-          label="Name"
-          placeholder="add your name"
-        />
+        <InputForm {...name} type="name" label="Name" placeholder="add your name" />
         <InputForm
           {...email}
           type="email"

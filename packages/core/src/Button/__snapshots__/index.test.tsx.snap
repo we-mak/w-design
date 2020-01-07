@@ -3,13 +3,14 @@
 exports[`<Button/> should render with different appearance style 1`] = `
 <div>
   <div
-    class="sc-fzXfLO hpMXMJ"
+    class="sc-fzXfLO lbRBjb"
+    display="inline-flex"
   >
     <div
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG eVAuDO"
+        class="sc-AykKG dDFQeM"
         type="button"
       >
         <div
@@ -23,7 +24,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG hiYVtG"
+        class="sc-AykKG eoQNjs"
         type="button"
       >
         <div
@@ -41,7 +42,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG eSonCQ"
+        class="sc-AykKG dghYSK"
         type="button"
       >
         <div
@@ -59,7 +60,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG ebqLNb"
+        class="sc-AykKG UOKEV"
         type="button"
       >
         <div
@@ -76,7 +77,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG LCvPk"
+        class="sc-AykKG gotSVS"
         type="button"
       >
         <div
@@ -90,7 +91,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG idUkfO"
+        class="sc-AykKG OYYzI"
         type="button"
       >
         <div
@@ -104,7 +105,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG bJgynF"
+        class="sc-AykKG dmuMRX"
         type="button"
       >
         <div
@@ -118,7 +119,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG hivcao"
+        class="sc-AykKG fRLUsW"
         type="button"
       >
         <div
@@ -132,7 +133,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       class="sc-fzXfLP iPdRQz"
     >
       <button
-        class="sc-AykKG hzgprH"
+        class="sc-AykKG bZOmxd"
         type="button"
       >
         <div
@@ -144,7 +145,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
     </div>
   </div>
   <a
-    class="sc-AykKH ehZpu"
+    class="sc-AykKH bVaNII"
     href="/"
     type="button"
   >
@@ -153,7 +154,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
     />
   </a>
   <span
-    class="sc-AykKI bRyapc"
+    class="sc-AykKI ewHnsG"
     disabled=""
     href="/"
     type="button"
@@ -163,7 +164,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
     />
   </span>
   <button
-    class="sc-AykKG bzkSZZ"
+    class="sc-AykKG jYStcb"
     type="button"
   >
     <div
@@ -171,7 +172,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
     />
   </button>
   <button
-    class="sc-AykKG eVAuDO"
+    class="sc-AykKG dDFQeM"
     type="button"
   >
     <div

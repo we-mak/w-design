@@ -11,22 +11,22 @@ describe("useClickOutside", () => {
     const ref = useClickOutside(fn);
 
     return (
-      <div data-testid="outside">
+      <div>
+        outside
         <div ref={ref}>foo</div>
       </div>
     );
   };
 
   test("should not call function when click on element", () => {
-    const { container } = render(<Test />);
-
-    fireEvent.click(container);
+    const { getByText } = render(<Test />);
+    fireEvent.click(getByText("foo"));
     expect(fn).not.toBeCalled();
   });
 
   // test("should call function when click outside element", () => {
-  //   const { getByTestId } = render(<Test />);
-  //   fireEvent.click(getByTestId(/outside/i));
+  //   const { getByText } = render(<Test />);
+  //   fireEvent.click(getByText("outside"));
   //   expect(fn).toBeCalled();
   // });
 });

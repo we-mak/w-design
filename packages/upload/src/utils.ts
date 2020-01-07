@@ -42,3 +42,21 @@ export function removeFileItem(file: UploadFileType, fileList: UploadFileType[])
   }
   return removed;
 }
+
+// Handle error from local reading file
+export function localErrorHandler(ev: any) {
+  const { error } = ev;
+
+  switch (error.code) {
+    case error.NOT_FOUND_ERR:
+      new Error("File Not Found!");
+      break;
+    case error.NOT_SUPPORTED_ERR:
+      new Error("The operation is not supported");
+      break;
+    case error.ABORT_ERR:
+      break; // noop
+    default:
+      new Error("An error occurred reading this file.");
+  }
+}

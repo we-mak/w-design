@@ -1,9 +1,4 @@
 /**
- * Copyright (c) We-Mak.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- * **************
  * Upload
  * Simple upload file
  */
@@ -11,7 +6,7 @@ import React, { FC, useState, memo, ReactNode, useEffect } from "react";
 import styled from "styled-components";
 import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
-import { fileToObject, getFileItem, updateFileState } from "./utils";
+import { fileToObject, getFileItem, updateFileState, localErrorHandler } from "./utils";
 import { UploadFileType, UploadListProps } from "./FileList";
 import { RequestUploadType, xhrRequest } from "./xhrRequest";
 //
@@ -67,24 +62,6 @@ const Upload: FC<UploadProps> = ({
   requestUpload
 }) => {
   const [fileList, setFileList] = useState(defaultFileList);
-
-  // Handle error from local reading file
-  function localErrorHandler(event: any) {
-    const { error } = event;
-
-    switch (error.code) {
-      case error.NOT_FOUND_ERR:
-        new Error("File Not Found!");
-        break;
-      case error.NOT_SUPPORTED_ERR:
-        new Error("The operation is not supported");
-        break;
-      case error.ABORT_ERR:
-        break; // noop
-      default:
-        new Error("An error occurred reading this file.");
-    }
-  }
 
   // Resolve file change before upload to server
   const handleFilesChange = function(e: React.ChangeEvent<HTMLInputElement>) {
@@ -246,7 +223,7 @@ const Upload: FC<UploadProps> = ({
        * show file list
        * only show file list if list length > 0
        */
-      fileList.length > 0 && (
+      (fileList.length > 0 || !multiple) && (
         <FileList
           fileList={fileList}
           rowKey={item => item.uid}

@@ -15,15 +15,14 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Actions`
 - ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
+- ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 - ❌ Split out `Icon` to separate package
 
 ---
 
-### Upload <a name="0.44.0"></a>[v0.44.0]()
+### Upload <a name="0.42.0"></a>[v0.42.0]()
 
 - ✅ `Upload` XMLHttpRequest to support server side render
-- ❌ `AvatarUpload`
-- ❌ `CoverUpload`
 
 ---
 
@@ -33,7 +32,6 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ✅ `List`: Add children props
 - ✅ Change `EmptyView` icon
 - ✅ Fix `Portal` on ssr
-- ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 
 ---
 

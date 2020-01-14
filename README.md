@@ -26,22 +26,22 @@ Feel free to use this library, or help us to improve it.
 
 Published libraries at `npm`
 
-- [![npm](https://img.shields.io/npm/v/%40w-design%2Fcore.svg?label=%40w-design%2Fcore.svg)](https://www.npmjs.com/package/@w-design/core)
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fcore.svg?label=%40w-design%2Fcore)](https://www.npmjs.com/package/@w-design/core)
   Core elements & components
 
-- [![npm](https://img.shields.io/npm/v/%40w-design%2Fform.svg?label=%40w-design%2Fform.svg)](https://www.npmjs.com/package/@w-design/form)
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fform.svg?label=%40w-design%2Fform.)](https://www.npmjs.com/package/@w-design/form)
   All needed form, input, box... components and hooks to handle form behaviour
 
-- [![npm](https://img.shields.io/npm/v/%40w-design%2Fmasonry.svg?label=%40w-design%2Fmasonry.svg)](https://www.npmjs.com/package/@w-design/masonry)
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fmasonry.svg?label=%40w-design%2Fmasonry)](https://www.npmjs.com/package/@w-design/masonry)
   Masonry component layout with flex box layout
 
-- [![npm](https://img.shields.io/npm/v/%40w-design%2Fupload.svg?label=%40w-design%2Fupload.svg)](https://www.npmjs.com/package/@w-design/upload)
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fupload.svg?label=%40w-design%2Fupload)](https://www.npmjs.com/package/@w-design/upload)
   Upload components with XHR request supports
 
-- [![npm](https://img.shields.io/npm/v/%40w-design%2Fhooks.svg?label=%40w-design%2Fhooks.svg)](https://www.npmjs.com/package/@w-design/hooks)
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fhooks.svg?label=%40w-design%2Fhooks)](https://www.npmjs.com/package/@w-design/hooks)
   React custom hooks
 
-- [![npm](https://img.shields.io/npm/v/%40w-design%2Fhelpers.svg?label=%40w-design%2Fhelpers.svg)](https://www.npmjs.com/package/@w-design/helpers)
+- [![npm](https://img.shields.io/npm/v/%40w-design%2Fhelpers.svg?label=%40w-design%2Fhelpers)](https://www.npmjs.com/package/@w-design/helpers)
   Utility functions to help to resolve style, object, array, string...
 
 ## 🐞 Report

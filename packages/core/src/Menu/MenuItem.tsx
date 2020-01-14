@@ -5,12 +5,12 @@ import * as React from "react";
 import styled from "styled-components";
 import { useMenu } from "./MenuContext";
 import { getMenuItemStyle } from "./getStyled";
-import { GlobProps } from "../common/props";
+import { GlobProps, SyntheticEventProps } from "../common/props";
 
-export interface MenuItemProps extends GlobProps {
+export interface MenuItemProps extends GlobProps, SyntheticEventProps {
   eventKey?: string;
   children?: any;
-  after?: React.ReactChild | React.ReactChild[];
+  after?: React.ReactNode;
   iconBefore?: React.ReactChild;
   isSelected?: boolean;
   tabIndex?: number;

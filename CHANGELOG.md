@@ -13,20 +13,28 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Steps`
 - ❌ `Pagination`
 - ❌ `Actions`
+- ❌ `InputSlide`
+- ❌ `useDragging` hook
 - ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 - ❌ Split out `Icon` to separate package
+- ❌ Styled-components passing props
+  https://github.com/styled-components/styled-components/issues/439#issuecomment-570640411
+
+- ❌ Add `style`, `ref` prop for `Picture`, `Image`. Update single upload
+- ❌ Check button `Button` size at small when have icon only
+- ✅ Add synthetic event for `MenuItem`.
 
 ---
 
-### Upload <a name="0.42.0"></a>[v0.42.0]()
+### Upload v0.42.0
 
 - ✅ `Upload` XMLHttpRequest to support server side render
 
 ---
 
-### Core package <a name="0.45"></a>[v0.45]()
+### Core package v0.45
 
 - ✅ Remove box-shadow for disabled `Button`
 - ✅ `List`: Add children props
@@ -35,14 +43,14 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-### Form <a name="0.43.0"></a>[v0.43.0]()
+### Form v0.43.0
 
 - ✅ Add `FormFooter`
 - ✅ `useForm` hooks: Change `formErrorMessage` to `formMessage`
 
 ---
 
-### Core package <a name="0.44.3"></a>[v0.44.3]()
+### Core package v0.44.3
 
 - ✅ `Collapse`
 - ✅ `Badge`
@@ -55,7 +63,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ---
 
-### <a name="0.42.0"></a>[v0.42.0]()
+### v0.42.0
 
 Split code at bundling packages:
 
@@ -65,7 +73,7 @@ Split code at bundling packages:
 
 ---
 
-### <a name="0.41.0"></a>#[v0.41.0]()
+### v0.41.0
 
 - ✅ Switch to monorepo
 - ✅ Fixed https://github.com/we-mak/w-design/issues/54

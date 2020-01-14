@@ -41,7 +41,7 @@ export interface UploadProps extends UploadListProps {
   /* default file list */
   defaultFileList?: UploadFileType[];
   /* Function to executed before upload. If `false` the upload will be reject */
-  beforeUpload?: (file: UploadFileType, fileList: UploadFileType[]) => boolean | Promise<any>;
+  beforeUpload?: (file: UploadFileType, fileList?: UploadFileType[]) => boolean | Promise<any>;
   /* restApi request upload use fetch Api*/
   requestUpload: RequestUploadType;
   /* modified onchange behavior*/

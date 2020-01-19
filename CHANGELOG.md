@@ -19,12 +19,11 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
   Such as size, appearance...
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 - ❌ Split out `Icon` to separate package
-- ❌ Styled-components passing props
-  https://github.com/styled-components/styled-components/issues/439#issuecomment-570640411
 
 - ❌ Add `style`, `ref` prop for `Picture`, `Image`. Update single upload
-- ❌ Check button `Button` size at small when have icon only
+- ❌ Styled-components passing props https://github.com/styled-components/styled-components/issues/439#issuecomment-570640411
 - ✅ Add synthetic event for `MenuItem`.
+- ✅ Add `Button` min-width depends on height.
 
 ---
 

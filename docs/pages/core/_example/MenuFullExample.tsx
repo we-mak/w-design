@@ -37,8 +37,12 @@ export default () => {
       <MenuItem key="1" iconBefore={<Icon className="fas fa-user" />} after={<div>info</div>}>
         Automobile
       </MenuItem>
-      <MenuItem key="2" iconBefore={<Icon className="fas fa-user-astronaut" />}>
-        Fashion
+      <MenuItem
+        key="2"
+        iconBefore={<Icon className="fas fa-user-astronaut" />}
+        onClick={() => alert("click")}
+      >
+        Click on me
       </MenuItem>
       <MenuItem key="3" iconBefore={<Icon className="fas fa-edit" />} isDisabled>
         Cell phone

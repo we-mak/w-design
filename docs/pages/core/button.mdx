@@ -1,4 +1,4 @@
-import { Button, ButtonGroup } from "@w-design/core";
+import { Button, ButtonGroup, Icon } from "@w-design/core";
 
 # Button
 
@@ -61,6 +61,17 @@ Button is used to trigger an event
 
 The Icon is currently use Fontawesome, to apply the icon you need to
 add the Fontawesome library in your app.
+
+<ButtonGroup>
+  <Button size="sm" iconBefore="fas fa-car">
+    Icon before
+  </Button>
+  <Button size="sm" iconAfter="fas fa-car">
+    Icon after
+  </Button>
+  <Button size="sm" iconBefore="fas fa-car" iconOnly></Button>
+  <Button size="sm">-</Button>
+</ButtonGroup>
 
 ## Button State
 

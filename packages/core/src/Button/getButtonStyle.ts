@@ -171,6 +171,7 @@ export function getButtonStyle(props: ButtonProps) {
     border-radius: ${radii[2]};
     padding: ${paddingStyle};
     height: ${heightStyle};
+    min-width: ${heightStyle};
     font-size: ${fontSizeStyle};
     border: ${appearance === "link" || appearance === "subtle" ? "none" : "0.05rem solid"};
     background: ${colors[bgStyle]};

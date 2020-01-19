@@ -7,17 +7,6 @@ import { useMenu } from "./MenuContext";
 import { getMenuItemStyle } from "./getStyled";
 import { GlobProps, SyntheticEventProps } from "../common/props";
 
-export interface MenuItemProps extends GlobProps, SyntheticEventProps {
-  eventKey?: string;
-  children?: any;
-  after?: React.ReactNode;
-  iconBefore?: React.ReactChild;
-  isSelected?: boolean;
-  tabIndex?: number;
-  isDisabled?: boolean;
-  role?: string;
-}
-
 const ItemAfter = styled.div`
   align-items: center;
   display: flex;
@@ -37,6 +26,17 @@ export const IconBefore = styled.span`
 const Wrapper = styled.li`
   ${getMenuItemStyle}
 `;
+
+export interface MenuItemProps extends GlobProps, SyntheticEventProps {
+  eventKey?: string;
+  children?: any;
+  after?: React.ReactNode;
+  iconBefore?: React.ReactChild;
+  isSelected?: boolean;
+  tabIndex?: number;
+  isDisabled?: boolean;
+  role?: string;
+}
 
 export const MenuItem = ({
   children,

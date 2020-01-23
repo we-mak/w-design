@@ -229,7 +229,7 @@ export const Sidebar: React.FunctionComponent<any> = () => {
         <MenuHeading>Hooks</MenuHeading>
         <MenuItem key="/clickoutside">
           <Link href="/clickoutside">
-            <a>useClickOutside</a>
+            <a>click outside</a>
           </Link>
         </MenuItem>
         <MenuHeading>Utilities</MenuHeading>

@@ -4,7 +4,7 @@ import { Button, ProgressLoader, List, ListItem, Box } from "@w-design/core";
 import { GlobProps } from "@w-design/core/lib/types/common/props";
 import { getListStyle } from "./getStyled";
 
-const Container = styled.div`
+const Container = styled.span`
   ${getListStyle};
 `;
 
@@ -85,7 +85,7 @@ export const FileList: React.FC<UploadListProps> = ({ fileList, onUpload, onCanc
           );
         }}
         {...rest}
-      ></List>
+      />
     </Container>
   );
 };

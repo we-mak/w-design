@@ -22,7 +22,7 @@ export interface RequestUploadProps {
   onError?: (e?: ProgressEvent<EventTarget>, body?: Object) => void;
 }
 
-interface XhrRequestType extends RequestUploadType, RequestUploadProps {
+export interface XhrRequestType extends RequestUploadType, RequestUploadProps {
   file: UploadFileType;
 }
 

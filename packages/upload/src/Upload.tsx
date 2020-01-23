@@ -2,7 +2,7 @@
  * Upload
  * Simple upload file
  */
-import React, { FC, useState, memo, ReactNode, useEffect } from "react";
+import React, { useState, memo, ReactNode, useEffect } from "react";
 import styled from "styled-components";
 import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
@@ -12,18 +12,6 @@ import { RequestUploadType, xhrRequest } from "./xhrRequest";
 //
 import dummyThumb from "./dummyThumb";
 import { getUploadContainStyle, labelStyle, inputStyle } from "./getStyled";
-
-const Container = styled.div`
-  ${getUploadContainStyle};
-`;
-
-const Label = styled.label`
-  ${labelStyle}
-`;
-
-const Input = styled.input`
-  ${inputStyle}
-`;
 
 export interface UploadChangeParam<T extends object = UploadFileType> {
   file: T;
@@ -44,15 +32,27 @@ export interface UploadProps extends UploadListProps {
   beforeUpload?: (file: UploadFileType, fileList?: UploadFileType[]) => boolean | Promise<any>;
   /* restApi request upload use fetch Api*/
   requestUpload: RequestUploadType;
-  /* modified onchange behavior*/
-  onChange?: (uploadInfo: UploadChangeParam) => void;
   /* disable input */
   disabled?: boolean;
+  /* modified onchange behavior*/
+  onChange?: (uploadInfo: UploadChangeParam) => void;
   /* remove or abort upload*/
   onRemove?: (file: UploadFileType) => void | boolean | Promise<void | boolean>;
 }
 
-const Upload: FC<UploadProps> = ({
+const Container = styled.div<UploadProps>`
+  ${getUploadContainStyle};
+`;
+
+const Label = styled.label`
+  ${labelStyle}
+`;
+
+const Input = styled.input`
+  ${inputStyle}
+`;
+
+const Upload = ({
   label = "+ Add file",
   multiple = false,
   accept,
@@ -60,7 +60,7 @@ const Upload: FC<UploadProps> = ({
   defaultFileList = [],
   beforeUpload,
   requestUpload
-}) => {
+}: UploadProps) => {
   const [fileList, setFileList] = useState(defaultFileList);
 
   // Resolve file change before upload to server
@@ -134,7 +134,6 @@ const Upload: FC<UploadProps> = ({
       }
     }
 
-    // return without before upload
     return post(file);
   };
 
@@ -219,11 +218,7 @@ const Upload: FC<UploadProps> = ({
         </Label>
       </Container>
 
-      {/**
-       * show file list
-       * only show file list if list length > 0
-       */
-      (fileList.length > 0 || !multiple) && (
+      {fileList.length > 0 && (
         <FileList
           fileList={fileList}
           rowKey={item => item.uid}

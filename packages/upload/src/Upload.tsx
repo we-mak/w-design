@@ -231,6 +231,7 @@ const Upload = ({
 };
 
 export default memo(Upload);
+export { xhrRequest };
 
 // it('changes image url', async () => {
 //   const { getByTestId } = render(<ImageUploader {...props} />);

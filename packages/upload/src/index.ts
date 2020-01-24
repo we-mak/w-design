@@ -1,1 +1,1 @@
-export { default as Upload } from "./Upload";
+export { default as Upload, xhrRequest } from "./Upload";

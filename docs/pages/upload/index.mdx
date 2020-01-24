@@ -8,9 +8,26 @@ Upload file or image. Support AJAX upload via `XMLHttpRequest`.
 
 <MultiUpload />
 
-### API
+```jsx
+import { Upload } from "@w-design/upload";
 
-#### Image upload
+export default () => {
+  return (
+    <Upload
+      multiple
+      requestUpload={{
+        endpoint: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+        method: "POST",
+        headers: {
+          authorization: "authorization-text"
+        }
+      }}
+    />
+  );
+};
+```
+
+### API
 
 | Props           | type    | default | description |
 | --------------- | ------- | ------- | ----------- |
@@ -24,4 +41,76 @@ Upload file or image. Support AJAX upload via `XMLHttpRequest`.
 | disabled        |         |         |             |
 | onRemove        |         |         |             |
 
-#### Avatar upload
+### Custom upload control
+
+You can use the `xhrRequest` API to custom your upload by using `useEffect` hooks.
+Here is the snippets example from the `Upload` component
+
+```jsx
+...
+
+const [xhr, setXhr] = useState < any > undefined;
+
+useEffect(() => {
+  if (!xhr) {
+    setXhr(xhrRequest());
+  }
+}, [xhr, xhrRequest]);
+
+const post = async (file: UploadFileType): Promise<void> => {
+  if (xhr) {
+    try {
+      const result = await xhr.upload({
+        ...requestUpload,
+        file,
+        onLoadStart: () => {
+          const newFileList = updateFileState(file, fileList, {
+            status: "progress"
+          });
+          setFileList(newFileList);
+        },
+        onProgress: (e: ProgressEvent<EventTarget>) => {
+          let percentLoaded = 0;
+
+          if (e.lengthComputable) {
+            percentLoaded = Math.round((e.loaded / e.total) * 100);
+          }
+
+          const newFileList = updateFileState(file, fileList, {
+            percent: percentLoaded
+          });
+          setFileList(newFileList);
+        }
+      });
+
+      const newFileList = updateFileState(file, fileList, {
+        status: "success",
+        response: result
+      });
+
+      return setFileList(newFileList);
+    } catch (err) {
+      const newFileList = updateFileState(file, fileList, {
+        status: "error",
+        response: err
+      });
+      return setFileList(newFileList);
+    }
+  }
+};
+
+const handleUploadCancel = (file: UploadFileType) => {
+  if (!xhr) return;
+  // if upload is in progress: handle abort event
+  if (file.status === "progress") {
+    const newFileList = updateFileState(file, fileList, {
+      status: "error"
+    });
+    setFileList(newFileList);
+    return xhr && xhr.abort();
+  }
+
+  const fileInFileList = getFileItem(file, fileList);
+  return setFileList(fileList.filter(item => fileInFileList != item));
+};
+```

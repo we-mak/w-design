@@ -20,7 +20,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/issues/439#issuecomment-570640411
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 - ❌ `useDragging` hook
-- ❌ Expose `xhrRequest` upload
+- ✅ Expose `xhrRequest` upload
 - ✅ Add synthetic event for `MenuItem`.
 - ✅ Add `Button` min-width depends on height.
 

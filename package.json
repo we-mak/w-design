@@ -70,7 +70,7 @@
     "jest-styled-components": "^7.0.0-beta.2",
     "jest-transform-css": "^2.0.0",
     "lerna": "^3.20.1",
-    "lint-staged": "^9.4.3",
+    "lint-staged": "^10.0.3",
     "postcss": "^7.0.24",
     "prettier": "^1.19.1",
     "react": "^16.12.0",

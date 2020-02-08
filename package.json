@@ -79,7 +79,7 @@
     "react-test-renderer": "^16.12.0",
     "rimraf": "^3.0.0",
     "styled-components": "^5.0.0-regexrehydrate",
-    "stylelint": "^12.0.0",
+    "stylelint": "^13.1.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.8.0",

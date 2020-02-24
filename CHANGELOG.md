@@ -13,15 +13,15 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Steps`
 - ❌ `Pagination`
 - ❌ `Actions`
-- ❌ `InputSlide`
 - ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
 - ❌ Split out `Icon` to separate package
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/issues/439#issuecomment-570640411
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 - ❌ `useDragging` hook
-- ❌ Close dropdown after click
+- ❌ Close dropdown menu after click
 - ❌ Add picture upload type
+- ❌ `InputRangeSlider`
 - ❌ Add column flex properties
 - ✅ Expose `xhrRequest` upload
 - ✅ Add synthetic event for `MenuItem`.

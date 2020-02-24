@@ -23,6 +23,9 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Add picture upload type
 - ❌ `InputRangeSlider`
 - ❌ Add column flex properties
+
+---
+
 - ✅ Expose `xhrRequest` upload
 - ✅ Add synthetic event for `MenuItem`.
 - ✅ Add `Button` min-width depends on height.

@@ -13,13 +13,15 @@ export type FieldStatus = "error" | "success" | "warn";
 export interface FieldProps extends InputFormProps {
   setStatus: Function;
   setHintMessage: Function;
+  value: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface FieldType {
   form: FormProps; // form that returned from `useForm`
   name: string;
   isRequired?: boolean;
-  defaultValue?: string; // the initial value of the input field
+  defaultValue?: any; // the initial value of the input field
   validations?: ValidatorType[]; // validation functions applied to value
 }
 
@@ -36,7 +38,7 @@ const useField = ({
   validations
 }: FieldType): FieldProps => {
   const [status, setStatus] = useState<FieldStatus | null>();
-  const [hintMessage, setHintMessage] = useState();
+  const [hintMessage, setHintMessage] = useState<string>("");
   const [value, setValue] = useState(defaultValue || "");
   const [debouncedValue, setDebouncedValue] = useState(value);
 

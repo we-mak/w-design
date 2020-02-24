@@ -1,13 +1,15 @@
 import * as React from "react";
 import { FieldProps } from "./useField";
 
+type StatusTypes = "error" | "submitting" | "submitted";
+
 export interface FormProps {
   addField: (field: FieldProps) => void;
   onSubmit: (e: React.FormEvent, submitFetching: Function) => void;
   formMessage: string;
   setFormMessage: Function;
   setStatus: Function;
-  status?: "error" | "submitting" | "submitted";
+  status?: StatusTypes;
 }
 
 export interface FormType {
@@ -19,10 +21,10 @@ export interface FormType {
  * @param requiredMessage - generic message for required field notify when submit
  */
 const useForm = ({ requiredMessage }: FormType): FormProps => {
-  const [formMessage, setFormMessage] = React.useState("");
+  const [formMessage, setFormMessage] = React.useState<any>("");
 
   // prevent submit multiple times
-  const [status, setStatus] = React.useState();
+  const [status, setStatus] = React.useState<StatusTypes>();
 
   let fields: Array<FieldProps> = [];
   let formData: FieldProps | {};

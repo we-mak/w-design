@@ -63,7 +63,7 @@ const Collapse: React.FC<CollapseProps> = ({
   ...rest
 }) => {
   const [open, setOpen] = React.useState(isDefaultOpen);
-  const [contentHeight, setContentHeight] = React.useState();
+  const [contentHeight, setContentHeight] = React.useState<number | undefined>();
 
   // Use sub menu title as a marker
   // to apply the result height of sub menu list

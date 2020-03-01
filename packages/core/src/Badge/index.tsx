@@ -40,7 +40,7 @@ const Container = styled.span<BadgeProps>`
 `;
 
 const Badge = ({ maxCount, children, ...rest }: BadgeProps) => {
-  let number: number;
+  let number: number | string;
 
   if (typeof children === "string") {
     number = parseInt(children);
@@ -48,9 +48,13 @@ const Badge = ({ maxCount, children, ...rest }: BadgeProps) => {
     number = children;
   }
 
+  if (maxCount && number > maxCount) {
+    number = `${maxCount}+`;
+  }
+
   return (
     <Container maxCount={maxCount} {...rest}>
-      {`${number}${maxCount! < number ? "+" : ""}`}
+      {number}
     </Container>
   );
 };

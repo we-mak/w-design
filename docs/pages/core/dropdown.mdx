@@ -4,28 +4,10 @@ Button and menu combination
 
 ## Example
 
-import { Dropdown, Menu, MenuItem, ButtonGroup } from "@w-design/core";
+import { Dropdown, Menu, MenuItem, Box,  ButtonGroup } from "@w-design/core";
+import DropdownExample from './_example/DropdownExample'
 
-<Dropdown
-  title="Dropdown"
-  content={
-    <Menu>
-      <MenuItem key="1">
-        <Box width="100%" height="100%" onClick={() => alert("clicked")}>Item 1</Box>
-      </MenuItem>
-      <MenuItem key="2">
-        <Box width="100%" height="100%">Item 2</Box>
-      </MenuItem>
-      <MenuItem key="3">
-        <Box width="100%" height="100%">Item 3</Box>
-      </MenuItem>
-      <MenuItem key="4">
-        <Box width="100%" height="100%">Item 4</Box>
-      </MenuItem>
-    </Menu>
-  }
-  closeMenu
-/>
+<DropdownExample/>
 
 ```jsx
 import { Dropdown, Menu, MenuItem } from "w-design";

@@ -22,16 +22,24 @@ const Title = styled.span`
 
 export interface DropdownProps extends GlobProps, SizeProps, ButtonProps {
   title?: string;
-  content?: React.ReactNode;
   position?: "bottomCenter" | "bottomRight" | "topLeft" | "topRight" | "topCenter";
+  content?: React.ReactElement;
 }
 
-const Dropdown = ({ title, size = "md", iconAfter, content, position, ...rest }: DropdownProps) => {
-  const [isOpen, setOpen] = React.useState(false);
+const Dropdown = ({
+  title,
+  size = "md",
+  iconAfter,
+  content,
+  position,
+
+  ...rest
+}: DropdownProps) => {
+  const [isOpen, setOpen] = React.useState<boolean>(false);
   const [panelstyle, setStyle] = React.useState({});
 
   const buttonRef: React.MutableRefObject<any> = React.useRef();
-  const panelRef = useClickOutside(e => {
+  const panelRef = useClickOutside((e: Event) => {
     if (!buttonRef!.current!.contains(e.target)) {
       return setOpen(false);
     }

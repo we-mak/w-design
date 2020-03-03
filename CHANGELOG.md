@@ -7,31 +7,36 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Add search to document website
-- ❌ `Toggle`
-- ❌ `Chip`
-- ❌ `Popover`
-- ❌ `Steps`
-- ❌ `Pagination`
-- ❌ `Actions`
 
-- ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
+* ❌ `Toggle`
+* ❌ `Chip`
+* ❌ `Popover`
+* ❌ `Steps`
+* ❌ `Pagination`
+* ❌ `Actions`
+
+* ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
 
-- ❌ Add picture upload type
-- ❌ Split out `Icon` to separate package
-- ❌ Styled-components passing props https://github.com/styled-components/styled-components/issues/439#issuecomment-570640411
-- ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
+* ❌ Split out `Icon` to separate package
+* ❌ Styled-components passing props https://github.com/styled-components/styled-components/issues/439#issuecomment-570640411
+* ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 
-- ❌ `useDragging` hook
+#### Hooks
+
+- ❌ `useDragging`
 
 #### Upload
 
 - ✅ Expose `xhrRequest` upload
 
+#### Form
+
+- ❌ `InputRangeSlider` component
+
 #### Core
 
-- ❌ `InputRangeSlider`
-- ❌ `Dropdown` Close menu when click on menu item
+- ✅ `Dropdown` Close menu when click on menu
 - ✅ `Badge` Fix max number when `number` is higher than `maxCount`
 - ✅ Add column flexbox properties from `styled-system`
 - ✅ Add synthetic event for `MenuItem`.

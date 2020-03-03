@@ -108,6 +108,19 @@ const Dropdown = ({
     setOpen(!isOpen);
   }
 
+  const renderContent = () => {
+    let chilrenEl: React.ReactElement = <></>;
+
+    if (content) {
+      chilrenEl = content;
+    }
+
+    return React.cloneElement(chilrenEl, {
+      // set close when click on menu
+      onClick: () => setOpen(false)
+    });
+  };
+
   return (
     <Wrapper>
       <Button
@@ -126,7 +139,7 @@ const Dropdown = ({
       </Button>
 
       <DropdownPanel isOpen={isOpen} ref={panelRef} style={panelstyle}>
-        {content}
+        {renderContent()}
       </DropdownPanel>
     </Wrapper>
   );

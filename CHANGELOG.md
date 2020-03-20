@@ -14,6 +14,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Steps`
 - ❌ `Pagination`
 - ❌ `Actions`
+- ❌ `InputRange` two knobs
 
 - ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
   Such as size, appearance...
@@ -22,21 +23,19 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 
-- ❌ `InputRange` two knobs
+#### Hooks v0.42.0
 
-#### Hooks
+- ✅ `useDragging`
 
-- ❌ `useDragging`
-
-#### Upload
+#### Upload v0.43.1
 
 - ✅ Expose `xhrRequest` upload
 
-#### Form
+#### Form v0.44.0
 
-- ❌ `InputRange` one knobs
+- ✅ `InputRange` one knobs
 
-#### Core
+#### Core v0.45.6
 
 - ✅ `Dropdown` Close menu when click on menu
 - ✅ `Badge`: Fix max number when `number` is higher than `maxCount`

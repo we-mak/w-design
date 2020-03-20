@@ -51,7 +51,7 @@ export interface TouchEventProps {
  */
 export interface InputControlProps {
   /** Default value of the input, uncontrolled usage. */
-  defaultValue?: string;
+  defaultValue?: string | number;
   /** Value of the input, controlled usage. */
   value?: string | number;
   placeholder?: string;

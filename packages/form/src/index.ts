@@ -3,6 +3,7 @@ export { default as Checkbox } from "./Checkbox";
 export { default as FormGroup } from "./FormGroup";
 export { default as Label } from "./Label";
 export { default as InputForm, TextHint } from "./InputForm";
+export { default as InputRange } from "./InputRange";
 export { default as RadioGroup } from "./Radio";
 export { default as TextArea } from "./TextArea";
 export { default as FormFooter } from "./FormFooter";

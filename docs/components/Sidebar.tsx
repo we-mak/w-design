@@ -137,6 +137,10 @@ const form = [
     link: "/form/inputform"
   },
   {
+    title: "Input Range",
+    link: "/form/inputrange"
+  },
+  {
     title: "Label",
     link: "/form/label"
   },

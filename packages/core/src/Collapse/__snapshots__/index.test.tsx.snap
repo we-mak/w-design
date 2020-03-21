@@ -3,14 +3,14 @@
 exports[`collapse should render correctly 1`] = `
 <div>
   <div
-    class="sc-AykKG dfbDKj"
+    class="sc-AxhUy iWKghJ"
   >
     <div
-      class="sc-AykKH kGQzej"
+      class="sc-AxgMl ecTZku"
     >
       Collapse component
       <span
-        class="sc-AykKF itvQJG"
+        class="sc-AxhCb gxbmcE"
       >
         <svg
           focusable="false"
@@ -27,7 +27,7 @@ exports[`collapse should render correctly 1`] = `
       </span>
     </div>
     <div
-      class="sc-AykKJ hoFHFE"
+      class="sc-Axmtr fQvTeY"
     />
   </div>
 </div>

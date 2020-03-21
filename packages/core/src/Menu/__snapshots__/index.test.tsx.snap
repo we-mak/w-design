@@ -3,24 +3,24 @@
 exports[`<AvatarGroup/> should renders correctly 1`] = `
 <div>
   <ul
-    class="sc-fzXfLS clylSO"
+    class="sc-fznyAO iCQXAy"
     role="menu"
   >
     <li
-      class="sc-AykKF eRUCRq"
+      class="sc-AxhCb fVbeBm"
       role="menuitem"
     >
       <span
-        class="sc-AykKE hymfMA"
+        class="sc-AxiKw fcLqAh"
       >
         <i
           aria-hidden="true"
-          class="sc-AykKC evFTwk fas fa-user"
+          class="sc-AxjAm dAVUCs fas fa-user"
         />
       </span>
       Item 1
       <div
-        class="sc-AykKD jlmPkV"
+        class="sc-AxirZ jcvUMP"
       >
         <div>
           info
@@ -28,69 +28,69 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
       </div>
     </li>
     <li
-      class="sc-AykKF gYaOrZ"
+      class="sc-AxhCb eESTWv"
       role="menuitem"
     >
       <span
-        class="sc-AykKE hymfMA"
+        class="sc-AxiKw fcLqAh"
       >
         <i
           aria-hidden="true"
-          class="sc-AykKC evFTwk fas fa-user-astronaut"
+          class="sc-AxjAm dAVUCs fas fa-user-astronaut"
         />
       </span>
       Item 2
     </li>
     <li
-      class="sc-AykKF etdUmp"
+      class="sc-AxhCb dmdPvx"
       role="menuitem"
     >
       <span
-        class="sc-AykKE hymfMA"
+        class="sc-AxiKw fcLqAh"
       >
         <i
           aria-hidden="true"
-          class="sc-AykKC evFTwk fas fa-edit"
+          class="sc-AxjAm dAVUCs fas fa-edit"
         />
       </span>
       Item 3
     </li>
     <li
-      class="sc-AykKF gYaOrZ"
+      class="sc-AxhCb eESTWv"
       role="menuitem"
     >
       <span
-        class="sc-AykKE hymfMA"
+        class="sc-AxiKw fcLqAh"
       >
         <i
           aria-hidden="true"
-          class="sc-AykKC evFTwk fas fa-paper-plane"
+          class="sc-AxjAm dAVUCs fas fa-paper-plane"
         />
       </span>
       Item 4
     </li>
     <li
-      class="sc-AykKG gxHAww"
+      class="sc-AxhUy ctezbI"
     >
       Menu heading
     </li>
     <div
-      class="sc-fzXfLO ihLDNV"
+      class="sc-fzozJi iwGQHK"
     >
       <div
-        class="sc-fzXfLP fNiwBp"
+        class="sc-fzoLsD fBumKR"
       >
         <span
-          class="sc-AykKE hymfMA"
+          class="sc-AxiKw fcLqAh"
         >
           <i
             aria-hidden="true"
-            class="sc-AykKC evFTwk fas fa-cog"
+            class="sc-AxjAm dAVUCs fas fa-cog"
           />
         </span>
         Submenu title 1
         <span
-          class="sc-AykKK dFUmMW"
+          class="sc-AxmLO gFqTjI"
         >
           <svg
             focusable="false"
@@ -107,22 +107,22 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
         </span>
       </div>
       <div
-        class="sc-fzXfLR LNZIK"
+        class="sc-fzplWN ijNbIH"
       >
         <li
-          class="sc-AykKF gYaOrZ"
+          class="sc-AxhCb eESTWv"
           role="menuitem"
         >
           Item 5
         </li>
         <li
-          class="sc-AykKF gYaOrZ"
+          class="sc-AxhCb eESTWv"
           role="menuitem"
         >
           Item 6
         </li>
         <li
-          class="sc-AykKF gYaOrZ"
+          class="sc-AxhCb eESTWv"
           role="menuitem"
         >
           Item 7
@@ -130,22 +130,22 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-fzXfLO ihLDNV"
+      class="sc-fzozJi iwGQHK"
     >
       <div
-        class="sc-fzXfLP fNiwBp"
+        class="sc-fzoLsD fBumKR"
       >
         <span
-          class="sc-AykKE hymfMA"
+          class="sc-AxiKw fcLqAh"
         >
           <i
             aria-hidden="true"
-            class="sc-AykKC evFTwk fas fa-mail"
+            class="sc-AxjAm dAVUCs fas fa-mail"
           />
         </span>
         Submenu title 2
         <span
-          class="sc-AykKK ctEQIz"
+          class="sc-AxmLO ccvVvT"
         >
           <svg
             focusable="false"
@@ -162,7 +162,7 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
         </span>
       </div>
       <div
-        class="sc-fzXfLR LNZIK"
+        class="sc-fzplWN ijNbIH"
       />
     </div>
   </ul>

@@ -2,20 +2,20 @@
 
 exports[`<ProgressLoader/> should renders correctly 1`] = `
 <div
-  class="sc-AykKD cVMlZV"
+  class="sc-AxirZ gDZZlz"
 >
   <div
-    class="sc-AykKE jMzefX"
+    class="sc-AxiKw hlmWQG"
   >
     <div
-      class="sc-AykKF kZDhiU"
+      class="sc-AxhCb cSvyCG"
     >
       <div
-        class="sc-AykKG fJnhcn"
+        class="sc-AxhUy dTdCIV"
       />
     </div>
     <span
-      class="sc-AykKH khKZjo"
+      class="sc-AxgMl fsVBiP"
       title="0%"
     >
       0%

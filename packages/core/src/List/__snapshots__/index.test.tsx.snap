@@ -2,48 +2,48 @@
 
 exports[`<List/> should render correctly 1`] = `
 <div
-  class="sc-AykKC jwuelJ"
+  class="sc-AxjAm kmlXfV"
 >
   <h3
-    class="sc-AykKE cNiiXx"
+    class="sc-AxiKw dUBESq"
     mb="0"
     mt="0.4rem"
   >
     List header
   </h3>
   <div
-    class="sc-AykKD jFihhE"
+    class="sc-AxirZ iwdjQc"
   />
   <div
-    class="sc-AykKI jcsKHU"
+    class="sc-AxheI bwflNo"
   >
     <ul
-      class="sc-AykKK cfUgOp"
+      class="sc-AxmLO fLAwhB"
     >
       <li
-        class="sc-fzXfLR dZWbrt"
+        class="sc-fzplWN fLBufi"
       >
         <div
-          class="sc-fzXfLS gLECqk"
+          class="sc-fznyAO iypzos"
         >
           <div
-            class="sc-fzXfLU jNCBOg"
+            class="sc-fznZeY fHDgQb"
           >
             <div
-              class="sc-fzXfLQ iYIdIb"
+              class="sc-fzpans hhMwfi"
             >
               <img
-                class="sc-fzXfLP fzQpoi"
+                class="sc-fzoLsD llicfQ"
                 data-src="https://source.unsplash.com/random"
                 src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
               />
             </div>
           </div>
           <div
-            class="sc-AykKC jfRgHs"
+            class="sc-AxjAm TzKLm"
           >
             <h4
-              class="sc-AykKE iwIAuj"
+              class="sc-AxiKw frojXC"
               font-weight="600"
               mb="0"
             >
@@ -56,33 +56,33 @@ exports[`<List/> should render correctly 1`] = `
         </div>
         this is the child content
         <div
-          class="sc-fzXfLT eSKcCk"
+          class="sc-fznKkj isOJds"
         />
       </li>
       <li
-        class="sc-fzXfLR dZWbrt"
+        class="sc-fzplWN fLBufi"
       >
         <div
-          class="sc-fzXfLS gLECqk"
+          class="sc-fznyAO iypzos"
         >
           <div
-            class="sc-fzXfLU jNCBOg"
+            class="sc-fznZeY fHDgQb"
           >
             <div
-              class="sc-fzXfLQ iYIdIb"
+              class="sc-fzpans hhMwfi"
             >
               <img
-                class="sc-fzXfLP fzQpoi"
+                class="sc-fzoLsD llicfQ"
                 data-src="https://source.unsplash.com/random"
                 src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
               />
             </div>
           </div>
           <div
-            class="sc-AykKC jfRgHs"
+            class="sc-AxjAm TzKLm"
           >
             <h4
-              class="sc-AykKE iwIAuj"
+              class="sc-AxiKw frojXC"
               font-weight="600"
               mb="0"
             >
@@ -95,12 +95,12 @@ exports[`<List/> should render correctly 1`] = `
         </div>
         this is the child content
         <div
-          class="sc-fzXfLT eSKcCk"
+          class="sc-fznKkj isOJds"
         />
       </li>
     </ul>
     <div
-      class="sc-fzXfLO ljGpzg"
+      class="sc-fzozJi gEntcR"
     >
       List Footer
     </div>

@@ -3,37 +3,37 @@
 exports[`<Comment/> should renders correctly 1`] = `
 <div>
   <div
-    class="sc-fzXfLS fBgdEZ"
+    class="sc-fznyAO fbbrPJ"
   >
     <div
-      class="sc-AykKI jOZHmx"
+      class="sc-AxheI BgVUh"
     >
       <div
-        class="sc-AykKJ blkNIl"
+        class="sc-Axmtr GUUwl"
       >
         <figure
-          class="sc-AykKC erfkjk"
+          class="sc-AxjAm lbbWqW"
           style="background-color: white;"
         >
           <span
-            class="sc-AykKE jIRtDc"
+            class="sc-AxiKw dBjyov"
           >
             Wm
           </span>
           <img
             alt=""
-            class="sc-AykKF cElFvy sc-AykKH gwfeJC"
+            class="sc-AxhCb eHjDtk sc-AxgMl kwfZxN"
             data-src="https://source.unsplash.com/random"
             src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
           />
         </figure>
       </div>
       <div
-        class="sc-AykKK fDpRoZ"
+        class="sc-AxmLO dofVcd"
       >
         
         <div
-          class="sc-fzXfLP ifyiMT"
+          class="sc-fzoLsD hiOjOz"
         >
           <time />
           <div>

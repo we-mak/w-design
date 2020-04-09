@@ -7,6 +7,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Add search to document website
+- ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
+  Such as size, appearance...Study the idea from tailwindcss
 
 - ❌ `Toggle`
 - ❌ `Chip`
@@ -15,13 +17,12 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ `Pagination`
 - ❌ `Actions`
 - ❌ `InputRange` two knobs
+- ❌ `Avatar` add crossOrigin props to image
+- ❌ `ListItem` remove empty thumbnail, add style props (or background)
 
-- ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
-  Such as size, appearance...
-
-- ❌ Split out `Icon` to separate package
-- ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
-- ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
+* ❌ Split out `Icon` to separate package
+* ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
+* ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 
 #### Hooks v0.42.0
 

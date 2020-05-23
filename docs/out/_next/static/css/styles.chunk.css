@@ -1,0 +1,24 @@
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0.5rem 0;
+}
+
+table {
+  margin: 1rem 0;
+}
+
+code {
+  color: chocolate;
+}
+[class^="ais-"] {
+  font-size: 0.8rem;
+}
+
+.prism-code {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

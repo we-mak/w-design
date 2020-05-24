@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[52],{mU2l:function(n,o,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/upload/_multiUpload",function(){return w("4Mh+")}])}},[["mU2l",0,1,2,4]]]);

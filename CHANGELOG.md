@@ -23,7 +23,6 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 - ❌ `useSelect` react select hooks
-
 - ❌ `userFields` validations bug: only check last valid check
 
 #### Hooks v0.42.0

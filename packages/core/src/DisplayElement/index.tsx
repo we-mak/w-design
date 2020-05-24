@@ -11,10 +11,8 @@ export interface DisplayProps extends GlobProps {
   display: string[];
 }
 
-const DisplayElement: React.FunctionComponent<DisplayProps> = props => (
-  <Base display={props.display} {...props}>
-    {props.children}
-  </Base>
+const DisplayElement: React.FunctionComponent<DisplayProps> = (props) => (
+  <Base {...props}>{props.children}</Base>
 );
 
 export default DisplayElement;

@@ -5,7 +5,7 @@ import { Message, CommentContainer } from "./Styled";
 import { GlobProps } from "../common/props";
 
 export interface CommentProps extends GlobProps {
-  message: string;
+  message: string | React.ReactNode;
   time?: string;
   userName?: string | ReactChild;
   alt?: string;
@@ -39,12 +39,14 @@ const Comment: FC<CommentProps> = ({
             <time>{time}</time>
             {editEditor ? (
               editEditor
-            ) : (
+            ) : typeof message === "string" ? (
               <Message
                 dangerouslySetInnerHTML={{
                   __html: message
                 }}
               ></Message>
+            ) : (
+              <Message>{message}</Message>
             )}
             {actions}
             {children}

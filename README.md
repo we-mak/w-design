@@ -10,16 +10,8 @@
 [![Build Status](https://travis-ci.org/we-mak/w-design.svg?branch=master)](https://travis-ci.org/we-mak/w-design)
 [![Coverage Status](https://coveralls.io/repos/github/we-mak/w-design/badge.svg?branch=master)](https://coveralls.io/github/we-mak/w-design?branch=master)
 
-Main focus of this libary is styling with css-in-js, keep it as small as posible. Suitable for web application.
+Main focus of this libary is styling with css-in-js, small but enough to build a web application.
 Feel free to use this library, or help us to improve it.
-
-## Features
-
-- Written with Typescript to improve dev experience.
-- Code splitting built with babel.
-- Styled with styled-components and styled-system
-- Suitable for web application.
-- Supports modern web browsers, included common js & es. If you care about IE, don't use this library.
 
 ## Packages
 
@@ -42,6 +34,14 @@ Published libraries at `npm`
 
 - [![npm](https://img.shields.io/npm/v/%40w-design%2Fhelpers.svg?label=@w-design/helpers)](https://www.npmjs.com/package/@w-design/helpers)
   Utility functions to help to resolve style, object, array, string...
+
+## Features
+
+- Written with Typescript to improve dev experience.
+- Code splitting built with babel.
+- Styled with styled-components and styled-system
+- Suitable for web application.
+- Supports modern web browsers, included common js & es. If you care about IE, don't use this library.
 
 ## 🐞 Report
 

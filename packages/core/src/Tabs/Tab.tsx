@@ -24,7 +24,7 @@ const TabButton = styled.button<TabProps>`
   padding: 0.4rem;
   border: none;
   border-bottom: 2px solid
-    ${props => {
+    ${(props) => {
       const { theme, isSelected } = props;
       return isSelected ? theme.colors["B50"] : "rgb(235, 236, 240)";
     }};
@@ -36,13 +36,13 @@ export const Tab: React.FC<TabProps> = ({ index, tabIndex = 0, children, ...rest
 
   return (
     <TabButton
+      {...rest}
       role="tab"
       index={index}
       onClick={handleTab}
       aria-selected={selectedIndex === index ? true : false}
       tabIndex={tabIndex}
       isSelected={selectedIndex === index ? true : false}
-      {...rest}
     >
       {children}
     </TabButton>

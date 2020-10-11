@@ -1,0 +1,9 @@
+node_modules
+build
+coverage
+
+.dockerignore
+.git
+.gitignore
+.prettierrc
+.node_modules

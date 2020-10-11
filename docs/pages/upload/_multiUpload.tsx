@@ -1,6 +1,6 @@
 import { Upload } from "@w-design/upload";
 
-export default () => {
+const MultiUpload = () => {
   return (
     <Upload
       multiple
@@ -14,3 +14,5 @@ export default () => {
     />
   );
 };
+
+export default MultiUpload;

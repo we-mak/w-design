@@ -13,6 +13,7 @@ build
 .rpt2_cache
 packages/*/lib
 docs/.next
+dist
 
 # misc
 .DS_Store

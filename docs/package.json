@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "deploy": "next build && next export -o dist && git push origin gh-pages"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.5.1",
@@ -16,15 +17,16 @@
     "@w-design/core": "link:...",
     "@w-design/form": "link:...",
     "@w-design/upload": "link:...",
-    "prism-react-renderer": "^1.0.2"
+    "prism-react-renderer": "^1.0.2",
+    "react": "link:...",
+    "react-dom": "link:..."
   },
   "devDependencies": {
-    "@types/node": "^12.12.17",
+    "@types/node": "^14.11.8",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",
-    "gh-pages": "^2.1.1",
-    "next": "^9.1.4",
+    "next": "^9.3.2",
     "next-compose-plugins": "^2.2.0",
-    "webpack": "^4.41.2"
+    "webpack": "^5.0.0"
   }
 }

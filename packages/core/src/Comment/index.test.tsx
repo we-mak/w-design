@@ -16,7 +16,7 @@ describe("<Comment/>", () => {
           userName=""
           alt=""
           time=""
-          message=""
+          message={<div>Hello world</div>}
           actions={[]}
           editEditor={<div>...</div>}
         ></Comment>

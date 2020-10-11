@@ -37,6 +37,10 @@ const useField = ({
   defaultValue,
   validations
 }: FieldType): FieldProps => {
+  console.warn(`
+    We gonna deprecate this and replace this with form useReducer \n
+    please update
+  `);
   const [status, setStatus] = useState<FieldStatus | null>();
   const [hintMessage, setHintMessage] = useState<string>("");
   const [value, setValue] = useState(defaultValue || "");

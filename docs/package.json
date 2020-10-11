@@ -17,7 +17,9 @@
     "@w-design/core": "link:...",
     "@w-design/form": "link:...",
     "@w-design/upload": "link:...",
-    "prism-react-renderer": "^1.0.2"
+    "prism-react-renderer": "^1.0.2",
+    "react": "link:...",
+    "react-dom": "link:..."
   },
   "devDependencies": {
     "@types/node": "^14.11.8",

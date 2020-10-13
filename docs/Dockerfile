@@ -12,6 +12,8 @@ WORKDIR /usr/src/w-design
 # Copy package json files for services
 COPY package.json yarn.lock ./
 RUN yarn install --silent
+# add react dependcies
+RUN yarn add react react-dom
 
 COPY . ./
 RUN yarn build

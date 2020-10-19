@@ -3,11 +3,11 @@
 exports[`AnchorScroll should renders correctly 1`] = `
 <div>
   <button
-    class="sc-AxhUy lgXuPi"
+    class="sc-eCApGN gULkRS"
     type="button"
   >
     <div
-      class="sc-Axmtr gFglAi"
+      class="sc-iCoHVE dDywml"
     >
       anchor
     </div>

@@ -3,71 +3,71 @@
 exports[`<TextArea/> should render correct with TextArea style 1`] = `
 <div>
   <div
-    class="sc-AxirZ flFiBn"
+    class="sc-gtssRu eFMLRM"
   >
     <label
-      class="sc-AxjAm gLIyjx"
+      class="sc-bdnylx jxVZIU"
     >
       TextArea
     </label>
     <textarea
       autocomplete="off"
-      class="sc-AxiKw joLAvU"
+      class="sc-dlnjPT cDKmHT"
     />
   </div>
   <div
-    class="sc-AxirZ flFiBn"
+    class="sc-gtssRu eFMLRM"
   >
     <label
-      class="sc-AxjAm gLIyjx"
+      class="sc-bdnylx jxVZIU"
     />
     <textarea
       autocomplete="off"
-      class="sc-AxiKw iLcMYT"
+      class="sc-dlnjPT gCELuM"
     />
   </div>
   <div
-    class="sc-AxirZ flFiBn"
+    class="sc-gtssRu eFMLRM"
   >
     <label
-      class="sc-AxjAm gLIyjx"
+      class="sc-bdnylx jxVZIU"
     />
     <textarea
       autocomplete="off"
-      class="sc-AxiKw gFuQHC"
+      class="sc-dlnjPT gqOLDp"
     />
   </div>
   <div
-    class="sc-AxirZ flFiBn"
+    class="sc-gtssRu eFMLRM"
   >
     <label
-      class="sc-AxjAm gLIyjx"
+      class="sc-bdnylx jxVZIU"
     />
     <textarea
       autocomplete="off"
-      class="sc-AxiKw cvBWkR"
+      class="sc-dlnjPT cCvkfC"
     />
   </div>
   <div
-    class="sc-AxirZ flFiBn"
+    class="sc-gtssRu eFMLRM"
   >
     <label
-      class="sc-AxjAm gLIyjx"
+      class="sc-bdnylx jxVZIU"
     />
     <textarea
       autocomplete="off"
-      class="sc-AxiKw cvBWkR"
+      class="sc-dlnjPT cCvkfC"
     />
   </div>
   <div
-    class="sc-AxirZ flFiBn"
+    class="sc-gtssRu eFMLRM"
   >
     <label
-      class="sc-AxjAm gLIyjx"
+      class="sc-bdnylx jxVZIU"
     />
     <textarea
       autocomplete="on"
-      class="sc-AxiKw joLAvU"
+      class="sc-dlnjPT cDKmHT"
     />
   </div>
 </div>

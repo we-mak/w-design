@@ -3,23 +3,23 @@
 exports[`<Dropdown/> should renders correctly 1`] = `
 <div>
   <div
-    class="sc-fznyAO fKUOWl"
+    class="sc-crzoUp eJeZNC"
   >
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AxhUy ifweOL"
+      class="sc-eCApGN dxxHgj"
       type="button"
     >
       <div
-        class="sc-Axmtr gFglAi"
+        class="sc-iCoHVE dDywml"
       >
         <span
-          class="sc-fznKkj eFawqo"
+          class="sc-dIsAE jLUVTh"
         >
           Dropdown
           <span
-            class="sc-fzpans kHRAxy"
+            class="sc-kEqYlL cWNPQT"
           >
             <svg
               focusable="false"
@@ -38,7 +38,7 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       </div>
     </button>
     <div
-      class="sc-fzplWN jwWNrW"
+      class="sc-iqAbSa gIZSGZ"
     >
       <ul>
         <li>
@@ -57,23 +57,23 @@ exports[`<Dropdown/> should renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-fznyAO fKUOWl"
+    class="sc-crzoUp eJeZNC"
   >
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AxhUy ifweOL"
+      class="sc-eCApGN dxxHgj"
       type="button"
     >
       <div
-        class="sc-Axmtr gFglAi"
+        class="sc-iCoHVE dDywml"
       >
         <span
-          class="sc-fznKkj eFawqo"
+          class="sc-dIsAE jLUVTh"
         >
           bottomCenter
           <span
-            class="sc-fzpans kHRAxy"
+            class="sc-kEqYlL cWNPQT"
           >
             <svg
               focusable="false"
@@ -92,27 +92,27 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       </div>
     </button>
     <div
-      class="sc-fzplWN jwWNrW"
+      class="sc-iqAbSa gIZSGZ"
     />
   </div>
   <div
-    class="sc-fznyAO fKUOWl"
+    class="sc-crzoUp eJeZNC"
   >
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AxhUy ifweOL"
+      class="sc-eCApGN dxxHgj"
       type="button"
     >
       <div
-        class="sc-Axmtr gFglAi"
+        class="sc-iCoHVE dDywml"
       >
         <span
-          class="sc-fznKkj eFawqo"
+          class="sc-dIsAE jLUVTh"
         >
           topLeft
           <span
-            class="sc-fzpans kHRAxy"
+            class="sc-kEqYlL cWNPQT"
           >
             <svg
               focusable="false"
@@ -131,27 +131,27 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       </div>
     </button>
     <div
-      class="sc-fzplWN jwWNrW"
+      class="sc-iqAbSa gIZSGZ"
     />
   </div>
   <div
-    class="sc-fznyAO fKUOWl"
+    class="sc-crzoUp eJeZNC"
   >
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AxhUy ifweOL"
+      class="sc-eCApGN dxxHgj"
       type="button"
     >
       <div
-        class="sc-Axmtr gFglAi"
+        class="sc-iCoHVE dDywml"
       >
         <span
-          class="sc-fznKkj eFawqo"
+          class="sc-dIsAE jLUVTh"
         >
           topCenter
           <span
-            class="sc-fzpans kHRAxy"
+            class="sc-kEqYlL cWNPQT"
           >
             <svg
               focusable="false"
@@ -170,27 +170,27 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       </div>
     </button>
     <div
-      class="sc-fzplWN jwWNrW"
+      class="sc-iqAbSa gIZSGZ"
     />
   </div>
   <div
-    class="sc-fznyAO fKUOWl"
+    class="sc-crzoUp eJeZNC"
   >
     <button
       aria-expanded="false"
       aria-haspopup="true"
-      class="sc-AxhUy ifweOL"
+      class="sc-eCApGN dxxHgj"
       type="button"
     >
       <div
-        class="sc-Axmtr gFglAi"
+        class="sc-iCoHVE dDywml"
       >
         <span
-          class="sc-fznKkj eFawqo"
+          class="sc-dIsAE jLUVTh"
         >
           topRight
           <span
-            class="sc-fzpans kHRAxy"
+            class="sc-kEqYlL cWNPQT"
           >
             <svg
               focusable="false"
@@ -209,7 +209,7 @@ exports[`<Dropdown/> should renders correctly 1`] = `
       </div>
     </button>
     <div
-      class="sc-fzplWN jwWNrW"
+      class="sc-iqAbSa gIZSGZ"
     />
   </div>
 </div>

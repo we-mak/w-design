@@ -3,10 +3,10 @@
 exports[`<Flex/> should renders correctly 1`] = `
 <div>
   <div
-    class="sc-AxirZ fCWBRA"
+    class="sc-gtssRu guoDFb"
   >
     <div
-      class="sc-AxjAm jyvdUg"
+      class="sc-bdnylx bUpTWt"
     />
   </div>
 </div>
@@ -15,7 +15,7 @@ exports[`<Flex/> should renders correctly 1`] = `
 exports[`<Flex/> should renders correctly 2`] = `
 <div>
   <div
-    class="sc-AxirZ inrSgT"
+    class="sc-gtssRu fMUBRY"
   />
 </div>
 `;
@@ -23,7 +23,7 @@ exports[`<Flex/> should renders correctly 2`] = `
 exports[`<Flex/> should renders gapless 1`] = `
 <div>
   <div
-    class="sc-AxirZ dnxJEI"
+    class="sc-gtssRu gXbIzD"
   />
 </div>
 `;

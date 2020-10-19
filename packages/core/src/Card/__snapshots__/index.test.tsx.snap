@@ -3,25 +3,25 @@
 exports[`<Button/> should render with different appearance style 1`] = `
 <div>
   <div
-    class="sc-AxmLO fLhQhM"
+    class="sc-fujyUd jiRZmd"
   >
     <div
-      class="sc-AxirZ TKJBj"
+      class="sc-gtssRu heZNfA"
     >
       <h3
-        class="sc-AxjAm iIsJjY"
+        class="sc-bdnylx fEVRyl"
       >
         Test title
       </h3>
       <div
-        class="sc-AxiKw gzlepA"
+        class="sc-dlnjPT dSQZfH"
       >
         Lorem ipsum
       </div>
       Header
     </div>
     <div
-      class="sc-AxgMl pTIzu"
+      class="sc-jSFkmK fqvcmI"
     >
       <picture>
         <source
@@ -36,34 +36,34 @@ exports[`<Button/> should render with different appearance style 1`] = `
         />
         <img
           alt=""
-          class="sc-AxhCb eHjDtk sc-AxheI gVLPYn"
+          class="sc-hKFyIo lerItV sc-gKAblj jkmClQ"
           data-src="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
           src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
         />
       </picture>
     </div>
     <div
-      class="sc-Axmtr jyKSJy"
+      class="sc-iCoHVE kicXCp"
     >
       A safari is an overland journey, usually a trip by tourists in Africa. In the past, the trip was often a big-game hunt, but today, safaris are often to observe
     </div>
     <div
-      class="sc-fzplWN kvPpcL"
+      class="sc-iqAbSa gIiYzg"
     >
       Footer
     </div>
   </div>
   <div
-    class="sc-AxmLO gVqxVA"
+    class="sc-fujyUd jNkoyN"
   >
     <div
-      class="sc-fzozJi gTCwVQ"
+      class="sc-pNWxx djkeyc"
     >
       <div
-        class="sc-fzoLsD dZxsNi"
+        class="sc-jrsJCI dyoFAi"
       />
       <div
-        class="sc-fzpans NEdaR"
+        class="sc-kEqYlL bWeMrM"
       >
         <h3 />
         <ul>

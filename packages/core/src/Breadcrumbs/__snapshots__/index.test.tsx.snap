@@ -4,32 +4,32 @@ exports[`<Breadcrumbs/> should render breadcrumbs correctly 1`] = `
 <div>
   <nav
     aria-label="breadcrumb"
-    class="sc-fzoiQi kFBezL"
+    class="sc-fKgIGh cwNNvS"
   >
     <div
-      class="sc-AxirZ jqaZjQ"
+      class="sc-gtssRu gvbbRP"
     >
       1
       <div
-        class="sc-AxjAm gujRse"
+        class="sc-bdnylx cSdTNv"
         role="presentation"
       >
         /
       </div>
     </div>
     <div
-      class="sc-AxirZ jqaZjQ"
+      class="sc-gtssRu gvbbRP"
     >
       2
       <div
-        class="sc-AxjAm gujRse"
+        class="sc-bdnylx cSdTNv"
         role="presentation"
       >
         /
       </div>
     </div>
     <div
-      class="sc-AxirZ jqaZjQ"
+      class="sc-gtssRu gvbbRP"
     >
       Item 3
     </div>

@@ -4,21 +4,21 @@ exports[`<AvatarGroup/> should renders correctly 1`] = `
 <div>
   <input
     autocomplete="off"
-    class="sc-AxjAm bhhRPE"
+    class="sc-bdnylx fUdeap"
     placeholder="Default input"
     type="text"
     value=""
   />
   <input
     autocomplete="off"
-    class="sc-AxjAm dDnZUR"
+    class="sc-bdnylx jUUryU"
     placeholder="Large input"
     type="text"
     value=""
   />
   <input
     autocomplete="off"
-    class="sc-AxjAm hmsCDG"
+    class="sc-bdnylx eipYMr"
     placeholder="Small input"
     type="text"
     value=""

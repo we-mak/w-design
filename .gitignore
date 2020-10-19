@@ -12,6 +12,7 @@ coverage
 build
 .rpt2_cache
 packages/*/lib
+__snapshots__/
 docs/.next
 dist
 

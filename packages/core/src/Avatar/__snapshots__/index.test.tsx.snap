@@ -3,76 +3,76 @@
 exports[`<Avatar/> should renders correctly 1`] = `
 <div>
   <figure
-    class="sc-AxjAm eTsFBK"
+    class="sc-bdnylx jELLyT"
     style="background-color: white;"
   >
     <span
-      class="sc-AxiKw hXSORO"
+      class="sc-dlnjPT fUJEkV"
     >
       Wm
     </span>
     <img
       alt="test"
-      class="sc-AxhCb eHjDtk sc-AxgMl kwfZxN"
+      class="sc-hKFyIo lerItV sc-jSFkmK lhVlZT"
       data-src="https://api.adorable.io/avatars/240/thunder"
       src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
     />
     <span
-      class="sc-AxirZ bvUsym"
+      class="sc-gtssRu hEKkTZ"
     />
   </figure>
   <figure
-    class="sc-AxjAm lbbWqW"
-    style="background-color: rgb(239, 243, 246);"
+    class="sc-bdnylx hIOUBH"
+    style="background-color: rgb(157, 179, 198);"
   >
     <span
-      class="sc-AxiKw dBjyov"
+      class="sc-dlnjPT gXwjyo"
     >
       Wm
     </span>
     <span
-      class="sc-AxirZ hzyZCc"
+      class="sc-gtssRu iVVvHv"
     />
   </figure>
   <figure
-    class="sc-AxjAm fMAruW"
-    style="background-color: rgb(255, 196, 13);"
+    class="sc-bdnylx xvdhb"
+    style="background-color: rgb(41, 55, 66);"
   >
     <span
-      class="sc-AxiKw jlWwAA"
+      class="sc-dlnjPT buVhrT"
     >
       Wm
     </span>
     <span
-      class="sc-AxirZ ikEDFu"
+      class="sc-gtssRu ceKOdV"
     />
   </figure>
   <figure
-    class="sc-AxjAm jfueIi"
-    style="background-color: rgb(118, 143, 164);"
+    class="sc-bdnylx iMWusv"
+    style="background-color: rgb(64, 50, 148);"
   >
     <span
-      class="sc-AxiKw kOiCNg"
+      class="sc-dlnjPT hqbA-df"
     >
       Wm
     </span>
   </figure>
   <figure
-    class="sc-AxjAm dXBjRe"
-    style="background-color: rgb(0, 184, 217);"
+    class="sc-bdnylx bQRDGn"
+    style="background-color: rgb(0, 154, 211);"
   >
     <span
-      class="sc-AxiKw bEySLJ"
+      class="sc-dlnjPT hebeFi"
     >
       Wm
     </span>
   </figure>
   <figure
-    class="sc-AxjAm hYZVmW"
-    style="background-color: rgb(0, 199, 230);"
+    class="sc-bdnylx jAriNX"
+    style="background-color: rgb(190, 206, 220);"
   >
     <span
-      class="sc-AxiKw iVOXJf"
+      class="sc-dlnjPT dYsJvo"
     >
       Wm
     </span>

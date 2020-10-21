@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ButtonGroup, Button, Container, PushMessage } from "@w-design/core";
 
-export default () => {
+export default function PushMessageExample() {
   const [messages, setMessages]: any[] = React.useState([]);
 
   return (
@@ -62,4 +62,4 @@ export default () => {
       <PushMessage messages={messages}></PushMessage>
     </Container>
   );
-};
+}

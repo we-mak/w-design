@@ -9,7 +9,6 @@ import { FileList } from "./FileList";
 import { fileToObject, getFileItem, updateFileState, localErrorHandler } from "./utils";
 import { UploadFileType, UploadListProps } from "./FileList";
 import { RequestUploadType, xhrRequest } from "./xhrRequest";
-//
 import dummyThumb from "./dummyThumb";
 import { getUploadContainStyle, labelStyle, inputStyle } from "./getStyled";
 
@@ -64,16 +63,16 @@ const Upload = ({
   const [fileList, setFileList] = useState(defaultFileList);
 
   // Resolve file change before upload to server
-  const handleFilesChange = function(e: React.ChangeEvent<HTMLInputElement>) {
+  const handleFilesChange = function (e: React.ChangeEvent<HTMLInputElement>) {
     let files: UploadFileType[] = [];
     const rawfiles = Array.prototype.slice.call(e.target.files);
 
     if (rawfiles && rawfiles.length >= 0) {
-      rawfiles.forEach(file => {
+      rawfiles.forEach((file) => {
         const reader: FileReader = new FileReader();
         // Check load status error/success on local, preview file info
         reader.onerror = localErrorHandler;
-        reader.onload = (f => {
+        reader.onload = ((f) => {
           return (e: ProgressEvent<any>) => {
             // handle preview image from local url
             let source: string;
@@ -199,7 +198,7 @@ const Upload = ({
     }
 
     const fileInFileList = getFileItem(file, fileList);
-    return setFileList(fileList.filter(item => fileInFileList != item));
+    return setFileList(fileList.filter((item) => fileInFileList != item));
   };
 
   return (
@@ -221,7 +220,7 @@ const Upload = ({
       {fileList.length > 0 && (
         <FileList
           fileList={fileList}
-          rowKey={item => item.uid}
+          rowKey={(item) => item.uid}
           onUpload={handleFileUpload}
           onCancel={handleUploadCancel}
         />
@@ -232,18 +231,3 @@ const Upload = ({
 
 export default memo(Upload);
 export { xhrRequest };
-
-// it('changes image url', async () => {
-//   const { getByTestId } = render(<ImageUploader {...props} />);
-//   const inputEl = getByTestId('input-image') as HTMLInputElement;
-//   const file = new File(['(⌐□_□)'], 'chucknorris.png', {
-//     type: 'image/png',
-//   });
-//   fireEvent.change(inputEl, { target: { files: [file] } });
-//   const newImage = await waitForElement(() =>
-//     getByTestId('new-image-wrapper')
-//   );
-//   expect(
-//     newImage.querySelector('.avatar-crop img')!.getAttribute('src')
-//   ).toContain('data:image/png;base64');
-// });

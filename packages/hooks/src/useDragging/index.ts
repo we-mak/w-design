@@ -4,16 +4,13 @@
  */
 import * as React from "react";
 
-export default () => {
+const useDragging = () => {
   const initState = {
     isDragging: false,
-
     originalX: 0,
     originalY: 0,
-
     translateX: 0,
     translateY: 0,
-
     lastTranslateX: 0,
     lastTranslateY: 0
   };
@@ -22,6 +19,7 @@ export default () => {
 
   const handleDragStart = (e: MouseEvent | React.MouseEvent | DragEvent | React.DragEvent) => {
     e.preventDefault();
+    
     e.stopPropagation();
 
     window.removeEventListener("mousemove", handleDragMove);
@@ -95,7 +93,6 @@ export default () => {
       window.removeEventListener("mouseup", handleDragEnd);
       window.removeEventListener("touchmove", handleTouchMove, false);
       window.removeEventListener("touchend", handleDragEnd, false);
-
       return setDragState({
         ...dragState,
         isDragging: false,
@@ -126,3 +123,5 @@ export default () => {
     handleTouchMove
   };
 };
+
+export default useDragging

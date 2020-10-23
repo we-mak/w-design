@@ -7,8 +7,8 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 ### Next
 
 - ❌ Add search to document website
-- ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
-  Such as size, appearance...Study the idea from tailwindcss
+
+---
 
 - ❌ `Toggle`
 - ❌ `Chip`
@@ -26,8 +26,17 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Split out `Icon` to separate package
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
-- ❌ `useSelect` react select hooks
-- ❌ `userFields` validations bug: only check last valid check
+- ❌ Deprecate `userFields`, `useForm`. Add new `useForm` with `useReducer` under the hood
+
+---
+
+### v0.46.0
+
+#### Avatar picker
+
+Add new package: `AvatarPicker`
+
+---
 
 #### Hooks v0.42.0
 

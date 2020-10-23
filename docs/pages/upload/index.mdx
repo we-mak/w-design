@@ -1,17 +1,23 @@
-import MultiUpload from "./_multiUpload";
+import MultiUpload from "../../components/upload/MultiUpload";
+import PictureUpload from "../../components/upload/PictureUpload";
 
 # Upload
 
-Upload file or image. Support AJAX upload via `XMLHttpRequest`.
+Upload file or image.
 
-### Example
+- Preprocessing allow before upload
+- Support AJAX upload via `XMLHttpRequest`.
+
+## Examples
+
+### List upload
 
 <MultiUpload />
 
 ```jsx
 import { Upload } from "@w-design/upload";
 
-export default () => {
+const MultiUpload = () => {
   return (
     <Upload
       multiple
@@ -26,6 +32,10 @@ export default () => {
   );
 };
 ```
+
+### Picture upload
+
+<PictureUpload />
 
 ### API
 

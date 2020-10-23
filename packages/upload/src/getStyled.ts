@@ -7,7 +7,7 @@ import { UploadListProps } from "./FileList";
  * Upload style
  */
 export const getUploadContainStyle = (props: UploadProps) => {
-  const { theme } = props;
+  const { theme, isPictureCard } = props;
 
   let containWidth = "";
   let containHeight = `1.8rem`;
@@ -18,16 +18,16 @@ export const getUploadContainStyle = (props: UploadProps) => {
   let backgroundActiveColor = `${theme.colors["B5"]}`;
   let boxShadow = `0 0 0 0.1rem ${theme.colors["B50"]}`;
 
-  // if (uploadType === "picture") {
-  //   containHeight = `120px`;
-  //   containWidth = `120px`;
-  //   border = `1px dashed ${theme.colors["N30"]}`;
-  //   borderHover = `1px dashed ${theme.colors["B50"]}`;
-  //   backgroundColor = `${theme.colors["N1"]}`;
-  //   backgroundHoverColor = `${theme.colors["B0"]}`;
-  //   backgroundActiveColor = "";
-  //   boxShadow = "";
-  // }
+  if (isPictureCard) {
+    containHeight = `120px`;
+    containWidth = `120px`;
+    border = `1px dashed ${theme.colors["N30"]}`;
+    borderHover = `1px dashed ${theme.colors["B50"]}`;
+    backgroundColor = `${theme.colors["N1"]}`;
+    backgroundHoverColor = `${theme.colors["B0"]}`;
+    backgroundActiveColor = "";
+    boxShadow = "";
+  }
 
   return css`
     display: inline-block;

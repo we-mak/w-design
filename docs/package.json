@@ -17,6 +17,7 @@
     "@w-design/core": "link:...",
     "@w-design/form": "link:...",
     "@w-design/upload": "link:...",
+    "@w-design/avatar-upload": "link:...",
     "prism-react-renderer": "^1.0.2"
   },
   "devDependencies": {

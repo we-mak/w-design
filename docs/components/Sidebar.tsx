@@ -199,7 +199,7 @@ export const Sidebar: React.FunctionComponent<any> = () => {
 
         <MenuHeading>UI Packages</MenuHeading>
         <SubMenu key="core" title="Core components" icon={<Icon className="fas fa-atom" />}>
-          {core.map(el => (
+          {core.map((el) => (
             <MenuItem key={el.link}>
               <Link href={el.link}>
                 <a>{el.title}</a>
@@ -209,7 +209,7 @@ export const Sidebar: React.FunctionComponent<any> = () => {
         </SubMenu>
 
         <SubMenu key="form" title="Form" icon={<Icon className="fas fa-list" />}>
-          {form.map(el => (
+          {form.map((el) => (
             <MenuItem key={el.link}>
               <Link href={el.link}>
                 <a>{el.title}</a>
@@ -231,12 +231,17 @@ export const Sidebar: React.FunctionComponent<any> = () => {
         </MenuItem>
 
         <MenuHeading>Hooks</MenuHeading>
-        <MenuItem key="/clickoutside">
-          <Link href="/clickoutside">
+        <MenuItem key="clickoutside">
+          <Link href="/hooks/clickoutside">
             <a>click outside</a>
           </Link>
         </MenuItem>
-        <MenuHeading>Utilities</MenuHeading>
+
+        <MenuItem key="dragging">
+          <Link href="/hooks/dragging">
+            <a>dragging</a>
+          </Link>
+        </MenuItem>
       </Menu>
     </Wrapper>
   );

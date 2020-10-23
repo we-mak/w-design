@@ -2,7 +2,7 @@
  * Upload
  * Simple upload file
  */
-import React, { useState, memo, ReactNode, useEffect } from "react";
+import React, { useState, memo, ReactNode, useEffect, Fragment } from "react";
 import styled from "styled-components";
 import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
@@ -10,34 +10,8 @@ import { fileToObject, getFileItem, updateFileState, localErrorHandler } from ".
 import { UploadFileType, UploadListProps } from "./FileList";
 import { RequestUploadType, xhrRequest } from "./xhrRequest";
 import dummyThumb from "./dummyThumb";
-import { getUploadContainStyle, labelStyle, inputStyle } from "./getStyled";
-
-export interface UploadChangeParam<T extends object = UploadFileType> {
-  file: T;
-  fileList: UploadFileType[];
-  event?: { percent: number };
-}
-
-export interface UploadProps extends UploadListProps {
-  /* Accept input attribute*/
-  accept?: string;
-  /* allow upload multiple files*/
-  multiple?: boolean;
-  /* Label title under Label tag*/
-  label?: string | ReactNode;
-  /* default file list */
-  defaultFileList?: UploadFileType[];
-  /* Function to executed before upload. If `false` the upload will be reject */
-  beforeUpload?: (file: UploadFileType, fileList?: UploadFileType[]) => boolean | Promise<any>;
-  /* restApi request upload use fetch Api*/
-  requestUpload: RequestUploadType;
-  /* disable input */
-  disabled?: boolean;
-  /* modified onchange behavior*/
-  onChange?: (uploadInfo: UploadChangeParam) => void;
-  /* remove or abort upload*/
-  onRemove?: (file: UploadFileType) => void | boolean | Promise<void | boolean>;
-}
+import UploadInput, { UploadInputProps } from "./UploadInput";
+import { getUploadContainStyle, labelStyle } from "./getStyled";
 
 const Container = styled.div<UploadProps>`
   ${getUploadContainStyle};
@@ -47,14 +21,32 @@ const Label = styled.label`
   ${labelStyle}
 `;
 
-const Input = styled.input`
-  ${inputStyle}
-`;
+export interface UploadChangeParam<T extends object = UploadFileType> {
+  file: T;
+  fileList: UploadFileType[];
+  event?: { percent: number };
+}
+
+export interface UploadProps extends UploadInputProps, UploadListProps {
+  /* restApi request upload use fetch Api*/
+  requestUpload: RequestUploadType;
+  /* Function to executed before upload. If `false` the upload will be reject */
+  beforeUpload?: (file: UploadFileType, fileList?: UploadFileType[]) => boolean | Promise<any>;
+  /* Label title under Label tag*/
+  label?: string | ReactNode;
+  /* default file list */
+  defaultFileList?: UploadFileType[];
+  /* modified onchange behavior*/
+  onChange?: (uploadInfo: UploadChangeParam) => void;
+  /* remove or abort upload*/
+  onRemove?: (file: UploadFileType) => void | boolean | Promise<void | boolean>;
+}
 
 const Upload = ({
   label = "+ Add file",
   multiple = false,
   accept,
+  isPictureCard = false,
   disabled,
   defaultFileList = [],
   beforeUpload,
@@ -106,7 +98,8 @@ const Upload = ({
   // Handle trigger upload on click on upload button
   const handleFileUpload = (file: UploadFileType) => {
     // beforeUpload
-    // Check file types allowed,... anything before upload execute from props (if any)
+    // Check file types allowed,
+    // anything before upload execute from props (if any)
     if (beforeUpload) {
       const before = beforeUpload(file, fileList);
 
@@ -202,17 +195,16 @@ const Upload = ({
   };
 
   return (
-    <>
+    <Fragment>
       <Container requestUpload={requestUpload}>
         <Label>
           <span>{label}</span>
-          <Input
-            type="file"
-            name="file"
+          <UploadInput
             accept={accept}
             multiple={multiple}
-            onChange={handleFilesChange}
+            isPictureCard={isPictureCard}
             disabled={disabled}
+            onInputChange={handleFilesChange}
           />
         </Label>
       </Container>
@@ -225,7 +217,7 @@ const Upload = ({
           onCancel={handleUploadCancel}
         />
       )}
-    </>
+    </Fragment>
   );
 };
 

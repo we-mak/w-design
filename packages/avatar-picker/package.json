@@ -1,0 +1,49 @@
+{
+  "name": "avatar-picker",
+  "version": "0.45.6",
+  "description": "Select and crop avatar image",
+  "keywords": [
+    "avatar",
+    "picker",
+    "crop"
+  ],
+  "author": "Son Dang <son.dang@doda100.com>",
+  "homepage": "https://design.we-mak.com",
+  "license": "MIT",
+  "main": "lib/cjs/index.js",
+  "typings": "lib/types/index.d.ts",
+  "module": "lib/es/index.js",
+  "files": [
+    "lib/types",
+    "lib/cjs",
+    "lib/es"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://viiiprock@github.com/we-mak/w-design.git"
+  },
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "dev:es": "BABEL_ENV=dev babel src --watch --out-dir lib/es --extensions .ts,.tsx --config-file ../../babel.config.js",
+    "dev:type": "tsc -p tsconfig.json -w --emitDeclarationOnly",
+    "test": "cross-env jest test -u --colors",
+    "coverage": "cross-env jest --coverage -u --colors",
+    "build": "cross-env NODE_ENV=production yarn build:cjs && yarn build:es",
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib/cjs --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
+    "build:es": "BABEL_ENV=es babel src --out-dir lib/es --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
+    "postbuild": "tsc --emitDeclarationOnly -p tsconfig.json"
+  },
+  "bugs": {
+    "url": "https://github.com/we-mak/w-design/issues"
+  },
+  "dependencies": {
+    "@w-design/core": "^0.45.6"
+  },
+  "peerDependencies": {
+    "@w-design/core": "*"
+  }
+}

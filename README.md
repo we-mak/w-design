@@ -1,6 +1,7 @@
 <div align="center">
  <img height="60" width="60" src="resources/img/logo.png">
  <h1>w-design</h1>
+ [Documents](https://design.we-mak.com/)
 </div>
 
 # Introduction

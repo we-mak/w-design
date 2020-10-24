@@ -41,6 +41,9 @@
     "build:es": "BABEL_ENV=es babel src --out-dir lib/es --extensions .ts,.tsx --config-file ../../babel.config.js --no-comments",
     "postbuild": "tsc --emitDeclarationOnly -p tsconfig.json"
   },
+  "dependencies": {
+    "@w-design/helpers": "^0.41.4"
+  },
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"
   }

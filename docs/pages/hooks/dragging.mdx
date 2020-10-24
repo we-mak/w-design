@@ -2,6 +2,51 @@ import { UseDragging } from "../../components/hooks/UseDragging";
 
 # useDragging
 
-## Example
+Hook support Drag event base on interactive behavior
+
+## How to use
+
+### Example
+
+**Note**: This example doesn't supose to move thing, just to show the how it works when click, drag and release mouse
 
 <UseDragging />
+
+```js
+const {
+  dragState: { isDragging, x, y },
+  handleDragStart,
+  handleDragMove,
+  handleDragEnd
+} = useDragging();
+
+return (
+  <Box>
+    DragState:
+    <ul>
+      <li>Dragging: {isDragging.toString()}</li>
+      <li>Mouse X position: {x}</li>
+      <li>Mouse Y position: {y}</li>
+    </ul>
+    <div
+      onMouseDown={handleDragStart}
+      onMouseMove={handleDragMove}
+      onMouseUp={handleDragEnd}
+      onTouchStart={handleDragStart}
+      onTouchMove={handleDragMove}
+      onTouchEnd={handleDragEnd}
+      style={{
+        width: 100,
+        height: 100,
+        borderRadius: "50%",
+        background: "teal",
+        position: "relative",
+        textAlign: "center",
+        userSelect: "none"
+      }}
+    ></div>
+  </Box>
+);
+```
+
+## API

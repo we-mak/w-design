@@ -1,5 +1,5 @@
 module.exports = {
-  configPath: "prettier.config.js",
+  configPath: "./prettier.config.js",
   semi: true,
   singleQuote: false,
   tabWidth: 2,

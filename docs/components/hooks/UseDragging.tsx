@@ -1,40 +1,39 @@
+import { Box } from "@w-design/core";
 import { useDragging } from "@w-design/hooks";
 
 export const UseDragging = () => {
   const {
-    dragState: { translateY, translateX },
+    dragState: { isDragging, x, y },
     handleDragStart,
     handleDragMove,
-    handleDragEnd,
-    handleTouchStart,
-    handleTouchMove
+    handleDragEnd
   } = useDragging();
 
   return (
-    <div
-      onMouseDown={handleDragStart}
-      onMouseMove={handleDragMove}
-      onMouseUp={handleDragEnd}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleDragEnd}
-      style={{
-        width: 100,
-        height: 100,
-        borderRadius: "50%",
-        background: "teal",
-        position: "relative",
-        textAlign: "center",
-        userSelect: "none",
-        left: translateX,
-        top: translateY
-      }}
-    >
-      <div>
-        DragState:
-        <div>X: {translateX}</div>
-        <div>Y: {translateY}</div>
-      </div>
-    </div>
+    <Box>
+      DragState:
+      <ul>
+        <li>Dragging: {isDragging.toString()}</li>
+        <li>Mouse X position: {x}</li>
+        <li>Mouse Y position: {y}</li>
+      </ul>
+      <div
+        onMouseDown={handleDragStart}
+        onMouseMove={handleDragMove}
+        onMouseUp={handleDragEnd}
+        onTouchStart={handleDragStart}
+        onTouchMove={handleDragMove}
+        onTouchEnd={handleDragEnd}
+        style={{
+          width: 100,
+          height: 100,
+          borderRadius: "50%",
+          background: "teal",
+          position: "relative",
+          textAlign: "center",
+          userSelect: "none"
+        }}
+      ></div>
+    </Box>
   );
 };

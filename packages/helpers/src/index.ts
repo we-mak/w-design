@@ -7,10 +7,7 @@ export {
   hex2Rgba,
   getElementSize,
   getFontSize
-} from "./styled-helpers";
-export {
-  randomProperty,
-  getValFromObjKey,
-  filterObject
-} from "./object-helpers";
-export { firstLetter, removeAccentMarks, setUid } from "./string-helpers";
+} from "./styled";
+export { randomProperty, getValFromObjKey, filterObject } from "./object";
+export { firstLetter, removeAccentMarks, setUid } from "./string";
+export { isTouchDevice } from "./device";

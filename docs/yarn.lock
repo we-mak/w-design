@@ -1268,11 +1268,19 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
 
+"@w-design/avatar-upload@link:...":
+  version "0.0.0"
+  uid ""
+
 "@w-design/core@link:...":
   version "0.0.0"
   uid ""
 
 "@w-design/form@link:...":
+  version "0.0.0"
+  uid ""
+
+"@w-design/helpers@link:...":
   version "0.0.0"
   uid ""
 

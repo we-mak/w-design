@@ -3,125 +3,101 @@
  * hooks handle drag item
  */
 import * as React from "react";
+import { isTouchDevice } from "@w-design/helpers";
 
-const useDragging = () => {
-  const initState = {
+export type EventType = React.TouchEvent | React.MouseEvent | MouseEvent | TouchEvent;
+
+export interface DraggingState {
+  isDragging: boolean;
+  startX: number | null; // start x position
+  startY: number | null; // start y position
+  x: number | null; // current x position while dragging
+  y: number | null; // current y position while dragging
+  latestX: number | null; // latest x position when done drag
+  latestY: number | null; // latest y position when done drag
+}
+
+export interface UseDraggingType {
+  dragState: DraggingState;
+  handleDragStart: (e: EventType) => void;
+  handleDragMove: (e: EventType) => void;
+  handleDragEnd: () => void;
+}
+
+const useDragging = (): UseDraggingType => {
+  const initState: DraggingState = {
     isDragging: false,
-    originalX: 0,
-    originalY: 0,
-    translateX: 0,
-    translateY: 0,
-    lastTranslateX: 0,
-    lastTranslateY: 0
+    startX: null,
+    startY: null,
+    x: null,
+    y: null,
+    latestX: null,
+    latestY: null
   };
+
   // metric distances of target dragging
-  const [dragState, setDragState] = React.useState(initState);
+  const [dragState, setDragState] = React.useState<DraggingState>(initState);
 
-  const handleDragStart = (e: MouseEvent | React.MouseEvent | DragEvent | React.DragEvent) => {
+  const handleDragStart = (e: EventType) => {
+    e = e || window.event;
+    // if e is a touch event, preventDefault keeps
+    // corresponding mouse events from also being fired later.
     e.preventDefault();
-    
-    e.stopPropagation();
 
-    window.removeEventListener("mousemove", handleDragMove);
-    window.removeEventListener("mouseup", handleDragEnd);
-
-    return setDragState({
+    setDragState({
       ...dragState,
-      isDragging: true,
-      originalX: e.clientX,
-      originalY: e.clientY
+      isDragging: true
     });
   };
 
-  const handleTouchStart = (e: TouchEvent | React.TouchEvent) => {
+  const handleDragMove = (e: EventType) => {
+    if (!dragState.isDragging) return;
+
+    e = e || window.event;
+    // stop scrolling on iOS Safari
     e.preventDefault();
-    e.stopPropagation();
 
-    window.removeEventListener("touchmove", handleTouchMove, false);
-    window.removeEventListener("touchend", handleDragEnd, false);
+    const { targetTouches } = e as React.TouchEvent;
+    const { clientX, clientY } = e as React.MouseEvent;
+    const x: number = targetTouches ? targetTouches[0].pageX : clientX;
+    const y: number = targetTouches ? targetTouches[0].pageY : clientY;
 
-    const touch = e.touches[0];
-
-    return setDragState({
-      ...dragState,
-      isDragging: true,
-      originalX: touch.clientX,
-      originalY: touch.clientY
-    });
+    setDragState({ ...dragState, x, y });
   };
 
-  const handleDragMove = React.useCallback(
-    (e: MouseEvent | DragEvent | React.MouseEvent | React.DragEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      if (!dragState.isDragging) return;
-
-      return setDragState({
-        ...dragState,
-        translateX: e.clientX - dragState.originalX + dragState.lastTranslateX,
-        translateY: e.clientY - dragState.originalY + dragState.lastTranslateY
-      });
-    },
-    [dragState]
-  );
-
-  const handleTouchMove = React.useCallback(
-    (e: TouchEvent | React.TouchEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      if (!dragState.isDragging) return;
-
-      const touch = e.touches[0];
-
-      return setDragState({
-        ...dragState,
-        translateX: touch.clientX - dragState.originalX + dragState.lastTranslateX,
-        translateY: touch.clientY - dragState.originalY + dragState.lastTranslateY
-      });
-    },
-    [dragState]
-  );
-
-  const handleDragEnd = React.useCallback(
-    (e: any) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      window.removeEventListener("mousemove", handleDragMove);
-      window.removeEventListener("mouseup", handleDragEnd);
-      window.removeEventListener("touchmove", handleTouchMove, false);
-      window.removeEventListener("touchend", handleDragEnd, false);
-      return setDragState({
-        ...dragState,
-        isDragging: false,
-        originalX: 0,
-        originalY: 0,
-        lastTranslateX: dragState.translateX,
-        lastTranslateY: dragState.translateY
-      });
-    },
-    [dragState, handleDragMove, handleTouchMove]
-  );
+  const handleDragEnd = () => {
+    if (dragState.isDragging) {
+      setDragState({ ...dragState, isDragging: false });
+    }
+  };
 
   React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const thirdArgument = { passive: false };
+      if (isTouchDevice) {
+        window.addEventListener("touchmove", handleDragMove, thirdArgument);
+        window.addEventListener("touchend", handleDragEnd, thirdArgument);
+      }
+      window.addEventListener("mousemove", handleDragMove, thirdArgument);
+      window.addEventListener("mouseup", handleDragEnd, thirdArgument);
+    }
+
     return () => {
-      window.removeEventListener("mousemove", handleDragMove);
-      window.removeEventListener("mouseup", handleDragEnd);
-      window.removeEventListener("touchmove", handleTouchMove, false);
-      window.removeEventListener("touchend", handleDragEnd, false);
+      if (isTouchDevice) {
+        window.removeEventListener("touchmove", handleDragMove, false);
+        window.removeEventListener("touchend", handleDragEnd, false);
+      }
+      window.removeEventListener("mousemove", handleDragMove, false);
+      window.removeEventListener("mouseup", handleDragEnd, false);
     };
-  }, [handleDragMove, handleDragEnd, handleTouchMove]);
+  }, [dragState, handleDragMove, handleDragEnd]);
 
   return {
     dragState,
     handleDragStart,
     handleDragMove,
-    handleDragEnd,
-    handleTouchStart,
-    handleTouchMove
+    handleDragEnd
   };
 };
 
-export default useDragging
+export default useDragging;

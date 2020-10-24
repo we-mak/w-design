@@ -107,19 +107,14 @@ export const hex2Rgba = (hex: string, alpha?: number): string => {
  * @param styleProperty
  * @param size
  */
-export const getElementSize = (
-  styleProperty: object,
-  size?: "sm" | "md" | "lg"
-) => styleProperty[size || "md"];
+export const getElementSize = (styleProperty: object, size?: "sm" | "md" | "lg") =>
+  styleProperty[size || "md"];
 
 /**
  * @function getFontSize
  * Call function to generate the font size from default values or theme values
  */
-export const getFontSize = (
-  elementSizeProps: "sm" | "md" | "lg",
-  fontSizes: Array<string>
-) => {
+export const getFontSize = (elementSizeProps: "sm" | "md" | "lg", fontSizes: Array<string>) => {
   switch (elementSizeProps) {
     case "sm":
       return fontSizes[0];

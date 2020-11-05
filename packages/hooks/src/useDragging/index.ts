@@ -9,12 +9,8 @@ export type EventType = React.TouchEvent | React.MouseEvent | MouseEvent | Touch
 
 export interface DraggingState {
   isDragging: boolean;
-  startX: number | null; // start x position
-  startY: number | null; // start y position
   x: number | null; // current x position while dragging
   y: number | null; // current y position while dragging
-  latestX: number | null; // latest x position when done drag
-  latestY: number | null; // latest y position when done drag
 }
 
 export interface UseDraggingType {
@@ -27,12 +23,8 @@ export interface UseDraggingType {
 const useDragging = (): UseDraggingType => {
   const initState: DraggingState = {
     isDragging: false,
-    startX: null,
-    startY: null,
     x: null,
-    y: null,
-    latestX: null,
-    latestY: null
+    y: null
   };
 
   // metric distances of target dragging

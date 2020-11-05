@@ -2,7 +2,8 @@ import { UseDragging } from "../../components/hooks/UseDragging";
 
 # useDragging
 
-Hook support Drag event base on interactive behavior
+Hook support Drag event base on interactive behavior: Click/touch on element to start drag, release mouse or end touch to stop drag.
+Hook function will return `x`, `y` position when move.
 
 ## How to use
 
@@ -11,6 +12,9 @@ Hook support Drag event base on interactive behavior
 **Note**: This example doesn't supose to move thing, just to show the how it works when click, drag and release mouse
 
 <UseDragging />
+
+<br />
+Simply call the hook function inside your React function component
 
 ```js
 const {
@@ -48,5 +52,3 @@ return (
   </Box>
 );
 ```
-
-## API

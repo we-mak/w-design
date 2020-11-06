@@ -1,13 +1,14 @@
-import {Avatar, AvatarGroup, Button, ButtonGroup} from '@w-design/core'
+import { Avatar, AvatarGroup, Button, ButtonGroup } from "@w-design/core";
 
 # Avatar Group
+
 An block of avatar group components
 
 ## Example
 
 <div style={{ maxWidth: "600px" }}>
   <AvatarGroup
-    avatar={<Avatar avatarUrl="https://api.adorable.io/avatars/80/vn" />}
+    avatar={<Avatar avatarUrl="https://i.pravatar.cc/120" />}
     name="Hello world"
     description={
       <div>
@@ -23,21 +24,24 @@ An block of avatar group components
     }
   />
 
+
   <AvatarGroup
-    avatar={<Avatar avatarUrl="https://api.adorable.io/avatars/80/hello" />}
+    avatar={<Avatar avatarUrl="https://i.pravatar.cc/120" />}
     name="Joe Doe"
   />
 </div>
+
 
 ```jsx
 import { AvatarGroup } from "@w-design/core";
 
 <AvatarGroup
-  avatarUrl="https://api.adorable.io/avatars/80/vn"
+  avatarUrl="https://i.pravatar.cc/120"
   name="Hello world"
   description={
     <div>
-      This is the description of the avatar, can be apply with string or react child
+      This is the description of the avatar, can be apply with string or react
+      child
     </div>
   }
   actions={
@@ -46,7 +50,7 @@ import { AvatarGroup } from "@w-design/core";
       <Button>More</Button>
     </ButtonGroup>
   }
-/>
+/>;
 ```
 
 ## API

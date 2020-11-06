@@ -1,12 +1,17 @@
 /**
  * Upload
- * Simple upload file
+
  */
-import React, { useState, memo, ReactNode, useEffect, Fragment } from "react";
+import React, { useState, ReactNode, useEffect, Fragment } from "react";
 import styled from "styled-components";
 import { setUid } from "@w-design/helpers";
 import { FileList } from "./FileList";
-import { fileToObject, getFileItem, updateFileState, localErrorHandler } from "./utils";
+import {
+  fileToObject,
+  getFileItem,
+  updateFileState,
+  localErrorHandler,
+} from "./utils";
 import { UploadFileType, UploadListProps } from "./FileList";
 import { RequestUploadType, xhrRequest } from "./xhrRequest";
 import dummyThumb from "./dummyThumb";
@@ -28,10 +33,15 @@ export interface UploadChangeParam<T extends object = UploadFileType> {
 }
 
 export interface UploadProps extends UploadInputProps, UploadListProps {
+  /* Change input style to image card style */
+  isPictureCard?: boolean;
   /* restApi request upload use fetch Api*/
   requestUpload: RequestUploadType;
   /* Function to executed before upload. If `false` the upload will be reject */
-  beforeUpload?: (file: UploadFileType, fileList?: UploadFileType[]) => boolean | Promise<any>;
+  beforeUpload?: (
+    file: UploadFileType,
+    fileList?: UploadFileType[]
+  ) => boolean | Promise<any>;
   /* Label title under Label tag*/
   label?: string | ReactNode;
   /* default file list */
@@ -50,7 +60,7 @@ const Upload = ({
   disabled,
   defaultFileList = [],
   beforeUpload,
-  requestUpload
+  requestUpload,
 }: UploadProps) => {
   const [fileList, setFileList] = useState(defaultFileList);
 
@@ -81,7 +91,7 @@ const Upload = ({
               ...fileToObject(f),
               source,
               data: f,
-              uid: setUid("file")
+              uid: setUid("file"),
             };
 
             files = [...files, transformedFile];
@@ -108,11 +118,16 @@ const Upload = ({
           .then((processedFile: FormDataEntryValue) => {
             // transform file to something
             // such as add water mark
-            const processedFileType = Object.prototype.toString.call(processedFile);
+            const processedFileType = Object.prototype.toString.call(
+              processedFile
+            );
 
-            if (processedFileType === "[object File]" || processedFileType === "[object Blob]") {
+            if (
+              processedFileType === "[object File]" ||
+              processedFileType === "[object Blob]"
+            ) {
               const newFile = Object.assign(file, {
-                data: processedFileType
+                data: processedFileType,
               });
               return post(newFile);
             }
@@ -145,7 +160,7 @@ const Upload = ({
           file,
           onLoadStart: () => {
             const newFileList = updateFileState(file, fileList, {
-              status: "progress"
+              status: "progress",
             });
             setFileList(newFileList);
           },
@@ -157,22 +172,22 @@ const Upload = ({
             }
 
             const newFileList = updateFileState(file, fileList, {
-              percent: percentLoaded
+              percent: percentLoaded,
             });
             setFileList(newFileList);
-          }
+          },
         });
 
         const newFileList = updateFileState(file, fileList, {
           status: "success",
-          response: result
+          response: result,
         });
 
         return setFileList(newFileList);
       } catch (err) {
         const newFileList = updateFileState(file, fileList, {
           status: "error",
-          response: err
+          response: err,
         });
         return setFileList(newFileList);
       }
@@ -184,7 +199,7 @@ const Upload = ({
     // if upload is in progress: handle abort event
     if (file.status === "progress") {
       const newFileList = updateFileState(file, fileList, {
-        status: "error"
+        status: "error",
       });
       setFileList(newFileList);
       return xhr && xhr.abort();
@@ -196,13 +211,12 @@ const Upload = ({
 
   return (
     <Fragment>
-      <Container requestUpload={requestUpload}>
+      <Container isPictureCard={isPictureCard} requestUpload={requestUpload}>
         <Label>
           <span>{label}</span>
           <UploadInput
             accept={accept}
             multiple={multiple}
-            isPictureCard={isPictureCard}
             disabled={disabled}
             onInputChange={handleFilesChange}
           />
@@ -221,5 +235,5 @@ const Upload = ({
   );
 };
 
-export default memo(Upload);
+export default Upload;
 export { xhrRequest };

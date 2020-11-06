@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button, ButtonGroup, Modal } from "@w-design/core";
 
-export default () => {
+const ModalExample = () => {
   const [isOpen, setOpen] = React.useState(false);
 
   const openModal = () => setOpen(true);
@@ -29,3 +29,5 @@ export default () => {
     </>
   );
 };
+
+export default ModalExample;

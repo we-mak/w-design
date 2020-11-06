@@ -12,13 +12,9 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "lib/cjs/index.js",
-  "typings": "lib/types/index.d.ts",
   "module": "lib/es/index.js",
-  "files": [
-    "lib/types",
-    "lib/cjs",
-    "lib/es"
-  ],
+  "typings": "lib/types/index.d.ts",
+  "files": ["lib"],
   "publishConfig": {
     "access": "public"
   },

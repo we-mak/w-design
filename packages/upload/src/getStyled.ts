@@ -1,4 +1,3 @@
-import { css } from "styled-components";
 import { width, height, color } from "styled-system";
 import { UploadProps } from "./Upload";
 import { UploadListProps } from "./FileList";
@@ -6,9 +5,10 @@ import { UploadListProps } from "./FileList";
 /**
  * Upload style
  */
-export const getUploadContainStyle = (props: UploadProps) => {
-  const { theme, isPictureCard } = props;
-
+export const getUploadContainStyle = ({
+  theme,
+  isPictureCard,
+}: UploadProps) => {
   let containWidth = "";
   let containHeight = `1.8rem`;
   let border = `1px solid ${theme.colors["N3"]}`;
@@ -29,7 +29,7 @@ export const getUploadContainStyle = (props: UploadProps) => {
     boxShadow = "";
   }
 
-  return css`
+  return `
     display: inline-block;
     position: relative;
     border-radius: 0.2rem;
@@ -58,7 +58,7 @@ export const getUploadContainStyle = (props: UploadProps) => {
   `;
 };
 
-export const labelStyle = css`
+export const labelStyle = `
   position: absolute;
   width: 100%;
   height: 100%;
@@ -79,7 +79,7 @@ export const labelStyle = css`
   }
 `;
 
-export const inputStyle = css`
+export const inputStyle = `
   position: absolute;
   top: 0;
   left: 0;
@@ -90,7 +90,7 @@ export const inputStyle = css`
 `;
 
 export const getListStyle = (props: UploadListProps) => {
-  return css`
+  return `
     display: block;
     position: relative;
     padding: 0.4rem;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Dropdown, Menu, MenuItem, Box } from "@w-design/core";
 
-export default () => {
+const DropDownExample = () => {
   return (
     <Dropdown
       title="Dropdown"
@@ -42,3 +42,5 @@ export default () => {
     />
   );
 };
+
+export default DropDownExample;

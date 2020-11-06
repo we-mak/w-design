@@ -27,6 +27,7 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
 - ❌ Deprecate `userFields`, `useForm`. Add new `useForm` with `useReducer` under the hood
+- ✅ Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'Element'.
 
 ---
 

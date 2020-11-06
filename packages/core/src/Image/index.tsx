@@ -12,7 +12,7 @@ const Image = (props: any) => {
   const imgRef: MutableRefObject<Element | undefined> = useRef();
 
   const inview: IntersectionObserverCallback = (entries, observer): void =>
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const imageElement = imgRef!.current!;
         const imgSrc = imageElement.getAttribute("data-src");
@@ -28,7 +28,7 @@ const Image = (props: any) => {
       observer.observe(imgRef.current);
     }
 
-    return () => observer.unobserve(imgRef!.current!);
+    return () => imgRef.current && observer.unobserve(imgRef.current);
   }, [imgRef.current]);
 
   return <ImageElement ref={imgRef} src={src} {...props} />;

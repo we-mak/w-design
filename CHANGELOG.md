@@ -26,16 +26,14 @@ Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 - ❌ Split out `Icon` to separate package
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
 - ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
-- ❌ Deprecate `userFields`, `useForm`. Add new `useForm` with `useReducer` under the hood
-- ✅ Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'Element'.
+- ❌ Change `useForm` with `useReducer` under the hood
 
 ---
 
 ### v0.46.0
 
-#### Avatar picker
-
-Add new package: `AvatarPicker`
+- Refactor `Upload` to have state management at the top level
+- ✅ Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'Element'.
 
 ---
 
@@ -45,7 +43,7 @@ Add new package: `AvatarPicker`
 
 #### Upload v0.43.1
 
-- ✅ Expose `xhrRequest` upload
+- ✅ Export `xhrRequest` upload
 
 #### Form v0.44.0
 

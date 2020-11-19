@@ -13,6 +13,7 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "lib/cjs/index.js",
+  "types": "lib/types/index.d.ts",
   "typings": "lib/types/index.d.ts",
   "module": "lib/es/index.js",
   "files": [

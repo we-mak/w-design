@@ -1,83 +1,54 @@
 import MultiUpload from "../../components/upload/MultiUpload";
-import PictureUpload from "../../components/upload/PictureUpload";
 
 # Upload
 
-Upload file or image.
+Simple Upload file/image component that you can control upload yourself and update state.
 
-- Preprocessing allow before upload
-- Support AJAX upload via `XMLHttpRequest`.
+- Upload on each file change
+- Success or Error repsonse indicators
+- `xhrRequest` is a small helper to support upload via XMLHttpRequest API but you can use whatever method to upload the file
 
 ## Examples
-
-### Picture upload
-
-<PictureUpload />
-
-### List upload
 
 <MultiUpload />
 
 ```jsx
-import { Upload } from "@w-design/upload";
+import * as React from "react";
+import { Upload, xhrRequest } from "@w-design/upload";
+import {
+  UploadFileType,
+  UploadStatus,
+} from "@w-design/upload/lib/types/FileListItem";
+import { useState } from "react";
 
-const MultiUpload = () => {
-  return (
-    <Upload
-      multiple
-      requestUpload={{
-        endpoint: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
-        method: "POST",
-        headers: {
-          authorization: "authorization-text",
-        },
-      }}
-    />
+// Helper to update list
+const updateList = (
+  list: UploadFileType[],
+  updateFile: UploadFileType,
+  newProps: { status?: UploadStatus; percent?: number; response?: any }
+) => {
+  return list.map((item) =>
+    item.uid === updateFile.uid
+      ? Object.assign({ ...item }, { ...newProps })
+      : item
   );
 };
-```
 
-### API
+const MultiUpload = () => {
+  // initialize xhr from xhrRequest utility
+  const xhr = typeof window !== "undefined" && xhrRequest();
 
-| Props           | type    | default | description |
-| --------------- | ------- | ------- | ----------- |
-| accept          | string  |         |             |
-| multiple        | boolean |         |             |
-| label           |         |         |             |
-| defaultFileList |         |         |             |
-| beforeUpload    |         |         |             |
-| requestUpload   |         |         |             |
-| onChange        |         |         |             |
-| disabled        |         |         |             |
-| onRemove        |         |         |             |
+  // MUST HAVE: Create state for file list
+  const [fileList, setFileList] = useState<UploadFileType[]>([]);
 
-### Custom upload control
-
-You can use the `xhrRequest` API to custom your upload by using `useEffect` hooks.
-Here is the snippets example from the `Upload` component
-
-```jsx
-...
-
-const [xhr, setXhr] = useState < any > undefined;
-
-useEffect(() => {
-  if (!xhr) {
-    setXhr(xhrRequest());
-  }
-}, [xhr, xhrRequest]);
-
-const post = async (file: UploadFileType): Promise<void> => {
-  if (xhr) {
+  const post = async (file: UploadFileType) => {
     try {
       const result = await xhr.upload({
-        ...requestUpload,
+        endpoint: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+        method: "POST",
         file,
         onLoadStart: () => {
-          const newFileList = updateFileState(file, fileList, {
-            status: "progress"
-          });
-          setFileList(newFileList);
+          setFileList((list) => updateList(list, file, { status: "progress" }));
         },
         onProgress: (e: ProgressEvent<EventTarget>) => {
           let percentLoaded = 0;
@@ -86,41 +57,113 @@ const post = async (file: UploadFileType): Promise<void> => {
             percentLoaded = Math.round((e.loaded / e.total) * 100);
           }
 
-          const newFileList = updateFileState(file, fileList, {
-            percent: percentLoaded
-          });
-          setFileList(newFileList);
-        }
+          setFileList((list) =>
+            updateList(list, file, { percent: percentLoaded })
+          );
+        },
       });
 
-      const newFileList = updateFileState(file, fileList, {
-        status: "success",
-        response: result
-      });
-
-      return setFileList(newFileList);
+      setFileList((list) =>
+        updateList(list, file, { status: "success", response: result })
+      );
     } catch (err) {
-      const newFileList = updateFileState(file, fileList, {
-        status: "error",
-        response: err
-      });
-      return setFileList(newFileList);
+      setFileList((list) =>
+        updateList(list, file, { status: "error", response: err })
+      );
     }
-  }
+  };
+
+  return (
+    <Upload
+      multiple
+      setFileList={setFileList}
+      fileList={fileList}
+      onUpload={post}
+      onCancel={(file) => {
+        alert(`Upload Cancel: ${file.name}`);
+        xhr && xhr.abort(); // abor request in case upload is in progress
+        return true;
+      }}
+    />
+  );
 };
 
-const handleUploadCancel = (file: UploadFileType) => {
-  if (!xhr) return;
-  // if upload is in progress: handle abort event
-  if (file.status === "progress") {
-    const newFileList = updateFileState(file, fileList, {
-      status: "error"
-    });
-    setFileList(newFileList);
-    return xhr && xhr.abort();
-  }
-
-  const fileInFileList = getFileItem(file, fileList);
-  return setFileList(fileList.filter(item => fileInFileList != item));
-};
 ```
+
+### Upload API
+
+| Props       | type                                                          | default      | description                 |
+| ----------- | ------------------------------------------------------------- | ------------ | --------------------------- |
+| accept      | `string`                                                      |              |                             |
+| multiple    | `boolean`                                                     | false        | allow multiple files        |
+| label       | `string`                                                      | "+ Add file" | upload input label          |
+| disabled    | `boolean`                                                     | false        | disable upload input        |
+| fileList    | `UploadFileType`                                              |              | file list state             |
+| setFileList | `React.Dispatch<React.SetStateAction<UploadFileType<any>[]>>` |              | pass update file state      |
+| onUpload    | `(file: UploadFileType)=>Promise<UploadFileType>`             |              | handling upload a file item |
+| onCancel    | `(file: UploadFileType) => boolean;`                          |              | handling upload             |
+
+### UploadFileType
+
+| Props            | type                                 | description                    |
+| ---------------- | ------------------------------------ | ------------------------------ |
+| uid              | `string`                             | auto generate local uid        |
+| size             | `number`                             | file size in bytes             |
+| type             | `string`                             | MIME type                      |
+| lastModifiedDate | `Date`                               | last modified Date of the file |
+| source           | `string`                             | file local source              |
+| name             | `string`                             | file name                      |
+| lastModified     | `number`                             | last modified time of the file |
+| percent          | `number`                             | file upload progress percent   |
+| url              | `string`                             | file url                       |
+| thumbUrl         | `string`                             | thumbnail url                  |
+| data             | `File`                               | source file data               |
+| status           | `"error"`, `"success"`, `"progress"` |                                |
+| response         | `any`                                | response from server           |
+
+### xhrRequest
+
+xhrRequest basically uses XMLHttpRequest and it provides handling upload and abort upload via `upload` and `abort` method.
+
+```js
+const xhr = xhrRequest();
+
+// in terms of SSR you need to initial like
+const xhr = typeof window !== "undefined" && xhrRequest();
+```
+
+#### upload properties
+
+Properties to pass in upload method
+
+```js
+interface RequestUploadType {
+  endpoint: string;
+  method: "POST" | "PUT" | "post" | "put";
+  headers?: Object;
+  timeout?: number;
+  withCredentials?: boolean;
+  ignoreCache?: boolean;
+  body?: Object;
+}
+
+// example
+xhr.upload({
+  method: "POST",
+  endpoint: "https://some-api.com",
+  headers: {
+    authentication: "some auth key",
+  },
+  file: {},
+  onLoadStart(e) {
+    console.log(e);
+  },
+  onProgress(e) {
+    console.log(e);
+  },
+});
+```
+
+#### abort
+
+Just call `xhr.abort()` to cancel the upload

@@ -2,7 +2,7 @@
  * xhrRequest
  * XMLHttpRequest function
  */
-import { UploadFileType } from "./FileList";
+import { UploadFileType } from "./FileListItem";
 
 export interface RequestUploadType {
   endpoint: string;
@@ -26,19 +26,6 @@ export interface XhrRequestType extends RequestUploadType, RequestUploadProps {
   file: UploadFileType;
 }
 
-// function getBody(xhr: XMLHttpRequest) {
-//   const text = xhr.responseText || xhr.response;
-//   if (!text) {
-//     return text;
-//   }
-
-//   try {
-//     return JSON.parse(text);
-//   } catch (e) {
-//     return text;
-//   }
-// }
-
 export const xhrRequest = (): {
   upload?: (options: XhrRequestType) => Promise<any>;
   abort?: () => void;
@@ -53,7 +40,7 @@ export const xhrRequest = (): {
     ignoreCache,
     file,
     onLoadStart,
-    onProgress
+    onProgress,
   }: XhrRequestType) => {
     return new Promise((resolve, reject) => {
       xhr.open(method, endpoint, true);
@@ -66,7 +53,9 @@ export const xhrRequest = (): {
           xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         }
 
-        Object.keys(headers).forEach(key => xhr.setRequestHeader(key, headers[key]));
+        Object.keys(headers).forEach((key) =>
+          xhr.setRequestHeader(key, headers[key])
+        );
       }
 
       if (ignoreCache) {
@@ -77,33 +66,36 @@ export const xhrRequest = (): {
         xhr.withCredentials = true;
       }
 
-      xhr.onload = function() {
+      xhr.onload = function () {
         if (this.status >= 200 && this.status < 300) {
           // add success
           // onSuccess && onSuccess(getBody(xhr));
           return resolve({
             status: this.status,
-            statusText: this.statusText
+            statusText: this.statusText,
+            response: this.response,
           });
         } else {
           return reject({
             status: this.status,
-            statusText: this.statusText
+            statusText: this.statusText,
+            response: this.response,
           });
         }
       };
 
       if (onLoadStart) {
-        xhr.onloadstart = e => onLoadStart(e);
+        xhr.onloadstart = (e) => onLoadStart(e);
       }
       if (onProgress) {
-        xhr.upload.onprogress = e => onProgress(e);
+        xhr.upload.onprogress = (e) => onProgress(e);
       }
 
-      xhr.onerror = function() {
+      xhr.onerror = function () {
         return reject({
           status: this.status,
-          statusText: this.statusText
+          statusText: this.statusText,
+          response: this.response,
         });
       };
 
@@ -117,6 +109,6 @@ export const xhrRequest = (): {
     upload,
     abort() {
       return xhr.abort();
-    }
+    },
   };
 };

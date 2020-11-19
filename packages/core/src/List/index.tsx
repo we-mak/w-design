@@ -61,7 +61,7 @@ const List: React.FC<ListProps> = ({
   rowKey,
   rows,
   emptyView,
-  children
+  children,
 }) => {
   let keys: { [key: string]: string } = {};
 
@@ -80,23 +80,23 @@ const List: React.FC<ListProps> = ({
     if (!key) {
       key = `item-${index}`;
     }
-
     keys[index] = key;
-
     return rows(item, index);
   };
 
   let childrenComponent: React.ReactNode = <MenuList>{children}</MenuList>;
 
   if (sourceData.length > 0) {
-    const items = sourceData.map((item: any, index: number) => renderItem(item, index));
+    const items = sourceData.map((item: any, index: number) =>
+      renderItem(item, index)
+    );
 
     const childrenList: Array<React.ReactNode> = [];
 
     React.Children.forEach(items, (child: any, index) => {
       childrenList.push(
         React.cloneElement(child, {
-          key: keys[index]
+          key: keys[index],
         })
       );
     });
@@ -119,7 +119,7 @@ const List: React.FC<ListProps> = ({
   }
 
   return (
-    <Box position="relative">
+    <div style={{ position: "relative" }}>
       {header && (
         <>
           <Typo tag="h3" mt="0.4rem" mb="0">
@@ -139,7 +139,7 @@ const List: React.FC<ListProps> = ({
         {childrenComponent}
         {footer}
       </ListContainer>
-    </Box>
+    </div>
   );
 };
 

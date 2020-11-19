@@ -39,9 +39,9 @@ export interface ListItemProps extends GlobProps {
   thumbnail?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
-  actions?: React.ReactNode[];
+  actions?: React.ReactNode;
   hasDivider?: boolean;
-  children?: React.ReactNode | React.ReactNode[];
+  children?: React.ReactNode;
 }
 
 export const ListItem: React.FC<ListItemProps> = ({
@@ -50,7 +50,7 @@ export const ListItem: React.FC<ListItemProps> = ({
   title,
   description,
   actions,
-  hasDivider = false
+  hasDivider = false,
 }) => {
   return (
     <Container hasDivider={hasDivider}>

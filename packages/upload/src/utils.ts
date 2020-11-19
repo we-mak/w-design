@@ -1,8 +1,7 @@
-import { WFile, UploadStatus } from "./FileList";
-import { UploadFileType } from "./FileList";
+import { UploadFileType, UploadStatus, WFile } from "./FileListItem";
 
 // Handle parsing file upload to custom object
-export const fileToObject = (file: WFile): UploadFileType => {
+export const fileToObject = (file: WFile, source: string): UploadFileType => {
   return {
     ...file,
     lastModified: file.lastModified,
@@ -10,14 +9,9 @@ export const fileToObject = (file: WFile): UploadFileType => {
     name: file.name,
     size: file.size,
     type: file.type,
-    uid: file.uid
+    source,
   } as UploadFileType;
 };
-
-export function getFileItem(file: UploadFileType, fileList: UploadFileType[]) {
-  const matchKey = file.uid !== undefined ? "uid" : "name";
-  return fileList.filter(item => item[matchKey] === file[matchKey])[0];
-}
 
 export function updateFileState(
   file: UploadFileType,
@@ -28,25 +22,14 @@ export function updateFileState(
     percent?: number;
   }
 ) {
-  const matchKey = file.uid !== undefined ? "uid" : "name";
-  return fileList.map(item =>
-    item[matchKey] === file[matchKey] ? Object.assign(item, newProps) : item
+  return fileList.map((item) =>
+    item["uid"] === file["uid"] ? Object.assign(item, newProps) : item
   );
-}
-
-export function removeFileItem(file: UploadFileType, fileList: UploadFileType[]) {
-  const matchKey = file.uid !== undefined ? "uid" : "name";
-  const removed = fileList.filter(item => item[matchKey] !== file[matchKey]);
-  if (removed.length === fileList.length) {
-    return null;
-  }
-  return removed;
 }
 
 // Handle error from local reading file
 export function localErrorHandler(ev: any) {
   const { error } = ev;
-
   switch (error.code) {
     case error.NOT_FOUND_ERR:
       new Error("File Not Found!");

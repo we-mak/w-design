@@ -1,6 +1,6 @@
 {
   "name": "@w-design/upload",
-  "version": "0.43.1",
+  "version": "0.43.2",
   "description": "W-design react upload components",
   "keywords": [
     "w-design",
@@ -15,7 +15,9 @@
   "module": "lib/es/index.js",
   "types": "lib/types/index.d.ts",
   "typings": "lib/types/index.d.ts",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -42,7 +44,7 @@
     "url": "https://github.com/we-mak/w-design/issues"
   },
   "dependencies": {
-    "@w-design/core": "^0.45.6"
+    "@w-design/core": "^0.46.0"
   },
   "peerDependencies": {
     "@w-design/core": "*"

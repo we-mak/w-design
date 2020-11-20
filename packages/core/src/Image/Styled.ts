@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { width, height, layout } from "styled-system";
+import { ImageProps } from ".";
 import { ImageRatioProps } from "./ImageRatio";
 
-export const ImageElement = styled.img<HTMLImageElement>`
+export const ImageElement = styled.img<ImageProps>`
   ${width};
   ${height};
 `;

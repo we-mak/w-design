@@ -19,7 +19,7 @@ const ListExample = () => {
       title: "Michael Angelo",
       description:
         "W-design is give you an option to provide solution to make great UI for you web application",
-      thumbnail: "https://source.unsplash.com/random?art/100x100",
+      thumbnail: "",
     },
     {
       title: "Rocket man",

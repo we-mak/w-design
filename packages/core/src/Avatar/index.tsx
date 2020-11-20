@@ -15,6 +15,7 @@ export interface AvatarProps extends GlobProps {
   // Initial content of avatar if without image
   dataInitial?: string;
   alt?: string;
+  crossOrigin?: React.ImgHTMLAttributes<any>["crossOrigin"];
 }
 
 const Avatar = ({
@@ -22,21 +23,27 @@ const Avatar = ({
   avatarUrl,
   dataInitial = "We mak",
   alt,
+  crossOrigin = "",
   presence,
-  ...rest
 }: AvatarProps) => {
   const [backgroundColor, setBackgroundColor] = React.useState("white");
 
   React.useEffect(() => {
     if (!avatarUrl) {
-      setBackgroundColor(randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"])));
+      setBackgroundColor(
+        randomProperty(filterObject(colors, ["WHITE", "BLACK", "N1"]))
+      );
     }
   }, []);
 
   return (
-    <AvatarContainer style={{ backgroundColor }} size={size} {...rest}>
-      {dataInitial && <AvatarInitData size={size}>{firstLetter(dataInitial)}</AvatarInitData>}
-      {avatarUrl && <AvatarImage data-src={avatarUrl} alt={alt} />}
+    <AvatarContainer style={{ backgroundColor }} size={size}>
+      {dataInitial && (
+        <AvatarInitData size={size}>{firstLetter(dataInitial)}</AvatarInitData>
+      )}
+      {avatarUrl && (
+        <AvatarImage data-src={avatarUrl} alt={alt} crossOrigin={crossOrigin} />
+      )}
       {presence && <AvatarPresence presence={presence} size={size} />}
     </AvatarContainer>
   );

@@ -21,14 +21,31 @@ export interface PictureProps extends GlobProps {
   height?: HeightProps;
 }
 
-const Picture: FC<PictureProps> = ({ srcSets, alt, dataSrc, width, height, ...rest }) => {
+const Picture: FC<PictureProps> = ({
+  srcSets,
+  alt,
+  dataSrc,
+  width,
+  height,
+  ...rest
+}) => {
   return (
     <picture>
       {srcSets &&
         srcSets.map((s, idx) => (
-          <Source key={idx} media={`(max-width: ${s.media}px)`} data-srcset={s.src} />
+          <Source
+            key={idx}
+            media={`(max-width: ${s.media}px)`}
+            data-srcset={s.src}
+          />
         ))}
-      <Image data-src={dataSrc} alt={alt} width={width} height={height} {...rest} />
+      <Image
+        dataSrc={dataSrc}
+        alt={alt}
+        width={width}
+        height={height}
+        {...rest}
+      />
     </picture>
   );
 };

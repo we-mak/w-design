@@ -4,36 +4,17 @@ All notable changes to this project will be documented in this file.
 
 Check out [RELEASE](https://github.com/we-mak/w-design/releases)
 
-### Next
+TODO:
 
 - ❌ Add search to document website
-
----
-
-- ❌ `Toggle`
-- ❌ `Chip`
-- ❌ `Popover`
-- ❌ `Steps`
-- ❌ `Pagination`
-- ❌ `Actions`
-- ❌ `InputRange` two knobs
-- ❌ `Avatar` add crossOrigin props to image
-- ❌ `ListItem` remove empty thumbnail, add style props (or background)
-
-- ❌ Universal styles: Resolve sharing styles to multiple components for the toolkit.
-  Such as size, appearance...
-
-- ❌ Split out `Icon` to separate package
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
-- ❌ Revise `PushMessage` to prevent update on each parent render, and move `dismissTimeout` to parent
-- ❌ Change `useForm` with `useReducer` under the hood
 
 ---
 
 ### v0.46.0
 
 - Refactor `Upload` to have state management at the top level
-- ✅ Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'Element'.
+- [Bug] Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'Element'.
 
 ---
 

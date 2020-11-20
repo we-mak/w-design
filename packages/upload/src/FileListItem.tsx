@@ -27,7 +27,7 @@ export interface UploadFileType<T = any> {
   percent?: number;
   url?: string;
   thumbUrl?: string;
-  data?: File;
+  data?: File | Blob | string;
   status?: UploadStatus;
   // webkitRelativePath?: string;
   // error?: any;

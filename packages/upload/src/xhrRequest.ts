@@ -100,7 +100,7 @@ export const xhrRequest = (): {
       };
 
       let formData = new FormData();
-      formData.append("file", file.data);
+      formData.append("file", file.data!);
       xhr.send(formData);
     });
   };

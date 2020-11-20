@@ -15,6 +15,7 @@ TODO:
 
 - Refactor `Upload` to have state management at the top level
 - [Bug] Failed to execute 'unobserve' on 'IntersectionObserver': parameter 1 is not of type 'Element'.
+- Resolve #138
 
 ---
 

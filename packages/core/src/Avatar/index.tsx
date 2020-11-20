@@ -23,7 +23,7 @@ const Avatar = ({
   avatarUrl,
   dataInitial = "We mak",
   alt,
-  crossOrigin = "",
+  crossOrigin,
   presence,
 }: AvatarProps) => {
   const [backgroundColor, setBackgroundColor] = React.useState("white");

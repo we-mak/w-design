@@ -2,24 +2,24 @@
 
 exports[`<SectionMessage/> should renders correctly 1`] = `
 <section
-  class="sc-eCApGN nhqXj"
+  class="sc-eCssSg ecvDAy"
 >
   <div
-    class="sc-gtssRu guoDFb"
+    class="sc-gsTCUz djOLNO"
   >
     <div
-      class="sc-bdnylx iorXaZ"
+      class="sc-bdfBwQ efsVsR"
     >
       <i
         aria-hidden="true"
-        class="sc-hKFyIo gjcmDS fas fa-info-circle"
+        class="sc-hKgILt mkjPA fas fa-info-circle"
       />
     </div>
     <div
-      class="sc-bdnylx bUpTWt"
+      class="sc-bdfBwQ byYmRN"
     >
       <h3
-        class="sc-dlnjPT iDOoJB"
+        class="sc-dlfnbm bBjYHD"
       >
         Info
       </h3>

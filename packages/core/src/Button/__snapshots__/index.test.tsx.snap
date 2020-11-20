@@ -3,141 +3,141 @@
 exports[`<Button/> should render with different appearance style 1`] = `
 <div>
   <div
-    class="sc-pNWxx jrPRJA"
+    class="sc-pFZIQ fFyHvM"
     display="inline-flex"
   >
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN dxxHgj"
+        class="sc-eCssSg gIdNOm"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           Hello
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN eSKMYP"
+        class="sc-eCssSg cxEOeS"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           <i
             aria-hidden="true"
-            class="sc-bdnylx hLpTeV icon-before fas fa-phone"
+            class="sc-bdfBwQ dEtgLR icon-before fas fa-phone"
           />
           Hello
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN fuuOYH"
+        class="sc-eCssSg kcmFue"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           Hello
           <i
             aria-hidden="true"
-            class="sc-bdnylx hLpTeV icon-after fas fa-phone"
+            class="sc-bdfBwQ dEtgLR icon-after fas fa-phone"
           />
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN nofjm"
+        class="sc-eCssSg gZXLyn"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           <i
             aria-hidden="true"
-            class="sc-bdnylx hLpTeV icon-before fas fa-phone"
+            class="sc-bdfBwQ dEtgLR icon-before fas fa-phone"
           />
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN eQstPx"
+        class="sc-eCssSg govUFQ"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           Hello
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN kGTfeV"
+        class="sc-eCssSg giiLoA"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           Hello
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN klCZpw"
+        class="sc-eCssSg jlTuup"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           Hello
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN exLEtJ"
+        class="sc-eCssSg edsxus"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           Hello
         </div>
       </button>
     </div>
     <div
-      class="sc-jrsJCI gmsFSD"
+      class="sc-jrAGrp iDuwsd"
     >
       <button
-        class="sc-eCApGN jTOOam"
+        class="sc-eCssSg dCIYGH"
         type="button"
       >
         <div
-          class="sc-iCoHVE dDywml"
+          class="sc-iBPRYJ EGQcw"
         >
           Hello
         </div>
@@ -145,48 +145,48 @@ exports[`<Button/> should render with different appearance style 1`] = `
     </div>
   </div>
   <a
-    class="sc-jSFkmK buSkyA"
+    class="sc-jSgupP LAjo"
     href="/"
     type="button"
   >
     <div
-      class="sc-iCoHVE dDywml"
+      class="sc-iBPRYJ EGQcw"
     />
   </a>
   <span
-    class="sc-gKAblj fLRyUU"
+    class="sc-gKsewC eUHBhK"
     disabled=""
     href="/"
     type="button"
   >
     <div
-      class="sc-iCoHVE dDywml"
+      class="sc-iBPRYJ EGQcw"
     />
   </span>
   <button
-    class="sc-eCApGN hivajo"
+    class="sc-eCssSg bUSucN"
     type="button"
   >
     <div
-      class="sc-iCoHVE dDywml"
+      class="sc-iBPRYJ EGQcw"
     />
   </button>
   <button
-    class="sc-eCApGN dxxHgj"
+    class="sc-eCssSg gIdNOm"
     type="button"
   >
     <div
-      class="sc-fujyUd dBzscw"
+      class="sc-fubCfw ckIZEf"
     >
       <div
-        class="sc-gtssRu hNdkOj"
+        class="sc-gsTCUz bACmiW"
       >
         <svg
-          class="sc-dlnjPT gFfpje"
+          class="sc-dlfnbm dopyOo"
           viewBox="25 25 50 50"
         >
           <circle
-            class="sc-hKFyIo tPBGS"
+            class="sc-hKgILt lcjyeI"
             cx="50"
             cy="50"
             fill="none"
@@ -196,7 +196,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </div>
     </div>
     <div
-      class="sc-iCoHVE eMqMLh"
+      class="sc-iBPRYJ ihuXEM"
     />
   </button>
 </div>

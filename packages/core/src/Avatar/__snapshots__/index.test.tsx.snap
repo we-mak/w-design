@@ -3,76 +3,76 @@
 exports[`<Avatar/> should renders correctly 1`] = `
 <div>
   <figure
-    class="sc-bdnylx jELLyT"
+    class="sc-bdfBwQ cZYAYv"
     style="background-color: white;"
   >
     <span
-      class="sc-dlnjPT fUJEkV"
+      class="sc-dlfnbm fUQevT"
     >
       Wm
     </span>
     <img
       alt="test"
-      class="sc-hKFyIo lerItV sc-jSFkmK lhVlZT"
+      class="sc-hKgILt dHZNKf sc-jSgupP eAjhPD"
       data-src="https://api.adorable.io/avatars/240/thunder"
       src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
     />
     <span
-      class="sc-gtssRu hEKkTZ"
+      class="sc-gsTCUz fkvmEw"
     />
   </figure>
   <figure
-    class="sc-bdnylx hIOUBH"
-    style="background-color: rgb(157, 179, 198);"
+    class="sc-bdfBwQ eZmttX"
+    style="background-color: rgb(250, 155, 0);"
   >
     <span
-      class="sc-dlnjPT gXwjyo"
+      class="sc-dlfnbm kXdhLK"
     >
       Wm
     </span>
     <span
-      class="sc-gtssRu iVVvHv"
+      class="sc-gsTCUz leIDpK"
     />
   </figure>
   <figure
-    class="sc-bdnylx xvdhb"
-    style="background-color: rgb(41, 55, 66);"
+    class="sc-bdfBwQ dKRjsL"
+    style="background-color: rgb(0, 183, 250);"
   >
     <span
-      class="sc-dlnjPT buVhrT"
+      class="sc-dlfnbm kSNicp"
     >
       Wm
     </span>
     <span
-      class="sc-gtssRu ceKOdV"
+      class="sc-gsTCUz imwEkQ"
     />
   </figure>
   <figure
-    class="sc-bdnylx iMWusv"
-    style="background-color: rgb(64, 50, 148);"
+    class="sc-bdfBwQ gdtTkL"
+    style="background-color: rgb(226, 234, 242);"
   >
     <span
-      class="sc-dlnjPT hqbA-df"
+      class="sc-dlfnbm hSFozZ"
     >
       Wm
     </span>
   </figure>
   <figure
-    class="sc-bdnylx bQRDGn"
-    style="background-color: rgb(0, 154, 211);"
+    class="sc-bdfBwQ kOVQPP"
+    style="background-color: rgb(96, 121, 142);"
   >
     <span
-      class="sc-dlnjPT hebeFi"
+      class="sc-dlfnbm hNjJzU"
     >
       Wm
     </span>
   </figure>
   <figure
-    class="sc-bdnylx jAriNX"
-    style="background-color: rgb(190, 206, 220);"
+    class="sc-bdfBwQ byrFAL"
+    style="background-color: rgb(239, 129, 0);"
   >
     <span
-      class="sc-dlnjPT dYsJvo"
+      class="sc-dlfnbm cWDBhi"
     >
       Wm
     </span>

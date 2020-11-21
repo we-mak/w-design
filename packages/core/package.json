@@ -47,12 +47,12 @@
     "url": "https://github.com/we-mak/w-design/issues"
   },
   "dependencies": {
-    "@types/body-scroll-lock": "^2.6.1",
-    "@types/styled-system": "^5.1.4",
-    "@w-design/helpers": "^0.41.5",
-    "@w-design/hooks": "^0.42.1",
-    "body-scroll-lock": "^3.1.5",
-    "styled-system": "^5.1.4"
+    "@types/body-scroll-lock": "latest",
+    "@types/styled-system": "latest",
+    "@w-design/helpers": "^0.46.1",
+    "@w-design/hooks": "^0.46.1",
+    "body-scroll-lock": "latest",
+    "styled-system": "latest"
   },
   "gitHead": "d990095e2f75e0d6e34aff66a98969a4de8eae6f"
 }

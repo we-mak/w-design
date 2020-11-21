@@ -42,7 +42,7 @@
     "postbuild": "tsc --emitDeclarationOnly -p tsconfig.json"
   },
   "dependencies": {
-    "@w-design/helpers": "^0.41.5"
+    "@w-design/helpers": "^0.46.1"
   },
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"

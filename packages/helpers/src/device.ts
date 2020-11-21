@@ -19,7 +19,7 @@
 //  "mousemove",
 //  "mouseup"
 
-export const isTouchDevice = !!(
+export const isTouchDevice: boolean = !!(
   typeof window !== "undefined" &&
   typeof navigator !== "undefined" &&
   ("ontouchstart" in window || navigator.msMaxTouchPoints > 0)

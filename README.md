@@ -61,7 +61,7 @@ We are using [Lerna](https://lerna.js.org/) to manage monorepo packages, please 
 At the root directory, do following steps:
 
 1. Pull the repository and install by `yarn install`
-2. Bootstrap all packages `yarn bootstrap`
+2. Bootstrap all packages `lerna bootstrap`
 3. Build packages `yarn build` before execute run dev
 4. After finished, run `yarn dev:es` and `yarn dev:type` at separate terminal. This command will execute watching all packages within lerna parallel mode. You can update the packages now.
 5. To add information in the documents, at `docs` directory, run `yarn dev`. We are using `next.js` and

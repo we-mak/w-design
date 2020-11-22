@@ -5,7 +5,11 @@
 import * as React from "react";
 import { isTouchDevice } from "@w-design/helpers";
 
-export type EventType = React.TouchEvent | React.MouseEvent | MouseEvent | TouchEvent;
+export type EventType =
+  | React.TouchEvent
+  | React.MouseEvent
+  | MouseEvent
+  | TouchEvent;
 
 export interface DraggingState {
   isDragging: boolean;
@@ -24,7 +28,7 @@ const useDragging = (): UseDraggingType => {
   const initState: DraggingState = {
     isDragging: false,
     x: null,
-    y: null
+    y: null,
   };
 
   // metric distances of target dragging
@@ -38,7 +42,7 @@ const useDragging = (): UseDraggingType => {
 
     setDragState({
       ...dragState,
-      isDragging: true
+      isDragging: true,
     });
   };
 
@@ -88,7 +92,7 @@ const useDragging = (): UseDraggingType => {
     dragState,
     handleDragStart,
     handleDragMove,
-    handleDragEnd
+    handleDragEnd,
   };
 };
 

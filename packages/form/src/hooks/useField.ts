@@ -35,12 +35,8 @@ const useField = ({
   name,
   isRequired = false,
   defaultValue,
-  validations
+  validations,
 }: FieldType): FieldProps => {
-  console.warn(`
-    We gonna deprecate this and replace this with form useReducer \n
-    please update
-  `);
   const [status, setStatus] = useState<FieldStatus | null>();
   const [hintMessage, setHintMessage] = useState<string>("");
   const [value, setValue] = useState(defaultValue || "");
@@ -97,7 +93,7 @@ const useField = ({
     // implicit extending state when we pass below props to InputField (FieldForm)
     // TODO: check types safety
     setStatus,
-    setHintMessage
+    setHintMessage,
   };
 
   form && form.addField(field);

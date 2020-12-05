@@ -21,11 +21,6 @@ export interface FormType {
  * @param requiredMessage - generic message for required field notify when submit
  */
 const useForm = ({ requiredMessage }: FormType): FormProps => {
-  console.warn(`
-  We gonna deprecate this and replace this with form useReducer \n
-  please update
-`);
-
   const [formMessage, setFormMessage] = React.useState<any>("");
 
   // prevent submit multiple times
@@ -72,7 +67,7 @@ const useForm = ({ requiredMessage }: FormType): FormProps => {
     status,
     formMessage,
     setFormMessage,
-    setStatus
+    setStatus,
   };
 };
 

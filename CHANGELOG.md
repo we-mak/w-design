@@ -2,12 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-Check out [RELEASE](https://github.com/we-mak/w-design/releases)
+Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
-TODO:
-
-- ❌ Add search to document website
+- ❌ None-official: https://github.com/cristianbote/goober
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
+
+--
+
+### v0.48.0
+
+- ❌ #144 **Steps**
+- ❌ #150 useFormReducer
 
 ---
 

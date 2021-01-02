@@ -7,163 +7,167 @@ import { Menu, MenuItem, MenuHeading, SubMenu, Icon } from "@w-design/core";
 const core = [
   {
     title: "Anchor Scroll",
-    link: "/core/anchor"
+    link: "/core/anchor",
   },
   {
     title: "Avatar",
-    link: "/core/avatar"
+    link: "/core/avatar",
   },
   {
     title: "Avatar Group",
-    link: "/core/avatar-group"
+    link: "/core/avatar-group",
   },
   {
     title: "Badge",
-    link: "/core/badge"
+    link: "/core/badge",
   },
   {
     title: "Box",
-    link: "/core/box"
+    link: "/core/box",
   },
   {
     title: "Breadcrumbs",
-    link: "/core/breadcrumbs"
+    link: "/core/breadcrumbs",
   },
   {
     title: "Button",
-    link: "/core/button"
+    link: "/core/button",
   },
   {
     title: "Card",
-    link: "/core/card"
+    link: "/core/card",
   },
   {
     title: "Collapse",
-    link: "/core/collapse"
+    link: "/core/collapse",
   },
   {
     title: "Comment",
-    link: "/core/comment"
+    link: "/core/comment",
   },
   {
     title: "Container",
-    link: "/core/container"
+    link: "/core/container",
   },
   {
     title: "Custom tag",
-    link: "/core/customtag"
+    link: "/core/customtag",
   },
   {
     title: "Divider",
-    link: "/core/divider"
+    link: "/core/divider",
   },
   {
     title: "Drawer",
-    link: "/core/drawer"
+    link: "/core/drawer",
   },
   {
     title: "Dropdown",
-    link: "/core/dropdown"
+    link: "/core/dropdown",
   },
   {
     title: "Empty view",
-    link: "/core/emptyview"
+    link: "/core/emptyview",
   },
   {
     title: "Flexbox",
-    link: "/core/flexbox"
+    link: "/core/flexbox",
   },
   {
     title: "Portal",
-    link: "/core/portal"
+    link: "/core/portal",
   },
   {
     title: "Media",
-    link: "/core/media"
+    link: "/core/media",
   },
   {
     title: "List",
-    link: "/core/list"
+    link: "/core/list",
   },
   {
     title: "Menu",
-    link: "/core/menu"
+    link: "/core/menu",
   },
   {
     title: "Modal",
-    link: "/core/modal"
+    link: "/core/modal",
   },
   {
     title: "Navbar",
-    link: "/core/navbar"
+    link: "/core/navbar",
   },
   {
     title: "ProgressLoader",
-    link: "/core/progress"
+    link: "/core/progress",
   },
   {
     title: "PushMessage",
-    link: "/core/pushmessage"
+    link: "/core/pushmessage",
   },
   {
     title: "SectionMessage",
-    link: "/core/sectionmessage"
+    link: "/core/sectionmessage",
   },
   {
     title: "Spinner",
-    link: "/core/spinner"
+    link: "/core/spinner",
+  },
+  {
+    title: "Steps",
+    link: "/core/steps",
   },
   {
     title: "Tabs",
-    link: "/core/tabs"
+    link: "/core/tabs",
   },
   {
     title: "Typo",
-    link: "/core/typo"
-  }
+    link: "/core/typo",
+  },
 ];
 
 const form = [
   {
     title: "Introduction",
-    link: "/form/intro"
+    link: "/form/intro",
   },
   {
     title: "Input Field",
-    link: "/form/inputfield"
+    link: "/form/inputfield",
   },
   {
     title: "Input Form",
-    link: "/form/inputform"
+    link: "/form/inputform",
   },
   {
     title: "Input Range",
-    link: "/form/inputrange"
+    link: "/form/inputrange",
   },
   {
     title: "Label",
-    link: "/form/label"
+    link: "/form/label",
   },
   {
     title: "Radio",
-    link: "/form/radio"
+    link: "/form/radio",
   },
   {
     title: "Checkbox",
-    link: "/form/checkbox"
+    link: "/form/checkbox",
   },
   {
     title: "TextArea",
-    link: "/form/textarea"
+    link: "/form/textarea",
   },
   {
     title: "FormGroup",
-    link: "/form/formgroup"
+    link: "/form/formgroup",
   },
   {
     title: "Form hooks",
-    link: "/form/hooks"
-  }
+    link: "/form/hooks",
+  },
 ];
 
 const Wrapper = styled.aside`
@@ -183,7 +187,10 @@ export const Sidebar: React.FunctionComponent<any> = () => {
 
   return (
     <Wrapper>
-      <Menu defaultSelectedKey={pathname} defaultOpenKeys={[pathname.split("/")[1]]}>
+      <Menu
+        defaultSelectedKey={pathname}
+        defaultOpenKeys={[pathname.split("/")[1]]}
+      >
         <MenuHeading>W-design</MenuHeading>
         <MenuItem key="/">
           <Link href="/">
@@ -198,7 +205,11 @@ export const Sidebar: React.FunctionComponent<any> = () => {
         </MenuItem>
 
         <MenuHeading>UI Packages</MenuHeading>
-        <SubMenu key="core" title="Core components" icon={<Icon className="fas fa-atom" />}>
+        <SubMenu
+          key="core"
+          title="Core components"
+          icon={<Icon className="fas fa-atom" />}
+        >
           {core.map((el) => (
             <MenuItem key={el.link}>
               <Link href={el.link}>
@@ -208,7 +219,11 @@ export const Sidebar: React.FunctionComponent<any> = () => {
           ))}
         </SubMenu>
 
-        <SubMenu key="form" title="Form" icon={<Icon className="fas fa-list" />}>
+        <SubMenu
+          key="form"
+          title="Form"
+          icon={<Icon className="fas fa-list" />}
+        >
           {form.map((el) => (
             <MenuItem key={el.link}>
               <Link href={el.link}>

@@ -13,6 +13,7 @@ Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
 - ❌ #144 **Steps**
 - ❌ #150 useFormReducer
+- ✅ allow name attribute for button
 
 ---
 

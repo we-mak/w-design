@@ -9,7 +9,7 @@ import {
   LinkProps,
   ActionProps,
   SyntheticEventProps,
-  MouseEventProps
+  MouseEventProps,
 } from "../common/props";
 
 export interface ButtonProps
@@ -35,6 +35,7 @@ export interface ButtonProps
   ariaExpanded?: boolean;
   ariaLabel?: string;
   ariaHaspopup?: boolean;
+  name?: string;
   role?: string;
   /** button type attribute*/
   type?: "button" | "submit" | "reset";
@@ -75,7 +76,7 @@ const ChildContainer = styled.div<{ isLoading: boolean }>`
   position: relative;
   width: 100%;
   height: 100%;
-  opacity: ${props => props.isLoading && `0`};
+  opacity: ${(props) => props.isLoading && `0`};
 `;
 
 const SpinContainer = styled.div`

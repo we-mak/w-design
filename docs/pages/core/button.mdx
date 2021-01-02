@@ -19,7 +19,7 @@ Button is used to trigger an event
 ### Button appearances
 
 <ButtonGroup>
-  <Button>Default button</Button>
+  <Button name="button">Default button</Button>
   <Button appearance="primary">Primary button</Button>
   <Button appearance="danger">Danger button</Button>
   <Button appearance="warning">Warning button</Button>
@@ -141,9 +141,10 @@ Selected state
 
 | Props        | Type                                                                                           | default   | description             |
 | ------------ | ---------------------------------------------------------------------------------------------- | --------- | ----------------------- |
+| type         | string                                                                                         | button    | button type attribute   |
+| name         | string                                                                                         |           | button name attribute   |
 | buttonRef    | React.RefAttributes                                                                            |           | button ref              |
 | appearance   | string:`default`, `primary`, `danger`, `warning`, `success`, `subtle`, `link`, `help`, `clean` | "default" | applied style of button |
-| type         | string                                                                                         | button    | button type attribute   |
 | size         | string: `sm`, `md`,`lg`                                                                        | "md"      | button size style       |
 | fluid        | boolean                                                                                        |           | full width style button |
 | iconBefore   |                                                                                                |           |                         |

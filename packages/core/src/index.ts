@@ -34,7 +34,6 @@ export { default as ProgressLoader } from "./ProgressLoader";
 export { default as Provider } from "./Provider";
 export { default as SectionMessage } from "./SectionMessage";
 export { default as Spinner } from "./Spinner";
-export * from "./Steps";
 export { default as Steps } from "./Steps";
 export { default as Tabs, Tab } from "./Tabs";
 export { default as Typo } from "./Typo";

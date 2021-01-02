@@ -1,7 +1,7 @@
 import * as React from "react";
-import Box from "src/Box";
-import Container from "src/Container";
 import styled from "styled-components";
+import Box from "../Box";
+import Container from "../Container";
 import { getNavItemNumberStyle, getNaveItemTextStyle } from "./getStyled";
 
 const StepNav = styled.ul`

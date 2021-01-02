@@ -1,14 +1,6 @@
-import { StepsExample } from "./_example/StepsExample";
+import { Steps, Button, ButtonGroup } from "@w-design/core";
+import { useState } from "react";
 
-# Steps
-
-Provide steps navigation for user to walkthrough.
-
-## Example
-
-<StepsExample />
-
-```js
 export const StepsExample = () => {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
 
@@ -41,4 +33,3 @@ export const StepsExample = () => {
     />
   );
 };
-```

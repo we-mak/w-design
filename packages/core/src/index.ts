@@ -5,7 +5,13 @@ export { default as Badge } from "./Badge";
 export { default as Box } from "./Box";
 export { default as Breadcrumbs, BreadcrumbsItem } from "./Breadcrumbs";
 export { default as Button, ButtonGroup } from "./Button";
-export { default as Card, CardMedia, CardHeader, CardContent, CardFooter } from "./Card";
+export {
+  default as Card,
+  CardMedia,
+  CardHeader,
+  CardContent,
+  CardFooter,
+} from "./Card";
 export { default as Collapse } from "./Collapse";
 export { default as Comment } from "./Comment";
 export { default as Container } from "./Container";
@@ -28,6 +34,8 @@ export { default as ProgressLoader } from "./ProgressLoader";
 export { default as Provider } from "./Provider";
 export { default as SectionMessage } from "./SectionMessage";
 export { default as Spinner } from "./Spinner";
+export * from "./Steps";
+export { default as Steps } from "./Steps";
 export { default as Tabs, Tab } from "./Tabs";
 export { default as Typo } from "./Typo";
 export { default as PushMessage } from "./PushMessage";

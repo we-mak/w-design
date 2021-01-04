@@ -8,13 +8,13 @@ Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
 - ❌ None-official: https://github.com/cristianbote/goober
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
-- ❌ #150 useFormReducer
 
 --
 
-### v0.47.0
+### v0.48.0
 
 - ✅ #144 **Steps**
+- ❌ #150 useFormReducer
 - ✅ allow name attribute for button
 
 ---

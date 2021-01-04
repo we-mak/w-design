@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import Box from "../Box";
 import Container from "../Container";
-import { getNavItemNumberStyle, getNaveItemTextStyle } from "./getStyled";
+import { getNaveItemTextStyle, getNavItemNumberStyle } from "./getStyled";
 
 const StepNav = styled.ul`
   display: flex;
@@ -40,18 +40,22 @@ const StepItemTitle = styled.div<StepItemTypes>`
 `;
 StepItemTitle.displayName = "StepItemTitle";
 
-type stepsType = {
+export type StepType = {
   title: string;
   content: React.ReactNode;
 };
 
-interface Steps {
-  steps: Array<stepsType>;
+export interface StepsPropsType {
+  steps: StepType[];
   activeIndex?: number;
   controlGroup?: React.ReactNode;
 }
 
-const Steps = ({ activeIndex = 0, steps = [], controlGroup }: Steps) => {
+const Steps = ({
+  steps = [],
+  activeIndex = 0,
+  controlGroup,
+}: StepsPropsType) => {
   return (
     <Container>
       <StepNav>
@@ -66,15 +70,7 @@ const Steps = ({ activeIndex = 0, steps = [], controlGroup }: Steps) => {
         })}
       </StepNav>
 
-      {steps.map((step, idx) => {
-        return (
-          activeIndex === idx && (
-            <Box p="0.5rem 0" key={idx}>
-              {step.content}
-            </Box>
-          )
-        );
-      })}
+      <Box p="0.5rem 0">{steps[activeIndex].content}</Box>
 
       {controlGroup}
     </Container>

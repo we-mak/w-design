@@ -14,7 +14,7 @@ import {
   SpaceProps,
   DisplayProps,
   MaxWidthProps,
-  MinWidthProps
+  MinWidthProps,
 } from "styled-system";
 
 import { GlobProps } from "../common/props";
@@ -31,14 +31,13 @@ const Container = styled.div<ContainerProps>`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  font-family: ${props => props.theme.fonts.normal};
+  font-family: ${(props) => props.theme.fonts.normal};
   ${color};
   ${space};
   ${display};
   ${maxWidth};
   ${minWidth};
 `;
-
 Container.displayName = "Container";
 
 export default Container;

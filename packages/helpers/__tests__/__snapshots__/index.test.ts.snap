@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`object-helpers randomProperty should get the radom value from object 1`] = `"lorem"`;
+exports[`object-helpers randomProperty should get the radom value from object 1`] = `"dolor"`;
 
-exports[`string-helper setUid set an unique string 1`] = `"somename-1605856998066-1"`;
+exports[`string-helper setUid set an unique string 1`] = `"somename-1609751225794-1"`;

@@ -23,7 +23,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-bdfBwQ eZmttX"
-    style="background-color: rgb(250, 155, 0);"
+    style="background-color: rgb(41, 166, 52);"
   >
     <span
       class="sc-dlfnbm kXdhLK"
@@ -36,7 +36,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-bdfBwQ dKRjsL"
-    style="background-color: rgb(0, 183, 250);"
+    style="background-color: rgb(86, 110, 130);"
   >
     <span
       class="sc-dlfnbm kSNicp"
@@ -49,7 +49,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-bdfBwQ gdtTkL"
-    style="background-color: rgb(226, 234, 242);"
+    style="background-color: rgb(96, 121, 142);"
   >
     <span
       class="sc-dlfnbm hSFozZ"
@@ -59,7 +59,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-bdfBwQ kOVQPP"
-    style="background-color: rgb(96, 121, 142);"
+    style="background-color: rgb(180, 4, 4);"
   >
     <span
       class="sc-dlfnbm hNjJzU"
@@ -69,7 +69,7 @@ exports[`<Avatar/> should renders correctly 1`] = `
   </figure>
   <figure
     class="sc-bdfBwQ byrFAL"
-    style="background-color: rgb(239, 129, 0);"
+    style="background-color: rgb(0, 163, 191);"
   >
     <span
       class="sc-dlfnbm cWDBhi"

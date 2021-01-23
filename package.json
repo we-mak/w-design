@@ -48,11 +48,7 @@
     "@babel/runtime": "^7.7.2",
     "@testing-library/jest-dom": "^5.0.0",
     "@testing-library/react": "^11.0.4",
-<<<<<<< HEAD
-    "@testing-library/react-hooks": "^4.0.0",
-=======
     "@testing-library/react-hooks": "^5.0.0",
->>>>>>> 4a3b78d577a166b6e0c8a736eb42b6dedf713ec5
     "@types/jest": "^26.0.14",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",

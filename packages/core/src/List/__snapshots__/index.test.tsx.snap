@@ -33,8 +33,9 @@ exports[`<List/> should render correctly 1`] = `
               class="sc-kEjbxe cwIfRf"
             >
               <img
-                class="sc-jrAGrp jeKMAe"
+                class="sc-jrAGrp ceToxN"
                 data-src="https://source.unsplash.com/random"
+                loading="lazy"
                 src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
               />
             </div>
@@ -72,8 +73,9 @@ exports[`<List/> should render correctly 1`] = `
               class="sc-kEjbxe cwIfRf"
             >
               <img
-                class="sc-jrAGrp jeKMAe"
+                class="sc-jrAGrp ceToxN"
                 data-src="https://source.unsplash.com/random"
+                loading="lazy"
                 src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
               />
             </div>

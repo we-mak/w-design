@@ -3,7 +3,6 @@
  * inherit lazy load from Image
  */
 import React, { FC } from "react";
-import { WidthProps, HeightProps } from "styled-system";
 import Image from "../Image";
 import { Source } from "./Source";
 import { GlobProps } from "../common/props";
@@ -17,8 +16,8 @@ export interface PictureProps extends GlobProps {
   dataSrc?: string;
   alt?: string;
   srcSets?: srcSetProps[];
-  width?: WidthProps;
-  height?: HeightProps;
+  width?: string | number;
+  height?: string | number;
 }
 
 const Picture: FC<PictureProps> = ({
@@ -40,7 +39,7 @@ const Picture: FC<PictureProps> = ({
           />
         ))}
       <Image
-        dataSrc={dataSrc}
+        data-src={dataSrc}
         alt={alt}
         width={width}
         height={height}

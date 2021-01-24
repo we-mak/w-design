@@ -36,7 +36,9 @@ exports[`<Button/> should render with different appearance style 1`] = `
         />
         <img
           alt=""
-          class="sc-hKgILt dHZNKf sc-gKsewC hYnQsy"
+          class="sc-hKgILt kmlAc sc-gKsewC hYnQsy"
+          data-src="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
+          loading="lazy"
           src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
         />
       </picture>

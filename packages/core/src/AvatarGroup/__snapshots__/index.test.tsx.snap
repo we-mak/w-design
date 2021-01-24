@@ -21,8 +21,9 @@ Object {
               Wm
             </span>
             <img
-              class="sc-hKgILt dHZNKf sc-jSgupP eAjhPD"
+              class="sc-hKgILt kmlAc sc-jSgupP eAjhPD"
               data-src="https://api.adorable.io/avatars/80/vn"
+              loading="lazy"
               src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
             />
           </figure>
@@ -68,8 +69,9 @@ Object {
             Wm
           </span>
           <img
-            class="sc-hKgILt dHZNKf sc-jSgupP eAjhPD"
+            class="sc-hKgILt kmlAc sc-jSgupP eAjhPD"
             data-src="https://api.adorable.io/avatars/80/vn"
+            loading="lazy"
             src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
           />
         </figure>

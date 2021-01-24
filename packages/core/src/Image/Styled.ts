@@ -1,13 +1,7 @@
 import styled from "styled-components";
-import { width, height, layout } from "styled-system";
-import { ImageProps } from ".";
-import { ImageRatioProps } from "./ImageRatio";
+import { layout } from "styled-system";
 
-export const ImageElement = styled.img<ImageProps>`
-  ${width};
-  ${height};
-`;
-ImageElement.displayName = "ImageElement";
+import { ImageRatioProps } from "./ImageRatio";
 
 const getRatioStyle = (props: ImageRatioProps) => {
   const { paddingBottom, objectFit } = props;

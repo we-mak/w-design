@@ -6,8 +6,9 @@ exports[`<ImageRatio/> should renders correctly 1`] = `
     class="sc-gsTCUz iHFGNe"
   >
     <img
-      class="sc-bdfBwQ lgHXgS"
+      class="sc-bdfBwQ bzQyAJ"
       data-src="https://source.unsplash.com/random?car"
+      loading="lazy"
       src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
     />
   </div>
@@ -15,8 +16,9 @@ exports[`<ImageRatio/> should renders correctly 1`] = `
     class="sc-gsTCUz XjVtQ"
   >
     <img
-      class="sc-bdfBwQ lgHXgS"
+      class="sc-bdfBwQ bzQyAJ"
       data-src="https://source.unsplash.com/random?car"
+      loading="lazy"
       src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
     />
   </div>

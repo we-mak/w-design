@@ -6,8 +6,10 @@ afterEach(cleanup);
 
 describe("<Image/>", () => {
   const props = {
-    "data-src": "https://api.adorable.io/avatars/240/thunder",
-    alt: "Test"
+    "data-src": "https://source.unsplash.com/random",
+    alt: "Test",
+    width: "300",
+    height: "400",
   };
 
   it("should render correct image", () => {

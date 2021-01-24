@@ -22,8 +22,9 @@ exports[`<Comment/> should renders correctly 1`] = `
           </span>
           <img
             alt=""
-            class="sc-hKgILt dHZNKf sc-jSgupP eAjhPD"
+            class="sc-hKgILt kmlAc sc-jSgupP eAjhPD"
             data-src="https://source.unsplash.com/random"
+            loading="lazy"
             src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
           />
         </figure>

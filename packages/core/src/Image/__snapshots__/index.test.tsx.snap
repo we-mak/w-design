@@ -4,9 +4,12 @@ exports[`<Image/> should render correct image 1`] = `
 <div>
   <img
     alt="Test"
-    class="sc-dQppl bgprlD"
-    data-src="https://api.adorable.io/avatars/240/thunder"
+    class="sc-dQppl deXAoE"
+    data-src="https://source.unsplash.com/random"
+    height="400"
+    loading="lazy"
     src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+    width="300"
   />
 </div>
 `;

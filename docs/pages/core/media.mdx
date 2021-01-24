@@ -11,36 +11,44 @@ Fixed width image
 <Image
   data-src="https://source.unsplash.com/random"
   width={320}
+  height={500}
+  style={{ border: "1px solid teal" }}
+/>{" "}
+
+```jsx
+<Image
+  data-src="https://source.unsplash.com/random"
+  width={320}
+  height={500}
   style={{ border: "1px solid teal" }}
 />
-
-```jsx
-<Image data-src="https://source.unsplash.com/random" width={320} />
 ```
 
-Pecent width image
+Responsive aspect ratio style
 
-<Image data-src="https://source.unsplash.com/random?car" width="50%" />
+<Image
+  data-src="https://source.unsplash.com/random"
+  width={500}
+  height={500}
+  style={{ aspectRatio: 16 / 9 }}
+/>
 
-```jsx
-<Image data-src="https://source.unsplash.com/random?car" width="50%" />
-```
+## API
 
-Wrapping with ratio
+| Props  | type | default | description              |
+| ------ | ---- | ------- | ------------------------ |
+| height |      |         | element height attribute |
+| width  |      |         | element width attribute  |
+
+# ImageRatio
 
 <ImageRatio>
   <Image data-src="https://source.unsplash.com/random?building" />
 </ImageRatio>
 
-## API
-
-| Props  | type | default | description          |
-| ------ | ---- | ------- | -------------------- |
-| height |      |         | styled-system height |
-| width  |      |         | styled-system width  |
-
 <Picture
   dataSrc="https://source.unsplash.com/random?car"
-  width="30%"
+  width="500"
+  height="500"
   style={{ border: "1px solid teal" }}
 />

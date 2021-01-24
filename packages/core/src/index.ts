@@ -40,4 +40,8 @@ export { default as Steps } from "./Steps";
 
 export { default as Tabs, Tab } from "./Tabs";
 export { default as Typo } from "./Typo";
-export { default as PushMessage } from "./PushMessage";
+export {
+  default as PushMessage,
+  PushMessageProps,
+  PushMessageType,
+} from "./PushMessage";

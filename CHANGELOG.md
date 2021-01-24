@@ -11,9 +11,10 @@ Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
 --
 
-### v0.48.1
+### v0.48.3
 
 - ❌ **Layout**: Base layout for App
+- ❌ **PushMessage**: fix https://github.com/we-mak/w-design/issues/149
 - **Duplicate images**: https://github.com/we-mak/w-design/issues/196
 - **Image**
   - Add loading props default to `lazy`

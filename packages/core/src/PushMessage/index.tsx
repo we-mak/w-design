@@ -12,35 +12,51 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: auto;
-  text-align: center;
-  font-family: ${props => props.theme.fonts["normal"]};
-  font-size: ${props => props.theme.fontSizes[0]};
+  font-family: ${(props) => props.theme.fonts["normal"]};
+  font-size: ${(props) => props.theme.fontSizes[0]};
   font-feature-settings: "tnum";
   font-variant: tabular-nums;
+  pointer-events: none;
 `;
 
-export interface PushMessageProps {
+export type PushMessageType = {
   value: string;
   appearance: "info" | "warn" | "success" | "error";
+};
+
+export interface PushMessageProps {
+  message?: PushMessageType;
   dismissTimeout?: number; // time to auto dismiss message automatically
 }
 
-const PushMessage = ({ messages }: { messages: PushMessageProps[] }) => {
-  // let messageNodes: React.ReactNode = [];
+const PushMessage = ({ message, dismissTimeout = 5000 }: PushMessageProps) => {
+  const [messages, setMessages] = React.useState<PushMessageType[]>([]);
 
-  // for (let i in messages) {
-  //   messageNodes = <Message value={messages[i].value} appearance={messages[i].appearance} />;
-  // }
+  const updateMessage = () => {
+    if (message) {
+      setMessages((currentMessages) => [message, ...currentMessages]);
+      // auto dismiss
+      if (messages.length >= 0) {
+        setTimeout(() => {
+          setMessages((current) => current.filter((m) => m !== message));
+        }, dismissTimeout);
+      }
+    }
+  };
+
+  React.useEffect(() => {
+    updateMessage();
+    //  return () => clearTimeout(timer);
+  }, [message]);
 
   return (
     <Portal>
       <Container>
-        {/* <div>{messageNodes}</div> */}
         <div>
-          {messages.map((m, i) => (
-            <Message value={m.value} appearance={m.appearance} key={i} />
-          ))}
+          {messages.length > 0 &&
+            messages.map((m, i) => (
+              <Message value={m.value} appearance={m.appearance} key={i} />
+            ))}
         </div>
       </Container>
     </Portal>

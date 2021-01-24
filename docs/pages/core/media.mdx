@@ -24,15 +24,6 @@ Fixed width image
 />
 ```
 
-Responsive aspect ratio style
-
-<Image
-  data-src="https://source.unsplash.com/random"
-  width={500}
-  height={500}
-  style={{ aspectRatio: 16 / 9 }}
-/>
-
 ## API
 
 | Props  | type | default | description              |
@@ -42,9 +33,21 @@ Responsive aspect ratio style
 
 # ImageRatio
 
+## Example
+
 <ImageRatio>
   <Image data-src="https://source.unsplash.com/random?building" />
 </ImageRatio>
+
+## API
+
+| Props         | type                                                       | default | description                    |
+| ------------- | ---------------------------------------------------------- | ------- | ------------------------------ |
+| paddingBottom | number                                                     | 16/9    | aspect ratio by padding bottom |
+| objectFit     | `"fill"`, `"contain"`, `"cover"`, `"none"`, `"scale-down"` |         | object-fit style attribute     |
+| children      | React.ReactNode                                            |         | children node                  |
+
+# Picture
 
 <Picture
   dataSrc="https://source.unsplash.com/random?car"

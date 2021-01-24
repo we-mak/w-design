@@ -13,7 +13,8 @@ Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
 ### v0.48.1
 
-- **Layout**: Base layout for App
+- ❌ **Layout**: Base layout for App
+- **Duplicate images**: https://github.com/we-mak/w-design/issues/196
 - **Image**
   - Add loading props default to `lazy`
   - Use `width`, `height` attribute support for prevent content layout shift (CLS)

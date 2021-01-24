@@ -29,8 +29,6 @@ const Upload: React.FC<UploadProps> = ({
   const handleAddFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rawfiles = Array.prototype.slice.call(e.target.files);
 
-    let newFiles: UploadFileType[] = [];
-
     if (rawfiles && rawfiles.length >= 0) {
       rawfiles.forEach((file) => {
         const reader: FileReader = new FileReader();
@@ -55,8 +53,7 @@ const Upload: React.FC<UploadProps> = ({
               uid: setUid("file"),
             };
 
-            newFiles = [transformedFile, ...newFiles];
-            setFileList((prevList) => [...newFiles, ...prevList]);
+            setFileList((prevList) => [transformedFile, ...prevList]);
           };
         })(file);
         // Read in the file as a data URL.

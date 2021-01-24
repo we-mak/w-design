@@ -29,24 +29,24 @@ export interface PushMessageProps {
   dismissTimeout?: number; // time to auto dismiss message automatically
 }
 
-const PushMessage = ({ message, dismissTimeout = 5000 }: PushMessageProps) => {
+const PushMessage = ({ message, dismissTimeout = 3000 }: PushMessageProps) => {
   const [messages, setMessages] = React.useState<PushMessageType[]>([]);
 
-  const updateMessage = () => {
+  React.useEffect(() => {
+    let timer: number;
     if (message) {
       setMessages((currentMessages) => [message, ...currentMessages]);
       // auto dismiss
-      if (messages.length >= 0) {
-        setTimeout(() => {
-          setMessages((current) => current.filter((m) => m !== message));
-        }, dismissTimeout);
-      }
+      timer = setTimeout(() => {
+        setMessages((current) => current.filter((m) => m !== message));
+      }, dismissTimeout);
     }
-  };
 
-  React.useEffect(() => {
-    updateMessage();
-    //  return () => clearTimeout(timer);
+    // unmount when no messages
+    if (messages.length < 0) {
+      return () => clearTimeout(timer);
+    }
+    return;
   }, [message]);
 
   return (

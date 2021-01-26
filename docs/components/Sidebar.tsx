@@ -38,6 +38,10 @@ const core = [
     link: "/core/card",
   },
   {
+    title: "Chip",
+    link: "/core/chip",
+  },
+  {
     title: "Collapse",
     link: "/core/collapse",
   },
@@ -159,6 +163,10 @@ const form = [
   {
     title: "TextArea",
     link: "/form/textarea",
+  },
+  {
+    title: "Toggle",
+    link: "/form/toggle",
   },
   {
     title: "FormGroup",

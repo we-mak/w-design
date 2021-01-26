@@ -2,13 +2,15 @@ import * as React from "react";
 import { firstLetter, randomProperty, filterObject } from "@w-design/helpers";
 import { colors } from "../common/colors";
 import { GlobProps } from "../common/props";
-import { AvatarContainer } from "./AvatarContainer";
+import { AvatarContainer, getSize } from "./AvatarContainer";
 import { AvatarPresence } from "./AvatarPresence";
 import { AvatarInitData } from "./AvatarInitData";
 import { AvatarImage } from "./AvatarImage";
 
+export type AvatarSize = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | undefined;
+
 export interface AvatarProps extends GlobProps {
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+  size?: AvatarSize;
   // User online status
   presence?: "online" | "offline" | "busy";
   avatarUrl?: string;
@@ -42,7 +44,13 @@ const Avatar = ({
         <AvatarInitData size={size}>{firstLetter(dataInitial)}</AvatarInitData>
       )}
       {avatarUrl && (
-        <AvatarImage data-src={avatarUrl} alt={alt} crossOrigin={crossOrigin} />
+        <AvatarImage
+          width={getSize(size) * 16}
+          height={getSize(size) * 16}
+          data-src={avatarUrl}
+          alt={alt}
+          crossOrigin={crossOrigin}
+        />
       )}
       {presence && <AvatarPresence presence={presence} size={size} />}
     </AvatarContainer>

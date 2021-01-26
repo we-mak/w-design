@@ -4,14 +4,14 @@ All notable changes to this project will be documented in this file.
 
 Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
-## TODO
+## CONSIDER
 
 - ❌ None-official: https://github.com/cristianbote/goober
 - ❌ Styled-components passing props https://github.com/styled-components/styled-components/pull/3006
 
 --
 
-### v0.47.3
+### v1.0.0-Alpha
 
 - **PushMessage**: fix https://github.com/we-mak/w-design/issues/149
 - **Duplicate images**: https://github.com/we-mak/w-design/issues/196

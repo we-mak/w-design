@@ -12,6 +12,10 @@ export {
   CardContent,
   CardFooter,
 } from "./Card";
+
+export * from "./Chip";
+export { default as Chip } from "./Chip";
+
 export { default as Collapse } from "./Collapse";
 export { default as Comment } from "./Comment";
 export { default as Container } from "./Container";
@@ -28,8 +32,16 @@ export { default as List, ListItem, ListFooter } from "./List";
 export { default as Menu, MenuItem, MenuHeading, SubMenu } from "./Menu";
 export { default as Modal } from "./Modal";
 export { default as Navbar } from "./Navbar";
+
+export * from "./Pagination";
+export { default as Pagination } from "./Pagination";
+
 export { default as Picture } from "./Picture";
 export { default as Portal } from "./Portal";
+
+export * from "./Popover";
+export { default as Popover } from "./Popover";
+
 export { default as ProgressLoader } from "./ProgressLoader";
 export { default as Provider } from "./Provider";
 export { default as SectionMessage } from "./SectionMessage";

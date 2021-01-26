@@ -1,45 +1,29 @@
 import styled from "styled-components";
 import { space } from "styled-system";
-import { AvatarProps } from "./index";
+import { AvatarProps, AvatarSize } from "./index";
 
-const getSize = (props: AvatarProps) => {
-  switch (props.size) {
+export const getSize = (size: AvatarSize): number => {
+  switch (size) {
     case "xs":
-      return `
-      height: 1.4rem;
-      width: 1.4rem;
-      `;
+      return 1.4;
     case "sm":
-      return `
-      height: 2rem;
-      width: 2rem;
-      `;
+      return 2;
     case "md":
-      return `
-      height: 2.8rem;
-      width: 2.8rem;
-      `;
+      return 2.8;
     case "lg":
-      return `
-      height: 3.2rem;
-      width: 3.2rem;
-      `;
+      return 3.2;
     case "xl":
-      return `
-      height: 4rem;
-      width: 4rem;
-      `;
+      return 4;
     case "xxl":
-      return `
-      height: 6rem;
-      width: 6rem;
-      `;
+      return 6;
     default:
-      return `
-    height: 1.8rem;
-    width: 1.8rem;
-    `;
+      return 1.8;
   }
+};
+
+export const setAvatarSize = ({ size }: AvatarProps) => {
+  const sizeFromProps = getSize(size);
+  return `height: ${sizeFromProps}rem;width: ${sizeFromProps}rem`;
 };
 
 export const AvatarContainer = styled.figure<AvatarProps>`
@@ -50,6 +34,6 @@ export const AvatarContainer = styled.figure<AvatarProps>`
   margin: 0;
   position: relative;
   vertical-align: middle;
-  ${getSize};
+  ${setAvatarSize};
   ${space};
 `;

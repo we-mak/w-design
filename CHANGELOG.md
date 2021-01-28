@@ -15,7 +15,7 @@ Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
 - **Chip** Small block of entities, useful for tagging.
 - ❌ **Popover**
-- ❌ **Toggle**
+- **Toggle**
 - ❌ **Pagination**
 - ❌ **Actions**
 - **PushMessage**: fix https://github.com/we-mak/w-design/issues/149

@@ -6,6 +6,10 @@ import { Menu, MenuItem, MenuHeading, SubMenu, Icon } from "@w-design/core";
 
 const core = [
   {
+    title: "Actions",
+    link: "/core/actions",
+  },
+  {
     title: "Anchor Scroll",
     link: "/core/anchor",
   },
@@ -102,8 +106,16 @@ const core = [
     link: "/core/navbar",
   },
   {
+    title: "Pagination",
+    link: "/core/pagination",
+  },
+  {
     title: "ProgressLoader",
     link: "/core/progress",
+  },
+  {
+    title: "Popover",
+    link: "/core/popover",
   },
   {
     title: "PushMessage",

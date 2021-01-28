@@ -2,8 +2,18 @@ import { Chip } from "@w-design/core";
 
 # Chip
 
+Small block of entities, useful for tagging.
+
 ## Example
 
 <Chip>The Contra</Chip>
+<Chip avatar="https://i.pravatar.cc/100">Contractor</Chip>
+<Chip onDismiss={() => alert("You can't dismiss me!")}>I'm dismissable</Chip>
+
+```jsx
+<Chip>The Contra</Chip>
+<Chip avatar="https://i.pravatar.cc/100">Contractor</Chip>
+<Chip onDismiss={() => alert("You can't dismiss me!")}>I'm dismissable</Chip>
+```
 
 ## API

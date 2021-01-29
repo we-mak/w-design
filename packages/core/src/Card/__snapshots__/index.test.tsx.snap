@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button/> should render with different appearance style 1`] = `
+exports[`<Card/> should render with full card style 1`] = `
 <div>
   <div
     class="sc-fubCfw gpybKW"

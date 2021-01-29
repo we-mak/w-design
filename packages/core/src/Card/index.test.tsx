@@ -5,8 +5,8 @@ import Card, { CardMedia, CardHeader, CardContent, CardFooter } from "./index";
 
 afterEach(cleanup);
 
-describe("<Button/>", () => {
-  it("should render with different appearance style", () => {
+describe("<Card/>", () => {
+  it("should render with full card style", () => {
     const { container } = render(
       <Provider>
         <Card raised>
@@ -20,13 +20,13 @@ describe("<Button/>", () => {
               {
                 media: "480",
                 src:
-                  "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480441.jpg"
+                  "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480441.jpg",
               },
               {
                 media: "680",
                 src:
-                  "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480425.jpg"
-              }
+                  "https://photo2.foodgawker.com/wp-content/uploads/2019/08/3480425.jpg",
+              },
             ]}
             alt=""
           />

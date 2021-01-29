@@ -52,6 +52,7 @@ function Chip({ children, onDismiss, avatar }: Chip) {
           size="sm"
           onClick={onDismiss}
           ariaLabel="Close Chip"
+          role="button"
         >
           &times;
         </Button>

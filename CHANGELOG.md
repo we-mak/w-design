@@ -11,13 +11,20 @@ Check [RELEASE](https://github.com/we-mak/w-design/releases)
 
 --
 
-### v1.0.0-Alpha
+### v1.0.0
 
-- **Chip** Small block of entities, useful for tagging.
 - ❌ **Popover**
-- **Toggle**
 - ❌ **Pagination**
 - ❌ **Actions**
+- ❌ **Tooltip**
+- ❌ **Generic styles**
+
+---
+
+### v0.49.5
+
+- **Chip** Small block of entities, useful for tagging.
+- **Toggle**
 - **PushMessage**: fix https://github.com/we-mak/w-design/issues/149
 - **Duplicate images**: https://github.com/we-mak/w-design/issues/196
 - **Image**

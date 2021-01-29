@@ -12,7 +12,7 @@ exports[`<Comment/> should renders correctly 1`] = `
         class="sc-iBPRYJ bkigGD"
       >
         <figure
-          class="sc-bdfBwQ eZmttX"
+          class="sc-bdfBwQ hHAqS"
           style="background-color: white;"
         >
           <span
@@ -24,8 +24,10 @@ exports[`<Comment/> should renders correctly 1`] = `
             alt=""
             class="sc-hKgILt kmlAc sc-jSgupP eAjhPD"
             data-src="https://source.unsplash.com/random"
+            height="22.4"
             loading="lazy"
             src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
+            width="22.4"
           />
         </figure>
       </div>

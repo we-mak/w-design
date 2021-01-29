@@ -7,7 +7,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
     display="inline-flex"
   >
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg gIdNOm"
@@ -21,7 +21,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg cxEOeS"
@@ -39,7 +39,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg kcmFue"
@@ -57,7 +57,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg gZXLyn"
@@ -74,7 +74,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg govUFQ"
@@ -88,7 +88,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg giiLoA"
@@ -102,7 +102,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg jlTuup"
@@ -116,7 +116,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg edsxus"
@@ -130,7 +130,7 @@ exports[`<Button/> should render with different appearance style 1`] = `
       </button>
     </div>
     <div
-      class="sc-jrAGrp iDuwsd"
+      class="sc-jrAGrp eniEhI"
     >
       <button
         class="sc-eCssSg dCIYGH"

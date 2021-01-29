@@ -11,12 +11,15 @@ const Item = styled.span`
 export interface Pagination {
   pages: number[];
   defaultSelectedIndex?: number;
-  onChange?: () => void;
+  onChange?: (page?: number) => void;
+  maxPageNumbers?: number; // limit visible page numbers
 }
 
 const Pagination: React.FC<Pagination> = ({
   pages,
   defaultSelectedIndex = 0,
+  onChange,
+  // maxPageNumbers = 7,
 }) => {
   const [selectedIndex, setSelectedIndex] = React.useState(
     defaultSelectedIndex
@@ -24,9 +27,16 @@ const Pagination: React.FC<Pagination> = ({
 
   const handleMovePreviousPage = () => {
     setSelectedIndex((currentIndex) => currentIndex - 1);
+    if (onChange) onChange(selectedIndex - 1);
   };
+
   const handleMoveNextPage = () => {
     setSelectedIndex((currentIndex) => currentIndex + 1);
+    if (onChange) onChange(selectedIndex + 1);
+  };
+
+  const handleChangePage = (page: number) => {
+    if (onChange) onChange(page);
   };
 
   return (
@@ -49,22 +59,27 @@ const Pagination: React.FC<Pagination> = ({
           >
             <path
               fill="currentColor"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M9.005 10.995l4.593-4.593a.99.99 0 111.4 1.4l-3.9 3.9 3.9 3.9a.99.99 0 01-1.4 1.4L9.005 12.41a1 1 0 010-1.414z"
             ></path>
           </svg>
         </Button>
       </Item>
 
-      {pages.map((p) => {
+      {pages.map((p, idx) => {
         return (
           <Item key={p}>
-            <Button isSelected={p === selectedIndex + 1} appearance="subtle">
+            <Button
+              isSelected={idx === selectedIndex}
+              appearance="subtle"
+              onClick={() => handleChangePage(idx)}
+            >
               {p}
             </Button>
           </Item>
         );
       })}
+
       <Item>
         <Button
           appearance="subtle"
@@ -83,7 +98,7 @@ const Pagination: React.FC<Pagination> = ({
           >
             <path
               fill="currentColor"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M14.995 10.995a1 1 0 010 1.414l-4.593 4.593a.99.99 0 01-1.4-1.4l3.9-3.9-3.9-3.9a.99.99 0 011.4-1.4l4.593 4.593z"
             ></path>
           </svg>

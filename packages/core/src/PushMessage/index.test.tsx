@@ -11,16 +11,16 @@ describe("<PushMessage/>", () => {
     const { container } = render(
       <Provider>
         <PushMessage
-          messages={[{ value: "This is a message", appearance: "info" }]}
+          message={{ value: "This is a message", appearance: "info" }}
         ></PushMessage>
         <PushMessage
-          messages={[{ value: "This is a message", appearance: "warn" }]}
+          message={{ value: "This is a message", appearance: "warn" }}
         ></PushMessage>
         <PushMessage
-          messages={[{ value: "This is a message", appearance: "success" }]}
+          message={{ value: "This is a message", appearance: "success" }}
         ></PushMessage>
         <PushMessage
-          messages={[{ value: "This is a message", appearance: "error" }]}
+          message={{ value: "This is a message", appearance: "error" }}
         ></PushMessage>
       </Provider>
     );

@@ -1,26 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Spinner/> should renders correctly 1`] = `
-<div>
-  <div
-    class="sc-bdfBwQ hKGRWr"
-  >
-    <svg
-      class="sc-gsTCUz irhppX"
-      viewBox="25 25 50 50"
-    >
-      <circle
-        class="sc-dlfnbm hivRzK"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="20"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
 exports[`<Spinner/> should renders large size correctly 1`] = `
 <div>
   <div
@@ -64,6 +43,22 @@ exports[`<Spinner/> should renders large size correctly 1`] = `
     >
       <circle
         class="sc-dlfnbm hivRzK"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="20"
+      />
+    </svg>
+  </div>
+  <div
+    class="sc-bdfBwQ hKGRWr"
+  >
+    <svg
+      class="sc-gsTCUz irhppX"
+      viewBox="25 25 50 50"
+    >
+      <circle
+        class="sc-dlfnbm jpCvfP"
         cx="50"
         cy="50"
         fill="none"

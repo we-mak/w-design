@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AvatarGroup/> should renders correctly 1`] = `
+exports[`<InputField/> should renders correctly 1`] = `
 <div>
   <input
     autocomplete="off"

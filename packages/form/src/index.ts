@@ -14,4 +14,3 @@ export { default as FormFooter } from "./FormFooter";
 // hooks
 export { default as useField } from "./hooks/useField";
 export { default as useForm } from "./hooks/useForm";
-export { default as useFormReducer } from "./hooks/useFromReducer";

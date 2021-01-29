@@ -10,7 +10,7 @@ import {
   SizeProps,
   SyntheticEventProps,
   KeyboardEventProps,
-  InputControlProps
+  InputControlProps,
 } from "@w-design/core/lib/types/common/props";
 
 export interface InputFieldProps

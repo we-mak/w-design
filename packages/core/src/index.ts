@@ -45,6 +45,8 @@ export { default as Popover } from "./Popover";
 export { default as ProgressLoader } from "./ProgressLoader";
 export { default as Provider } from "./Provider";
 export { default as SectionMessage } from "./SectionMessage";
+
+export * from "./Spinner";
 export { default as Spinner } from "./Spinner";
 
 export * from "./Steps";

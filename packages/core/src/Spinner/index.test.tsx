@@ -6,23 +6,13 @@ import { Provider } from "..";
 afterEach(cleanup);
 
 describe("<Spinner/>", () => {
-  // Render test
-  it("should renders correctly", () => {
-    const { container } = render(
-      <Provider>
-        <Spinner />
-      </Provider>
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
   it("should renders large size correctly", () => {
     const { container } = render(
       <Provider>
         <Spinner size="sm" />
         <Spinner />
         <Spinner size="lg" />
+        <Spinner spinnerColor="blue" />
       </Provider>
     );
 

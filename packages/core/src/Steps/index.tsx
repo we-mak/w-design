@@ -42,20 +42,16 @@ StepItemTitle.displayName = "StepItemTitle";
 
 export type StepType = {
   title: string;
-  content: React.ReactNode;
+  content: React.ReactNode | string;
 };
 
-export interface StepsPropsType {
+export interface Steps {
   steps: StepType[];
   activeIndex?: number;
   controlGroup?: React.ReactNode;
 }
 
-const Steps = ({
-  steps = [],
-  activeIndex = 0,
-  controlGroup,
-}: StepsPropsType) => {
+const Steps = ({ steps = [], activeIndex = 0, controlGroup }: Steps) => {
   return (
     <Container>
       <StepNav>
@@ -70,7 +66,9 @@ const Steps = ({
         })}
       </StepNav>
 
-      <Box p="0.5rem 0">{steps[activeIndex].content}</Box>
+      <Box p="0.5rem 0" data-testid="step-content">
+        {steps[activeIndex].content}
+      </Box>
 
       {controlGroup}
     </Container>

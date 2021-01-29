@@ -1,6 +1,6 @@
 {
   "name": "@w-design/form",
-  "version": "0.47.0",
+  "version": "0.49.5",
   "description": "w-design form components",
   "keywords": [
     "react",
@@ -46,8 +46,8 @@
     "url": "https://github.com/we-mak/w-design/issues"
   },
   "dependencies": {
-    "@w-design/core": "^0.47.0",
-    "@w-design/helpers": "^0.47.0"
+    "@w-design/core": "^0.49.5",
+    "@w-design/helpers": "^0.49.5"
   },
   "peerDependencies": {
     "@w-design/core": "*"

@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { slideDown } from "@w-design/helpers";
 import Icon from "../Icon";
-import { PushMessageType } from "./index";
+import { MessageType } from "./index";
 
 const Panel = styled.div`
   padding: 0.4rem;
@@ -20,7 +20,7 @@ const Panel = styled.div`
   animation: ${slideDown} 0.25s ease;
 `;
 
-const Message = ({ value, appearance = "info" }: PushMessageType) => {
+const Message = ({ value, appearance = "info" }: MessageType) => {
   let iconName = "fa fa-info-circle info";
   switch (appearance) {
     case "success":

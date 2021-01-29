@@ -56,8 +56,4 @@ export { default as Tabs, Tab } from "./Tabs";
 export { default as Typo } from "./Typo";
 
 export * from "./PushMessage";
-export {
-  default as PushMessage,
-  PushMessageProps,
-  PushMessageType,
-} from "./PushMessage";
+export { default as PushMessage } from "./PushMessage";

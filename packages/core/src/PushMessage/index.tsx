@@ -19,18 +19,18 @@ const Container = styled.section`
   pointer-events: none;
 `;
 
-export type PushMessageType = {
+export type MessageType = {
   value: string;
   appearance: "info" | "warn" | "success" | "error";
 };
 
-export interface PushMessageProps {
-  message?: PushMessageType;
+export interface PushMessage {
+  message?: MessageType;
   dismissTimeout?: number; // time to auto dismiss message automatically
 }
 
-const PushMessage = ({ message, dismissTimeout = 3000 }: PushMessageProps) => {
-  const [messages, setMessages] = React.useState<PushMessageType[]>([]);
+const PushMessage = ({ message, dismissTimeout = 3000 }: PushMessage) => {
+  const [messages, setMessages] = React.useState<MessageType[]>([]);
 
   React.useEffect(() => {
     let timer: number;

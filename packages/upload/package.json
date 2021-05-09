@@ -1,6 +1,6 @@
 {
   "name": "@w-design/upload",
-  "version": "0.49.7",
+  "version": "0.49.8",
   "description": "W-design react upload components",
   "keywords": [
     "w-design",
@@ -45,8 +45,8 @@
     "url": "https://github.com/we-mak/w-design/issues"
   },
   "dependencies": {
-    "@w-design/core": "^0.49.7",
-    "@w-design/helpers": "^0.49.5"
+    "@w-design/core": "^0.49.8",
+    "@w-design/helpers": "^0.49.6"
   },
   "peerDependencies": {
     "@w-design/core": "*"

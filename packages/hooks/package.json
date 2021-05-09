@@ -1,6 +1,6 @@
 {
   "name": "@w-design/hooks",
-  "version": "0.49.5",
+  "version": "0.49.6",
   "description": "W-design react custom hooks",
   "keywords": [
     "w-design",
@@ -42,7 +42,7 @@
     "postbuild": "tsc --emitDeclarationOnly -p tsconfig.json"
   },
   "dependencies": {
-    "@w-design/helpers": "^0.49.5"
+    "@w-design/helpers": "^0.49.6"
   },
   "bugs": {
     "url": "https://github.com/we-mak/w-design/issues"

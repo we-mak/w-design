@@ -3,14 +3,14 @@
 exports[`<Spinner/> should renders large size correctly 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ dRdsiy"
+    class="sc-bdnxRM dnQkZx"
   >
     <svg
-      class="sc-gsTCUz irhppX"
+      class="sc-gtsrHT drnhCV"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-dlfnbm hivRzK"
+        class="sc-dlnjwi iKOKJz"
         cx="50"
         cy="50"
         fill="none"
@@ -19,14 +19,14 @@ exports[`<Spinner/> should renders large size correctly 1`] = `
     </svg>
   </div>
   <div
-    class="sc-bdfBwQ hKGRWr"
+    class="sc-bdnxRM kzKOws"
   >
     <svg
-      class="sc-gsTCUz irhppX"
+      class="sc-gtsrHT drnhCV"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-dlfnbm hivRzK"
+        class="sc-dlnjwi iKOKJz"
         cx="50"
         cy="50"
         fill="none"
@@ -35,14 +35,14 @@ exports[`<Spinner/> should renders large size correctly 1`] = `
     </svg>
   </div>
   <div
-    class="sc-bdfBwQ hkWdmG"
+    class="sc-bdnxRM jZqal"
   >
     <svg
-      class="sc-gsTCUz irhppX"
+      class="sc-gtsrHT drnhCV"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-dlfnbm hivRzK"
+        class="sc-dlnjwi iKOKJz"
         cx="50"
         cy="50"
         fill="none"
@@ -51,14 +51,14 @@ exports[`<Spinner/> should renders large size correctly 1`] = `
     </svg>
   </div>
   <div
-    class="sc-bdfBwQ hKGRWr"
+    class="sc-bdnxRM kzKOws"
   >
     <svg
-      class="sc-gsTCUz irhppX"
+      class="sc-gtsrHT drnhCV"
       viewBox="25 25 50 50"
     >
       <circle
-        class="sc-dlfnbm jpCvfP"
+        class="sc-dlnjwi gMOCUO"
         cx="50"
         cy="50"
         fill="none"

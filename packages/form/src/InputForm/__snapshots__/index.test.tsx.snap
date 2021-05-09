@@ -3,117 +3,117 @@
 exports[`<InputForm/> should render correctly 1`] = `
 <div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
       label
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <i
           aria-hidden="true"
-          class="Icon__StyledIcon-d8swi0-0 gFdVEw icon-before fas fa-phone"
+          class="Icon__StyledIcon-d8swi0-0 gNJswg icon-before fas fa-phone"
         />
         <input
           autocomplete="off"
-          class="sc-gsTCUz gbHRmt icon-before"
+          class="sc-gtsrHT bSXEP icon-before"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="sc-hKgILt iAvhLb"
+      class="sc-hKFxyN cBZnGA"
     >
       hint
     </small>
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz gbHRmt icon-after"
+          class="sc-gtsrHT bSXEP icon-after"
           type="text"
           value=""
         />
         <i
           aria-hidden="true"
-          class="Icon__StyledIcon-d8swi0-0 gFdVEw icon-after fas fa-phone"
+          class="Icon__StyledIcon-d8swi0-0 gNJswg icon-after fas fa-phone"
         />
       </span>
     </label>
     <small
-      class="sc-hKgILt iAvhLb"
+      class="sc-hKFxyN cBZnGA"
     />
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz iLzquI"
+          class="sc-gtsrHT hkWwAO"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="sc-hKgILt ienFFm"
+      class="sc-hKFxyN eiTtzt"
     />
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz gbHRmt"
+          class="sc-gtsrHT bSXEP"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="sc-hKgILt iAvhLb"
+      class="sc-hKFxyN cBZnGA"
     />
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz gbHRmt"
+          class="sc-gtsrHT bSXEP"
           disabled=""
           type="text"
           value=""
@@ -121,28 +121,28 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-hKgILt iAvhLb"
+      class="sc-hKFxyN cBZnGA"
     />
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <sup
         aria-hidden="true"
-        class="sc-gKsewC dpDZiK"
+        class="sc-gKAaRy ggtRKD"
       >
         *
       </sup>
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz gbHRmt"
+          class="sc-gtsrHT bSXEP"
           required=""
           type="text"
           value=""
@@ -150,81 +150,81 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-hKgILt iAvhLb"
+      class="sc-hKFxyN cBZnGA"
     />
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz eeFGxO"
+          class="sc-gtsrHT jemeiw"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="sc-hKgILt fBXtNx"
+      class="sc-hKFxyN bIILMK"
     />
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz hZPBtL"
+          class="sc-gtsrHT eOszqd"
           type="text"
           value=""
         />
       </span>
     </label>
     <small
-      class="sc-hKgILt ijBOFO"
+      class="sc-hKFxyN hdWGPx"
     />
   </div>
   <div
-    class="sc-jSgupP hhTBRg"
+    class="sc-jSFjdj hOedM"
   >
     <label
-      class="sc-bdfBwQ kZpsyg"
+      class="sc-bdnxRM frNBIv"
     >
        
       <span
-        class="sc-dlfnbm fuAIoT"
+        class="sc-dlnjwi drwbAa"
       >
         <input
           autocomplete="off"
-          class="sc-gsTCUz gbHRmt"
+          class="sc-gtsrHT bSXEP"
           type="text"
           value=""
         />
         <span
-          class="sc-eCssSg jtMRRg"
+          class="sc-eCApnc hjTAnw"
         >
           <div
-            class="Styled__SpinnerWrapper-ues3u7-0 djdemU"
+            class="Styled__SpinnerWrapper-ues3u7-0 dzucZI"
           >
             <svg
-              class="Styled__SpinnerCircular-ues3u7-1 cdHAQc"
+              class="Styled__SpinnerCircular-ues3u7-1 eMdrEc"
               viewBox="25 25 50 50"
             >
               <circle
-                class="Styled__SpinnerCircle-ues3u7-2 gKQRCg"
+                class="Styled__SpinnerCircle-ues3u7-2 cxmtVQ"
                 cx="50"
                 cy="50"
                 fill="none"
@@ -236,7 +236,7 @@ exports[`<InputForm/> should render correctly 1`] = `
       </span>
     </label>
     <small
-      class="sc-hKgILt iAvhLb"
+      class="sc-hKFxyN cBZnGA"
     />
   </div>
 </div>

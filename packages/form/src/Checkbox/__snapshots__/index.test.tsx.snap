@@ -3,20 +3,20 @@
 exports[`<Checkbox/> should renders correctly 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ dRJcDG"
+    class="sc-bdnxRM cyNRIx"
   >
     <label
-      class="sc-gsTCUz kvZxhh"
+      class="sc-gtsrHT jVQrNf"
     >
       <input
-        class="sc-hKgILt bBaXFv"
+        class="sc-hKFxyN fSkhGE"
         data-testid="checkbox"
         name="Checkbox"
         type="checkbox"
         value=""
       />
       <span
-        class="sc-eCssSg kZgIxU"
+        class="sc-eCApnc FlBPo"
       >
         <svg
           focusable="false"
@@ -44,7 +44,7 @@ exports[`<Checkbox/> should renders correctly 1`] = `
         </svg>
       </span>
       <span
-        class="sc-dlfnbm jcJLy"
+        class="sc-dlnjwi dhRTXT"
       >
         Test checkbox
       </span>

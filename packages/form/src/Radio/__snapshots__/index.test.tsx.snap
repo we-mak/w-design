@@ -3,23 +3,23 @@
 exports[`<Radio/> should renders correctly 1`] = `
 <div>
   <label
-    class="sc-eCssSg gbQCJj"
+    class="sc-eCApnc jONML"
   >
     Radio
   </label>
   <label
-    class="sc-gsTCUz kvZxhh"
+    class="sc-gtsrHT jVQrNf"
   >
     <input
       aria-label="Option 1"
-      class="sc-hKgILt bBaXFv"
+      class="sc-hKFxyN fSkhGE"
       name="option 1"
       required=""
       type="radio"
       value="foo"
     />
     <div
-      class="sc-bdfBwQ kTaSBY"
+      class="sc-bdnxRM fguhvX"
     >
       <svg
         focusable="false"
@@ -47,17 +47,17 @@ exports[`<Radio/> should renders correctly 1`] = `
       </svg>
     </div>
     <div
-      class="sc-dlfnbm jcJLy"
+      class="sc-dlnjwi dhRTXT"
     >
       Option 1
     </div>
   </label>
   <label
-    class="sc-gsTCUz kvZxhh"
+    class="sc-gtsrHT jVQrNf"
   >
     <input
       aria-label="Option 2"
-      class="sc-hKgILt bBaXFv"
+      class="sc-hKFxyN fSkhGE"
       disabled=""
       name="Radio"
       required=""
@@ -65,7 +65,7 @@ exports[`<Radio/> should renders correctly 1`] = `
       value="bar"
     />
     <div
-      class="sc-bdfBwQ kTaSBY"
+      class="sc-bdnxRM fguhvX"
     >
       <svg
         focusable="false"
@@ -93,7 +93,7 @@ exports[`<Radio/> should renders correctly 1`] = `
       </svg>
     </div>
     <div
-      class="sc-dlfnbm jcJLy"
+      class="sc-dlnjwi dhRTXT"
     >
       Option 2
     </div>

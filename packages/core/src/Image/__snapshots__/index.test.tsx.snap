@@ -4,7 +4,7 @@ exports[`<Image/> should render correct image 1`] = `
 <div>
   <img
     alt="Test"
-    class="sc-dQppl deXAoE"
+    class="sc-dIsUp kBHAXa"
     data-src="https://source.unsplash.com/random"
     height="400"
     loading="lazy"

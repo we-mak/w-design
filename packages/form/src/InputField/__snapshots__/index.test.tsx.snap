@@ -4,21 +4,21 @@ exports[`<InputField/> should renders correctly 1`] = `
 <div>
   <input
     autocomplete="off"
-    class="sc-bdfBwQ bbRCOV"
+    class="sc-bdnxRM bhwWom"
     placeholder="Default input"
     type="text"
     value=""
   />
   <input
     autocomplete="off"
-    class="sc-bdfBwQ dMkIpY"
+    class="sc-bdnxRM gBgUzb"
     placeholder="Large input"
     type="text"
     value=""
   />
   <input
     autocomplete="off"
-    class="sc-bdfBwQ fqaTNT"
+    class="sc-bdnxRM rjjAQ"
     placeholder="Small input"
     type="text"
     value=""

@@ -4,7 +4,7 @@ exports[`<Icon/> should render correct icon styled 1`] = `
 <div>
   <i
     aria-hidden="true"
-    class="sc-bdfBwQ dEtgLR fas fa-clock"
+    class="sc-bdnxRM iFzgxy fas fa-clock"
   />
 </div>
 `;

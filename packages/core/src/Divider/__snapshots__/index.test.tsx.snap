@@ -3,7 +3,7 @@
 exports[`<Divider/> should render correct with divider style 1`] = `
 <div>
   <div
-    class="sc-jNMdTA gYubem"
+    class="sc-jNnpgg dPTQds"
   />
 </div>
 `;

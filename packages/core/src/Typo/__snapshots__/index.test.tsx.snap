@@ -3,37 +3,37 @@
 exports[`<Typo/> should render correctly 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ dCvZqQ"
+    class="sc-bdnxRM fyPNzT"
   >
     Hello
   </div>
   <h1
-    class="sc-bdfBwQ jWMjXr"
+    class="sc-bdnxRM hxXBJY"
   >
     Hello
   </h1>
   <h2
-    class="sc-bdfBwQ fbjYOx"
+    class="sc-bdnxRM beedtW"
   >
     Hello
   </h2>
   <h3
-    class="sc-bdfBwQ fFLtL"
+    class="sc-bdnxRM iWmMFo"
   >
     Hello
   </h3>
   <h4
-    class="sc-bdfBwQ kmGKQf"
+    class="sc-bdnxRM kugMag"
   >
     Hello
   </h4>
   <h5
-    class="sc-bdfBwQ cmAHal"
+    class="sc-bdnxRM iJcsyW"
   >
     Hello
   </h5>
   <h6
-    class="sc-bdfBwQ dCvZqQ"
+    class="sc-bdnxRM fyPNzT"
   >
     Hello
   </h6>
@@ -43,7 +43,7 @@ exports[`<Typo/> should render correctly 1`] = `
 exports[`<Typo/> should render div with H1 style 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ ddmdKH"
+    class="sc-bdnxRM gAcKJU"
     mb="10"
   >
     Hello

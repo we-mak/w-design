@@ -3,26 +3,26 @@
 exports[`<Comment/> should renders correctly 1`] = `
 <div>
   <div
-    class="sc-crrsfI ldOFCl"
+    class="sc-crzoAE kvyBKu"
   >
     <div
-      class="sc-gKsewC gBbyGQ"
+      class="sc-gKAaRy kbeHhN"
     >
       <div
-        class="sc-iBPRYJ bkigGD"
+        class="sc-iCoGMd diXBLy"
       >
         <figure
-          class="sc-bdfBwQ hHAqS"
+          class="sc-bdnxRM knbNFl"
           style="background-color: white;"
         >
           <span
-            class="sc-dlfnbm kXdhLK"
+            class="sc-dlnjwi bUaUPX"
           >
             Wm
           </span>
           <img
             alt=""
-            class="sc-hKgILt kmlAc sc-jSgupP eAjhPD"
+            class="sc-hKFxyN jXkqiL sc-jSFjdj gZxmSH"
             data-src="https://source.unsplash.com/random"
             height="22.4"
             loading="lazy"
@@ -32,11 +32,11 @@ exports[`<Comment/> should renders correctly 1`] = `
         </figure>
       </div>
       <div
-        class="sc-fubCfw ffnjez"
+        class="sc-fujyAs eYGEWi"
       >
         
         <div
-          class="sc-jrAGrp fpfFp"
+          class="sc-jrsJWt bSNCTX"
         >
           <time />
           <div>

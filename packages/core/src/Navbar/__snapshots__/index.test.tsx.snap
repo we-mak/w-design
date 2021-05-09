@@ -3,15 +3,15 @@
 exports[`<Nav/> should render correct icon styled 1`] = `
 <div>
   <nav
-    class="sc-dlfnbm gxogEn"
+    class="sc-dlnjwi jSSpqO"
   >
     <section
-      class="sc-bdfBwQ eaIHyn"
+      class="sc-bdnxRM ibWwLY"
     >
       Center
     </section>
     <section
-      class="sc-gsTCUz kLskmm"
+      class="sc-gtsrHT agcNY"
     >
       Section
     </section>

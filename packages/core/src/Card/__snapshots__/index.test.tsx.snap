@@ -3,25 +3,25 @@
 exports[`<Card/> should render with full card style 1`] = `
 <div>
   <div
-    class="sc-fubCfw gpybKW"
+    class="sc-fujyAs jzOcKr"
   >
     <div
-      class="sc-gsTCUz pvSjd"
+      class="sc-gtsrHT kdAxCv"
     >
       <h3
-        class="sc-bdfBwQ cmAHal"
+        class="sc-bdnxRM iJcsyW"
       >
         Test title
       </h3>
       <div
-        class="sc-dlfnbm eMTIud"
+        class="sc-dlnjwi huMTfA"
       >
         Lorem ipsum
       </div>
       Header
     </div>
     <div
-      class="sc-jSgupP gBecUY"
+      class="sc-jSFjdj bYMNvM"
     >
       <picture>
         <source
@@ -36,7 +36,7 @@ exports[`<Card/> should render with full card style 1`] = `
         />
         <img
           alt=""
-          class="sc-hKgILt kmlAc sc-gKsewC hYnQsy"
+          class="sc-hKFxyN jXkqiL sc-gKAaRy kNJcEX"
           data-src="https://photo.foodgawker.com/wp-content/uploads/2019/04/3425217.jpg"
           loading="lazy"
           src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
@@ -44,27 +44,27 @@ exports[`<Card/> should render with full card style 1`] = `
       </picture>
     </div>
     <div
-      class="sc-iBPRYJ gOxxKQ"
+      class="sc-iCoGMd iqQErN"
     >
       A safari is an overland journey, usually a trip by tourists in Africa. In the past, the trip was often a big-game hunt, but today, safaris are often to observe
     </div>
     <div
-      class="sc-iqHYGH dCFFbq"
+      class="sc-iqAclL ffkatm"
     >
       Footer
     </div>
   </div>
   <div
-    class="sc-fubCfw bNwdsC"
+    class="sc-fujyAs LYUlP"
   >
     <div
-      class="sc-pFZIQ evksgM"
+      class="sc-pNWdM kRWFVU"
     >
       <div
-        class="sc-jrAGrp kSqYxQ"
+        class="sc-jrsJWt CbQMW"
       />
       <div
-        class="sc-kEjbxe cLPFCg"
+        class="sc-kEqXSa jbkncW"
       >
         <h3 />
         <ul>

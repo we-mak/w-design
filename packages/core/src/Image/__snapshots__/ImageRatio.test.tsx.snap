@@ -3,20 +3,20 @@
 exports[`<ImageRatio/> should renders correctly 1`] = `
 <div>
   <div
-    class="sc-gsTCUz iHFGNe"
+    class="sc-gtsrHT flIkmc"
   >
     <img
-      class="sc-bdfBwQ bzQyAJ"
+      class="sc-bdnxRM iDvcdK"
       data-src="https://source.unsplash.com/random?car"
       loading="lazy"
       src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
     />
   </div>
   <div
-    class="sc-gsTCUz XjVtQ"
+    class="sc-gtsrHT ldWtgS"
   >
     <img
-      class="sc-bdfBwQ bzQyAJ"
+      class="sc-bdnxRM iDvcdK"
       data-src="https://source.unsplash.com/random?car"
       loading="lazy"
       src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="

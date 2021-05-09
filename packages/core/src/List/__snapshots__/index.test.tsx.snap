@@ -5,35 +5,35 @@ exports[`<List/> should render correctly 1`] = `
   style="position: relative;"
 >
   <h3
-    class="sc-dlfnbm kSOKHH"
+    class="sc-dlnjwi gHIqtm"
     mb="0"
     mt="0.4rem"
   >
     List header
   </h3>
   <div
-    class="sc-gsTCUz htaQje"
+    class="sc-gtsrHT cDRdjw"
   />
   <div
-    class="sc-gKsewC nOjjR"
+    class="sc-gKAaRy frCzdA"
   >
     <ul
-      class="sc-fubCfw hMUaoT"
+      class="sc-fujyAs cEVjLa"
     >
       <li
-        class="sc-iqHYGH AYJRz"
+        class="sc-iqAclL fRwcUH"
       >
         <div
-          class="sc-crrsfI esPHJQ"
+          class="sc-crzoAE eXCrVn"
         >
           <div
-            class="sc-bqyKva esAEL"
+            class="sc-bqGGPW fTFpnR"
           >
             <div
-              class="sc-kEjbxe cwIfRf"
+              class="sc-kEqXSa ioFgoN"
             >
               <img
-                class="sc-jrAGrp ceToxN"
+                class="sc-jrsJWt moAPz"
                 data-src="https://source.unsplash.com/random"
                 loading="lazy"
                 src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
@@ -41,10 +41,10 @@ exports[`<List/> should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="sc-bdfBwQ jVjRlX"
+            class="sc-bdnxRM bEcZEo"
           >
             <h4
-              class="sc-dlfnbm ceHXZP"
+              class="sc-dlnjwi fkvJKO"
               font-weight="600"
               mb="0"
             >
@@ -57,23 +57,23 @@ exports[`<List/> should render correctly 1`] = `
         </div>
         this is the child content
         <div
-          class="sc-dQppl dAoLcX"
+          class="sc-dIsUp gOZFKR"
         />
       </li>
       <li
-        class="sc-iqHYGH AYJRz"
+        class="sc-iqAclL fRwcUH"
       >
         <div
-          class="sc-crrsfI esPHJQ"
+          class="sc-crzoAE eXCrVn"
         >
           <div
-            class="sc-bqyKva esAEL"
+            class="sc-bqGGPW fTFpnR"
           >
             <div
-              class="sc-kEjbxe cwIfRf"
+              class="sc-kEqXSa ioFgoN"
             >
               <img
-                class="sc-jrAGrp ceToxN"
+                class="sc-jrsJWt moAPz"
                 data-src="https://source.unsplash.com/random"
                 loading="lazy"
                 src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88R8AAvUB+VkkrXoAAAAASUVORK5CYII="
@@ -81,10 +81,10 @@ exports[`<List/> should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="sc-bdfBwQ jVjRlX"
+            class="sc-bdnxRM bEcZEo"
           >
             <h4
-              class="sc-dlfnbm ceHXZP"
+              class="sc-dlnjwi fkvJKO"
               font-weight="600"
               mb="0"
             >
@@ -97,12 +97,12 @@ exports[`<List/> should render correctly 1`] = `
         </div>
         this is the child content
         <div
-          class="sc-dQppl dAoLcX"
+          class="sc-dIsUp gOZFKR"
         />
       </li>
     </ul>
     <div
-      class="sc-pFZIQ bSOrCR"
+      class="sc-pNWdM jhSiiF"
     >
       List Footer
     </div>

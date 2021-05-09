@@ -2,7 +2,14 @@
  * AnchorScroll
  * Smooth scrolling when click at an anchor link
  */
-import React, { FC, useState, useEffect, SyntheticEvent, ReactChild, ReactChildren } from "react";
+import React, {
+  FC,
+  useState,
+  useEffect,
+  SyntheticEvent,
+  ReactChild,
+  ReactChildren,
+} from "react";
 import { GlobProps } from "../common/props";
 import Button from "../Button";
 
@@ -23,7 +30,7 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
   top = 0,
   children,
   destination,
-  callback
+  callback,
 }) => {
   const [isActive, setActive] = useState(false);
 
@@ -32,7 +39,8 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
 
     // Initial position of window and time
     const start = window.pageYOffset;
-    const startTime = "now" in window.performance ? performance.now() : new Date().getTime();
+    const startTime =
+      "now" in window.performance ? performance.now() : new Date().getTime();
 
     // Take height of window and document to resolve max scrollable value
     const documentHeight = Math.max(
@@ -71,10 +79,14 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
     }
 
     const scroll = () => {
-      const now = "now" in window.performance ? performance.now() : new Date().getTime();
+      const now =
+        "now" in window.performance ? performance.now() : new Date().getTime();
       const time = Math.min(1, (now - startTime) / duration);
       const timeFunction = easing(time);
-      window.scroll(0, Math.ceil(timeFunction * (scrollTarget - start) + start));
+      window.scroll(
+        0,
+        Math.ceil(timeFunction * (scrollTarget - start) + start)
+      );
 
       if (window.pageYOffset === scrollTarget) {
         if (callback) {
@@ -92,6 +104,7 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
     const onActive = () => {
       if (typeof destination !== "number") {
         const node = document.getElementById(destination);
+
         // error to prevent missing target id
         if (!node) {
           throw new Error(`Anchor destination: "${destination}" not found`);
@@ -119,7 +132,12 @@ const AnchorScroll: FC<AnchorScrollProps> = ({
   }, [destination, margin, top]);
 
   return (
-    <Button isSelected={isActive} appearance="clean" size="sm" onClick={scrollToDestination}>
+    <Button
+      isSelected={isActive}
+      appearance="clean"
+      size="sm"
+      onClick={scrollToDestination}
+    >
       {children}
     </Button>
   );

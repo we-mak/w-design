@@ -33,7 +33,7 @@ const PushMessage = ({ message, dismissTimeout = 3000 }: PushMessage) => {
   const [messages, setMessages] = React.useState<MessageType[]>([]);
 
   React.useEffect(() => {
-    let timer: number;
+    let timer: NodeJS.Timeout;
     if (message) {
       setMessages((currentMessages) => [message, ...currentMessages]);
       // auto dismiss

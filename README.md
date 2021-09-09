@@ -4,6 +4,9 @@
  <a href="https://design.we-mak.com/">Documents</a>
 </div>
 
+**Important**
+I'm moving to Tailwind, at slow progress since I'm so busy
+
 # Introduction
 
 #### A React UI toolkit library is built with typescript
